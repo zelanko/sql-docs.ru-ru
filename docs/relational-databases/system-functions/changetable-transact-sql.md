@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
 - CHANGETABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: fd13db35ee0a53d1c752b3ed891ed6c0fedeb557
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +59,7 @@ CHANGETABLE (
  *table*  
  Пользовательская таблица, в которой регистрируются отслеживаемые изменения. Отслеживание изменений необходимо включить в таблице. Может использоваться имя таблицы, состоящее из одной, двух, трех или четырех частей. Имя таблицы может быть синонимом таблицы.  
   
- *значение last_sync_version*  
+ *last_sync_version*  
  При получении изменений вызывающее приложение должно указать точку, с которой необходимы эти изменения. Значение last_sync_version указывает эту точку. Функция возвращает данные обо всех строках, изменившихся начиная с этой версии. Приложение запрашивает изменения с версией, большей, чем значение last_sync_version.  
   
  Как правило, прежде чем он получит изменения, приложение будет вызывать **CHANGE_TRACKING_CURRENT_VERSION()** получить версию, которая будет использоваться далее времени изменения являются обязательными. Поэтому в приложении нет необходимости интерпретировать или разбирать фактическое значение.  
@@ -88,7 +90,7 @@ CHANGETABLE (
  *table_alias*  
  Псевдоним таблицы, возвращаемый функцией CHANGETABLE. *table_alias* является обязательным и должен быть допустимым [идентификатор](../../relational-databases/databases/database-identifiers.md).  
   
- *псевдоним_столбца*  
+ *column_alias*  
  Необязательный псевдоним столбца или список псевдонимов столбцов, возвращаемых функцией CHANGETABLE. Обеспечивает возможность настройки имен столбцов в случае, если в результатах присутствуют повторяющиеся имена.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -99,11 +101,11 @@ CHANGETABLE (
 ### <a name="changetable-changes"></a>CHANGETABLE CHANGES  
  При указании ключевого слова CHANGES возвращается ноль или несколько строк, содержащих следующие столбцы.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Значение версии, связанное с последним изменением в строке|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Значения версии, связанные с последней операцией вставки.|  
-|SYS_CHANGE_OPERATION|**nchar(1)**|Задает тип изменения:<br /><br /> **U** = блокировка обновления<br /><br /> **Я** = Вставка<br /><br /> **D** = удаление|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|Задает тип изменения:<br /><br /> **U** = блокировка обновления<br /><br /> **I** = Insert<br /><br /> **D** = удаление|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Содержит список столбцов, измененных после last_sync_version (базовой версии). Обратите внимание, что вычисляемые столбцы никогда не указаны как измененный.<br /><br /> Принимает значение NULL, если выполняется любое из следующих условий.<br /><br /> Отслеживание изменений столбцов не включено.<br /><br /> Операция представляет собой операцию вставки или удаления.<br /><br /> Все ключевые столбцы, не являющиеся первичными, были обновлены одной операцией. Это двоичное значение не следует интерпретировать непосредственно. Используйте для его интерпретации [CHANGE_TRACKING_IS_COLUMN_IN_MASK()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Измените контекст, при необходимости можно указать с помощью [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) предложения как часть инструкции INSERT, UPDATE или DELETE.|  
 |\<значение первичного ключевого столбца >|Такие же, как столбцы таблицы пользователя|Значения первичного ключа для отслеживаемой таблицы. Эти значения уникально идентифицируют каждую строку в таблице пользователя.|  
@@ -111,7 +113,7 @@ CHANGETABLE (
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  При указании значения VERSION возвращается одна строка, содержащая следующие столбцы.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Текущее значение версии изменений, связанное со строкой.<br /><br /> Принимает значение NULL, если изменение не производилось в течение периода времени, превышающего срок хранения данных отслеживания изменений, либо если строка не изменялась с момента включения отслеживания изменений.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Измените контекст, который указывается дополнительно с использованием предложения WITH как часть инструкции INSERT, UPDATE или DELETE.|  
@@ -214,10 +216,10 @@ WHERE
         0);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции отслеживания изменений (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40; Transact-SQL &#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
+ [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
