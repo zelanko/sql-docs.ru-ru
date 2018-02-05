@@ -11,23 +11,25 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script component [Integration Services], destination components
 - destinations [Integration Services], components
 - input columns [Integration Services]
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9037d604503ba2a0d5443e94f11638035369ce3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bf01202003f2fc42f5e6527348d95ec3fe9e4859
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Создание назначения с помощью компонента скрипта
   Компонент назначения в потоке данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используется для сохранения данных, полученных из вышестоящих источников и преобразований, в источник данных. Обычно компонент назначения подключается к источнику данных через существующий диспетчер соединений.  
@@ -107,7 +109,7 @@ ms.lasthandoff: 01/08/2018
  Следующие примеры демонстрируют код, нужный классу **ScriptMain** для создания компонента назначения.  
   
 > [!NOTE]  
->  В этих примерах используется таблица **Person.Address** из образца базы данных **AdventureWorks**. В поток данных передаются ее первый и четвертый столбцы: **int*AddressID* и **nvarchar(30)City**. Эти же данные используются в образцах источника, преобразования и назначения, приведенных в этом разделе. Для каждого примера приведены необходимые дополнительные условия и принимаемые предположения.  
+>  В этих примерах используется таблица **Person.Address** из примера базы данных **AdventureWorks**. В поток данных передаются ее первый и четвертый столбцы: **int*AddressID*** и **nvarchar(30)City**. Эти же данные используются в образцах источника, преобразования и назначения, приведенных в этом разделе. Для каждого примера приведены необходимые дополнительные условия и принимаемые предположения.  
   
 ### <a name="adonet-destination-example"></a>Пример назначения ADO.NET  
  В этом примере показан компонент назначения, который с помощью существующего диспетчера подключений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] сохраняет данные из потока данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 428bdd08e35be0ebc2a3c069396f67118144b07f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a89f9c1fde9d4a14776d37bc648341a5b5fa4aad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Числовые, строковые и логические литералы
  Выражения могут содержать числовые, строковые и логические литералы. Средство оценки выражений поддерживает различные числовые литералы, такие как целые числа, десятичные дроби и константы с плавающей точкой. Средство оценки выражений также поддерживает суффиксы для длинных чисел и чисел с плавающей точкой, указывающие, как механизм вычисления выражений обрабатывает значения, а также экспоненциальное представление чисел в числовых литералах.  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
   
     |Суффикс|Тип результата|  
     |------------|-----------------|  
-    |Нет|DT_I4|  
+    |None|DT_I4|  
     |U|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  

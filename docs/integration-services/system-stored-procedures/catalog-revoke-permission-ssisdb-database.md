@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc46123d3d395080f6bc5252bfccd63e597a3612
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a2c71f38fd26b56cedc2b3309067b26b1a161966
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,12 +68,12 @@ catalog.revoke_permission [ @object_type = ] object_type
  5 (другая ошибка)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
- Нет  
+## <a name="remarks"></a>Remarks  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения ASSIGN_PERMISSIONS на объект  
@@ -81,7 +82,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   Членство в роли сервера **sysadmin**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если задан тип разрешения permission_type, хранимая процедура удаляет разрешение, явно предоставленное участнику на объект. Даже если таких экземпляров нет, процедура возвращает значение успешного выполнения (`0`). Если permission_type не задан, хранимая процедура удаляет все разрешения, явно предоставленные участнику на объект.  
   
 > [!NOTE]  
@@ -93,7 +94,7 @@ catalog.revoke_permission [ @object_type = ] object_type
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Разрешает участнику читать сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается перечислять или читать содержимое других объектов, содержащихся в этом объекте.|Папка, проект, среда, операция|  
 |`2`|MODIFY|Разрешает участнику изменять сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается изменять другие объекты, содержащиеся в этом объекте.|Папка, проект, среда, операция|  
-|`3`|Выполните|Разрешает участнику выполнять все пакеты в проекте.|Проект|  
+|`3`|EXECUTE|Разрешает участнику выполнять все пакеты в проекте.|Проект|  
 |`4`|MANAGE_PERMISSIONS|Разрешает участнику назначать разрешения на объекты.|Папка, проект, среда, операция|  
 |`100`|CREATE_OBJECTS|Разрешает участнику создавать объекты в папке.|Папка|  
 |`101`|READ_OBJECTS|Разрешает участнику читать все объекты в папке.|Папка|  

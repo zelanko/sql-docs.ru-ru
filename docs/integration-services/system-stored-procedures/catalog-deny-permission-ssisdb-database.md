@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ba6cb8b0d185ce5c669fd33f563a9bb5754baa2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a04ae959af4c0a23b3a954e590df424aa1536949
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +65,9 @@ catalog.deny_permission [ @object_type = ] object_type
  5 (другая ошибка)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешение MANAGE_PERMISSIONS на объект  
@@ -75,14 +76,14 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   Членство в роли сервера **sysadmin**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице описаны хранимые процедуры, используемые для отклонения типов разрешений.  
   
 |Значение permission_type|Имя разрешения|Описание разрешения|Применимые типы объектов|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Разрешает участнику читать сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается перечислять или читать содержимое других объектов, содержащихся в этом объекте.|Папка, проект, среда, операция|  
 |`2`|MODIFY|Разрешает участнику изменять сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается изменять другие объекты, содержащиеся в этом объекте.|Папка, проект, среда, операция|  
-|`3`|Выполните|Разрешает участнику выполнять все пакеты в проекте.|Проект|  
+|`3`|EXECUTE|Разрешает участнику выполнять все пакеты в проекте.|Проект|  
 |`4`|MANAGE_PERMISSIONS|Разрешает участнику назначать разрешения на объекты.|Папка, проект, среда, операция|  
 |`100`|CREATE_OBJECTS|Разрешает участнику создавать объекты в папке.|Папка|  
 |`101`|READ_OBJECTS|Разрешает участнику читать все объекты в папке.|Папка|  

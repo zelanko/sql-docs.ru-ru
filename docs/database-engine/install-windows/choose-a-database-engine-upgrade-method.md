@@ -8,19 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fef7f02b15fee27e3e18a5eac23e0ee6ab97959c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Выбор метода обновления компонента Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Существует несколько подходов, которые следует учитывать при планировании обновления предыдущего выпуска SQL Server до версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы свести к минимуму время простоя и риски. Можно выполнить обновление на месте, миграцию в новую установку или последовательное обновление. Следующая схема поможет вам выбрать один из этих подходов. Каждый из подходов, указанных в схеме, кроме того, обсуждается ниже. Чтобы получить дополнительные сведения о точках принятия решений в этой схеме, ознакомьтесь с разделом [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/18/2018
 >  При составлении плана обновления, кроме того, можно рассмотреть возможность обновления базы данных SQL Azure или виртуализации среды SQL Server. Эти темы выходят за рамки данного раздела. Дополнительные сведения см. по следующим ссылкам:
 >   - [Обзор SQL Server в виртуальных машинах Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [База данных SQL Azure](https://azure.microsoft.com/en-us/services/sql-database/) 
->   - [Выбор параметра SQL Server в Azure(https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
+>   - [Выбор варианта SQL Server в Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
   
 ##  <a name="UpgradeInPlace"></a> Обновление на месте  
  В этом случае программа установки SQL Server обновляет существующую установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], заменяя существующие биты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] новыми битами [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], а затем обновляет все системные и пользовательские базы данных.  Обновление на месте — это самый простой метод, подразумевающий некоторое время простоя; в случае необходимости отката он занимает больше времени, кроме того, этот вариант поддерживается не для всех сценариев. Дополнительные сведения о поддерживаемых и неподдерживаемых сценариях обновления на месте см. в разделе [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,18 +17,19 @@ f1_keywords:
 - sql13.dts.designer.webservicestask.general.f1
 - sql13.dts.designer.webservicestask.input.f1
 - sql13.dts.designer.webservicestask.output.f1
-helpviewer_keywords: Web Service task [Integration Services]
+helpviewer_keywords:
+- Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9bdfbf05eafc612d7a6c5531e5c5c1b00fd576a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4cadb534bd6ddfca7df61e316c6d6cabc669a9c1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
   Задача «Веб-служба» выполняет метод веб-службы. Возможно использование задачи «Веб-служба» в следующих целях:  
@@ -122,7 +124,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи веб-службы.  
   
  **Загрузить язык WSDL**  
@@ -155,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **Переменная**  
  Установите флажки, чтобы использовать переменные для входных данных.  
   
- **Значение**  
+ **Value**  
  Если установлены флажки «Переменная», выберите переменные из списка для входных данных; в противном случае введите значения входных данных вручную.  
   
 ## <a name="web-service-task-editor-output-page"></a>Редактор задачи «Веб-служба» (страница «Вывод»)
@@ -182,7 +184,7 @@ ms.lasthandoff: 11/20/2017
  **Переменная**  
  Выберите переменную из списка или нажмите кнопку \<**Создать переменную…**>, чтобы создать переменную.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также**: [Переменные в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>См. также  
  Видео [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=259642)(Как вызвать веб-службы с помощью задачи "Веб-служба" — видеоматериал SQL Server) на technet.microsoft.com.  
