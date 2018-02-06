@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/09/2018
  Если элементы отчетов публикуются из такого приложения для создания отчетов, как построитель отчетов, на сервере отчетов, работающем в режиме интеграции с SharePoint, также происходит обновление каталога сервера отчетов, а результаты поиска в галерее точно отражают новый или обновленный элемент отчета.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Непосредственная передача элементов отчетов в папку SharePoint  
- Если элемент отчета загружается напрямую в папку документов SharePoint (а не публикуется из приложения создания отчета), каталог сервера отчетов не обновляется. Поиск в галерее элементов отчетов не позволяет найти такой переданный элемент отчета. Чтобы обеспечить постоянную синхронизацию папок SharePoint и каталога сервера отчетов, можно активировать функцию синхронизации файлов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере SharePoint. Дополнительные сведения см. в статье [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Если элемент отчета загружается напрямую в папку документов SharePoint (а не публикуется из приложения создания отчета), каталог сервера отчетов не обновляется. Поиск в галерее элементов отчетов не позволяет найти такой переданный элемент отчета. Чтобы обеспечить постоянную синхронизацию папок SharePoint и каталога сервера отчетов, можно активировать функцию синхронизации файлов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере SharePoint. Дополнительные сведения см. в статье [активировать функции синхронизации файлов сервера отчетов в центре администрирования SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
  Файлы также можно синхронизировать, вызвав некоторые API-интерфейсы управления службами отчетов (например, GetProperties и SetProperties).  
   
