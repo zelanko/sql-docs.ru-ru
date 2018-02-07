@@ -8,26 +8,28 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], parameters
 - user-defined functions [SQL Server], parameters
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 697268f348d50079d2d3f740ea56b9dd28944792
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab101583f2e16a13dc42d8b8800c2befec2f536f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="parameters"></a>Параметры
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Параметры используются для обмена данными между хранимой процедурой или функцией и вызвавшим ее приложением или инструментом. 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Параметры используются для обмена данными между хранимой процедурой или функцией и вызвавшим ее приложением или инструментом. 
 
 *  Входные параметры позволяют передать значение в хранимую процедуру или функцию.
 *  Выходные параметры позволяют возвратить из хранимой процедуры значение или переменную-курсор. Определяемые пользователем функции не могут задавать выходные параметры.
@@ -86,7 +88,7 @@ GO
 
 Для обмена данными между переменными приложения, параметрами и кодами возврата в приложениях можно использовать маркеры параметров, связанные с переменными программы.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   

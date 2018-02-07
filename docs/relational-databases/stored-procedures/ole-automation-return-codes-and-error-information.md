@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ole
+ms.technology:
+- dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f51c1f609a1ab0556e3ba0494e23dc18cb4c9aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2621860c2090c3c3efe1fa72bbd4c9e4315c68d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Коды возврата и сведения об ошибках OLE-автоматизации
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Системные хранимые процедуры OLE-автоматизации возвращают код типа **int**, который представляет собой значение HRESULT, возвращенное базовой операцией OLE-автоматизации. Значение HRESULT, равное 0, свидетельствует об успешном завершении операции. Ненулевое значение HRESULT является кодом ошибки OLE, представленным в шестнадцатеричной форме 0x800*nnnnn*, однако при возврате из хранимой процедуры в качестве кода возврата значения с типом **int** значение HRESULT представляется в форме 214*nnnnnnn*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Системные хранимые процедуры OLE-автоматизации возвращают код возврата типа **int** , который представляет собой значение HRESULT, возвращенное базовой операцией OLE-автоматизации. Значение HRESULT, равное 0, свидетельствует об успешном завершении операции. Ненулевое значение HRESULT является кодом ошибки OLE, представленным в шестнадцатеричной форме 0x800*nnnnn*, однако при возврате из хранимой процедуры в качестве кода возврата значения с типом **int** значение HRESULT представляется в форме 214*nnnnnnn*.  
   
  Например, если в хранимую процедуру sp_OACreate передать недопустимое имя объекта (SQLDMO.Xyzzy), она возвратит значение HRESULT типа **int** , равное 2 147 221 005, что эквивалентно шестнадцатеричному 0x800401f3.  
   
