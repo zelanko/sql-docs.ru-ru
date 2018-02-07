@@ -8,26 +8,28 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd0517fa69865cd3a4d3180071be0551606a5090
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c3792d9ef087c2e8dce4dfbceed1a1a4d500440c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stored-procedures-database-engine"></a>Хранимые процедуры (компонент Database Engine)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Хранимая процедура в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это группа из одной или нескольких инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или ссылка на метод среды CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Процедуры аналогичны конструкциям в других языках программирования, поскольку обеспечивают следующее:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Хранимая процедура в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это группа из одной или нескольких инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или ссылка на метод [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] среды CLR. Процедуры аналогичны конструкциям в других языках программирования, поскольку обеспечивают следующее:  
   
 -   обрабатывают входные параметры и возвращают вызывающей программе значения в виде выходных параметров;  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 11/17/2017
  Временные процедуры  
  Временные процедуры — это один из видов пользовательских процедур. Временные процедуры схожи с постоянными процедурами, за исключением того, что они хранятся в базе данных **tempdb**. Существует два вида временных процедур: локальные и глобальные. Они отличаются друг от друга именами, видимостью и доступностью. Имена локальных временных процедур начинаются с одного знака диеза (#); они видны только текущему соединению пользователя и удаляются, когда закрывается соединение. Имена глобальных временных процедур начинаются с двух знаков диеза (##); они видны любому пользователю и удаляются после окончания последнего сеанса, использующего процедуру.  
   
- System  
+ Система  
  Системные процедуры включены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Физически они хранятся во внутренней скрытой базе данных **Resource** . Логически они отображаются в схеме **sys** каждой системной и пользовательской базы данных. В дополнение к этому, база данных **msdb** также содержит системные хранимые процедуры в схеме **dbo** . Эти процедуры используются для планирования предупреждений и заданий. Поскольку названия системных процедур начинаются с префикса **sp_**, этот префикс не рекомендуется использовать при создании пользовательских процедур. Полный список системных хранимых процедур см. в статье [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает системные процедуры, обеспечивающие интерфейс между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и внешними программами для выполнения различных действий по обслуживанию системы. Эти расширенные процедуры имеют префикс xp_. Полный список расширенных хранимых процедур см. в статье [Основные расширенные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
@@ -81,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Расширенные хранимые процедуры в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]будут удалены. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется. Вместо них рекомендуется создавать процедуры CLR. Этот метод более надежен и безопасен, чем использование расширенных хранимых процедур.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
