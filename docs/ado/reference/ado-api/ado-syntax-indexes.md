@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: syntax indexes [ADO]
+helpviewer_keywords:
+- syntax indexes [ADO]
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e185dbb815485553a133898a5802ecf5f9d5521c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e4afdfdae0eb9a461008e26fe5d701862c19aaf8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-syntax-indexes"></a>Синтаксис индексов ADO
 Синтаксис вызова ADO методы и свойства отличается в зависимости от среды разработки. Остальная часть справочнике по языку ADO использует Microsoft Visual Basic язык программирования для демонстрации синтаксиса метода или свойства ADO. Тем не менее см. в разделах Подробные примеры синтаксиса в зависимости от языка программирования и методологии:  
@@ -32,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [ADO для индекса в Visual C++ синтаксис с #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md) рассматриваются ADO свойств и методов, при использовании **#import** директивы компилятора с Microsoft Visual C++.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование ADO с помощью Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Использование ADO с Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
  [Использование объектов ADO с языками сценариев](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset20::raw_GetString
 - Recordset20::GetString
-helpviewer_keywords: GetString method [ADO]
+helpviewer_keywords:
+- GetString method [ADO]
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6f92e1be67ce0eb26f300cde4b1ef53bfc5dc49c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 03449fb395e9c4448f7111728adb392facae9921
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getstring-method-ado"></a>Метод GetString (ADO)
 Возвращает [записей](../../../ado/reference/ado-api/recordset-object-ado.md) как строка.  
@@ -46,16 +48,16 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  Объект [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) значение, указывающее, как **записей** должны преобразовываться в строку. *RowDelimiter*, *ColumnDelimiter*, и *NullExpr* параметры используются только вместе с *StringFormat* из  **adClipString**.  
   
  *NumRows*  
- Необязательный параметр. Число строк, которые должны преобразовываться в **записей**. Если *NumRows* не указан, или если это значение превышает общее число строк в **записей**, затем все строки **записей** преобразуются.  
+ Необязательно. Число строк, которые должны преобразовываться в **записей**. Если *NumRows* не указан, или если это значение превышает общее число строк в **записей**, затем все строки **записей** преобразуются.  
   
  *ColumnDelimiter*  
- Необязательный параметр. Разделитель, используемый между столбцами, если указано, в противном случае символ табуляции.  
+ Необязательно. Разделитель, используемый между столбцами, если указано, в противном случае символ табуляции.  
   
  *RowDelimiter*  
- Необязательный параметр. Разделитель, используемый между строками, если указано, в противном случае символ возврата каретки.  
+ Необязательно. Разделитель, используемый между строками, если указано, в противном случае символ возврата каретки.  
   
  *NullExpr*  
- Необязательный параметр. Выражение, используемое вместо значения null, если указано, в противном случае — пустая строка.  
+ Необязательно. Выражение, используемое вместо значения null, если указано, в противном случае — пустая строка.  
   
 ## <a name="remarks"></a>Remarks  
  Строки данных, но не данные схемы, сохраняется в строке. Таким образом **записей** нельзя открыть повторно с помощью этой строки.  
@@ -65,5 +67,5 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода GetString (Visual Basic)](../../../ado/reference/ado-api/getstring-method-example-vb.md)

@@ -1,6 +1,7 @@
 ---
 title: "Метод SubmitChanges (RDS) | Документы Microsoft"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: SubmitChanges method [ADO]
+helpviewer_keywords:
+- SubmitChanges method [ADO]
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc04a3ac77d6363c86f684b474fb5fa9a06c3c5e
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c5e6131490f2e1e39b0ab9d038b13af67ec52047
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="submitchanges-method-rds"></a>Метод SubmitChanges (RDS)
 Ожидающие изменения локально кэшированных и обновляемые [записей](../../../ado/reference/ado-api/recordset-object-ado.md) к источнику данных, указанному в [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойство или [URL-адрес](../../../ado/reference/rds-api/url-property-rds.md) свойство.  
@@ -47,7 +49,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *Соединение*  
  Объект **строка** значение, представляющее соединение, созданное с помощью **RDS. DataControl** объекта [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойство.  
   
- *Набор записей*  
+ *Recordset*  
  Объектную переменную, которая представляет **записей** объекта.  
   
 ## <a name="remarks"></a>Remarks  
@@ -67,7 +69,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
 |-|-|  
 |[Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода SubmitChanges (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [Адрес книги кнопки](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Метод CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   

@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: namespaces in ADO
+helpviewer_keywords:
+- namespaces in ADO
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b5921d1c91ee326810041c612097c41e9e099e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c34bb680f7a066eeb694cf62fba39cabb0d4cbea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="namespaces"></a>Пространства имен
 Формат сохраняемости XML в ADO использует следующие четыре пространства имен.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Remarks  
  Формат сохраняемости XML в ADO использует следующие четыре пространства имен.  
   
-|Prefix|Description|  
+|Prefix|Описание|  
 |------------|-----------------|  
 |s|Ссылается на пространство имен «XML-данных», содержащее элементы и атрибуты, определяющие схему текущего набора записей.|  
 |DT|Ссылается на спецификацию определения типа данных.|  
@@ -50,5 +52,5 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
   
  Пользователь может определять это может быть любое имя, при условии, что это имя используется согласованно во всех XML-документа. ADO всегда записывает «s», ««службы Reporting Services», «ТР» и «z», но эти имена префикс не жестко закодирована в компоненте загрузки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

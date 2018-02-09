@@ -1,43 +1,34 @@
 ---
 title: "Обновлено - система платформы аналитики для документации по SQL Server | Документы Microsoft"
 description: "Отображение фрагментов обновленное содержимое для последних измененных в документации, Analytics Platform System для Microsoft SQL Server."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.suite: sql
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.topic: article
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: sql-analytics-platform-system
-ms.openlocfilehash: 2d7342f4b533a4cc42e00dd04520bc4a28654410
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: aps-pdw
+ms.date: 02/03/2018
+ms.openlocfilehash: 2ae6339897b52cd16ad3417cc218afe1df95ba2a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-analytics-platform-system-for-sql-server"></a>Новые и недавно обновленные: система платформы аналитики для SQL Server
 
 
 
-Почти каждый день корпорация Майкрософт вносит изменения в свои статьи на веб-сайте документации [Docs.Microsoft.com](http://docs.microsoft.com/). В этой статье приводятся отрывки из обновленных недавно статей, а также ссылки на новые статьи.
+Почти каждый день Корпорация Майкрософт обновляет некоторые из его существующих статей на его [Docs.Microsoft.com](http://docs.microsoft.com/) документации веб-сайта. В этой статье отображает выдержки из недавно обновлены статьи. Ссылки на новые статьи также может быть указан.
 
-Статья создается программой и периодически обновляется. Отрывки из измененных статей могут иметь неидеальный формат или разметку исходной статьи. Картинки здесь не отображаются.
+В этой статье создается программой, которая периодически запускается повторно. Иногда фрагмент могут отображаться идеально подходит форматирования или как разметки из статьи источника. Образы никогда не отображается.
 
-Последние обновления соответствуют следующему периоду времени и предметной области:
+Следующий диапазон дат и темы отображаются последние обновления:
 
 
 
-- *Диапазон дат обновлений:* &nbsp; **28.09.2017**&nbsp;–&nbsp;**02.12.2017**
+- *Диапазон обновлений дат:* &nbsp; **2017 г-12-03** &nbsp; - в - &nbsp; **2018-02-03**
 - *Предметной области:* &nbsp; **Analytics Platform System для SQL Server**.
 
 
@@ -45,110 +36,24 @@ ms.lasthandoff: 12/21/2017
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>Недавно созданные статьи
+## <a name="new-articles-created-recently"></a>Недавно созданные новые статьи
 
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Приобретение и настройка резервного сервера](acquire-and-configure-backup-server.md)
-2. [Приобретение и настройка сервера для загрузки](acquire-and-configure-loading-server.md)
-3. [Антивирусное программное обеспечение](antivirus-software.md)
-4. [Конфигурация устройства](appliance-configuration.md)
-5. [Установка устройств и общие сведения о конфигурации](appliance-installation-and-configuration-overview.md)
-6. [Задачи управления устройством](appliance-management-tasks.md)
-7. [Мониторинг устройства](appliance-monitoring.md)
-8. [Сетевая конфигурация устройства](appliance-network-configuration.md)
-9. [Конфигурация часового пояса устройства](appliance-time-zone-configuration.md)
-10. [Топология устройства](appliance-topology.md)
-11. [Применения исправлений системы платформы аналитики](apply-analytics-platform-system-hotfixes.md)
-12. [Резервное копирование и загрузка оборудованию](backup-and-loading-hardware.md)
-13. [Архивация и восстановление](backup-and-restore-overview.md)
-14. [Таблица планирования емкости резервного сервера](backup-capacity-planning-worksheet.md)
-15. [Настройка внешних SMP SQL Server для получения копии удаленной таблицы](configure-an-external-smp-sql-server-to-receive-remote-table-copies.md)
-16. [Настройки Windows внешние системы для получения копии удаленной таблицы с помощью InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)
-17. [Настройка сетевых адаптеров InfiniBand для система платформы аналитики](configure-infiniband-network-adapters.md)
-18. [Настройка подключения к PolyBase для внешних данных](configure-polybase-connectivity-to-external-data.md)
-19. [Настройка SCOM для наблюдения за система платформы аналитики](configure-scom-to-monitor-analytics-platform-system.md)
-20. [Настройка для удаленной таблицы копии SQL Server PDW](configure-sql-server-pdw-for-remote-table-copies.md)
-21. [Настройка Windows Server Update Services (WSUS)](configure-windows-server-update-services-wsus.md)
-22. [Подключиться к узлам устройства](connect-to-appliance-nodes.md)
-23. [Создание администратора домена APS](create-an-aps-domain-administrator-aps.md)
-24. [Как создать задачу «скрипт», использующий адаптер назначения PDW служб SSIS](create-ssis-script-task-using-pdw-destination-adapter.md)
-25. [Определение частоты опроса](determine-polling-frequency.md)
-26. [Определите, какой узел кластера не удалось](determine-which-cluster-node-failed.md)
-27. [Загрузить и установить обновления Майкрософт](download-and-apply-microsoft-updates.md)
-28. [dwloader загрузчика командной строки](dwloader.md)
-29. [Правила преобразования типов данных для dwloader](dwloader-data-type-conversion-rules.md)
-30. [Сообщения об ошибках](error-messages.md)
-31. [Предоставление разрешений](grant-permissions.md)
-32. [Компоненты оборудования системы платформы аналитики](hardware-components.md)
-33. [Конфигурации оборудования](hardware-configurations.md)
-34. [Установка оборудования](hardware-installation.md)
-35. [Высокий уровень доступности Analytics Platform System](high-availability.md)
-36. [Импорт пакета управления SCOM для PDW](import-the-scom-management-pack-for-pdw.md)
-37. [Сведения о получении из вашего Оборудования](information-to-obtain-from-your-ihv.md)
-38. [Установить пакеты управления SCOM](install-the-scom-management-packs.md)
-39. [Мгновенная инициализация конфигурации](instant-file-initialization-configuration.md)
-40. [Запуск диспетчера конфигурации](launch-the-configuration-manager.md)
-41. [Таблица планирования емкости сервера для загрузки](loading-server-capacity-planning-worksheet.md)
-42. [Загрузка (SQL Server PDW)](load-overview.md)
-43. [Загрузка данных с помощью INSERT](load-with-insert.md)
-44. [Загрузка данных со службами Integration Services](load-with-ssis.md)
-45. [Режим блокировки](locking-behavior.md)
-46. [База данных master](master-database.md)
-47. [Монитор состояния работоспособности устройства](monitor-appliance-health-state.md)
-48. [Мониторинг активных запросов](monitoring-active-queries.md)
-49. [Отслеживание загрузок](monitor-loads.md)
-50. [Мониторинг устройства с помощью System Center Operations Manager](monitor-the-appliance-by-using-system-center-operations-manager.md)
-51. [Мониторинг устройства с помощью системных представлений](monitor-the-appliance-by-using-system-views.md)
-52. [Монитор устройства с помощью консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md)
-53. [Общие сведения о хранилище Parallel Data Warehouse](parallel-data-warehouse-overview.md)
-54. [Сброс пароля](password-reset.md)
-55. [Физические компоненты PDW и структуры устройства](pdw-and-appliance-fabric-physical-components.md)
-56. [Подготовка сертификата PDW](pdw-certificate-provisioning.md)
-57. [Конфигурация брандмауэра PDW](pdw-firewall-configuration.md)
-58. [Разрешения PDW](pdw-permissions.md)
-59. [Состояние службы PDW](pdw-services-status.md)
-60. [Топология PDW](pdw-topology.md)
-61. [Питание устройства APS и отключение](power-the-aps-appliance-on-or-off.md)
-62. [Система платформы аналитики обработки и емкость](processing-and-storage-capacity-planning.md)
-63. [Подготовка сертификата PDW](provision-certificate.md)
-64. [Копирование удаленной таблицы](remote-table-copy.md)
-65. [Зарезервированные имена](reserved-database-names.md)
-66. [Восстановление базы данных, защищенной с помощью прозрачного шифрования](restore-database-protected-by-tde.md)
-67. [Восстановление базы данных Master](restore-the-master-database.md)
-68. [Отправить данные телеметрии отзыв в корпорацию Майкрософт](send-telemetry-feedback-to-microsoft-sql-server-pdw.md)
-69. [Задать пароль администратора для входа в систему узлов AD в режиме восстановления служб каталогов (DSRM)](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)
-70. [Обслуживание программного обеспечения](software-servicing.md)
-71. [Базы данных промежуточного хранения](staging-database.md)
-72. [Системные базы данных](system-databases.md)
-73. [База данных tempdb](tempdb-database.md)
-74. [Отслеживать оповещения устройства](track-appliance-alerts.md)
-75. [Прозрачное шифрование данных](transparent-data-encryption.md)
-76. [Элементы языка](tsql-language-elements.md)
-77. [Разделы T-SQL](tsql-statements.md)
-78. [Системные представления](tsql-system-views.md)
-79. [Основные сведения об оповещениях в консоли администрирования](understanding-admin-console-alerts.md)
-80. [Удаление исправлений системы платформы аналитики](uninstall-analytics-platform-system-hotfixes.md)
-81. [Удаление обновлений](uninstall-microsoft-updates.md)
-82. [Использовать DNS-сервер пересылки для разрешения имен DNS не является специализированным](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)
-83. [Сеансы пользователей](user-sessions.md)
-84. [Просмотр использования емкости](view-capacity-utilization.md)
-85. [Новые возможности 2016 системы платформы аналитики, масштабируемого хранилища данных MPP](whats-new-analytics-platform-system.md)
-86. [Управление рабочими нагрузками](workload-management.md)
-87. [Задачи управления рабочей нагрузки](workload-management-tasks.md)
+***Сейчас новые статьи отсутствуют.***
 
 
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>Обновленные статьи с отрывками
+## <a name="updated-articles-with-excerpts"></a>Обновлены статьи с отрывки
 
 В этом разделе приводятся отрывки из статей, в которые недавно внесены значительные изменения.
 
-Отрывки отображаются отдельно от соответствующего семантического контекста. Кроме того, иногда фрагмент отделяется от синтаксиса разметки, окружающей саму статью. Таким образом, эти отрывки приводятся только для общего сведения. Они позволяют понять, стоит ли вам перейти по ссылке и прочитать всю статью полностью.
+Из семантической контексту отрывки, показанные здесь отображаются раздельно. Кроме того иногда фрагмент отделяется от синтаксис важные разметки окружающего в реальной статьи. Поэтому эти отрывки являются только общие рекомендации. Только отрывки позволяют знаете ли потребностей гарантирует времени, нажмите кнопку и посетите реальной статьи.
 
-По этой и другим причинам не копируйте код из этих отрывков и не воспринимайте содержание этих отрывков как однозначно верное. Вместо этого пройдите по ссылке и ознакомьтесь с фактическим текстом статьи.
+Для этих и других причин не копировать из этих отрывки кода и не выполняют как точное истинности любой фрагмент текста. Вместо этого посетите реальной статьи.
 
 
 
@@ -158,63 +63,106 @@ ms.lasthandoff: 12/21/2017
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список недавно обновленных статей
+### <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список статей, недавно обновлены
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
+1. [Настройка подключения к PolyBase для внешних данных](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-***Ни одна из статей в этой предметной области за последнее время изменениям не подвергалась.***
+&nbsp;
+
+<a name="TitleNum_1"/>
+
+### <a name="1-nbsp-configure-polybase-connectivity-to-external-dataconfigure-polybase-connectivity-to-external-datamd"></a>1. &nbsp;[Настройки PolyBase подключения к внешним данным](configure-polybase-connectivity-to-external-data.md)
+
+*Обновлено: 2018-01-29* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+
+<!-- Source markdown line 132.  ms.author= "barbkess".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 947f789480da66b9f636f39b30caec6be60d8c4d d4d4d45fbbb8e10ed6f26fe12f9a25d2e8e4f068  (PR=4741  ,  Filename=configure-polybase-connectivity-to-external-data.md  ,  Dirpath=docs\analytics-platform-system\  ,  MergeCommitSha40=0a44ce9993ebf61f86e409255a1d58d47993951a) -->
+
+
+
+**Конфигурация Kerberos**
+
+Обратите внимание, что при PolyBase проходит проверку подлинности Kerberos защищенного кластера, параметр hadoop.rpc.protection должно быть присвоено проверки подлинности. Это действие оставляет обмена данными между узлами Hadoop в незашифрованном виде.
+
+ Для подключения к защищенным с помощью Kerberos кластеру [с помощью MIT KDC]:
+
+
+1.  Найдите каталог конфигурации Hadoop в каталоге установки на узле управления:
+
+    ```
+    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
+    ```
+
+2.  Найдите значение конфигурации для ключей конфигурации, перечисленных в таблице, на компьютере с Hadoop. (Найдите файлы в каталоге конфигурации Hadoop на этом же компьютере.)
+
+3.  Скопируйте значения конфигурации в свойство value соответствующих файлов на узел элемента управления.
+
+    |**#**|**Файл конфигурации**|**Ключ конфигурации**|**Действие**|
+    |------------|----------------|---------------------|----------|
+    |1|core-site.xml|polybase.kerberos.kdchost|Укажите имя узла KDC. Например, kerberos.your-realm.com|
+    |2|core-site.xml|polybase.kerberos.realm|Укажите область Kerberos. Например, YOUR-REALM.COM|
+    |3|core-site.xml|hadoop.security.authentication|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например, KERBEROS<br></br>**Примечание о безопасности:** слово KERBEROS должно быть написано прописными буквами. При использовании строчных букв функция может не включиться.|
+    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например: hdfs/_HOST@YOUR-REALM.COM.|
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например: mapred/_HOST@YOUR-REALM.COM.|
+    |6|mapred-site.xml|mapreduce.jobhistory.address|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например, 10.193.26.174:10020|
+    |7|yarn-site.xml yarn|yarn.resourcemanager.principal|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например: yarn/_HOST@YOUR-REALM.COM|
 
 
 
 
 
 
-## <a name="similar-articles"></a>Похожие статьи
 
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Аналогичные статьи о новых или обновленных статьях
 
 Этот раздел содержит статьи, очень близкие к недавно измененным статьям из других предметных областей в общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новые + обновленные (3+14): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (1+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Новые + обновленные (87+0): **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Новые + обновленные (5+4): **Подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (0+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (2+2): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (10+9): **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (2+4): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (4+2): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Новые + обновленные (0+1): **примеры для SQL**](../sample/new-updated-sample.md)
-- [Новые + обновленные (21+0): **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Новые + обновленные(5+1): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+1): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (1+0): **Помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (0+2): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Предметной области, *сделать* новыми или были недавно обновлены статьи
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
+
+- [Новый + обновленные (1 + 3):&nbsp; **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новый + обновленные (0 + 1):&nbsp; **Analytics Platform System для SQL** документы](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Новый + обновленные (0 + 1):&nbsp; **подключение к SQL** документы](../connect/new-updated-connect.md)
+- [Новый + обновленные (0 + 1):&nbsp; **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
+- [Новый + обновленные (12 + 1): **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
+- [Новый + обновленные (6 + 2):&nbsp; **Linux для SQL** документы](../linux/new-updated-linux.md)
+- [Новый + обновленные (15 + 0): **PowerShell для SQL** документы](../powershell/new-updated-powershell.md)
+- [Новый + обновленные (2 + 9):&nbsp; **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
+- [Новый + обновленные (1 + 0):&nbsp; **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
+- [Новый + обновленные (1 + 1):&nbsp; **операций SQL Studio** документы](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Новый + обновленные (1 + 1):&nbsp; **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
+- [Новый + обновленные (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)** документы](../ssdt/new-updated-ssdt.md)
+- [Новый + обновленные (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)** документы](../ssms/new-updated-ssms.md)
+- [Новый + обновленные (0 + 2):&nbsp; **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Предметной области, которые выполняют *не* иметь любой новыми или были недавно обновлены статьи
+
 
 - [Новые + обновленные (0+0): **Data Migration Assistant (DMA) для SQL**](../dma/new-updated-dma.md)
-- [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
-- [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
+- [Новый + обновленные (0 + 0): **объектов данных ActiveX (ADO) для SQL** документы](../ado/new-updated-ado.md)
+- [Новые + обновленные (0+0): документация **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новый + обновленные (0 + 0): **Data Quality Services для SQL** документы](../data-quality-services/new-updated-data-quality-services.md)
+- [Новый + обновленные (0 + 0): **расширений интеллектуального анализа (DMX) для SQL** документы](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
-- [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
-- [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
+- [Новый + обновленные (0 + 0): **многомерных выражений (MDX) для SQL** документы](../mdx/new-updated-mdx.md)
+- [Новый + обновленные (0 + 0): **ODBC (Open Database Connectivity) для SQL** документы](../odbc/new-updated-odbc.md)
+- [Новый + обновленные (0 + 0): **образцы для SQL** документы](../sample/new-updated-sample.md)
+- [Новый + обновленные (0 + 0): **SQL Server Migration Assistant (SSMA)** документы](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
-- [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
+- [Новый + обновленные (0 + 0): **XQuery для SQL** документы](../xquery/new-updated-xquery.md)
 
 

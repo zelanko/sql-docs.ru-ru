@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e668f5d2644ece0fa9210bdb492fd37ca8089a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 93be03c62c7950e2cd41a3ab5b56670c2e70b11c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sort-property"></a>Свойство сортировки
 Указывает один или несколько имен полей, на котором [записей](../../../ado/reference/ado-api/recordset-object-ado.md) отсортирован, ли каждое поле сортируется в порядке возрастания или убывания.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства сортировки (Visual Basic)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
  [Пример свойства сортировки (VC ++)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
  [Оптимизировать динамические свойства (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

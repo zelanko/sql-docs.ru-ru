@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6f5a67559ea2137110dc72d77a56bacc8da39a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-append-clause"></a>Предложение APPEND фигуры
 В предложении APPEND фигуры команда добавляет столбец или столбцы для **записей**. Часто эти столбцы — это столбцы главе, относящихся к дочерним **записей**.  
@@ -36,10 +37,10 @@ ms.lasthandoff: 12/21/2017
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Существуют следующие части этого предложения.  
   
- *родительский команда*  
+ *parent-command*  
  Ноль или один из следующих (можно опустить *родительской команды* полностью):  
   
 -   Команда поставщика заключены в фигурные скобки («{}»), которая возвращает **записей** объекта. Команды для базового поставщика данных, и его синтаксис зависит от требований этого поставщика. Обычно это будет языка SQL, несмотря на то, что ADO не требует любой язык для конкретного запроса.  
@@ -48,10 +49,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   Таблица ключевого слова, за которым следует имя таблицы в поставщике данных.  
   
- *родительский псевдоним*  
+ *parent-alias*  
  Необязательный псевдоним, который ссылается на родительский **записей**.  
   
- *Список столбцов*  
+ *column-list*  
  Один или несколько из следующих действий:  
   
 -   Столбца со статистическим выражением.  
@@ -71,7 +72,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>Remarks  
- *дочерних записей*  
+ *child-recordset*  
  -   Команда поставщика заключены в фигурные скобки («{}»), которая возвращает **записей** объекта. Команды для базового поставщика данных, и его синтаксис зависит от требований этого поставщика. Обычно это будет языка SQL, несмотря на то, что ADO не требует любой язык для конкретного запроса.  
   
 -   Другая команда фигуры, внедренных в круглые скобки.  
@@ -80,19 +81,19 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   Таблица ключевого слова, за которым следует имя таблицы в поставщике данных.  
   
- *дочерние псевдоним*  
+ *child-alias*  
  Псевдоним, относящийся к дочернему **записей**.  
   
- *родительский столбец*  
+ *parent-column*  
  Столбец в **записей** возвращенных *родительской команды.*  
   
- *дочерний столбец*  
+ *child-column*  
  Столбец в **записей** возвращенных *команда дочерние*.  
   
  *Номер param*  
  В разделе [работы параметризованных команд](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *Глава псевдоним*  
+ *chapter-alias*  
  Псевдоним, который ссылается на столбец добавляется к родительскому элементу.  
   
 > [!NOTE]
@@ -126,7 +127,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [Предложения COMPUTE для промежуточного формирования данных](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
  [Грамматика формальных фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

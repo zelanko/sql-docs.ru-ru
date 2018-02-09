@@ -8,25 +8,28 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af693b0d47a92fdefc2ebf2104455d7ea5b782c5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>Система - типов сопоставление типов последовательности
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -311,7 +314,7 @@ GO
     GO  
     ```  
   
-### <a name="example-b"></a>Пример B-адреса  
+### <a name="example-b"></a>Пример Б  
  В следующем примере показано, как определить, является ли узел, возвращенный выражением, элементом узла с указанным именем. Она использует **element()** тестирования.  
   
  В следующем примере два элемента <`Customer`> XML-экземпляра, к которому происходит запрос, имеют два разных типа данных: `CustomerType` и `SpecialCustomerType`. Предположим, что необходимо выяснить тип элемента <`Customer`>, возвращенного выражением. Следующая коллекция XML-схем определяет типы данных `CustomerType` и `SpecialCustomerType`.  
@@ -438,7 +441,7 @@ RETURN
   
 -   Явные запросы для **xsi: Type** или **xsi: nil** не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Система типов &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
   
   

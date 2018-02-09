@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: c97bdbafa557f8d3fe9346431926b9f1a490a286
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: f50be15e4d778ffb9c77caa375dc6b963b5821cd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Миграция базы данных SQL Server с Windows и Linux с помощью резервного копирования и восстановления
 
@@ -33,6 +33,8 @@ SQL Server резервного копирования, и функция вос
 > * Перемещение файла резервной копии для Linux в оболочке Bash
 > * Восстановление резервной копии файла в Linux с помощью Transact-SQL
 > * Выполните запрос, чтобы проверка миграции
+
+Можно также создать SQL Server группы доступности AlwaysOn для переноса базы данных SQL Server из Windows и Linux. В разделе [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md).
 
 ## <a name="prerequisites"></a>предварительные требования
 

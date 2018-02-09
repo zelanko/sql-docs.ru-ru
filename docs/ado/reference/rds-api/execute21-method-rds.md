@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Execute21 method [RDS]
+helpviewer_keywords:
+- Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b94d4cdb75cbdcfaa2dfece8d7172e2935d6759d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fd79bbbd0ccce5e5e2f2bef181ba958c76f6afb5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute21-method-rds"></a>Метод Execute21 (RDS)
 Выполняет запрос и создает набор записей ADO для использования в ADO 2.1.  
@@ -45,7 +47,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *HandlerString*  
  Строка определяет обработчик для использования с этого выполнения. Строка состоит из двух частей. Первая часть содержит имя обработчика для использования (ProgID). Во второй части строки содержит аргументы, передаваемые обработчику. Способ интерпретации строки аргументов — конкретных обработчик. Эти две части разделяются запятой в строке первого экземпляра (несмотря на то, что аргументы строка может содержать дополнительные запятые). Аргументы являются необязательными.  
   
- *Строка запроса*  
+ *QueryString*  
  Команда в язык команд, поддерживаемых поставщиком OLE DB, указанные в строке подключения. Для поставщиков, основанных на SQL, он может содержать [!INCLUDE[tsql](../../../includes/tsql_md.md)] команды инструкции, но для поставщиков, отличных от SQL (например, MSDataShape) это может быть [!INCLUDE[tsql](../../../includes/tsql_md.md)] инструкция запроса.  
   
  Кроме того Если используется обработчик (настоятельно рекомендуется использовать обработчик), обработчик можно изменить или заменить указанное здесь значение. Например, обработчик обычно заменяет *QueryString* со строкой запроса из его INI-файла. По умолчанию используется файл Msdfmap.ini.  

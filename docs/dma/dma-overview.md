@@ -1,34 +1,39 @@
 ---
 title: "Общие сведения о помощник по миграции данных (SQL Server) | Документы Microsoft"
 ms.custom: 
-ms.date: 10/04/2017
+ms.date: 02/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, overview
+helpviewer_keywords:
+- Data Migration Assistant, overview
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea780da11c39984fa8828119eee621a66768f1fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>Общие сведения о данных помощник по миграции
 
-Данные помощника по миграции (DMA) дает возможность обновления к платформе современных данных путем обнаружения проблемы совместимости, которые могут повлиять на функциональность базы данных в новой версии SQL Server и базы данных SQL Azure. DMA рекомендует производительности и улучшения производительности для целевой среды и позволяет переносить схемы, данные и неавтономные объекты с исходного сервера на целевой сервер.
+Помощник по миграции данных (DMA) дает возможность обновления к платформе современных данных путем обнаружения проблемы совместимости, которые могут повлиять на функциональность базы данных в новой версии SQL Server и базы данных SQL Azure. DMA рекомендует производительности и улучшения производительности для целевой среды и позволяет переносить схемы, данные и неавтономные объекты с исходного сервера на целевой сервер.
 
+> [!NOTE] 
+> Для больших (с точки зрения числа и размера баз данных) миграций, рекомендуется использовать [службу миграции базы данных Azure](https://docs.microsoft.com/en-us/azure/dms/dms-overview), который можно перенести базы данных в масштабе.
+  
 ## <a name="capabilities"></a>Возможности
 
 - Оцените экземпляры SQL Server в локальной среде, миграции баз данных Azure SQL. Рабочий процесс оценки поможет вам обнаружить следующие проблемы, которые могут повлиять на перенос базы данных Azure SQL и содержит подробные инструкции о способах их устранения.
@@ -37,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 
   - Частично поддерживаемые и неподдерживаемые компоненты: обнаруживает частично поддерживаемых и неподдерживаемых функций, которые в настоящее время используются на исходный экземпляр SQL Server. DMA обеспечивает наличие полного набора рекомендаций, альтернативные подходы, доступные в Azure, а снижающие опасность действия, чтобы вы могли включить в проекты миграции.
 
-- Обнаружение проблем, которые могут повлиять на обновление до SQL Server в локальной среде.  Они называются проблемы совместимости и организованы в следующие категории:
+- Обнаружение проблем, которые могут повлиять на обновление до SQL Server в локальной среде. Они называются проблемы совместимости и организованы в следующие категории:
 
   - Критические изменения
 
@@ -75,19 +80,21 @@ DMA заменяет все предыдущие версии помощника
 - SQL Server 2008 R2
 - SQL Server 2012 
 - SQL Server 2014
-- SQL Server 2016
+- SQL Server 2016
+- SQL Server 2017 г. для Windows
 
 **Целевые объекты**
 - SQL Server 2012
 - SQL Server 2014
-- SQL Server 2016
-- База данных SQL Azure
+- SQL Server 2016
+- SQL Server 2017 г. в Windows и Linux
+- Azure SQL Database
 
 ## <a name="installation"></a>Установка
 
 Чтобы установить DMA, загрузите последнюю версию средства из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=53595), а затем запустите **DataMigrationAssistant.msi** файла.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [Оценка миграции SQL Server](../dma/dma-assesssqlonprem.md)
 

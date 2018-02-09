@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: FetchOptions property [ADO]
+helpviewer_keywords:
+- FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77ed1de5f9506512e3f7812b2355b1c52d5fa8f3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f53c6be35a4b3035e81653ecd828c52ea0c959db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchoptions-property-rds"></a>Свойство FetchOptions (RDS)
 Указывает тип асинхронной доставки данных.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="setting-and-return-values"></a>Задание и возвращаемые значения  
  Задает или возвращает одно из следующих значений.  
   
-|Константа|Description|  
+|Константа|Описание|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|Все записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) будут выбраны до возврата управления в приложение. Полный **записей** извлечь, прежде чем приложение сможет выполнять никаких действий с ним.|  
 |**adcFetchBackground**|Элемент управления может возвращать приложению сразу после первого пакета записей будут выбраны. Последующие чтение всех **записей** , попытки получения доступа к записи не выбраны в первого пакета будет отложено до фактического извлечения искомому записи, в какое время управление возвращается приложению.|  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ExecuteOptions и пример свойства FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Метод Cancel (служба удаленных рабочих столов)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DataFactory configuration in RDS [ADO]
+helpviewer_keywords:
+- DataFactory configuration in RDS [ADO]
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5ca6d71ee4d714cabb482b09f686e7616618c18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 34b33a8b1d729a97fd246edcb4d6056954130c27
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Настройка DataFactory безопасным или неограниченный режимов
 > [!IMPORTANT]
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  После выполнения handsafe.reg, необходимо остановить и перезапустить службу World Wide Web публикации на веб-сервере, введя следующие команды в командной строке: «NET STOP W3SVC» и «W3SVC ЗАПУСТИТЕ NET».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 

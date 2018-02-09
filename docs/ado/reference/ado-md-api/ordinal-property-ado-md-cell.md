@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Cell::Ordinal
 - Ordinal
-helpviewer_keywords: Ordinal property [ADO MD]
+helpviewer_keywords:
+- Ordinal property [ADO MD]
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 076fb009f4ce9212e16774787c7eb9464c6f58d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 70c8bb0793791873663c561ccafcdc37bcb37b8a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Порядковый номер свойства (ADO MD ячейка)
 Уникально идентифицирует [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) по его положению в наборе ячеек.  
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="applies-to"></a>Объект применения  
  [Объект Cell (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример оси (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Объект набора ячеек (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Свойство Item (ячеек ADO MD)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   

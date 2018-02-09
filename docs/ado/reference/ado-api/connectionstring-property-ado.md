@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection15::ConnectionString
-helpviewer_keywords: ConnectionString property [ADO]
+f1_keywords:
+- Connection15::ConnectionString
+helpviewer_keywords:
+- ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41f887dbd21f120706e32059128227669f517ea4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-property-ado"></a>Свойство ConnectionString (ADO)
 Указывает сведения, используемые для установления соединения с источником данных.  
@@ -37,13 +40,13 @@ ms.lasthandoff: 12/21/2017
   
  ADO поддерживает пять аргументов для **ConnectionString** свойство; другие аргументы проход непосредственно к поставщику без обработки с ADO. Поддержка ADO аргументы выглядят следующим образом.  
   
-|Аргумент|Description|  
+|Аргумент|Описание|  
 |--------------|-----------------|  
-|*Поставщик =*|Задает имя поставщика, который используется для подключения.|  
+|*Provider=*|Задает имя поставщика, который используется для подключения.|  
 |*Имя файла =*|Указывает имя файла поставщика (например, объект источника материализованных данных), содержащий сведения о подключении предустановки.|  
 |*Удаленный поставщик =*|Задает имя поставщика, который используется при открытии клиентского соединения. (Удаленный канал передачи данных только.)|  
-|*Удаленный сервер =*|Задает имя пути сервера для использования при открытии клиентского соединения. (Удаленный канал передачи данных только.)|  
-|*URL-АДРЕС =*|Указывает строку подключения, как абсолютный URL-адрес, идентифицирующий ресурса, например файла или каталога.|  
+|*Remote Server=*|Задает имя пути сервера для использования при открытии клиентского соединения. (Удаленный канал передачи данных только.)|  
+|*URL=*|Указывает строку подключения, как абсолютный URL-адрес, идентифицирующий ресурса, например файла или каталога.|  
   
  После установки **ConnectionString** свойств и открыть [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, поставщик может изменить содержимое свойства, например, путем сопоставления имен аргументов определяемых ADO для их эквиваленты для конкретного поставщика.  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="applies-to"></a>Объект применения  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ConnectionString, ConnectionTimeout и пример свойства состояния (Visual Basic)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString, ConnectionTimeout и пример свойства состояния (VC ++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

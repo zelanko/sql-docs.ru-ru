@@ -25,19 +25,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fae91b291c11e3993b2182414bf4845fb91969fb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac456dc7617804afbc78ca423ff8e4651c5ccef5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Доступ к определяемых пользователем типов - обновление столбцов определяемого пользователем ТИПА с помощью DataAdapter
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Определяемые пользователем типы (UDT) поддерживаются с помощью **System.Data.DataSet** и **System.Data.SqlClient.SqlDataAdapter** для извлечения и изменения данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Определяемые пользователем типы (UDT) поддерживаются с помощью **System.Data.DataSet** и **System.Data.SqlClient.SqlDataAdapter** для извлечения и изменения данных.  
   
 ## <a name="populating-a-dataset"></a>Заполнение набора данных  
  Инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT можно использовать для выбора значений столбцов определяемых пользователем типов, чтобы заполнить набор данных с помощью адаптера обработки данных. В следующем примере предполагается, что имеется **точки** таблицу, определенную со следующей структурой и данными. Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции создают **точки** таблицы и вставить несколько строк.  
@@ -375,7 +376,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Доступ к определяемым пользователем типам в ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+## <a name="see-also"></a>См. также  
+ [Доступ к определяемых пользователем типов в ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

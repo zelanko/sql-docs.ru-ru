@@ -22,19 +22,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04ee34b1a2474e97111d42be84954dc4c0987dd1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a075d6c4c4cc5ccd0477bb33159cf319fb0754b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>Создание определяемых пользователем типов - требования
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Необходимо сделать ряд важных технических вопросов, при создании определяемого пользователем типа (UDT), должны быть установлены в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В большинстве случаев рекомендуется создавать определяемый пользователем тип как структуру, хотя можно создавать его и в виде класса. Чтобы определяемый пользователем тип можно было зарегистрировать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], его определение должно соответствовать спецификациям на создание определяемого пользователем типа.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Необходимо сделать ряд важных технических вопросов, при создании определяемого пользователем типа (UDT), должны быть установлены в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В большинстве случаев рекомендуется создавать определяемый пользователем тип как структуру, хотя можно создавать его и в виде класса. Чтобы определяемый пользователем тип можно было зарегистрировать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], его определение должно соответствовать спецификациям на создание определяемого пользователем типа.  
   
 ## <a name="requirements-for-implementing-udts"></a>Требования к реализации определяемого пользователем типа  
  Чтобы определяемый пользователем тип работал в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], его определение должно удовлетворять следующим условиям.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="native-serialization"></a>Собственная сериализация  
  Выбор атрибутов сериализации при создании определяемого пользователем типа зависит от его типа. **Собственного** формат сериализации использует очень простую структуру, которая позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения на диске в эффективном собственном формате определяемого пользователем типа. **Собственного** формат рекомендуется в том случае, если определяемый пользователем тип проста и содержит только поля следующих типов:  
   
- **bool**, **байтов**, **sbyte**, **короткие**, **ushort**, **int**,  **uint**, **длинные**, **ulong**, **float**, **двойные**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  Типы, которые состоят из поля из перечисленных выше типов являются хорошими кандидатами для значений **собственного** форматирования, такие как **структуры** в Visual C# (или **структуры** как они называются в Visual Basic). Например, определяемого пользователем ТИПА указано с **собственного** формат сериализации может содержать поля другой определяемый пользователем тип, который также был указан с **собственного** формат. Если определение определяемого пользователем ТИПА является более сложной и содержит типы данных не в списке выше, необходимо указать **UserDefined** формат сериализации.  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/08/2018
  **IsByteOrdered**  
  Объект **логическое** значение, определяющее, каким образом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проводит двоичные сравнения значений определяемого пользователем ТИПА.  
   
- **IsFixedLength атрибута**  
+ **IsFixedLength**  
  Указывает, имеют ли все экземпляры данного определяемого пользователем типа одинаковую длину.  
   
  **MaxByteSize**  
@@ -171,7 +172,7 @@ ms.lasthandoff: 01/08/2018
   
  Определяемые пользователем типы не сериализуются в запросах FOR XML. Для выполнения запроса FOR XML, который отображает XML-сериализации определяемых пользователем типов, явно преобразовать каждый столбец определяемого пользователем ТИПА **xml** тип данных в инструкции SELECT. Можно также явно преобразовать столбцы в **varbinary**, **varchar**, или **nvarchar**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание определяемого пользователем типа](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

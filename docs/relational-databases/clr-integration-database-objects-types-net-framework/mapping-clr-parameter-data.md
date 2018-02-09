@@ -28,61 +28,62 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: "71"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3592a4c547b3586df4be45b2e1734e330dd16664
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ffefa60797d41fc6660e82c208265153eacbd603
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>Сопоставление данных о параметрах CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В следующей таблице перечислены [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , типы данных эквивалентов в среде (CLR) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в **System.Data.SqlTypes** пространства имен и их собственные эквиваленты CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В следующей таблице перечислены [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , типы данных эквивалентов в среде (CLR) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в **System.Data.SqlTypes** пространства имен и их собственные эквиваленты CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework.  
   
 ||||  
 |-|-|-|  
 |**Тип данных SQL Server**|Тип (в System.Data.SqlTypes or Microsoft.SqlServer.Types)|**Тип данных CLR (.NET Framework)**|  
 |**bigint**|**SqlInt64**|**Int64, допускающие значения NULL\<Int64 >**|  
-|**binary**|**SqlBytes, SqlBinary**|**Byte]**|  
-|**bit**|**SqlBoolean**|**Логический, допускающие значения NULL\<логическое >**|  
-|**char**|None|None|  
-|**курсор**|None|None|  
+|**binary**|**SqlBytes, SqlBinary**|**Byte[]**|  
+|**бит**|**SqlBoolean**|**Логический, допускающие значения NULL\<логическое >**|  
+|**char**|Нет|Нет|  
+|**курсор**|Нет|Нет|  
 |**date**|**SqlDateTime**|**DateTime, допускающий значение NULL\<DateTime >**|  
 |**datetime**|**SqlDateTime**|**DateTime, допускающий значение NULL\<DateTime >**|  
-|**datetime2**|None|**DateTime, допускающий значение NULL\<DateTime >**|  
-|**DATETIMEOFFSET**|**None**|**DateTimeOffset, допускающие значения NULL\<DateTimeOffset >**|  
-|**decimal**|**SqlDecimal**|**Decimal, допускающий значение NULL\<десятичное число >**|  
+|**datetime2**|Нет|**DateTime, допускающий значение NULL\<DateTime >**|  
+|**DATETIMEOFFSET**|**None**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
+|**decimal**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
 |**float**|**SqlDouble**|**Двойное, допускающие значения NULL\<Double >**|  
-|**geography**|**SqlGeography**<br /><br /> **SqlGeography** определяется в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
-|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** определяется в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** определяется в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
-|**image**|None|None|  
+|**geography**|**SqlGeography**<br /><br /> **SqlGeography** определяется в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=52676).|Нет|  
+|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** определяется в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=52676).|Нет|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** определяется в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=52676).|Нет|  
+|**image**|Нет|Нет|  
 |**int**|**SqlInt32**|**Int32, допускающие значения NULL\<Int32 >**|  
-|**money**|**SqlMoney**|**Decimal, допускающий значение NULL\<десятичное число >**|  
-|**nchar**|**SqlChars SqlString**|**Строка, Char]**|  
-|**ntext**|None|None|  
-|**numeric**|**SqlDecimal**|**Decimal, допускающий значение NULL\<десятичное число >**|  
-|**nvarchar**|**SqlChars SqlString**<br /><br /> **SQLChars** лучше подходит для передачи данных и доступа, и **SQLString** лучше подходит для выполнения строковых операций.|**Строка, Char]**|  
-|**nvarchar(1), nchar(1)**|**SqlChars SqlString**|**Char, строки, Char [], Nullable\<char >**|  
-|**real**|**SqlSingle** (диапазон **SqlSingle**, однако больше, чем **реальные**)|**Единый, допускающие значения NULL\<один >**|  
-|**rowversion**|None|**Byte]**|  
+|**money**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
+|**nchar**|**SqlChars, SqlString**|**Строка, Char]**|  
+|**ntext**|Нет|Нет|  
+|**numeric**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
+|**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** лучше подходит для передачи данных и доступа, и **SQLString** лучше подходит для выполнения строковых операций.|**Строка, Char]**|  
+|**nvarchar(1), nchar(1)**|**SqlChars, SqlString**|**Char, строки, Char [], Nullable\<char >**|  
+|**real**|**SqlSingle** (диапазон **SqlSingle**, однако больше, чем **реальные**)|**Single, Nullable\<Single>**|  
+|**rowversion**|Нет|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16, допускающие значения NULL\<Int16 >**|  
-|**smallmoney**|**SqlMoney**|**Decimal, допускающий значение NULL\<десятичное число >**|  
-|**sql_variant**|None|**Объект**|  
-|**table**|None|None|  
-|**text**|None|None|  
-|**time**|None|**Интервал времени, допускающие значения NULL\<TimeSpan >**|  
-|**timestamp**|None|None|  
-|**tinyint**|**SqlByte**|**Байт, допускающий значение NULL\<байтов >**|  
+|**smallmoney**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
+|**sql_variant**|Нет|**Объект**|  
+|**table**|Нет|Нет|  
+|**text**|Нет|Нет|  
+|**time**|Нет|**Интервал времени, допускающие значения NULL\<TimeSpan >**|  
+|**timestamp**|Нет|Нет|  
+|**tinyint**|**SqlByte**|**Byte, Nullable\<Byte>**|  
 |**uniqueidentifier**|**SqlGuid**|**Идентификатор GUID, допускающих значение NULL\<Guid >**|  
-|**Определяемые пользователем type(UDT)**|None|Тот же класс связывается с определяемым пользователем типом данных в той же сборке или в зависимой сборке.|  
-|**varbinary**|**SqlBytes, SqlBinary**|**Byte]**|  
-|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**байт, Byte [], Nullable\<байтов >**|  
-|**varchar**|None|None|  
-|**xml**|**SqlXml**|None|  
+|**Определяемые пользователем type(UDT)**|Нет|Тот же класс связывается с определяемым пользователем типом данных в той же сборке или в зависимой сборке.|  
+|**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
+|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte[], Nullable\<byte>**|  
+|**varchar**|Нет|Нет|  
+|**xml**|**SqlXml**|Нет|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Автоматическое преобразование типов данных для выходных параметров  
  Метод CLR может возвращать данные вызывающему коду или программы, помечая входной параметр с **out** модификатор (Microsoft Visual C#) или  **\<Out() > ByRef** (Microsoft Visual Basic) Если входной параметр имеет тип данных CLR в **System.Data.SqlTypes** пространства имен и вызывающая программа указывает эквивалентное [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как входной параметр типа данных, преобразование типов осуществляется автоматически Когда метод CLR возвращает тип данных.  
@@ -116,9 +117,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**Тип данных CLR (SQL Server)**|**Тип данных SQL Server**|  
-|**Десятичное число**|SMALLMONEY|  
-|**SqlMoney**|SMALLMONEY|  
-|**Десятичное число**|money|  
+|**Decimal**|smallmoney|  
+|**SqlMoney**|smallmoney|  
+|**Decimal**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   
@@ -128,7 +129,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |---------------------|  
 |Добавлен **SqlGeography**, **SqlGeometry**, и **SqlHierarchyId** типов в таблицу сопоставления.|  
   
-## <a name="see-also"></a>См. также:  
- [Типы данных SQL Server в платформе .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
+## <a name="see-also"></a>См. также  
+ [Типы данных SQL Server в .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: SortOrder property [ADOX]
+dev_langs:
+- VB
+helpviewer_keywords:
+- SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77ac31157edfe36af85b112fffeaca6bb6cca86b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c65caf4436eead9a18df18b29b5d509691c0240
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortorder-property-example-vb"></a>Пример свойства SortOrder (Visual Basic)
 В этом примере демонстрируется [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md) , добавленную [столбцы](../../../ado/reference/adox-api/columns-collection-adox.md) коллекцию [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код добавляет возрастания индекса в столбце страны в **сотрудников** таблицы, затем отображает записи. Затем код добавляет убывания индекса в столбце страны в **сотрудников** таблицы и отображает записи еще раз. Показано различие между сортировкой по возрастанию и убыванию индексов.  
@@ -140,7 +143,7 @@ End Sub
 ' EndSortOrderVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Коллекция столбцов (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Объект индекса (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   

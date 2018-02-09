@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ExecuteOptionEnum
-helpviewer_keywords: ExecuteOptionEnum enumeration [ADO]
+f1_keywords:
+- ExecuteOptionEnum
+helpviewer_keywords:
+- ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbb75cabcdaee3aebe300fce219b500f85dd6b86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8e4d901326e801d9c6724dfd05d7a14bb7acd8b7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Указывает, каким образом поставщик должен выполнить команду.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|Указывает, что будет выполняться асинхронно.<br /><br /> Это значение нельзя использовать вместе с [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) значение **adCmdTableDirect**.|  
 |**adAsyncFetch**|0x20|Указывает, что оставшихся строк после указанного начального количества в [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) свойства должны быть получены асинхронно.|  

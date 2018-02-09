@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72ca437ae2d78395632abd06169feb2b41d4fc50
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c95a748f197469739797fdd34ced0ae4f896c3bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-event-handlers-work-together"></a>Как работают обработчики событий
 Если при программировании в Visual Basic, все обработчики событий для **подключения** и **записей** события должен быть реализован, независимо от того, возможность вы фактически обработать все события. Объем работы реализацию, что нужно сделать зависит от используемого языка программирования. Дополнительные сведения см. в разделе [ADO экземпляр события в языке](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Этот метод не может использоваться в Visual Basic, поскольку этот язык можно сопоставлять только один объект обработчика события.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сводка обработчик событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Параметры события](../../../ado/guide/data/event-parameters.md)   

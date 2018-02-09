@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b6afa16b339241460c33beb459fed74946a1238
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d703eff7e65b590961a4bc78a70032050e1b395
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Поставщик Microsoft OLE DB для Microsoft Jet Обзор
 Поставщик OLE DB для Microsoft Jet позволяет ADO для доступа к базам данных Microsoft Jet.
@@ -48,7 +49,7 @@ Microsoft.Jet.OLEDB.4.0
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Description|
+|Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Указывает поставщика OLE DB для Microsoft Jet.|
 |**Источник данных**|Указывает путь и имя базы данных (например, `c:\Northwind.mdb`).|
@@ -63,7 +64,7 @@ Microsoft.Jet.OLEDB.4.0
 
  Ниже перечислены эти свойства, вместе с соответствующим именем свойства OLE DB в круглые скобки.
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------------|-----------------|
 |Сумма освобожденное место OLEDB:Compact Jet (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Указывает приблизительное количество места, в байтах, которые могут быть освобождены при сжатии базы данных. Это значение допустимо только после установления подключения к базе данных.|
 |Элемент управления OLEDB:Connection Jet (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Указывает, могут ли пользователи подключаться к базе данных.|
@@ -97,7 +98,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>Набор записей поставщика и свойства команд
  Поставщик Jet также поддерживает несколько поставщика **записей** и **команда** свойства. Эти свойства осуществляется доступ и задать с помощью **свойства** коллекцию **записей** или **команда** объекта. В таблице перечислены имя свойства ADO и OLE DB название в круглые скобки.
 
-|Имя свойства|Description|
+|Имя свойства|Описание|
 |-------------------|-----------------|
 |Транзакции OLEDB:Bulk Jet (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Указывает ли в рамках транзакции SQL массовых операций. Проведения массовых операций может завершиться ошибкой, если в рамках транзакции, из-за задержки ресурсов.|
 |Курсоры Fat OLEDB:Enable Jet (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Указывает, следует ли Jet кэшировать несколько строк при заполнении набора записей для источника удаленных строк.|

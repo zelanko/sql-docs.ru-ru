@@ -11,18 +11,19 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, technologies
+helpviewer_keywords:
+- ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a03ed3b7537d81fac8045ceaad2c1c9a1afcaa0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d6ab214b72913118e12d1ce1a7db67e0e00dc118
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="products-and-technologies-table"></a>Продукты и технологии таблицы
 В следующей таблице перечислены продукты Майкрософт, инструменты и технологии, описанные в руководстве по программированию ADO. Ниже приведены ссылки, во всех возможных случаях на соответствующие разделы руководства.
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 |-------------------------------------|----------------|
 |Access/Jet|[Работа с наборами записей](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [Основные принципы ADOX](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Поставщик Microsoft OLE DB для Microsoft Jet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Интерфейсы службы Active Directory (ADSI)|[Поставщик Microsoft OLE DB для службы Microsoft Active Directory](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
-|COM, DCOM|[Обязательные условия для использования документации по объектам ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)<br /><br /> [Отметка бизнес-объектов как безопасных для скриптов](../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)<br /><br /> [Регистрация бизнес-объектов в клиенте для использования с DCOM](../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)<br /><br /> [Настройка формата маршалинга потока DCOM](../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)<br /><br /> [Разрешение запуска библиотеки DLL в DCOM](../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)<br /><br /> [Запуск бизнес-объектов в службах компонентов](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
+|COM/DCOM|[Обязательные условия для использования документации по объектам ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)<br /><br /> [Отметка бизнес-объектов как безопасных для скриптов](../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)<br /><br /> [Регистрация бизнес-объектов в клиенте для использования с DCOM](../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)<br /><br /> [Настройка формата маршалинга потока DCOM](../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)<br /><br /> [Разрешение запуска библиотеки DLL в DCOM](../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)<br /><br /> [Запуск бизнес-объектов в службах компонентов](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
 |FrontPage|[Поставщик Microsoft OLE DB для публикации в Интернете](../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
 |служба индексирования|[Поставщик Microsoft OLE DB для службы индексирования Microsoft](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
 |Internet Explorer|[Коды ошибок Internet Explorer](../../ado/guide/appendixes/internet-explorer-error-codes.md)|

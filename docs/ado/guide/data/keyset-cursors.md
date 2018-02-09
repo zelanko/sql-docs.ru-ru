@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1845d39b63dcd399b99a74f12d42fca2ee4e8017
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c59e2b203f6b33d94a1f615c53c2507964a13a65
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keyset-cursors"></a>Управляемые набором ключей курсоры
 Курсор keyset предоставляет функциональные возможности между статический и динамический курсор в его способности обнаруживать изменения. Как статический курсор он не всегда обнаруживает изменения в членство и порядок результирующего набора. Как динамический курсор обнаруживать изменения значений строк в результирующем наборе.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  Курсоры трудно правильно использовать, так как чувствительность к изменениям данных зависит от многих различных случаях, как описано выше. Тем не менее если приложение не отвечает за одновременных обновлений, можно программным образом обрабатывать неверные ключи и необходимо непосредственный доступ к определенные строки с ключом, управляемые набором ключей курсора может решить проблему. Используйте **adOpenKeyset CursorTypeEnum** для указания, что вы хотите использовать курсоры в ADO.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Однопроходные курсоры](../../../ado/guide/data/forward-only-cursors.md)   
  [Статические курсоры](../../../ado/guide/data/static-cursors.md)   
  [Динамические курсоры](../../../ado/guide/data/dynamic-cursors.md)

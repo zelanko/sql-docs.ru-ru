@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RecordOpenOptionsEnum
-helpviewer_keywords: RecordOpenOptionsEnum enumeration [ADO]
+f1_keywords:
+- RecordOpenOptionsEnum
+helpviewer_keywords:
+- RecordOpenOptionsEnum enumeration [ADO]
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9d47fdb7a2e1ba604ddae22da0fcc823c458160
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 56caae53741a24727763868295ca92216557323c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 Задает параметры для открытия [записи](../../../ado/reference/ado-api/record-object-ado.md). Эти значения могут объединяться с помощью или.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|Указывает, для поля, с которым связан поставщик **записи** не должны извлекаться изначально, но можно получить во время первой попытки получить доступ к полю. По умолчанию, указывает на отсутствие этот флаг выполняется для получения всех **записи** объекта поля.|  
 |**adDelayFetchStream**|0x4000|Указывает поставщику, поток по умолчанию, связанный с **записи** не должны извлекаться изначально. По умолчанию, указывает на отсутствие этот флаг выполняется для получения потока по умолчанию, связанного с **записи** объекта.|  

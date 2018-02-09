@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ADCPROP_UPDATERESYNC_ENUM
-helpviewer_keywords: ADCPROP_UPDATERESYNC_ENUM [ADO]
+f1_keywords:
+- ADCPROP_UPDATERESYNC_ENUM
+helpviewer_keywords:
+- ADCPROP_UPDATERESYNC_ENUM [ADO]
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d030fa1643cbf836a7380dd3113236ec7961b8d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ef67068f1c2451fa5f8e2d314ae49f08f7be181
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
 Указывает ли [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) метод следуют неявный [Resync](../../../ado/reference/ado-api/resync-method.md) метода операции и если да, область данной операции.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adResyncAll**|15|Вызывает **Resync** с комбинацией других членов ADCPROP_UPDATERESYNC_ENUM.|  
 |**adResyncAutoIncrement**|1|По умолчанию. Пытается извлечь нового значения идентификатора для столбцов, которые автоматически увеличивается на единицу или созданные в источнике данных, например Microsoft Jet счетчик полей или столбцов Microsoft SQL Server Identity.|  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset::ExecuteComplete
 - ExecuteComplete
-helpviewer_keywords: FetchComplete event [ADO]
+helpviewer_keywords:
+- FetchComplete event [ADO]
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c8575cd7423217702a0e2b98580e8ed2e7a45ac
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a8332a6332f27a8e2022975a80814be9c28cf4da
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchcomplete-event-ado"></a>Событие FetchComplete (ADO)
 **FetchComplete** событие вызывается после получения всех записей в длительных асинхронных операций в [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -53,6 +55,6 @@ FetchComplete pError, adStatus, pRecordset
 ## <a name="remarks"></a>Remarks  
  Для использования **FetchComplete** с помощью Microsoft Visual Basic, Visual Basic 6.0 или более поздней версии не требуется.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример модели событий ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)

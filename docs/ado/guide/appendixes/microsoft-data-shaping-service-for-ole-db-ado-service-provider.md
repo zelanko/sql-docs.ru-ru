@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - providers [ADO], data shaping service for OLE DB
 - data shaping service for OLE DB [ADO]
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 336d8754c31626d11dedf8c0023b9a803d0c2419
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcdf661427b97fe58681a6747a3b074e4965f4b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Службы OLE DB Обзор формирования данных Microsoft
 > [!IMPORTANT]
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="dynamic-properties"></a>Динамические свойства
  При вызове этого поставщика услуг, добавляются следующие динамические свойства [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекцию[подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.
 
-|Имя динамического свойства|Description|
+|Имя динамического свойства|Описание|
 |---------------------------|-----------------|
 |**Изменения формы уникальные имена**|Указывает ли **записей** объектов с повторяющимися значениями для их **изменить имя** свойства допускаются. Если это динамическое свойство **True** и новый **записей** создается с тем же именем пользовательские изменения формы, что и у существующей **набора записей**, новый  **Набор записей** изменения формы имени объекта изменяется, чтобы сделать уникальным. Если это свойство имеет **False** и новый **записей** создается с тем же именем пользовательские изменения формы, как и существующие **записей**, оба **набора записей**  объектов будет иметь то же имя изменения формы. Таким образом, ни **записей** форму можно изменить до тех пор, пока существует в обоих наборах записей.<br /><br /> Значение свойства по умолчанию — **False**.|
 |**Поставщик данных**|Указывает имя поставщика, который будет передавать строки, чтобы иметь форму. Это значение может быть NONE, если поставщик не будет использоваться для предоставления строк.|
@@ -66,5 +67,5 @@ cn.Properties("Data Provider") = "MSDASQL"
 
  Дополнительные сведения о формировании данных см. в разделе [формирование](../../../ado/guide/data/data-shaping-overview.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

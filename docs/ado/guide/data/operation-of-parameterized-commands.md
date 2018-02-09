@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 658d0dc9baa22006b327d826effb5687ccbc1822
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7d826d5407aabce4baa82b0952cff6c8344944e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>Операция параметризованных команд
 При работе с большой дочерним **записей**, особенно по сравнению с размером родительского **записей**, но требуется доступ только несколько дочерних разделов, может оказаться более эффективно использовать параметризованные команды.  
@@ -80,7 +81,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  С помощью иерархии без параметров, нет возможности для их связывания рабочих групп и игр таким образом, дочерние **набора записей** для каждой команды содержат ее полное расписание. Можно создать разделы, содержащие домашней расписание или расписание дорог, но не оба. Это, так как в предложении RELATE ограничена родительско дочерних отношений формы (pc1 = cc1) AND (pc2 = pc2). Таким образом Если команда включает «СВЯЗАНЫ team_id TO home_team, team_id TO visiting_team», получится только игр где сам воспроизведение команды. Выберите — "(team_id=home_team) или (team_id = visiting_team)», но поставщик Data Shape не поддерживает предложение OR.  
   
- Чтобы получить нужный результат, можно использовать параметризованные команды. Пример:  
+ Чтобы получить нужный результат, можно использовать параметризованные команды. Например:  
   
 ```  
 SHAPE {SELECT * FROM teams}   
@@ -94,7 +95,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 > [!NOTE]
 >  Если с помощью предложения WHERE, параметры можно не использовать типы данных SQL для text, ntext и image или, будет выдана ошибка содержит следующее описание: `Invalid operator for data type`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
  [Грамматика формальных фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection15::Execute
 - Connection15::raw_Execute
-helpviewer_keywords: Execute method [ADO]
+helpviewer_keywords:
+- Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 071e752063020ace305371f814f1b78224dbb9a4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef36e770a2321357ed0d58153ad8e0b7493a232a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-ado-connection"></a>Выполнить метод (соединение ADO)
 Выполняет указанный запрос, инструкции SQL, хранимая процедура или поставщика текста.  
@@ -47,10 +49,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Объект **строка** значение, содержащее инструкцию SQL, хранимая процедура, URL-адрес или поставщика текста для выполнения. **При необходимости**, имена таблиц можно использовать только, если поставщик является поставщиком SQL виду. Для примера Если имя таблицы «Заказчики» используется, ADO автоматически вставляет стандартный синтаксис SQL Select для формирования и передачи «ВЫБЕРИТЕ * из заказчики» как [!INCLUDE[tsql](../../../includes/tsql_md.md)] инструкции для поставщика.  
   
  *RecordsAffected*  
- Необязательный параметр. Объект **длинные** переменной, в которой поставщик возвращает количество записей, затронутых операцию.  
+ Необязательно. Объект **длинные** переменной, в которой поставщик возвращает количество записей, затронутых операцию.  
   
  *Параметры*  
- Необязательный параметр. Объект **длинные** значение, указывающее, как поставщик должен оценить аргумент CommandText. Может быть битовой маской, одного или нескольких [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения.  
+ Необязательно. Объект **длинные** значение, указывающее, как поставщик должен оценить аргумент CommandText. Может быть битовой маской, одного или нескольких [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения.  
   
  **Примечание** используйте **ExecuteOptionEnum** значение **adExecuteNoRecords** для повышения производительности путем минимизации внутренней обработки и для приложений, которые перенос приложений из Visual Basic 6.0.  
   

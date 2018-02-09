@@ -16,19 +16,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5dd392ca57706e595b6df5f44b512cf11dacdff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>Архитектура интеграции со средой CLR - производительность
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В этом разделе рассматриваются некоторые варианты, которые повышают производительность [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интеграция с [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework общеязыковая среда выполнения (CLR).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В этом разделе рассматриваются некоторые варианты, которые повышают производительность [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интеграция с [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework общеязыковая среда выполнения (CLR).  
   
 ## <a name="the-compilation-process"></a>Процесс компиляции  
  Во время компиляции выражения SQL, если встречается ссылка на управляемую процедуру [!INCLUDE[msCoName](../../includes/msconame-md.md)] создается заглушка на промежуточном языке (MSIL). Заглушка содержит программный код для упаковки параметров процедуры из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в среду CLR, вызова функции и возвращения результата. Этот связующий код основан на типе параметра и его направлении (входной, выходной, передача по ссылке).  
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
  Если курсорам [!INCLUDE[tsql](../../includes/tsql-md.md)] нужно перемещаться по данным, которые проще реализовать как массив, использование управляемого кода принесет существенный выигрыш в производительности.  
   
 ### <a name="string-data"></a>Строковые данные  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]символьные данные, такие как **varchar**, может быть типа SqlString или SqlChars в управляемых функций. Переменные типа SqlString создают в памяти экземпляр всего значения целиком. Переменные типа SqlChars обеспечивают потоковый интерфейс, который позволяет добиться более высокой производительности и масштабируемости, так как не создает в памяти экземпляра всего значения сразу. Это особенно важно для типов больших объектов (LOB). Кроме того, сервер XML-данные можно получить с помощью потокового интерфейса, возвращаемого методом **SqlXml.CreateReader()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] символьные данные, такие как **varchar**, может быть типа SqlString или SqlChars в управляемых функций. Переменные типа SqlString создают в памяти экземпляр всего значения целиком. Переменные типа SqlChars обеспечивают потоковый интерфейс, который позволяет добиться более высокой производительности и масштабируемости, так как не создает в памяти экземпляра всего значения сразу. Это особенно важно для типов больших объектов (LOB). Кроме того, сервер XML-данные можно получить с помощью потокового интерфейса, возвращаемого методом **SqlXml.CreateReader()**.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>Сравнение CLR и Расширенные хранимые процедуры  
  API-интерфейсы Microsoft.SqlServer.Server, позволяющие управляемым процедурам отсылать результирующие наборы обратно клиенту, имеют более высокую производительность, чем API-интерфейсы служб Open Data Services (ODS), используемые расширенными хранимыми процедурами. Кроме того, такие как типы данных поддержки API-интерфейсы System.Data.SqlServer **xml**, **varchar(max)**, **nvarchar(max)**, и **varbinary(max)**, включенная в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], тогда как в ODS API-не были расширены для поддержки новых типов данных.  
@@ -84,6 +85,6 @@ ms.lasthandoff: 01/08/2018
  Чтобы управляемая сборка мусора в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имела высокую производительность и хорошо масштабировалась, следует избегать выделения памяти одним большим блоком. Выделенные области памяти размером больше 88 КБ помещаются в кучу для больших объектов, для которой сборка мусора работает гораздо медленнее и хуже масштабируется, чем для небольших областей памяти. Например, если нужно выделить память для большого многомерного массива, лучше выделить память под массив массивов (разреженный массив).  
   
 ## <a name="see-also"></a>См. также:  
- [Определяемые пользователем типы в CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Определяемые пользователем типы среды CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

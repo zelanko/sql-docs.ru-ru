@@ -17,19 +17,20 @@ helpviewer_keywords:
 - programming model restrictions [CLR integration]
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23972fb78bafaca778b37fc7226d3db4f53083e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3d282b317a5ea31fe8170a847f5b425bcd1af4fd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Ограничения модели программирования на основе интеграции со средой CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]При построении управляемой хранимой процедуры или другой управляемый объект базы данных, существуют выполняет определенные проверки программного кода [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , следует учитывать. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]проверяет сборку управляемого кода при первой регистрации в базе данных с помощью **CREATE ASSEMBLY** инструкции, а также во время выполнения. Управляемый код проверяется также во время выполнения, поскольку в сборке могут быть кодовые пути, фактически не достижимые во время выполнения.  Благодаря этому достигается гибкость при регистрации сборок сторонних производителей, поскольку сборка не блокируется из-за наличия в ней «небезопасного» кода, предназначенного для выполнения в клиентской среде, но никогда не выполняющегося во внутрипроцессной среде CLR. Требования, которым должен удовлетворять управляемого кода зависят от того, является ли сборка регистрируется как **БЕЗОПАСНОМ**, **EXTERNAL_ACCESS**, или **UNSAFE**, **SAFE** являются самыми строгими и перечислены ниже.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+При построении управляемой хранимой процедуры или другой управляемый объект базы данных, существуют выполняет определенные проверки программного кода [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , следует учитывать. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]проверяет сборку управляемого кода при первой регистрации в базе данных с помощью **CREATE ASSEMBLY** инструкции, а также во время выполнения. Управляемый код проверяется также во время выполнения, поскольку в сборке могут быть кодовые пути, фактически не достижимые во время выполнения.  Благодаря этому достигается гибкость при регистрации сборок сторонних производителей, поскольку сборка не блокируется из-за наличия в ней «небезопасного» кода, предназначенного для выполнения в клиентской среде, но никогда не выполняющегося во внутрипроцессной среде CLR. Требования, которым должен удовлетворять управляемого кода зависят от того, является ли сборка регистрируется как **БЕЗОПАСНОМ**, **EXTERNAL_ACCESS**, или **UNSAFE**, **SAFE** являются самыми строгими и перечислены ниже.  
   
  Кроме ограничений, которые распространяются на сборки управляемого кода, им также предоставляются права доступа к коду. Среда CLR поддерживает модель безопасности, называемую управлением доступом для кода (CAS). В этой модели разрешения предоставляются сборкам на основе идентификатора кода. **БЕЗОПАСНЫЙ**, **EXTERNAL_ACCESS**, и **UNSAFE** сборки имеют различные разрешения CAS. Дополнительные сведения см. в разделе [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
@@ -43,9 +44,9 @@ ms.lasthandoff: 01/08/2018
   
 -   Сборка принадлежит к числу поддерживаемых сборок. Дополнительные сведения см. в разделе [поддерживаемые библиотеки платформы .NET Framework](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   Вы используете **Создание сборки из***\<расположение >,* и все связанные сборки и их зависимости, доступных в  *\<расположение >* .  
+-   Вы используете **CREATE ASSEMBLY FROM ***\<расположение >,* и все связанные сборки и их зависимости, доступных в  *\<расположение >*.  
   
--   Вы используете **Создание сборки из***\<байт... >,* и все ссылки заданы с помощью пространства байтов, разделенных.  
+-   Вы используете **CREATE ASSEMBLY FROM ***\<байт... >,* и все ссылки заданы с помощью пространства байтов, разделенных.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Все **EXTERNAL_ACCESS** сборки должны удовлетворять следующим условиям:  
@@ -122,7 +123,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="safe"></a>SAFE  
  Все **EXTERNAL_ACCESS** условия проверяются.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Библиотеки поддерживаемые .NET Framework](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
  [Среда CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Атрибуты защиты узла и программирование средств интеграции со средой CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

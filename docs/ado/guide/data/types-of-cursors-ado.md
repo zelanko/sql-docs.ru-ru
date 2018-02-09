@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: cursors [ADO], types
+helpviewer_keywords:
+- cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab0d11fa3eb0ea935b05ce1d2486e5136594c1c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ec8ccca017236a8f6aa784d92e8304a98452f02
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="types-of-cursors-ado"></a>Типы курсоров (ADO)
 Как правило приложение должно использовать простой курсор, который предоставляет доступ необходимых данных. Характеристик курсора дополнительные расширенные возможности (однопроходный, только для чтения, статическим, прокрутка, без буферизации) имеет цену — в клиентской памяти, сетевой нагрузки или производительности. Во многих случаях параметры курсора по умолчанию создать курсор сложнее, чем фактически приложению.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Динамические курсоры](../../../ado/guide/data/dynamic-cursors.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Однопроходные курсоры](../../../ado/guide/data/forward-only-cursors.md)   
  [Статические курсоры](../../../ado/guide/data/static-cursors.md)   
  [Управляемые набором ключей курсоры](../../../ado/guide/data/keyset-cursors.md)   

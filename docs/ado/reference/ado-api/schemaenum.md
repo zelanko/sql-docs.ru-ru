@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: SchemaEnum
-helpviewer_keywords: SchemaEnum enumeration [ADO]
+f1_keywords:
+- SchemaEnum
+helpviewer_keywords:
+- SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75e8380ba12f6390f8db4661fc570b40f18e7c49
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc84741e1963b2c484e82eea7bc3de08cf12da13
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Указывает тип схемы **записей** , [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) извлекает метод.  
@@ -38,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  ADO формирует результаты по принципу схемы для констант, **adSchemaDBInfoKeywords** и **adSchemaDBInfoLiterals**. Создает ADO **записей**, а затем заполняет каждую строку значения, возвращаемые соответственно **IDBInfo::GetKeywords** и **IDBInfo::GetLiteralInfo** методы. Дополнительные сведения об этих методах, которые можно найти в [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) раздел справочника программиста OLE DB.  
   
-|Константа|Значение|Description|Столбцы с ограничением|  
+|Константа|Значение|Описание|Столбцы с ограничением|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Возвращает утверждения, определенные в каталоге и принадлежащие данному пользователю.<br /><br /> (УТВЕРЖДЕНИЯ строк)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Возвращает физические атрибуты, связанные с каталогами, доступными из СУБД.<br /><br /> (Набор строк КАТАЛОГИ)|CATALOG_NAME|  
@@ -47,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 |**adSchemaCollations**|3|Возвращает параметров сортировки символов, определенные в каталоге, доступных данному пользователю.<br /><br /> (Параметры СОРТИРОВКИ набора строк)|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  
 |**adSchemaColumnPrivileges**|13|Возвращает привилегии для столбцов таблиц, определенные в каталоге, которые доступны или предоставленные указанному пользователю.<br /><br /> (Набор строк COLUMN_PRIVILEGES)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
 |**adSchemaColumns**|4|Возвращает столбцы таблиц (включая представления) определены в каталоге, доступных данному пользователю.<br /><br /> (СТОЛБЦЫ набора строк)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaColumnsDomainUsage**|11|Возвращает столбцы, определенные в каталоге, зависимые от домена определены в каталоге и принадлежащие данному пользователю.<br /><br /> (Набор строк COLUMN_DOMAIN_USAGE)|COLUMN_NAME ИМЯ_ДОМЕНА DOMAIN_SCHEMA DOMAIN_CATALOG|  
+|**adSchemaColumnsDomainUsage**|11|Возвращает столбцы, определенные в каталоге, зависимые от домена определены в каталоге и принадлежащие данному пользователю.<br /><br /> (COLUMN_DOMAIN_USAGE Rowset)|COLUMN_NAME ИМЯ_ДОМЕНА DOMAIN_SCHEMA DOMAIN_CATALOG|  
 |**adSchemaConstraintColumnUsage**|6|Возвращает столбцы, используемые ссылочные ограничения, ограничения unique, ограничения check и утверждения, определенные в каталоге и принадлежащие данному пользователю.<br /><br /> (Набор строк CONSTRAINT_COLUMN_USAGE)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaConstraintTableUsage**|7|Возвращает таблицы, используемые ссылочные ограничения, ограничения unique, ограничения check и утверждения, которые определены в каталоге и принадлежащие данному пользователю.<br /><br /> (Набор строк CONSTRAINT_TABLE_USAGE)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|Возвращает сведения о доступных кубов в схеме (или каталога, если поставщик не поддерживает схемы).<br /><br /> (КУБЫ строк *)|ИМЯ_КАТАЛОГА SCHEMA_NAME CUBE_NAME|  
@@ -57,7 +60,7 @@ ms.lasthandoff: 12/21/2017
 |**adSchemaForeignKeys**|27|Возвращает внешние ключевые столбцы, определенные в каталоге данным пользователем.<br /><br /> (Набор строк FOREIGN_KEYS)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|Возвращает сведения об иерархиях, доступных в измерении.<br /><br /> (ИЕРАРХИИ строк)|ИМЯ_КАТАЛОГА SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
 |**adSchemaIndexes**|12|Возвращает индексы, определенные в каталоге и принадлежащие данному пользователю.<br /><br /> (ИНДЕКСЫ строк)|INDEX_NAME ТИП ЗНАЧЕНИЯМ TABLE_CATALOG TABLE_SCHEMA ИМЯ_ТАБЛИЦЫ|  
-|**adSchemaKeyColumnUsage**|8|Возвращает столбцы, определенные в каталоге, ограниченные как ключи данным пользователем.<br /><br /> (Набор строк KEY_COLUMN_USAGE)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME ЗНАЧЕНИЯМ TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaKeyColumnUsage**|8|Возвращает столбцы, определенные в каталоге, ограниченные как ключи данным пользователем.<br /><br /> (KEY_COLUMN_USAGE Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME ЗНАЧЕНИЯМ TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaLevels**|35|Возвращает сведения об уровнях, доступных в измерении.<br /><br /> (Набор строк УРОВНЕЙ)|ИМЯ_КАТАЛОГА SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME LEVEL_UNIQUE_NAME|  
 |**adSchemaMeasures**|36|Возвращает сведения о доступных мер.<br /><br /> (Набор строк МЕР)|ИМЯ_КАТАЛОГА SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
 |**adSchemaMembers**|38|Возвращает сведения о доступных элементов.<br /><br /> (ЧЛЕНЫ строк)|Оператор имя_каталога SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME MEMBER_NAME LEVEL_NUMBER MEMBER_UNIQUE_NAME MEMBER_CAPTION дерева MEMBER_TYPE. Дополнительные сведения см. в разделе OLE DB для оперативной аналитической обработки (OLAP).|  
@@ -70,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 |**adSchemaProviderTypes**|22|Возвращает данные (базовые) типы, поддерживаемые поставщиком данных.<br /><br /> (Набор строк PROVIDER_TYPES)|DATA_TYPE BEST_MATCH|  
 |**AdSchemaReferentialConstraints**|9|Возвращает ссылочные ограничения, определенные в каталоге, принадлежащие данному пользователю.<br /><br /> (Набор строк REFERENTIAL_CONSTRAINTS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaSchemata**|17|Возвращает схемы (объекты базы данных), принадлежащих указанному пользователю.<br /><br /> (Набор строк СХЕМЫ)|CATALOG_NAME SCHEMA_NAME SCHEMA_OWNER|  
-|**adSchemaSQLLanguages**|18|Возвращает уровни соответствия, параметры и диалекты, поддерживаемые данными обработки реализации SQL, определенные в каталоге.<br /><br /> (Набор строк SQL_LANGUAGES)|\<None >|  
+|**adSchemaSQLLanguages**|18|Возвращает уровни соответствия, параметры и диалекты, поддерживаемые данными обработки реализации SQL, определенные в каталоге.<br /><br /> (SQL_LANGUAGES Rowset)|\<None >|  
 |**adSchemaStatistics**|19|Возвращает статистические данные, определенные в каталоге, принадлежащие данному пользователю.<br /><br /> (Набор строк СТАТИСТИКА)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaTableConstraints**|10|Возвращает ограничения таблицы, определенные в каталоге и принадлежащие данному пользователю.<br /><br /> (Набор строк TABLE_CONSTRAINTS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME CONSTRAINT_TYPE|  
 |**adSchemaTablePrivileges**|14|Возвращает привилегии для таблицы, определенные в каталоге, которые доступны или предоставленные указанному пользователю.<br /><br /> (Набор строк TABLE_PRIVILEGES)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
@@ -78,9 +81,9 @@ ms.lasthandoff: 12/21/2017
 |**adSchemaTranslations**|21|Возвращает преобразования символов, определенные в каталоге, доступных данному пользователю.<br /><br /> (Переводы строк)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
 |**adSchemaTrustees**|39|Зарезервировано для последующего использования.||  
 |**adSchemaUsagePrivileges**|15|Возвращает использование прав на объекты, определенные в каталоге, доступны или предоставленные указанному пользователю.<br /><br /> (Набор строк USAGE_PRIVILEGES)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE GRANTOR УЧАСТНИКА|  
-|**adSchemaViewColumnUsage**|24|Возвращает столбцы, по которым просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю зависят.<br /><br /> (Набор строк VIEW_COLUMN_USAGE)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
+|**adSchemaViewColumnUsage**|24|Возвращает столбцы, по которым просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю зависят.<br /><br /> (VIEW_COLUMN_USAGE Rowset)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|Возвращает представления, определенные в каталоге, доступных данному пользователю.<br /><br /> (Набор строк ПРЕДСТАВЛЕНИЯ)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
-|**adSchemaViewTableUsage**|25|Возвращает таблиц, в котором просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю зависят.<br /><br /> (Набор строк VIEW_TABLE_USAGE)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
+|**adSchemaViewTableUsage**|25|Возвращает таблиц, в котором просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю зависят.<br /><br /> (VIEW_TABLE_USAGE Rowset)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
   
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Пакет: **com.ms.wfc.data**  

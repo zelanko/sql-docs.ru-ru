@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: data shaping [ADO], overview
+helpviewer_keywords:
+- data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9720e3312332fe0c4a00bac01cbaa82908125dfb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5ebd3d67ffc5c3f3aba0f481182c5812f4523a5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-shaping-overview"></a>Общие сведения о формирования данных
 *Формирование данных* означает создание иерархических отношений между двух или более логическими объектами в запросе. Иерархию можно просмотреть в родительско дочерних отношений между записи одного [записей](../../../ado/reference/ado-api/recordset-object-ado.md)и одну или несколько записей (также известный как главе) другого **набора записей**. Связи «родители потомки» родительского **записей** содержит дочерний **записей**. Пример иерархические связи — customers и orders. Для каждого клиента в базе данных может быть ноль или более заказов. Иерархические связи могут быть рекурсивными, это означает, что по внукам записи могут быть вложены в дочерней записи. В принципе иерархические записи могут быть вложенными в любой глубины. На практике ADO ограничивает рекурсии максимум 512 **записей**s.  

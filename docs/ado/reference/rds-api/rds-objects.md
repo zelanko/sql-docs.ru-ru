@@ -1,6 +1,7 @@
 ---
 title: "Объекты служб удаленных рабочих СТОЛОВ | Документы Microsoft"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - objects [ADO], RDS
 - RDS objects [ADO]
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67f631605c571441062e175e6530786a860cb9d6
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: aac19cd0fadb642ba8b18550694e1b54dba46d87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-objects"></a>Объекты служб удаленных рабочих СТОЛОВ
 > [!IMPORTANT]
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/20/2017
 |[Пространство данных (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Создает клиентский прокси для пользовательских бизнес-объектов, расположенных на среднем уровне.<br /><br /> **DataSpace** объекта безопасные для использования.|  
 |[Интерфейс IRDSService (служба удаленных рабочих столов)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Предоставляет [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) метод, который используется для возвращения указатель на запрошенный интерфейс на более производительные версию объекта.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API служб удаленных рабочих СТОЛОВ](../../../ado/reference/rds-api/rds-api-reference.md)
 
 

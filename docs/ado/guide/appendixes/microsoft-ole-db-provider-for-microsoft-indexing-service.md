@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d278b3fd6a2460471195e5744baef93292dfbc30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 861d5d18c3a3ba72d4f4b5ef6fc01f0e6a0e9fc8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Поставщик Microsoft OLE DB для индексирования Обзор службы Microsoft
 Поставщик Microsoft OLE DB для службы индексирования Microsoft предоставляет программный доступ только для чтения к файловая система и веб-данных службой индексирования Microsoft. Приложения ADO могут выдавать запросы SQL для извлечения содержимого и файл сведений.
@@ -50,7 +51,7 @@ MSIDXS
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Description|
+|Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Указывает поставщика OLE DB для службы индексирования Microsoft. Как правило, это указано в строке соединения только ключевое слово.|
 |**Источник данных**|Задает имя каталога службы индексирования. Если это ключевое слово не указан, используется системный каталог по умолчанию.|
@@ -72,18 +73,18 @@ MSIDXS
 
  **Доступность стандартных свойств набора записей ADO:**
 
-|Свойство|Доступность|
+|property|Доступность|
 |--------------|------------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|чтение/запись|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|чтение/запись|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|только для чтения|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|
-|[Закладка](../../../ado/reference/ado-api/bookmark-property-ado.md)*|чтение/запись|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)*|чтение/запись|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|чтение/запись|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|всегда **adUseServer**|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|всегда **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|всегда **как таковые**|
-|[КОНЕЦ ФАЙЛА](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|
+|[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|
 |[Фильтр](../../../ado/reference/ado-api/filter-property.md)|чтение/запись|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|чтение/запись|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|недоступно|
@@ -107,19 +108,19 @@ MSIDXS
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|нет|
 |[Клон](../../../ado/reference/ado-api/clone-method-ado.md)|Да|
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|
-|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|нет|
-|[Получение строк](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|нет|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Да|
 |[Открытие](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Да|
-|[Повторный запрос](../../../ado/reference/ado-api/requery-method.md)|Да|
-|[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Да|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Да|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|Да|
 |[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Да|
 |[Update](../../../ado/reference/ado-api/update-method.md)|нет|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|нет|
 
  Особенности реализации и функционального сведения о поставщик Microsoft OLE DB для службы индексирования Microsoft, обратитесь к [Руководство программиста OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), или посетите веб-сайт веб-службы веб-сервера Windows NT веб-узел.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Свойство CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [коллекции свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [свойство поставщика (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [ Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [поддерживает метод](../../../ado/reference/ado-api/supports-method.md)

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _DynaCollection::Append
-helpviewer_keywords: Append method [ADO]
+f1_keywords:
+- _DynaCollection::Append
+helpviewer_keywords:
+- Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0c0c887da52e8c91caeab582c2b1973b491e81d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a192286d39660580968305d16cb159480b6a09a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-ado"></a>Append-метод (ADO)
 Добавляет объект в коллекцию. Если коллекция [поля](../../../ado/reference/ado-api/fields-collection-ado.md), новый [поле](../../../ado/reference/ado-api/field-object.md) объект может быть создан, перед добавлением в коллекцию.  
@@ -54,13 +57,13 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, значение которого по умолчанию — **adEmpty**, который указывает тип данных нового поля. Следующие типы данных не поддерживаются ADO и следует не будет использоваться, когда добавление новых полей в [объекта набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
  *DefinedSize*  
- Необязательный параметр. Объект **длинные** значение, представляющее заданный размер, в символах или байтах нового поля. Значение по умолчанию для этого параметра является производным от *типа*. Поля, которые имеют *DefinedSize* больше 255 байт рассматриваются как столбцы переменной длины. Значение по умолчанию для *DefinedSize* не указан.  
+ Необязательно. Объект **длинные** значение, представляющее заданный размер, в символах или байтах нового поля. Значение по умолчанию для этого параметра является производным от *типа*. Поля, которые имеют *DefinedSize* больше 255 байт рассматриваются как столбцы переменной длины. Значение по умолчанию для *DefinedSize* не указан.  
   
  *Attrib*  
- Необязательный параметр. Объект [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) значение, значение которого по умолчанию — **adFldDefault**, который задает атрибуты для нового поля. Если это значение не задано, это поле будет содержать атрибутов, производных от *типа*.  
+ Необязательно. Объект [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) значение, значение которого по умолчанию — **adFldDefault**, который задает атрибуты для нового поля. Если это значение не задано, это поле будет содержать атрибутов, производных от *типа*.  
   
  *FieldValue*  
- Необязательный параметр. Объект **Variant** , представляющий значение для нового поля. Если не указан, поле добавляется со значением null.  
+ Необязательно. Объект **Variant** , представляющий значение для нового поля. Если не указан, поле добавляется со значением null.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -94,7 +97,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 - [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
 - [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление и пример CreateParameter методы (Visual Basic)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Добавление и пример методы CreateParameter (VC ++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   

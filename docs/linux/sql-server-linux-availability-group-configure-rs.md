@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: e2ce8a7cd87e188fce0f1b0f62bde148324373a5
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9d8528d227f45e212141e97308718082d6c59cea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Настройка группы доступности SQL Server для чтения шкалы в Linux
 
@@ -36,21 +36,21 @@ ms.lasthandoff: 02/01/2018
 
 Создание группы Доступности. Set `CLUSTER_TYPE = NONE`. Кроме того, задать каждой реплики с `FAILOVER_MODE = NONE`. Клиентские приложения, аналитики и отчетности рабочих нагрузок может напрямую подключаться к баз данных-получателей. Также можно создать список маршрутизации только для чтения. Подключения к первичной реплике вперед чтения запросов на подключение к каждой из вторичных реплик в списке маршрутизации в циклического перебора.
 
-Следующий сценарий Transact-SQL создает группы Доступности с именем `ag1`. Сценарий настраивает реплик группы Доступности с `SEEDING_MODE = AUTOMATIC`. Этот параметр задан, то SQL Server для автоматического создания базы данных на каждом сервере-получателе после его добавления к группе Доступности. Обновите следующий сценарий для вашей среды. Замените `**<node1>**` и `**<node2>**` значения с именами экземпляров SQL Server, на которых размещены реплики. Замените `**<5022>**` значение с портом, задать для конечной точки. Запустите следующий сценарий Transact-SQL в первичной реплике SQL Server:
+Следующий сценарий Transact-SQL создает группы Доступности с именем `ag1`. Сценарий настраивает реплик группы Доступности с `SEEDING_MODE = AUTOMATIC`. Этот параметр задан, то SQL Server для автоматического создания базы данных на каждом сервере-получателе после его добавления к группе Доступности. Обновите следующий сценарий для вашей среды. Замените `<node1>` и `<node2>` значения с именами экземпляров SQL Server, на которых размещены реплики. Замените `<5022>` значение с портом, задать для конечной точки. Запустите следующий сценарий Transact-SQL в первичной реплике SQL Server:
 
 ```SQL
 CREATE AVAILABILITY GROUP [ag1]
     WITH (CLUSTER_TYPE = NONE)
     FOR REPLICA ON
-        N'**<node1>**' WITH (
-            ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
+        N'<node1>' WITH (
+            ENDPOINT_URL = N'tcp://<node1>:<5022>',
             AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,
                     SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
             ),
-        N'**<node2>**' WITH ( 
-            ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
+        N'<node2>' WITH ( 
+            ENDPOINT_URL = N'tcp://<node2>:<5022>', 
             AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,

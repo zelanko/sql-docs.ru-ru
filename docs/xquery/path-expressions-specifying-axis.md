@@ -8,11 +8,14 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - attribute axis [SQL Server]
 - axis step [XQuery]
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d19dec5b1ea98242c96ca43e3c295290827a8bcf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>Выражения пути — Указание оси
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +52,13 @@ ms.lasthandoff: 12/05/2017
   
  Выполнение XQuery в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает следующие шаги оси:  
   
-|Ось|Description|  
+|Ось|Описание|  
 |----------|-----------------|  
-|**дочерний**|Возвращает дочерние элементы контекстного узла.|  
-|**потомка**|Возвращает всех потомков контекстного узла.|  
+|**child**|Возвращает дочерние элементы контекстного узла.|  
+|**descendant**|Возвращает всех потомков контекстного узла.|  
 |**родительский**|Возвращает родительский элемент контекстного узла.|  
-|**атрибут**|Возвращает атрибуты контекстного узла.|  
-|**самообслуживания**|Возвращает сам контекстный узел.|  
+|**attribute**|Возвращает атрибуты контекстного узла.|  
+|**self**|Возвращает сам контекстный узел.|  
 |**descendant-or-self**|Возвращает сам контекстный узел и всех его потомков.|  
   
  Все эти оси, кроме **родительского** оси, являются направленными вперед осями. **Родительского** оси — обратная ось, потому что она ищет в обратном направлении в иерархии документа. Например, относительное выражение пути `child::ProductDescription/child::Summary` имеет два шага, и каждый шаг указывает ось `child`. Первый шаг получает \<ProductDescription > дочерние элементы узла контекста. Для каждого \<ProductDescription > второй шаг Получает дочерний узел элемента \<Сводка > элементные узлы-потомки.  

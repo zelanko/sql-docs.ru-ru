@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset20::Clone
 - Recordset20::raw_Clone
-helpviewer_keywords: Clone method [ADO]
+helpviewer_keywords:
+- Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0fa4429b66b8a43bf2eecccca1fbc94597f07a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: db5785a40527f4f85558961068d2cb67eeabbfbc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clone-method-ado"></a>Метод clone (ADO)
 Создает дубликат [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта из существующего **записей** объекта. При необходимости указывает точную копию только для чтения.  
@@ -49,7 +51,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Объектную переменную, которая идентифицирует **записей** объекта к дублированию.  
   
  *LockType*  
- Необязательный параметр. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, указывающее тип блокировки исходного **записей**, или только для чтения **записей**. Допустимые значения: **adLockUnspecified** или **adLockReadOnly**.  
+ Необязательно. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, указывающее тип блокировки исходного **записей**, или только для чтения **записей**. Допустимые значения: **adLockUnspecified** или **adLockReadOnly**.  
   
 ## <a name="remarks"></a>Remarks  
  Используйте **клон** повторяющийся метод, чтобы создать несколько **записей** объектов, особенно в том случае, если вы хотите поддерживать более чем одна текущая запись в заданном наборе записей. С помощью **клон** метод является более эффективным, чем создание и открытие нового **записей** объект, который использует то же определение оригинала.  
@@ -89,7 +91,7 @@ rsNew.Filter = rsOriginal.Filter
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода клона (Visual Basic)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [Пример метода клона (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
  [Пример метода Clone (Visual C++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   

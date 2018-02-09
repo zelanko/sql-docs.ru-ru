@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Command object [ADO], parameters
+helpviewer_keywords:
+- Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cb0b971096fe603620fc610386e09d985ae9e5c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 527ed7c9e6e3a3f250fd559b479637414be3989f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-object-parameters"></a>Параметры объекта Command
 Предыдущие теме, обсуждаемой [создания и выполнения простой команды](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Использовать более интересные [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта показан в следующем примере, в котором параметризованные команды SQL. Это изменение позволяет повторно использовать команду, передав другое значение для параметра каждый раз. Так как [подготовленных свойство](../../../ado/reference/ado-api/prepared-property-ado.md) свойство **команды** , присваивается значение **true**, ADO потребуется поставщика для компиляции команды, указанной в [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) перед его выполнением в первый раз. Она также сохраняет скомпилированный команды в памяти. Это замедляет выполнение команды немного при первом запуске он выполняется из-за служебные данные, необходимые для подготовки, но результаты в каждый раз, после этого вызывается команда повысить производительность. Таким образом следует подготовить команды только в том случае, если они будут использоваться более одного раза.  

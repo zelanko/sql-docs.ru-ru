@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdb4d1847a2a55c57235a88979b19f7370169b9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ce82243dda984375bef3a1630650ff27c68dd09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="provider-errors"></a>Ошибки поставщика
 В случае ошибки поставщика ошибку во время выполнения-2147467259 возвращается. При получении этой ошибки проверьте **ошибки** коллекцию активных **подключения** объекта, который будет содержать одну или несколько ошибок, описывающие, что именно произошло.  
@@ -70,12 +71,12 @@ End Function
 ## <a name="the-error-object"></a>Объект Error  
  Изучив **ошибка** объектов можно определить причину возникновения ошибки и более важно, какие приложения или какие объекта вызвал ошибку. **Ошибка** объекта имеет следующие свойства:  
   
-|Имя свойства|Description|  
+|Имя свойства|Описание|  
 |-------------------|-----------------|  
-|**Описание**|Текстовое описание возникшей ошибки.|  
-|**HelpContext HelpFile**|Ссылается на раздел справки и справки файла, содержащего описание возникшей ошибки.|  
+|**Description**|Текстовое описание возникшей ошибки.|  
+|**HelpContext, HelpFile**|Ссылается на раздел справки и справки файла, содержащего описание возникшей ошибки.|  
 |**NativeError**|Номер ошибки поставщика.|  
-|**Номер**|Длинное целое число, представляющее номер (перечисленных в **ErrorValueEnum**) возникшей ошибки.|  
+|**Number**|Длинное целое число, представляющее номер (перечисленных в **ErrorValueEnum**) возникшей ошибки.|  
 |**Source**|Указывает имя объекта или приложения, вызвавшего ошибку.|  
 |**SQLState**|Пятисимвольный код ошибки, поставщик возвращает во время выполнения инструкции SQL.|  
   

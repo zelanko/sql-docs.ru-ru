@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0d73ed8eda955b5b027b662e3e5c80c50730b7f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="event-parameters"></a>Параметры события
 Каждый обработчик событий имеет состояние параметр, управляющий обработчик события. Для завершения событий этот параметр используется для указания на успешное или неуспешное выполнение операции, который создал событие. Наиболее полная события также имеют параметр ошибки для предоставления сведений о любой ошибки, возможно, произошло и один или несколько параметров объекта, которые ссылаются на объекты ADO, используемые для выполнения операции. Например [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) событий включает параметры объекта **команда**, **записей**, и **подключения** объектов связанный с событием. В следующем примере Microsoft Visual Basic®, можно увидеть командной, pRecordset и pConnection объекты, представляющие **команда**, **записей**, и **подключения** объекты, которые используются в **Execute** метод.  
@@ -49,7 +50,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Параметр состояния  
  При вызове процедуры обработчика событий *состояние* параметра присваивается одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**adStatusOK**|Передаваемый будет и события завершения. Это значение означает, что операции, которая вызвала событие успешно завершена.|  
 |**adStatusErrorsOccurred**|Передаваемый события завершения. Это значение означает, что операции, которая вызвала событие неудачна или событие будет отменена операция. Проверьте *ошибка* параметр для получения дополнительных сведений.|  
@@ -59,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Если вы больше не требуется для обработки события, можно установить *состояние* для **adStatusUnwantedEvent** и приложения больше не будет получать уведомление о событии. Однако следует помните, что некоторые события могут вызываться для более чем одной из причин. В этом случае необходимо указать **adStatusUnwantedEvent** для каждого из возможных причин. Например, чтобы прекратить получение уведомлений об ожидающих **RecordChange** событий, необходимо задать *состояние* параметр **adStatusUnwantedEvent** для  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, и **adRsnFirstChange** как только они происходят.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|Запрос на получение дальнейшие уведомления поступать не этот обработчик событий.|  
 |**adStatusCancel**|Запросить отмену операции, которые будут возникать.|  
@@ -92,7 +93,7 @@ End Sub
   
  В отличие от этого, необходимо задать *adStatus* для **adStatusUnwantedEvent** только один раз для запроса, обработчик событий без **adReason** получающей событие остановки параметр уведомления.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сводка обработчик событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Как работают обработчики событий](../../../ado/guide/data/how-event-handlers-work-together.md)   

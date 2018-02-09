@@ -1,6 +1,7 @@
 ---
 title: "Обновить метод (RDS) | Документы Microsoft"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ f1_keywords:
 - Refresh
 - RDS.DataControl::Refresh
 - DataControl::Refresh
-helpviewer_keywords: Refresh method [RDS]
+helpviewer_keywords:
+- Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5730f11f027cf6fb4492f8133f88ce80ac35aee3
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 26182bb5f3ec1d60b66e5c16bf403a1f427c8b87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="refresh-method-rds"></a>Обновить метод (RDS)
 Вызывает повторный запрос источника данных, указанного в [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойств и обновления результатов запроса.  
@@ -53,7 +55,7 @@ DataControl.Refresh
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновить пример метода (Visual Basic)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Обновить пример метода (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
  [Адрес книги кнопки](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

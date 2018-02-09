@@ -21,19 +21,20 @@ helpviewer_keywords:
 - building database objects [CLR integration], data types
 - mapping data types [CLR integration]
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf47c53748e56fa455a62e8489839321e960493b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a5b47f3caa1e500664560ff8e6683e6064575699
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Типы данных SQL Server в платформе .NET Framework
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**SqlTypes** частью библиотеки базового класса [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Она предоставляет типы данных с той же семантикой и той же точностью, как те, что доступны в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом разделе о новой семантике для программистов, .NET Framework и предоставляет типы, реализованные в **System.Data.SqlTypes** пространства имен, которое включено в **System.Data** библиотеки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**SqlTypes** частью библиотеки базового класса [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Она предоставляет типы данных с той же семантикой и той же точностью, как те, что доступны в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом разделе о новой семантике для программистов, .NET Framework и предоставляет типы, реализованные в **System.Data.SqlTypes** пространства имен, которое включено в **System.Data** библиотеки.  
   
  В следующей таблице перечислены подразделы этого раздела.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
  [Обработка больших объектов &#40; LOB &#41; Параметры в среде CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  Описывает передачу типов LOB между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и средой CLR.  
   
- [Сопоставление данных о параметрах CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  
+ [Сопоставление параметров данных среды CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  
  Описывает сопоставления типов данных между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], интеграцией со средой CLR и платформой .NET Framework.  
   
   

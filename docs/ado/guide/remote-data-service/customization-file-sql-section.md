@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0cb92bcd2ea9580fa8824a50b15a1f60cdf35c3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 06b3a79e97c50df8c7eed17b1343030ca2280426
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-sql-section"></a>Раздел SQL настройки файла
 **Sql** раздел может содержать строку SQL, заменяющую строку команды клиента. Если строка не SQL в разделе, раздел будет пропущен.  
@@ -48,15 +49,15 @@ SQL = " "
 ## <a name="syntax"></a>Синтаксис  
  Замена записи строк SQL имеет следующую форму:  
   
- **SQL =**   
+ **SQL=**   
  ***sqlString***  
   
-|Часть|Description|  
+|Часть|Описание|  
 |----------|-----------------|  
 |**SQL**|Строковый литерал, который указывает на это — это запись раздел SQL.|  
 |***sqlString***|Строка SQL, который заменяет строку клиента.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Файл настроек присоединения раздела](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Раздел журналы настройки файла](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Раздел UserList настройки файла](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

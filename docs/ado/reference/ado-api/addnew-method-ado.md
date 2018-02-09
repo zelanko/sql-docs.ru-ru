@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::AddNew
 - Recordset15::raw_AddNew
-helpviewer_keywords: AddNew method [ADO]
+helpviewer_keywords:
+- AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51978e39a34b02238d4c0b1658620c9ba8d538a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4d05354a7e164d5f739f7306fc4c418ed3d1de58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="addnew-method-ado"></a>Метод AddNew (ADO)
 Создает новую запись для обновляемых [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -39,14 +41,14 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *набор записей*  
+ *recordset*  
  Объект **записей** объекта.  
   
  *FieldList*  
- Необязательный параметр. Только одно имя или массива имен или порядковые номера поля в новой записи.  
+ Необязательно. Только одно имя или массива имен или порядковые номера поля в новой записи.  
   
  *Значения*  
- Необязательный параметр. Одно значение или массив значений для поля в новой записи. Если *списка полей* является массивом, *значения* также должен быть массивом с тем же число членов; в противном случае возникает ошибка. Порядок полей имен должен соответствовать порядку значений полей в каждом массиве.  
+ Необязательно. Одно значение или массив значений для поля в новой записи. Если *списка полей* является массивом, *значения* также должен быть массивом с тем же число членов; в противном случае возникает ошибка. Порядок полей имен должен соответствовать порядку значений полей в каждом массиве.  
   
 ## <a name="remarks"></a>Remarks  
  Используйте **AddNew** метод для создания и инициализации новой записи. Используйте [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод с **adAddNew** ( [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) значение) для проверки, сможете ли вы добавить записи в текущий **записей**объекта.  
@@ -90,7 +92,7 @@ rs.Update
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод AddNew пример (Visual Basic)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
  [Пример метода AddNew (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
  [Пример метода AddNew (VC ++)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   

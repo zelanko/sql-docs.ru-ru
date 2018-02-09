@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Error::get_Source
 - Error::Source
 - Error::GetSource
-helpviewer_keywords: Source property [ADO Error]
+helpviewer_keywords:
+- Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b237e278cc2dd082ad653687126716a2b0a7380f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5a4b3e69feaada6c11504a1c5c2c834060be5b04
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-error"></a>Свойство Source (ошибка)
 Указывает имя объекта или приложения, вызвавшего ошибку.  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  Возвращает **строка** значение, указывающее имя объекта или приложения.  
   
 ## <a name="remarks"></a>Remarks  
- Используйте **источника** свойство [ошибка](../../../ado/reference/ado-api/error-object.md) объектом, чтобы определить имя объекта или приложения, вызвавшего ошибку. Это может быть имя класса объекта или программный код. Наличие ошибок в ADO, будет иметь значение свойства **ADODB.** *ObjectName*, где *ObjectName* имя объекта, запустившего ошибку. ADOX и ADO MD, значение будет равно **ADOX.** *ObjectName* и **ADOMD.** *ObjectName,* соответственно.  
+ Используйте **источника** свойство [ошибка](../../../ado/reference/ado-api/error-object.md) объектом, чтобы определить имя объекта или приложения, вызвавшего ошибку. Это может быть имя класса объекта или программный код. Для ошибок в ADO, значение свойства будет **ADODB. *** ObjectName*, где *ObjectName* имя объекта, запустившего ошибку. ADOX и ADO MD, будет иметь значение **ADOX. *** ObjectName* и **ADOMD. *** ObjectName,* соответственно.  
   
  Зависимости документации ошибок из **источника**, [номер](../../../ado/reference/ado-api/number-property-ado.md), и [описание](../../../ado/reference/ado-api/description-property.md) свойства **ошибка** объектов, можно написать код который будет соответствующим образом обработать ошибку.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="applies-to"></a>Объект применения  
  [Объект Error](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Описание, HelpContext, файл справки, NativeError, номер, источника и пример свойства SQLState (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Описание, HelpContext, файл справки, NativeError, номер, источник и пример свойства SQLState (VC ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Свойство Description](../../../ado/reference/ado-api/description-property.md)   

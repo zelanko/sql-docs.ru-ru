@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62ee8c5da51de28eff001b2056e738653db5b813
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9ba0513f0a450a57e4d25088f16d96398af9f936
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Службы Microsoft курсора OLE DB Обзор
 Служба курсора для OLE DB дополняет поддержки курсорных функций поставщиков данных. В результате пользователь понимает относительно однообразного функции из всех поставщиков данных.
@@ -62,7 +63,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  Динамическое свойство DBPROP_SERVERDATAONINSERT не поддерживается службой курсора, даже если он поддерживается базового поставщика данных.
 
-|Имя свойства|Description|
+|Имя свойства|Описание|
 |-------------------|-----------------|
 |Автоматическое обновление ссылок (DBPROP_ADC_AUTORECALC)|Наборы записей, созданных с помощью службой формирования данных, это значение указывает, как часто вычисляются вычисляемые и статистические столбцы. Значение по умолчанию (значение = 1) — повторного вычисления всякий раз, когда служба формирования данных определяет, что значения изменились. Если значение равно 0, вычисляемые или статистические столбцы только вычисляются при построенных иерархии.|
 |Размер пакета (DBPROP_ADC_BATCHSIZE)|Указывает число инструкций update, которые могут быть объединены перед его отправкой в хранилище данных. Дополнительные инструкции в пакете, хранения меньшее число циклов приема-передачи данных.|
@@ -73,7 +74,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |[Изменить имя](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Указывает имя **записей**. Может быть на которые имеются ссылки в текущем или последующих, формирования команды данных.|
 |[Команда синхронизации](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Указывает пользовательские командной строки, который используется [Resync](../../../ado/reference/ado-api/resync-method.md) метод при [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) действует свойство.|
 |[Уникальный каталог](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя базы данных, содержащей таблицы, указанной в **уникальной таблицы** свойство.|
-|[Уникальной схемы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя владельца таблицы, на которые ссылается **уникальной таблицы** свойство.|
+|[Unique Schema](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя владельца таблицы, на которые ссылается **уникальной таблицы** свойство.|
 |[Уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя одной таблицы в **записей** создан из нескольких таблиц, которые можно изменить путем вставки, обновления или удаления.|
 |Обновление критериев (DBPROP_ADC_UPDATECRITERIA)|Указывает, какие поля в **ГДЕ** предложения используются для обработки конфликтов, происходящих во время обновления.|
 |[Обновить повторной синхронизации](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Указывает ли **Resync** метод неявно вызывается после [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) метод (и его поведение), когда **уникальной таблицы** действует свойство.|
@@ -88,11 +89,11 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Поведение встроенного свойства
  Служба курсора для OLE DB также влияет на поведение некоторых встроенных свойств.
 
-|Имя свойства|Description|
+|Имя свойства|Описание|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Типы курсоров, доступных для дополнения **записей**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Дополняет типы блокировок, доступных для **записей**. Включает пакетного обновления.|
-|[Sort](../../../ado/reference/ado-api/sort-property.md)|Указывает один или несколько полей имен, **записей** сортируется, а также будет ли каждое поле сортируется в порядке возрастания или убывания.|
+|[Сортировка](../../../ado/reference/ado-api/sort-property.md)|Указывает один или несколько полей имен, **записей** сортируется, а также будет ли каждое поле сортируется в порядке возрастания или убывания.|
 
 ## <a name="method-behavior"></a>Поведение методов
  Служба курсора для OLE DB включает или влияет на поведение [поле](../../../ado/reference/ado-api/field-object.md) объекта [Append](../../../ado/reference/ado-api/append-method-ado.md) метода; и **записей** объекта [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), и [Сохранить](../../../ado/reference/ado-api/save-method.md) методы.

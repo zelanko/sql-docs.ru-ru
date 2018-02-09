@@ -1,6 +1,7 @@
 ---
 title: "Свойства сервера (RDS) | Документы Microsoft"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,19 +12,21 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RDS::IBindMgr21::Server
-helpviewer_keywords: Server property [RDS]
+f1_keywords:
+- RDS::IBindMgr21::Server
+helpviewer_keywords:
+- Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9225e5184faf0087458a9e3ca3828fa75f259d6
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 8a81a3139892898b8468d73f53d22d8bd29c4b63
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="server-property-rds"></a>Свойства сервера (RDS)
 Указывает протокол, имя и обмен данными службы Internet Information Services (IIS).  
@@ -114,7 +117,7 @@ DataControl.Server=""
  Объект **строка** значение, содержащее Интернета или интрасети путь или имя компьютера, если сервер находится на удаленном компьютере, или пустая строка, если сервер находится на локальном компьютере.  
   
  *port*  
- Необязательный параметр. Порт, используемый для подключения к серверу, на котором запущены службы IIS. Номер порта задается в Internet Explorer (на **представление** меню, нажмите кнопку **параметры**и выберите **подключения** вкладку) или в службах IIS.  
+ Необязательно. Порт, используемый для подключения к серверу, на котором запущены службы IIS. Номер порта задается в Internet Explorer (на **представление** меню, нажмите кнопку **параметры**и выберите **подключения** вкладку) или в службах IIS.  
   
  *DataControl*  
  Объектную переменную, которая представляет **RDS. DataControl** объекта.  
@@ -125,7 +128,7 @@ DataControl.Server=""
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства сервера (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [Свойство (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [Свойство SQL](../../../ado/reference/rds-api/sql-property.md)   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09f578dc3467c10be247e34c4ebb89807543052f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9eb99feba381701f7e590add3906cd0285b2720
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="formal-shape-grammar"></a>Грамматика формальных фигуры
 Это формальная Грамматика для создания любой команды фигуры:  
@@ -50,30 +51,30 @@ ms.lasthandoff: 12/21/2017
 |\<Команда фигуры >|ФИГУРЫ [\<exp таблицы > [[AS] \<псевдонима >]] [\<действие фигуры >]|  
 |\<exp таблицы >|{\<текст для команды поставщика >} &#124;<br /><br /> (\<фигуры command >) &#124;<br /><br /> Таблица \<кавычки name > &#124;<br /><br /> \<заключенный в кавычки имя >|  
 |\<Действие фигуры >|ДОБАВЛЕНИЕ \<списка для полей псевдоним > &#124;<br /><br /> ВЫЧИСЛЕНИЙ \<списка для полей псевдоним > [BY \<список полей >]|  
-|\<псевдоним поля списка >|\<псевдоним поля > [, \<псевдоним поля... >]|  
-|\<псевдоним поля >|\<поле exp > [[AS] \<псевдонима >]|  
-|\<поле exp >|(\<exp отношения >) &#124;<br /><br /> \<вычислить exp > &#124;<br /><br /> \<Статистическая функция exp > &#124;<br /><br /> \<новый exp >|  
-|< relation_exp >|\<exp таблицы > [[AS] \<псевдонима >]<br /><br /> ССЫЛКА \<список условного связь->|  
-|\<Список условного связь->|\<отношение условного > [, \<отношения условного >...]|  
+|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
+|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
+|\<field-exp>|(\<exp отношения >) &#124;<br /><br /> \<вычислить exp > &#124;<br /><br /> \<Статистическая функция exp > &#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> ССЫЛКА \<список условного связь->|  
+|\<relation-cond-list>|\<отношение условного > [, \<отношения условного >...]|  
 |\<отношение условного >|\<Имя поля > TO \<дочерние ссылки >|  
-|\<дочерние ссылки >|\<Имя поля > &#124;<br /><br /> ПАРАМЕТР \<param ref >|  
+|\<child-ref>|\<Имя поля > &#124;<br /><br /> ПАРАМЕТР \<param ref >|  
 |\<PARAM ref >|\<число >|  
 |\<Список полей >|\<Имя поля > [, \<имя поля >]|  
-|\<Статистическая функция exp >|SUM (\<указанием поле name >) &#124;<br /><br /> AVG (\<указанием поле name >) &#124;<br /><br /> MIN (\<указанием поле name >) &#124;<br /><br /> MAX (\<указанием поле name >) &#124;<br /><br /> COUNT (\<указанием псевдонима > &#124; \<полное имя >) &#124;<br /><br /> STDEV (\<указанием поле name >) &#124;<br /><br /> ВСЕ (\<указанием поле name >)|  
-|\<вычислить exp >|Калькулятор (\<выражение >)|  
-|\<Полное поле name >|\<псевдоним >. [\<псевдонима >...] \<имя поля >|  
+|\<aggregate-exp>|SUM (\<указанием поле name >) &#124;<br /><br /> AVG (\<указанием поле name >) &#124;<br /><br /> MIN (\<указанием поле name >) &#124;<br /><br /> MAX (\<указанием поле name >) &#124;<br /><br /> COUNT (\<указанием псевдонима > &#124; \<полное имя >) &#124;<br /><br /> STDEV (\<указанием поле name >) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
+|\<calculated-exp>|Калькулятор (\<выражение >)|  
+|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
 |\<псевдонима >|\<заключенный в кавычки имя >|  
-|\<Имя поля >|\<заключенный в кавычки имя > [[AS] \<псевдонима >]|  
-|\<заключенный в кавычки имя >|"\<строка >» &#124;<br /><br /> "\<строка >" &#124;<br /><br /> [\<строка >] &#124;<br /><br /> \<имя >|  
-|\<Полное имя >|псевдонимы [.alias]|  
+|\<Имя поля >|\<quoted-name> [[AS] \<alias>]|  
+|\<заключенный в кавычки имя >|"\<строка >» &#124;<br /><br /> "\<строка >" &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<имя >|  
+|\<qualified-name>|псевдонимы [.alias]|  
 |\<имя >|альфа-канал [альфа &#124; цифра &#124; _ &#124; # &#124;: &#124;...]|  
 |\<число >|цифра [цифрой...]|  
-|\<новый exp >|НОВЫЙ \<тип поля > [(\<номер > [, \<номер >])]|  
+|\<new-exp>|НОВЫЙ \<тип поля > [(\<номер > [, \<номер >])]|  
 |\<Тип поля >|Тип данных OLE DB или ADO.|  
-|\<строка >|Юникод char [Юникода char...]|  
+|\<string>|Юникод char [Юникода char...]|  
 |\<выражение >|Visual Basic для приложений выражения операнды которых являются другие столбцы не CALC в той же строке.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Доступ к строк в иерархических записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Общие сведения о формирования данных](../../../ado/guide/data/data-shaping-overview.md)   
  [Для формирования данных службы необходимых поставщиков](../../../ado/guide/data/required-providers-for-data-shaping.md)   

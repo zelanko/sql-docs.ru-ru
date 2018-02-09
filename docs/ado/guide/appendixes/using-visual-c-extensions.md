@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions"></a>Расширения Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>Интерфейс IADORecordBinding
@@ -91,12 +93,12 @@ Update(CADORecordBinding *binding)
  Дополнительные сведения см. в разделе [типов данных в приложении A:](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6), ссылки на программиста OLE DB.
 
 ### <a name="begin-binding-entries"></a>Начать привязки операции
- **BEGIN_ADO_BINDING**(*класса*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>Данные фиксированной длины
- **ADO_FIXED_LENGTH_ENTRY**(*изменить порядковый номер, тип данных, буфера, состояние,*)
+ **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*изменить порядковый номер, тип данных, буфера,*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>Числовые данные
  **ADO_NUMERIC_ENTRY**(*изменить порядковый номер, тип данных, буфера, точность, масштаб, состояние,*)
@@ -106,21 +108,21 @@ Update(CADORecordBinding *binding)
 ### <a name="variable-length-data"></a>Данные переменной длины
  **ADO_VARIABLE_LENGTH_ENTRY**(*порядковый номер, тип данных, буфер, размер, состояние, длину, измените*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*изменить порядковый номер, тип данных, буфер, размер, состояние,*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
 
  **ADO_VARIABLE_LENGTH_ENTRY3**(*порядковый номер, тип данных, буфер, размер, длину, измените*)
 
  **ADO_VARIABLE_LENGTH_ENTRY4**(*изменить порядковый номер, тип данных, буфер, размер,*)
 
 ### <a name="end-binding-entries"></a>Привязка операции End
- **END_ADO_BINDING**)
+ **END_ADO_BINDING**()
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------------|-----------------|
-|*Класс*|Класс определенные элементы привязки и переменных C/C++.|
+|*Class*|Класс определенные элементы привязки и переменных C/C++.|
 |*Ordinal*|Порядковый номер, начиная с единицы, из **записей** поле, соответствующее вашей переменной C/C++.|
 |*Тип данных*|Эквивалентным типом данных ADO переменной C/C++ (в разделе [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) список допустимых типов данных). Значение **записей** поля будут преобразованы в этот тип данных, при необходимости.|
-|*Буфер*|Имя переменной C/C++ где **записей** поля будут храниться.|
+|*Buffer*|Имя переменной C/C++ где **записей** поля будут храниться.|
 |*Размер*|Максимальный размер в байтах *буфера*. Если *буфера* будет содержать строку переменной длины, пространство для завершающего нуля.|
 |*Состояние*|Имя переменной, которая будет указывать ли содержимое *буфера* являются допустимыми и необходимость преобразования поля для *DataType* прошла успешно.<br /><br /> Два наиболее важные значения для этой переменной **adFldOK**, означающее преобразование выполнено успешно; и **adFldNull**, что означает, что значение поля может быть РАЗНОВИДНОСТЬЮ VT_NULL и не просто пустой.<br /><br /> Возможные значения параметра *состояние* , перечислены в следующей таблице, «Состояние значения».|
 |*Изменение*|Логический флаг; значение TRUE указывает, ADO может обновлять соответствующие **записей** поле значение, содержащееся в *буфера*.<br /><br /> Значение типа Boolean *изменить* параметр в значение TRUE, чтобы позволить ADO обновить связанные поля и значение FALSE, если вы хотите проверить это поле, но не изменять.|
@@ -133,7 +135,7 @@ Update(CADORecordBinding *binding)
 
  При вводе данных, *состояние* может быть задано значение **adFldNull** для указания **записей** должно быть задано значение null.
 
-|Константа|Значение|Description|
+|Константа|Значение|Описание|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Возвращено значение поля, отличных от null.|
 |**adFldBadAccessor**|1|Привязка была недействительной.|
@@ -150,5 +152,5 @@ Update(CADORecordBinding *binding)
 |**adFldBadStatus**|12|При обновлении параметра недопустимое состояние.|
 |**adFldDefault**|13|При обновлении, было использовано значение по умолчанию.|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Пример расширения Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md) [заголовок расширений Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)

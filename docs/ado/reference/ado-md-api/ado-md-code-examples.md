@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO MD code examples
+helpviewer_keywords:
+- ADO MD code examples
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bd955452d799551a8d406489d4d337def554000
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4fd1e15750413cbd4788d30e07714db458cb62f9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-code-examples"></a>Примеры кода ADO MD
 Используйте в следующих примерах кода, чтобы узнать, как использовать объекты ADO MD, методы и свойства. Эти примеры являются подмножеством примера приложения, установленные с Microsoft SQL Server OLAP Services для SQL Server 7.0.  
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Примеры кода многомерных объектов ADO на языке сценариев Visual Basic](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD коллекций](../../../ado/reference/ado-md-api/ado-md-collections.md)   
  [ADO MD перечисляемые константы](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   

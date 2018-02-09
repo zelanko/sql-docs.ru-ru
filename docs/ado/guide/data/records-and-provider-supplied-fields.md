@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69cb7375808e3c11dd8d92bab48a3588693e30e8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>Записи и поля поставщик предоставил
 При [запись](../../../ado/reference/ado-api/record-object-ado.md) объект открыт, его источник может быть текущей строки открытого [записей](../../../ado/reference/ado-api/recordset-object-ado.md), абсолютный URL-адрес или относительный URL-адрес в сочетании с открытым [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта .  
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="resource-recordset-columns"></a>Столбцы наборов записей ресурсов  
  Объект *записей ресурсов* состоит из следующих столбцов.  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|Только для чтения. Указывает URL-адрес ресурса.|  
 |RESOURCE_PARENTNAME|AdVarWChar|Только для чтения. Указывает абсолютный URL-адрес родительской записи.|  
@@ -72,16 +73,16 @@ ms.lasthandoff: 12/21/2017
 |RESOURCE_CONTENTCLASS|AdVarWChar|Указывает тип MIME документа, указывающее формат, например «`text/html`».|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Указывает язык, в которой хранится содержимое.|  
 |RESOURCE_CREATIONTIME|adFileTime|Только для чтения. Указывает на структуру FILETIME, содержащую время создания ресурса. Время указывается в формате общего скоординированного времени (UTC).|  
-|RESOURCE_LASTACCESSTIME|adFileTime|Только для чтения. Указывает на структуру FILETIME, содержащий время последнего доступа к ресурсу. Время представлено в формате UTC. Члены FILETIME равны нулю, если поставщик не поддерживает этот элемент времени.|  
-|RESOURCE_LASTWRITETIME|adFileTime|Только для чтения. Указывает на структуру FILETIME содержит время последней операции записи ресурса. Время представлено в формате UTC. Члены FILETIME равны нулю, если поставщик не поддерживает этот элемент времени.|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|Только для чтения. Указывает на структуру FILETIME, содержащий время последнего доступа к ресурсу. Время представлено в формате UTC. Члены FILETIME равны нулю, если поставщик не поддерживает этот элемент времени.|  
+|RESOURCE_LASTWRITETIME|AdFileTime|Только для чтения. Указывает на структуру FILETIME содержит время последней операции записи ресурса. Время представлено в формате UTC. Члены FILETIME равны нулю, если поставщик не поддерживает этот элемент времени.|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|Только для чтения. Указывает размер ресурса по умолчанию потока в байтах.|  
 |RESOURCE_ISCOLLECTION|adBoolean|Только для чтения. Значение true, если ресурс находится в коллекции, например каталог. Значение false, если ресурс является простой файл.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|Значение true, если ресурс является структурированный документ. Значение false, если ресурс не является структурированный документ. Это может быть коллекция или простой файл.|  
 |DEFAULT_DOCUMENT|AdVarWChar|Только для чтения. Указывает, что этот ресурс содержит URL-адрес простой документ по умолчанию, папки или структурированного документа. Используется при запросе потока по умолчанию из ресурса. Это свойство имеет пустое значение для простого файла.|  
-|CHAPTERED_CHILDREN|AdChapter|Только для чтения. Необязательный параметр. Указывает главе строк, который содержит дочерние элементы ресурса. ( *Поставщик OLE DB для публикаций в Интернете* не использует этот столбец.)|  
+|CHAPTERED_CHILDREN|AdChapter|Только для чтения. Необязательно. Указывает главе строк, который содержит дочерние элементы ресурса. ( *Поставщик OLE DB для публикаций в Интернете* не использует этот столбец.)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|Только для чтения. Указывает отображаемое имя ресурса.|  
 |RESOURCE_ISROOT|adBoolean|Только для чтения. Значение true, если ресурс является корневым элементом коллекции или структурированного документа.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

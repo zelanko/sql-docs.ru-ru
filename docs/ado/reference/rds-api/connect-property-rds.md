@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Connect property [ADO]
+helpviewer_keywords:
+- Connect property [ADO]
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd828ee21628a5c0b00566c47b9b7dedcb5b0b65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd6987efb685449d5decde777d4f67ba465a545e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-property-rds"></a>Свойство (RDS)
 Указывает имя базы данных, из которой выполняются операции запроса и обновления.  
@@ -54,7 +56,7 @@ Run time: DataControl.Connect = "ConnectionString"
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства (VBScript) подключения](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
  [Метод запроса (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Обновить метод (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   

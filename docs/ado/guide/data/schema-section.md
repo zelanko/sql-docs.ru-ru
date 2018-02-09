@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Schema section [ADO]
+helpviewer_keywords:
+- Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65b56003d7fd7723dce57a0c8c6fae2ecee6da06
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 51c10f0fb21bdab8c83d799d635153b62c2c6e58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schema-section"></a>Раздел схемы
 Раздел схемы является обязательным. Как показано в предыдущем примере, ADO записывает подробные метаданные о каждом столбце, чтобы сохранить семантику значений данных, насколько возможно, для обновления. Тем не менее для загрузки в XML, ADO требуется только имена столбцов и строк, к которому они принадлежат. Ниже приведен пример минимальной схемой:  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/21/2017
  Аналогичным образом, так как отсутствует псевдоним не определен для `CompanyName` в предыдущем примере `CompanyName` должен постоянно использоваться во всем документе.  
   
 ## <a name="data-types"></a>Типы данных  
- Тип данных можно применить к столбцу, атрибут dt: Type. Полное руководство по разрешенных типов XML, см в разделе типы данных [спецификации W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). Тип данных можно указать двумя способами: указать атрибут dt: Type непосредственно на само определение столбца или используйте конструкцию s:datatype как вложенный элемент определения столбца. Например,  
+ Тип данных можно применить к столбцу, атрибут dt: Type. Полное руководство по разрешенных типов XML, см в разделе типы данных [спецификации W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). Тип данных можно указать двумя способами: указать атрибут dt: Type непосредственно на само определение столбца или используйте конструкцию s:datatype как вложенный элемент определения столбца. Например:  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -179,5 +181,5 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения о OLE DB конструкции доступны для использования в схеме XML-документа для OLE DB, в разделе Определение «urn: schemas-microsoft-com:rowset» и руководство программиста OLE DB.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

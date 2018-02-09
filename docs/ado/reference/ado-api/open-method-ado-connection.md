@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::raw_Open
 - Connection15::Open
 - _Connection::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41850de804523a50dbf0d489e678b93c9f29b6ae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aecc064b9030adb40347737dc68998de3eee4d64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-connection"></a>Метод Open (соединение ADO)
 Открывает подключение к источнику данных.  
@@ -41,16 +43,16 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Параметры  
  *ConnectionString*  
- Необязательный параметр. Объект **строка** значение, содержащее сведения о соединении. В разделе [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство сведения о допустимых значений.  
+ Необязательно. Объект **строка** значение, содержащее сведения о соединении. В разделе [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство сведения о допустимых значений.  
   
- *Идентификатор пользователя*  
- Необязательный параметр. Объект **строка** значение, содержащее имя пользователя для использования при установке соединения.  
+ *UserID*  
+ Необязательно. Объект **строка** значение, содержащее имя пользователя для использования при установке соединения.  
   
  *Пароль*  
- Необязательный параметр. Объект **строка** значение, содержащее пароль для использования при установке соединения.  
+ Необязательно. Объект **строка** значение, содержащее пароль для использования при установке соединения.  
   
  *Параметры*  
- Необязательный параметр. Объект [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) значение, определяющее, является ли этот метод должен возвращать после (синхронно) или до (асинхронно) подключения.  
+ Необязательно. Объект [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) значение, определяющее, является ли этот метод должен возвращать после (синхронно) или до (асинхронно) подключения.  
   
 ## <a name="remarks"></a>Remarks  
  С помощью **откройте** метод [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объект устанавливает физическое соединение с источником данных. После успешного завершения этого метода, подключение считается активным и может отдавать команды ее и обрабатывать результаты.  
@@ -70,7 +72,7 @@ connection.Open ConnectionString, UserID, Password, Options
 ## <a name="applies-to"></a>Объект применения  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Открытие и закрытие примере методы (Visual Basic)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Пример методов открытия и закрытия (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Пример методов открытия и закрытия (VC ++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

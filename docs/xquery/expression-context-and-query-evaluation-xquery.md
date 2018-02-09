@@ -8,11 +8,14 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - expression context [XQuery]
 - XQuery, expression context
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bda40b9022d4e1d4ef184f150ad30d4776bd0b9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b387ebe6649cca113e4974b3275498bb9b3b970e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Контекст выражения и вычисление запросов (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="static-context"></a>Статический контекст  
  Инициализация статического контекста относится к процессу объединения данных для статического анализа выражения. В рамках инициализации статического контекста выполняются следующие операции:  
   
--   **Пробела границы** политики устанавливается на чередование. Таким образом, пробел границы не сохраняется **любой элемент** и **атрибута** конструкторы в запросе. Например:  
+-   **Пробел границы** Политика устанавливается на чередование. Таким образом, пробел границы не сохраняется **любой элемент** и **атрибута** конструкторы в запросе. Например:  
   
     ```  
     declare @x xml  
@@ -196,7 +199,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **Fn:collection()** функция не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основы языка XQuery](../xquery/xquery-basics.md)   
  [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Коллекции XML-схем (SQL Server)](../relational-databases/xml/xml-schema-collections-sql-server.md)  

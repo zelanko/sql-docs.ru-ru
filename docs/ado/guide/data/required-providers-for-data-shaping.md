@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,23 +16,23 @@ helpviewer_keywords:
 - providers [ADO], data shaping
 - data shaping [ADO], providers required
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87c86790165d7f428ec3a5d5328fd36cd8165acf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 577c377c4c8022272ffb7c55507d3fdc378aa440
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="required-providers-for-data-shaping"></a>Для формирования данных службы необходимых поставщиков
 Формирование данных обычно требует двух поставщиков. Поставщик услуг [службы Data Shaping Service для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), предоставляющий формирования функциональные возможности и поставщика данных, например поставщик OLE DB для SQL Server данных, передает строки данных для заполнения формы [набора записей ](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  В качестве значения можно указать имя поставщика услуг (MSDataShape) [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойства или ключевое слово строки подключения «поставщик = MSDataShape;».  
   
- Имя поставщика данных можно указать в качестве значения **поставщик данных** динамические свойства, которое добавляется к **подключения** объекта [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции с помощью службы Data Shaping Service для OLE DB или ключевое слово строки подключения "**поставщик данных =***поставщика*».  
+ Имя поставщика данных можно указать в качестве значения **поставщик данных** динамические свойства, которое добавляется к **подключения** объекта [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции с помощью службы Data Shaping Service для OLE DB или ключевое слово строки соединения «**поставщик данных = *** поставщика*».  
   
  Поставщик данных не является обязательным, если **записей** не заполняется (например, как создано **записей** где столбцы создаются с помощью ключевого слова NEW). В этом случае указать "**поставщик данных =**none;».  
   
@@ -43,7 +44,7 @@ cnn.Provider = "MSDataShape"
 cnn.Open "Data Provider=SQLOLEDB;Integrated Security=SSPI;Database=Northwind"  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
  [Грамматика формальных фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

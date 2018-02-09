@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e365b0ffd041b8457fff3035fbbe4e19f5bcee6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-systemtransactions"></a>Использование System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**System.Transactions** пространство имен предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интеграция CLR среды выполнения (CLR). Класс **System.Transactions.TransactionScope** делает блок кода транзакционным, неявно прикрепляя соединения к распределенной транзакции. В конце блока **Complete** , перед тем, как выйти из него, необходимо вызвать метод **TransactionScope**. Когда выполнение программы покидает блок кода, вызывается метод **Dispose** , что вызывает прерывание транзакции, если не поддерживается метод **Complete** . При возникновении исключения, в результате которого исполнение кода выходит за пределы области действия, транзакция считается неподдерживаемой.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Пространство имен **System.Transactions** предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Класс **System.Transactions.TransactionScope** делает блок кода транзакционным, неявно прикрепляя соединения к распределенной транзакции. В конце блока **Complete** , перед тем, как выйти из него, необходимо вызвать метод **TransactionScope**. Когда выполнение программы покидает блок кода, вызывается метод **Dispose** , что вызывает прерывание транзакции, если не поддерживается метод **Complete** . При возникновении исключения, в результате которого исполнение кода выходит за пределы области действия, транзакция считается неподдерживаемой.  
   
  Рекомендуется использовать блок **using** , чтобы гарантировать вызов метода **Dispose** для объекта **TransactionScope** при выходе из блока **using** . Неудачная попытка зафиксировать или откатить незавершенные транзакции может значительно снизить производительность, поскольку время ожидания по умолчанию для объекта **TransactionScope** составляет одну минуту. Если инструкция **using** не используется, необходимо явно выполнить все действия в блоке **Try** и вызвать метод **Dispose** в блоке **Finally** .  
   
@@ -111,7 +112,7 @@ using (TransactionScope transScope = new TransactionScope())
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Интеграция со средой CLR и транзакции](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   
