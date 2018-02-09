@@ -35,7 +35,7 @@
 ### [Установка агента SQL Server](sql-server-linux-setup-sql-agent.md)
 ### [Установка полнотекстового поиска SQL Server](sql-server-linux-setup-full-text-search.md)
 ### [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-### [Регистрация общедоступного репозитория](sql-server-linux-change-repo.md)
+### [Настройка репозиториев](sql-server-linux-change-repo.md)
 
 ## Configure
 ### [Настройка с помощью mssql-conf](sql-server-linux-configure-mssql-conf.md)
@@ -85,6 +85,7 @@
 ##### [Эксплуатация](sql-server-linux-availability-group-failover-ha.md)
 #### [Создание только для чтения и масштабирования]()
 ##### [Настройка группы доступности](sql-server-linux-availability-group-configure-rs.md)
+#### [Настройка кроссплатформенности (Windows и Linux)](sql-server-linux-availability-group-cross-platform.md)
 
 ## [безопасность](sql-server-linux-security-overview.md)
 ### [Начало работы с функциями безопасности](sql-server-linux-security-get-started.md)
