@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 743d7159bd8937fe90be4016ad361d13b7a15c36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Подготовка данных с помощью PowerShell (Пошаговое руководство)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 К этому времени должны иметь одно из следующих:
 
@@ -290,7 +293,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 При выполнении сценария PowerShell несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] сценариев на экземпляре SQL Server. В следующей таблице перечислены [!INCLUDE[tsql](../../includes/tsql-md.md)] сценариев и их функции.
 
-|Имя файла скрипта SQL|Description|
+|Имя файла скрипта SQL|Описание|
 |------------------------|----------------|
 |create-db-tb-upload-data.sql|Создает базу данных и две таблицы:<br /><br /> *nyctaxi_sample:*таблица, в которой хранятся данные для обучения — выборка из набора данных по работе такси в Нью-Йорке. К таблице добавляется кластеризованный индекс columnstore для оптимизации хранения данных и производительности запросов.<br /><br /> *nyc_taxi_models*: таблица, используемая для хранения обученных моделей в двоичном формате.|
 |PredictTipBatchMode.sql|Создает хранимую процедуру, которая вызывает обученную модель с целью прогнозирования меток для новых наблюдений. В качестве входного параметра она принимает запрос.|

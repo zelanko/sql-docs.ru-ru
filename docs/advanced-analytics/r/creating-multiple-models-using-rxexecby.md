@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 55d194bf888defeebba64eeb4bb87ac04363cefb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 685833317453c1ed5765385a73ff892a85989c2c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>Создание нескольких моделей, с помощью rxExecBy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 2017 г CTP-версия SQL Server 2.0 включает новую функцию **rxExecBy**, который поддерживает параллельную обработку нескольких связанных моделей. Вместо того чтобы обучение один очень большой модели на основе данных из нескольких похожих сущностей, специалист по анализу данных можно очень быстро создать много связанных моделей, каждая с помощью данных, относящихся к одной сущности.
 

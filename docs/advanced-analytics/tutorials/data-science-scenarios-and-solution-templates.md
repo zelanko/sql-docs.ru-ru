@@ -10,20 +10,22 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3c180282735da59d8d3dfa039e70d0eea5ebd7e5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5317f42d3acd85f7865f79405b2daf12793a7de4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Сценарии обработки и анализа данных и шаблоны решений
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Шаблоны — это образцы решений, которые демонстрируют практические приемы и предоставляют стандартные блоки для быстрой реализации собственного решения. Каждый шаблон предназначен для решения конкретной проблемы, для конкретных по вертикали или отрасли. Каждый шаблон охватывает различные задачи: от подготовки данных и формирования характеристик до обучения модели и оценки. Использовать эти шаблоны, чтобы узнать, как [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] работает. Затем вы можете настроить шаблон для соответствия собственные сценарии и создать пользовательское решение. 
 

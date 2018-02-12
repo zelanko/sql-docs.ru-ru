@@ -14,19 +14,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 71b578fb47a7bd7881f2681206a0f69f5c37facb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>Python взаимодействие с SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе описаны компоненты Python, которые будут установлены, если включена функция **службы обучения машины (в базе данных)** и выберите в качестве языка Python.
 
 ## <a name="python-components"></a>Компоненты Python
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]не изменяйте исполняемые файлы Python. Среда выполнения Python устанавливается независимо от средства SQL, а также выполняется за пределами [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] процесса.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] не изменяйте исполняемые файлы Python. Среда выполнения Python устанавливается независимо от средства SQL, а также выполняется за пределами [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] процесса.
 
 Распределение, которое связано с определенным [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] экземпляра можно найти в папке, связанный с экземпляром.
 
@@ -71,6 +72,6 @@ Microsoftml и revoscalepy тесно связаны; Источники дан�
 
 В процессе установки службы обучения машины с Python должен дать согласие с условиями открытой лицензии GNU.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Библиотеки и типы данных Python](python-libraries-and-data-types.md)

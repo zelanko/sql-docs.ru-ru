@@ -9,20 +9,22 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 595bdb9cb16b02258d50d1f3d038ad988bbc4dd3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 802ad1ee49920db65eadccfb29650c649c339d48
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="converting-r-code-for-execution-in-database"></a>Преобразование кода R для выполнения в базе данных
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье содержит высокоуровневое руководство о том, как изменить код R в SQL Server. 
 
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/08/2018
 
 + Используемые библиотеки R, доступ к сети или не может устанавливаться на сервере SQL Server.
 + Код выполняет отдельные вызовы к источникам данных за пределами SQL Server, например листов Excel, файлы в общих папках и других баз данных. 
-+ Требуется выполнение кода в * @script * параметр [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) и также параметризовать хранимой процедуры.
++ Требуется выполнение кода в  *@script*  параметр [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) и также параметризовать хранимой процедуры.
 + Исходное решение содержит несколько шагов, которые могут оказаться эффективными в рабочей среде при выполнении независимо друг от друга, такие как Подготовка данных или конструируются сравнение модели обучения, оценки или отчетов.
 + Чтобы улучшить оптимизации производительности путем изменения библиотек, с помощью параллельного выполнения или Разгрузка некоторую обработку для SQL Server. 
 
