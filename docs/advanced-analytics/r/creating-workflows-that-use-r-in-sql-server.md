@@ -1,6 +1,7 @@
 ---
 title: "Создание рабочих процессов в бизнес-Аналитики с помощью R | Документы Microsoft"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 53359b392f1936fa968d22b8ae58c1f3816771d8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>Создание рабочих процессов в бизнес-Аналитики с помощью R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Реляционная база данных является высокооптимизированной технологией разработки масштабируемых решений для обработки транзакций, хранения и опроса данных.
 
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/25/2018
 
 В этой записи блога демонстрирует основные способы работы с кодом R с помощью [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: 
 
-+ Вызовите R, используя задачу «Выполнение SQL», для формирования данных и сохранения его в[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ Вызовите R, используя задачу «Выполнение SQL», для формирования данных и сохранения его в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 + использование хранимой процедуры для обучения модели R и ее сохранения в базе данных;
 
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/25/2018
 
 С помощью [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] вы можете выполнять сложные операции в R через хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)], которые легко можно использовать во множестве средств создания отчетов, включая [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Power BI.
 
-+ Визуализация графических объектов, возвращаемых сценарием R, с помощью [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++ Визуализация графических объектов, возвращаемых сценарием R с помощью [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 + Использование таблицы в Power BI
 
 ### <a name="examples"></a>Примеры

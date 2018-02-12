@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 65e3ca0b62da2a8412b92485316074a5f52fa080
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Производительность служб R: результаты и ресурсы
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья содержит четвертый и последний ряда, описывающий оптимизации производительности для служб R. В этой статье приведена сводка методов, результаты и выводы из двух практические примеры, которые проверены различные методы оптимизации.
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 3. Различные изменения были применены к копий таблицы, чтобы проверить компоненты SQL Server, такие как сжатие page, сжатие row, индексирование по столбцам данных хранилища и т. д.
 4. Производительность измерялась до и после каждого оптимизации была применена.
 
-| Имя таблицы| Description|
+| Имя таблицы| Описание|
 |------|------|
 | *airline* | Данные, преобразованные из исходного XDF-файла с использованием `rxDataStep`.|                          |
 | *airlineWithIntCol*   | Параметр *DayOfWeek*, преобразованный в целое число, а не в строку. Эта таблица также добавляет столбец *rowNum*.|
@@ -290,7 +291,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 - Таблицы в памяти
 - Soft-NUMA
-- Resource Governor
+- Регулятор ресурсов
 
 Чтобы оценить влияние на выполнение скрипта R программной архитектуры NUMA, команды обработки и анализа данных тестировать решение на виртуальной машине Azure с 20 физических ядер. На этих физических ядер на четыре программной архитектуры NUMA были созданы автоматически, таким образом, что каждый узел содержит пять ядер.
 
@@ -388,7 +389,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 + [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 
-+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)
++ [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)
 
 + [Знакомство с регулятором ресурсов](https://technet.microsoft.com/library/bb895232.aspx)
 
@@ -398,7 +399,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 + [Пример настройки регулятора ресурсов](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
-### <a name="tools"></a>Инструменты
+### <a name="tools"></a>Средства
 
 + [Генератор загрузки хранилища DISKSPD. Тестовое средство производительности](https://github.com/microsoft/diskspd)
 

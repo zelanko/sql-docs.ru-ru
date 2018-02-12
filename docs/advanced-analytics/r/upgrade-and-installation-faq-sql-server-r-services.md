@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 001e66b9-6c3f-41b3-81b7-46541e15f9ea
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 130c52d56e45dae5da5f50ef0d5d96ea87c31d3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3e259fcc1332d614cf1e3427f6a927613493bd31
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning"></a>Часто задаваемые вопросы по SQL Server машинного обучения обновлению и установке
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе содержатся ответы на некоторые распространенные вопросы об установке машинного обучения функции в SQL Server. Она также охватывает часто задаваемые вопросы об обновлениях.
 
@@ -100,7 +101,7 @@ ms.lasthandoff: 01/08/2018
 
 Следующие версии были установлены с предварительными версиями SQL Server 2016.
 
-| Version | Сборка         |
+| Версия | Сборка         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |
@@ -185,7 +186,7 @@ ms.lasthandoff: 01/08/2018
 
 Как правило мы рекомендуем выполнять установку служб R (в базе данных) и R Server (изолированного) на том же компьютере. Тем не менее при условии, что сервер имеет емкость, достаточную, может оказаться изолированный сервер R может быть полезен в качестве средства разработки. Другим возможным вариантом является необходимость использовать возможности R Server ввода в эксплуатацию, но также требуется для доступа к данным SQL Server без перемещения данных.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
  [Приступая к работе с SQL Server R Services](../r/getting-started-with-sql-server-r-services.md)
 

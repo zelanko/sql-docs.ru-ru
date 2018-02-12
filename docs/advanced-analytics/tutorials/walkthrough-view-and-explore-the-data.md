@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 49b3174910ca8b5ce1b590f1205bc3d134b76f4b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 97d1e0b468222162644e98f5813d4e4d97fd5add
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>Просмотр и изучение данных с помощью SQL (Пошаговое руководство)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Изучение данных — важный этап моделирования. Он включает в себя просмотр сводок по объектам данных, которые будут использоваться при анализе, а также визуализацию данных. На этом занятии просмотра объектов данных и создавать диаграммы, с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] и функций R, включенных в [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 

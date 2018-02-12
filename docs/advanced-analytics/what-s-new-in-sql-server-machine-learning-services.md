@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: c5f9810dfb057045fd1ec0ba25fd7651b2e10ea1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Новые возможности службы обучения машины в SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В SQL Server 2016 Корпорация Майкрософт представила SQL Server R Services, компонент, который поддерживает обработки и анализа данных корпоративного уровня, интеграция языка R в SQL Server database engine.
 
@@ -60,7 +61,7 @@ CATCH, то последняя объявление! [Python в 2017 г. SQL Ser
 
 + Поддержка Python в Microsoft машины обучения Server (изолированный)
 
-    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]включает параметр, чтобы установить автономную машины обучения Microsoft Server. С помощью сервера обучения машины, можно распространять и масштабировать кода R или Python без использования SQL Server.
+    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] включает параметр, чтобы установить автономную машины обучения Microsoft Server. С помощью сервера обучения машины, можно распространять и масштабировать кода R или Python без использования SQL Server.
 
 ### <a name="linux-support"></a>Поддержка Linux
 

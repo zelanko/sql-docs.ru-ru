@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 422b1e72c38493b2092a8682ade5077069af24f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c4fc8ef42cf38e908aca8dbbfeacbfd5fdf0ece4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="security-overview-for-python-in-sql-server"></a>Общие сведения о безопасности для Python в SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе описывается архитектура безопасности, используемый для подключения [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ядра и Python компоненты базы данных. Приведенные примеры процесса безопасности для двух стандартных сценариев: выполнение Python в SQL Server с помощью хранимой процедуры, а также с SQL Server в контексте удаленного Python.
 
@@ -90,6 +91,6 @@ ms.lasthandoff: 01/08/2018
 
 Если вы являетесь администратором компьютера, вы можете просмотреть каталоги, созданные для каждого процесса. Каждый каталог определяется собственным идентификатором GUID сеанса.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Общие сведения об архитектуре](../../advanced-analytics/python/architecture-overview-sql-server-python.md)

@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 09d5c7243f519a3ddf2cb0380e7a9f9f65c5a350
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 771683f472af17292de62fb1591539f1215ebf57
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Развертывание модели R и использовать его в SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 На этом занятии вы использовать R-модели в рабочей среде путем вызова обученной модели из хранимой процедуры. Затем можно вызвать хранимую процедуру из R или любом языке программирования приложения, который поддерживает [!INCLUDE[tsql](../../includes/tsql-md.md)] (например, C#, Java, Python, т. д.), для использования модели для создания прогнозов на новый наблюдения.
 

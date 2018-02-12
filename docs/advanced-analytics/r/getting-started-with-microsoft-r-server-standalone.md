@@ -11,17 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52347d0d-ce60-4bb8-98d2-6163e87716b0
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 7c68e4a44ea410d3ad54ee39a103695eb47b6473
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b7a9ec054b512e8825bf5cf9208a0c1deb3abbb8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="getting-started-with-machine-learning-server-standalone"></a>Приступая к работе с машины обучения Server (изолированный)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 В SQL Server 2016 Microsoft R Server (изолированный) помогли приведения популярных R с открытым кодом языка в предприятии, чтобы включить высокопроизводительные аналитические решения, а также интеграцию с другими бизнес-приложениями.  
 
@@ -83,6 +84,6 @@ ms.lasthandoff: 01/08/2018
 
     Пакет MicrosoftML — это набор обучения алгоритмов и преобразования, разрабатываемых в Майкрософт, быстрых и масштабируемых новой машины. Его можно использовать в R или Python. Дополнительные сведения см. в разделе [MicrosoftML для Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) и [MicrosoftML для R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [Приступая к работе с SQL Server машинного самообучения, службы](../../advanced-analytics/r/getting-started-with-sql-server-r-services.md)

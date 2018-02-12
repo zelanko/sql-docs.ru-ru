@@ -16,18 +16,19 @@ keywords:
 - "Установка служб R Services"
 - "установить SQL машинного обучения"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 04f2502853e21968f2edaac927247eb45730d000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Настройка службы обучения машины SQL Server (в базе данных)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе описывается установка и настройка следующих машинного обучения компонентами, поддерживающими аналитика в базе данных в SQL Server:
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
 
 + Сервер обучения машины с **не** SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программа установки также включает параметр, чтобы установить версию «отдельно» машинного обучения компонентов не требуется компонент database engine, который не работает в SQL Server.  Как правило, рекомендуется установить этот параметр на компьютере, отличном от компьютера, на котором размещается SQL Server.
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки также включает параметр, чтобы установить версию «отдельно» машинного обучения компонентов не требуется компонент database engine, который не работает в SQL Server.  Как правило, рекомендуется установить этот параметр на компьютере, отличном от компьютера, на котором размещается SQL Server.
     
     [Настройка сервера автономного машинного обучения](create-a-standalone-r-server.md).
 

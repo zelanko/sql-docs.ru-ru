@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 79cc7e334c3aab4fb7702e368a3188db98eaaced
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Создание компонентов данных, с помощью R и SQL (Пошаговое руководство)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Проектирование данных — это важная составляющая машинного обучения. Данные часто требуют преобразования, прежде чем можно будет использовать для прогнозирующего моделирования. Если данные не имеют требуемых характеристик, их необходимо создать на основе существующих значений.
 
@@ -33,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 На этом шаге мы сравнить две различные методы для создания компонентов на основе данных:
 
 - С помощью пользовательской функции R
-- С помощью пользовательской функции в T-SQL[!INCLUDE[tsql](../../includes/tsql-md.md)]
+- С помощью пользовательской функции в T-SQL [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 Предназначена для того, чтобы создать новую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набор данных, который содержит исходные столбцы, а также новый числовых признаков *direct_distance*.
 

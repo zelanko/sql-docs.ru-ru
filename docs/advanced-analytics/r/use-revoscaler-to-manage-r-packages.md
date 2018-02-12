@@ -17,13 +17,14 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: e10435c2a0cdc5ed181aeab9bdd0bbfefa9a7f25
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ef4b9cb14b9cf4428307596a4775574ace084501
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Как использовать функции RevoScaleR для поиска или установка пакетов R в SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Выпуск Microsoft R Server 9.0.1 появились новые функции RevoScaleR, поддерживают работу с установленных пакетов в контексте вычислений SQL Server. Эти новые функции упрощают процесс специалист по анализу данных для запуска кода R в SQL Server без прямой доступ к серверу.
 

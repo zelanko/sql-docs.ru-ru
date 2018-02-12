@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 737087692cff4d5b76336b1a31b58e2f9390abfc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Общие сведения об архитектуре служб SQL Server машины обучения 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе описываются цели extensibility Framework, которая поддерживает выполнение сценария Python и R в SQL Server.
 
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/08/2018
 
    Кроме того Корпорация Майкрософт предоставляет набор собственных библиотек, которые обеспечивают интеграцию с SQL Server, включая преобразования данных, сжатие и оптимизации, предназначенные для каждого поддерживаемого языка.
 
-+ **безопасность**
++ **Безопасность**
 
    Более высокий уровень безопасности означает поддерживает встроенную проверку подлинности Windows и имена входа SQL на основе пароля, в качестве также как безопасные обработку учетных данных, следует рассчитывать на SQL Server для защиты данных и использование доверенного панели запуска SQL Server для управления внешних скриптов выполнение и защиты данных, используемых в скриптах.
 
@@ -108,6 +109,6 @@ ms.lasthandoff: 01/08/2018
 
   Интерфейс и перетащите облачной разработки обучения конечных автоматов, вместе с возможностью для автоматизации и интеграция с приложениями через веб-службы и PowerShell
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Сравнение продуктов машины обучения Server и Microsoft R](https://docs.microsoft.com/machine-learning-server/what-is-r-server-interoperability)

@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dfb238cc1ba7c981dbeec22e76616e45d93f72dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>Создание пула ресурсов для машинного обучения
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе описывается, как можно создать пул ресурсов, в частности, для управления рабочих нагрузок машин обучения в SQL Server. Предполагается, что вы уже установили и включить машинного обучения функции и необходимо перенастроить данный экземпляр для поддержки более точного управления ресурсы, используемые внешний процесс, например R или Python.
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 4.  Создайте функцию классификации для идентификации запросов внешних скриптов.
 5.  Убедитесь, что новый внешний пул ресурсов захватывающего R или Python задания с указанным клиентам или учетные записи.
 
-**Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] и [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] и [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ##  <a name="bkmk_ReviewStatus"></a> Просмотр состояния существующих пулов ресурсов
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 
     **Образец результатов**
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|имя|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|значение по умолчанию|0|100|0|100|100|0|0|
 
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 
     **Образец результатов**
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|имя|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|значение по умолчанию|100|20|0|2|
  
@@ -168,7 +169,7 @@ ms.lasthandoff: 01/08/2018
 
     **Образец результатов**
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|имя|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
     |1|Внутренние|Средний|25|0|0|0|0|1|2|
     |2|значение по умолчанию|Средний|25|0|0|0|0|2|2|
@@ -182,7 +183,7 @@ ms.lasthandoff: 01/08/2018
 
     **Образец результатов**
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|имя|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|значение по умолчанию|100|20|0|2|
     |256|ds_ep|100|40|0|1|
@@ -197,11 +198,11 @@ ms.lasthandoff: 01/08/2018
   
      Так как пулы были созданы со сходством AUTO, сведения не будут отображаться. Дополнительные сведения см. в статье о [представлении sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 Дополнительные сведения об управлении ресурсами сервера см. в разделе:
 
-+  [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md) 
++  [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md) 
 + [Регулятор ресурсов, связанные с динамическим административным представлениям &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 Обзор ресурсами для машинного обучения см. в разделе:

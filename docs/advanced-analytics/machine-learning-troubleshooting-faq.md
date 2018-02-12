@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 640dde0a2faf43c7c5cda39789eaba759959bb99
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>Устранение неполадок машинного обучения
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье содержатся сведения об устранении неполадок, связанных с установкой и настройкой машины обучения функции в SQL Server. Эти сведения включают ссылки на руководства, известные проблемы и заметки о выпуске. Другие статьи, связанные с из этой статьи, предоставляют советы по оптимизации производительности по обучению машины в SQL Server.
 

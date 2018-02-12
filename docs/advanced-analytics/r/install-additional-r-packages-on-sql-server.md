@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2821983b39dcd4c301ea4b49713de0cdd3550a65
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 530745918dfd4808694b401be55e40bac00f3cce
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Установка дополнительных пакетов R в SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье описывается установка нового R-пакетов в экземпляр SQL Server, где включена машинного обучения.
 
@@ -85,15 +86,15 @@ ms.lasthandoff: 01/09/2018
 
     **Экземпляр по умолчанию**
 
-    SQL Server 2017 г.:`C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
-    SQL Server 2016.`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
     **Именованный экземпляр**
 
-    SQL Server 2017 г.:`C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
-    SQL Server 2016.`C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
     При использовании привязки для обновления машинного обучения компоненты могли измениться путь. Всегда проверяйте путь к экземпляру, прежде чем устанавливать новые пакеты. 
 
@@ -129,15 +130,15 @@ ms.lasthandoff: 01/09/2018
 
     **Экземпляр по умолчанию**
 
-    SQL Server 2017 г.:`C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
-    SQL Server 2016.`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
     **Именованный экземпляр**
 
-    SQL Server 2017 г.:`C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
-    SQL Server 2016.`C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
 3. Откройте окно командной строки R от имени администратора.
 
@@ -271,7 +272,7 @@ ms.lasthandoff: 01/09/2018
 
 В этом разделе описаны разные возможности разрешения, необходимые для установки пакетов в SQL Server 2016 и 2017 г. SQL Server. Установку можно выполнить с помощью средства R или SQL Server, но немного отличаться процесс и разрешения.
 
--   SQL Server 2016
+-   SQL Server 2016
 
     В этом выпуске только администратор на компьютере можно установить пакеты в нужное место. Можно использовать стандартные средства R для установки пакетов, но необходимо запустить с правами администратора и использовать средства R, связанные с экземпляром.
 

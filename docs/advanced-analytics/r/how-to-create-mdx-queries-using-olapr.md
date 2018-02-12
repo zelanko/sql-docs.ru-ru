@@ -10,20 +10,22 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3ac889212aaccb25d0c738195e2e2e04c3c1a5d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>Создание запросов многомерных Выражений, с помощью olapR
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) пакет поддерживает запросы многомерных Выражений в кубах, размещенные в SQL Server Analysis Services. Можно построить запрос к существующего куба, просмотра измерений и других объектов куба и вставьте в существующих запросах многомерных Выражений для получения данных.
 
@@ -207,6 +209,6 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |-> Компоненты сборки|
 
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [Используя данные из кубов OLAP в R](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)

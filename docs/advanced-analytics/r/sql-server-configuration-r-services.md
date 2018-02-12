@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 93c3dcf6dc4a64d116b8a660aaafa1d7a9092531
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Конфигурация SQL Server для использования с помощью R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья является второго ряда, которое описывает оптимизации производительности для служб R, основанных на два исследований.  В этой статье приведены рекомендации по конфигурации оборудования и сети компьютера, который используется для запуска SQL Server R Services. Он также содержит сведения о способах настройки экземпляра SQL Server, базы данных или таблиц, используемых в решении. Так как использование NUMA в SQL Server размывает линии между оптимизации оборудования и базы данных, третий раздел описывает ЦП сопоставить и управление ресурсами подробно.
 

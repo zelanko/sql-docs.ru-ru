@@ -8,20 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8803b1a18ce1a0987c9ebfcbd718345cfc3ef60
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-source-wizard-screen-3"></a>Мастер источника данных 3
 
@@ -82,6 +83,10 @@ WHERE "LastName" = 'O''Brien'
 ### <a name="column-encryption"></a>Шифрование столбца.
 
 Включает автоматическую расшифровку и передаче данных в и из столбцов, зашифрованных с помощью шифрования [постоянного шифрования](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) функция доступна в SQL Server 2016 и более поздней версии.
+
+### <a name="use-fmtonly-metadata-discovery"></a>Используйте FMTONLY обнаружение метаданных:
+
+Используйте метод обнаружения метаданных устаревших SET FMTONLY, при подключении к SQL Server 2012 или более поздней версии. Включить эту возможность только при использовании запросов, не поддерживаемых [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), например, содержащие временных таблиц. 
 
 ### <a name="next"></a>Дальше
 

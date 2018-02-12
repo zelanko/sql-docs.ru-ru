@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e393db396c7d41f7eca7851fa10544d697eac5c8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>Взаимодействие R в SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе основное внимание уделяется механизм для запуска для R в SQL Server и описываются различия между Microsoft R и открытым исходным кодом R.
 
@@ -32,11 +33,11 @@ ms.lasthandoff: 01/25/2018
 
 ### <a name="open-source-r-components"></a>Компоненты R с открытым кодом
 
-Службы [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] включают полный дистрибутив базовых пакетов и средств R. Дополнительные сведения о компонентах базового дистрибутива см. в документации, установленной во время установки в папке по умолчанию: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] включает полный распространения базовых пакетов R и средств. Дополнительные сведения о компонентах базового дистрибутива см. в документации, установленной во время установки в папке по умолчанию: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
 При установке [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] вы должны согласиться с условиями открытой лицензии GNU. После этого можно выполнять стандартные пакеты R без изменений так же, как и в других дистрибутивах R с открытым кодом.
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] не меняет среду выполнения R. Среда выполнения R выполняется за пределами процесса [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Ее можно выполнять независимо от [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Однако во избежание конфликта ресурсов мы не рекомендуем запускать эти средства, если [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] использует R.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] не изменяет среду выполнения R, каким-либо образом. Среда выполнения R выполняется за пределами процесса [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Ее можно выполнять независимо от [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Однако во избежание конфликта ресурсов мы не рекомендуем запускать эти средства, если [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] использует R.
 
 Базовый дистрибутив пакета R, связанный с конкретным экземпляром [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], можно найти в связанной с ним папке. Например при установке служб R в экземпляре по умолчанию библиотек R, находятся в этой папке по умолчанию:
 

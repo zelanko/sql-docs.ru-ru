@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 10760026ef04284f6d0838af8ba81b0c7613645b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="resource-governance-for-python"></a>Управление ресурсами для Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Так как Python обеспечивается с помощью же архитектуру расширяемости, которая была реализована для языка R в SQL Server 2016, существующие средства используются в SQL Server, такие как регулятор ресурсов, динамических административных представлений и расширенных событий, чтобы отследить ход выполнения Python сценарии SQL Server.
 

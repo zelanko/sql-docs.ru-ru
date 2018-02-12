@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 281f3beb3678d74fb03b3dc68a4a9b58d44f261e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8720440872fb0b41a76d4ac644fd3b60d52a095e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>Публикация и использование Python веб-служб
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Можно развернуть рабочее решение Python в веб-службу с помощью функции ввода в эксплуатацию в Microsoft Server обучения машины. В этом разделе описывается для успешной публикации и запуска решения.
 

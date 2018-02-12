@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5efdde73d0b2f880d62927b9b96b3eee7fadfe5f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Компоненты SQL Server для поддержки R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В SQL Server 2016 и 2017 г. компонент database engine включает дополнительные компоненты, поддерживающие расширяемости для внешнего сценария языков, включая R и Python. Была добавлена поддержка языка R в SQL Server 2016; Поддержка Python был добавлен в службах SQL Server 2017 г машины обучения.
 
@@ -111,7 +112,7 @@ BxlServer использует вспомогательное соединени
 4. BxlServer взаимодействует со средой выполнения R для управления обменом данными между [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и хранилищем результатов работы.
 5. Вспомогательные SQL управляет взаимодействием связанные задачи и процессы, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer использует вспомогательное соединение SQL для передачи состояния и результатов в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] получает результаты и закрывает связанные задачи и процессы.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Возвращает результаты и закрывает связанные задачи и процессы.
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>Скрипты R, выполняемые из удаленного клиента
 

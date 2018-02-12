@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: b84c15fba4b363eee589b6ff1d2a19d142100c32
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 1c4a63077cf9801a6c83502f2fdea6f88c063227
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Установка компонентов обучения компьютер без доступа к Интернету
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Поскольку компоненты R и Python, предоставляемых с SQL Server 2016 и 2017 г. SQL Server открытым исходным кодом, корпорация Майкрософт не устанавливает компоненты R или Python по умолчанию. Вместо этого мы предоставляют связанные установщики и объединенными пакетов для удобства в центре загрузки Майкрософт и других надежных сайтов. Должен дать согласие соответствующая лицензия, и затем программу установки SQL Server устанавливает компоненты R или Python.
 
@@ -110,32 +111,32 @@ Microsoft R Open     |[SRO_3.3.3.0_1033.cab](https://go.microsoft.com/fwlink/?Li
 Microsoft R Server     |[SRS_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842799)
 Откройте Microsoft Python     |[SPO_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842828)
 Сервер Microsoft Python    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
-**SQL Server 2017 г., RC1** |
+**SQL Server 2017 RC1** |
 Microsoft R Open     |[SRO_3.3.3.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851503)|
 Microsoft R Server     |[SRS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851498)|
 Откройте Microsoft Python     |[SPO_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851499)|
 Сервер Microsoft Python    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
-**SQL Server 2017 г. версия-Кандидат 2** |
+**SQL Server 2017 RC 2** |
 Microsoft R Open     |[SRO_3.3.3.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851493)|
 Microsoft R Server     |[SRS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851505)|
 Откройте Microsoft Python     |[SPO_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851506)|
 Сервер Microsoft Python    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
-**SQL Server RTM 2017 г.** |
+**SQL Server 2017 RTM** |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Откройте Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Сервер Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
-**SQL Server 2017 г. CU1** |
+**SQL Server 2017 CU1** |
 Microsoft R Open     |без изменений; использовать предыдущее|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 Откройте Microsoft Python     |без изменений; использовать предыдущее |
 Сервер Microsoft Python    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
-**SQL Server 2017 г. с накопительным обновлением 2** |
+**SQL Server 2017 CU2** |
 Microsoft R Open     |без изменений; использовать предыдущее|
 Microsoft R Server      |без изменений; использовать предыдущее|
 Откройте Microsoft Python     |без изменений; использовать предыдущее|
 Сервер Microsoft Python    |без изменений; использовать предыдущее|
-**CU3 SQL Server 2017 г.** |
+**SQL Server 2017 CU3** |
 Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 Откройте Microsoft Python     |без изменений; использовать предыдущее|
@@ -161,16 +162,16 @@ Microsoft R Server     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwli
 **SQL Server 2016 с накопительным пакетом обновления 3**     |
 Microsoft R Open     |без изменений; использовать предыдущее|
 Microsoft R Server     | без изменений; использовать предыдущее |
-**SQL Server 2016 накопительным пакетом обновления 4**     |
+**SQL Server 2016 CU 4**     |
 Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
 Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
 **SQL Server 2016 накопительным пакетом обновления 5**     |
 Microsoft R Open     |без изменений; использовать предыдущее|
 Microsoft R Server     |без изменений; использовать предыдущее|
-**SQL Server 2016 накопительным пакетом обновления 6**     |
+**SQL Server 2016 CU 6**     |
 Microsoft R Open     |без изменений; использовать предыдущее|
 Microsoft R Server     |[SRS_8.0.3.14000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850316)  |
-**SQL Server 2016 накопительным пакетом обновления 7**     |
+**SQL Server 2016 CU 7**     |
 Microsoft R Open     |без изменений; использовать предыдущее|
 Microsoft R Server     |без изменений; использовать предыдущее |
 **SQL Server 2016 с пакетом обновления 1 (SP1)**     |
@@ -179,7 +180,7 @@ Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwli
 **SQL Server 2016 с пакетом обновления 1 CU1**     |
 Microsoft R Open     |без изменений; использовать предыдущее|
 Microsoft R Server     |без изменений; использовать предыдущее|
-**SQL Server 2016 с пакетом обновления 1 с накопительным обновлением 2**     |
+**SQL Server 2016 SP 1 CU2**     |
 Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
 **SQL Server 2016 с пакетом обновления 1 CU3**     |
@@ -267,7 +268,7 @@ Microsoft R Server    |без изменений; использовать пр�
 > [!NOTE]
 > Нельзя изменять учетную запись службы для запуска с помощью параметров в программе установки SQL Server. Рекомендуется установить с использованием учетных записей служб по умолчанию и затем изменить учетную запись службы, используя диспетчер конфигурации SQL Server. После этого убедитесь, что перезапуск службы панели запуска.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [Установка Microsoft R Server](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 

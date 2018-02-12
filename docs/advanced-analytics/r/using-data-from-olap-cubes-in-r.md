@@ -12,18 +12,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs: 
 ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e8aa8d51c54fb98b3851676ddedd367f476dd1fa
-ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
+ms.openlocfilehash: 256a8a58a61f679cd5b2981134403cc389733e75
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Используя данные из кубов OLAP в R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **OlapR** пакет является пакет R, предоставляемые корпорацией Майкрософт для использования с машины обучения Server и SQL Server, который позволяет использовать запросы многомерных Выражений для получения данных из кубов OLAP. В этом пакете нет необходимости создавать связанные серверы или очистить плоские наборы строк; OLAP-данным можно получить непосредственно из кода R.
 
@@ -130,4 +131,4 @@ ms.lasthandoff: 01/12/2018
 Если вы не знакомы OLAP или запросы многомерных Выражений, см. статьи Википедии: 
 
 + [Кубы OLAP](https://en.wikipedia.org/wiki/OLAP_cube)
-+ [Запросы многомерных Выражений](https://en.wikipedia.org/wiki/MultiDimensional_eXpressions)
++ [MDX queries](https://en.wikipedia.org/wiki/MultiDimensional_eXpressions)

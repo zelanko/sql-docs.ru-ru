@@ -12,20 +12,22 @@ ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 10def0b3-9b09-4df9-b8aa-69516f7d7659
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 575212c27cf82cd55e085fc0760839c28b4695be
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 13bf00b9b1a196e0a83c7cca62a0504a5b3bcbcd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>Визуализация данных SQL Server с помощью R (SQL и R глубокое погружение)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье является частью учебника по глубокое погружение обработки и анализа данных, о том, как использовать [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/08/2018
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    **RxCube** функция включает необязательный аргумент, *returnDataFrame* = **TRUE**, что можно использовать, чтобы преобразовать результаты в кадр данных напрямую. Пример:
+    **RxCube** функция включает необязательный аргумент, *returnDataFrame* = **TRUE**, что можно использовать, чтобы преобразовать результаты в кадр данных напрямую. Например:
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        

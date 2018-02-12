@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d5e8d61735b5a40f178c76ccb6549150a2e9f0ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>Расширенные события для служб SQL Server машины обучения
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server предоставляет набор расширенных событий для разрешения операций, связанных с [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], а отправляемые Python или R заданий также [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -54,7 +55,7 @@ AND p.name = 'SQLSatellite';
 
 ##  <a name="bkmk_xeventtable"></a>Таблица расширенных событий
 
-|Событие|Description|Примечания|  
+|Событие|Описание|Примечания|  
 |-----------|-----------------|---------|  
 |connection_accept|Происходит при принятии нового подключения. Это событие регистрирует все попытки подключения.||  
 |failed_launching|Сбой при запуске.|Указывает на ошибку.|  
@@ -184,6 +185,6 @@ AND p.name = 'SQLSatellite';
 + Поместите файл *конфигурации* в тот же каталог, в котором находится исполняемый файл BXLServer.
 + Этот файл должен называться `bxlserver.xevents.xml`.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [Отчеты Studio настраиваемых средств управления для компьютера службы обучения](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

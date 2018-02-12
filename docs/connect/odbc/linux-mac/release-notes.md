@@ -8,21 +8,36 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 895280e7c7c8924ec2ec5eea55049f87d9206c4f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5aecc3796565d4c32d91fe28304bdd04f5793980
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Заметки о выпуске для Microsoft ODBC Driver for SQL Server для Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 17 драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] на macOS и Linux
+
+Azure SQL управляемого экземпляра (Extended личной предварительной версии). Обратите внимание, что число различия при использовании управляемого экземпляра:
+-   FILESTREAM не поддерживается 
+-   Доступа к локальной файловой системе не поддерживается, но требуется для таких вещей, как tracefiles 
+-   Создание определяемого пользователем ТИПА из локального пути не поддерживается 
+-   Встроенная проверка подлинности Windows не поддерживается 
+-   DTC не поддерживается 
+-   Учетная запись «sa» не указан (по умолчанию учетная запись называется «cloudSA»)
+-   Ошибка маркера потока табличных данных (0xAA) возвращает указано неправильное имя сервера
+-   Специальные символы в имени базы данных не поддерживаются. 
+-   [Dbname1] ALTER DATABASE MODIFY NAME = [dbname2] не поддерживается.
+-   Сообщения об ошибках всегда отображаются на английском языке независимо от языка параметров (то же, как Azure) 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] на macOS и Linux  
 
