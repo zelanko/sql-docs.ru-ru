@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
-caps.latest.revision: "7"
+caps.latest.revision: 
 ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>Создание администратора домена APS
 Некоторые операции требуются права администратора домена Analytics Platform System. Это описание способов создания Администраторы домена дополнительных устройств.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Чтобы добавить пользователя в группу "Администраторы домена"  
   
-1.  Войдите на активный узел AD  **(*appliance_domain*-AD01 ** или  ***appliance_domain*-AD02**) с помощью существующего домена устройства Учетная запись администратора.  
+1.  Войдите на активный узел AD **(*appliance_domain*-AD01** или ***appliance_domain *-AD02**) с помощью существующей учетной записи администратора устройства домена.  
   
 2.  В меню "Пуск" щелкните **Выполнить**. В **откройте** введите **dsa.msc**. Нажмите кнопку **ОК**.  
   
@@ -53,6 +53,6 @@ ms.lasthandoff: 12/21/2017
   
     Это добавляет нового пользователя в **"Администраторы домена"** группы и **PdwControlNodeAccess** группы. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Запустите диспетчер конфигурации &#40; Система платформы аналитики &#41;](launch-the-configuration-manager.md)  
   

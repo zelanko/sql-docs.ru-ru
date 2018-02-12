@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 592d135ccf66f8a9fde2cc064a51dc25617cf127
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE и инструкций INSERT
 Приложения на основе SQL внесения изменений в таблицы, выполнив **обновление**, **удаление**, и **вставить** инструкции. Эти инструкции являются частью уровень соответствия грамматики минимальную SQL и должны поддерживаться все драйверы и источники данных.  
@@ -44,9 +45,9 @@ ms.lasthandoff: 12/21/2017
   
  **УДАЛИТЬ из** *имя таблицы*[**ГДЕ** *условие поиска*]  
   
- **INSERT INTO** *имя таблицы*[**(***идентификатор столбца* [**,** *столбецидентификаторов*] ... **)**]  
+ **INSERT INTO** *имя таблицы*[**(*** идентификатор столбца* [**,** *идентификатор столбца*]... **)**]  
   
- {*спецификация запроса* &#124; **Значения (***вставки значение* [**,** *вставки значение*]... **)**}  
+ {*спецификация запроса* &#124;  **Значения (*** вставки значение* [**,** *вставки значение*]... **)**}  
   
  Обратите внимание, что *спецификация запроса* элемент действителен только в основные и расширенные SQL грамматики и что *выражение* и *условие поиска* элементы становятся более сложные в основные и расширенные SQL грамматики.  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>Позиционированное обновление и удаление операторов
 Приложения могут обновить или удалить текущую строку в результирующем наборе с позиционированного обновления или инструкция delete. Располагается update и delete операторы поддерживаются некоторые источники данных, но не все из них. Чтобы определить, является ли поддерживает источник данных расположен инструкции update и delete, приложение вызывает **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 или SQL_STATIC_CURSOR_ATTRIBUTES1 *свойство* (в зависимости от типа курсора). Обратите внимание, что библиотека курсоров ODBC имитирует располагается инструкции update и delete.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  **ВЫБЕРИТЕ** [**все** &#124; **DISTINCT**] *список выбора*  
   
- **ИЗ** *список таблиц ссылка*  
+ **FROM** *table-reference-list*  
   
  [**ГДЕ** *условие поиска*]  
   

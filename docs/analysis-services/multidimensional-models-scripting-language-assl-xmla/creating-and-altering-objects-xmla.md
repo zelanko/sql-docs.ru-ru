@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [XML for Analysis]
 - subordinate objects [XML for Analysis]
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - deleting objects
 - XMLA, objects
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6906c6dbab99923983cbfa4e75c35c6f3c0f5073
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Создание и изменение объектов (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Основные объекты можно независимо друг от друга создана, изменена и удалена. Основные объекты включают следующие объекты:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Основные объекты можно создавать, изменять и удалять независимо. Основные объекты включают следующие объекты:  
   
 -   Серверы  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Секции  
   
--   перспективами  
+-   Перспективы  
   
 -   Модели интеллектуального анализа данных  
   
@@ -60,15 +62,15 @@ ms.lasthandoff: 01/08/2018
  Вы используете [создать](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) команду, чтобы создать основной объект в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и [Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) для изменения основного объекта, существующего в экземпляре. Обе команды запускаются с помощью [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) метод.  
   
 ## <a name="creating-objects"></a>Создание объектов  
- При создании объектов с помощью **создать** метод, необходимо сначала определить родительский объект, содержащий [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создаваемого объекта. Родительский объект определяется путем указания ссылки объекта в [ParentObject](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md) свойство **создать** команды. Каждая ссылка объекта содержит идентификаторы объекта, необходимые для уникальной идентификации родительский объект для **создать** команды. Дополнительные сведения о ссылках на объекты см. в разделе [& #40; определение и идентификация объектов XML для Аналитики & #41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
+ При создании объектов с помощью **создать** метод, необходимо сначала определить родительский объект, содержащий [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создаваемого объекта. Родительский объект определяется путем указания ссылки объекта в [ParentObject](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md) свойство **создать** команды. Каждая ссылка объекта содержит идентификаторы объекта, необходимые для уникальной идентификации родительский объект для **создать** команды. Дополнительные сведения о ссылках на объекты см. в разделе [&#40; определение и идентификация объектов XML для Аналитики &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
   
  Например, следует указать ссылку объекта на куб, чтобы создать новую группу мер для этого куба. Ссылка на объект для куба в **ParentObject** свойство содержит идентификатор базы данных и идентификатор куба, как тот же идентификатор куба может быть использована потенциально на другую базу данных.  
   
- [ObjectDefinition](../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md) содержатся элементы языка сценариев служб Analysis Services (ASSL), определяющие основной объект должен быть создан. Дополнительные сведения о ASSL см. в разделе [разработки в язык сценариев служб Analysis Services & #40; ASSL & #41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ [ObjectDefinition](../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md) содержатся элементы языка сценариев служб Analysis Services (ASSL), определяющие основной объект должен быть создан. Дополнительные сведения о ASSL см. в разделе [разработки в язык сценариев служб Analysis Services &#40; ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
  Если задать **AllowOverwrite** атрибут **создать** команды значение true, можно переписать существующий основной объект, имеющий указанный идентификатор. В противном случае, если основной объект с указанным идентификатором уже существует в родительском объекте, возникает ошибка.  
   
- Дополнительные сведения о **создать** см. в разделе [создать элемент & #40; XML для Аналитики & #41; ](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md).  
+ Дополнительные сведения о **создать** см. в разделе [создать элемент &#40; XML для Аналитики &#41; ](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md).  
   
 ### <a name="creating-session-objects"></a>Создание объектов сеанса  
  Объекты сеанса — это временные объекты, доступные только для явных или неявных сеансов, которые используются клиентским приложением и удаляются по завершении сеанса. Можно создать объекты сеанса, присвоив **область** атрибут **создать** команды *сеанса*.  
@@ -77,11 +79,11 @@ ms.lasthandoff: 01/08/2018
 >  При использовании *сеанса* параметр **ObjectDefinition** элемент может содержать только [измерения](../../analysis-services/scripting/objects/dimension-element-assl.md), [куба](../../analysis-services/scripting/objects/cube-element-assl.md), или [ MiningModel](../../analysis-services/scripting/objects/miningmodel-element-assl.md) элементы языка ASSL.  
   
 ## <a name="altering-objects"></a>Изменение объектов  
- При изменении объектов с помощью **Alter** метод, сначала нужно определить объект для изменения, указав ссылку на объект в [объекта](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) свойство **Alter**команды. Каждая ссылка объекта содержит идентификаторы объекта, необходимые для уникальной идентификации объекта для **Alter** команды. Дополнительные сведения о ссылках на объекты см. в разделе [& #40; определение и идентификация объектов XML для Аналитики & #41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
+ При изменении объектов с помощью **Alter** метод, сначала нужно определить объект для изменения, указав ссылку на объект в [объекта](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) свойство **Alter**команды. Каждая ссылка объекта содержит идентификаторы объекта, необходимые для уникальной идентификации объекта для **Alter** команды. Дополнительные сведения о ссылках на объекты см. в разделе [&#40; определение и идентификация объектов XML для Аналитики &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
   
  Например, чтобы изменить структуру куба, необходимо указать ссылку объекта на куб. Ссылка на объект для куба в **объекта** свойство содержит идентификатор базы данных и идентификатор куба, как тот же идентификатор куба может быть использована потенциально на другую базу данных.  
   
- **ObjectDefinition** элемент содержит элементы ASSL, определяющие основной объект для изменения. Дополнительные сведения о ASSL см. в разделе [разработки в язык сценариев служб Analysis Services & #40; ASSL & #41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ **ObjectDefinition** элемент содержит элементы ASSL, определяющие основной объект для изменения. Дополнительные сведения о ASSL см. в разделе [разработки в язык сценариев служб Analysis Services &#40; ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
  Если задать **AllowCreate** атрибут **Alter** команды значение true, если объект не существует, можно создать указанный основной объект. В противном случае, если указанный основной объект еще не существует, возникает ошибка.  
   
@@ -97,14 +99,14 @@ ms.lasthandoff: 01/08/2018
 >  При использовании *сеанса* параметр **ObjectDefinition** элемент может содержать только [измерения](../../analysis-services/scripting/objects/dimension-element-assl.md), [куба](../../analysis-services/scripting/objects/cube-element-assl.md), или [ MiningModel](../../analysis-services/scripting/objects/miningmodel-element-assl.md) элементы языка ASSL.  
   
 ## <a name="creating-or-altering-subordinate-objects"></a>Создание или изменение подчиненных объектов  
- Несмотря на то что **создать** или **Alter** команда создает или изменяет только один самый верхний основной объект, создаваемый или изменяемый основной объект может содержать определения во включающем ** ObjectDefinition** свойств для других основные и второстепенные объекты, которые ему подчинены. Например, при определении куба, указать родительскую базу данных в **ParentObject**и в пределах определения куба в **ObjectDefinition** можно определить группы мер для куба, а также в меру группы можно определить секции для каждой группы мер. Второстепенный объект можно определить только в содержащем его основном объекте. Дополнительные сведения об основных и второстепенных объектах см. в разделе [объекты базы данных & #40; Analysis Services — многомерные данные & #41; ](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
+ Несмотря на то что **создать** или **Alter** команда создает или изменяет только один самый верхний основной объект, создаваемый или изменяемый основной объект может содержать определения во включающем  **ObjectDefinition** свойств для других основные и второстепенные объекты, которые ему подчинены. Например, при определении куба, указать родительскую базу данных в **ParentObject**и в пределах определения куба в **ObjectDefinition** можно определить группы мер для куба, а также в меру группы можно определить секции для каждой группы мер. Второстепенный объект можно определить только в содержащем его основном объекте. Дополнительные сведения об основных и второстепенных объектах см. в разделе [объекты базы данных &#40; Analysis Services — многомерные данные &#41; ](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В следующем примере создается источника реляционных данных, который ссылается на [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] пример [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных.  
   
-### <a name="code"></a>Код  
+### <a name="code"></a>код  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -126,10 +128,10 @@ ms.lasthandoff: 01/08/2018
 </Create>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В следующем примере реляционный источник данных, созданный в предыдущем примере, изменяется путем задания времени ожидания запроса для источника данных, равного 30 секундам.  
   
-### <a name="code"></a>Код  
+### <a name="code"></a>код  
   
 ```  
 <Alter ObjectExpansion="ObjectProperties" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -152,9 +154,9 @@ ms.lasthandoff: 01/08/2018
 ### <a name="comments"></a>Комментарии  
  **ObjectExpansion** атрибут **Alter** команды было задано значение *ObjectProperties*. Этот параметр позволяет [ImpersonationInfo](../../analysis-services/scripting/properties/impersonationinfo-element-assl.md) элемент, второстепенный объект, который необходимо исключить из источника данных, определенного в **ObjectDefinition**. Поэтому в качестве данных об олицетворении для этого источника данных остается заданной учетная запись службы, как указано в первом примере.  
   
-## <a name="see-also"></a>См. также:  
- [Выполнение метода & #40; XML для Аналитики & #41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
- [Разработка с использованием служб Analysis Services Scripting Language & #40; ASSL & #41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [Разработка с использованием XMLA в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Выполнение метода &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
+ [Разработка с использованием служб Analysis Services Scripting Language &#40; ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
