@@ -8,23 +8,24 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - worker threads [SQL Server]
 - max worker threads option
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26bfb29be87a3a208a1111c107fc8f8ea8c4d1ef
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f90a697f2eef22c30e928a4d3ba2f0eb9177a752
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Настройка параметра конфигурации сервера max worker threads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Этот параметр является дополнительным и его следует изменять только опытным администраторам баз данных или сертифицированным техническим специалистам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если вы считаете, что есть проблема с производительностью, вероятно, причина не в доступности рабочих потоков. Скорее всего, их ожидание вызвано чем-то наподобие операций ввода-вывода. Рекомендуется найти причину проблемы производительности, прежде чем изменять параметр max worker threads.  
+-   Это расширенный параметр, и изменять его следует только опытным администраторам баз данных или сертифицированным по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] специалистам. Если вы считаете, что есть проблема с производительностью, вероятно, причина не в доступности рабочих потоков. Скорее всего, их ожидание вызвано чем-то наподобие операций ввода-вывода. Рекомендуется найти причину проблемы производительности, прежде чем изменять параметр max worker threads.  
   
 -   Пул потоков помогает оптимизировать производительность при подключении к серверу большого числа пользователей. Обычно для каждого запроса в операционной системе создается отдельный поток. Однако в случае сотен соединений с сервером, использование одного потока на каждый запрос приводит к потреблению большого числа системных ресурсов. Параметр **max worker threads** позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создавать пул рабочих потоков, чтобы обслужить большое число запросов, что улучшает производительность.  
   

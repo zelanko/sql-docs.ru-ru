@@ -8,7 +8,8 @@ ms.service:
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,27 +18,27 @@ helpviewer_keywords:
 - views [SQL Server], deleting
 - removing views
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44173d4693ad71c8d95da8db468c17afbc417a74
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 287b4ffc42719b51d4af3c6750b81561305fe750
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="delete-views"></a>Удаление представлений
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] Представления можно удалить в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+Представления можно удалить в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Удаление представления из базы данных с использованием следующих средств:**  
   
@@ -53,9 +54,9 @@ ms.lasthandoff: 11/17/2017
   
 -   Любое представление таблицы, удаленной с помощью инструкции `DROP TABLE` , нужно удалять явно, с помощью инструкции `DROP VIEW`.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требует либо разрешения CONTROL для схемы SCHEMA, либо разрешения CONTROL для объекта OBJECT.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 3.  В диалоговом окне **Удаление объекта** нажмите кнопку **ОК**.  
   
     > [!IMPORTANT]  
-    >  Щелкните **Показать зависимости** в диалоговом окне **Удаление объекта** , чтобы открыть диалоговое окно *имя_представления***Зависимости** . При этом будут отображены все объекты, зависящие от представления, и все объекты, от которых зависит представление.  
+    >  Выберите команду **Показать зависимости** в диалоговом окне **Удаление объекта** , чтобы открыть диалоговое окно *Зависимости***имя представления**. При этом будут отображены все объекты, зависящие от представления, и все объекты, от которых зависит представление.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

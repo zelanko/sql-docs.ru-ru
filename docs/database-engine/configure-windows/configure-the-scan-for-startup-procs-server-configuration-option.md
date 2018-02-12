@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: scan for startup procs option
+helpviewer_keywords:
+- scan for startup procs option
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1500c7127094e2eba01eab371d959e094ca2c041
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 98b2f35277937e7be184363e2f4579fe54bd7adc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>Настройка параметра конфигураци и сервера scan for startup procs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Этот параметр является дополнительным и его следует изменять только опытным администраторам баз данных или сертифицированным техническим специалистам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Это расширенный параметр, и изменять его следует только опытным администраторам баз данных или сертифицированным по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] специалистам.  
   
 -   Значение этого параметра можно устанавливать с помощью процедуры **sp_configure**; однако оно будет задано автоматически, если используется процедура **sp_procoption**, применяемая для установки или снятия меток с автоматически выполняемых хранимых процедур. Если с помощью процедуры **sp_procoption** первая хранимая процедура помечается как автоматически выполняемая, этому параметру автоматически присваивается значение 1. Если процедура **sp_procoption** используется для снятия метки с последней хранимой процедуры как автоматически выполняемой, этому параметру автоматически присваивается значение 0. Если процедура **sp_procoption** используется для установления и снятия меток автоматически выполняемых процедур, а перед удалением процедур с них всегда снимаются метки автоматически выполняемых, нет необходимости устанавливать этот параметр вручную.  
   

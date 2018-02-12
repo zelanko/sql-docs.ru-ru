@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: cost threshold for parallelism option
+helpviewer_keywords:
+- cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c13052e7d28cec8609abcc07d0580849e337a5be
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f81d5323ba6d967cd81b8fcf0382f32066168a1d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>Параметр конфигурации сервера cost threshold for parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,9 +73,11 @@ FROM sys.dm_os_sys_info
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Этот параметр является дополнительным и его следует изменять только опытным администраторам баз данных или сертифицированным техническим специалистам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Это расширенный параметр, и изменять его следует только опытным администраторам баз данных или сертифицированным по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] специалистам.  
   
 -   В определенных случаях может быть выбран параллельный план, даже если стоимость плана запроса меньше текущего значения параметра **cost threshold for parallelism** . Такое возможно, поскольку решение использовать параллельный или последовательный план основывается на ожидаемой стоимости, полученной до завершения полной оптимизации.  
+
+-   Хотя значение по умолчанию (5) сохраняется для обратной совместимости, скорее всего, для существующих систем подойдет более высокое значение. Многие специалисты по SQL Server предлагают в качестве начальной точки значение 25 или 50, а также рекомендуют тестировать приложения с различными значениями для оптимизации производительности.
   
 ###  <a name="Security"></a> безопасность  
   

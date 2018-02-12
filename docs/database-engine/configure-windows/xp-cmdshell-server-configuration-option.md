@@ -8,27 +8,30 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
-helpviewer_keywords: xp_cmdshell
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- xp_cmdshell
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 26f411ba59dba9213e5432cd1ef36f346caed509
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5bfdb40617fe5620854ff7c953736c63a2e31ca0
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="xpcmdshell-server-configuration-option"></a>Параметр конфигурации сервера «xp_cmdshell»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Параметр **xp_cmdshell** — это параметр конфигурации сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который позволяет системным администраторам контролировать, можно ли выполнять в системе расширенную хранимую процедуру **xp_cmdshell** . По умолчанию в новых установках параметр **xp_cmdshell** отключен и может быть включен с помощью управления на основе политики или путем выполнения системной хранимой процедуры **sp_configure** , как показано в следующем примере кода:  
+  Параметр **xp_cmdshell** — это параметр конфигурации сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который позволяет системным администраторам контролировать, можно ли выполнять в системе расширенную хранимую процедуру **xp_cmdshell** . По умолчанию параметр **xp_cmdshell** отключен в новых установках. Перед его включением важно учесть возможные проблемы безопасности, связанные с использованием этого параметра. В новом коде этот параметр не используется, так как обычно он отключен. Его требуется включать в некоторых нерекомендуемых приложениях. Если этого невозможно избежать, можно включить параметр с помощью управления на основе политик или путем запуска хранимой процедуры системы **sp_configure**, как показано в следующем примере кода.  
   
 ```  
 -- To allow advanced options to be changed.  

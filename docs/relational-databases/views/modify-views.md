@@ -8,7 +8,8 @@ ms.service:
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,27 +18,27 @@ helpviewer_keywords:
 - modifying views
 - renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 11207b41924ab07eb3c22d3ce2e7a0fe9542f899
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b389a635dceb2af0e8457f72ae56013edb1065c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="modify-views"></a>Изменение представлений
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] После определения представления это определение можно изменить в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] без удаления и повторного создания представления с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+После определения представления это определение можно изменить в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] без удаления и повторного создания представления с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Изменение представления с использованием следующих средств:**  
   
@@ -55,9 +56,9 @@ ms.lasthandoff: 11/17/2017
   
 -   Инструкцию ALTER VIEW можно выполнять для индексированных представлений, однако она удаляет все индексы представления.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для выполнения инструкции ALTER VIEW необходимо как минимум разрешение ALTER на объект.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
     3.  Щелкните правой кнопкой мыши строку заголовка таблицы, которую необходимо удалить, и выберите **Удалить**.  
   
-4.  В меню **Файл** выберите пункт **Сохранить***view name*.  
+4.  В меню **Файл** выберите команду **Сохранить***имя представления*.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

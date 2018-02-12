@@ -8,23 +8,24 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - two digit year cutoff option
 - four-digit years [SQL Server]
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea6f7de3504b806b46c9c9e36284993e5786708
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6c04eb2a0831bb5dd2c5c143dbd293cebce414fc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>Настройка параметра конфигурации сервера two digit year cutoff
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +52,11 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Этот параметр является дополнительным и его следует изменять только опытным администраторам баз данных или сертифицированным техническим специалистам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Это расширенный параметр, и изменять его следует только опытным администраторам баз данных или сертифицированным по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] специалистам.  
   
--   Объекты автоматизации OLE используют значение 2030 в качестве порогового значения года для двузначной записи. Можно использовать параметр **two digit year cutoff** , чтобы обеспечить совместимость значений дат между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и клиентскими приложениями. Однако во избежание неоднозначности дат лучше использовать четырехзначные числа для обозначения лет в данных.  
+-   Объекты автоматизации OLE используют значение 2030 в качестве порогового значения года для двузначной записи. Можно использовать параметр **two digit year cutoff** , чтобы обеспечить совместимость значений дат между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и клиентскими приложениями. 
+
+-   Во избежание неоднозначности дат всегда используйте четырехзначные числа для обозначения лет в данных.  
   
 ###  <a name="Security"></a> безопасность  
   

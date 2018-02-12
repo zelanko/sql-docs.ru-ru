@@ -8,24 +8,26 @@ ms.service:
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: views [SQL Server], creating
+helpviewer_keywords:
+- views [SQL Server], creating
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe4fd77f53ba3bf19a8f8ad0e3936fe0793b9527
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a740bee23d84fc92097bac5a385c01236f688e16
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-views"></a>Создание представлений
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] Представления можно создать в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Представление можно использовать в следующих целях.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+Представления можно создать в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Представление можно использовать в следующих целях.  
   
 -   Для направления, упрощения и настройки восприятия информации в базе данных каждым пользователем.  
   
@@ -35,11 +37,11 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Создание представления с использованием следующих средств:**  
   
@@ -54,9 +56,9 @@ ms.lasthandoff: 11/17/2017
   
  Представление может включать не более 1 024 столбцов.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для выполнения этой инструкции требуется разрешение CREATE VIEW в отношении базы данных и разрешение ALTER в отношении схемы, в которой создается представление.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  На **Панели критериев**выберите дополнительные условия сортировки или фильтрации для столбцов.  
   
-7.  В меню **Файл** выберите пункт **Сохранить***view name*.  
+7.  В меню **Файл** выберите команду **Сохранить***имя представления*.  
   
 8.  В диалоговом окне **Выбор имени** введите имя нового представления и щелкните **ОК**.  
   

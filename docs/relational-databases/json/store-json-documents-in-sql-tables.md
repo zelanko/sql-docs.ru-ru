@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ee36f96183a8b2e2a099402b500523345585460
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: 9042b6cf7cb7298e5f327ab96c77cf625eee3872
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Хранение документов JSON в SQL Server или базе данных SQL
 SQL Server и база данных SQL Azure имеют собственные функции JSON, позволяющие анализировать документы JSON с помощью стандартного языка SQL. Теперь вы можете хранить документы JSON в SQL Server или базе данных SQL и запрашивать данные JSON так же, как в базе данных NoSQL. Эта статья описывает возможности хранения документов JSON в SQL Server или базе данных SQL.
@@ -166,5 +166,18 @@ END
 
 Собственные функции JSON в SQL Server и базе данных SQL позволяют работать с документами JSON так же, как в базах данных NoSQL. Каждая база данных (реляционная или NoSQL) обладает рядом преимуществ и недостатков в обработке данных JSON. Основное преимущество хранения документов JSON в SQL Server или базе данных SQL — это полная поддержка языка SQL. Вы можете использовать широкие возможности языка Transact-SQL для обработки данных и настройки множества параметров хранения (от индексов columnstore для высокой степени сжатия и быстрого анализа до оптимизированных для памяти таблиц, обеспечивающих обработку без блокирования). Кроме того, вам доступны обширные возможности обеспечения безопасности и оптимизации под различные рынки, которые можно легко переносить в сценарии NoSQL. Изложенные выше причины являются веским доводом в пользу хранения документов JSON в SQL Server или базе данных SQL.
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
-Много определенных решений, варианты использования и рекомендации см. в [записях блога о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) (категории SQL Server и Azure SQL Database (База данных SQL Azure), автор — руководитель программ корпорации Майкрософт Йован Попович (Jovan Popovic)).
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Дополнительные сведения о JSON в SQL Server и базе данных SQL Azure  
+  
+### <a name="microsoft-blog-posts"></a>Публикации блога Майкрософт  
+  
+Конкретные решения, варианты использования и рекомендации см. в [записях блога](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) о встроенной поддержке JSON в SQL Server и базе данных SQL Azure.  
+
+### <a name="microsoft-videos"></a>Видео Майкрософт
+
+Наглядные инструкции по встроенной поддержке JSON в SQL Server и базе данных SQL Azure см. в следующих видео.
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support) (SQL Server 2016 и поддержка JSON)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database) (Использование JSON в SQL Server 2016 и базе данных SQL Azure)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds) (JSON как мост между NoSQL и реляционными решениями)
