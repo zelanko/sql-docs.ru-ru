@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: "10151"
+f1_keywords:
+- "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 498047a984da8c40cc7b935bf134ee2af2a648f3
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Формулы в запросах модели отчета (построитель отчетов и службы SSRS)
   Формулы — это вычисления, производимые над значениями в отчете и использующие модель отчета в качестве источника данных. Формулы задаются в диалоговом окне **Определение формулы** конструктора запросов моделей отчетов при определении запроса к источнику данных модели отчета. Формула может содержать функции, операторы, константы и ссылки на поля или сущности. Формулы позволяют комбинировать, статистически вычислять, фильтровать и оценивать как числовые, так и текстовые данные. Можно создавать и сохранять формулы для новых полей или изменять формулы существующих полей.  

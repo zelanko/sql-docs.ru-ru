@@ -10,16 +10,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: accd3a7f7abe9dd4771971e241868ef61a4f5dd0
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d2715583f9898afe9101be4d24729547730ae376
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Установка SQL Server Integration Services (SSIS) для Linux
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/01/2018
 - [Ubuntu](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a>Установка служб SSIS для Ubuntu
+## <a name="ubuntu"></a> Установка служб SSIS для Ubuntu
 Чтобы установить `mssql-server-is` пакет в Ubuntu, выполните следующие действия:
 
 1. Импорт ключей GPG общедоступный репозиторий.
@@ -79,7 +79,7 @@ sudo apt-get install mssql-server-is
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a>Установка служб SSIS на RHEL
+## <a name="RHEL"></a> Установка служб SSIS на RHEL
 Чтобы установить `mssql-server-is` пакет в RHEL, выполните следующие действия:
 
 1. Загрузите файл конфигурации Microsoft SQL Server Red Hat репозитория.

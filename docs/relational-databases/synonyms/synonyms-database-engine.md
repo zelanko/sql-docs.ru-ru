@@ -8,25 +8,29 @@ ms.service:
 ms.component: synonyms
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
-helpviewer_keywords: synonyms [SQL Server], about synonyms
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b18b02b6ec56d52c9589207b7dc8b7b3ca99209
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15c8ca0028ae722823198087b06d4f435aba40e4
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="synonyms-database-engine"></a>Синонимы (компонент Database Engine)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Синонимом является объект базы данных, который выполняет следующие функции:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Синонимом является объект базы данных, который выполняет следующие функции:  
   
 -   предоставляет альтернативное имя для другого объекта базы данных, существующего на локальном или удаленном сервере, на которое затем ссылаются как на базовый объект;  
   
@@ -68,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
+|CONTROL|Delete|  
 |EXECUTE|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -79,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
+|UPDATE|Delete|  
 |EXECUTE|Подзапросы выборки|  
   
  При работе с синонимами в сформулированных ранее контекстах будет затронут базовый объект. Например, если синоним ссылается на базовый объект, который является таблицей, и строка вставляется в синоним, то фактически строка вставляется в таблицу, на которую ссылается синоним.  

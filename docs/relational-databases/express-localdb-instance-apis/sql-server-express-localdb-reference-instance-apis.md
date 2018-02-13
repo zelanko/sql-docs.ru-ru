@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d01b87a26674a213c1c0ed0f14a6ff867222fc4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b12274cfd0ee0c7703229cc416793fb23a1a91ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB - Справочник по API-интерфейсов экземпляра
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В традиционной, основанной на службах SQL Server внешним миром разделены физически отдельные экземпляры SQL Server установлен на одном компьютере; то есть каждый экземпляр должен быть установлен и удален отдельно, имеет отдельный набор двоичных файлов и выполняется в отдельном процессе службы. Имя экземпляра SQL Server используется для указания того, с каким экземпляром SQL Server пользователь хочет установить соединение.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Традиционно экземпляры SQL Server, устанавливаемые на один компьютер, разделены физически, то есть каждый из них должен быть установлен или удален отдельно, каждый из них имеет отдельный набор двоичных файлов и выполняется в отдельном процессе службы. Имя экземпляра SQL Server используется для указания того, с каким экземпляром SQL Server пользователь хочет установить соединение.  
   
  В API экземпляра SQL Server Express LocalDB используется упрощенная, «легкая» модель экземпляров. Хотя отдельные экземпляры LocalDB разделены на диске и в реестре, они используют тот же набор общих двоичных файлов LocalDB. Кроме того, LocalDB не использует службы; экземпляры LocalDB запускаются по запросу через вызовы API экземпляра LocalDB. В LocalDB имя экземпляра используется для указания того, с какими экземплярами LocalDB пользователь хочет работать.  
   

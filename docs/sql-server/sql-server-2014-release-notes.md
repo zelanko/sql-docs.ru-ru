@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: "100"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] В этих примечаниях о версии содержится описание известных проблем, которое необходимо прочитать перед установкой или диагностикой [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+В этих примечаниях о версии содержится описание известных проблем, которое необходимо прочитать перед установкой или диагностикой [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ## <a name="top"></a>Содержание  
 [1.0 Перед началом установки](#BeforeInstall)  
@@ -245,7 +246,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="328-using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>3.2.8. Использование строкового параметра или переменной с DATEPART и связанными функциями в скомпилированной в собственном коде хранимой процедуре приводит к ошибке  
 **Проблема.** При использовании параметра или переменной, которая имеет строковый тип данных, например (var)char или n(var)char со встроенными функциями DATEPART, DAY, MONTH и YEAR, внутри скомпилированной в собственном коде хранимой процедуры отображается сообщение об ошибке, указывающее, что тип данных datetimeoffset не поддерживается скомпилированными в собственном коде хранимыми процедурами.  
   
-**Решение.** Присвойте строковый параметр или переменную новой переменной типа datetime2 и передайте эту переменную в функцию DATEPART, DAY, MONTH или YEAR. Например:  
+**Решение.** Присвойте строковый параметр или переменную новой переменной типа datetime2 и передайте эту переменную в функцию DATEPART, DAY, MONTH или YEAR. Пример:  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -293,13 +294,13 @@ DATEPART(weekday, @d)
   
 **Дополнительные сведения:**  
   
-Службы[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в основном режиме не могут работать параллельно со следующими компонентами:  
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Службы в основном режиме не могут работать параллельно со следующими компонентами:  
   
--   Надстройка[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Надстройка для продуктов SharePoint  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint Shared Service  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint Shared Service.  
   
-При параллельной установке служба Windows для служб [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , работающих в основном режиме, не запускается. В журнал событий Windows будут помещены примерно следующие сообщения:  
+При параллельной установке служба Windows для служб [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], работающих в основном режиме, не запускается. В журнал событий Windows будут помещены примерно следующие сообщения:  
   
 ```  
 Log Name:   Application  
@@ -362,7 +363,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе «Microsoft Analysis Services OLE DB Provider для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)» [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](http://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службы Excel](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 **Дополнительные сведения:**  
   
@@ -377,7 +378,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе «Microsoft Analysis Services OLE DB Provider для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)» [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](http://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службы Excel](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 **Дополнительные сведения:**  
   

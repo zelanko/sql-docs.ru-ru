@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,19 +31,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce5968efc9238e44be3d66b2533da8951e28c907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb997dc9775115708cfd5e39162dfd8d474d2838
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Указание связей при помощи sql:relationship (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Элементы в XML-документа могут быть связаны. Элементы могут иметь иерархическую вложенность, и между ними могут быть заданы связи ID, IDREF или IDREFS.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Элементы в XML-документе могут участвовать в связях. Элементы могут иметь иерархическую вложенность, и между ними могут быть заданы связи ID, IDREF или IDREFS.  
   
  Например, в схеме XSD  **\<клиента >** элемент содержит  **\<порядок >** дочерних элементов. При сопоставлении схемы в базе данных AdventureWorks,  **\<клиента >** элемент сопоставляется с таблицей Sales.Customer и  **\<порядок >** элемент сопоставляется Таблица Sales.SalesOrderHeader. Базовые таблицы Sales.Customer и Sales.SalesOrderHeader связаны, так как заказчики размещают заказы. CustomerID в таблице Sales.SalesOrderHeader представляет собой внешний ключ, ссылающийся на первичный ключ CustomerID в таблице Sales.Customer. Можно установить эти связи между соответствующими элементами схемы с помощью **SQL: Relationship** заметки.  
   
@@ -62,16 +64,16 @@ ms.lasthandoff: 11/17/2017
  **Parent**  
  Задает родительскую связь (таблицу). Это необязательный атрибут. Если он не указан, то имя родительской таблицы будет получено из дочерней иерархии в документе. Если схема указывает две иерархии родители потомки, использующие одну  **\<SQL: Relationship >** , но разные родительские элементы, не указан родительский атрибут в  **\<sql: связь >**. Эти сведения будут получены из иерархии в схеме.  
   
- **родительский ключ**  
+ **parent-key**  
  Указывает родительский ключ для родителя. Если родительский ключ состоит из нескольких столбцов, то они должны быть перечислены через пробелы. Между значениями, заданными для ключа, состоящего из нескольких столбцов, и соответствующего дочернего ключа, существует позиционное сопоставление.  
   
- **Дочерний**  
+ **Child**  
  Задает дочернюю связь (таблицу).  
   
- **дочерний ключ**  
+ **child-key**  
  Задает дочерний ключ потомка, который ссылается на атрибут parent-key родителя. Если дочерний ключ состоит из нескольких атрибутов (столбцов), то значения атрибута child-key должны быть перечислены через пробелы. Между значениями, заданными для ключа, состоящего из нескольких столбцов, и соответствующего родительского ключа, существует позиционное сопоставление.  
   
- **Обратное**  
+ **Inverse**  
  Этот атрибут, указанный в  **\<SQL: Relationship >** используется диаграммами обновления. Дополнительные сведения см. в разделе [указания sql:inverse атрибута SQL: Relationship](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
  **SQL: Key-поля** заметка должна быть указана в элементе, который содержит дочерний элемент, который имеет  **\<SQL: Relationship >** определен между элементом и потомком, и, который выполняет не предоставляет первичный ключ таблицы, указанной в родительском элементе. Даже если схема не задает  **\<SQL: Relationship >**, необходимо указать **SQL: Key-поля** для получения правильной иерархии. Дополнительные сведения см. в разделе [Определение ключевых столбцов с помощью SQL: Key-поля](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
@@ -390,9 +392,9 @@ ms.lasthandoff: 11/17/2017
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>Г. Задание sql:relationship для нескольких элементов  
  В этом примере Аннотированная схема XSD содержит  **\<клиента >**,  **\<порядок >**, и  **\<OrderDetail >** элементы.  
   
- **\<Порядок >** элемент является дочерним для элемента  **\<клиента >** элемента. **\<SQL: Relationship >** указано на  **\<порядок >** дочернего элемента; таким образом, принадлежащие заказчику заказы отображаются как дочерние элементы из  **\<клиента >** .  
+ **\<Порядок >** элемент является дочерним для элемента  **\<клиента >** элемента. **\<SQL: Relationship >** указано на  **\<порядок >** дочернего элемента; таким образом, принадлежащие заказчику заказы отображаются как дочерние элементы из  **\<клиента >**.  
   
- **\<Порядок >** элемент включает в себя  **\<OrderDetail >** дочерний элемент. **\<SQL: Relationship >** указано на  **\<OrderDetail >** дочерний элемент, поэтому подробности заказа отображаются как дочерние элементы,  **\<заказа >** элемента.  
+ **\<Порядок >** элемент включает в себя  **\<OrderDetail >** дочерний элемент. **\<SQL: Relationship >** указано на  **\<OrderDetail >** дочерний элемент, поэтому подробности заказа отображаются как дочерние элементы,  **\<Order >**  элемент.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

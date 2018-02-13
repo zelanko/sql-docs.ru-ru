@@ -8,28 +8,29 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a0828b1e50472ecec5f256c9ddfe13e8f0db8b7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Обработка с помощью SQL Server и базы данных SQL Azure Graph
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет возможности диаграммы базы данных для моделирования связей многие ко многим. Граф связей интегрированы в [!INCLUDE[tsql-md](../../includes/tsql-md.md)] и получать преимущества использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как основная база данных системы управления.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет возможности диаграммы базы данных для моделирования связей многие ко многим. Граф связей интегрированы в [!INCLUDE[tsql-md](../../includes/tsql-md.md)] и получать преимущества использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как основная база данных системы управления.
 
 
 ## <a name="what-is-a-graph-database"></a>Что такое диаграммы базы данных  
@@ -46,12 +47,12 @@ ms.lasthandoff: 01/18/2018
 -   Приложение содержит сложные связи многие ко многим; по мере развития приложения добавляются новые связи.
 -   В этом случае необходимо выполнить анализ взаимосвязанных данных и связи.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>График функциям[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>График функциям [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Начинаем Добавление расширения graph в SQL Server упрощает хранение и выполнение запросов данных диаграммы. В первом выпуске добавлены следующие возможности. 
 
 
 ### <a name="create-graph-objects"></a>Создание графа объектов
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]расширения позволит пользователям создавать узел или края таблицы. Узлы и ребра, может иметь свойства, связанные с ними. Начиная с узлы и ребра, хранятся в виде таблиц, все операции, которые поддерживаются на реляционных таблицах поддерживаются для узла или края таблицы. Например:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] расширения позволит пользователям создавать узел или края таблицы. Узлы и ребра, может иметь свойства, связанные с ними. Начиная с узлы и ребра, хранятся в виде таблиц, все операции, которые поддерживаются на реляционных таблицах поддерживаются для узла или края таблицы. Например:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

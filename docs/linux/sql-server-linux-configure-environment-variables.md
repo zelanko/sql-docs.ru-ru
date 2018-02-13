@@ -1,6 +1,6 @@
 ---
 title: "Настройка параметров SQL Server с переменными среды | Документы Microsoft"
-description: "В этом разделе описывается использование переменных среды для настройки определенных параметров 2017 г. SQL Server в Linux."
+description: "В этой статье описывается использование переменных среды для настройки определенных параметров 2017 г. SQL Server в Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: b32330aee4fcd427ecd05d27fba3ffb8539bffa6
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: c7a04b62625863d9f98521b1a408f572ac79a403
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Настройка параметров SQL Server с помощью переменных среды в Linux
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 |-----|-----|
 | **ACCEPT_EULA** | Примите лицензионное соглашение SQL Server, если задано любое значение (например, «Y»). |
 | **MSSQL_SA_PASSWORD** | Настройте пароль пользователя SA. |
-| **MSSQL_PID** | Установите ключ edition или продукта SQL Server. Возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Экспресс-выпуск**</br>**Web**</br>**Standard Edition Edition**</br>**Enterprise**</br>**Ключ продукта**</br></br>При указании ключа продукта, он должен иметь вид ###-###-###-###-###, где «#» — это число или буквы.|
+| **MSSQL_PID** | Установите ключ edition или продукта SQL Server. Возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Экспресс-выпуск**</br>Web</br>**Standard Edition Edition**</br>**Enterprise**</br>Ключ продукта</br></br>При указании ключа продукта, он должен иметь вид ###-###-###-###-###, где «#» — это число или буквы.|
 | **MSSQL_LCID** | Задает идентификатор языка для SQL Server. Например 1036 — французский. |
 | **MSSQL_COLLATION** | Задает параметры сортировки по умолчанию для SQL Server. Он переопределяет сопоставление по умолчанию идентификатор языка (LCID) для параметров сортировки. |
 | **MSSQL_MEMORY_LIMIT_MB** | Задает максимальный объем памяти (в МБ), который можно использовать SQL Server. По умолчанию он составляет 80% от общего объема физической памяти. |

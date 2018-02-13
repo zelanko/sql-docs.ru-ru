@@ -19,10 +19,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 29791eaade29aa28089dfb579206c2dbddbed1ad
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="look-up-process-chain"></a>Поиск цепочки процессов
   Используйте диалоговое окно **Поиск цепочки процессов** для поиска цепочки процессов, определенной в системе SAP Netweaver BW. После отображения списка доступных цепочек процесса выберите необходимую цепочку, и источник заполнит связанные параметры необходимыми значениями.  

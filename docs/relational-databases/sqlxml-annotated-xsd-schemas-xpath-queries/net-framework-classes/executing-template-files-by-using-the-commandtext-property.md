@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 942bfa19ee6a90f1581ec189754d5ffea9f51fbf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ef0cc4fe9655e7ac183226f01bfba0a7a3901971
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Выполнение файлов шаблонов с использованием свойства CommandText
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath с помощью CommandTextproperty. Вместо указания запроса SQL или XPath, как значение CommandText, можно указать имя файла как значение. В следующем примере Если свойство CommandType задается как SqlXmlCommandType.TemplateFile.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath с помощью CommandTextproperty. Вместо указания запроса SQL или XPath, как значение CommandText, можно указать имя файла как значение. В следующем примере Если свойство CommandType задается как SqlXmlCommandType.TemplateFile.  
   
  Образец приложения выполняет следующий шаблон:  
   

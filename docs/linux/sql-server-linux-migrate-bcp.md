@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.workload: On Demand
-ms.openlocfilehash: 12a0f16762cac5411616d2add3fe548d7f7ec6c7
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a7cc0015af2ca7af7821175cdb836f71ba0ac6f5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Массовое копирование данных с помощью программы bcp для SQL Server в Linux
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="install-the-sql-server-command-line-tools"></a>Установите средства командной строки SQL Server
 
-`bcp`является частью средства командной строки SQL Server, которые не устанавливается автоматически вместе с SQL Server в Linux. Если вы уже установили средства командной строки SQL Server на компьютере Linux, необходимо установить их. Дополнительные сведения о том, как установить инструменты отладки выберите Ваш дистрибутив Linux из следующего списка:
+`bcp` является частью средства командной строки SQL Server, которые не устанавливается автоматически вместе с SQL Server в Linux. Если вы уже установили средства командной строки SQL Server на компьютере Linux, необходимо установить их. Дополнительные сведения о том, как установить инструменты отладки выберите Ваш дистрибутив Linux из следующего списка:
 
 - [Red Hat Enterprise Linux (RHEL)](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
@@ -62,7 +62,7 @@ sqlcmd -S localhost -U sa -P <your_password> -Q "CREATE DATABASE BcpSampleDB;"
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
 ### <a name="create-the-source-data-file"></a>Создать файл источника данных
-Скопируйте и вставьте следующую команду в окне терминала. Мы будем использовать встроенные `cat` команду, чтобы создать пример текстового файла данных с тремя записями, сохраните файл в домашнем каталоге как **~/test_data.txt**. Полям в записях разделяются запятыми.
+Скопируйте и вставьте следующую команду в окне терминала. Мы используем встроенной `cat` команду, чтобы создать пример текстового файла данных с тремя записями, сохраните файл в домашнем каталоге как **~/test_data.txt**. Полям в записях разделяются запятыми.
 
 ```bash
 cat > ~/test_data.txt << EOF

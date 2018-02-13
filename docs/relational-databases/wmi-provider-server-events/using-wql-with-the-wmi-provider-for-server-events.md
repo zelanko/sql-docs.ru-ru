@@ -8,7 +8,8 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89b153d808010e26b5454d1a78058938ed2ea00b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d14958366c9dfa24343e244a8a5d5cb880fafa3e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Использование WQL с поставщиком WMI для событий сервера
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Доступ к управлению приложениями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] событий с помощью поставщика WMI для событий сервера путем выполнения инструкций языка запросов WMI (WQL). WQL является упрощенным подмножеством языка SQL с некоторыми расширениями, специфичными для WMI. При использовании WQL приложение извлекает тип события из определенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базы данных или объекта базы данных (в настоящее время поддерживаются только объекты очереди). Поставщик WMI для событий сервера преобразует запрос в уведомление о событии, созданную в целевую базу данных для уведомлений о событиях области видимости базы данных или объекта или в **master** базы данных для событиях уровня сервера уведомления.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Приложения управления могут получать доступ к событиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью поставщика WMI для событий сервера путем выполнения инструкций WMI Query Language (WQL). WQL является упрощенным подмножеством языка SQL с некоторыми расширениями, специфичными для WMI. При использовании WQL приложение извлекает тип события из определенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базы данных или объекта базы данных (в настоящее время поддерживаются только объекты очереди). Поставщик WMI для событий сервера преобразует запрос в уведомление о событии, созданную в целевую базу данных для уведомлений о событиях области видимости базы данных или объекта или в **master** базы данных для событиях уровня сервера уведомления.  
   
  Например, рассмотрим следующий WQL-запрос.  
   
@@ -71,7 +73,7 @@ WHERE where_condition
  *event_property*  
  Свойство события. Примеры включают **PostTime**, **SPID**, и **LoginName**. Просмотрите каждое событие, перечисленных в [поставщик WMI для событий классов и свойств сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) определить, какие свойства оно имеет. Например, событие DDL_DATABASE_LEVEL_EVENTS имеет **DatabaseName** и **UserName** свойства. Также наследует **SQLInstance**, **LoginName**, **PostTime**, **SPID**, и **ComputerName** свойства от родительских событий.  
   
- **,** *.. .n*  
+ **,** *...n*  
  Указывает, что *event_property* могут запрашиваться несколько раз, разделенных запятыми.  
   
  \*  
@@ -88,7 +90,7 @@ WHERE where_condition
   
  Только `=` операнд может быть использован вместе с **DatabaseName**, **SchemaName**, и **ObjectName**. Другие выражения нельзя использовать с этими свойствами событий.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  *Where_condition* поставщика WMI для событий сервера синтаксис зависит следующее:  
   
 -   Область, в которой поставщик пытается получить указанный *event_type*: уровень сервера, уровень базы данных или уровень объекта (в настоящее время поддерживаются только объекты очереди). В конечном счете эта область определяет тип уведомления о событии, создаваемого в базе данных-получателе. Этот процесс называется регистрацией уведомления о событии.  
@@ -145,7 +147,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
     AND ObjectType='Table' AND ObjectName = 'SalesOrderDetail'  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поставщик WMI для событий принципы работы сервера](http://technet.microsoft.com/library/ms180560.aspx)   
  [Уведомления о событиях (компонент Database Engine)](http://technet.microsoft.com/library/ms182602.aspx)  
   

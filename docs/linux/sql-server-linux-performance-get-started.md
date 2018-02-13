@@ -1,6 +1,6 @@
 ---
 title: "Начало работы с функциями производительности SQL Server для Linux | Документы Microsoft"
-description: "В этом разделе содержатся вводные производительности компонентов SQL Server для Linux пользователей, незнакомых с SQL Server. Многие из этих примеров работать на всех платформах, но в контексте данной статьи является Linux."
+description: "В этой статье содержатся вводные производительности компонентов SQL Server для Linux пользователей, незнакомых с SQL Server. Многие из этих примеров работать на всех платформах, но в контексте данной статьи является Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d31f07a9ef05f056fe0887a3873f972b0683da5f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Пошаговое руководство для повышения производительности SQL Server в Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Если вы являетесь пользователем Linux, новые для SQL Server, следующие задачи описывают некоторые средства производительности. Это не уникальным или уникальным для Linux, а также дает общее представление областей для дальнейшего анализа. В каждом примере ссылка предоставляется документации глубины для этой области.
 
@@ -31,7 +33,7 @@ ms.lasthandoff: 02/01/2018
 ## <a name="create-a-columnstore-index"></a>создать индекс columnstore
 Индекс columnstore — это технология хранения и запрашивания больших хранилищ данных в формате данных в один столбец, называемого columnstore.  
 
-1. Добавьте индекс Columnstore в таблице SalesOrderDetail, выполнив ниже T-SQL:
+1. Добавьте индекс Columnstore в таблице SalesOrderDetail, выполнив следующие команды Transact-SQL:
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -40,7 +42,7 @@ ms.lasthandoff: 02/01/2018
    GO
    ```
 
-2. Выполните следующий запрос, который будет использовать индекс Columnstore для поиска в таблице:
+2. Выполните следующий запрос, который использует индекс Columnstore для поиска в таблице:
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -66,7 +68,7 @@ ms.lasthandoff: 02/01/2018
 SQL Server предоставляет функции выполнения OLTP в памяти, позволяющие значительно повысить производительность приложений систем.  В этом разделе руководства по оценке поможет выполнить шаги для создания оптимизированной для памяти таблице, хранящейся в памяти и скомпилированными в собственном коде хранимой процедуры, доступ к таблице без необходимости компиляции или интерпретации.
 
 ### <a name="configure-database-for-in-memory-oltp"></a>Настройка базы данных для In-Memory OLTP
-1. Рекомендуется установить уровень совместимости не менее 130 для использования OLTP в памяти базы данных.  Используйте приведенный ниже запрос для проверки текущий уровень совместимости базы данных AdventureWorks:  
+1. Рекомендуется установить уровень совместимости не менее 130 для использования OLTP в памяти базы данных.  Используйте следующий запрос для проверки текущий уровень совместимости базы данных AdventureWorks:  
 
    ```sql
    USE AdventureWorks

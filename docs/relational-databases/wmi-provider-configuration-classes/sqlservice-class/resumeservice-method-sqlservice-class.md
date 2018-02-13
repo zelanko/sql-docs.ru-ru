@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ResumeService Method (SqlService Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- ResumeService Method (SqlService Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: ResumeService method
+helpviewer_keywords:
+- ResumeService method
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b41fa8ef89ad6afe112b51cbb0085afc4520aebb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aa8374f8eadd988d29e42bdcbb234b1f3446070e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>Метод ResumeService (класс SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Пытается перевести службу в возобновленное состояние.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Пытается перевести службу в состояние возобновления.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +49,7 @@ object.ResumeService()
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, равное 0, если **ResumeService** запрос был принят, 1, если запрос не поддерживается и любое другое число для указания ошибки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84195d2451664b2bee81ebbb1dc3b7d9d89060d5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Настройка несколькими подсетями группы доступности AlwaysOn и экземпляров отказоустойчивых кластеров
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/01/2018
 
     Где *filename* имя, необходимо вызвать CIB.
 
-2.  Измените файл, который был создан. Найдите `<resources>` раздела. Вы увидите различные ресурсы, которые были созданы для группы Доступности или экземпляр отказоустойчивого Кластера. Найти связанную с IP-адрес. Добавить `<instance attributes>` статьи с данными для второй IP-адрес выше или ниже существующей, но перед `<operations>`. Он будет выглядеть примерно как следующий синтаксис:
+2.  Измените файл, который был создан. Найдите `<resources>` раздела. Вы увидите различные ресурсы, которые были созданы для группы Доступности или экземпляр отказоустойчивого Кластера. Найти связанную с IP-адрес. Добавить `<instance attributes>` статьи с данными для второй IP-адрес выше или ниже существующей, но перед `<operations>`. Это похоже на следующий синтаксис:
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">

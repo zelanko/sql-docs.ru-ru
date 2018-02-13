@@ -1,6 +1,6 @@
 ---
 title: "Шифрование соединений с SQL Server в Linux | Документы Microsoft"
-description: "В этом разделе описывается шифрование соединений с SQL Server в Linux."
+description: "В этой статье описывается шифрование соединений с SQL Server в Linux."
 author: tmullaney
 ms.date: 01/30/2018
 ms.author: meetb
@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: c8d57e65d060ff6958f07fbb57ab97806d99402c
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 646a876fb7cedc4733e4d3a60ef86361ab151c4f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Шифрование соединений с SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux используется Transport Layer Security (TLS) для шифрования данных, передаваемых по сети между клиентским приложением и экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]поддерживает такие же протоколы TLS в Windows и Linux: TLS 1.0, 1.1 и 1.2. Тем не менее, действия по настройке TLS относятся к операционной системе, на котором [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущена.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux используется Transport Layer Security (TLS) для шифрования данных, передаваемых по сети между клиентским приложением и экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает такие же протоколы TLS в Windows и Linux: TLS 1.0, 1.1 и 1.2. Тем не менее, действия по настройке TLS относятся к операционной системе, на котором [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущена.  
 
 ## <a name="requirements-for-certificates"></a>Требования к сертификатам 
 Перед началом работы необходимо убедитесь, что ваши сертификаты соответствовать следующим требованиям:
@@ -70,9 +70,9 @@ TLS используется для шифрования подключения 
         - **SUSE**: копирование сертификатов ```/usr/share/pki/trust/anchors/``` использовать ```update-ca-certificates``` включить, то в качестве системы ЦС сертификата.
         - **Windows**: Импорт PEM-файл в качестве сертификата в папке current user "->" Доверенные корневые центры сертификации -> сертификаты
         - **macOS**: 
-           - Скопируйте сертификат для```/usr/local/etc/openssl/certs```
-           - Выполните следующую команду, чтобы получить хэш-значение:```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - Переименуйте cert значение. Например: ```mv mssql.pem dc2dd900.0```. Убедитесь, что возможности dc2dd900.0```/usr/local/etc/openssl/certs```
+           - Скопируйте сертификат для ```/usr/local/etc/openssl/certs```
+           - Выполните следующую команду, чтобы получить хэш-значение: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - Переименуйте cert значение. Например: ```mv mssql.pem dc2dd900.0```. Убедитесь, что возможности dc2dd900.0 ```/usr/local/etc/openssl/certs```
     
 -   **Примеры строк подключения** 
 

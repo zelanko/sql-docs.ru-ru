@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Развертывание кластера Pacemaker для SQL Server в Linux
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/01/2018
 [Установка SQL Server 2017 г](sql-server-linux-setup.md).
 
 ## <a name="install-the-high-availability-add-on"></a>Установить надстройку высокого уровня доступности
-Для установки пакетов, входящие в состав надстройки высокого уровня доступности (HA) для каждого дистрибутив Linux, используйте синтаксис ниже. 
+Для установки пакетов, входящие в состав надстройки высокого уровня доступности (HA) для каждого дистрибутив Linux, используйте следующий синтаксис. 
 
 **Red Hat Enterprise Linux (RHEL)**
 1.  Зарегистрируйте сервер, используя следующий синтаксис. Запрашивается имя пользователя и пароль.
@@ -123,7 +123,7 @@ Pacemaker сам использует пользователем, созданн
 ## <a name="create-the-pacemaker-cluster"></a>Создание кластера Pacemaker 
 В этом разделе приведены инструкции по созданию и настройке кластера для каждого распределения Linux.
 
-**RHEL**
+RHEL
 
 1. Разрешить узлы
    
@@ -153,7 +153,7 @@ Pacemaker сам использует пользователем, созданн
 
 **SLES**
 
-Процесс создания кластера Pacemaker полностью отличается от на SLES RHEL и Ubuntu. Создание кластера с SLES документов: указанные ниже действия.
+Процесс создания кластера Pacemaker полностью отличается от на SLES RHEL и Ubuntu. Создание кластера с SLES документов: следующие действия.
 1. Начать процесс настройки кластера, запустив 
    ```bash
    sudo ha-cluster-init
@@ -200,12 +200,12 @@ Pacemaker сам использует пользователем, созданн
 12. Повторите шаги с 8 по 11 для всех серверов, добавляемых в кластер.
 
 ## <a name="install-the-sql-server-ha-and-sql-server-agent-packages"></a>Установить пакеты SQL Server высокой ДОСТУПНОСТИ и агент SQL Server
-Используйте приведенную ниже команду для установки SQL Server высокой ДОСТУПНОСТИ пакета и [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] агент, если они уже не установлены. Установка пакета высокой ДОСТУПНОСТИ после установки [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] требует перезагрузки [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] его использовать. Эти инструкции предполагают, что репозиториев для пакетов Microsoft уже были настроены, поскольку [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] должен быть установлен на этом этапе.
+Используйте следующие команды для установки SQL Server высокой ДОСТУПНОСТИ пакета и [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] агент, если они уже не установлены. Установка пакета высокой ДОСТУПНОСТИ после установки [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] требует перезагрузки [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] его использовать. Эти инструкции предполагают, что репозиториев для пакетов Microsoft уже были настроены, поскольку [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] должен быть установлен на этом этапе.
 > [!NOTE]
 > - Если вы не будете использовать [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] агента для доставки журналов или любое другое использование его нужно установить, поэтому пакета *mssql-server-agent* можно пропустить.
 > - Дополнительные пакеты для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) и [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] службы Integration Services (*mssql сервер является*), не являются требуется для обеспечения высокой доступности, либо на экземпляре отказоустойчивого Кластера или группе Доступности.
 
-**RHEL**
+RHEL
 
 ```bash
 sudo yum install mssql-server-ha mssql-server-agent

@@ -1,11 +1,11 @@
 ---
 title: "Выпуски и поддерживаемых функций SQL Server 2017 ~ Linux | Документы Microsoft"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -35,13 +35,15 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e1734b7ec7619a6943e1d79a0933b6189ad3162d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Выпуски и поддерживаемых функций 2017 г. SQL Server в Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Эта статья содержит сведения о функциях, поддерживаемых различными выпусками SQL Server 2017 г. в Linux. Выпуски и поддерживаемых функций SQL Server в Windows см. в разделе [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 02/01/2018
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] включает в себя [!INCLUDE[ssDE](../includes/ssde-md.md)], основная служба для хранения, обработки и защиты данных, репликации, полнотекстового поиска, средства для управления реляционными и XML-данных, а также в интеграции analytics базы данных.|  
 
 **Выпуски Developer, Enterprise Core и оценки**  
-Компоненты для SQL Server Enterprise edition в приведенных ниже таблицах перечислены возможности, поддерживаемые различными Developer, Enterprise Core и выпусках Evaluation Edition, см.
+Компоненты для SQL Server Enterprise edition в следующих таблицах перечислены возможности, поддерживаемые различными Developer, Enterprise Core и выпусках Evaluation Edition, см.
 
 Выпуск Developer по-прежнему поддерживает только 1 клиент для [распределенного воспроизведения SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md). 
   

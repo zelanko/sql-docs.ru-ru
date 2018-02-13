@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8954831cd600a5e10ec9e98879d8d68568c837d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f704e45b165ecb4e29d909bcce09f7af92fb0989
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Указание пути доступа (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Запросы XPath указываются в виде выражения. Существуют различные типы выражений. Путь доступа представляет собой выражение для выбора набора узлов относительно контекстного узла. Результатом вычисления пути доступа является набор узлов.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Запросы XPath указываются в форме выражения. Существуют различные типы выражений. Путь доступа представляет собой выражение для выбора набора узлов относительно контекстного узла. Результатом вычисления пути доступа является набор узлов.  
   
 ## <a name="types-of-location-paths"></a>Типы путей доступа  
  Путь доступа может иметь две следующие формы.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="location-steps"></a>Шаги доступа  
  Путь доступа (абсолютный или относительный) состоит из шагов доступа, составленных из следующих трех частей.  
   
--   **Axis**  
+-   **Оси**  
   
      Ось определяет древовидную связь между узлами, которые выбираются шагом доступа, и контекстными узлами. **Родительского**, **дочерних**, **атрибута**, и **self** поддерживаются оси. Если **дочерних** оси указывается в путь к расположению, все узлы, выбранные запросом являются дочерними элементами контекстного узла. Если **родительского** оси указан, то выбранный узел имеет родительский узел текущего узла. Если **атрибута** оси указан, выбранные узлы будут атрибутами контекстного узла.  
   

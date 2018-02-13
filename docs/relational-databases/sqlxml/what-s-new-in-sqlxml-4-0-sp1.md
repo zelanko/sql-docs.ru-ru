@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - SQL Server Native Client, SQLXML
 - side-by-side installations [SQLXML]
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-caps.latest.revision: "67"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af77ef0c4dde5bcd029f3774ac48abdd56cbc47e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9772e6f1325fd603a655f37ae361977b1e6a8658
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Какой &#39; новые возможности SQLXML 4.0 с пакетом обновления 1
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 с пакетом обновления 1 содержит различные обновления и улучшения. В этом разделе содержится описание всех обновлений и предоставляются ссылки на более подробные сведения (если они доступны). SQLXML 4.0 с пакетом обновления 1 (SP1) предоставляет улучшения для поддержки новых типов данных, появившихся в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В этом разделе рассматриваются следующие вопросы.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 с пакетом обновления 1 (SP1) содержит различные обновления и улучшения. В этом разделе содержится описание всех обновлений и предоставляются ссылки на более подробные сведения (если они доступны). SQLXML 4.0 с пакетом обновления 1 (SP1) предоставляет улучшения для поддержки новых типов данных, появившихся в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В этом разделе рассматриваются следующие вопросы.  
   
 -   Установка SQLXML 4.0 с пакетом обновления 1 (SP1)  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Поддержка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
--   Поддержка новых типов данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+-   Поддержка новых типов данных в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
 -   Изменения в SQLXML 4.0, относящиеся к массовой загрузке XML  
   
@@ -90,15 +92,15 @@ ms.lasthandoff: 11/17/2017
 ## <a name="support-for-sql-server-native-client"></a>Поддержка собственного клиента SQL Server  
  SQLXML 4.0 поддерживает как поставщика SQLOLEDB и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщики Native Client. Рекомендуется использовать ту же версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из-за [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разработки собственного клиента для поддержки новые типы данных, которые предусматриваются сервером, такие как **Date, Time**, **DateTime2**, и **dateTimeOffset** типы данных в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и поддерживается [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client.  
   
- Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это технология доступа к данным, которая введена в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Она объединяет поставщика SQLOLEDB и драйвер SQLODBC в одну собственную динамическую библиотеку (DLL), а также предоставляет новую уникальную функциональность, независимую от компонентов доступа к данным MDAC и отличную от них.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственный клиент — технология доступа к данным, которая была введена в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Она объединяет поставщика SQLOLEDB и драйвер SQLODBC в одну собственную динамическую библиотеку (DLL), а также предоставляет новую уникальную функциональность, независимую от компонентов доступа к данным MDAC и отличную от них.  
   
- Технология собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может применяться для создания новых или усовершенствования существующих приложений, которым требуется доступ к новым функциям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые не поддерживаются SQLOLEDB и SQLODBC в компонентах MDAC и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client необходим для клиентских функций SQLXML, таких как FOR XML для использования **xml** тип данных. Дополнительные сведения см. в разделе [форматирование XML на стороне клиента &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md), [Использования ADO для SQLXML 4.0 выполнения запросов](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md), и [программирование собственного клиента SQL Server](../../relational-databases/native-client/sql-server-native-client-programming.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственный клиент может использоваться для создания новых или усовершенствования существующих приложений, которые необходимо воспользоваться преимуществами функций, появившихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые не поддерживаются SQLOLEDB и SQLODBC в компонентах MDAC и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client необходим для клиентских функций SQLXML, таких как FOR XML для использования **xml** тип данных. Дополнительные сведения см. в разделе [форматирование XML на стороне клиента &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md), [Использования ADO для SQLXML 4.0 выполнения запросов](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md), и [программирование собственного клиента SQL Server](../../relational-databases/native-client/sql-server-native-client-programming.md).  
   
 > [!NOTE]  
 >  Между SQLXML 4.0 и SQLXML 3.0 нет полной обратной совместимости. В результате устранения некоторых ошибок и других функциональных изменений, особенно прекращения поддержки SQLXML ISAPI, нельзя использовать виртуальные каталоги IIS с SQLXML 4.0. Большинство приложений будут работать с небольшими изменениями, но их необходимо проверить перед запуском в рабочей среде с SQLXML 4.0.  
   
 ## <a name="support-for-data-types-introduced-in-sql-server-2005-and-sql-server-2008"></a>Поддержка типов данных, появившихся в SQL Server 2005 и SQL Server 2008  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]представленные **xml** тип данных и SQLXML 4.0 поддерживает **xml** тип данных. Дополнительные сведения см. в разделе [поддержка типов данных в SQLXML 4.0 xml](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] представленные **xml** тип данных и SQLXML 4.0 поддерживает **xml** тип данных. Дополнительные сведения см. в разделе [поддержка типов данных в SQLXML 4.0 xml](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md).  
   
  Примеры использования **xml** типу данных в SQLXML при сопоставлении XML-представлений, массовой загрузке XML или выполнении диаграмм обновления XML, см. в следующих разделах содержатся примеры.  
   
@@ -108,7 +110,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Примеры массовой загрузки XML-документов](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]представленные **дату и время —**, **DateTime2**, и **DateTimeOffset** типов данных. SQLXML 4.0 с пакетом обновления 1 (SP1) позволяет использовать эти четыре новых типа данных в качестве встроенных скалярных типов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider (SQLNCLI10), который поставляется вместе с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] представленные **дату и время —**, **DateTime2**, и **DateTimeOffset** типов данных. SQLXML 4.0 с пакетом обновления 1 (SP1) позволяет использовать эти четыре новых типа данных в качестве встроенных скалярных типов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider (SQLNCLI10), который поставляется вместе с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="xml-bulk-load-changes-for-sqlxml-40-sp1"></a>Изменения в SQLXML 4.0 с пакетом обновления 1 (SP1), относящиеся к массовой загрузке XML  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7492b1c26c21a2cbc831c2bed39be165310bf51d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e4b5a661ce5efe520c680d91a29d89a2130219d8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Нерекомендуемые функции полнотекстового поиска в SQL Server 2016
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Этот раздел описывает нерекомендуемые функции полнотекстового поиска, пока еще доступные в SQL Server. Ожидается, что эти функции будут удалены в следующем выпуске. Не используйте устаревшие функции в новых приложениях.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+В этом разделе описаны устаревшие функции полнотекстового поиска, пока еще доступные в SQL Server. Ожидается, что эти функции будут удалены в следующем выпуске. Не используйте устаревшие функции в новых приложениях.  
   
 С помощью счетчиков и событий трассировки объекта производительности **SQL Server:Deprecated Features** вы можете узнать, используете ли вы устаревшие функции. Дополнительные сведения см. в разделе [Использование объектов SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 |sp_fulltext_catalog|CREATE FULL CATALOG<br /><br /> ALTER FULLTEXT CATALOG<br /><br /> DROP FULLTEXT CATALOG|sp_fulltext_catalog|84|  
 |sp_fulltext_column<br /><br /> sp_fulltext_database, хранимая процедура<br /><br /> sp_fulltext_table|CREATE FULL INDEX<br /><br /> ALTER FULLTEXT INDEX<br /><br /> DROP FULLTEXT INDEX|sp_fulltext_column<br /><br /> sp_fulltext_database, хранимая процедура<br /><br /> sp_fulltext_table|86<br /><br /> 87<br /><br /> 85|  
 |sp_help_fulltext_catalogs<br /><br /> sp_help_fulltext_catalog_components<br /><br /> sp_help_fulltext_catalogs_cursor<br /><br /> sp_help_fulltext_columns<br /><br /> sp_help_fulltext_columns_cursor<br /><br /> sp_help_fulltext_tables<br /><br /> sp_help_fulltext_tables_cursor|sys.fulltext_catalogs<br /><br /> sys.fulltext_index_columns<br /><br /> sys.fulltext_indexes|sp_help_fulltext_catalogs<br /><br /> sp_help_fulltext_catalog_components<br /><br /> sp_help_fulltext_catalogs_cursor<br /><br /> sp_help_fulltext_columns<br /><br /> sp_help_fulltext_columns_cursor<br /><br /> sp_help_fulltext_table<br /><br /> sp_help_fulltext_tables_cursor|88<br /><br /> 203<br /><br /> 90<br /><br /> 92<br /><br /> 93<br /><br /> 91<br /><br /> 89|  
-|значения действий хранимой процедуры sp_fulltext_service: clean_up, connect_timeout, and data_timeout возвращают нуль|Нет|sp_fulltext_service @action=clean_up<br /><br /> sp_fulltext_service @action=connect_timeout<br /><br /> sp_fulltext_service @action=data_timeout|116<br /><br /> 117<br /><br /> 118|  
+|значения действий хранимой процедуры sp_fulltext_service: clean_up, connect_timeout, and data_timeout возвращают нуль|None|sp_fulltext_service @action=clean_up<br /><br /> sp_fulltext_service @action=connect_timeout<br /><br /> sp_fulltext_service @action=data_timeout|116<br /><br /> 117<br /><br /> 118|  
 |Столбцы представления sys.dm_fts_active_catalogs:<br /><br /> is_paused<br /><br /> previous_status<br /><br /> previous_status_description<br /><br /> row_count_in_thousands<br /><br /> status<br /><br /> status_description<br /><br /> worker_count|Нет.|dm_fts_active_catalogs.is_paused<br /><br /> dm_fts_active_catalogs.previous_status<br /><br /> dm_fts_active_catalogs.previous_status_description<br /><br /> dm_fts_active_catalogs.row_count_in_thousands<br /><br /> dm_fts_active_catalogs.status<br /><br /> dm_fts_active_catalogs.status_description<br /><br /> dm_fts_active_catalogs.worker_count|218<br /><br /> 221<br /><br /> 222<br /><br /> 224<br /><br /> 219<br /><br /> 220<br /><br /> 223|  
 |Столбец представления sys.dm_fts_memory_buffers:<br /><br /> row_count|Нет.|dm_fts_memory_buffers.row_count|225|  
 |Столбцы представления sys.fulltext_catalogs:<br /><br /> path<br /><br /> data_space_id<br /><br /> file_id|Нет.|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
@@ -58,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |Параметр CREATE FULLTEXT CATALOG:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|Нет.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Нет.<sup>*</sup>|237<br /><br /> Нет.*|  
 |Свойство DATABASEPROPERTYEX: IsFullTextEnabled|Нет.|DATABASEPROPERTYEX**('IsFullTextEnabled')**|202|  
 |Параметр sp_detach_db:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Нет.|sp_detach_db @keepfulltextindexfile|226|  
-|значение действий хранимой процедуры sp_fulltext_service: resource_usage не имеет функции.|Нет|sp_fulltext_service @action=resource_usage|200|  
+|значение действий хранимой процедуры sp_fulltext_service: resource_usage не имеет функции.|None|sp_fulltext_service @action=resource_usage|200|  
   
  Объект **SQL Server:Deprecated Features** не отслеживает появление инструкций CREATE FULLTEXT CATLOG ON FILEGROUP *файловая_группа*.  
   

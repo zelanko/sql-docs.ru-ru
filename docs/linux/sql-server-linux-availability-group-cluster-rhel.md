@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 860d3571aa1edf7c467125de1cc2920a968eb704
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Настройка RHEL кластера для группы доступности SQL Server
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE] 
 > Доступ к полной документацией Red Hat требует допустимую подписку. 
 
-Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управления на сайте [RHEL справочной документации](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управление [RHEL справочной документации](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server не интегрирована так же строго Pacemaker в Linux как в отказоустойчивой кластеризации Windows Server. Экземпляр SQL Server неизвестно кластера. Pacemaker обеспечивает согласование ресурса кластера. Кроме того имя виртуальной сети для отказоустойчивого кластера Windows Server — не имеет эквивалента в Pacemaker. Доступность группы динамические административные представления (DMV), запрашивать сведения о кластере возвращать пустые строки в кластерах Pacemaker. Чтобы создать прослушиватель для прозрачного переподключения после отработки отказа, вручную Зарегистрируйте имя прослушивателя в DNS с IP-адрес, используемый для создания виртуального IP-ресурс. 
@@ -129,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Значение свойства кластера start сбой является Неустранимая false
 
-`start-failure-is-fatal`Указывает ли сбой запуска ресурса на узле предотвращает последующие попытки запуска на этом узле. Если задано значение `false`, кластер решает, следует ли попробуйте запустить на том же узле, еще раз на основании ресурса текущего счетчика и миграции Порог сбоя. После перехода на другой ресурс, Pacemaker повторных попыток запуска доступности группы ресурсов прежней основной после экземпляра SQL Server. Pacemaker можно понизить уровень вторичную реплику, и автоматически подключится к группе доступности. 
+`start-failure-is-fatal` Указывает ли сбой запуска ресурса на узле предотвращает последующие попытки запуска на этом узле. Если задано значение `false`, кластер решает, следует ли попробуйте запустить на том же узле, еще раз на основании ресурса текущего счетчика и миграции Порог сбоя. После перехода на другой ресурс, Pacemaker повторных попыток запуска доступности группы ресурсов прежней основной после экземпляра SQL Server. Pacemaker можно понизить уровень вторичную реплику, и автоматически подключится к группе доступности. 
 
 Чтобы обновить значение свойства `false` запуска:
 

@@ -21,17 +21,18 @@ ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
 ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Устранение неполадок с подключением PolyBase к Kerberos
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В PolyBase встроен интерактивный инструмент диагностики, который помогает устранять неполадки с проверкой подлинности при использовании PolyBase с кластером Hadoop, защищенным с помощью Kerberos. 
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В PolyBase встроен интерактивный инструмент диагностики, который помогает устранять неполадки с аутентификацией при использовании PolyBase с защищенным Kerberos кластером Hadoop. 
 
 В статье приведено пошаговое руководство по использованию этого инструмента для отладки таких проблем.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 1. SQL Server 2016 RTM CU6/SQL Server 2016 SP1 CU3/SQL Server 2017 или более поздние версии с установленной технологией PolyBase
 1. Кластер Hadoop (Cloudera или Hortonworks), защищенный с помощью Kerberos (Active Directory или MIT)
@@ -202,7 +203,7 @@ PolyBase пытается получить доступ к HDFS и не мож
 ### <a name="active-directory"></a>Active Directory 
 В Active Directory вы можете просмотреть имена объектов-служб, перейдя в Панель управления > Пользователи и компьютеры Active Directory > *MyRealm* > *MyOrganizationalUnit*. Если для кластера Hadoop корректно настроена защита Kerber, имена субъекта-службы должны иметься для каждой из множества служб, доступных на кластере (например, nn, dn, rm, yarn, spnego и др.).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication) (Интеграция PolyBase и Cloudera с помощью аутентификации Active Directory)  
 [Руководство Cloudera по настройке Kerberos для CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Руководство Hortonworks по настройке Kerberos для HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  

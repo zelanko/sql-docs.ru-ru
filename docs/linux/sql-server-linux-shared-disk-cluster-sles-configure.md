@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Настройка SLES общего диска кластера для SQL Server
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Для выполнения сценария конца в конец ниже необходимы две машины для развертывания двух узлов кластера и другой сервер для настройки общих папок NFS. Шаги, описанные ниже описываются настройки этих серверов.
+Чтобы выполнить следующий сценарий начала до конца, требуется две машины для развертывания двух узлов кластера и другой сервер для настройки общих папок NFS. Шаги, описанные ниже описываются настройки этих серверов.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Установка и настройка операционной системы на каждом узле кластера
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Установка и настройка SQL Server на каждом узле кластера
 
-1. Установить и настроить SQL Server на обоих узлах. Подробные сведения содержатся в разделе [Установка SQL Server в Linux](sql-server-linux-setup.md).
+1. Установить и настроить SQL Server на обоих узлах. Подробные инструкции см. в разделе [Установка SQL Server в Linux](sql-server-linux-setup.md).
 2. Назначить один узел в качестве основной, а другой — как получателя для целей конфигурации. Использовать эти термины для следующих в этом руководстве. 
 3. На вторичном узле остановите и отключите SQL Server. В следующем примере останавливается и отключает SQL Server:
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/01/2018
 
     > [!NOTE]
     > Во время установки, созданный для экземпляра SQL Server и помещается в главный ключ сервера `/var/opt/mssql/secrets/machine-key`. SQL Server в Linux, всегда выполняется под локальной учетной записью, называется mssql. Так как он является локальной учетной записью, его подлинность, не являющихся общими между узлами. Таким образом необходимо скопировать ключ шифрования от основного узла для каждого дополнительного узла, поэтому каждой учетной записи локального mssql можно получить доступ к его расшифровать главный ключ сервера.
-4. На основном узле, создайте имя входа SQL server для Pacemaker и предоставьте имени входа разрешение для запуска `sp_server_diagnostics`. Pacemaker будет использовать эту учетную запись, чтобы проверить, какой узел работает под управлением SQL Server.
+4. На основном узле, создайте имя входа SQL server для Pacemaker и предоставьте имени входа разрешение для запуска `sp_server_diagnostics`. Pacemaker использует эту учетную запись, чтобы проверить, какой узел работает под управлением SQL Server.
 
     ```bash
     sudo systemctl start mssql-server
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/01/2018
 
 ### <a name="configure-an-nfs-server"></a>Настройка NFS-сервера
 
-Чтобы настроить NFS-сервера, см. в следующих шагах в документации SUSE: [Настройка сервера для NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+Чтобы настроить NFS-сервера, см. ниже в документации SUSE: [Настройка сервера для NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
 ### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Настройки всех узлов кластера для подключения к хранилищу общих NFS
 
@@ -203,7 +203,7 @@ ms.lasthandoff: 02/01/2018
 - **Имя ресурса SQL Server**: имя кластеризованного ресурса SQL Server. 
 - **Значение времени ожидания**: значение времени ожидания — это объем времени, кластер должен подождать, пока ресурс переводится в оперативный режим. Для SQL Server, это время, которое предполагается, что SQL Server необходимо выполнить, чтобы перевести `master` базы данных в сети. 
 
-Обновление значений из приведенный ниже сценарий для вашей среды. Запустите на одном узле, чтобы настроить и запустить кластеризованной службы.
+Обновление значений из следующий сценарий для вашей среды. Запустите на одном узле, чтобы настроить и запустить кластеризованной службы.
 
 ```bash
 sudo crm configure
@@ -252,7 +252,7 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>Управление ресурсами кластера
 
-Для управления ресурсами кластера, см. в следующем разделе SUSE: [управление ресурсами кластера](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+Для управления ресурсами кластера, см. в разделе SUSE: [управление ресурсами кластера](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>Отработка отказа вручную
 

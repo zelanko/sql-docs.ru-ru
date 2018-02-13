@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f687a25a48ff38ee8b109161e332f7306d64f177
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18950714bd976c224ef33627fb12528ad08b0584
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Введение в массовую загрузку XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Массовая загрузка XML является автономного COM-объект, который позволяет загрузить частично структурированные XML-данных в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблиц.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Массовая загрузка XML является изолированным объектом COM, который позволяет загрузить частично структурированные XML-данные в таблицы Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Можно вставить XML-данные в базу данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при помощи инструкции INSERT и функции OPENXML, однако программа массовой загрузки обладает более высокой производительностью, если нужно вставить большие объемы XML-данных.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Схемы XSD и XDR с заметками. Дополнительные сведения о схемах XSD с заметками см. в разделе [введение в схемы XSD с заметками &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Сведения о схемах XDR с заметками см. в разделе [схемы XDR с заметками &#40; устарел в SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
--   Механизмы массовой вставки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], такие как инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT и программа bcp. Дополнительные сведения см. в разделе [BULK INSERT &#40; Transact-SQL &#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) и [программа bcp](../../../tools/bcp-utility.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] инструкция BULK insert механизмы, такие как [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкции BULK INSERT и программа bcp. Дополнительные сведения см. в разделе [BULK INSERT &#40; Transact-SQL &#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) и [программа bcp](../../../tools/bcp-utility.md).  
   
 ## <a name="streaming-of-xml-data"></a>Потоковая передача XML-данных  
  Так как исходный XML-документ может быть большого размера, для обработки массовой загрузки целый документ не читается в память. Вместо этого массовая загрузка XML интерпретирует XML-данные как поток и читает. После того как программа прочитает данные, она идентифицирует таблицу базы данных, создает соответствующую запись из источника XML-данных, а затем отправляет запись [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для вставки.  

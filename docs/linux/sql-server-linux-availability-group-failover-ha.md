@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: cf0a61c924a10066a41bcf4127e444b60f0f50bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 68e41573c107725ef7af12e8b990678f8991bb02
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Всегда работают в группах доступности в Linux
 
@@ -129,7 +129,7 @@ ms.lasthandoff: 02/01/2018
  [руководство по администрированию SLES - ресурсы](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-### <a name="forceManual"></a>Вручную переместить при средств кластера не отвечать на запросы 
+### <a name="forceManual"></a> Вручную переместить при средств кластера не отвечать на запросы 
 
 В крайних случаях, если пользователь не может использовать средства управления кластером для взаимодействия с кластером (т. е. кластера не отвечает, средства управления кластером неисправный себя), пользователь может быть переход на другой ресурс вручную - обход Диспетчер внешних кластера. Это не рекомендуется для выполнения обычных операций и следует использовать в случаях, кластер не удается выполнить действие перехода на другой ресурс, с помощью средства управления кластером.
 
@@ -158,7 +158,7 @@ ms.lasthandoff: 02/01/2018
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. Переход группы доступности с помощью Transact-SQL. В примере ниже замены `<**MyAg**>` с именем группы доступности. Подключитесь к экземпляру SQL Server, на котором размещена целевая вторичная реплика и выполните следующую команду:
+1. Переход группы доступности с помощью Transact-SQL. В следующем примере замените `<**MyAg**>` с именем группы доступности. Подключитесь к экземпляру SQL Server, на котором размещена целевая вторичная реплика и выполните следующую команду:
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
@@ -244,7 +244,7 @@ ms.lasthandoff: 02/01/2018
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. После отработки отказа обновите SQL Server в старой первичной реплике, повторив процедуру, описанную в шагах б.1 б.3 выше.
+1. После отработки отказа обновите SQL Server старой первичной реплике, повторив процедуру, описанную в шагах б.3 б.1.
 
    В следующем примере выполняется обновление `mssql-server` и `mssql-server-ha` пакетов.
 
@@ -267,7 +267,7 @@ ms.lasthandoff: 02/01/2018
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. Для группы доступности с внешних кластера диспетчер - где типом кластера — ВНЕШНИХ, очистка ограничение расположение, которое было вызвано отработка отказа вручную. 
+1. Группы доступности с диспетчером внешнего - где тип кластера является ВНЕШНИМ, удалите ограничение расположение, которое было вызвано отработка отказа вручную. 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  

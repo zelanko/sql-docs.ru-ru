@@ -1,6 +1,6 @@
 ---
 title: "Рекомендации по производительности для SQL Server для Linux | Документы Microsoft"
-description: "В этом разделе предоставляют рекомендации по производительности и рекомендации по запуску 2017 г. SQL Server в Linux."
+description: "Данная статья содержит рекомендации по производительности и рекомендации по запуску 2017 г. SQL Server в Linux."
 author: rgward
 ms.author: bobward
 manager: craigg
@@ -9,20 +9,22 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Рекомендации по производительности и рекомендации по конфигурации для 2017 г. SQL Server в Linux
 
-В этом разделе содержатся советы и рекомендации для повышения производительности для приложений баз данных, которые подключаются к SQL Server в Linux. Эти рекомендации относятся к работе на платформе Linux. Все обычные рекомендации по SQL Server, такие как Проектирование индекса, продолжают действовать.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Эта статья содержит советы и рекомендации для повышения производительности для приложений баз данных, которые подключаются к SQL Server в Linux. Эти рекомендации относятся к работе на платформе Linux. Все обычные рекомендации по SQL Server, такие как Проектирование индекса, продолжают действовать.
 
 Следующие правила содержат рекомендации по настройке SQL Server и операционной системы Linux.
 
@@ -34,7 +36,7 @@ ms.lasthandoff: 02/01/2018
 
 - **Используйте СХОДСТВО ПРОЦЕССОВ для узел и/или процессоров**
 
-   Рекомендуется использовать `ALTER SERVER CONFIGURATION` для задания `PROCESS AFFINITY` для всех **NUMANODEs** и/или процессоров вы используете для SQL Server (как правило для всех узлов и ЦП) в операционной системе Linux. Соответствие процессоров позволяет обеспечить эффективное поведение Linux и планирования SQL. С помощью **NUMANODE** параметр — самый простой метод. Обратите внимание, что следует использовать **СХОДСТВО ПРОЦЕССОВ** даже при наличии только на одном узле NUMA на компьютере.  В разделе [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) документации Дополнительные сведения о том, как задать **СХОДСТВО ПРОЦЕССОВ**.
+   Рекомендуется использовать `ALTER SERVER CONFIGURATION` для задания `PROCESS AFFINITY` для всех **NUMANODEs** и/или процессоров вы используете для SQL Server (как правило для всех узлов и ЦП) в операционной системе Linux. Соответствие процессоров позволяет обеспечить эффективное поведение Linux и планирования SQL. С помощью **NUMANODE** параметр — самый простой метод. Обратите внимание, что следует использовать **СХОДСТВО ПРОЦЕССОВ** даже при наличии только на одном узле NUMA на компьютере.  В разделе [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) Дополнительные сведения о том, как задать **СХОДСТВО ПРОЦЕССОВ**.
 
 - **Настройка нескольких файлов данных tempdb**
 

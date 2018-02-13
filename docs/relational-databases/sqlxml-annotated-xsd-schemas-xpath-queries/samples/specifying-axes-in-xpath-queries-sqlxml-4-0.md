@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c89170aabd6734292fb6193a90161bb5001bf11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa306b70eaa1c91b352a6e2e19e7b76c4aabf52c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Указание осей в запросах XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]В следующих примерах показано, как задаются оси в запросах XPath.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+В следующих примерах показано, как задаются оси в запросах XPath.  
   
  В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
@@ -167,7 +169,7 @@ ms.lasthandoff: 11/17/2017
   
  Если запрос XPath задан как `Customer/Order/OrderDetail`, из каждого узла, совпадающего  **\<клиента >** запрос переходит к его  **\<порядок >** элементов. И для каждого узла, совпадающего  **\<порядок >**, запрос добавляет узлы  **\<OrderDetail >** к результату. Только  **\<OrderDetail >** возвращается в результирующем наборе.  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>В. Использование символов .. для указания родительской оси  
+### <a name="c-use--to-specify-the-parent-axis"></a>В. Использование символов . для указания родительской оси  
  Следующий запрос получает все  **\<порядок >** элементы с родительским  **\<клиента >** элемент с **CustomerID** атрибута значение 1. В запросе используется **дочерних** ось в предикате, чтобы найти родительский  **\<порядок >** элемента.  
   
 ```  

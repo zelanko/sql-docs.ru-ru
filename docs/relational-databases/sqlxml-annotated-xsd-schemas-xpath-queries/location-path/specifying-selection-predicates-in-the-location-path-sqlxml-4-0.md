@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2b476304fddd169a253a3777bb1a0fb4d53087f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08a27de5e9c528d3e49156df804f19376ae5a6bd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Указание предикатов выбора в пути доступа (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Предикат фильтрует набор узлов относительно оси (аналогично предложению WHERE в инструкции SELECT). Предикат указывается в квадратных скобках. Для каждого узла в фильтруемом наборе узлов выражение предиката вычисляется с этим узлом в качестве узла контекста, а количество узлов в наборе определяет размер контекста. Если для данного узла выражение предиката дает значение TRUE, то узел включается в результирующий набор узлов.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Предикат фильтрует набор узлов по отношению к оси (аналогично предложению WHERE в инструкции SELECT). Предикат указывается в квадратных скобках. Для каждого узла в фильтруемом наборе узлов выражение предиката вычисляется с этим узлом в качестве узла контекста, а количество узлов в наборе определяет размер контекста. Если для данного узла выражение предиката дает значение TRUE, то узел включается в результирующий набор узлов.  
   
  XPath также позволяет выполнять фильтрацию в зависимости от позиции. Выражение предиката, результатом оценки которого является число, выбирает этот исходный узел. Например, путь доступа `Customer[3]` возвращает третьего клиента. Такие числовые предикаты не поддерживаются. Поддерживаются только предикаты, которые возвращают логический результат.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- В этом запросе XPath `child` и `attribute` являются именами осей. `Customer`является проверкой узла (значение TRUE, если `Customer` —  **\<узел элемента >**, так как  **\<элемент >** является основным типом узла для `child` оси). `attribute::CustomerID="ALFKI"` является предикатом. В этом предикате `attribute` является осью и `CustomerID` является проверкой узла (значение TRUE, если **CustomerID** является атрибутом элемента узла контекста, так как  **\<атрибут >** участник Тип узла **атрибута** оси).  
+ В этом запросе XPath `child` и `attribute` являются именами осей. `Customer` является проверкой узла (значение TRUE, если `Customer` —  **\<узел элемента >**, так как  **\<элемент >** является основным типом узла для `child` оси). `attribute::CustomerID="ALFKI"` является предикатом. В этом предикате `attribute` является осью и `CustomerID` является проверкой узла (значение TRUE, если **CustomerID** является атрибутом элемента узла контекста, так как  **\<атрибут >** участник Тип узла **атрибута** оси).  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   
@@ -77,7 +79,7 @@ child::Customer[child::ContactName]
   
  В этом примере предполагается, что  **\<ContactName >** является дочерним элементом элемента  **\<клиента >** элемент XML-документа, который называется  *элементное сопоставление* в схеме XSD с заметками.  
   
- В этом выражении XPath `child` является именем оси. `Customer`является проверкой узла (значение TRUE, если `Customer` —  **\<элемент >** узла, так как  **\<элемент >** является основным типом узла для `child` оси). `child::ContactName` является предикатом. В этом предикате `child` является осью и `ContactName` является проверкой узла (значение TRUE, если `ContactName` —  **\<элемент >** узла).  
+ В этом выражении XPath `child` является именем оси. `Customer` является проверкой узла (значение TRUE, если `Customer` —  **\<элемент >** узла, так как  **\<элемент >** является основным типом узла для `child` оси). `child::ContactName` является предикатом. В этом предикате `child` является осью и `ContactName` является проверкой узла (значение TRUE, если `ContactName` —  **\<элемент >** узла).  
   
  Это выражение возвращает только  **\<клиента >** дочерний элемент контекстного узла, имеющего  **\<ContactName >** дочерние элементы.  
   
@@ -96,7 +98,7 @@ child::Customer[not(child::ContactName)]
   
  В этом примере предполагается, что  **\<ContactName >** является дочерним элементом элемента  **\<клиента >** в элемент в XML-документе и поле ContactName не требуется База данных.  
   
- В этом примере `child` является осью. `Customer`является проверкой узла (значение TRUE, если `Customer` — \<элемент > узла). `not(child::ContactName)` является предикатом. В этом предикате `child` является осью и `ContactName` является проверкой узла (значение TRUE, если `ContactName` — \<элемент > узла).  
+ В этом примере `child` является осью. `Customer` является проверкой узла (значение TRUE, если `Customer` — \<элемент > узла). `not(child::ContactName)` является предикатом. В этом предикате `child` является осью и `ContactName` является проверкой узла (значение TRUE, если `ContactName` — \<элемент > узла).  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   
@@ -120,7 +122,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>Предикат выбора: Пример 6  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 включает поддержку запросов XPath, которые содержат в предикате перекрестное произведение, как показано в следующем примере:  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 включает поддержку запросов XPath, которые содержат перекрестное произведение в предикате, как показано в следующем примере:  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  
@@ -128,7 +130,7 @@ Customer[Order/@OrderDate=Order/@ShipDate]
   
  Этот запрос выбирает всех клиентов с элементом `Order`, для которого `OrderDate` равен `ShipDate` `Order`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Введение в схемы XSD с заметками &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
  [Форматирование XML на стороне клиента &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   

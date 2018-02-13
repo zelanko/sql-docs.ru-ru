@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c1bf7265cc15b9dd9401958317d4f14ea400d1
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Настройте экземпляр отказоустойчивого кластера — SMB - SQL Server в Linux
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/01/2018
     mkdir <TempDir>
     ```
 
-    <TempDir>— Это имя папки. В приведенном ниже примере создается папка с именем /var/opt/mssql/tmp.
+    <TempDir> — Это имя папки. В следующем примере создается папка с именем /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -209,7 +209,7 @@ ms.lasthandoff: 02/01/2018
     mkdir <FolderName>
     ```
 
-    \<Имя папки > — имя папки. Полный путь к папке должен быть указан не в надлежащем расположении if. В приведенном ниже примере создается папка с именем /var/opt/mssql/userdata.
+    \<Имя папки > — имя папки. Полный путь к папке должен быть указан не в надлежащем расположении if. В следующем примере создается папка с именем /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -239,7 +239,7 @@ ms.lasthandoff: 02/01/2018
  
    * Введите exit для перестанет быть суперпользователем.
 
-   * Чтобы проверить, создайте базу данных в этой папке. Пример, приведенный ниже использует sqlcmd для создания базы данных, переходить в контекст, проверьте файлы существуют на уровне операционной системы, а затем удаляет временное расположение. Можно использовать среду SSMS.
+   * Чтобы проверить, создайте базу данных в этой папке. В следующем примере программы sqlcmd для создания базы данных, переходить в контекст, проверьте файлы существуют на уровне операционной системы, а затем удаляет временное расположение. Можно использовать среду SSMS.
  
    * Отключение общего ресурса 
 

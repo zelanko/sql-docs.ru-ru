@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87c5d06433a07ac722af92ed64b7c9551d340f96
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b50dce46b9342a4c6271de7abca7bd0205c77761
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Введение в поставщик SQLXMLOLEDB (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Поставщик SQLXMLOLEDB — поставщик OLE DB, который предоставляет [!INCLUDE[msCoName](../../../includes/msconame-md.md)] функциональность SQLXML через объекты данных ActiveX (ADO). Однако этот поставщик может выполнять команды только в режиме ADO «запись в выходящий поток». Поставщик SQLXMLOLEDB не является поставщиком набора строк. При выполнении команды необходимо указать флаг adExecuteStream, который указывает объектам ADO использовать выходной поток, который вы указали.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Поставщик SQLXMLOLEDB — это поставщик OLE DB, который предоставляет функциональность [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML через объекты ADO. Однако этот поставщик может выполнять команды только в режиме ADO «запись в выходящий поток». Поставщик SQLXMLOLEDB не является поставщиком набора строк. При выполнении команды необходимо указать флаг adExecuteStream, который указывает объектам ADO использовать выходной поток, который вы указали.  
   
  В следующем примере показан синтаксис для команды Execute, в котором указан флаг adExecuteStream:  
   
@@ -43,13 +45,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Свойства поставщика SQLXMLOLEDB  
  Поставщик SQLXMLOLEDB имеет следующие характерные для него свойства соединения.  
   
-|Соединение<br /><br /> свойство|По умолчанию<br /><br /> (если есть)|Description|  
+|Соединение<br /><br /> свойство|По умолчанию<br /><br /> (если есть)|Описание|  
 |-----------------------------|----------------------------|-----------------|  
 |Поставщик данных||Предоставляет идентификатор PROGID поставщика OLE DB, через который SQLXMLOLEDB выполняет команды. Начиная с SQLXML 4.0 и [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], этот поставщик является частью собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; поэтому значение этого свойства может быть только «SQLNCLI11». Дополнительные сведения см. в статье [Программирование SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md).|  
   
  Поставщик SQLXMLOLEDB имеет следующие характерные для него свойства команды.  
   
-|Command<br /><br /> свойство|По умолчанию<br /><br /> (если есть)|Description|  
+|Command<br /><br /> свойство|По умолчанию<br /><br /> (если есть)|Описание|  
 |--------------------------|----------------------------|-----------------|  
 |Базовый путь|""|Указывает базовый путь к файлу. Базовый путь к файлу используется для указания местоположения файлов языка XSL или схемы сопоставления. Базовый путь файла также используется для разрешения относительных путей к XSL или схемы файлы, которые были указаны в свойствах XSL или схемы сопоставления сопоставления.<br /><br /> Пример, в котором это свойство используется см. в разделе [выполнение запросов XPath &#40; Поставщик SQLXMLOLEDB &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |ClientSideXML|False|Если требуется, чтобы процесс преобразования набора строк в XML был выполнен на клиенте, а не на сервере, установите этому свойству значение TRUE. Это полезно, когда необходимо переместить нагрузку производительности на средний уровень.<br /><br /> Пример, в котором это свойство используется см. в разделе [выполнение запросов SQL &#40; Поставщик SQLXMLOLEDB &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) или [выполнение шаблонов, содержащих запросы SQL &#40; Поставщик SQLXMLOLEDB &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
@@ -62,7 +64,7 @@ oTestCommand.Execute , , adExecuteStream
   
  Следующая таблица содержит описания ss флаги поток значений свойств.  
   
-|Значение свойства|Description|  
+|Значение свойства|Описание|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|URL-адреса не принимаются для схем сопоставления или XSL.|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|Путь, указываемый для схемы сопоставления или XSL, должен задаваться относительно базового пути самого шаблона.|  

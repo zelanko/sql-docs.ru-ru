@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Создание и настройка группы доступности для SQL Server в Linux
 
@@ -64,7 +64,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Перезагрузка[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Перезагрузка [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 После включения групп доступности, как в Windows, необходимо перезапустить [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Что можно сделать следующие:
 
 ```bash
@@ -365,7 +365,7 @@ sudo systemctl restart mssql-server
 
 12. Нажмите кнопку **Далее**.
 
-13. Выберите, каким образом будет инициализирована во вторичные реплики. Значение по умолчанию — использование [автоматического заполнения](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), которая требует один и тот же путь на всех серверах, участвующих в группе Доступности. Вы также можете мастер резервного копирования, копирования и восстановления (второй вариант); его соединение, если вручную резервного копирования, копирования и восстановления базы данных в реплику (третий параметр); или добавьте базу данных более поздней версии (последний параметр). Как с помощью сертификатов, если вы вручную выполнять резервное копирование и копирования их, разрешения для файлов резервных копий потребуется установить на другие реплики. Нажмите кнопку **Далее**.
+13. Выберите, каким образом будет инициализирована во вторичные реплики. Значение по умолчанию — использование [автоматического заполнения](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), которая требует один и тот же путь на всех серверах, участвующих в группе Доступности. Вы также можете мастер резервного копирования, копирования и восстановления (второй вариант); его соединение, если вручную резервного копирования, копирования и восстановления базы данных в реплику (третий параметр); или добавьте базу данных более поздней версии (последний параметр). С помощью сертификатов, если вы вручную выполнять резервное копирование и копирования их разрешения для файлов резервных копий должно быть задано на другие реплики. Нажмите кнопку **Далее**.
 
 14. В диалоговом окне проверки Если все приходит как успех, изучите. Некоторые предупреждения являются допустимым и не критическая ошибка, например, если прослушиватель не создается. Нажмите кнопку **Далее**.
 
@@ -596,7 +596,7 @@ sudo systemctl restart mssql-server
     ```
 
     >[!NOTE]
-    >На RHEL 7.4 может появиться предупреждение с использованием--master. Чтобы избежать этого, используйте`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+    >На RHEL 7.4 может появиться предупреждение с использованием--master. Чтобы избежать этого, используйте `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     

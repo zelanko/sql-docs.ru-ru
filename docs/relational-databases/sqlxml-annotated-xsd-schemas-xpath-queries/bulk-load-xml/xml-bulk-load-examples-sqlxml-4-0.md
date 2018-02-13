@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -33,19 +34,20 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a218d6f89ee2c190361441a6922770e770ec11a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: cabf000a6a14a041a0d5e5dbedbafb07365dc63f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Примеры массовой загрузки XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Следующие примеры демонстрируют функцию массовой загрузки XML в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Каждый из примеров предоставляет собой схему XSD и эквивалентную ей схему XDR.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Следующие примеры демонстрируют функцию массовой загрузки XML в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Каждый из примеров предоставляет собой схему XSD и эквивалентную ей схему XDR.  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>Скрипт массового загрузчика (ValidateAndBulkload.vbs)  
  Следующий скрипт на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) загружает XML-документа в XML DOM; проверяет его на соответствие схеме и, если документ является верным, выполняет массовую загрузку XML-документ в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы. Этот скрипт можно использовать с каждым из примеров, которые ссылаются на него далее в этом разделе.  
@@ -388,7 +390,7 @@ End Function
 </xsd:schema>  
 ```  
   
- Схема задает  **\<порядок >** элемент с  **\<продукта >** дочерний элемент.  **\<Порядок >** элемент сопоставляется с таблицей Ord и  **\<продукта >** элемент сопоставляется таблице Product в базе данных. Определенная на  **\<продукта >** элемент определяет связь m: n, представленной в таблице OrderDetail. (в заказ может входить множество продуктов, а продукт может входить во множество заказов).  
+ Схема задает  **\<порядок >** элемент с  **\<продукта >** дочерний элемент. **\<Порядок >** элемент сопоставляется с таблицей Ord и  **\<продукта >** элемент сопоставляется таблице Product в базе данных. Определенная на  **\<продукта >** элемент определяет связь m: n, представленной в таблице OrderDetail. (в заказ может входить множество продуктов, а продукт может входить во множество заказов).  
   
  При массовой загрузке XML-документа с этой схемой записи добавляются к таблицам Ord, Product и OrderDetail.  
   

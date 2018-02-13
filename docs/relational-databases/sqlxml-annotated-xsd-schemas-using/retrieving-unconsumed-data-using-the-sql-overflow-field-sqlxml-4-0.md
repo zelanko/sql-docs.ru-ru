@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 803772c967bfb1fb0eaa621abbea8ceecaad4a05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1801fcd260dd674489a851361044ff6c9110c63
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Получение невостребованных данных с помощью sql:overflow-field (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]При вставке записи в базу данных из XML-документа с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] функции OPENXML, все невостребованные данные из исходного XML-документа, которые могут храниться в столбце. При получении данных из базы данных с использованием аннотированных схем, можно указать **SQL: Overflow-поле** атрибут для идентификации столбца в таблице, в которой хранятся данные переполнения. **SQL: Overflow-поле** может быть задан атрибут  **\<элемент >**.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Когда в базу данных с помощью функции OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляются записи из XML-документа, все невостребованные данные из исходного XML-документа могут быть сохранены в столбце. При получении данных из базы данных с использованием аннотированных схем, можно указать **SQL: Overflow-поле** атрибут для идентификации столбца в таблице, в которой хранятся данные переполнения. **SQL: Overflow-поле** может быть задан атрибут  **\<элемент >**.  
   
  Затем эти данные можно получить одним из трех способов.  
   

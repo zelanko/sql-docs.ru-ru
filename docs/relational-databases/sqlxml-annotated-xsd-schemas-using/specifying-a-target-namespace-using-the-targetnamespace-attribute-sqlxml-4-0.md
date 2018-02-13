@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a7333141672e9c6979202a95f24d42cae0ed82e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b0b325cea845e82519752b04591c2c7724b1acf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Задание целевого пространства имен с помощью атрибута targetNamespace (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]При написании схем XSD, можно использовать XSD **targetNamespace** атрибут для указания целевого пространства имен. В этом разделе описывается как XSD **targetNamespace**, **elementFormDefault**, и **attributeFormDefault** атрибуты работают, как они влияют на экземпляр XML, который создан, и как запросы XPath указываются с пространствами имен.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+При написании схем XSD, можно использовать XSD **targetNamespace** атрибут для указания целевого пространства имен. В этом разделе описывается как XSD **targetNamespace**, **elementFormDefault**, и **attributeFormDefault** атрибуты работают, как они влияют на экземпляр XML, который создан, и как запросы XPath указываются с пространствами имен.  
   
  Можно использовать **xsd: targetNamespace** атрибут, чтобы поместить элементы и атрибуты из пространства имен по умолчанию в другом пространстве имен. Можно указать, будут ли локально объявленные элементы и атрибуты схемы уточняться пространством имен, использоваться явно путем применения префикса либо использоваться неявно. Можно использовать **elementFormDefault** и **attributeFormDefault** атрибуты  **\<xsd: schema >** элемента, чтобы указать глобально уточнения локальных элементов и атрибутов либо можно использовать **формы** атрибут для указания отдельных элементов и атрибутов отдельно.  
   

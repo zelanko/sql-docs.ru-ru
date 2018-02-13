@@ -8,24 +8,27 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: security [SQLXML], about security
+helpviewer_keywords:
+- security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 185fd7894bf179bcc43df4c5b6ce9c31e702143f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a447b0efceee45f759743b245a7351dc381ba208
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="core-sqlxml-security-considerations"></a>Основные проблемы безопасности SQLXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Ниже приведены рекомендации по безопасности для использования SQLXML для доступа к данным.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Далее приведены рекомендации по безопасности при использовании SQLXML для доступа к данным.  
   
 -   Поставщик sqlxmloledb ИМЕЕТ **StreamFlags** свойство, которое можно задать флаги, позволяющее определить, какие функции SQLXML следует включить или отключить для каждого указанного экземпляра. При помощи этого свойства можно настраивать использование SQLXML, а также гарантировать, что работать будут только требуемые компоненты. Дополнительные сведения см. в разделе [поставщик SQLXMLOLEDB &#40; SQLXML 4.0 &#41; ](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
   
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 -   При выполнении дельты SQLXML переводит дельту в команды DELETE, UPDATE и INSERT, выполняемые на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Только эти команды всегда затрагивают существующие данные. Команды, сформированные SQLXML, никогда не изменяют базу данных. Пользователь должен явным образом дать команду на изменение структуры базы данных. Например, включив их в **sql:query** блока шаблона.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Проблемы безопасности SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
   
   

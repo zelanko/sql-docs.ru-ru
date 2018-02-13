@@ -1,6 +1,6 @@
 ---
 title: "Установка средств командной строки SQL Server в Linux | Документы Microsoft"
-description: "В этом разделе описывается установка средства SQL Server в Linux."
+description: "В этой статье описывается установка средства SQL Server в Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 16a2366541809237609c88f8458a3930a5569c3a
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 7a23c561b34668a46f86aaad006ff6faacb41f49
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установите sqlcmd и bcp средства командной строки SQL Server в Linux
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/01/2018
 - [macOS](#macos)
 - [Docker](#docker)
 
-В этом разделе описывается установка средств командной строки. Если вам нужны дополнительные примеры использования **sqlcmd** или **bcp**, в разделе [ссылки](#next-steps) в конце этого раздела.
+В этой статье описывается установка средства командной строки. Если вам нужны дополнительные примеры использования **sqlcmd** или **bcp**, в разделе [ссылки](#next-steps) в конце этого раздела.
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Установить средства на RHEL 7
 
@@ -180,7 +180,7 @@ ms.lasthandoff: 02/01/2018
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>Установить средства на macOS
+## <a id="macos"></a> Установить средства на macOS
 
 Предварительный просмотр **sqlcmd** и **bcp** теперь доступен на macOS. Дополнительные сведения см. в разделе [объявления](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
@@ -196,7 +196,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 Начиная с SQL Server 2017 г CTP 2.0, средства командной строки SQL Server включаются в образе Docker. При присоединении к образу с интерактивной командной строки средства можно выполнять локально.
 

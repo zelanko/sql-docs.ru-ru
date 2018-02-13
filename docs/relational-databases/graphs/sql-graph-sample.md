@@ -9,28 +9,29 @@ ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, tsql reference
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffc2bcd906e0d975d763d12aaa899cb414ef6b5e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Создание диаграммы базы данных и выполнить некоторые шаблоны запросов с помощью T-SQL
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Этот образец представляет [!INCLUDE[tsql-md](../../includes/tsql-md.md)] сценария можно создать диаграммы базы данных узлы и ребра, а затем использовать новое предложение соответствия для поиска соответствующих конструкциях и перехода по графа. Этот скрипт будет работать на обе базы данных SQL Azure и[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Этот образец представляет [!INCLUDE[tsql-md](../../includes/tsql-md.md)] сценария можно создать диаграммы базы данных узлы и ребра, а затем использовать новое предложение соответствия для поиска соответствующих конструкциях и перехода по графа. Этот скрипт будет работать на обе базы данных SQL Azure и [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>Образец схемы  
 В этом примере создается схема graph, как показано на рис. 1 для гипотетического социальных сетей, с узлами людей, ресторан и City. Эти узлы подключены друг к другу с помощью друзей, хочет LivesIn и LocatedIn границ. 

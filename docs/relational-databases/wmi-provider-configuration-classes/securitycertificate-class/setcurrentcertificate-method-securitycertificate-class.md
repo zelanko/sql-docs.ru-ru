@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetCurrentCertificate Method (SecurityCertificate Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetCurrentCertificate Method (SecurityCertificate Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetCurrentCertificate method
+helpviewer_keywords:
+- SetCurrentCertificate method
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06d9742dab834e88673db63df18417793e26c1ce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ec64ddeccafc4135a40dc2256451212e90799b92
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>Метод SetCurrentCertificate (класс SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Задает текущий сертификат безопасности.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Задает текущий сертификат безопасности.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +48,7 @@ object.SetCurrentCertificate(SHA , SQLInstance)
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*SHA*|Строковое значение, определяющее отпечаток безопасного хэш-алгоритма (SHA) для нужного сертификата безопасности.|  
 |*SQLInstance*|Строковое значение, указывающее экземпляр, для которого необходим сертификат.|  

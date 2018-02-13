@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: edff09c1c66a1b3c97a80d42d5a1d9702dca3e0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Ограничения и известные проблемы для служб SSIS в Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Эта статья описывает текущие ограничения и известные проблемы для SQL Server Integration Services (SSIS) для Linux.
 
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/08/2017
 
 Другие ограничения и известные проблемы с помощью служб SSIS в Linux см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a>Поддерживаемые и неподдерживаемые компоненты
+## <a name="components"></a> Поддерживаемые и неподдерживаемые компоненты
 
 На платформе Linux поддерживаются следующие встроенные компоненты служб Integration Services. Некоторые из них имеют ограничения на платформе Linux, как описано в следующих таблицах.
 
@@ -50,12 +52,12 @@ ms.lasthandoff: 12/08/2017
 - задача «Массовая вставка»
 - Задача потока данных
 - Задача «Профилирование данных»
-- Задача «Выполнение SQL»
+- Задача "Выполнение SQL"
 - Задача «Выполнение инструкции T-SQL»
 - Задания выражения
 - Задача «FTP»
 - Задача «Веб-служба»
-- Задача «XML»
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>Такие ограничения задач потока управления
 
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/08/2017
 | ADO.NET, источник и назначение | Поддерживается только поставщик данных SQLClient. |
 | Неструктурированный файл источника и назначения | Поддерживают только пути к файлам Windows стиля, к которым применяется правило сопоставления пути по умолчанию. Например `D:\home\ssis\travel.csv` становится `/home/ssis/travel.csv`. |
 | Источник OData | Поддерживает только обычная проверка подлинности. |
-| Источник и назначение | Поддерживает 64-разрядные драйверы ODBC Юникод в Linux. Зависит от диспетчера драйверов UnixODBC в Linux. |
+| Источник и назначение ODBC | Поддерживает 64-разрядные драйверы ODBC Юникод в Linux. Зависит от диспетчера драйверов UnixODBC в Linux. |
 | Источник OLE DB и назначение | Поддерживается только SQL Server Native Client 11.0 и поставщик Microsoft OLE DB для SQL Server. |
 | | |
 

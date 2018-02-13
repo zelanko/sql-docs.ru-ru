@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 660fe866db09675916d90cdf8130b2b99980b2ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Исключение элементов схемы из XML-документа с помощью sql: сопоставлен
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Каждый элемент и атрибут в схеме XSD сопоставляется базы данных, таблиц и представлений и столбцов в результате сопоставления по умолчанию. Если вы хотите создать элемент в схеме XSD, не соответствует любой таблицы базы данных (представления) или столбец, и не фигурирующий в XML, можно указать **sql: сопоставленный** заметки.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+В результате сопоставления по умолчанию каждый элемент и атрибут в схеме XSD будет сопоставлен с таблицей и столбцом в базе данных. Если вы хотите создать элемент в схеме XSD, не соответствует любой таблицы базы данных (представления) или столбец, и не фигурирующий в XML, можно указать **sql: сопоставленный** заметки.  
   
  **Sql: сопоставленный** заметки особенно полезен, если схему нельзя изменять или если схема используется для проверки XML из других источников и еще содержит данные, которые не хранятся в базе данных. **Sql: сопоставленный** заметки отличается от **sql: является константа** тем, что несопоставленные элементы и атрибуты в XML-документе не отображаются.  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
  Обратите внимание, что ContactID, FirstName и LastName присутствуют, но не HomeAddress, поскольку в схеме сопоставления задано значение 0 для **sql: сопоставленный** атрибута.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [По умолчанию осуществляется сопоставление элементов и атрибутов таблиц и столбцов &#40; XSD SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

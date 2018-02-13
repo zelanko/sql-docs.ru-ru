@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], queries
 - templates [SQLXML], annotated XSD schemas in queries
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a873bc0b382c1b81daed1cedb6ebb6229296ba7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cd63b4426bdc1b4adf9020b5cf4bd3e50622528
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Использование схем XSD с заметками в запросах (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Можно создавать запросы к схеме с заметками для получения данных из базы данных путем указания запроса XPath в шаблоне к схеме XSD.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Для получения данных из базы данных путем указания запроса XPath в шаблоне к схеме XSD можно задавать запросы к аннотированным схемам.  
   
  **\<Sql:xpath-запрос >** элемент позволяет указать запрос XPath к XML-представлению, определенному схемой с заметками. Аннотированной схемы, по которой запрос XPath должно быть выполнено определяется с помощью **схемы сопоставления** атрибут  **\<sql:xpath-запрос >** элемента.  
   
@@ -145,6 +147,6 @@ ms.lasthandoff: 11/17/2017
 </sql:xpath-query>  
 ```  
   
- В шаблоне определяется запрос XPath, но не задаются схемы сопоставления. Таким образом, этот запрос обрабатывается как **dbobject** тип запроса, в котором Production.ProductPhoto — имя таблицы и @ProductPhotoID= '100' — предикат, который находит фотографию продукта со значением идентификатора 100. @LargePhoto— столбец, из которого требуется извлечь значение.  
+ В шаблоне определяется запрос XPath, но не задаются схемы сопоставления. Таким образом, этот запрос обрабатывается как **dbobject** тип запроса, в котором Production.ProductPhoto — имя таблицы и @ProductPhotoID= '100' — предикат, который находит фотографию продукта со значением идентификатора 100. @LargePhoto — столбец, из которого требуется извлечь значение.  
   
   
