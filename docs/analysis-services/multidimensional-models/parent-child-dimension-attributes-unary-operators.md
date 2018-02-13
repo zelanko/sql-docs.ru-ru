@@ -16,19 +16,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], unary operators
 - unary operators
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a387b74a5e0f1a401249555bb470159394bc1338
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>Атрибуты измерения родители потомки - унарные операторы
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В измерении, содержащем связь родитель потомок в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], укажите унарный (или пользовательской свертки) столбец оператор, который определяет пользовательскую свертку для всех невычисляемых элементов родительского атрибута. Унарный оператор применяется к элементам каждый раз, когда оцениваются значения родительских элементов. Свойство **UnaryOperatorColumn** в родительском атрибуте (**Использование**=Родитель) задает столбец таблицы в представлении источника данных, в которой содержатся унарные операторы. Значения для операторов пользовательской свертки, хранящихся в данном столбце, применяются к каждому элементу атрибута.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В измерении, содержащем связь типа "родитель-потомок" в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], нужно указывать столбец унарного оператора (или пользовательской свертки), который определяет пользовательскую свертку для всех невычисляемых элементов родительского атрибута. Унарный оператор применяется к элементам каждый раз, когда оцениваются значения родительских элементов. Свойство **UnaryOperatorColumn** в родительском атрибуте (**Использование**=Родитель) задает столбец таблицы в представлении источника данных, в которой содержатся унарные операторы. Значения для операторов пользовательской свертки, хранящихся в данном столбце, применяются к каждому элементу атрибута.  
   
  Можно создать и указать именованное вычисление в таблице измерения в представлении источника данных в виде столбца унарного оператора. Простейшее выражение, такое как «+», возвращает одинаковый оператор для всех элементов. Но использовать можно любое выражение, при условии, что такое выражение возвращает оператор для каждого элемента.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
  На вкладке **Браузер** конструктора измерений можно просмотреть унарные операторы, расположенные рядом с каждым элементом иерархии. Также унарные операторы можно изменить во время работы с измерением, доступным для записи. Если измерение не доступно для записи, то необходимо воспользоваться средством для изменения источника данных напрямую.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [Операторы пользовательской свертки в измерениях родители потомки](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
  [Запуск мастера бизнес-аналитики в конструкторе измерений](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  

@@ -29,19 +29,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
-# <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритма временных рядов включает два отдельных алгоритма для анализа временных рядов:  
+# <a name="microsoft-time-series-algorithm-technical-reference"></a>Технический справочник по алгоритму временных рядов (Майкрософт)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+алгоритм временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] включает два отдельных алгоритма для анализа временных рядов:  
   
 -   алгоритм ARTXP, который появился в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], оптимизирован для прогнозирования следующего вероятного значения в ряду;  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
 >  Алгоритм временных рядов (Майкрософт) доступен во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], однако некоторые дополнительные функции, в том числе параметры для настройки анализа временных рядов, доступны только в специальных выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
 ### <a name="detection-of-seasonality"></a>Обнаружение сезонности  
- Оба алгоритма ARIMA и ARTXP поддерживают обнаружение сезонности или периодичности. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют быстрое преобразование Фурье для определения сезонности до этапа обучения. Тем не менее можно повлиять на обнаружение сезонности и результаты анализа временных рядов, задав параметры алгоритма.  
+ Оба алгоритма ARIMA и ARTXP поддерживают обнаружение сезонности или периодичности. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют быстрое преобразование Фурье для определения сезонности до этапа обучения. Тем не менее можно повлиять на обнаружение сезонности и результаты анализа временных рядов, задав параметры алгоритма.  
   
 -   Изменяя значение параметра *AUTODETECT_SEASONALITY*, можно изменить возможное количество создаваемых временных интервалов.  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 01/08/2018
 |*FORECAST_METHOD*|Указывает, какой алгоритм используется для анализа и прогнозирования. Возможные значения — ARTXP, ARIMA и MIXED. Значением по умолчанию является MIXED.|  
 |*HISTORIC_MODEL_COUNT*|Указывает число моделей с предысторией, которые будут построены. Значение по умолчанию равно 1.<br /><br /> Примечание. Этот параметр доступен только в некоторых выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*HISTORICAL_MODEL_GAP*|Указывает временной промежуток между двумя последовательными моделями с предысторией. Значение по умолчанию равно 10. Это значение выражено в единицах времени, которые определяются моделью.<br /><br /> Например, если установить это значение равным g, модели с предысторией будут строиться для данных, усеченных временными срезами с интервалами g, 2*g, 3\*g и так далее.<br /><br /> Примечание. Этот параметр доступен только в некоторых выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|*INSTABILITY_SENSITIVITY*|Управляет точкой, в которой дисперсия прогноза превышает определенное пороговое значение, после чего алгоритм ARTXP запрещает такие прогнозы. Значение по умолчанию равно 1.<br /><br /> Примечание. Этот параметр не применяется к моделям, использующим только алгоритм ARIMA.<br /><br /> Значение по умолчанию (1) означает режим работы, аналогичный [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] наблюдают за нормализованным стандартным отклонением для каждого прогноза. Как только это значение превышает пороговое значение для какого-либо прогноза, алгоритм временных рядов возвращает значение NULL и прекращает процесс прогнозирования.<br /><br /> Значение [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] отключает проверку нестабильности. Это значит, что можно создавать неограниченное число прогнозов независимо от дисперсии.<br /><br /> Примечание. Этот параметр можно изменять только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. В выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют только значение по умолчанию (1).|  
+|*INSTABILITY_SENSITIVITY*|Управляет точкой, в которой дисперсия прогноза превышает определенное пороговое значение, после чего алгоритм ARTXP запрещает такие прогнозы. Значение по умолчанию равно 1.<br /><br /> Примечание. Этот параметр не применяется к моделям, использующим только алгоритм ARIMA.<br /><br /> Значение по умолчанию (1) означает режим работы, аналогичный [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] наблюдают за нормализованным стандартным отклонением для каждого прогноза. Как только это значение превышает пороговое значение для какого-либо прогноза, алгоритм временных рядов возвращает значение NULL и прекращает процесс прогнозирования.<br /><br /> Значение [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] отключает проверку нестабильности. Это значит, что можно создавать неограниченное число прогнозов независимо от дисперсии.<br /><br /> Примечание. Этот параметр можно изменять только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. В выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют только значение по умолчанию (1).|  
 |*MAXIMUM_SERIES_VALUE*|Указывает максимальное значение, используемое для прогнозов. Этот параметр используется наряду с параметром *MINIMUM_SERIES_VALUE*для ограничения прогнозов с учетом некоторого ожидаемого диапазона. Например, можно указать, что прогнозируемый объем продаж в течение любых суток никогда не должен превышать величину запасов товаров.<br /><br /> Примечание. Этот параметр доступен только в некоторых выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SERIES_VALUE*|Задает минимальное прогнозируемое значение. Этот параметр используется наряду с параметром *MAXIMUM_SERIES_VALUE*для ограничения прогнозов с учетом некоторого ожидаемого диапазона. Например, можно указать, что прогнозируемый объем продаж никогда не должен быть отрицательным числом.<br /><br /> Примечание. Этот параметр доступен только в некоторых выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SUPPORT*|Указывает минимальное количество временных срезов, необходимых для разбиения каждого дерева временных рядов. Значение по умолчанию равно 10.|  
@@ -164,7 +165,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  В следующей таблице перечислены конкретные типы содержимого входных столбцов, типы содержимого прогнозируемых столбцов и флаги модели, поддерживаемые алгоритмом временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|столбцом|Типы содержимого|  
+|Столбец|Типы содержимого|  
 |------------|-------------------|  
 |Входной атрибут|Непрерывные, ключевые, ключевые времени и табличные|  
 |Прогнозируемый атрибут|Непрерывные, табличные|  
@@ -172,9 +173,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
-## <a name="see-also"></a>См. также:  
- [Алгоритм временных рядов (Майкрософт)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+## <a name="see-also"></a>См. также  
+ [Алгоритм временных рядов](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Примеры запросов для модели временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей временных рядов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для модели временных рядов &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

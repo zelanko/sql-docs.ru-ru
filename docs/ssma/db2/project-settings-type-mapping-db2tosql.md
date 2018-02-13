@@ -8,23 +8,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 6ab07bb5ad3932c45dacb7aa1b359083f05ec9bf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Параметры (сопоставление типов) проекта (DB2ToSQL)
 На странице сопоставление типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 **Добавить**  
 Щелкните, чтобы добавить в список сопоставления типа данных.  
   
-**Изменить**  
+**Правка**  
 Щелкните для изменения выбранного типа данных в списке сопоставления.  
   
 **Удалить**  
@@ -69,9 +70,9 @@ ms.lasthandoff: 12/21/2017
 |DB2 Тип данных|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
-|binary_double|число с плавающей запятой [53]|  
-|binary_float|число с плавающей запятой [53]|  
-|binary_integer|ssNoversion|  
+|binary_double|float[53]|  
+|binary_float|float[53]|  
+|binary_integer|int|  
 |большой двоичный объект|varbinary(max)|  
 |boolean|bit|  
 |char;|varchar(max)|  
@@ -79,13 +80,13 @@ ms.lasthandoff: 12/21/2017
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |CLOB|varchar(max)|  
-|Дата|datetime2 [0]|  
-|dec|DEC [38] [0]|  
-|Decimal|число с плавающей запятой [53]|  
-|число двойной точности|число с плавающей запятой [53]|  
-|FLOAT|число с плавающей запятой [53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|date|datetime2[0]|  
+|dec|dec[38][0]|  
+|Decimal|float[53]|  
+|число двойной точности|float[53]|  
+|float|float[53]|  
+|int|int|  
+|integer|int|  
 |long|varchar(max)|  
 |Long raw|varbinary(max)|  
 |Long raw [\*... 8000]<sup>*</sup>|varbinary [*]|  
@@ -97,27 +98,27 @@ ms.lasthandoff: 12/21/2017
 |изменение символов национального алфавита<sup>*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|number|число с плавающей запятой [53]|  
-|NUMERIC|число с плавающей запятой [53]|  
+|number|float[53]|  
+|numeric|float[53]|  
 |NVARCHAR2|nvarchar(max)|  
-|pls_integer|ssNoversion|  
+|pls_integer|int|  
 |raw|varbinary(max)|  
-|REAL|число с плавающей запятой [53]|  
-|RowId|UNIQUEIDENTIFIER|  
-|Signtype|SMALLINT|  
-|SMALLINT|SMALLINT|  
+|real|float[53]|  
+|RowId|uniqueidentifier|  
+|Signtype|smallint|  
+|smallint|smallint|  
 |строка|varchar(max)|  
 |TIMESTAMP|datetime2|  
 |Отметка времени с местным часовым поясом|datetimeoffset|  
 |Отметка времени с часовым поясом|datetimeoffset|  
-|Urowid|UNIQUEIDENTIFIER|  
+|Urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
 |VARCHAR2|varchar(max)|  
 |Xmltype|xml|  
   
-<sup>*</sup>Применяется для возврата значения только сопоставления типов.  
+<sup>*</sup> Применяется для возврата значения только сопоставления типов.  
   
-<sup>**</sup>Применяется к аргумента только сопоставления типов.  
+<sup>**</sup> Применяется к аргумента только сопоставления типов.  
   
 ### <a name="default-column-type-mapping"></a>Сопоставление типа столбца по умолчанию  
 Следующая таблица содержит сопоставление типов по умолчанию для столбцов.  
@@ -125,36 +126,36 @@ ms.lasthandoff: 12/21/2017
 |DB2 Тип данных|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
-|binary_double|число с плавающей запятой [53]|  
-|binary_float|число с плавающей запятой [53]|  
+|binary_double|float[53]|  
+|binary_float|float[53]|  
 |большой двоичный объект|varbinary(max)|  
 |char;|char;|  
 |переменной типа char [*.. \*]|varchar [*]|  
 |char [*.. \*]|char [*]|  
 |character|char;|  
 |символ varying [*.. \*]|varchar [*]|  
-|символ [*.. \*]|char [*]|  
+|character[*..\*]|char [*]|  
 |CLOB|varchar(max)|  
-|Дата|datetime2 [0]|  
-|dec|DEC [38] [0]|  
-|DEC [*.. \*]|DEC [*] [0]|  
-|DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|Decimal|Decimal [38] [0]|  
-|Decimal [*.. \*]|Decimal [*] [0]|  
-|Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
-|число двойной точности|число с плавающей запятой [53]|  
-|FLOAT|число с плавающей запятой [53]|  
+|date|datetime2[0]|  
+|dec|dec[38][0]|  
+|dec[*..\*]|dec[*][0]|  
+|dec[*..\*][\*..\*]|dec[*][\*]|  
+|Decimal|decimal[38][0]|  
+|decimal[*..\*]|decimal[*][0]|  
+|decimal[*..\*][\*..\*]|decimal[*][\*]|  
+|число двойной точности|float[53]|  
+|float|float[53]|  
 |число с плавающей запятой [*.. 53]|число с плавающей запятой [*]|  
-|число с плавающей запятой [54.. *]|число с плавающей запятой [53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|число с плавающей запятой [54.. *]|float[53]|  
+|int|int|  
+|integer|int|  
 |long|varchar(max)|  
 |Long raw|varbinary(max)|  
 |Long raw [*.. 8000]|varbinary [*]|  
 |Long raw [8001.. *]|varbinary(max)|  
 |Long varchar|varchar(max)|  
 |длинные [*.. 8000]|varchar [*]|  
-|длинные [8001.. *]|varchar(max)|  
+|long[8001..*]|varchar(max)|  
 |Национальный char|NCHAR|  
 |Национальный char переменной [*.. \*]|nvarchar [*]|  
 |Национальный char [*.. \*]|nchar [*]|  
@@ -164,27 +165,27 @@ ms.lasthandoff: 12/21/2017
 |NCHAR|NCHAR|  
 |nchar [*]|nchar [*]|  
 |NCLOB|nvarchar(max)|  
-|number|число с плавающей запятой [53]|  
-|Номер [*.. \*]|числовой [*]|  
-|Номер [*.. \*][\*.. \*]|числовой [*] [\*]|  
-|NUMERIC|NUMERIC|  
-|числовые [*.. \*]|числовой [*]|  
-|числовые [*.. \*][\*.. \*]|числовой [*] [\*]|  
-|NVARCHAR2 [*.. \*]|nvarchar [*]|  
-|Необработанный [*.. \*]|varbinary [*]|  
-|REAL|число с плавающей запятой [53]|  
-|RowId|UNIQUEIDENTIFIER|  
-|SMALLINT|SMALLINT|  
+|number|float[53]|  
+|number[*..\*]|numeric[*]|  
+|number[*..\*][\*..\*]|numeric[*][\*]|  
+|numeric|numeric|  
+|numeric[*..\*]|numeric[*]|  
+|numeric[*..\*][\*..\*]|numeric[*][\*]|  
+|nvarchar2[*..\*]|nvarchar [*]|  
+|raw[*..\*]|varbinary [*]|  
+|real|float[53]|  
+|RowId|uniqueidentifier|  
+|smallint|smallint|  
 |TIMESTAMP|datetime2|  
 |Отметка времени с местным часовым поясом|datetimeoffset|  
-|Отметка времени с местным часовым поясом [*.. \*]|DateTimeOffset [*]|  
+|Отметка времени с местным часовым поясом [*.. \*]|datetimeoffset[*]|  
 |Отметка времени с часовым поясом|datetimeoffset|  
-|Отметка времени с часовым поясом [*.. \*]|DateTimeOffset [*]|  
-|Отметка времени [*.. \*]|datetime2 [*]|  
-|Urowid|UNIQUEIDENTIFIER|  
-|urowid [*.. \*]|UNIQUEIDENTIFIER|  
-|varchar [*.. \*]|varchar [*]|  
-|VARCHAR2 [*.. \*]|varchar [*]|  
+|Отметка времени с часовым поясом [*.. \*]|datetimeoffset[*]|  
+|timestamp[*..\*]|datetime2 [*]|  
+|Urowid|uniqueidentifier|  
+|urowid[*..\*]|uniqueidentifier|  
+|varchar[*..\*]|varchar [*]|  
+|varchar2[*..\*]|varchar [*]|  
 |Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Сопоставление типа локальной переменной по умолчанию  
@@ -193,11 +194,11 @@ ms.lasthandoff: 12/21/2017
 |DB2 Тип данных|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
-|binary_double|число с плавающей запятой [53]|  
-|binary_float|число с плавающей запятой [53]|  
-|binary_interger|ssNoversion|  
+|binary_double|float[53]|  
+|binary_float|float[53]|  
+|binary_interger|int|  
 |BLOB-объект|varbinary(max)|  
-|Логическое значение|bit|  
+|Boolean|bit|  
 |CHAR|char;|  
 |переменной типа char [*.. 8000]|varchar [*]|  
 |переменной типа char [8001.. *]|varchar(max)|  
@@ -209,20 +210,20 @@ ms.lasthandoff: 12/21/2017
 |символ [*.. 8000]|char [*]|  
 |символ [8001.. *]|varchar(max)|  
 |CLOB|varchar(max)|  
-|Дата|datetime2 [0]|  
-|dec|DEC [38] [0]|  
-|DEC [*.. \*]|DEC [*] [0]|  
-|DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|Decimal|Decimal [38] [0]|  
-|Decimal [*.. \*]|Decimal [*] [0]|  
-|Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
-|число двойной точности|число с плавающей запятой [53]|  
-|float|число с плавающей запятой [53]|  
+|date|datetime2[0]|  
+|dec|dec[38][0]|  
+|dec[*..\*]|dec[*][0]|  
+|dec[*..\*][\*..\*]|dec[*][\*]|  
+|Decimal|decimal[38][0]|  
+|decimal[*..\*]|decimal[*][0]|  
+|decimal[*..\*][\*..\*]|decimal[*][\*]|  
+|число двойной точности|float[53]|  
+|Число с плавающей запятой|float[53]|  
 |число с плавающей запятой [*.. 53]|число с плавающей запятой [*]|  
-|число с плавающей запятой [54.. *]|число с плавающей запятой [53]|  
-|int|ssNoversion|  
-|Целочисленный|ssNoversion|  
-|целое число со знаком [*.. \*]|числовой [*] [0]|  
+|число с плавающей запятой [54.. *]|float[53]|  
+|int|int|  
+|Целочисленный|int|  
+|integer[*..\*]|numeric[*][0]|  
 |Long|varchar(max)|  
 |Long raw|varbinary(max)|  
 |Long raw [*.. 8000]|varbinary [*]|  
@@ -243,37 +244,37 @@ ms.lasthandoff: 12/21/2017
 |nchar varying [*.. 4000]|nvarchar [*]|  
 |nchar varying [4001.. *]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Количество|число с плавающей запятой [53]|  
-|Номер [*.. \*]|числовой [*]|  
-|Номер [*.. \*][\*.. \*]|числовой [*] [\*]|  
-|Числовой|числовой [38] [0]|  
-|числовые [*.. \*]|числовой [*]|  
-|числовые [*.. \*][\*.. \*]|числовой [*] [\*]|  
+|Количество|float[53]|  
+|number[*..\*]|numeric[*]|  
+|number[*..\*][\*..\*]|numeric[*][\*]|  
+|Числовой|numeric[38][0]|  
+|numeric[*..\*]|numeric[*]|  
+|numeric[*..\*][\*..\*]|numeric[*][\*]|  
 |NVARCHAR2 [*.. 4000]|nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
-|pls_integer|ssNoversion|  
-|Необработанный [*.. 8000]|varbinary [*]|  
-|Необработанный [8001.. *]|varbinary(max)|  
-|Real|число с плавающей запятой [53]|  
-|RowId|UNIQUEIDENTIFIER|  
-|Signtype|SMALLINT|  
-|Smallint|SMALLINT|  
-|строки [*.. 8000]|varchar [*]|  
-|строки [8001.. *]|varchar(max)|  
+|pls_integer|int|  
+|raw[*..8000]|varbinary [*]|  
+|raw[8001..*]|varbinary(max)|  
+|Real|float[53]|  
+|RowId|uniqueidentifier|  
+|Signtype|smallint|  
+|Smallint|smallint|  
+|string[*..8000]|varchar [*]|  
+|string[8001..*]|varchar(max)|  
 |TIMESTAMP|datetime2|  
 |Отметка времени с местным часовым поясом|datetimeoffset|  
 |Отметка времени с часовым поясом|datetimeoffset|  
-|Отметка времени с местным часовым поясом [*.. \*]|DateTimeOffset [*]|  
-|Отметка времени с часовым поясом [*.. \*]|DateTimeOffset [*]|  
-|Отметка времени [*.. \*]|datetime2 [*]|  
-|Urowid|UNIQUEIDENTIFIER|  
-|urowid [*.. \*]|UNIQUEIDENTIFIER|  
+|Отметка времени с местным часовым поясом [*.. \*]|datetimeoffset[*]|  
+|Отметка времени с часовым поясом [*.. \*]|datetimeoffset[*]|  
+|timestamp[*..\*]|datetime2 [*]|  
+|Urowid|uniqueidentifier|  
+|urowid[*..\*]|uniqueidentifier|  
 |varchar [*.. 8000]|varchar [*]|  
 |varchar [8001.. *]|varchar(max)|  
 |VARCHAR2 [*.. 8000]|varchar [*]|  
 |VARCHAR2 [8001.. *]|varcha(max)|  
 |Xmltype|xml|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Справочник по пользовательскому интерфейсу &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
