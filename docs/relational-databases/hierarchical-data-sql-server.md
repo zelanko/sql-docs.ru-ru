@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - hierarchyid [Database Engine]
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2127532c0e60feba9cff8f2f986260ac8179e6d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9eee39caae6b780e692ed0cee3440b6cb250da9f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchical-data-sql-server"></a>Иерархические данные (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Встроенный тип данных **hierarchyid** упрощает хранение и запрос иерархических данных. **hierarchyid** оптимизирован для представления деревьев, которые являются наиболее распространенным типом иерархических данных.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Встроенный тип данных **hierarchyid** упрощает хранение и запрос иерархических данных. **hierarchyid** оптимизирован для представления деревьев, которые являются наиболее распространенным типом иерархических данных.  
   
  Иерархические данные представляют собой набор элементов данных, связанных между собой иерархическими связями. Иерархические связи — это связи, в которых один из элементов данных является родителем другого элемента. Примеры иерархических данных, которые обычно хранятся в базах данных, включают следующее.  
   

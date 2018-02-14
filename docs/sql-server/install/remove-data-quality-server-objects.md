@@ -8,26 +8,29 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 81551447d7f0bc7707593ba0447649ef4e58f710
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f766a6eaf4039117104fac8e3ad10124697cbb00
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="remove-data-quality-server-objects"></a>Удаление объектов служб Data Quality Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] При удалении [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или при полном удалении экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], содержащего [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], некоторые объекты [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] сохраняются, в том числе базы данных служб DQS. Это означает, что при удалении сервера служб DQS с помощью программы установки SQL Server данные [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] не теряются. После завершения процесса удаления эти объекты [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] необходимо удалить вручную.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  При удалении [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или при полном удалении экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащего [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , некоторые объекты [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] сохраняются, в том числе базы данных служб DQS. Это означает, что при удалении сервера служб DQS с помощью программы установки SQL Server данные [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] не теряются. После завершения процесса удаления эти объекты [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] необходимо удалить вручную.  
   
 > [!NOTE]  
->  -   Перед удалением [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]рассмотрите возможность создания резервных копий всех имеющихся баз знаний путем их экспорта в файл DQSB, который впоследствии можно будет использовать для импорта всех баз знаний в новую установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Экспорт и импорт всех баз знаний служб DQS можно выполнить только с помощью программы DQSInstaller.exe, запускаемой из командной строки с соответствующими параметрами. Дополнительные сведения см. в статье [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).  
+>  -   Перед удалением [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]рассмотрите возможность создания резервных копий всех имеющихся баз знаний путем их экспорта в файл DQSB, который впоследствии можно будет использовать для импорта всех баз знаний в новую установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Экспорт и импорт всех баз знаний служб DQS можно выполнить только с помощью программы DQSInstaller.exe, запускаемой из командной строки с соответствующими параметрами. Дополнительные сведения см. в статье [Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).  
 > -   Перед удалением баз данных служб DQS, возможно, следует создать их резервную копию для последующего восстановления. Дополнительные сведения об этой процедуре см. в разделе [Управление базами данных DQS](../../data-quality-services/manage-dqs-databases.md).  
   
 ## <a name="uninstall-data-quality-server-from-a-sql-server-instance"></a>Удаление сервера DQS с экземпляра SQL Server  

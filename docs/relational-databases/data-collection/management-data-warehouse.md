@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 107ccdd35c7ba36b74af7121b67b6c17e009cfb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f61ec563867912a713504af1a291bc26507888ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="management-data-warehouse"></a>хранилище данных управления
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Хранилище данных управления — это реляционная база данных, собираемых с сервера, который при сборе данных является целевым. Эти данные используются при подготовке отчетов для наборов сбора системных данных и могут быть использованы для создания настраиваемых отчетов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Хранилище данных управления — это реляционная база данных, собираемых с сервера, который при сборе данных является целевым. Эти данные используются при подготовке отчетов для наборов сбора системных данных и могут быть использованы для создания настраиваемых отчетов.  
   
  Инфраструктура сборщика данных определяет планы выполнения заданий и планы обслуживания, необходимые для реализации политик хранения, определенных администратором базы данных.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  В следующей таблице описаны таблицы базы данных в схеме core. Эти таблицы базы данных позволяют сборщику данных отслеживать источники данных, пользователей, вставивших данные, и время передачи в хранилище данных.  
   
-|Имя таблицы|Описание|  
+|Имя таблицы|Description|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Хранит сведения о группировке отчетов из хранилища данных управления, а также статистику счетчиков производительности.|  
 |core.snapshots_internal|Определяет каждый новый моментальный снимок. Новая строка вставляется в эту таблицу каждый раз, когда пакет передачи начинает передачу нового пакета данных.|  

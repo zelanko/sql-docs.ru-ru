@@ -17,21 +17,21 @@ helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 97398ffda5f94b9a76adea40111c2f5bd9c3137a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12c46e8d5a1496d21f2f4b0ab40956020a8ac612
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="extended-events"></a>Расширенные события
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Расширенная подсистема событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет чрезвычайно масштабируемую и легко настраиваемую архитектуру, которая позволяет пользователям собирать именно такое количество информации, которое необходимо для устранения нарушения в работе или выявления проблемы производительности.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет чрезвычайно масштабируемую и легко настраиваемую архитектуру, которая позволяет пользователям собирать именно такое количество информации, которое необходимо для устранения нарушения в работе или выявления проблемы производительности.  
 
 Дополнительные сведения о расширенных событиях см. в следующих источниках:
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
  Расширенные события — это упрощенная система мониторинга производительности, в которой применяется очень небольшой объем ресурсов. Система расширенных событий имеет два графических пользовательских интерфейса (**Мастер новых сеансов** или **Создание сеанса**), которые позволяют создавать, изменять, выводить и анализировать данные сеанса.  
   
 ## <a name="extended-events-concepts"></a>Общие сведения о расширенных событиях  
- Подсистема расширенных событий (Extended Events) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] основана на таких основных понятиях, как событие и объект-получатель событий, а также использует понятия трассировки событий для Windows (ETW) и вводит несколько новых понятий.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Подсистема расширенных событий (Extended Events) основана на существующих основных понятиях, таких как событие или объект-получатель событий, использует понятия трассировки событий для Windows (ETW) и вводит собственные понятия.  
   
  В следующей таблице даны определения понятий, применяемых в расширенной подсистеме событий.  
   
@@ -106,9 +106,9 @@ ms.lasthandoff: 11/17/2017
 |Описывает, как с помощью приведенной ниже процедуры можно просматривать события и действия расширенных событий, аналогичных каждому событию трассировки SQL со связанными столбцами.|[Просмотр эквивалентов расширенных событий для классов событий трассировки SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Описывает, как выяснить, какие параметры можно задать при использовании аргумента ADD TARGET в инструкции CREATE EVENT SESSION или ALTER EVENT SESSION.|[Получение настраиваемых параметров для аргумента ADD TARGET](http://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
 |Описано, как преобразовать существующий скрипт приложения трассировки SQL в сеанс расширенных событий.|[Преобразование существующего скрипта трассировки SQL в сеанс расширенных событий](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|Описывает, как определить, какие запросы удерживают данную блокировку и каковы план запроса и стек [!INCLUDE[tsql](../../includes/tsql-md.md)] во время получения блокировки.|[определить запросы, удерживающие блокировки](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
+|Описывает, как определить, какие запросы удерживают данную блокировку и каковы план запроса и стек [!INCLUDE[tsql](../../includes/tsql-md.md)] во время получения блокировки.|[Определение запросов, содержащих блокировки](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Описывает, как определить источник блокировок, приводящих к ухудшению производительности базы данных.|[найти объекты, на которые наложено наибольшее число блокировок](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
-|Описывает, как использовать расширенные события совместно со средством трассировки событий для Windows (ETW) для наблюдения за активностью системы.|[отслеживать активность системы с помощью расширенных событий](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
+|Описывает, как использовать расширенные события совместно со средством трассировки событий для Windows (ETW) для наблюдения за активностью системы.|[Мониторинг активности системы с помощью расширенных событий](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 | Использование представлений каталога и динамических административных представлений для расширенных событий | [Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
   

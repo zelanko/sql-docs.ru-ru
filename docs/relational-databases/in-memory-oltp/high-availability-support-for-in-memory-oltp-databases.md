@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3f655fc9d0a88ab0c4f11e7b6adbeb0bb405467
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 299c2e0d7306fb1cca33eac4a26c1d3b04dca83c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Поддержка высокого уровня доступности в базах данных OLTP в памяти
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Базы данных, содержащие оптимизированные для памяти таблицы со скомпилированными в собственном коде хранимыми процедурами или без них, полностью поддерживаются с группами доступности AlwaysOn.  Нет никаких различий в конфигурации и поддержке для баз данных, которые содержат объекты [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , и тех, в которых их нет.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Базы данных, содержащие оптимизированные для памяти таблицы со скомпилированными в собственном коде хранимыми процедурами или без них, полностью поддерживаются с группами доступности AlwaysOn.  Нет никаких различий в конфигурации и поддержке для баз данных, которые содержат объекты [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , и тех, в которых их нет.  
   
  При развертывании выполняющейся в памяти OLTP базы данных в конфигурации группы доступности AlwaysOn изменения, внесенные в оптимизированные для памяти таблицы в первичной реплике, применяются в памяти к таблицам во вторичных репликах при применении операции REDO. Это означает, что отработка отказа на вторичную реплику может выполняться очень быстро, так как данные уже находятся в памяти. Кроме того, для запросов доступны таблицы во вторичных репликах, для которых был настроен доступ на чтение.  
   

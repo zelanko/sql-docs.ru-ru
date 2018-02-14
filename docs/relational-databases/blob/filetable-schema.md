@@ -8,26 +8,29 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], table schema
+helpviewer_keywords:
+- FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04e37414b0614809ce631c1541a863810e2b62b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e19f00c854bdbc79acc2d83f3d3c8095166ce5a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-schema"></a>Схема FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Описывает стандартные и фиксированные схемы таблицы FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Описывает стандартные и фиксированные схемы таблицы FileTable.  
   
-|Имя атрибута файла|type|Размер|По умолчанию|Описание|Доступность файловой системы|  
+|Имя атрибута файла|Тип|Размер|Default|Description|Доступность файловой системы|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|переменная|Значение **hierarchyid** , указывающее расположение этого элемента.|Положение этого узла в иерархии FileNamespace.<br /><br /> Первичный ключ для таблицы.|Может быть создан и изменен с помощью задания значения пути Windows.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Значение, возвращаемое функцией **NEWID()** .|Уникальный идентификатор для данных FILESTREAM.|Неприменимо.|  
@@ -48,6 +51,6 @@ ms.lasthandoff: 11/17/2017
 |**is_temporary**|**bit**<br /><br /> **не null**|1 байт|FALSE|Атрибут временного файла.|Рассчитывается автоматически. Можно также задать с помощью API-интерфейсов Windows.|  
   
 ## <a name="see-also"></a>См. также:  
- [Создание, изменение и удаление таблиц FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
+ [Создание, изменение и удаление таблиц FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
   
   

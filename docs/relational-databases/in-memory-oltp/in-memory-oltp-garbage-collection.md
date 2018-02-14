@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65212125bf5ad0d8b0908a23bd399d524de5d078
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4850e024f1eb76e457299975db35198aed12a57d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Сборка мусора модулем In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Строка данных считается устаревшей, если она была удалена транзакцией, которая больше не активна. Для устаревших строк применяется сборка мусора. Далее следуют характеристики сборки мусора в [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Строка данных считается устаревшей, если она была удалена транзакцией, которая больше не активна. Для устаревших строк применяется сборка мусора. Далее следуют характеристики сборки мусора в [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
 -   Без блокировки. Сборка мусора распространяется равномерно со временем с минимальным влиянием на рабочую нагрузку.  
   

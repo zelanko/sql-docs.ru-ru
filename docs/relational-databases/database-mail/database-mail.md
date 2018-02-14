@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Database Mail [SQL Server], architecture
 - Database Mail [SQL Server], components
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 71bd2fdde74342683016e6c99431ff8a244e04a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 530adcf1fdc0148283f8362c790cabff82314aa0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail"></a>Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Компонент Database Mail — это решение уровня предприятия для отправки сообщений электронной почты из компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Используя компонент Database Mail, приложения базы данных могут отправлять почтовые сообщения пользователям. Сообщения могут содержать результаты запроса, а также могут включать файлы из любого сетевого ресурса.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Компонент Database Mail — это решение уровня предприятия для отправки сообщений электронной почты от компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Используя компонент Database Mail, приложения базы данных могут отправлять почтовые сообщения пользователям. Сообщения могут содержать результаты запроса, а также могут включать файлы из любого сетевого ресурса.  
   
   
 ##  <a name="Benefits"></a> Преимущества использования компонента Database Mail  
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 -   64-разрядная совместимость. Компонент Database Mail полностью поддерживается на 64-разрядных установках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="security"></a>Безопасность  
+### <a name="security"></a>безопасность  
   
 -   По умолчанию отключена. Для уменьшения контактной зоны [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранимые процедуры компонента Database Mail по умолчанию отключены.  
   

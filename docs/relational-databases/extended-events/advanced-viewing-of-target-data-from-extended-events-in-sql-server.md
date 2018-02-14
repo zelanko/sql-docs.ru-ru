@@ -8,19 +8,20 @@ ms.service:
 ms.component: extended-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: xevents
+ms.technology:
+- xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 1733064f1503f9a8a0e082835b58f91ff195cd9e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+manager: craigg
+ms.openlocfilehash: 7415e768584c9256eaa600cb2302c7cc9aa0d529
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Расширенный просмотр целевых данных из расширенных событий в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 
 
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>предварительные требования
 
 В данной статье предполагается, что вы уже знаете, как создать и запустить сеанс событий. Инструкции по созданию сеанса событий приводятся в следующей статье:
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 
 В этой статье также предполагается, что вы установили последний ежемесячный выпуск SSMS. Справочные сведения приведены в следующих статьях:
 
-- [Скачивание SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
+- [Скачать SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
 
 
 
@@ -289,7 +290,7 @@ XEL-файл также можно перетащить на панель вкл
 #### <a name="d41-grouping"></a>Г.4.1. Группирование
 
 
-На панели инструментов расширенных событий кнопка **Группирование** используется для открытия диалогового окна для группирования отображаемых данных по заданному столбцу. На следующем снимке экрана показано диалоговое окно, используемое для группировки по столбцу *name* .
+На панели инструментов расширенных событий кнопка **Группирование** используется для открытия диалогового окна для группирования отображаемых данных по заданному столбцу. На следующем снимке экрана показано диалоговое окно, используемое для группировки по столбцу *name*.
 
 ![Панель инструментов > кнопка "Группирование" > диалоговое окно "Группирование"](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 

@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c4b42e36bb09b3fd5a642c5350287dd207d73f0
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 7c46c3a21aa5d2bed2f21b07a7085c4559bb164a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-sql-server"></a>XML-данные (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет эффективную платформу для разработки многофункциональных приложений для управления частично структурированными данными. Поддержка языка XML встроена во все компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и включает следующее:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет эффективную платформу для разработки многофункциональных приложений для управления частично структурированными данными. Поддержка языка XML встроена во все компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и включает следующее:  
   
 -   Тип данных **xml** . Значения XML можно естественным образом хранить в столбце типа **xml** , который можно типизировать в соответствии с коллекцией схем XML или оставить нетипизированным. XML-столбец можно индексировать.  
   

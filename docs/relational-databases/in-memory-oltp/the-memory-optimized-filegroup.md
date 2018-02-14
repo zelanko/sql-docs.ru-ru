@@ -16,16 +16,17 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ff868be847d703d4ce4b8b291a725abc255a5788
-ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.openlocfilehash: 039fb20caa7000d9253f88016f756b0cf7babaa5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="the-memory-optimized-filegroup"></a>Оптимизированная для памяти файловая группа
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для создания оптимизированных для памяти таблиц необходимо сначала создать оптимизированную для памяти файловую группу. Оптимизированная для памяти файловая группа содержит один или несколько контейнеров. В каждом контейнере содержатся файлы данных или разностных файлы (или и те и другие).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Для создания оптимизированных для памяти таблиц необходимо сначала создать оптимизированную для памяти файловую группу. Оптимизированная для памяти файловая группа содержит один или несколько контейнеров. В каждом контейнере содержатся файлы данных или разностных файлы (или и те и другие).  
   
  Даже если строки данных из таблиц SCHEMA_ONLY не сохраняются, а метаданные оптимизированных для памяти таблиц и компилированных в собственном коде хранимых процедур хранятся в традиционных каталогах, модулю [!INCLUDE[hek_2](../../includes/hek-2-md.md)] все равно требуется оптимизированная для памяти файловая группа для оптимизированных для памяти таблиц SCHEMA_ONLY, чтобы обеспечить одинаковую работу баз данных, в которых есть оптимизированные для памяти таблицы.  
   

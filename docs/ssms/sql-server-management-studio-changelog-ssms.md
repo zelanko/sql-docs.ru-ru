@@ -18,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 051c080de8a5b670a7fe3dbe70ccebf73bfb57a3
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 01d0f988103f39aa311b84a1bf9e03292e60f511
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этой статье приводятся подробные сведения об обновлениях, улучшениях и исправлениях ошибок в текущей и предыдущих версиях SQL Server Management Studio. Скачать [предыдущие версии SQL Server Management Studio можно ниже](#previous-ssms-releases).
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+В этой статье приводятся подробные сведения об обновлениях, улучшениях и исправлениях ошибок в текущей и предыдущих версиях SQL Server Management Studio. Скачать [предыдущие версии SQL Server Management Studio можно ниже](#previous-ssms-releases).
 
 
 ## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
@@ -542,10 +543,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Теперь сочетание клавиш CTRL+R переключает область результатов в редакторе запросов среды SSMS DAX.
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid799832"></a>![скачать](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>![скачать](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 Общедоступная версия | Номер сборки: 13.0.16106.4
 
-[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 В этом выпуске были решены следующие проблемы.
 

@@ -8,56 +8,59 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Broker:Message Undeliverable event class
+helpviewer_keywords:
+- Broker:Message Undeliverable event class
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f803671ca0838b9eb389643ba7bfd6d928c116c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fd9ac1df058e6689f58d95e4beac829b3dd8ded8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Класс событий Broker:Message Undeliverable
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Broker:Message Undeliverable**, когда компонент Service Broker не может сохранить полученное сообщение, которое нужно доставить службе в этом экземпляре. Сведения о сообщениях, которые должны были быть перенаправлены, см. в разделе [Broker:Forwarded Message Dropped Event Class](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Broker:Message Undeliverable**, когда компонент Service Broker не может сохранить полученное сообщение, которое нужно доставить службе в этом экземпляре. Сведения о сообщениях, которые должны были быть перенаправлены, см. в разделе [Broker:Forwarded Message Dropped Event Class](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md).  
   
 ## <a name="brokermessage-undeliverable-event-class-data-columns"></a>Столбцы данных для класса событий Broker:Message Undeliverable  
   
-|Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
+|Столбец данных|Тип|Description|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**Application Name**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
-|**BigintData1**|**bigint**|Порядковый номер недоставленного сообщения.|52|Нет|  
-|**BigintData2**|**bigint**|Порядковый номер последнего успешно подтвержденного сообщения.|53|Нет|  
+|**BigintData1**|**bigint**|Порядковый номер недоставленного сообщения.|52|нет|  
+|**BigintData2**|**bigint**|Порядковый номер последнего успешно подтвержденного сообщения.|53|нет|  
 |**ClientProcessID**|**int**|Идентификатор, присвоенный компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |**DatabaseID**|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|**Ошибка**|**int**|Идентификационный номер сообщения в **sys.messages** для текста в событии.|31|Нет|  
-|**EventClass**|**int**|Тип захваченного класса событий. Всегда равен **160** для класса событий **Broker:MessageUndeliverable**.|27|Нет|  
-|**EventSequence**|**int**|Порядковый номер этого события.|51|Нет|  
+|**Ошибка**|**int**|Идентификационный номер сообщения в **sys.messages** для текста в событии.|31|нет|  
+|**EventClass**|**int**|Тип захваченного класса событий. Всегда равен **160** для класса событий **Broker:MessageUndeliverable**.|27|нет|  
+|**EventSequence**|**int**|Порядковый номер этого события.|51|нет|  
 |**EventSubClass**|**nvarchar**|Указывает, было ли недоставленное сообщение упорядоченным. Может принимать одно из следующих двух значений:<br /><br /> **Упорядоченное сообщение**. Недоставленное сообщение было упорядоченным.<br /><br /> **Неупорядоченное сообщение**. Недоставленное сообщение не было упорядоченным.|21|Да|  
-|**GUID**|**uniqueidentifier**|Идентификатор диалога, которому принадлежит недоставленное сообщение. Этот идентификатор передается в составе сообщения и является общим для обоих участников диалога.|54|Нет|  
+|**GUID**|**uniqueidentifier**|Идентификатор диалога, которому принадлежит недоставленное сообщение. Этот идентификатор передается в составе сообщения и является общим для обоих участников диалога.|54|нет|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
-|**IntegerData**|**int**|Номер фрагмента недоставленного сообщения.|25|Нет|  
-|**IntegerData2**|**int**|Номер фрагмента сообщения, подтверждаемого недоставленным сообщением.|55|Нет|  
-|**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Нет|  
-|**LoginName**|**nvarchar**|Имя входа пользователя (имя входа системы безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или учетные данные входа Windows в формате ДОМЕН\имя_пользователя).|11|Нет|  
+|**IntegerData**|**int**|Номер фрагмента недоставленного сообщения.|25|нет|  
+|**IntegerData2**|**int**|Номер фрагмента сообщения, подтверждаемого недоставленным сообщением.|55|нет|  
+|**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|нет|  
+|**LoginName**|**nvarchar**|Имя входа пользователя (имя входа системы безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или учетные данные входа Windows в формате ДОМЕН\имя_пользователя).|11|нет|  
 |**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя, которому принадлежит соединение, создавшее это событие.|6|Да|  
-|**ObjectName**|**nvarchar**|Дескриптор диалога.|34|Нет|  
-|**RoleName**|**nvarchar**|Роль дескриптора диалога. Это либо **initiator** , либо **target**.|38|Нет|  
-|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , подвергаемого трассировке.|26|Нет|  
-|**Severity**|**int**|Уровень серьезности для текста в событии.|29|Нет|  
+|**ObjectName**|**nvarchar**|Дескриптор диалога.|34|нет|  
+|**RoleName**|**nvarchar**|Роль дескриптора диалога. Это либо **initiator** , либо **target**.|38|нет|  
+|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , подвергаемого трассировке.|26|нет|  
+|**Severity**|**int**|Уровень серьезности для текста в событии.|29|нет|  
 |**SPID**|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если доступно.|14|Да|  
-|**Состояние**|**int**|Указывает место в исходном коде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое вызвало это событие. Каждое место, которое может вызвать это событие, обозначается отдельным кодом состояния. По этому коду сотрудник отдела технической поддержки корпорации Майкрософт может найти место, вызвавшее данное событие.|30|Нет|  
+|**Состояние**|**int**|Указывает место в исходном коде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое вызвало это событие. Каждое место, которое может вызвать это событие, обозначается отдельным кодом состояния. По этому коду сотрудник отдела технической поддержки корпорации Майкрософт может найти место, вызвавшее данное событие.|30|нет|  
 |**TextData**|**ntext**|Причина, по которой компоненту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удалось доставить сообщение.|1|Да|  
-|**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Нет|  
+|**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|нет|  
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  

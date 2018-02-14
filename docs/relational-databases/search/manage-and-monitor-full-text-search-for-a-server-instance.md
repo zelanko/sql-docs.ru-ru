@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5d37441c773b2934b544734889a9d7c86cbdfa2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1dbd4fe6152e7318da0267d25c5900ec10c4814
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Управление и наблюдение за полнотекстовым поиском для экземпляра сервера
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] С полнотекстовым администрированием нескольких экземпляров связаны следующие задачи:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+С полнотекстовым администрированием нескольких экземпляров связаны следующие задачи.  
   
 -   Задачи управления системой, например управление службой средства запуска FDHOST (MSSQLFDLauncher), повторный запуск процесса узла управляющей программы фильтрации при изменении учетных данных учетной записи службы, настройка свойств полнотекстового поиска на уровне сервера и создание резервных копий полнотекстовых каталогов. На уровне сервера, к примеру, можно указать язык полнотекстового поиска по умолчанию, отличающийся от языка экземпляра сервера по умолчанию.  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
  В следующей таблице перечислены полнотекстовые свойства экземпляра сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и соответствующие функции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-|Свойство|Описание|Функция|  
+|Свойство|Description|Компонент|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|Указывает, установлен ли компонент Full-Text Search в текущем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  

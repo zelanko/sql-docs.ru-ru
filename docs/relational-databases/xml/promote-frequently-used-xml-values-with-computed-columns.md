@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7374751ae2fd74f93ed0744853eb472689538347
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 38efa0d9948afdd31c93442f657d7f3d68c82f0e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Продвижение часто используемых XML-значений с помощью вычисляемых столбцов
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Если часто запрашивается небольшое количество значений элементов и атрибутов, можно повысить их уровень до реляционных столбцов. Это полезно, если запрос выполняется для небольшой части XML-данных, тогда как извлекается весь экземпляр XML. Создавать XML-индекс для XML-столбца не требуется. Вместо этого можно проиндексировать столбец, созданный на основе свойства. В запросах необходимо использовать этот столбец, потому что оптимизатор запросов не перенаправляет запросы XML-столбца столбцу, созданному на основе свойства.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Если часто запрашивается небольшое количество значений элементов и атрибутов, можно выполнить их продвижение до реляционных столбцов. Это полезно, если запрос выполняется для небольшой части XML-данных, тогда как извлекается весь экземпляр XML. Создавать XML-индекс для XML-столбца не требуется. Вместо этого можно проиндексировать столбец, созданный на основе свойства. В запросах необходимо использовать этот столбец, потому что оптимизатор запросов не перенаправляет запросы XML-столбца столбцу, созданному на основе свойства.  
   
  Столбец, созданный на основе свойства, может быть вычисляемым столбцом в той же таблице или отдельным пользовательским столбцом таблицы. Если для каждого экземпляра XML выполняется продвижение одинарных значений, этого достаточно. Однако в случае многозначных свойств необходимо создать для свойства отдельную таблицу. Это описывается в следующем разделе.  
   

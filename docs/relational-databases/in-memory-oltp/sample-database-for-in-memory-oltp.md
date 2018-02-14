@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e8a9a30e4221c0c425c45d46b1e3bdddda9a66e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Пример базы данных для выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,13 +49,13 @@ ms.lasthandoff: 11/17/2017
   
 -   [Использование памяти и места на диске образцом](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 -   Для тестирования производительности требуется сервер, имеющий те же характеристики, что и в рабочей среде. Для этого конкретного примера должно быть доступно по меньшей мере 16 ГБ памяти в SQL Server. Общие рекомендации по оборудованию для выполняющейся в памяти OLTP см. в следующей записи блога:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Установка образца OLTP в памяти на основе AdventureWorks  
+##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
  Чтобы установить образец, выполните следующие действия.  
   
 1.  Скачайте файлы AdventureWorks2016CTP3.bak и SQLServer2016CTP3Samples.zip со страницы по адресу [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) в папку на компьютере, например c:\temp.  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/17/2017
   
 -   *Вычисляемые столбцы[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Вычисляемые столбцы SalesOrderNumber и TotalDue пропускаются, так как*  не поддерживает вычисляемые столбцы в оптимизированных для памяти таблицах. Новое представление Sales.vSalesOrderHeader_extended_inmem отражает столбцы SalesOrderNumber и TotalDue. Поэтому при необходимости в этих столбцах можно использовать это представление.  
 
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 вычисляемые столбцы поддерживаются в оптимизированных для памяти таблицах и индексах.
 
   
@@ -468,10 +469,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|По умолчанию|94|  
+|MEMORYCLERK_XTP|Default|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|По умолчанию|0|  
-|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Клерки памяти по умолчанию содержат структуры памяти во всей системе и являются относительно небольшими. Клерк памяти, предназначенный для пользовательской базы данных (в данном случае это база данных с идентификатором 5), составляет примерно 900 МБ.  
   
@@ -517,10 +518,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|По умолчанию|146|  
+|MEMORYCLERK_XTP|Default|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|По умолчанию|0|  
-|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Как видите, SQL Server использует чуть меньше 8 ГБ под оптимизированные для памяти таблицы и индексы из образца базы данных.  
   
@@ -563,14 +564,14 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|По умолчанию|2261|  
+|MEMORYCLERK_XTP|Default|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|По умолчанию|0|  
-|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Это ожидаемо: память будет освобождаться при выполнении транзакционной рабочей нагрузки.  
   
- Если снова запустить демонстрационную рабочую нагрузку, то первоначально объем использованной памяти понизится по мере очистки удаленных ранее строк. В определенный момент объем использованной памяти снова начнет увеличиваться вплоть до завершения выполнения рабочей нагрузки. После вставки 10 миллионов строк после сброса демонстрации загрузка памяти будет очень похожа на загрузку после первоначального запуска. Например:  
+ Если снова запустить демонстрационную рабочую нагрузку, то первоначально объем использованной памяти понизится по мере очистки удаленных ранее строк. В определенный момент объем использованной памяти снова начнет увеличиваться вплоть до завершения выполнения рабочей нагрузки. После вставки 10 миллионов строк после сброса демонстрации загрузка памяти будет очень похожа на загрузку после первоначального запуска. Пример:  
   
 ```  
 SELECT type  
@@ -582,10 +583,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|По умолчанию|1863|  
+|MEMORYCLERK_XTP|Default|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|По умолчанию|0|  
-|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Использование диска оптимизированными для памяти таблицами  
  Общий размер на диске файлов контрольных точек базы данных в данное время можно узнать, выполнив следующий запрос:  
@@ -744,7 +745,7 @@ ORDER BY state, file_type
   
  После второго выполнения демонстрационной рабочей нагрузки с вставкой 10 миллионов заказов на продажу после сброса образца вы увидите, что файлы, сформированные во время первого выполнения рабочей нагрузки, были очищены. Приведенный выше запрос можно выполнить несколько раз во время выполнения рабочей нагрузки. Это позволит увидеть, как файлы контрольных точек проходят по различным этапам.  
   
- После второго выполнения рабочей нагрузки по вставке 10 миллионов заказов на продажу вы увидите, что объем использования дискового пространства будет почти такой же, хотя он и может немного отличаться, как после первого выполнения, поскольку система является по своей природе динамичной. Например:  
+ После второго выполнения рабочей нагрузки по вставке 10 миллионов заказов на продажу вы увидите, что объем использования дискового пространства будет почти такой же, хотя он и может немного отличаться, как после первого выполнения, поскольку система является по своей природе динамичной. Пример:  
   
 ```  
 SELECT state_desc  
@@ -773,7 +774,7 @@ ORDER BY state, file_type
   
  В этом случае будет две пары файлов контрольных точек в состоянии «в разработке», а это означает, что несколько пар файлов были перемещены в состояние «в разработке», вероятнее всего из-за высокого уровня параллелизма в рабочей нагрузке. Нескольким параллельным потокам одновременно потребовалась новая пара файлов, из-за чего пара была переведена из состояния «создана заранее» в состояние «в разработке».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

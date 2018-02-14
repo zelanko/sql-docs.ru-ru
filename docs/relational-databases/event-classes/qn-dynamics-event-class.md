@@ -8,45 +8,48 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: event classes [SQL Server], QN:Dynamics
+helpviewer_keywords:
+- event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bfd4e0a9a27173b5242c999bd85d17d9a9ec55f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50f050d49e33951d83151ce97d6c98722aa7f7d4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="qndynamics-event-class"></a>Класс событий QN:Dynamics
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий QN:Dynamics возвращает сведения о фоновой активности компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по поддержке уведомлений о запросах. В пределах компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]фоновый поток осуществляет мониторинг тайм-аутов подписок, ожидающих подписки, которые необходимо запустить, и разрушение таблицы параметров.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Класс событий QN:Dynamics возвращает данные о фоновой активности компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по поддержке уведомлений о запросах. В пределах компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]фоновый поток осуществляет мониторинг тайм-аутов подписок, ожидающих подписки, которые необходимо запустить, и разрушение таблицы параметров.  
   
 ## <a name="qndynamics-event-class-data-columns"></a>Столбцы данных класса событий QN:Dynamics  
   
-|Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
+|Столбец данных|Тип|Description|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database*не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных «Имя сервера» захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется инструкция пользователя.|35|Да|  
-|EventClass|**int**|Тип события = 202|27|Нет|  
-|EventSequence|**int**|Порядковый номер этого события.|51|Нет|  
+|EventClass|**int**|Тип события = 202|27|нет|  
+|EventSequence|**int**|Порядковый номер этого события.|51|нет|  
 |EventSubClass|**nvarchar**|Тип подкласса событий, предоставляющий дополнительные сведения о каждом классе события. Данный столбец может содержать следующие значения.<br /><br /> **Clock run started**. Означает, что запущен фоновый поток в [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который планирует очистку таблиц параметров с истекшими сроками действия.<br /><br /> **Clock run finished**. Означает, что завершен фоновый поток в [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который планирует очистку таблиц параметров с истекшими сроками действия.<br /><br /> **Master cleanup task started**. Определяет, когда будет запущена очистка (сборка мусора), удаляющая данные подписки на уведомления о запросах с истекшим сроком давности.<br /><br /> **Master cleanup task finished**. Определяет, когда будет завершена очистка (сборка мусора), удаляющая данные подписки на уведомления о запросах с истекшим сроком давности.<br /><br /> **Master cleanup task skipped**. Указывает, что компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не выполнил очистку (сборка мусора) для удаления данных подписки на уведомления о запросах с истекшим сроком давности.|21|Да|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
-|IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе.<br /><br /> 0 = пользовательский процесс<br /><br /> 1 = системный процесс|60|Нет|  
-|LoginName|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа Windows в формате *ДОМЕН\имя_пользователя*).|11|Нет|  
+|IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе.<br /><br /> 0 = пользовательский процесс<br /><br /> 1 = системный процесс|60|нет|  
+|LoginName|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа Windows в формате *ДОМЕН\имя_пользователя*).|11|нет|  
 |LoginSID|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога sys.server_principals. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |NTDomainName|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |NTUserName|**nvarchar**|Имя пользователя, которому принадлежит соединение, создавшее это событие.|6|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , подвергаемого трассировке.|26|Нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , подвергаемого трассировке.|26|нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего сеанс. Например, если приложение соединяется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Имя_входа1, а выполняет инструкции под именем Имя_входа2, то SessionLoginName содержит значение «Имя_входа1», а LoginName содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  

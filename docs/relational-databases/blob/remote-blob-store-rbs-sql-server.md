@@ -8,28 +8,29 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ca8c1cc9458cda224b3ef881eacad06f55d8f284
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 331cb2ea2826eec7bebba7d67ad5def405f2085e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Удаленное хранилище больших двоичных объектов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Удаленное хранилище больших двоичных объектов (RBS) для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это дополнительный компонент, позволяющий администраторам баз данных хранить большие двоичные объекты в отдельных хранилищах вместо хранения непосредственно на основном сервере базы данных.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Удаленное хранилище больших двоичных объектов (RBS) — это дополнительный компонент, позволяющий администраторам баз данных хранить большие двоичные объекты в отдельных хранилищах вместо хранения непосредственно на основном сервере базы данных.  
   
  Хранилище RBS включено в установочный носитель [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , но не устанавливается программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

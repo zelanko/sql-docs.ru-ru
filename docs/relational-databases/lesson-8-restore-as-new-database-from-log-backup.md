@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65e5464a1a3ee36420d92b23268ab9aa7cb88c02
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2fccaf04b123ec7ba354ffabef8d21ee6c35845
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>Занятие 8. Восстановление в качестве новой базы данных из резервной копии журнала
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На этом занятии вы восстановите базу данных AdventureWorks2014 в качестве новой базы данных из резервной копии журнала транзакций на основе моментального снимка файла.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+На этом занятии вы восстановите базу данных AdventureWorks2014 в качестве новой базы данных из резервной копии журнала транзакций на основе моментального снимка файла.  
   
 В этом сценарии восстановление производится в экземпляр SQL Server в другой виртуальной машине в целях бизнес-анализа и создания отчетов. Восстановление в другом экземпляре, размещенном в другой виртуальной машине, позволяет перенести нагрузку на выделенную виртуальную машину, специально предназначенную для этой цели, и снизить требования к ресурсам, предъявляемые к системе обработки транзакций.  
   

@@ -8,25 +8,26 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cd2c56037edfc85932f8cb9ef0c7dbe8b5251ef4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 190a55e0feb08aa4e7e0601e6a7fec92b249ea05
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="resolve-out-of-memory-issues"></a>Устранение проблем нехватки памяти
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] использует больше памяти, чем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и делает это по-другому. Возможно, что объем памяти, установленный и выделенный для [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , станет недостаточным для растущих потребностей. В таком случае может возникнуть нехватка памяти. В этом разделе описывается восстановление из ситуации с нехваткой памяти. В статье [Наблюдение и устранение неисправностей при использовании памяти](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) вы найдете рекомендации, которые помогут вам избежать многих ситуаций нехватки памяти.  
+  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] использует больше памяти, чем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и делает это по-другому. Возможно, что объем памяти, установленный и выделенный для [!INCLUDE[hek_2](../../includes/hek-2-md.md)], станет недостаточным для растущих потребностей. В таком случае может возникнуть нехватка памяти. В этом разделе описывается восстановление из ситуации с нехваткой памяти. В статье [Наблюдение и устранение неисправностей при использовании памяти](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) вы найдете рекомендации, которые помогут вам избежать многих ситуаций нехватки памяти.  
   
 ## <a name="covered-in-this-topic"></a>Темы данного раздела  
   

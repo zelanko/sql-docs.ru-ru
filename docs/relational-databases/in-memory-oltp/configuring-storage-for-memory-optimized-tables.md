@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e72a08f08a3d6ad49c429739108e0e862d0e507
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a83f67f8f376f48bc76a66636138a6b971e5b834
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Настройка хранилища оптимизированных для памяти таблиц
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Необходимо настроить емкость подсистемы хранения и количество операций ввода-вывода в секунду (IOPS).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Необходимо настроить емкость подсистемы хранения и количество операций ввода-вывода в секунду (IOPS).  
   
 ## <a name="storage-capacity"></a>Емкость хранилища  
  Чтобы оценить объем памяти, который потребуется для размещения надежных, оптимизированных для памяти таблиц баз данных, используйте сведения из раздела [Оценка требований к объему памяти для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) . Поскольку индексы не сохраняются в оптимизированных для памяти таблицах, не учитывайте размер индексов. После определения размера необходимо выделить место на диске, которое будет в четыре раза больше размера надежных, оптимизированных для памяти таблиц.  

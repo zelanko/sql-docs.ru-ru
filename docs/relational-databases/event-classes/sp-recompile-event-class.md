@@ -8,37 +8,40 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SP:Recompile event class
+helpviewer_keywords:
+- SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbf4970fd14025832f234b194f3314b189013766
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f56543d46915673c51e1626d669f473416aed01f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий SP:Recompile указывает на то, что хранимая процедура, триггер или пользовательская функция были перекомпилированы. Перекомпиляции, о которых сообщают события этого класса, производятся на уровне инструкций.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+События класса SP:Recompile указывают на то, что хранимая процедура, триггер или пользовательская функция были перекомпилированы. Перекомпиляции, о которых сообщают события этого класса, производятся на уровне инструкций.  
   
  Трассировать повторные компиляции на уровне инструкций предпочтительнее с помощью класса событий SQL:StmtRecompile. Класс событий SP:Recompile использовать не рекомендуется. Дополнительные сведения см. в статье [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md).  
   
 ## <a name="sprecompile-event-class-data-columns"></a>Столбцы данных класса событий SP:Recompile  
   
-|Имя столбца данных|**Тип данных**|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|**Data type**|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Заполнение этого столбца данных производится в том случае, если клиент предоставляет идентификатор процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
-|EventClass|**int**|Тип события = 37.|27|Нет|  
-|EventSequence|**int**|Порядковый номер данного события в запросе.|51|Нет|  
+|EventClass|**int**|Тип события = 37.|27|нет|  
+|EventSequence|**int**|Порядковый номер данного события в запросе.|51|нет|  
 |EventSubClass|**int**|Тип подкласса события. Указывает причину перекомпиляции.<br /><br /> 1 = изменение схемы<br /><br /> 2 = изменение статистики<br /><br /> 3 = перекомпиляция с разрешением имен<br /><br /> 4 = изменение установленного параметра<br /><br /> 5 = изменение временной таблицы<br /><br /> 6 = изменение удаленного набора строк<br /><br /> 7 = изменение разрешений на обзор<br /><br /> 8 = изменение среды уведомлений о запросах<br /><br /> 9 = изменение представления MPI<br /><br /> 10 = изменение параметров курсора<br /><br /> 11 = по значению параметра перекомпиляции|21|Да|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 |ObjectType|**int**|Значение, представляющее тип объекта, связанного с событием. Дополнительные сведения см. в статье [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Да|  
 |Offset|**int**|Начальное смещение инструкции внутри хранимой процедуры или пакета, вызвавшего повторную компиляцию.|61|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |SqlHandle|**varbinary**|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение может быть передано в функцию sys.dm_exec_sql_text, чтобы получить связанный SQL-текст.|63|Да|  

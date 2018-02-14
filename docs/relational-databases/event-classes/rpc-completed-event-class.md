@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RPC:Completed event class
+helpviewer_keywords:
+- RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c14de50af756d8b58b4af5368f13b788b7c65e3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f3dd125555180acb996579ff07f184a8092722c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий RPC:Completed указывает, что удаленный вызов процедуры завершен.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Класс событий RPC:Completed указывает, что удаленный вызов процедуры завершен.  
   
 ## <a name="rpccompleted-event-class-data-columns"></a>Столбцы данных класса событий RPC:Completed  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BinaryData|**image**|Значение типа Binary, зависящее от класса событий, фиксируемых при трассировке.|2|Да|  
@@ -37,11 +40,11 @@ ms.lasthandoff: 11/17/2017
 |ЦП|**int**|Количество использованного событием времени ЦП. В микросекундах, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. В миллисекундах в более ранних версиях.|18|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|Длительность|**bigint**|Количество занятого событием времени. В микросекундах, начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. В миллисекундах в более ранних версиях.|13|Да|  
+|Duration|**bigint**|Количество занятого событием времени. В микросекундах, начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. В миллисекундах в более ранних версиях.|13|Да|  
 |EndTime|**datetime**|Время окончания удаленного вызова процедуры (RPC).|15|Да|  
 |Ошибка|**int**|Номер ошибки для данного события.<br /><br /> 0 = ОК<br /><br /> 1 = ошибка<br /><br /> 2 = прервано<br /><br /> 3 = пропущено|31|Да|  
-|EventClass|**int**|Тип события = 10.|27|Нет|  
-|EventSequence|**int**|Последовательность данного события в запросе.|51|Нет|  
+|EventClass|**int**|Тип события = 10.|27|нет|  
+|EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  

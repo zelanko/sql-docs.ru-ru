@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - event classes [SQL Server], Object Type column values
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1c0753ed19215c5d45610aa5582fbce2c906cd6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 063bab84aeaa695ace1087df518640b611749b5f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="objecttype-trace-event-column"></a>Столбец события ObjectType Trace
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Столбец событий трассировки Object Type используется в различных событиях трассировки. В этом подразделе приведены возможные значения этого столбца и связанные с ними определения.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Столбец события трассировки Object Type используется в различных событиях трассировки. В этом подразделе приведены возможные значения этого столбца и связанные с ними определения.  
   
 ## <a name="object-type-column-values"></a>Значения столбца Object Type  
   
@@ -46,11 +48,11 @@ ms.lasthandoff: 11/17/2017
 |8278|Просмотр|  
 |8280|Расширенная хранимая процедура|  
 |16724|Триггер CLR|  
-|16964|База данных|  
-|16975|Объект|  
+|16964|база данных|  
+|16975|Object|  
 |17222|Полнотекстовый каталог|  
 |17232|Хранимая процедура CLR|  
-|17235|Схема|  
+|17235|схема|  
 |17475|Учетные данные|  
 |17491|Событие DDL|  
 |17741|Событие управления|  
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 |19283|ObfusKey|  
 |19521|Имя входа асимметричного ключа|  
 |19523|Имя входа сертификата|  
-|19538|Роль|  
+|19538|Role|  
 |19539|Имя входа SQL|  
 |19543|Имя входа Windows|  
 |20034|Привязка удаленной службы|  
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |20821|Ограничение уникальности|  
 |21057|Роль приложения|  
 |21059|Сертификат|  
-|21075|Server|  
+|21075|Сервер|  
 |21076|Триггер Transact-SQL|  
 |21313|Сборка|  
 |21318|Скалярная функция CLR|  
@@ -99,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 |21577|Внутренняя таблица, например таблица узла XML, таблица очереди|  
 |21581|Тип сообщения компонента Service Broker|  
 |21586|Маршрут компонента Service Broker|  
-|21587|Statistics|  
+|21587|Статистика|  
 |21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|Пользователь|  
 |22099|Служба компонента Service Broker|  
 |22601|Указатель|  

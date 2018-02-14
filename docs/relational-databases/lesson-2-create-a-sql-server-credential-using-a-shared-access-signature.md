@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d87cd8fda5c3a000b99faca141f03fcab3085559
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9de61b250b8605e5f47a58ff7bb77e10c54ab123
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Занятие 2. Создание учетных данных SQL Server с помощью подписанного URL-адреса
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На этом занятии вы создадите учетные данные для хранения сведений о безопасности, которые будут использоваться SQL Server для записи в контейнер Azure, созданный на [занятии 1 "Создание хранимой политики доступа и подписанного URL-адреса для контейнера Azure"](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md), и чтения из него.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+На этом занятии вы создадите учетные данные для хранения сведений о безопасности, которые будут использоваться SQL Server для выполнения записи в контейнер Azure, созданный на [занятии 1 "Создание хранимой политики доступа и подписанного URL-адреса для контейнера Azure"](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md), и чтения из него.  
   
 Учетные данные SQL Server — это объект, который используется для хранения сведений, необходимых для проверки подлинности при подключении к ресурсу вне SQL Server. В учетных данных хранится URI-путь к контейнеру хранилища и подписанный URL-адрес этого контейнера.  
   

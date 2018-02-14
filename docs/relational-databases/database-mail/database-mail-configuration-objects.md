@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,19 +35,20 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8664182f87bb5f276b3fde4b8b0d1d60c01bd8ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5cb2f1d2c6a21ddcc6b36c4c357da8cc380348cc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail-configuration-objects"></a>Объекты конфигурации компонента Database Mail
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Компонент Database Mail имеет два объекта конфигурации: объекты конфигурации баз данных позволяют настраивать параметры компонента Database Mail, используемые при отправке писем из приложения базы данных или агента [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Компонент Database Mail имеет два объекта конфигурации: объекты конфигурации баз данных позволяют настраивать параметры компонента Database Mail, используемые при отправке писем приложением базы данных или агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Учетные записи компонента Database Mail  
   
@@ -133,14 +135,14 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="database-mail-settings"></a>Параметры компонента Database Mail  
   
-|Название|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Изменяет настройки конфигурации компонента Database Mail.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Отображает настройки конфигурации компонента Database Mail.|  
   
 ### <a name="accounts-and-profiles"></a>Учетные записи и профили  
   
-|Название|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Добавляет учетную запись почты к профилю компонента Database Mail.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Удаляет учетную запись компонента Database Mail.|  
@@ -153,9 +155,9 @@ ms.lasthandoff: 11/17/2017
 |[sysmail_update_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql.md)|Изменяет описание или имя профиля компонента Database Mail.|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|Обновляет порядковый номер учетной записи в профиле компонента Database Mail.|  
   
-### <a name="security"></a>Безопасность  
+### <a name="security"></a>безопасность  
   
-|Название|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Предоставляет разрешение участнику базы данных для использования профиля компонента Database Mail.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Удаляет разрешение для пользователя базы данных на использование открытого или закрытого профиля компонента Database Mail.|  
@@ -164,7 +166,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="system-state"></a>Состояние системы  
   
-|Название|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[sysmail_start_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Запускает внешнюю программу компонента Database Mail и связанную с ней очередь компонента SQL Service Broker.|  
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Останавливает внешнюю программу компонента Database Mail и связанную с ней очередь компонента SQL Service Broker.|  

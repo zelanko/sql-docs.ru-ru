@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - security [data collector]
 - data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2987b90e60eb9edea9de888569ffa2e7d204526f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6884f7f420bed12112b910808bfa72146948e54f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-collector-security"></a>Безопасность сборщика данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Сборщик данных использует безопасность на основе ролей, реализованную агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта модель позволяет администратору базы данных запускать различные задачи сборщика данных в контексте безопасности, имеющем только те разрешения, которые необходимы для выполнения задачи. Этот подход также используется для операций, затрагивающих внутренние таблицы, доступ к которым можно осуществить только с помощью хранимой процедуры или представления. Внутренним таблицам разрешения не предоставляются. Вместо этого разрешения проверяются у пользователя хранимой процедуры или представления, используемых для доступа к таблице.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Сборщик данных использует безопасность на основе ролей, реализованную агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта модель позволяет администратору базы данных запускать различные задачи сборщика данных в контексте безопасности, имеющем только те разрешения, которые необходимы для выполнения задачи. Этот подход также используется для операций, затрагивающих внутренние таблицы, доступ к которым можно осуществить только с помощью хранимой процедуры или представления. Внутренним таблицам разрешения не предоставляются. Вместо этого разрешения проверяются у пользователя хранимой процедуры или представления, используемых для доступа к таблице.  
   
 > [!IMPORTANT]  
 >  Еще одним ключевым аспектом данной модели безопасности являются вложенные разрешения. При использовании вложенных разрешений роли с более широкими правами наследуют разрешения ролей с менее широкими правами на объекты (включая предупреждения, операторы, задания, расписания и учетные записи-посредники). Дополнительные сведения см. в статье [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  

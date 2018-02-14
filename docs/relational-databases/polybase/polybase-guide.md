@@ -8,7 +8,8 @@ ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 13f4dc7e877341917ebf4f41694cb886c81c53f2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-guide"></a>Руководство по PolyBase
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase — это технология, которая обращается к данным за пределами базы данных с помощью языка t-sql.  В SQL Server 2016 она позволяет выполнять запросы к внешним данным в хранилище BLOB-объектов Azure или Hadoop, а также импортировать данные в такое хранилище и экспортировать их из него. Для включения вычислений для Hadoop запросы оптимизируются. В хранилище данных SQL Azure можно импортировать данные из хранилища BLOB-объектов Azure и Azure Data Lake Store и экспортировать данные.
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+PolyBase — это технология, которая обращается к данным за пределами базы данных с помощью языка t-sql.  В SQL Server 2016 она позволяет выполнять запросы к внешним данным в хранилище BLOB-объектов Azure или Hadoop, а также импортировать данные в такое хранилище и экспортировать их из него. Для включения вычислений для Hadoop запросы оптимизируются. В хранилище данных SQL Azure можно импортировать данные из хранилища BLOB-объектов Azure и Azure Data Lake Store и экспортировать данные.
   
   
  Инструкции по работе с PolyBase см. в статье [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  

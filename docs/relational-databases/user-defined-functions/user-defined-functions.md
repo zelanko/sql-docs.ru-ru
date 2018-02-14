@@ -8,26 +8,28 @@ ms.service:
 ms.component: udf
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-udf
+ms.technology:
+- dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ebc45dd380367954a9ad55d35b7543b49156779
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 03521903614a187ca0af708dd318bbc9b3ae599d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="user-defined-functions"></a>Определяемые пользователем функции
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Аналогично функциям в языках программирования, определяемые пользователем функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляют собой подпрограммы, которые принимают параметры, выполняют действие, например сложные вычисления, и возвращают результат этого действия в виде значения. Возвращаемое значение может быть либо единичным скалярным значением, либо результирующим набором.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Аналогично функциям в языках программирования,  определяемые пользователем функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляют собой подпрограммы, которые принимают параметры, выполняют действие, например, сложные вычисления, и возвращают результат этого действия в виде значения. Возвращаемое значение может быть либо единичным скалярным значением, либо результирующим набором.  
    
 ##  <a name="Benefits"></a> Определяемые пользователем функции  
 Зачем их использовать? 
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
      Операция, которая фильтрует данные на основе какого-нибудь сложного ограничения и не может быть выражена одним скалярным выражением, может быть реализована в виде функции. Ее можно вызвать из предложения WHERE, чтобы уменьшить число строк, возвращаемых клиенту.  
   
 > [!NOTE]
-> Определяемые пользователем функции [!INCLUDE[tsql](../../includes/tsql-md.md)] в запросах могут выполняться только как один поток (план последовательного выполнения).  
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] в запросах могут выполняться только как один поток (план последовательного выполнения).  
   
 ##  <a name="FunctionTypes"></a> Типы функций  
 **Скалярная функция**  
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/17/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет множество системных функций для выполнения различных операций. Их нельзя изменить. Дополнительные сведения см. в разделах [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md), [Системные хранимые функции (Transact-SQL)](~/relational-databases/system-functions/system-functions-for-transact-sql.md) и [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ##  <a name="Guidelines"></a> Рекомендации  
- Ошибки [!INCLUDE[tsql](../../includes/tsql-md.md)], которые вызывают отмену инструкции и продолжение выполнения со следующей инструкции в модуле (например в триггере или хранимой процедуре), внутри функций обрабатываются иначе. В функциях такие ошибки вызывают остановку выполнения функции. Это вызывает отмену инструкции, вызвавшей функцию.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] , вызывающие отмену инструкции и продолжение выполнения со следующей инструкции модуля (триггера или хранимой процедуры), внутри функций обрабатываются иным образом. В функциях такие ошибки вызывают остановку выполнения функции. Это вызывает отмену инструкции, вызвавшей функцию.  
   
  Инструкции в блоке BEGIN...END не могут иметь каких-либо побочных эффектов. Побочными эффектами функций называются любые постоянные изменения состояния ресурса, область которого лежит за пределами функции, например изменение таблицы базы данных. Инструкции внутри функции могут изменять только локальные по отношению к этой функции объекты, например локальные курсоры или переменные. Изменения таблиц баз данных, операции с курсорами, не являющимися локальными для данной функции, отправка электронной почты, попытка изменения каталога, формирование результирующего набора, возвращаемого пользователю — это примеры действий, выполнение которых внутри функции невозможно.  
   
@@ -96,10 +98,10 @@ ms.lasthandoff: 11/17/2017
 |GET_TRANSMISSION_STATUS|@@PACK_RECEIVED|  
 |GETDATE|@@PACK_SENT|  
 |GETUTCDATE|@@PACKET_ERRORS|  
-|@@CONNECTIONS |@@TIMETICKS |  
-|@@CPU_BUSY |@@TOTAL_ERRORS |  
-|@@DBTS |@@TOTAL_READ |  
-|@@IDLE |@@TOTAL_WRITE |  
+|@@CONNECTIONS|@@TIMETICKS|  
+|@@CPU_BUSY|@@TOTAL_ERRORS|  
+|@@DBTS|@@TOTAL_READ|  
+|@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
  Следующие недетерминированные встроенные функции **нельзя** использовать в определяемых пользователем функциях на языке Transact-SQL.  
