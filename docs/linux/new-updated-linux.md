@@ -5,16 +5,16 @@ manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
-ms.custom: UpdArt.exe
+ms.custom: sql-linux,UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: linux
+ms.component: 
 ms.date: 02/03/2018
-ms.openlocfilehash: fc740b59397f0438a059b38df57ffc40999cc81e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 827399587a8147c59caf6bf31bf8b10f10c83211
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>Обновление новых и недавно: SQL Server в Linux документы
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/09/2018
 
 Если эти условия выполняются, сбоя сервера, на котором размещена первичная реплика группы Доступности меняют владельца синхронная реплика. Поведение для синхронных реплик (из которой может быть три общее: основной и двух вторичных реплик) дополнительно может управляться `required_synchronized_secondaries_to_commit`. Работа со и действий в Windows и Linux, но по-разному полностью настроена. В Linux значение автоматически настраивается с кластера на сам ресурс группы Доступности.
 
-**Только для настройки реплики и кворума**
+Только для настройки реплики и кворума
 
 
 Также новый в 2017 г. SQL Server на определенный момент CU1 — только для настройки реплики. Поскольку Pacemaker отличается от WSFC, особенно в том случае, когда дело доходит до кворума и требовать STONITH, конфигурацию двух узлов будет работать не когда речь заходит о группе Доступности. Для экземпляра отказоустойчивого Кластера кворума механизмы, предоставляемые Pacemaker может быть нормально после того, так как все отработки отказа FCI разрешение конфликтов происходит на уровне кластера. Для группы Доступности в SQL Server, где хранятся все метаданные происходит разрешение конфликтов в Linux. Это происходит, где реплика только для конфигурации вступает в действие.

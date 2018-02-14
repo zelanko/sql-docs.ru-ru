@@ -29,13 +29,13 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Роли служб Integration Services (службы SSIS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляет конкретные предопределенные роли уровня базы данных для обеспечения безопасного доступа к пакетам, которые хранятся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Доступные роли зависят от того, где хранятся пакеты: в базе данных каталога служб SSIS (SSISDB) или в базе данных msdb.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предлагает ряд фиксированных ролей на уровне баз данных, обеспечивающих защищенный доступ к пакетам, хранимым в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Доступные роли зависят от того, где хранятся пакеты: в базе данных каталога служб SSIS (SSISDB) или в базе данных msdb.  
   
 ## <a name="roles-in-the-ssis-catalog-database-ssisdb"></a>Роли в базе данных каталога служб SSIS (SSISDB)  
  База данных каталога служб SSIS (SSISDB) предоставляет следующие предопределенные роли уровня базы данных, позволяющие обеспечить безопасный доступ к пакетам и сведениям о пакетах:  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
      Список представлений включает в себя: [catalog].[projects], [catalog].[packages], [catalog].[operations], [catalog].[extended_operation_info], [catalog].[operation_messages], [catalog].[event_messages], [catalog].[execution_data_statistics], [catalog].[execution_component_phases], [catalog].[execution_data_taps], [catalog].[event_message_context], [catalog].[executions], [catalog].[executables], [catalog].[executable_statistics], [catalog].[validations], [catalog].[execution_parameter_values] и [catalog].[execution_property_override_values].  
   
 ## <a name="roles-in-the-msdb-database"></a>Роли в базе данных msdb  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат три предопределенные роли уровня базы данных, предназначенные для управления доступом к пакетам, которые сохранены в базе данных **msdb**: **db_ssisadmin**, **db_ssisltduser**и **db_ssisoperator** . С помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]можно назначить роль пакету. Назначения ролей сохраняются в базу данных **msdb** .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включает три фиксированные роли на уровне баз данных: **db_ssisadmin**, **db_ssisltduser** и **db_ssisoperator**. Они используются для управления доступом к пакетам, сохраняемым в базу данных **msdb**. С помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]можно назначить роль пакету. Назначения ролей сохраняются в базу данных **msdb** .  
   
 ### <a name="read-and-write-actions"></a>Действия чтения и записи  
  В следующей таблице приводятся операции чтения и записи Windows и предопределенных ролей уровня базы данных в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

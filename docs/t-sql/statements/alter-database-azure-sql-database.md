@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (база данных Azure SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 12/20/2017
+ms.date: 02/13/2018
 ms.prod: 
 ms.prod_service: sql-database
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 80aa017e3876a7a41077f770d5328e4c6c49b5be
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (база данных Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER DATABASE { database_name }
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
-    | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
+    | EDITION = { 'basic' | 'standard' | 'premium' }   
     | SERVICE_OBJECTIVE = 
                  {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
@@ -69,8 +69,7 @@ ALTER DATABASE { database_name }
    }  
 
 <service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' }
 
 ```  
   
@@ -210,8 +209,10 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
- ИЗМЕНИТЬ (выпуск  **=**  [«basic» | «стандартный» | «premium» | «premiumrs»])    
- Изменяет уровень обслуживания базы данных. В следующем примере изменяется выпуск `premium`:
+ ИЗМЕНИТЬ (выпуск  **=**  [«basic» | «стандартный» | 'premium'])    
+ Изменяет уровень обслуживания базы данных. Поддержка «premiumrs» был удален. По вопросам, использовать этот псевдоним электронной почты: premium-rs@microsoft.com.
+
+В следующем примере изменяется выпуск `premium`:
   
 ```  
 ALTER DATABASE current 
@@ -223,7 +224,7 @@ ALTER DATABASE current
  ИЗМЕНИТЬ (MAXSIZE  **=**  [100 МБ | 500 МБ | 1 | 1024... 4096] ГБ)  
  Указывает максимальный размер базы данных. Максимальный размер должен соответствовать допустимому набору значений для свойства EDITION базы данных. Смена максимального размера базы данных может потребовать также смены значения EDITION базы данных. В следующей таблице приведены поддерживаемые значения MAXSIZE и значения, заданные по умолчанию (D) для уровней служб [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**ПАРАМЕТР MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1 P6 и PRS1 PRS6**|**P11-P15**|  
+|**ПАРАМЕТР MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 МБ|√|√|√|√|√|  
 |250 МБ|√|√|√|√|√|  
@@ -266,7 +267,7 @@ ALTER DATABASE current
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
- Доступные значения для обслуживания:: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `PRS1`, `PRS2`, `PRS4`, и `PRS6`. Для описания цели службы и Дополнительные сведения о размере, выпусках и комбинациях служб см. в разделе [уровни служб базы данных SQL Azure и уровни производительности](http://msdn.microsoft.com/library/azure/dn741336.aspx). Если указанное значение SERVICE_OBJECTIVE не поддерживается выпуском, возникает ошибка. Чтобы изменить значение SERVICE_OBJECTIVE с одного уровня на другой (например, с S1 на P1), необходимо также изменить значение EDITION.  
+ Доступные значения для обслуживания:: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, или`P15`. Для описания цели службы и Дополнительные сведения о размере, выпусках и комбинациях служб см. в разделе [уровни служб базы данных SQL Azure и уровни производительности](http://msdn.microsoft.com/library/azure/dn741336.aspx). Если указанное значение SERVICE_OBJECTIVE не поддерживается выпуском, возникает ошибка. Чтобы изменить значение SERVICE_OBJECTIVE с одного уровня на другой (например, с S1 на P1), необходимо также изменить значение EDITION. Поддержка цели обслуживания PRS были удалены. По вопросам, использовать этот псевдоним электронной почты: premium-rs@microsoft.com. 
   
  ИЗМЕНИТЬ (SERVICE_OBJECTIVE = ГИБКОМУ\_ПУЛА (имя = \<elastic_pool_name >)  
  Чтобы добавить существующую базу данных в пуле эластичных БД, ELASTIC_POOL значение SERVICE_OBJECTIVE базы данных и укажите имя эластичного пула. Этот параметр служит для изменения различных эластичный пул с таким же сервером базы данных. Дополнительные сведения см. в разделе [Создание и управление ими эластичного пула баз данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Чтобы удалить базу данных из эластичного пула, значение SERVICE_OBJECTIVE одного уровня производительности базы данных с помощью инструкции ALTER DATABASE.  
@@ -277,7 +278,7 @@ ALTER DATABASE current
  С ALLOW_CONNECTIONS {ВСЕ | **НЕТ** }  
  Если ALLOW_CONNECTIONS не указан, ему присваивается нет по умолчанию. Если все равно, это база данных только для чтения, позволяющий все имена входа с соответствующими разрешениями для подключения.  
   
- С SERVICE_OBJECTIVE {'S0» | «S1» | «S2» | «S3» | 'S4» | «S6» | «S7» | «S9» | «S12» | «P1» | «P2» | «P4» | «P6» | «P11» | «P15» | «PRS1» | «PRS2» | «PRS4» | «PRS6»}  
+ С SERVICE_OBJECTIVE {'S0» | «S1» | «S2» | «S3» | 'S4» | «S6» | «S7» | «S9» | «S12» | «P1» | «P2» | «P4» | «P6» | «P11» | «P15»}  
  При SERVICE_OBJECTIVE не указан, база данных-получатель создается на том же уровне службы базы данных-источника. Если указано значение SERVICE_OBJECTIVE, база данных-получатель создается на заданном уровне. Этот параметр поддерживает создание получатели с менее дорогих уровней обслуживания. Значение SERVICE_OBJECTIVE указан должно быть в один и тот же выпуск как источник. Например если выпуск premium нельзя указать S0.  
   
  ELASTIC_POOL (имя = \<elastic_pool_name)  
