@@ -11,11 +11,14 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: DRILLDOWNLEVEL
-dev_langs: kbMDX
-helpviewer_keywords: DrilldownLevel function
+f1_keywords:
+- DRILLDOWNLEVEL
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- DrilldownLevel function
 ms.assetid: 47531ce5-1ac0-4aa9-a85c-824fb5d21e7c
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
@@ -93,7 +96,7 @@ FROM [Adventure Works]
   
  В следующем примере показывается, как использовать выражение уровня. При условии, что набор представляет иерархическую структуру, использование выражения уровня позволяет выбрать уровень иерархии, чтобы начать детализацию углублением.  
   
- В этом примере уровень детализации углублением начинается в [City], в качестве второго аргумента **DrilldownLevel** функции. Когда вы запустите этот запрос, детализация углублением начнется на уровне [City] (для штатов Вашингтон и Орегон). На **DrilldownLevel** функции, набор результатов также включает элементы следующего уровня вниз [Postal codes].  
+ В этом примере уровень детализации углублением начинается в [City], в качестве второго аргумента **DrilldownLevel** функции. Когда вы запустите этот запрос, детализация углублением начнется на уровне [City] для штатов Вашингтон и Орегон. На **DrilldownLevel** функции, набор результатов также включает элементы следующего уровня вниз [Postal codes].  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON COLUMNS,  
