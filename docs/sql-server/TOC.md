@@ -47,6 +47,7 @@
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [Ядро СУБД SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [Безопасность SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
+### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 
 ## Справка и обратная связь
 ### [Рекомендации по SQL Server](https://feedback.azure.com/forums/908035-sql-server)

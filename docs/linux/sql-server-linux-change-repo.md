@@ -9,18 +9,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 82a1f6d840897311dbb52ffbbf2620c8ec3994ec
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Настройка хранилища для установки и обновления SQL Server в Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этой статье описываются способы настройки на правильный репозиторий для установки SQL Server 2017 г. и обновления в Linux.
 
@@ -37,7 +39,7 @@ ms.lasthandoff: 02/09/2018
 | **CU** | **mssql-server-2017** | База данных SQL Server 2017 г. накопительное обновление (CU). |
 | **GDR** | **mssql-server-2017-gdr** | Репозиторий только важные обновления GDR 2017 г. SQL Server. |
 
-## <a id="cuversusgdr"></a>Накопительный пакет обновления и GDR
+## <a id="cuversusgdr"></a> Накопительный пакет обновления и GDR
 
 Это важно отметить, что существует два основных типа хранилища для каждого распределения:
 
@@ -50,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 > Можно обновить с версии GDR на CU выпуска в любое время, изменив репозиториев. Обновление с накопительным пакетом обновления версии GDR не поддерживается. 
 
-## <a id="configure"></a>Настройка репозитория
+## <a id="configure"></a> Настройка репозитория
 
 В следующих разделах описаны как проверить и настроить репозиторий для следующих поддерживаемых платформ:
 
@@ -58,7 +60,7 @@ ms.lasthandoff: 02/09/2018
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#sles)
 
-## <a id="rhel"></a>Настройка RHEL репозитории
+## <a id="rhel"></a> Настройка RHEL репозитории
 Настройка хранилища в Red Hat Enterprise Server (RHEL), выполните следующие действия.
 
 ### <a name="check-for-previously-configured-repositories-rhel"></a>Проверьте ранее настроенные репозиториев (RHEL)
@@ -97,7 +99,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 | **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
-## <a id="sles"></a>Настройка SLES репозитории
+## <a id="sles"></a> Настройка SLES репозитории
 Выполните следующие действия для настройки на SLES репозиториев.
 
 ### <a name="check-for-previously-configured-repositories-sles"></a>Проверьте ранее настроенные репозиториев (SLES)
@@ -128,7 +130,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 | **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
-## <a id="ubuntu"></a>Настройка репозиториев Ubuntu
+## <a id="ubuntu"></a> Настройка репозиториев Ubuntu
 Выполните следующие действия для настройки на Ubuntu репозиториев.
 
 ### <a name="check-for-previously-configured-repositories-ubuntu"></a>Проверьте ранее настроенные репозиториев (Ubuntu)

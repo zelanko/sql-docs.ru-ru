@@ -92,20 +92,18 @@
 ## [События трассировки](../analysis-services/trace-events/analysis-services-trace-events.md)
 
 # Разработчик
-## Табличные модели
-### [Программирование табличных моделей с уровнем совместимости 1200 и выше](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-#### [Язык сценариев табличной модели (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
-#### [Команды языка сценариев табличной модели (TMSL)](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
-#### [Объекты языка сценариев табличной модели (TMSL)](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
-### [Программирование табличных моделей для уровней совместимости 1050–1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+## [Программирование табличных моделей с уровнем совместимости 1200 и выше](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+### [Язык сценариев табличной модели (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
+### [Команды языка сценариев табличной модели (TMSL)](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+### [Объекты языка сценариев табличной модели (TMSL)](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
+## [Программирование табличных моделей для уровней совместимости 1050–1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 
-## Многомерные модели
-### [Язык сценариев Analysis Services (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
-### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
-### [Объекты управления аналитикой +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
-### [Логическая архитектура OLAP +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
-### [Физическая архитектура OLAP +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
-### [Расширение OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
+## [Язык сценариев Analysis Services (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+## [Объекты управления аналитикой (AMO)+](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+## [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+## [Логическая архитектура OLAP +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+## [Физическая архитектура OLAP +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+## [Расширение OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [Наборы строк схемы](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Язык сценариев Analysis Services (ASSL для XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
