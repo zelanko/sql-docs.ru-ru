@@ -1,27 +1,28 @@
 ---
 title: "Параметры соединения | Документы Microsoft"
 ms.custom: 
-ms.date: 01/16/2018
+ms.date: 02/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b90819fbed37aa41a23a257caf287fd563da6ffa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 899e072051224e2f28423e31f44d368a2884497b
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="connection-options"></a>Параметры соединения
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,9 +35,8 @@ ms.lasthandoff: 01/17/2018
 |ApplicationIntent|Строковые значения|Объявляет тип рабочей нагрузки приложения при соединении с сервером. Возможными значениями являются ReadOnly и ReadWrite.<br /><br />Дополнительные сведения о поддержке [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] для [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]см. в статье [Поддержка высокой доступности и аварийного восстановления в драйвере PHP для SQL Server](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|  
 |AttachDBFileName|Строковые значения|Указывает, какой файл базы данных сервер должен присоединить.|Значение не задано.|  
 |Проверка подлинности|Одна из следующих строк:<br /><br />«SqlPassword»<br /><br />«ActiveDirectoryPassword»|Указывает режим проверки подлинности.|Не задано.|  
-|CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|Строковые значения|Укажите путь, имя и ключ шифрования для настраиваемого поставщика хранилища ключей для постоянного шифрования. Все три значения необходимо задать для правильной настройки настраиваемого поставщика хранилища ключей при установке соединения. |Значение не задано.|
 |CharacterSet<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|Строковые значения|Задает кодировку, используемую для отправки данных на сервер.<br /><br />Возможными значениями являются SQLSRV_ENC_CHAR и UTF-8. Дополнительные сведения см. в статье [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
-|ColumnEncryption|**Включить** или **отключено**|Указывает, включена ли функция постоянного шифрования, или нет. |Выключено|  
+|ColumnEncryption<br /><br />(поддерживается только в Windows)|**Включить** или **отключено**|Указывает, включена ли функция постоянного шифрования, или нет. |Выключено|  
 |ConnectionPooling|1 или **true** для включения организации пулов соединений.<br /><br />0 или **false** для отключения организации пулов соединений.|Указывает, назначено ли соединение из пула соединений (1 или **true**) или нет (0 или **false**).<sup> 1</sup>|**true** (1)|  
 |база данных|Строковые значения|Указывает имя базы данных, используемое для устанавливаемого соединения<sup>2</sup>.|База данных по умолчанию для используемого имени входа.|  
 |Драйвер|Строковые значения|Задает драйвер Microsoft ODBC, используемый для обмена данными с SQL Server.<br /><br />Возможны следующие значения:<br />17 драйвер ODBC для SQL Server<br />ODBC Driver 13 for SQL Server<br />Драйвер ODBC 11 для SQL Server (Windows).|Если не указано ключевое слово Driver, драйверы Майкрософт для PHP для SQL Server пытается найти существование поддерживаемые драйверы Microsoft ODBC в системе, начиная с последней версией ODBC и т. д.|  

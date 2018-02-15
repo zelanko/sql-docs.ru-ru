@@ -1,14 +1,15 @@
 ---
 title: "Программа bcp | Документы Microsoft"
 ms.custom: 
-ms.date: 09/26/2016
+ms.date: 02/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: bcp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,22 +30,24 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1598d16877f42d0aef9f4a997e47492bd3fee1c7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d394c689e4f4220781342dca687906d46a673c8e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bcp-utility"></a>Программа bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Содержимое, связанное с предыдущих версий SQL Server, в разделе [программа bcp](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
 
+
+ > Подробные сведения об использовании bcp с хранилищем данных SQL Azure см. в разделе [загрузки данных с помощью программы bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
   Служебная программа **b**ulk **c**opy **p**rogram (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в пользовательском формате. С помощью программы **bcp** можно выполнять импорт большого количества новых строк в таблицы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экспорт данных из таблиц в файлы данных. За исключением случаев использования параметра **queryout** , применение программы не требует знания языка [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы выполнить импорт данных в таблицу, необходимо или использовать файл форматирования, созданный для этой таблицы, либо изучить структуру таблицы и типов данных, допустимых для ее столбцов.  
   
@@ -66,6 +69,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#E">-E</a>]
     [<a href="#f">-f format_file</a>]
     [<a href="#F">-F first_row</a>]
+    [<a href="#G">-G Azure Active Directory Authentication</a>]
     [<a href="#h">-h"hint [,...n]"</a>]
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
@@ -112,7 +116,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  ***owner***<a name="schema"></a>  
  Имя владельца таблицы или представления. Можно не указывать необязательный параметр*owner* , если пользователь, выполняющий операцию, является владельцем указанной таблицы или представления. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] вернет сообщение об ошибке и операция завершится, если аргумент *owner* не указан, а пользователь, выполняющий операцию, не является владельцем указанной таблицы или представления.  
   
-**"** ***query*** **"**<a name="query"></a> Is a [!INCLUDE[tsql](../includes/tsql-md.md)] query that returns a result set. Если запрос возвращает несколько результирующих наборов, то в файл данных будет скопирован только первый результирующий набор. Последующие результирующие наборы не учитываются. Используйте двойные кавычки для запроса и одинарные кавычки для выражений, внедренных в запрос. При выполнении массового копирования данных из запроса необходимо, помимо прочего, указывать аргумент**queryout** .  
+**«** ***запроса*** **»** <a name="query"> </a> — [!INCLUDE[tsql](../includes/tsql-md.md)] запрос, который возвращает результирующий набор. Если запрос возвращает несколько результирующих наборов, то в файл данных будет скопирован только первый результирующий набор. Последующие результирующие наборы не учитываются. Используйте двойные кавычки для запроса и одинарные кавычки для выражений, внедренных в запрос. При выполнении массового копирования данных из запроса необходимо, помимо прочего, указывать аргумент**queryout** .  
   
  Запрос может ссылаться на хранимую процедуру, если все таблицы, на которые имеются ссылки в хранимой процедуре, существуют до выполнения инструкции bcp. Например, если хранимая процедура порождает временную таблицу, инструкция **bcp** завершается с ошибкой, поскольку временная таблица доступна только во время выполнения, а не во время запуска инструкции. В этом случае можно вставить результаты работы хранимой процедуры в таблицу, после чего использовать **bcp** для копирования данных из этой таблицы в файл данных.  
   
@@ -177,10 +181,49 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Если параметр *format_file* начинается с дефиса (-) или косой черты (/), не ставьте пробел между **-e** и значением *format_file* .  
   
- **-F** ***first_row***<a name="F"></a>  
+**-F** ***first_row***<a name="F"></a>  
  Указывает номер первой строки для экспорта из таблицы или импорта из файла данных. Значение параметра должно быть больше (>) 0, но меньше (<) или равно (=) общему количеству строк. Если параметр отсутствует, по умолчанию используется первая строка файла.  
   
  Параметр*first_row* может иметь положительное целое значение до 2^63-1. Аргумент**-F** *first_row* имеет нумерацию, которая начинается с 1.  
+
+**-G**<a name="G"></a>  
+ Этот ключ используется клиентом при подключении к базе данных SQL Azure или хранилище данных SQL Azure для указания проверки подлинности пользователя с использованием проверки подлинности Azure Active Directory. Требуется параметр -G [версии 14.0.3008.27 или более поздней версии](http://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните bcp - v. Дополнительные сведения см. в разделе [использование Azure проверки подлинности Active Directory для проверки подлинности в базе данных SQL или хранилище данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+
+> [!TIP]
+>  Для проверки, если ваша версия bcp поддерживает для типа проверки подлинности Active Directory Azure (AAD) **bcp--** (bcp\<пространства >\<тире >\<тире >) и убедитесь, что вы видите - G в списке Доступные аргументы.
+
+- **Имя пользователя и пароль Azure Active Directory** 
+
+    Если вы хотите использовать имя пользователя и пароль Azure Active Directory, можно указать параметр **-G** , а также использовать имя пользователя и пароль, задав параметры **-U** и **-P** . 
+
+    В следующем примере экспортируется данных с помощью Azure AD пользователя и пароль, где имя пользователя и пароль учетных данных AAD. В примере выполняется экспорт таблицы `bcptest` из базы данных `testdb` с сервера Azure `aadserver.database.windows.net` и сохраняет данные в файле `c:\last\data1.dat`:
+    ``` 
+    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ``` 
+
+    В следующем примере импортируется данных с использованием имени пользователя Azure AD и пароль, где имя пользователя и пароль учетных данных AAD. В примере выполняется импорт данных из файла `c:\last\data1.dat` в таблицу `bcptest` для базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью Azure AD и пароля пользователя:
+    ```
+    bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ```
+
+
+
+- **Встроенная проверка подлинности Azure Active Directory** 
+ 
+    Azure Active Directory Integrated authentication предоставляют **- G** параметр без имени пользователя и пароля. Эта конфигурация предполагает, что Windows текущего пользователя (учетная запись, которой запущено команды bcp) включена в федерацию с Azure AD: 
+
+    В следующем примере экспортируется данных с использованием встроенной учетной записи Azure AD. В примере выполняется экспорт таблицы `bcptest` из базы данных `testdb` с помощью Azure AD Integrated с сервера Azure `aadserver.database.windows.net` и сохраняет данные в файле `c:\last\data2.dat`:
+
+    ```
+    bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
+    В следующем примере импортируется данных с помощью встроенной проверки подлинности Azure AD В примере выполняется импорт данных из файла `c:\last\data2.txt` в таблицу `bcptest` для базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью встроенной проверки подлинности Azure AD:
+
+    ```
+    bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> — определяет одно указание (или несколько) для использования во время массового импорта данных в таблицу или представление.  
   
@@ -321,7 +364,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **90** = [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]  
   
- **100** = [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
+ **100**  =  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
   
  **110** = [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
@@ -364,7 +407,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  При массовом копировании вычисляемые столбцы и столбцы типа **timestamp** копируются из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в файл данных обычным способом.  
   
 ## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>Указание идентификаторов, содержащих пробелы или кавычки  
- Идентификаторы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] могут содержать такие символы, как внедренные пробелы и кавычки. Такие идентификаторы должны обрабатываться следующим образом.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] могут содержать такие символы, как внедренные пробелы и кавычки. Такие идентификаторы должны обрабатываться следующим образом.  
   
 -   Если идентификатор или имя файла содержит пробел или кавычку в командной строке, заключите идентификатор в двойные кавычки ("").  
   

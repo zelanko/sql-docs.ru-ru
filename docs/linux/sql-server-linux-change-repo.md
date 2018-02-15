@@ -4,7 +4,7 @@ description: "Проверить и настроить исходных репо
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/07/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Настройка хранилища для установки и обновления SQL Server в Linux
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/13/2018
 > [!IMPORTANT]
 > Если ранее была установлена CTP-версии или версию-КАНДИДАТ 2017 г. SQL Server, необходимо использовать шаги в этой статье регистрация репозитория Общая доступность (GA) и обновлением или переустановкой адаптера. Предварительных выпусков 2017 г. SQL Server не поддерживаются и истекает.
 
-## <a id="repositories"></a>Репозитории
+## <a id="repositories"></a> Репозитории
 
 При установке SQL Server в Linux, необходимо настроить репозиторий Майкрософт. Этот репозиторий используется для получения пакета ядра базы данных, **mssql сервера**и связанные с ним пакетов SQL Server. В настоящее время существует три основных репозиториев.
 
@@ -181,8 +181,5 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 > [!IMPORTANT]
 > На этом этапе, если вы решили использовать одной из статей установки, такие как [краткие руководства](sql-server-linux-setup.md#platforms), помните, что вы уже настроили целевой репозиторий. В учебниках по не нужно повторять этот шаг. Это особенно важно, если настроить хранилище GDR, так как примеры использования использование CU репозитория.
-
-> [!IMPORTANT]
-> Любая версия SQL Server 2017 г. до CTP-версии 2.1, необходимо обновить до крайней 2.1 перед обновлением до общедоступной. Другим вариантом является резервное копирование баз данных, удалите предыдущую версию и затем выполнить установку из Общедоступной версии.
 
 Дополнительные сведения об установке 2017 г. SQL Server в Linux см. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).

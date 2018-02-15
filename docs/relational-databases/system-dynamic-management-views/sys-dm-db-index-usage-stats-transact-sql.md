@@ -27,16 +27,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9652e093a6b358a209bb7b84f1c4aa4c6854c328
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: fef54757181e9a4fc39a8eabf6399041ac0d6879
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает количество различных операций с индексами и время, которое было затрачено в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на последнее выполнение операции каждого типа.  
+  Возвращает количество различных операций с индексами и время, которое было затрачено на последнее выполнение операции каждого типа.  
   
  Динамические административные представления в среде [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Чтобы избежать предоставления этих сведений, все строки, содержащие данные, не принадлежащие к подключенному клиенту, фильтруются.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 >  **sys.dm_db_index_usage_stats** не возвращает сведения об индексах оптимизированных для памяти. Сведения об использовании индекса, оптимизированного для памяти см. в разделе [sys.dm_db_xtp_index_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_db_index_usage_stats**.  
+>  Для вызова данного представления от [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте **sys.dm_pdw_nodes_db_index_usage_stats**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -52,9 +52,9 @@ ms.lasthandoff: 02/03/2018
 |**object_id**|**int**|Идентификатор таблицы или представления, для которых определен индекс.|  
 |**index_id**|**int**|Идентификатор индекса.|  
 |**user_seeks**|**bigint**|Количество операций поиска по запросам пользователя.|  
-|**user_scans**|**bigint**|Количество операций просмотра по запросам пользователя. Это значение представляет проверок, которые не используйте поиск предиката.|  
+|**user_scans**|**bigint**|Количество операций просмотра по запросам пользователя, не использующих «поиск» предиката.|  
 |**user_lookups**|**bigint**|Количество уточняющих запросов для запросов пользователей.|  
-|**user_updates**|**bigint**|Количество операций обновления по запросам пользователя. Сюда относится вставки, удаления и обновления, представляющее номер действия, выполненные не фактических строк, затронутых. Например при удалении 1000 строк в одной инструкции, это число будет изменяться на 1|  
+|**user_updates**|**bigint**|Количество операций обновления по запросам пользователя. Сюда относится Insert, Delete и обновляет представляет количество действия, выполненные не фактические обработанных строк. Например при удалении 1000 строк в одной инструкции, это число с приращением 1|  
 |**last_user_seek**|**datetime**|Время последней операции поиска, выполненной пользователем.|  
 |**last_user_scan**|**datetime**|Время последней операции просмотра, выполненной пользователем.|  
 |**last_user_lookup**|**datetime**|Время последней операции поиска соответствия, выполненной пользователем.|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="permissions"></a>Разрешения  
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратор сервера** или **администратора Azure Active Directory** учетной записи.  
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.  
   
 ## <a name="see-also"></a>См. также  
 
