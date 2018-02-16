@@ -15,19 +15,20 @@ helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
 - Analysis Services Processing task
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 308c7910d408fcb29689484eb71726a669ed6d98
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Автоматизация административных задач служб Analysis Services с помощью служб SSIS
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет автоматизировать выполнение скриптов DDL, куба и обработку задач и задач запросов интеллектуального анализа данных модели интеллектуального анализа данных. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно рассматривать как набор задач потока управления и задач по обслуживанию, которые можно соединять, образуя последовательные и параллельные задания по обработке данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет автоматизировать выполнение скриптов DDL, куба и обработку задач и задач запросов интеллектуального анализа данных модели интеллектуального анализа данных. Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно рассматривать как набор задач потока управления и задач по обслуживанию, которые можно соединять, образуя последовательные и параллельные задания по обработке данных.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предназначены для выполнения операций очистки данных во время выполнения задач обработки данных и для объединения данных из различных источников данных. При работе с кубами и моделями интеллектуального анализа данных службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут преобразовывать нечисловые данные в числовые и могут гарантировать, что значения типа данных содержатся в ожидаемых пределах, тем самым создавая достоверные данные, которыми производится заполнение таблиц фактов и измерений.  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="data-mining-query-task"></a>Задача «Запрос интеллектуального анализа данных»  
  Задача «Запрос интеллектуального анализа» в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет извлекать и сохранять данные из моделей интеллектуального анализа данных. Эти данные часто хранятся в реляционной базе данных и могут использоваться, например для определения списка потенциальных заказчиков для целевой маркетинговой кампании. Интеллектуальный анализ данных может идентифицировать ценность заказчика и вероятность того, что этот заказчик ответит на конкретный маркетинговый ход. Задачу «Запрос интеллектуального анализа» можно использовать для извлечения и изменения данных в предпочтительном формате. Дополнительные сведения о реализации этой задачи см. в разделе [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Назначение обработки секции](../../integration-services/data-flow/partition-processing-destination.md)   
  [Назначение «Обработка измерений»](../../integration-services/data-flow/dimension-processing-destination.md)   
  [Преобразование «запрос интеллектуального анализа данных»](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   

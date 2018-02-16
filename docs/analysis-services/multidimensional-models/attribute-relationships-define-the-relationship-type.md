@@ -18,19 +18,20 @@ helpviewer_keywords:
 - adding member properties
 - member properties [Analysis Services], removing
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 158e22518b67117f830ba019860bacb95454a73a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---define-the-relationship-type"></a>Связи атрибутов — тип связи
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Определение типа связи атрибутов с помощью **связи атрибутов** в конструкторе измерений, к которому можно получить из [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Тип связи атрибутов задается с помощью вкладки **Связи атрибутов** в конструкторе измерений, который можно вызвать из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-set-the-relationship-type-of-an-attribute-relationship"></a>Как задать тип связи атрибутов  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
      Связи между элементами в гибкой связи изменяются со временем. Связи между элементами в жесткой связи не изменяются со временем.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение связей атрибутов](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   

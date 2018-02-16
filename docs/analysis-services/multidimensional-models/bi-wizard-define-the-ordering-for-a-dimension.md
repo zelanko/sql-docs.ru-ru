@@ -19,19 +19,20 @@ helpviewer_keywords:
 - ordering dimensions [Analysis Services]
 - OrderByAttributeID property
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 128efeccdeb3b99a580bd4e2f2ba360df874c222
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---define-the-ordering-for-a-dimension"></a>Мастер бизнес-Аналитики — определение упорядочивания для измерения
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Добавьте расширение к кубу или измерению, чтобы указать, как упорядочиваются элементы атрибута упорядочивания атрибутов. Элементы можно упорядочивать по имени или ключу атрибута, либо по имени или ключу другого атрибута (основанному на связи атрибута). По умолчанию элементы упорядочиваются по имени. Это расширение изменяет настройки свойств **OrderBy** и **OrderByAttributeID** для атрибутов в измерении.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Добавьте расширение упорядочивания атрибутов к кубу или измерению, чтобы указать, как упорядочиваются элементы атрибута. Элементы можно упорядочивать по имени или ключу атрибута, либо по имени или ключу другого атрибута (основанному на связи атрибута). По умолчанию элементы упорядочиваются по имени. Это расширение изменяет настройки свойств **OrderBy** и **OrderByAttributeID** для атрибутов в измерении.  
   
  Чтобы добавить упорядочивание атрибутов, используйте мастер бизнес-аналитики и выберите параметр **Задать сортировку атрибута** на странице **Выбор расширения** . После этого мастер отобразит шаги, позволяющие выбрать измерение, к которому необходимо применить упорядочивание атрибутов, и указать способ упорядочивания атрибутов для выбранного измерения.  
   

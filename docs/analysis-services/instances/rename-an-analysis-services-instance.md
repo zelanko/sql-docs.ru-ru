@@ -17,19 +17,20 @@ helpviewer_keywords:
 - names [Analysis Services], renaming instances
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bc7c79c56282f662a6392f966364ae7f38bc4395
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="rename-an-analysis-services-instance"></a>Переименование экземпляра служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно переименовать существующий экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью **Переименование экземпляра** средства, которые установлены в среде Management Studio (Установка из Интернета).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Существующий экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно переименовать с помощью средства **переименования экземпляра** , установленного вместе со средой Management Studio (веб-установка).  
   
 > [!IMPORTANT]  
 >  При переименовании экземпляра средство переименования экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется с расширенными правами доступа, обновляя имя службы Windows, учетные записи безопасности и записи реестра, связанные с этим экземпляром. Чтобы обеспечить выполнение этих действий, не забудьте перед запуском средства выполнить вход от имени администратора локальной системы.  

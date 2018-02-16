@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Занятие 2 – 5 – развертывание проекта служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/22/2018
     > [!NOTE]  
     > Если при развертывании возникают ошибки, проверьте разрешения на базу данных с помощью среды SQL Server Management Studio. У учетной записи, указанной для соединения с источником данных, должно быть имя входа в экземпляр SQL Server. Дважды щелкните имя пользователя для просмотра свойств сопоставления пользователей. Эта учетная запись должна иметь разрешения db_datareader для базы данных **AdventureWorksDW2012** .  
   
-    В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] собирается и развертывается проект учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на указанном экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с использованием скрипта развертывания. Ход выполнения развертывания отображается в двух окнах: **Вывод** и **Выполнение развертывания — учебник по службам Analysis Services** .  
+    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] собирается и развертывается проект учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в указанном экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с использованием скрипта развертывания. Ход выполнения развертывания отображается в двух окнах: **Вывод** и **Выполнение развертывания — учебник по службам Analysis Services** .  
   
     Откройте окно вывода, если необходимо, выбрав пункт **Вывод** в меню **Вид** . В окне **Вывод** отображается общий ход выполнения развертывания. Окно **Выполнение развертывания — учебник по службам Analysis Services** отображает подробные сведения о каждом шаге, выполняемом в процессе развертывания. Дополнительные сведения см. в разделах [Построение проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md) и [Развертывание проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   

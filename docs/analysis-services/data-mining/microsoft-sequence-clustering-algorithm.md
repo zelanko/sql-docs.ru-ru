@@ -17,19 +17,20 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Алгоритм кластеризации последовательностей (Майкрософт)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм кластеризации последовательностей — это уникальный алгоритм, который объединяет анализа последовательности и кластеризации. Данный алгоритм можно использовать для просмотра данных, содержащих события, которые могут быть связаны в *последовательность*. Алгоритм находит самые распространенные последовательности и выполняет кластеризацию для поиска идентичных последовательностей. Ниже описаны типы последовательностей, которые можно использовать в качестве данных для машинного обучения, чтобы получить сведения о стандартных проблемах или бизнес-сценариях:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] — это уникальный алгоритм сочетающий в себе анализ последовательностей и кластеризацию. Данный алгоритм можно использовать для просмотра данных, содержащих события, которые могут быть связаны в *последовательность*. Алгоритм находит самые распространенные последовательности и выполняет кластеризацию для поиска идентичных последовательностей. Ниже описаны типы последовательностей, которые можно использовать в качестве данных для машинного обучения, чтобы получить сведения о стандартных проблемах или бизнес-сценариях:  
   
 -   Сведения о посещениях и схемах щелчков, которые создаются, когда пользователи переходят по веб-сайту или просматривают его.  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения о создании запросов к модели интеллектуального анализа данных см. в разделе [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md). Примеры использования запросов с моделью кластеризации последовательностей см. в разделе [Примеры запросов к модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 -   Не поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.  
   
@@ -82,10 +83,10 @@ ms.lasthandoff: 01/08/2018
   
 -   Поддерживается использование моделей интеллектуального анализа OLAP и создание измерений интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>См. также  
+ [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Технический справочник по алгоритму кластеризации последовательностей (Microsoft)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Примеры запросов модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Просмотр модели с помощью средства просмотра кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Просмотр модели в средство просмотра кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

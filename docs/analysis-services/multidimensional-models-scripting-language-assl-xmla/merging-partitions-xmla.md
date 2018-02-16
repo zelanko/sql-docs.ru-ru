@@ -1,7 +1,7 @@
 ---
 title: "Слияние секций (XMLA) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,26 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - merging partitions [XMLA]
 - XMLA, partitions
 - partitions [Analysis Services], XML for Analysis
 - XML for Analysis, partitions
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba5c60f1eebf40750e159c8b1921ebee21814423
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 347c85a1258e43fb1adedcb5546dccae5854d00d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="merging-partitions-xmla"></a>Слияние секций (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если секции имеют одинаковые статистические схемы и структуры, можно объединить секции с помощью [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) в XML для аналитики (XMLA) команду. При управлении секциями их слияние является важным действием, особенно для тех секций, в которых содержатся исторические данные, секционированные по дате.  
+  Если секции имеют одинаковые статистические схемы и структуры, можно объединить секции с помощью [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) в XML для аналитики (XMLA) команду. При управлении секциями их слияние является важным действием, особенно для тех секций, в которых содержатся исторические данные, секционированные по дате.  
   
  Например, в финансовом кубе может быть две секции.  
   
@@ -52,10 +53,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В следующем примере объединяются все разделы в **Customer Counts** группе мер, **Adventure Works** куба в **Adventure Works DW** пример [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных в **Customers_2004** секции.  
   
-### <a name="code"></a>Код  
+### <a name="code"></a>код  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -88,7 +89,7 @@ ms.lasthandoff: 01/08/2018
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Разработка с использованием XMLA в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

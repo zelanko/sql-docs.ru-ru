@@ -16,19 +16,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], viewing
 - viewing attributes
 ms.assetid: 855bef07-b72d-4ce3-bf02-de77abeee71a
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 123d00510932a19a033c82995f14de5b87467c5a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---view-attributes-in-dimension-designer"></a>Свойства атрибута — Просмотр атрибутов в конструкторе измерений
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Атрибуты создаются на объектах измерений. Просматривать и настраивать атрибуты можно с помощью конструктора измерений в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Панель **Атрибуты** на вкладке **Структура измерения** конструктора измерений содержит список атрибутов в измерении. Эта панель используется для добавления, удаления или настройки атрибутов. Можно также выбрать атрибуты и использовать их как уровень в новой иерархии или добавить как уровень в существующую иерархию.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Атрибуты создаются на объектах измерений. Просматривать и настраивать атрибуты можно с помощью конструктора измерений в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Панель **Атрибуты** на вкладке **Структура измерения** конструктора измерений содержит список атрибутов в измерении. Эта панель используется для добавления, удаления или настройки атрибутов. Можно также выбрать атрибуты и использовать их как уровень в новой иерархии или добавить как уровень в существующую иерархию.  
   
  Чтобы просмотреть атрибуты в измерении, откройте измерение в конструкторе измерений. На панели **Атрибуты** вкладки **Структура измерения**  конструктора показаны атрибуты измерения. Можно выбрать представление списка, дерева или сетки, выбрав пункт **Показать атрибуты в** в меню **Измерение** среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , а затем выбрав одну из следующих команд:  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 |![Значок ключевого атрибута](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "значок ключа атрибута")|Key|  
 |![Значок родительского атрибута](../../analysis-services/multidimensional-models/media/as-icon-parent-attribute.gif "значок родительского атрибута")|Parent|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - prediction queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно создать прогнозирующий запрос можно при построении решения интеллектуального анализа данных в среде BI Development Studio или щелкнув правой кнопкой мыши существующую модель интеллектуального анализа данных в SQL Server Management Studio, и затем выбрав параметр **построить прогнозирующий запрос**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Создать прогнозирующий запрос можно при создании решения интеллектуального анализа данных в среде BI Development Studio. Можно также щелкнуть правой кнопкой мыши существующую модель интеллектуального анализа данных в среде SQL Server Management Studio и выбрать параметр **Построить прогнозирующий запрос**.  
   
  **Построитель прогнозирующих запросов** имеет три режима конструктора. Для перехода из одного режима в другой используются значки в верхнем левом углу.  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  Запустите запрос, нажав первую кнопку на панели инструментов вкладки **Прогноз моделей интеллектуального анализа данных** , а затем выбрав пункт **Результат**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание одноэлементного запроса в конструкторе интеллектуального анализа данных](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)  
   

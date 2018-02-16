@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fde665f7dea3efe26d61d6d183f8ca35834f732e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculation-context"></a>Контекст вычисления
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Контекстом вычисления является известное подпространство куба, где оценивается выражение, а все координаты либо известны, либо могут быть получены с помощью выражения.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Контекстом вычисления является известное подпространство куба, где оценивается выражение, а все координаты либо известны, либо могут получены с помощью выражения.  
   
 ## <a name="determining-the-calculation-context"></a>Определение контекста вычисления  
  Любые набор, элемент, кортеж, числовая функция выполняются в контексте всего многомерного выражения или инструкции. Когда такой аргумент, как кортеж, передается в функцию, в явном виде задаются только некоторые координаты в пространстве куба. Для получения остальных координат используется текущий контекст вычисления.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  Ячейки куба или вложенного куба на каждой оси, устраняющие пустые кортежи на оси и применяющие предложение HAVING.  
   
-6.  Дополнительные сведения см. в разделе [Определение контекста куба в запросе (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
+6.  Дополнительные сведения см. в разделе [Establishing Cube Context in a Query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
   
  В следующем запросе контекст вычисления для каждой оси строк ограничен элементом атрибута Country и элементом атрибута Calendar Year, указанным в предложении WHERE.  
   
@@ -75,9 +76,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  Чтобы увеличить производительность запроса, следует удалить элементы и кортежи как можно раньше в процессе разрешений. Таким образом уменьшается время вычисления сложного запроса на конечном наборе элементов, поскольку запрос обрабатывает минимально возможное количество ячеек.  
   
-## <a name="see-also"></a>См. также:  
- [Определение контекста куба в запросе (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+## <a name="see-also"></a>См. также  
+ [Определение контекста куба в запросе &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
  [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

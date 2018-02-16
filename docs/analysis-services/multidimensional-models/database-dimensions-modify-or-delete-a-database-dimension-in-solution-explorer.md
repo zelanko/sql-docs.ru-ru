@@ -18,19 +18,20 @@ helpviewer_keywords:
 - deleting dimensions
 - removing dimensions
 ms.assetid: be52b351-f376-42ee-adba-2dcaa0c0f69c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 67fc72907e0d15cfbd5edf14733f1e9669c1e0fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>Измерения — базы данных изменить или удалить измерение базы данных в обозревателе решений
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно изменить или удалить измерение с помощью конструктора измерений в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Выполненные изменения измерения недоступны пользователям до его обработки. Дополнительные сведения см. в разделе [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Можно изменять и удалять измерения, используя конструктор измерений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Выполненные изменения измерения недоступны пользователям до его обработки. Дополнительные сведения см. в разделе [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-modify-a-dimension-in-sql-server-data-tools"></a>Изменение измерения в SQL Server Data Tools  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 -   В обозревателе решений щелкните правой кнопкой мыши измерение, которое хотите удалить, и выберите пункт **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Измерения в многомерных моделях](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

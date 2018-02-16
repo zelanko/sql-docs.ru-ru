@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Сравнение табличных и многомерных решений
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -151,9 +151,9 @@ ms.lasthandoff: 01/22/2018
   
 -   Многомерный шаблон баз данных можно использовать измерения и безопасность на уровне ячейки, с помощью разрешений на основе ролей.  
 
--   Книги[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] защищаются на уровне файлов с использованием разрешений SharePoint.  
+-   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] защищаются на уровне файлов с использованием разрешений SharePoint.  
   
- Книги[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] могут быть восстановлены на сервер в табличном режиме. После восстановления файла он отсоединяется от SharePoint, что позволяет использовать все функции табличного моделирования, включая безопасность на уровне строк.  
+ [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] могут быть восстановлены на сервер в табличном режиме. После восстановления файла он отсоединяется от SharePoint, что позволяет использовать все функции табличного моделирования, включая безопасность на уровне строк.  
   
 ##  <a name="bkmk_designer"></a> Средства проектирования  
  Пользователи, задачей которых является построение аналитических моделей, могут обладать весьма разными навыками моделирования данных и техническим опытом. Если в конкретном решении имеет значение уровень владения тем или иным инструментом или опыт пользователя, сравните следующие направления подготовки в создании моделей.  

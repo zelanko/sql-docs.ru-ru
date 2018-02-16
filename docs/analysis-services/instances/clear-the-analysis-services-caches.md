@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 19055dc68ebd1e9baa2fa1b1330370d01f7d864a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="clear-the-analysis-services-caches"></a>Очистка кэша служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Службы Analysis Services кэшируют данные для повышения производительности запросов. В этом разделе приводятся рекомендации по использованию команды XMLA ClearCache для очистки кэшей, созданных в ответ на запрос многомерных выражений. Эффекты выполнения команды ClearCache различаются в зависимости от используемой модели (табличной или многомерной).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Службы Analysis Services кэшируют данные для повышения производительности запросов. В этом разделе приводятся рекомендации по использованию команды XMLA ClearCache для очистки кэшей, созданных в ответ на запрос многомерных выражений. Эффекты выполнения команды ClearCache различаются в зависимости от используемой модели (табличной или многомерной).  
   
  **Время очистки кэша для многомерных моделей**  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
     </return>  
     ```  
   
-## <a name="see-also"></a>См. также:  
- [Мониторинг экземпляра Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+## <a name="see-also"></a>См. также  
+ [Мониторинг экземпляра служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

@@ -16,21 +16,21 @@ helpviewer_keywords:
 - objects [Analysis Services], scripts
 - scripts [Analysis Services], objects
 ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 62c23859b14e9c9fc3e4663a0ec813c8dca25ff1
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Создание скриптов служб Analysis Services в среде Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживает функции создания скриптов, шаблоны и редакторы, используемые для разработки скриптов с объектами и задачами служб Analysis Services.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживает функции создания скриптов, шаблоны и редакторы, используемые для разработки скриптов с объектами и задачами служб Analysis Services.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Создание скриптов для задач служб Analysis Services в среде Management Studio  
  Создание скриптов для задач в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] осуществляется выбором одного из параметров "Скрипт" в диалоговом окне, соответствующем задаче. Все диалоговые окна, используемые для выполнения задач, таких как резервное копирование и восстановление базы данных, обработка объекта или создание агрегата, содержат параметр «Скрипт» в верхней части. Если выбрать один из этих параметров, создается скрипт XMLA на основе сведений и параметров в диалоговом окне.  

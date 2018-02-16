@@ -17,19 +17,20 @@ helpviewer_keywords:
 - linear regression [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b904dc4d9858b87f135b180b66ea24e8f688f0c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Алгоритм линейной регрессии (Майкрософт)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм линейной регрессии является разновидностью [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритм дерева принятия решений, которое помогает рассчитать линейную связь между зависимой и независимой переменной, а затем использовать эту связь для прогноза.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] является разновидностью алгоритма дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] , помогающего рассчитать линейную связь между зависимой и независимой переменной, а затем использовать эту связь при прогнозировании.  
   
  Связь принимает вид формулы линии, представляющей ряд данных. Например, линия на следующей диаграмме является наилучшим линейным представлением данных.  
   
@@ -82,10 +83,10 @@ ms.lasthandoff: 01/08/2018
   
 -   Поддерживается использование моделей интеллектуального анализа OLAP.  
   
-## <a name="see-also"></a>См. также:  
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>См. также  
+ [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Технический справочник по алгоритму линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для модели линейной регрессии &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

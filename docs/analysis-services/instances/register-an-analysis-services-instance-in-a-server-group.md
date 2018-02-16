@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 85bef4a254d86857d682dae062c7fc546891581d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>Регистрация экземпляра служб Analysis Services в группе серверов
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если имеется большое количество экземпляров сервера служб Analysis Services, можно создавать группы серверов в среде Management Studio, чтобы упростить администрирование сервера. Группа серверов должна обеспечить близость связанных серверов внутри рабочей области администрирования. Предположим, нужно управлять десятью отдельными экземплярами служб Analysis Services. Группирование по режиму сервера, времени работы или отделу или региону может упростить просмотр и подключение к экземплярам с одинаковыми характеристиками. Вы можете также добавить описательную информацию, которая поможет вспомнить, каким образом используется сервер.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+При наличии большого числа экземпляров сервера служб Analysis Services можно создавать группы серверов в среде Management Studio и тем самым упростить администрирование сервера. Группа серверов должна обеспечить близость связанных серверов внутри рабочей области администрирования. Предположим, нужно управлять десятью отдельными экземплярами служб Analysis Services. Группирование по режиму сервера, времени работы или отделу или региону может упростить просмотр и подключение к экземплярам с одинаковыми характеристиками. Вы можете также добавить описательную информацию, которая поможет вспомнить, каким образом используется сервер.  
   
  ![Область зарегистрированного сервера со рядовых серверов](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "область зарегистрированных серверов с рядовыми серверами")  
   

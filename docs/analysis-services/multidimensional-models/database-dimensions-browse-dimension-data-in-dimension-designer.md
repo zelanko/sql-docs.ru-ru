@@ -15,19 +15,20 @@ helpviewer_keywords:
 - dimensions [Analysis Services], browsing
 - browsing dimensions [Analysis Services]
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2dcff92682a8e860d5c63bdf3dcf1e6b4518b732
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Измерения базы данных — Обзор данных измерения в конструкторе измерений
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно просмотреть данные в измерении с помощью **браузера** в конструкторе измерений, к которому можно получить из [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Можно просмотреть данные в измерении с использованием представления **Браузер** конструктора измерений, доступ к которому можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Чтобы данные измерения отображались в представлении **Браузер** , измерение должно находиться в обработанном состоянии. Дополнительные сведения см. в разделе [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
@@ -42,8 +43,8 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  Необходимо иметь в измерении преобразование, определенное для выбранного языка.  
   
-## <a name="see-also"></a>См. также:  
- [Введение в измерения (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
+## <a name="see-also"></a>См. также  
+ [Знакомство с измерениями &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
  [Измерения в многомерных моделях](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -28,10 +28,10 @@ ms.author: maghan
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2a7354eba000f4982753d0253dd9dfbc70aa09bf
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Использование файлов политики безопасности служб Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] сохраняют сведения о политике безопасности компонентов в трех файлах конфигурации, которые копируются в файловую систему при установке. В этих файлах конфигурации хранится сочетание внутренней и пользовательской политики безопасности для сборок программного кода в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Три файла конфигурации соответствуют трем защищаемым компонентам служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: сервер отчетов и служба Windows, веб-приложение диспетчер отчетов и окно предварительного просмотра конструктора отчетов.  

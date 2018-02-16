@@ -21,19 +21,20 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fd3dee20e57342542e271cfb3f153b1c35c0764d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>техническом справочнике по алгоритму логистической регрессии (Майкрософт)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм логистической регрессии является разновидностью [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритма нейронной сети, где *HIDDEN_NODE_RATIO* параметр имеет значение 0. Эта настройка создает модель нейронной сети, которая не содержит скрытого слоя и, таким образом, эквивалентна логистической регрессии.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм логистической регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой вариант алгоритма нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] , в котором параметр *HIDDEN_NODE_RATIO* равен 0. Эта настройка создает модель нейронной сети, которая не содержит скрытого слоя и, таким образом, эквивалентна логистической регрессии.  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Реализация алгоритма логистической регрессии (Майкрософт)  
  Предположим, что прогнозируемый столбец содержит только два состояния, но все же необходимо провести регрессионный анализ, сопоставляя входные столбцы с вероятностью того, что прогнозируемый столбец будет содержать конкретное состояние. На следующей диаграмме показаны результаты, которые будут получены, если состояниям прогнозируемого столбца присвоить значения 1 и 0, рассчитать вероятность того, что столбец будет содержать конкретное состояние, и рассчитать линейную регрессию по отношению к входной переменной.  
@@ -153,15 +154,15 @@ WHERE NODE_TYPE = 23
 ### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  В следующей таблице перечислены конкретные типы содержимого входных столбцов, типы содержимого прогнозируемых столбцов и флаги моделирования, поддерживаемые алгоритмом логистической регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения о значении типов содержимого в применении к модели интеллектуального анализа данных см. в разделе [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|столбцом|Типы содержимого|  
+|Столбец|Типы содержимого|  
 |------------|-------------------|  
 |Входной атрибут|Continuous, Discrete, Discretized, Key, Table|  
 |Прогнозируемый атрибут|Continuous, Discrete, Discretized|  
   
-## <a name="see-also"></a>См. также:  
- [Алгоритм логистической регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
+## <a name="see-also"></a>См. также  
+ [Алгоритм логистической регрессии Майкрософт](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Содержимое модели интеллектуального анализа данных для моделей логистической регрессии &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Алгоритм нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

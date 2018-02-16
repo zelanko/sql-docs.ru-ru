@@ -15,55 +15,56 @@ helpviewer_keywords:
 - data mining [Analysis Services], models
 - mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8c1eef41d84a8bdbd758c02f4830467b14cd9ebb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Задачи и инструкции по модели интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Используйте **моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для управления и обработки моделей в структуре интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Используйте вкладку **Модели интеллектуального анализа данных** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для управления и обработки моделей в структуре интеллектуального анализа данных.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
--   [добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
+-   [Добавление модели интеллектуального анализа данных к существующей структуре интеллектуального анализа данных](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
--   [Удаление модели интеллектуального анализа данных из структуры интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)  
+-   [Удалить модель интеллектуального анализа данных из структуры интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)  
   
--   [Исключение столбца из модели интеллектуального анализа данных](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)  
+-   [Исключить столбец из модели интеллектуального анализа данных](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)  
   
--   [Создание псевдонима для столбца модели](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
+-   [Создать псевдоним для столбца модели](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
--   [изменить дискретизацию столбца в модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
+-   [Изменить дискретизацию столбца в модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Просмотр или изменение флагов моделирования (интеллектуальный анализ данных)](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Просмотр или изменение модели флаги &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
--   [Указание столбца, который будет использоваться в модели в качестве регрессора](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
+-   [Укажите столбец для использования в качестве Регрессора в модели](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
   
 -   [Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
 -   [Применение фильтра к модели интеллектуального анализа данных](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)  
   
--   [Удаление фильтра из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+-   [Удалить фильтр из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
--   [Включение детализации для модели интеллектуального анализа данных](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)  
+-   [Включить детализацию для модели интеллектуального анализа данных](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)  
   
 -   [Просмотр или изменение параметров алгоритма](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
--   [создать копию модели интеллектуального анализа данных](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
+-   [Создать копию модели интеллектуального анализа данных](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
   
--   [обработать модель интеллектуального анализа данных](../../analysis-services/data-mining/process-a-mining-model.md)  
+-   [Обработать модель интеллектуального анализа данных](../../analysis-services/data-mining/process-a-mining-model.md)  
   
--   [создать измерение интеллектуального анализа данных](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
+-   [Создание измерения интеллектуального анализа данных](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>См. также:  
- [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   
- [Модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>См. также  
+ [Интеллектуального анализа данных структуры задачи и инструкции](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   
+ [Модели интеллектуального анализа данных и &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
  [Основные понятия интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-concepts.md)  
   
   

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - cross-validation [data mining]
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6b8b5dad234adf73717b5785fc0f3b06becaebce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cross-validation-report"></a>создать отчет перекрестной проверки
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описывается создание отчета перекрестной проверки с помощью диаграммы точности вкладки конструктора интеллектуального анализа данных. Дополнительные сведения о том, как выглядит отчет перекрестной проверки, и содержащихся в нем статистических мерах см. в разделе [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В данном разделе описывается создание отчета перекрестной проверки с помощью вкладки «Диаграмма точности» в конструкторе интеллектуального анализа данных. Дополнительные сведения о том, как выглядит отчет перекрестной проверки, и содержащихся в нем статистических мерах см. в разделе [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Отчет перекрестной проверки существенно отличается от диаграммы точности, в том числе от диаграммы точности прогнозов или матрицы классификации.  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  Вставьте выбранный текст в открытую книгу Excel. Если использовалась команда **Вставить** , отчет будет вставлен в Excel как HTML; это сохранит форматирование строк и столбцов. Если для вставки отчета использовалась команда **Специальная вставка** для текста или текста в формате Юникод, отчет будет вставлен в формате с разделителями строк.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Меры в отчете перекрестной проверки](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

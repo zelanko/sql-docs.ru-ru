@@ -18,10 +18,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 604952211abf63d6dacb111c8170d678acd2d80a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel подготавливает отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в формате [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (XLSX). Благодаря модулю для подготовки отчетов, ширина столбцов в Excel более аккуратно отражает ширину столбцов в отчете.  

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bb193bb9e90d1bd2b7773c2a1bd2f237e7fa0135
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Применение фильтров к данным проверки модели
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При указании внешнего источника данных для использования при тестировании модели, можно при необходимости применить фильтр для ограничения входных данных. Например, необходимо проверить модель конкретно по прогнозам для клиентов с определенным уровнем дохода.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Задавая внешний источник данных для использования при тестировании модели, можно при необходимости применить фильтр для ограничения входных данных. Например, необходимо проверить модель конкретно по прогнозам для клиентов с определенным уровнем дохода.  
   
  Например, в сценарии целевой рассылки Adventure Works можно создать критерий фильтра, аналогичный приведенному ниже в ProspectiveBuyer, который является таблицей с проверочными данными, и ограничить проверочные варианты по уровню дохода:  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
      Условие фильтра применяется к источнику данных при создании диаграммы точности.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выбрать и сопоставить данные проверки модели](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [С помощью вложенной таблицы данных в качестве входных для диаграммы точности](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Выбор типа диаграммы точности и задание параметров диаграммы](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  

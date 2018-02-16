@@ -28,19 +28,20 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-types-data-mining"></a>Типы содержимого (интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], можно определить как физический тип данных для столбца в структуре интеллектуального анализа данных и логический тип содержимого для столбца, используемого в модели  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно определить как физический тип данных для столбца в структуре интеллектуального анализа данных, так и логический тип содержимого для столбца, используемого в модели.  
   
  *Тип данных* определяет обработку данных алгоритмами в этих столбцах при создании моделей интеллектуального анализа данных. Определение типа данных столбца дает алгоритму сведения о типе данных в столбцах и о способах обработки данных. Каждый тип данных в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает один или несколько типов содержимого для интеллектуального анализа данных.  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
  Данный тип содержимого поддерживается следующими типами данных: **Double**, **Long**и **Date**.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Таблица  
  Тип содержимого *таблица* указывает, что столбец содержит другую таблицу данных с одним или несколькими столбцами и одной или несколькими строками. Применительно к любой конкретной строке в таблице вариантов этот столбец может содержать несколько значений, причем все они связаны с записью родительского варианта. Например, если основная таблица вариантов содержит список клиентов, то можно предусмотреть несколько столбцов, содержащих вложенные таблицы, например, столбец **ProductsPurchased** , в котором вложенная таблица перечисляет продукты, приобретенные этим клиентом в прошлом, а столбец **Hobbies** содержит перечень увлечений клиента.  
   
  Типом данных этого столбца всегда является **Table**.  
@@ -118,7 +119,7 @@ ms.lasthandoff: 01/08/2018
  Выше были описаны типы содержимого, широко применяемые во всех моделях, но, кроме них, для данных некоторых типов могут использоваться классифицированные столбцы, позволяющие определять типы содержимого. Дополнительные сведения о классификационных столбцах см. в разделе [Классифицированные столбцы (интеллектуальный анализ данных)](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Типы содержимого (расширения интеллектуального анализа данных)](../../dmx/content-types-dmx.md)   
+ [Содержимого типы &#40; расширений интеллектуального анализа данных &#41;](../../dmx/content-types-dmx.md)   
  [Типы данных &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [Типы данных &#40; расширений интеллектуального анализа данных &#41;](../../dmx/data-types-dmx.md)   
  [Изменить свойства структуры интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   

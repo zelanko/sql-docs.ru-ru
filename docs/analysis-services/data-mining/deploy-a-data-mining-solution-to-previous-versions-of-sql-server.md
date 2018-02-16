@@ -20,19 +20,20 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 - deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f082d488439f1331c009352bc7d691b7703f0e32
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описаны известные проблемы совместимости, возникающих при попытке развернуть модель интеллектуального анализа данных или структуры интеллектуального анализа данных, созданной в экземпляре [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] в базе данных, который использует SQL Server 2005 Analysis Services, или при развертывании модели, созданные в SQL Server 2005 к экземпляру компонента [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описаны известные проблемы совместимости, которые могут возникнуть во время развертывания модели или структуры интеллектуального анализа данных, созданной в экземпляре служб [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] , в базе данных со службами SQL Server 2005 Analysis Services, а также при развертывании моделей, созданных в SQL Server 2005, на экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Развертывание на экземпляре служб SQL Server 2000 Analysis Services не поддерживается.  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 01/08/2018
   
  При попытке синхронизации базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] сервер вернет ошибку, а синхронизация будет отменена.  
   
-## <a name="see-also"></a>См. также:  
- [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
+## <a name="see-also"></a>См. также  
+ [Обратная совместимость служб Analysis Services](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

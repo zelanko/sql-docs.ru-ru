@@ -1,7 +1,7 @@
 ---
 title: "Установление соединений в ADOMD.NET | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,26 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - opening connections
 - closing connections
 - connections [ADOMD.NET]
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ec8f5afd3396e13d5bc5e757d1f61c1ca67dd67
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 36325fc2b6c7dd9ed948b0e5ccf70d41f5df1b9f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet"></a>Соединений в ADOMD.NET
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В ADOMD.NET, используется <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> объекта для открытия соединений с источниками аналитических данных, таких как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] баз данных. Если необходимости в соединении больше нет, его следует явно закрыть.  
+  В ADOMD.NET, используется <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> объекта для открытия соединений с источниками аналитических данных, таких как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] баз данных. Если необходимости в соединении больше нет, его следует явно закрыть.  
   
 ## <a name="opening-a-connection"></a>Открытие соединения  
  Чтобы открыть соединение в ADOMD.NET, необходимо сначала задать строку соединения с допустимым источником аналитических данных и базой данных. Затем следует явно открыть соединение с этим источником данных.  
@@ -70,7 +71,7 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
 > [!IMPORTANT]  
 >  В **Finalize** метод любого реализованного класса, не следует вызывать **закрыть** или **Dispose** методы <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> объекта, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> объекта или любого другого управляемый объект. В методе завершения следует освобождать только неуправляемые ресурсы, которыми непосредственно владеет реализованный класс. Если реализованный класс все неуправляемые ресурсы, не включайте **Finalize** метод в определении класса.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программирование клиента ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   

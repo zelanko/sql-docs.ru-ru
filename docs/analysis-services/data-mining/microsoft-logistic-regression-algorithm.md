@@ -17,19 +17,20 @@ helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Алгоритм логистической регрессии (Майкрософт)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Логистическая Регрессия является известным статистическим методом, который используется для моделирования двоичных результатов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Логистическая регрессия является известным статистическим методом, применяемым для моделирования двоичных результатов.  
   
  Существуют различные варианты внедрения логистической регрессии в статистических исследованиях. Такие варианты различаются по методам обучения, реализованным в них. Алгоритм логистической регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] реализован на основе вариации алгоритма нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Этот алгоритм обладает многими качествами нейронных сетей, но более прост в обучении.  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Не поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Технический справочник по алгоритму логистической регрессии Майкрософт](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Примеры запросов модели логистической регрессии](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  

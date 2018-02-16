@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 992a09878aece468b52a26241c362cb71ae43ec9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>Установка SQL Server Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services является сервер аналитических баз данных, на котором размещена табличных моделей, многомерных кубов и моделей интеллектуального анализа данных, можно получить из отчетов, электронных таблиц и панелей мониторинга.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SQL Server Analysis Services является сервер аналитических баз данных, на котором размещена табличных моделей, многомерных кубов и моделей интеллектуального анализа данных, можно получить из отчетов, электронных таблиц и панелей мониторинга.  
   
  Службы Analysis Services имеет несколько экземпляров, это означает, что можно установить несколько копий на одном компьютере или запустить новые и старые версии side-by-side. Все установленные экземпляры работают в одном из трех режимов, определяемых во время установки: многомерный и интеллектуальный анализ данных, а также режим для работы с табличными моделями или моделями SharePoint. Если вы хотите использовать несколько режимов, вам потребуется отдельный экземпляр для каждого из них.  
   
@@ -72,14 +73,14 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  Параметр**ASSERVERMODE** учитывает регистр.  Все значения должны задаваться в верхнем регистре. В следующей таблице приведены допустимые значения параметра **ASSERVERMODE**.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |TABULAR|Это значение по умолчанию. Если вы не установите **ASSERVERMODE**, сервер будет установлен в табличном режиме.|
 |MULTIDIMENSIONAL|Это значение является необязательным.|  
 |POWERPIVOT|Это значение является необязательным. На практике, если задан параметр **ROLE** , режим сервера автоматически получает значение 1, что делает **ASSERVERMODE** необязательным в установке [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint. Дополнительные сведения см. в статье [Установка Power Pivot из командной строки](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).|  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение режима работы сервера экземпляра служб Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Табличное моделирование (табличные службы SSAS)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   

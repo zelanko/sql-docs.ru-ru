@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], columns
 - predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ea1fbd3d7522c08b025d6c8fb6c4595e6fe4e63e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Выбор столбца, используемого для тестирования модели интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Прежде чем измерять точность модели интеллектуального анализа данных, необходимо решить, какие результаты вы хотите оценить. Для большинства моделей интеллектуального анализа данных необходимо выбрать хотя бы один столбец, который будет использоваться в качестве прогнозируемого атрибута при создании модели. Поэтому при проверке точности модели обычно необходимо выбрать для проверки этот атрибут.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Прежде чем измерять точность модели интеллектуального анализа данных, необходимо решить, какие результаты вы хотите оценить. Для большинства моделей интеллектуального анализа данных необходимо выбрать хотя бы один столбец, который будет использоваться в качестве прогнозируемого атрибута при создании модели. Поэтому при проверке точности модели обычно необходимо выбрать для проверки этот атрибут.  
   
  В следующем списке указаны некоторые дополнительные соображения, связанные с выбором прогнозируемого атрибута для использования при проверке.  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  Чтобы определить точность модели, необходимо указать конкретное значение результата, выбрав его в списке **Значение прогнозирования** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выбрать и сопоставить данные проверки модели](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [Выбор типа диаграммы точности и задание параметров диаграммы](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   

@@ -19,19 +19,20 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7dc0ec5be4d6a0189e844ddfa24595b0cadade24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Просмотр формулы для модели временных рядов (интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если вы создали модель ряда времени с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интеллектуального анализа данных, простой способ просмотра уравнения регрессии, для модели является использование **обозначения интеллектуального анализа данных** из [средство просмотра временных рядов Майкрософт](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), который представляет все константы в удобном для чтения формате.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Если модель временных рядов создана с использованием интеллектуального анализа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , проще всего отобразить регрессивное уравнение будет с помощью **условных обозначений интеллектуального анализа данных** в [средстве просмотра временных рядов (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), где все ограничения представлены в удобочитаемом формате.  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>Просмотр формулы регрессии ARTXP для модели временных рядов  
   
@@ -92,8 +93,8 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  При просмотре содержимого смешанной модели, объединяющей модели ARIMA и ARTXP, эти модели отображаются в виде отдельных деревьев, соединенных в корневом узле, который представляет собой модель. Несмотря на то, что для удобства модели ARIMA и ARTXP отображаются вместе, их структуры существенно различаются, а уравнения не комбинируются и не подходят для сравнения. Например, дерево ARTXP больше похоже на дерево принятия решений, в то время как дерево ARIMA представляет собой последовательность скользящих средних значений.  
   
-## <a name="see-also"></a>См. также:  
- [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+## <a name="see-also"></a>См. также  
+ [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Просмотр модели в средство просмотра временных рядов](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
   

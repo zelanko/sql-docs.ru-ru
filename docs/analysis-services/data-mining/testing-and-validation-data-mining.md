@@ -30,19 +30,20 @@ helpviewer_keywords:
 - CRISP-DM
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bf43af38fc18b67c37ec5409ccb90a1d8e798259
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="testing-and-validation-data-mining"></a>Тестирование и проверка (интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Проверка — это процесс оценки соответствия моделей интеллектуального анализа данных фактическим данным. Важно выяснить качество и характеристики моделей интеллектуального анализа данных до их развертывания в рабочей среде.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Проверка представляет собой процесс оценки соответствия моделей интеллектуального анализа данных фактическим данным. Важно выяснить качество и характеристики моделей интеллектуального анализа данных до их развертывания в рабочей среде.  
   
  В данном разделе представлены основные понятия, связанные с качеством модели, а также приведены сведения о стратегиях оценки моделей, предусмотренных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Общие сведения о том, как проверка моделей применяется в процессах интеллектуального анализа данных большего масштаба, см. в разделе [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md).  
   
@@ -89,16 +90,16 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="related-topics"></a>См. также  
   
-|Подраздел|Ссылки|  
+|Разделы|Ссылки|  
 |------------|-----------|  
 |Узнайте, как создать набор проверочных данных, с помощью мастера или команд расширений интеллектуального анализа данных|[Обучающие и проверочные наборы данных](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|Узнайте, как проверить распределение и репрезентативность данных в структуре интеллектуального анализа данных|[Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Дополнительные сведения о типах диаграмм точности, имеющихся.|[Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Диаграмма роста прибыли (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Узнайте о создании матрицы классификации, которую иногда также называют матрицей несоответствий, для оценки нескольких условий.|[Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|Узнайте, как проверить распределение и репрезентативность данных в структуре интеллектуального анализа данных|[Перекрестная проверка &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Дополнительные сведения о типах диаграмм точности, имеющихся.|[Диаграмма точности прогнозов &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Диаграмма роста прибыли &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Узнайте о создании матрицы классификации, которую иногда также называют матрицей несоответствий, для оценки нескольких условий.|[Матрица классификации &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   
  [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Тестирование и проверка задачи и инструкции по &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

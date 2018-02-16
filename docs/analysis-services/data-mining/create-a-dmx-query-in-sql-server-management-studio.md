@@ -20,19 +20,20 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: edb3f0ab17369a4a1df4a69d80e07bfa1ff84012
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Создание DMX-запроса в среде SQL Server Management Studio
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор возможностей, которые помогают создавать прогнозирующие запросы, запросы к содержимому и запросов определения данных к моделям интеллектуального анализа данных и структур интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор возможностей, упрощающих создание прогнозирующих запросов, запросов содержимого и запросов определения данных к моделям интеллектуального анализа данных и структурам интеллектуального анализа данных.  
   
 -   В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]доступен графический построитель прогнозирующих запросов, упрощающий написание прогнозирующих запросов и сопоставление наборов данных с моделью.  
   
@@ -88,10 +89,10 @@ ms.lasthandoff: 01/08/2018
   
  [Создание одноэлементного прогнозирующего запроса из шаблона](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
   
- [Создание запроса содержимого к модели интеллектуального анализа данных](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
+ [Создание запроса содержимого модели интеллектуального анализа данных](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Ссылка](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

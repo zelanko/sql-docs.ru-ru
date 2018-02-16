@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], mining models
 - adding mining models
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ecd909a6aeb0fb0b7d0557ba93333709f5ade242
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После первой модели, можно добавить несколько моделей интеллектуального анализа данных к структуре интеллектуального анализа данных. В каждой модели должны содержаться столбцы, существующие в структуре, но использование столбцов можно определять отдельно для каждой модели интеллектуального анализа данных. Дополнительные сведения об определении столбцов моделей интеллектуального анализа данных см. в разделе [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+После определения первой модели к структуре интеллектуального анализа данных можно добавить еще несколько моделей интеллектуального анализа данных. В каждой модели должны содержаться столбцы, существующие в структуре, но использование столбцов можно определять отдельно для каждой модели интеллектуального анализа данных. Дополнительные сведения об определении столбцов моделей интеллектуального анализа данных см. в разделе [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md).  
   
 ### <a name="to-add-a-mining-model-to-the-structure"></a>Добавление модели интеллектуального анализа данных к структуре  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
  На вкладке **Модели интеллектуального анализа данных** появляется новая модель интеллектуального анализа данных. Модель использует столбцы по умолчанию, существующие в структуре. Дополнительные сведения об изменении столбцов см. в разделе [Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md).  
   
-## <a name="see-also"></a>См. также:  
- [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+## <a name="see-also"></a>См. также  
+ [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

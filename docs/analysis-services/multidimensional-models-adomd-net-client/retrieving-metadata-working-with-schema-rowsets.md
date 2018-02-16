@@ -1,7 +1,7 @@
 ---
 title: "Работа с наборами строк схемы в ADOMD.NET | Документы Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dcb2905c471751275b6dae19737541b798e2b68b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 279cc537776f6c96193026d5f0bccafcbd8f0c8b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Извлечение метаданных - работа с наборы строк схемы
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если вам требуется больше метаданных, чем доступно в модели объектов ADOMD.NET, ADOMD.NET предоставляет возможность получить полный диапазон XML для аналитики (XMLA), OLE DB, OLE DB для OLAP и OLE DB для интеллектуального анализа данных наборов строк схемы:  
+  Если требуется больший объем метаданных, чем тот, который доступен в объектной модели ADOMD.NET, компонент ADOMD.NET имеет возможность извлекать полный спектр наборов строк схемы XML для аналитики (XMLA), OLE DB, OLE DB для OLAP и OLE DB для интеллектуального анализа данных.  
   
  **Метаданные XML для аналитики**  
  Наборы строк схемы XML для аналитики предоставляют метод для получения сведений низкого уровня о сервере. Эти сведения включают имеющиеся на сервере источники данных, ключевые слова, зарезервированные поставщиком, литералы, поддерживаемые поставщиком и др. Набор строк схемы XML для аналитики можно использовать даже для обнаружения всех наборов строк схемы, поддерживаемых поставщиком.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
  [!code-cs[Adomd.NetClient#GetActions](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/retrieving-metadata-work_0_1.cs)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Получение метаданных из источника аналитических данных](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

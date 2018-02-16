@@ -18,19 +18,20 @@ helpviewer_keywords:
 - log score [data mining]
 - likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a98814c3b71a8a39b1f77bdeaf1de7eb4758e54
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measures-in-the-cross-validation-report"></a>Меры в отчете перекрестной проверки
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При перекрестной проверке [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] разделяется на несколько разрезов данных в структуру интеллектуального анализа данных и выполняется итерационное тестирование структуры и связанных с ней моделей. На основании такого анализа для структуры и каждой модели выводится набор стандартных точных мер.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В процессе перекрестной проверки службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] разбивают данные в структуре интеллектуального анализа данных на несколько перекрестных разделов, после чего выполняется итерационное тестирование структур и всех соответствующих моделей интеллектуального анализа данных. На основании такого анализа для структуры и каждой модели выводится набор стандартных точных мер.  
   
  Отчет содержит общие сведения о количестве сверток в данных, сумму данных в каждой свертке и набор общих показателей, описывающих распределение данных. Сравнивая общие показатели, созданные для каждого разреза, можно оценить надежность структуры или модели.  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/08/2018
 ||**Среднее**.<br />                      Средние значения секций по конкретным мерам.|  
 ||**Стандартное отклонение**.<br />                      Среднее отклонение от среднего арифметического для конкретной меры, с учетом всех секций модели.<br /><br /> Для перекрестной проверки более высокое значение этой оценки предполагает существенные различия между свертками.|  
   
-## <a name="see-also"></a>См. также:  
- [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

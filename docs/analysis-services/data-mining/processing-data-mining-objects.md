@@ -19,19 +19,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], how-to topics
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e4726de9acf90a805ff15791d6ab8d76fa20adc6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-data-mining-objects"></a>Обработка объектов интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Объект интеллектуального анализа данных представляет собой просто пустой контейнер до его обработки. *Обработка* модели интеллектуального анализа данных также называется *обучением*.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+До обработки объект интеллектуального анализа данных представляет собой просто пустой контейнер. *Обработка* модели интеллектуального анализа данных также называется *обучением*.  
   
  **Обработка структур интеллектуального анализа данных.** Структура интеллектуального анализа данных получает данные из внешнего источника, определенного в привязках столбцов и метаданных использования, и считывает данные. Эти данные считываются полностью и затем подвергаются анализу, чтобы получить различную статистику. Службы Analysis Services сохраняют в локальном кэше компактное представление данных, которое удобно для анализа, проводимого алгоритмами интеллектуального анализа данных. После обработки моделей этот кэш можно сохранить или удалить. По умолчанию кэш сохраняется. Дополнительные сведения см. в разделе [Обработка структуры интеллектуального анализа данных](../../analysis-services/data-mining/process-a-mining-structure.md).  
   
@@ -62,9 +63,9 @@ ms.lasthandoff: 01/08/2018
  Дополнительные сведения см. в разделе [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Запросы детализации (интеллектуальный анализ данных)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
- [Логическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Запросы детализации &#40; интеллектуального анализа данных и &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Структуры интеллектуального анализа данных и &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Модели интеллектуального анализа данных и &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [Логическая архитектура &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

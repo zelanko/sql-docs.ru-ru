@@ -18,19 +18,20 @@ helpviewer_keywords:
 - solutions [Analysis Services], deploying
 - models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bfbfd44f7acd1b029d0b841ef2e291e5b26b6c07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Развертывание решений интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Последним шагом процесса интеллектуального анализа данных является развертывание моделей в производственной среде. Процесс развертывания важен, так как делает модели доступными пользователям для решения любой из следующих задач.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Последний шаг процесса интеллектуального анализа данных — это развертывание моделей в производственной среде. Процесс развертывания важен, так как делает модели доступными пользователям для решения любой из следующих задач.  
   
 -   Использование моделей для создания прогнозов и принятия бизнес-решений. Сведения об использовании средств создания запросов см. в разделе [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md).  
   
@@ -48,8 +49,8 @@ ms.lasthandoff: 01/08/2018
   
  [Связанные ресурсы](#bkmk_Resources)  
   
-## <a name="in-this-section"></a>в этом разделе  
- [Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Развертывание решения интеллектуального анализа данных для предыдущих версий SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [Экспорт и импорт объектов интеллектуального анализа данных](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
@@ -83,13 +84,13 @@ ms.lasthandoff: 01/08/2018
   
  Если модели используют куб в качестве источника данных, дополнительные сведения о перемещении моделей и соответствующих данных куба см. в следующем разделе.  
   
- [Развертывание проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Развертывание проектов служб Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  Содержит общие сведения о развертывании проектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и описывает свойства, которые можно задать как часть конфигурации проекта.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Обработка требования и рекомендации &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

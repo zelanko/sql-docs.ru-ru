@@ -20,19 +20,20 @@ helpviewer_keywords:
 - continuous columns
 - regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6eaa320911fbba0f46472750bde9293b36430b46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Средство просмотра временных рядов в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритма временных рядов. Алгоритм временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой алгоритм регрессии, который создает модели интеллектуального анализа данных для прогнозирования столбцов с непрерывными данными, таких, как данные о продажах продукта, в сценарии прогнозирования. Эти модели временных рядов могут включать информацию, основанную на других алгоритмах:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В средстве просмотра временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображаются модели интеллектуального анализа данных, построенные с помощью алгоритма временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой алгоритм регрессии, который создает модели интеллектуального анализа данных для прогнозирования столбцов с непрерывными данными, таких, как данные о продажах продукта, в сценарии прогнозирования. Эти модели временных рядов могут включать информацию, основанную на других алгоритмах:  
   
 -   Алгоритм ARTxp, оптимизированный для краткосрочного прогнозирования.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
  **Примечание** Информация, отображаемая для содержимого модели и к условным обозначениям интеллектуального анализа данных, зависит от используемого в модели алгоритма. Тем не менее, вкладки **Модель** и **Диаграммы** остаются одинаковыми, независимо от применяемого сочетания алгоритмов.  
   
 ###  <a name="BKMK_Tree"></a> Модель  
- При построении модели временных рядов службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] представляют завершенную модель в виде дерева. Если рассматриваемые данные содержат несколько рядов вариантов, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] формируют отдельное дерево для каждого ряда. Например, необходимо создать прогноз продаж для тихоокеанского, североамериканского и европейского регионов. Прогнозы для каждой из этих областей — это ряды вариантов. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают отдельное дерево для каждого из этих рядов. Чтобы рассмотреть конкретный ряд, выберите этот ряд из списка **Дерево** .  
+ При построении модели временных рядов службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] представляют завершенную модель в виде дерева. Если рассматриваемые данные содержат несколько рядов вариантов, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] формируют отдельное дерево для каждого ряда. Например, необходимо создать прогноз продаж для тихоокеанского, североамериканского и европейского регионов. Прогнозы для каждой из этих областей — это ряды вариантов. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают отдельное дерево для каждого из этих рядов. Чтобы рассмотреть конкретный ряд, выберите этот ряд из списка **Дерево** .  
   
  Для каждого дерева модель временных рядов содержит узел **Все** , затем делится на ряд узлов, которые представляют периодические структуры, обнаруженные алгоритмом. Можно щелкнуть каждый узел, чтобы отобразить статистические данные, например количество вариантов и уравнение.  
   
@@ -91,9 +92,9 @@ ms.lasthandoff: 01/08/2018
   
  [В начало](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>См. также:  
- [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Алгоритм временных рядов (Майкрософт)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+## <a name="see-also"></a>См. также  
+ [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Алгоритм временных рядов](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Примеры запросов для модели временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   

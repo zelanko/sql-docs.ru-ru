@@ -15,19 +15,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 84259428c78b013577d50b6f48818bb2cd0dc554
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Изменение свойств модели интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Некоторые свойства моделей интеллектуального анализа данных применяются к модели в целом, а другие свойства модели к отдельным столбцам. Примеры свойств, которые применяются ко всей модели: свойство **Drillthrough** , задающее доступность данных вариантов для запросов, а также свойство **Description** . Свойства, действующие только на определенные столбцы: **Usage** и **ModelingFlags**, управляющие использованием данных в столбце внутри модели.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Некоторые свойства моделей интеллектуального анализа данных могут применяться ко всей модели, другие действуют только на отдельные столбцы. Примеры свойств, которые применяются ко всей модели: свойство **Drillthrough** , задающее доступность данных вариантов для запросов, а также свойство **Description** . Свойства, действующие только на определенные столбцы: **Usage** и **ModelingFlags**, управляющие использованием данных в столбце внутри модели.  
   
  Для следующих свойств модели предусмотрены расширенные редакторы, с помощью которых можно создавать выражения или настраивать сложные свойства моделей. Следующие свойства предоставляют:  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
      Новое значение вступает в силу после выбора другого элемента в конструкторе.  
   
-## <a name="see-also"></a>См. также:  
- [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+## <a name="see-also"></a>См. также  
+ [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - drillthrough [Analysis Services]
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 81778c4f9b2602c8fa49d5b33f8e1725c05122b7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>включить детализацию для модели интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если при просмотре модели, можно получить подробные сведения о вариантах, которые использовались для создания модели включена детализация для модели интеллектуального анализа данных. Для просмотра этой информации необходимо иметь соответствующие разрешения. Структура к моменту просмотра должна быть уже обработана.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Если в модели интеллектуального анализа данных включена детализация, то при просмотре модели можно извлекать подробные сведения о вариантах, использованных при создании модели. Для просмотра этой информации необходимо иметь соответствующие разрешения. Структура к моменту просмотра должна быть уже обработана.  
   
  **Разрешения** . Чтобы пользователь мог детализировать данные модели или структуры, он должен быть членом роли, имеющей разрешения [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) в отношении такой модели или структуры интеллектуального анализа данных. Разрешения на детализацию устанавливаются отдельно для структуры и для модели.  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  В меню **База данных** выберите **Обработать**.  
   
-## <a name="see-also"></a>См. также:  
- [Запросы детализации (интеллектуальный анализ данных)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Запросы детализации &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

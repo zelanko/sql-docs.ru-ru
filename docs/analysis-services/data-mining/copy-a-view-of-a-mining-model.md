@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], clipboards
 - copying mining models to clipboard
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c1b439df2696fc44552d42680e1d4642e4728aa9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>Копирование представления модели интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**Средство просмотра моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует отдельное средство просмотра для каждого типа модели интеллектуального анализа данных. Некоторые средства просмотра имеют компоненты, из которых можно скопировать содержимое в буфер обмена, а затем вставить это содержимое в документ или в программу обработки изображений. Такой функциональностью обладают следующие компоненты.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Вкладка **Средство просмотра моделей интеллектуального анализа данных** в конструкторе интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует отдельное средство просмотра для каждого типа модели интеллектуального анализа данных. Некоторые средства просмотра имеют компоненты, из которых можно скопировать содержимое в буфер обмена, а затем вставить это содержимое в документ или в программу обработки изображений. Такой функциональностью обладают следующие компоненты.  
   
 -   Диаграмма кластеров в средстве просмотра кластеров ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) и средстве просмотра кластеризации последовательностей ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] )  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  Щелкните правой кнопкой мыши панель **Сведения об узле** повторно и выберите команду **Копировать**.  
   
-## <a name="see-also"></a>См. также:  
- [Задачи и инструкции по средству просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+## <a name="see-also"></a>См. также  
+ [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

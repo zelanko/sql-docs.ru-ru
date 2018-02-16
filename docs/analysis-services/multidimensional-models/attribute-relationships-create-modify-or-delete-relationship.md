@@ -15,19 +15,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], member properties
 - member properties [Analysis Services], creating
 ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e521c6eb3bbcb1c40dde10c5767ea024e6eaa3c1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---create-modify-or-delete-relationship"></a>Атрибут связи - создание, изменение или удаление связи
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Создание, изменение или удаление связи атрибутов между атрибутами в измерении с помощью **связи атрибутов** конструктора измерений в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Связи атрибутов можно создавать, изменять и удалять с помощью вкладки **Связи атрибутов** конструктора измерений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-create-an-attribute-relationship"></a>Создание связи атрибутов  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  В диалоговом окне **Удаление объектов** нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Связи атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

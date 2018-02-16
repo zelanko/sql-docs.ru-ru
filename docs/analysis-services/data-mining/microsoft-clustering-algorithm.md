@@ -22,19 +22,20 @@ helpviewer_keywords:
 - datasets [Analysis Services]
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: "62"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d9511055469bea3bbd5e090ecb14c22e8c043789
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-clustering-algorithm"></a>Алгоритм кластеризации (Майкрософт)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм кластеризации *сегментации* или *кластеризации* алгоритм, который выполняет итерацию по вариантов в наборе данных, объединять их в кластеры с похожими характеристиками. Такие группирования полезно использовать для просмотра данных, выявления в них аномалий и создания прогнозов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом *сегментации* или *кластеризации* , который выполняет итерацию вариантов в наборе данных, чтобы сгруппировать их в кластеры, содержащие подобные характеристики. Такие группирования полезно использовать для просмотра данных, выявления в них аномалий и создания прогнозов.  
   
  Модели кластеризации определяют связи в наборе данных, который невозможно логически получить с помощью случайного наблюдения. Например, можно логически догадаться, что люди, добирающиеся на работу на велосипеде, не обязательно живут далеко от работы. Алгоритм может найти другие не очевидные характеристики велосипедистов. На следующей диаграмме кластер А соответствует людям, добирающимся до работы на машине, а кластер Б — людям, добирающимся до работы на велосипеде.  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="viewing-a-clustering-model"></a>Просмотр модели кластеризации  
  Чтобы исследовать модель, можно использовать **Средство просмотра кластеров (Майкрософт)**. При просмотре модели кластеризации в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] кластеры отображаются на диаграмме, которая показывает связи между кластерами, а также содержит подробный профиль каждого кластера, список атрибутов, по которым различаются кластеры, и характеристики всего набора данных для обучения. Дополнительные сведения см. в разделе [Просмотр модели с помощью средства просмотра кластеров (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Чтобы получить более подробные сведения, можно просмотреть модель с помощью [средства просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Содержимое, сохраняемое для модели, включает распределение всех значений в каждом узле, вероятность каждого кластера и другую информацию. Дополнительные сведения см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
+ Чтобы получить более подробные сведения, можно просмотреть модель с помощью [средства просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Содержимое, сохраняемое для модели, включает распределение всех значений в каждом узле, вероятность каждого кластера и другую информацию. Дополнительные сведения см. в разделе [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Создание прогнозов  
  После обучения модели результаты хранятся в виде набора закономерностей, которые можно исследовать или делать на их основе прогнозы.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения о создании запросов к модели интеллектуального анализа данных см. в разделе [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md). Примеры использования запросов с моделью кластеризации см. в разделе [Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 -   Поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.  
   
@@ -87,8 +88,8 @@ ms.lasthandoff: 01/08/2018
   
 -   Поддерживается использование моделей интеллектуального анализа OLAP и создание измерений интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>См. также  
+ [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Содержимое модели интеллектуального анализа данных для кластеризации моделей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md)  

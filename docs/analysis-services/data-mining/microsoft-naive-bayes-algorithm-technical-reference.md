@@ -20,19 +20,20 @@ helpviewer_keywords:
 - MAXIMUM_OUTPUT_ATTRIBUTES parameter
 - MAXIMUM_STATES parameter
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 93884e29674fa1a96402d23e397cddb3a1fe0bef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Технический справочник по упрощенному алгоритму Байеса (Майкрософт)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Упрощенный алгоритм Байеса — это алгоритм классификации, предоставляемый [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозирующем моделировании. Этот алгоритм вычисляет условную вероятность между входными и прогнозируемыми столбцами и предполагает, что столбцы являются независимыми. Из-за этого предположения о независимости алгоритм и называется упрощенным алгоритмом Байеса.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом классификации, предоставляемым службами [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозном моделировании. Этот алгоритм вычисляет условную вероятность между входными и прогнозируемыми столбцами и предполагает, что столбцы являются независимыми. Из-за этого предположения о независимости алгоритм и называется упрощенным алгоритмом Байеса.  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Реализация упрощенного алгоритма Байеса (Майкрософт)  
  Данный алгоритм требует меньшего количества вычислений, чем другие алгоритмы [!INCLUDE[msCoName](../../includes/msconame-md.md)] , и может применяться для быстрого формирования моделей интеллектуального анализа данных для обнаружения отношений между входными и прогнозируемыми столбцами. Алгоритм учитывает все пары значений входного атрибута и выходного атрибута.  
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает определенные входные столбцы данных и прогнозируемые столбцы, которые перечислены ниже в таблице. Дополнительные сведения о значении типов содержимого в применении к модели интеллектуального анализа данных см. в разделе [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|столбцом|Типы содержимого|  
+|Столбец|Типы содержимого|  
 |------------|-------------------|  
 |Входной атрибут|Cyclical, Discrete, Discretized, Key, Table и Ordered|  
 |Прогнозируемый атрибут|Cyclical, Discrete, Discretized, Table и Ordered|  
@@ -104,9 +105,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
-## <a name="see-also"></a>См. также:  
- [Упрощенный алгоритм Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+## <a name="see-also"></a>См. также  
+ [Алгоритма Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Примеры запросов к модели упрощенного алгоритма Байеса](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для моделей упрощенного алгоритма Байеса &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   
