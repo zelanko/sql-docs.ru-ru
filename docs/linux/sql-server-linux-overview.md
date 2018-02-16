@@ -25,9 +25,9 @@ ms.lasthandoff: 02/13/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server 2017 г. теперь работает на платформе Linux. Это же SQL Server database engine, с многие аналогичные функции и службы, независимо от операционной системы.
+SQL Server 2017 теперь работает на платформе Linux. Это то же ядро СУБД SQL Server со многими аналогичными возможностями и службами, не зависящими от вашей операционной системы.
 
-## <a name="install"></a>Установить
+## <a name="install"></a>Установка
 
 Чтобы приступить к работе, установите SQL Server в Linux с помощью одного из следующих краткие руководства:
 
@@ -38,7 +38,7 @@ SQL Server 2017 г. теперь работает на платформе Linux.
 - [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
-> Docker сам выполняется на нескольких платформах, что означает, что образ Docker можно запускать в Linux, Mac и Windows.
+> Docker сам по себе работает на разных платформах, что означает, что образ Docker можно запускать в Linux, Mac и Windows.
 
 ## <a name="connect"></a>Подключить
 
@@ -47,19 +47,19 @@ SQL Server 2017 г. теперь работает на платформе Linux.
 | Инструмент | Учебник |
 |-----|-----|
 | Visual Studio (VS код) | [Использование кода VS с SQL Server в Linux](sql-server-linux-develop-use-vscode.md) |
-| SQL Server Management Studio (SSMS) | [Используйте SSMS в Windows для подключения к SQL Server в Linux](sql-server-linux-develop-use-ssms.md) |
+| SQL Server Management Studio (SSMS) | [Использование SSMS в Windows для подключения к SQL Server на Linux](sql-server-linux-develop-use-ssms.md) |
 | SQL Server Data Tools (SSDT) | [Использование средств SSDT с SQL Server в Linux](sql-server-linux-develop-use-ssdt.md) |
 
-## <a name="explore"></a>Просмотр
+## <a name="explore"></a>Изучение
 
 2017 г. SQL Server имеет тот же базовый механизм базы данных на всех поддерживаемых платформах, включая Linux. Поэтому многие существующие функции и возможности работают так же, как в Linux. В этой части документации предоставляет некоторые из этих функций с точки зрения Linux. Он также вызывает областей, которые обладают уникальными требованиями в Linux.
 
-Если вы уже знакомы с SQL Server, просмотрите [заметки о выпуске](sql-server-linux-release-notes.md) Общие рекомендации и известные проблемы в этом выпуске. Посмотрите на [новые для SQL Server в Linux](sql-server-linux-whats-new.md) и [новые для SQL Server 2017 г. общей](../sql-server/what-s-new-in-sql-server-2017.md). Ответы на часто задаваемые вопросы см. в разделе [SQL Server в Linux часто задаваемые вопросы о](sql-server-linux-faq.md).
+Если вы уже знакомы с SQL Server, то можете просмотреть общие рекомендации и список известных проблем в [заметках о выпуске](sql-server-linux-release-notes.md) Кроме того, взгляните, [что нового в SQL Server на Linux](sql-server-linux-whats-new.md) и [что нового в SQL Server 2017 в общем](../sql-server/what-s-new-in-sql-server-2017.md). Ответы на часто задаваемые вопросы см. в разделе [SQL Server в Linux часто задаваемые вопросы о](sql-server-linux-faq.md).
 
 ##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) Общение с командой разработчиков SQL Server
 
-- [Администратор базы данных Exchange стека](https://dba.stackexchange.com/questions/tagged/sql-server): задать вопросы администрирования базы данных
-- [Переполнение стека](http://stackoverflow.com/questions/tagged/sql-server): вопросы разработки
+- [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): задать вопросы по администрированию баз данных
+- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): вопросы разработки
 - [Форумы MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): задавайте технические вопросы
 - [Отправить отзыв о](https://feedback.azure.com/forums/908035-sql-server): ошибки и запрос функции отчетов
 - [Reddit](https://www.reddit.com/r/SQLServer/): обсудить SQL Server
