@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3e3895f402f1e96dc1ea3484b9fb07ddc84118d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Методики проверки подлинности, поддерживаемые службами Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Подключения из клиентского приложения к экземпляру служб Analysis Services требуется проверка подлинности Windows (встроенная). Предоставить удостоверение пользователя Windows можно с помощью любого из следующих методов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Для подключений клиентского приложения к экземпляру служб Analysis Services требуется проверка подлинности Windows (встроенная). Предоставить удостоверение пользователя Windows можно с помощью любого из следующих методов.  
   
 -   NTLM  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения о сохраненных учетных данных см. в разделах [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) и [Использование служб Excel со службой Secure Store в SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование олицетворения и безопасность транспорта](http://go.microsoft.com/fwlink/?LinkId=311727)   
  [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Настройка служб Analysis Services для ограниченного делегирования Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   

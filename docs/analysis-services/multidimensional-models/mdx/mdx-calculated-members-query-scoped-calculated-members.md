@@ -15,19 +15,20 @@ helpviewer_keywords:
 - WITH keyword
 - query-scoped calculated members [MDX]
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 2ba34cb6af554bb958c8754a9971f3ff4ba5b9a6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-calculated-members---query-scoped-calculated-members"></a>Многомерные Выражения вычисляемых элементов - вычисляемых элементов с областью действия запроса
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Если вычисляемый элемент используется только необходимые в одном запросе многомерных выражений (MDX), можно определить этот вычисляемый элемент с помощью ключевого слова WITH. Вычисляемый элемент, созданный с помощью ключевого слова WITH, удаляется сразу после выполнения запроса.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Если вычисляемый элемент используется только в одном многомерном запросе, его можно определить с помощью ключевого слова WITH. Вычисляемый элемент, созданный с помощью ключевого слова WITH, удаляется сразу после выполнения запроса.  
   
  Синтаксис ключевого слова WITH является достаточно гибким и позволяет создавать один вычисляемый элемент на основе другого.  
   
@@ -96,9 +97,9 @@ WHERE [Product].[Category].[Bikes]
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../../../mdx/mdx-function-reference-mdx.md)   
- [Инструкция SELECT (многомерные выражения)](../../../mdx/mdx-data-manipulation-select.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [Инструкция SELECT &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-manipulation-select.md)   
  [Создание областью действия сеанса вычисляемые элементы &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

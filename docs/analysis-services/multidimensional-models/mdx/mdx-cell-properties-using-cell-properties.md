@@ -17,19 +17,20 @@ helpviewer_keywords:
 - cell properties [MDX]
 - CELL PROPERTIES keyword
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9e6094d7b88ef2c8da50ced24b49c89dc9658885
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Свойства ячеек MDX - свойства ячеек
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Свойства ячеек в языке Многомерных выражений содержат сведения о содержимом и формате ячеек в источнике многомерных данных, например куба.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Свойства ячеек в языке многомерных выражений содержат сведения о содержимом и формате ячеек многомерного источника данных, такого как куб.  
   
  В многомерных выражениях поддерживается ключевое слово CELL PROPERTIES инструкции многомерных выражений SELECT, которое служит для обращения к внутренним свойствам ячеек. Внутренние свойства ячеек чаще всего применяются для наглядного представления данных ячейки.  
   
@@ -53,7 +54,7 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Поддерживаемые внутренние свойства ячеек  
  В следующей таблице перечислены поддерживаемые внутренние свойства ячеек, используемые в качестве значений `<property>` .  
   
-|Свойство|Description|  
+|property|Описание|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|Битовая маска, определяющая существующие типы действий над ячейкой. Это свойство может принимать одно из следующих значений:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Примечание. Действия детализации не поддерживаются для запросов, содержащих набор в предложении WHERE.|  
 |**BACK_COLOR**|Цвет фона при отображении свойства **VALUE** или **FORMATTED_VALUE**. Дополнительные сведения см. в разделе [Свойства ячеек FORE_COLOR и BACK_COLOR (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
@@ -111,7 +112,7 @@ FROM [Adventure Works]
 CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

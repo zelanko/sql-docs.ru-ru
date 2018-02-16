@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e4e6be04453ddacfedfefbae3aaa070614349e7a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>Настройка и администрирование сервера PowerPivot в центре администрирования
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Настройка и администрирование сервера выполняется администраторами службы приложения SharePoint, с помощью центра администрирования SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] осуществляется администраторами приложения службы SharePoint с помощью центра администрирования SharePoint.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint его необходимо настроить. После установки [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint из программы установки SQL Server его необходимо настроить с помощью  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
  [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Ссылка|Тип|Описание задачи|  
 |----------|----------|----------------------|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/08/2018
 |[Создание и настройка коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)|Необязательно|Для установки, настраиваемой вручную, эта процедура описывает, как создать библиотеку коллекции [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , в которой отображаются эскизы содержащихся в ней книг [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
 |[Добавление типа содержимого соединения для семантической модели бизнес-аналитики в библиотеку (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|Необязательно|Описывает, как следует расширить библиотеку документов так, чтобы она поддерживала создание файлов связи семантической модели.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка Power Pivot для SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Справочник по параметрам конфигурации (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Аварийное восстановление PowerPivot для SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  

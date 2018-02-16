@@ -12,27 +12,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remote-processing-analysis-services"></a>Удаленная обработка (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно выполнять запланированную или автоматическую обработку на удаленном [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра, где запрос на обработку приходит с одного компьютера, но выполняется на другом компьютере в той же сети.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Можно выполнять запланированную или автоматическую обработку на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , при этом запрос на обработку приходит с одного компьютера, но выполняется на другом компьютере из той же сети.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Если на каждом компьютере запущены разные версии SQL Server, то клиентские библиотеки должны иметь ту же версию, что и экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , обрабатывающий модель.
   
 -   На удаленном сервере должна быть включена функция **Разрешить удаленные соединения с данным компьютером** , а учетная запись, выдающая запрос на обработку, должна быть в списке разрешенных пользователей.  
   
--   Правила брандмауэра Windows должны разрешать входящие соединения с [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Проверьте возможность подключения к удаленному экземпляру [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. См. раздел [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Правила брандмауэра Windows должны разрешать входящие соединения с [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Проверьте возможность подключения к удаленному экземпляру [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. См. раздел [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Устраните все ошибки локальной обработки перед попыткой проведения удаленной обработки. Проверьте, чтобы при получении локального запроса на обработку данные успешно извлекались из внешнего реляционного источника данных. Инструкции по настройке учетных данных для получения данных см. в разделе [Задание параметров олицетворения (службы SSAS — многомерные)](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
   
@@ -96,8 +97,8 @@ ms.lasthandoff: 01/08/2018
   
 2.  В качестве последнего шага измените задание так, чтобы оно выполнялось по вашему расписанию, добавив необходимые предупреждения и уведомления. Также, возможно, потребуется доработать скрипт обработки или создать несколько этапов в задании, чтобы объекты обрабатывались независимо.  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+## <a name="see-also"></a>См. также  
+ [Компоненты агента SQL Server](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [Планирование задач администрирования служб SSAS с помощью агента SQL Server](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Пакетная обработка &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - filters [data mining]
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: daf31a5100ced2272b74b1bcad982f84bbbe5916
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Синтаксис и примеры фильтра модели (службы Analysis Services — интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Этот раздел содержит подробные сведения о синтаксисе фильтров моделей, а также образцы критериев.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе приводятся сведения о синтаксисе фильтров моделей, а также образцы критериев.  
   
  [Синтаксис фильтра](#bkmk_Syntax)  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
  *avPredicate*  
  Критерий фильтра, применимый только к скалярному столбцу структуры интеллектуального анализа данных. Критерий *avPredicate* может быть использован и в фильтрах моделей, и в фильтрах вложенных таблиц.  
   
- Критерий, в котором используется любой из перечисленных ниже операторов, может быть применен только к непрерывному столбцу. , перечислены ниже.  
+ Критерий, в котором используется любой из перечисленных ниже операторов, может быть применен только к непрерывному столбцу. .  
   
 -   **\<** (меньше чем)  
   
@@ -317,8 +318,8 @@ FILTER (EXISTS (Products))
  Например, если необходимо фильтровать результаты центра обработки вызовов, чтобы отображались только данные за выходные, то можно создать выражение в представлении источника данных, извлекающее название дня недели для каждой даты, а затем использовать название дня в качестве входных данных или как дискретное значение при фильтрации. Однако следует помнить, что повторяющиеся значения также могут повлиять на модель, поэтому следует использовать только один из столбцов и не использовать совместно столбец дат и производное значение.  
   
   
-## <a name="see-also"></a>См. также:  
- [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Фильтры для моделей интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

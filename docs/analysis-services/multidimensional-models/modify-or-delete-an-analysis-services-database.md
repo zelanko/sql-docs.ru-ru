@@ -19,19 +19,20 @@ helpviewer_keywords:
 - databases [Analysis Services], deleting
 - modifying databases
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 88e23e63ccea23fd175371629d95dd2c1dc46a33
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>Изменение или удаление базы данных служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно изменить имя и описание [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных перед развертыванием в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и после развертывания в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Можно также изменять дополнительные настройки в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в зависимости от среды.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Имя и описание базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] перед развертыванием можно изменить в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , а после развертывания — в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Можно также изменять дополнительные настройки в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в зависимости от среды.  
   
 > [!NOTE]  
 >  Нельзя изменять свойства базы данных, используя среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в режиме в сети.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  В диалоговом окне **Удаление объекта** нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
- [Документирование и работа со скриптами в базе данных служб Analysis Services](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
+## <a name="see-also"></a>См. также  
+ [Document and Script базы данных служб Analysis Services](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
   

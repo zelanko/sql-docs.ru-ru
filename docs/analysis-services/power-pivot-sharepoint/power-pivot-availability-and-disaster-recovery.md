@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5a7e94aeb9f547220a3b3bc836e59ef81ce3bfe9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Доступность и аварийное восстановление Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Планы доступности и аварийного восстановления для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] зависят главным образом от проекта фермы SharePoint, объем простоя, приемлемой для различных компонентов и средств и рекомендации по реализации для поддержания доступности SharePoint. В этом разделе содержатся сведения о технологии и диаграммы с примерами топологий, которые следует рассматривать при планировании доступности и аварийного восстановления для развертывания [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Планы доступности и аварийного восстановления для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] зависят главным образом от проекта фермы SharePoint, продолжительности простоя, приемлемой для различных компонентов, а также средств и методов работы, которые используются для поддержания доступности SharePoint. В этом разделе содержатся сведения о технологии и диаграммы с примерами топологий, которые следует рассматривать при планировании доступности и аварийного восстановления для развертывания [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
 ||  
 |-|  

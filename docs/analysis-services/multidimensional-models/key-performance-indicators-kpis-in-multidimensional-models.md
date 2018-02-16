@@ -21,19 +21,20 @@ helpviewer_keywords:
 - parent KPIs [Analysis Services]
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Ключевые показатели эффективности в многомерных моделях
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В деловой лексике ключевого индикатора производительности (KPI) означает количественно исчислимую меру успешности бизнеса.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Употребляемый в деловой лексике термин «ключевой показатель эффективности» (KPI) означает количественно исчислимую меру успешности бизнеса.  
   
  В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ключевой показатель эффективности представляет собой коллекцию вычислений, связанных с группой мер куба и используемых для оценки успешности бизнеса. Обычно такие вычисления являются сочетанием многомерных выражений или вычисляемых элементов. В состав ключевых показателей эффективности также входят метаданные, определяющие способ отражения клиентскими приложениями результатов вычислений ключевого показателя эффективности.  
   

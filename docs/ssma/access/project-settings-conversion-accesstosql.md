@@ -25,10 +25,10 @@ ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: ec31bf02ccdeedd4356d0a85c85d7d33041d5bde
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Параметры проекта (преобразование) (AccessToSQL)
 Параметры преобразования проекта позволяют настраивать преобразование объектов из объектов базы данных доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объекты базы данных SQL Azure.  

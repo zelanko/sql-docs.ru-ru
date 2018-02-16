@@ -18,19 +18,20 @@ helpviewer_keywords:
 - deleting hierarchies
 - hierarchies [Analysis Services], removing
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: efa987972b10642f176e96bd93a9deee58aa06ec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-defined-hierarchies---add-or-delete-a-user-defined-hierarchy"></a>Пользовательские иерархии - Добавление или удаление пользовательской иерархии
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Добавьте определенную пользователем иерархию для или удаление пользовательской иерархии из измерения на **Структура измерения** в конструкторе измерений в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Добавление пользовательской иерархии в измерение и ее удаление производится на вкладке **Структура измерения** конструктора измерений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  При добавлении пользовательской иерархии она будет недоступна для пользователей до тех пор, пока ее экземпляр не будет создан в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и пока не выполнена обработка измерения. Дополнительные сведения см. в разделах [Базы данных многомерных моделей (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) и [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
@@ -67,8 +68,8 @@ ms.lasthandoff: 01/08/2018
   
 -   Удалите иерархию из области конструктора с помощью мыши.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пользовательские иерархии](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [Создание пользовательских иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
+ [Создание определяемых пользователем иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Выполнение пакетных операций (XMLA) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - multiple projects
 - XML for Analysis, batches
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - batches [XML for Analysis]
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21116359cfbea301242d8e743ff2431e742c1960
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f2730fb8396f63e123bf8d896ea9a648ad22016d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>Выполнение пакетных операций (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно использовать [пакета](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) в XML для аналитики (XMLA) для выполнения нескольких команд XML для Аналитики с помощью одного XMLA команда [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) метод. Можно выполнять несколько команд, содержащихся в **пакета** команду, либо как одна транзакция или в отдельные транзакции для каждой команды, последовательно или параллельно. Можно также указать ожидания привязок и другие свойства в **пакета** для обработки нескольких [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов.  
+  Можно использовать [пакета](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) в XML для аналитики (XMLA) для выполнения нескольких команд XML для Аналитики с помощью одного XMLA команда [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) метод. Можно выполнять несколько команд, содержащихся в **пакета** команду, либо как одна транзакция или в отдельные транзакции для каждой команды, последовательно или параллельно. Можно также указать ожидания привязок и другие свойства в **пакета** для обработки нескольких [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов.  
   
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>Выполнение транзакционных и нетранзакционных пакетных команд  
  **Пакета** команда выполняет команды одним из двух способов:  
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
  При сбое любой команды в пакете транзакций [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] откат всех команд **пакета** команда, выполняемая перед командой, сбой и **пакета** сразу же завершается. Все команды в **пакета** команду, которая еще не были выполнены не выполняются. После **пакета** завершения команды **пакета** команда сообщает обо всех ошибках, произошедших для ошибки.  
   
- **Нетранзакционное**  
+ **Nontransactional**  
  Если **транзакции** атрибута задано значение false, **пакета** команда выполняет каждую команду, содержащуюся **пакета** в отдельной транзакции —  *нетранзакционное* пакета. При сбое любой команды в нетранзакционный пакет **пакета** команда продолжает выполнение команд после команды, которой не удалось. После **пакета** команда пытается выполнить все команды, **пакета** содержит команды, **пакета** команды о возникших ошибках.  
   
  Все результаты, возвращаемые командами, содержащихся в **пакета** команды возвращаются в том же порядке, в котором эти команды расположены в **пакета** команды. Результаты, возвращенные **пакета** зависимости от того, следует ли **пакета** команда нетранзакционных или транзакций.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  Для выполнения команды, добавить команды, которые выполняются параллельно с [параллельных](../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) свойство **пакета** команды. В настоящее время [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно запустить только непрерывные, последовательные [процесс](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) команд в параллельном режиме. Любые другие команды XMLA, таких как [создать](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) или [Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)в **параллельных** свойство выполняются последовательно.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]предпринимает попытку запустить все **процесс** команды, добавленные в **параллельных** свойство в параллельном режиме, но не может гарантировать, что все включенные **процесс** команды могут выполняться параллельно. Экземпляр анализирует каждый **процесс** команды и, если обнаруживается, что команда не может быть параллельного выполнения, **процесс** команда последовательно.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предпринимает попытку запустить все **процесс** команды, добавленные в **параллельных** свойство в параллельном режиме, но не может гарантировать, что все включенные **процесс** команды могут выполняться параллельно. Экземпляр анализирует каждый **процесс** команды и, если обнаруживается, что команда не может быть параллельного выполнения, **процесс** команда последовательно.  
   
 > [!NOTE]  
 >  Для выполнения команд в параллельном режиме, **транзакции** атрибут **пакета** команды необходимо присвоить значение true, так как [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает только одну активную транзакцию на соединение, а нетранзакционные пакеты выполняют каждую команду в отдельной транзакции. При включении **параллельных** свойство в рамках нетранзакционного пакета произошла ошибка.  
@@ -88,7 +89,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  **Процесс**  
   
-7.  **Удаление**  
+7.  **Delete**  
   
 8.  **Процесс**  
   
@@ -126,10 +127,10 @@ ms.lasthandoff: 01/08/2018
     > [!IMPORTANT]  
     >  Объект **процесс** команда не может содержать **привязки**, **DataSource**, **DataSourceView**, или **ErrorConfiguration**  свойства, если **процесс** команды, содержащиеся в **пакета** команды. Если необходимо указать эти свойства для **процесс** команды, введите необходимые сведения в соответствующих свойствах **пакета** команду, которая содержит **процесс** команды.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Элемент Batch &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
  [Элемент Process &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Разработка с использованием XMLA в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

@@ -23,19 +23,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 - solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8b82aa83deb8d2b428972fb65a64383c6a3d7271
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculations-in-multidimensional-models"></a>Вычисления в многомерных моделях
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Используйте **вычисления** конструктора кубов для создания вычисляемых элементов, именованных наборов и других вычислений многомерных выражений (MDX).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Для создания вычисляемых элементов, именованных наборов и других вычислений многомерных выражений используется вкладка **Вычисления** конструктора кубов.  
   
  Вкладка **Вычисления** содержит следующие три панели.  
   

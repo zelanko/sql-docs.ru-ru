@@ -23,19 +23,20 @@ helpviewer_keywords:
 - system requirements [Analysis Services]
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Требования и вопросы, связанные с развертыванием служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Производительность и доступность решения зависит от многих факторов, включая возможности оборудования, топология развертывания сервера, характеристики решения (например, при использовании секций, распределенных на несколько серверов или с использованием хранилища ROLAP, которому требуется прямой доступ к реляционному механизму), соглашения об уровне обслуживания, а также сложность модели данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Производительность и доступность решения зависят от многих факторов, среди которых мощность оборудования, топология серверов, характеристики решения (например, использование секций, распределенных на нескольких серверах, или хранилища ROLAP, которому требуется прямой доступ к реляционному механизму), соглашения на уровне служб, а также сложность модели данных.  
   
 ## <a name="memory-and-processor-requirements"></a>Требования к памяти и процессору  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в следующих случаях требуется больше ресурсов памяти и процессора:  

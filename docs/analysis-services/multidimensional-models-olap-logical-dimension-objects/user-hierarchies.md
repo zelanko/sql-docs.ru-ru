@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - members [Analysis Services], hierarchies
 - dimensions [Analysis Services], hierarchies
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - multilevel hierarchies [Analysis Services]
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 01f5e5b5a73a8888d24d3ee46127c67327ec75da
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-hierarchies"></a>Пользовательские иерархии
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Пользовательские иерархии, определяемых пользователем иерархий атрибутов, которые используются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для организации элементов измерения в иерархические структуры и обеспечения навигационных путей в кубе. Например, в следующей таблице определена таблица измерения для измерения времени. Эта таблица измерения поддерживает три атрибута: «Год», «Квартал» и «Месяц».  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Пользовательские иерархии, определяемых пользователем иерархий атрибутов, которые используются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для организации элементов измерения в иерархические структуры и обеспечения навигационных путей в кубе. Например, в следующей таблице определена таблица измерения для измерения времени. Эта таблица измерения поддерживает три атрибута: «Год», «Квартал» и «Месяц».  
   
 |Год|Квартал|Месяц|  
 |----------|-------------|-----------|  
@@ -99,8 +101,8 @@ ms.lasthandoff: 01/08/2018
   
  В отличие от пользовательских иерархий, в которых общее количество уровней определяет число уровней, видимое конечному пользователю, иерархия типа «родители-потомки» определяется единственным уровнем иерархии атрибутов, а значения в нем реализуют несколько уровней, видимых конечными пользователями. Количество отображаемых уровней зависит от содержимого столбца таблицы измерения, в котором хранятся ключи элементов и «родительские» ключи. Количество уровней может изменяться при изменении данных в таблицах измерения. Дополнительные сведения см. в разделе [родитель-потомок измерения](../../analysis-services/multidimensional-models/parent-child-dimension.md), и [атрибутов в иерархии родители-потомки](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
-## <a name="see-also"></a>См. также:  
- [Создание пользовательских иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
+## <a name="see-also"></a>См. также  
+ [Создание определяемых пользователем иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Свойства пользовательской иерархии](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   

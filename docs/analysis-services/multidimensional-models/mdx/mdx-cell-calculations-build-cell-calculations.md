@@ -20,19 +20,20 @@ helpviewer_keywords:
 - calculated values [MDX]
 - Multidimensional Expressions [Analysis Services], cell calculations
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8e2e963c47746a85e760b3b4464edd5cbe39f1fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-calculations---build-cell-calculations"></a>Вычисления многомерных Выражений ячейки - построение вычислений значений ячеек
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Многомерных выражений (MDX) предоставляет набор средств для создания вычисляемых значений, таких как вычисляемые элементы, пользовательские свертки и пользовательские элементы. Однако по этой причине применить эти средства так, чтобы повлиять только на часть ячеек или на одну ячейку, будет трудно.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Многомерные выражения предоставляют целый ряд инструментов для формирования вычисляемых значений, таких как вычисляемые элементы, пользовательские свертки и пользовательские элементы.  Однако по этой причине применить эти средства так, чтобы повлиять только на часть ячеек или на одну ячейку, будет трудно.  
   
  Чтобы формировать вычисляемые значения ячеек, надо воспользоваться имеющимися в многомерных выражениях возможностями вычисляемых ячеек. Вычисляемые ячейки позволяют выделить особый срез ячеек, который называется *вложенным кубом вычисления*, и применить формулу к каждой ячейке вложенного куба вычисления, удовлетворяющей дополнительному условию, применимому к любой ячейке.  
   
@@ -48,10 +49,10 @@ ms.lasthandoff: 01/08/2018
   
      Дополнительные сведения о применении инструкций CREATE CELL CALCULATION и ALTER CUBE для создания вычисляемых ячеек в сеансе см. в разделе [Создание вычисляемых ячеек с областью действия сеанса](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md).  
   
-## <a name="see-also"></a>См. также:  
- [Инструкция ALTER CUBE (многомерные выражения)](../../../mdx/mdx-data-definition-alter-cube.md)   
+## <a name="see-also"></a>См. также  
+ [Инструкция ALTER CUBE &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-alter-cube.md)   
  [Создать инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
  [Создание вычислений ячеек с областью действия запроса &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

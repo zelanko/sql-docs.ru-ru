@@ -15,19 +15,20 @@ helpviewer_keywords:
 - CREATE MEMBER statement
 - session-scoped calculated members [MDX]
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 273553132fd9a3cd32900fef28800d28c9f6c1d5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-calculated-members---session-scoped-calculated-members"></a>Многомерные Выражения вычисляемых элементов - вычисляемых элементов с областью действия сеанса
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Чтобы создать вычисляемый элемент, доступных в сеансе многомерных выражений (MDX), используйте [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) инструкции. Вычисляемый элемент, созданный с помощью инструкции CREATE MEMBER, удаляется только при закрытии сеанса многомерных выражений.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Для создания вычисляемых элементов, доступных в сеансе многомерных выражений, используется инструкция [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md). Вычисляемый элемент, созданный с помощью инструкции CREATE MEMBER, удаляется только при закрытии сеанса многомерных выражений.  
   
  Как показано в этом разделе, синтаксис инструкции CREATE MEMBER достаточно прост.  
   
@@ -57,7 +58,7 @@ sum(([Stores].[ByLocation].Lag(3) :
 [Stores].[ByLocation].NextMember), [Measures].[Units Sold])  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Создание вычисляемых элементов с областью действия запроса (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
+## <a name="see-also"></a>См. также  
+ [Создание областью действия запроса вычисляемые элементы &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

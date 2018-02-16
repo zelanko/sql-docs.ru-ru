@@ -11,40 +11,42 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8299efb9-e224-4a82-bdfc-a74ec92f8711
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9df2f9bfd77a854c90f08ed8b4314bfa212bf469
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="propertyref-element-csdlbi"></a>Элемент PropertyRef (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Элемент PropertyRef — простой тип, предоставляющий ссылку на столбец, предоставляющий значение, необходимое другому свойству.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Элемент PropertyRef — простой тип, который обеспечивает ссылку на столбец, предоставляющий значение, необходимое другому свойству.  
   
 ## <a name="elements-and-attributes"></a>Элементы и атрибуты  
  В следующей таблице перечислены элементы и атрибуты, определяющие элемент PropertyRef.  
   
-|Имя|Обязателен|Description|  
+|Название|Обязателен|Описание|  
 |----------|-----------------|-----------------|  
-|Имя|Да|Строка, содержащая имя свойства, являющегося целью ссылки.|  
+|Название|Да|Строка, содержащая имя свойства, являющегося целью ссылки.|  
   
 ## <a name="propertyrefs-element"></a>Элемент PropertyRefs  
  PropertyRefs — сложный тип, который определяет коллекцию свойств, где каждое свойство содержится в элементе PropertyRef.  
   
  В следующей таблице перечислены элементы и атрибуты типа PropertyRefs.  
   
-|Имя|Обязателен|Description|  
+|Название|Обязателен|Описание|  
 |----------|-----------------|-----------------|  
 |PropertyRef|Да|Значение типа String, содержащее ссылку на свойство.|  
   
 ## <a name="example"></a>Пример  
- **Табличный**  
+ **Табличные**  
   
  В следующем примере для CSDLBI версии 1.1 элемент PropertyRef указывает источник формулы, используемой в мере, из примера табличной модели AdventureWorks.  
   
@@ -62,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="example"></a>Пример  
- **Multidimensional**  
+ **Многомерные**  
   
  В следующем примере для CSDLBI версии 1.1 показан ключевой показатель эффективности из куба операций Contoso. Элементы PropertyRef указывают на столбцы, содержащие формулы или значения, используемые для определения цели ключевого показателя эффективности и состояния относительно этой цели.  
   
@@ -89,6 +91,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Технический справочник по аннотациям бизнес-аналитики для языка CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Технический справочник по заметки бизнес-Аналитики для языка CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

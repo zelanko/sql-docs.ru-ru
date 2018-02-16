@@ -21,19 +21,20 @@ helpviewer_keywords:
 - parent-child dimensions [Analysis Services]
 - MembersWithData property
 ms.assetid: 249971cc-4bcd-44f1-8241-bdacc04d3d38
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4f40a257055bb1609f686d84f820073d6ac07aa6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="parent-child-dimension-attributes"></a>Родительские атрибуты измерения
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], о содержимом элементов измерения обычно делается общее предположение. Конечные элементы содержат данные, полученные непосредственно из основных источников данных; неконечные элементы содержат данные статистических вычислений, рассчитанных по дочерним элементам.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]о содержимом элементов измерения обычно делается общее предположение. Конечные элементы содержат данные, полученные непосредственно из основных источников данных; неконечные элементы содержат данные статистических вычислений, рассчитанных по дочерним элементам.  
   
  Тем не менее в иерархии вида «родители-потомки» некоторые неконечные элементы вместе со статистическими выражениями над дочерними элементами также могут содержать данные из основных источников данных. Для таких неконечных элементов в иерархии вида «родители-потомки» создаются специальные, формируемые системой дочерние элементы, содержащие данные из основной таблицы фактов. Такие элементы называются *элементами данных*, они непосредственно связаны с неконечным элементом дерева, который не зависит от суммарного значения, вычисленного для его потомков.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  Кроме того, индивидуальная комиссия продавцов может различаться. В таком случае используются два различных масштаба для вычисления комиссии для отдельных объемов валовой выручки менеджеров по продажам, в отличие от общего объема валовой выручки, формируемого их подчиненными. Следовательно, важно иметь возможность доступа к данным основной таблицы фактов для неконечных элементов. Функция многомерных выражений **DataMember** позволяет получить индивидуальный объем валовой выручки элемента Sales Manager 1, а пользовательское выражение свертки — исключить элемент данных из статистического значения для элемента Sales Manager 1 и вычислить объем валовой выручки всех менеджеров по продажам, которые связаны с этим элементом.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [Родитель потомок измерения](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
   

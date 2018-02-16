@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: "97"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Какой новые возможности служб Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -89,7 +89,7 @@ SQL Server 2016 Analysis Services включает множество усове
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Параллельная обработка нескольких секций таблицы в табличных моделях    
  Этот выпуск содержит новую функцию параллельной обработки для таблиц с двумя или более секциями, повышающую производительность обработки. Эта функция не имеет параметров конфигурации. Дополнительные сведения о настройке секций и обработке таблиц см. в разделе [Секции табличных моделей (табличные службы SSAS)](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Добавление учетных записей компьютеров в качестве администраторов в SSMS    
- Теперь администраторы[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для настройки учетных записей компьютеров в качестве членов группы "Администраторы" [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . В диалоговом окне **Выбор пользователей или групп** укажите значение в поле **Расположения** для домена компьютеров, а затем добавьте тип объекта **Компьютеры** . Дополнительные сведения см. в разделе [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для настройки учетных записей компьютеров в качестве членов группы "Администраторы" [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . В диалоговом окне **Выбор пользователей или групп** укажите значение в поле **Расположения** для домена компьютеров, а затем добавьте тип объекта **Компьютеры** . Дополнительные сведения см. в разделе [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC для служб Analysis Services    
  Средство проверки согласованности базы данных (DBCC) выполняется на внутреннем уровне для обнаружения потенциальных проблем повреждения данных при загрузке базы данных. Однако его, помимо прочего, можно запустить по требованию при подозрениях на проблемы в данных или модели. DBCC выполняет разные проверки в зависимости от типа модели — табличная или многомерная. Дополнительные сведения см. в разделе [Средство проверки согласованности базы данных (DBCC) для табличных и многомерных баз данных Analysis Services](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).    
  ### <a name="extended-events-updates"></a>Обновления расширенных событий    

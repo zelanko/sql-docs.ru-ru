@@ -15,19 +15,20 @@ helpviewer_keywords:
 - security [Analysis Services], about security
 - security [Analysis Services - multidimensional data], about security
 ms.assetid: bb885447-868b-4686-853c-8241f63d4370
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 77a8043d96f99543428121c3b98a58a7704ec0b2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="roles-and-permissions-analysis-services"></a>Роли и разрешения (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет модель авторизации на основе ролей, которая предоставляет доступ к операциям, объектов и данных. Все пользователи получают доступ к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или базе данных в контексте некоторой роли.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]предоставляет модель авторизации на основе ролей, предоставляющее доступ к операциям, объектов и данных. Все пользователи получают доступ к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или базе данных в контексте некоторой роли.  
   
  В качестве системного администратора службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , вы отвечаете за предоставление членства **роли администратора сервера** , которая передает неограниченный доступ к операциям на сервере. Эта роль имеет фиксированные разрешения, и ее нельзя настраивать. По умолчанию члены локальной группы администраторов автоматически являются системными администраторами служб Analysis Services.  
   
@@ -35,34 +36,34 @@ ms.lasthandoff: 01/08/2018
   
  Распространенной практикой является разделение операций по созданию ролей и назначению членства. Часто разработчик моделей добавляет роли на этапе проектирования. Таким образом, все определения ролей отражаются в файлах проекта, определяющих модели. Членство в ролях обычно определяется позднее, когда база данных переносится в рабочую среду. Обычно членство назначают администраторы базы данных, которые создают скрипты для разработки, тестирования и выполнения в качестве независимой операции.  
   
- Вся авторизация выполняется по допустимому удостоверению пользователя Windows. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют для проверки подлинности удостоверений пользователей исключительно проверку подлинности Windows. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не предоставляет собственный способ проверки подлинности. См. раздел [Методики проверки подлинности, поддерживаемые службами Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md).  
+ Вся авторизация выполняется по допустимому удостоверению пользователя Windows. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют для проверки подлинности удостоверений пользователей исключительно проверку подлинности Windows. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]предоставляет метод проверки подлинности. В разделе [методики проверки подлинности, поддерживаемые службами Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md).  
   
 > [!IMPORTANT]  
 >  Разрешения являются аддитивными для каждого пользователя или группы Windows, по всем ролям базы данных. Если одна роль запрещает пользователю или группе выполнять определенные задачи или просматривать определенные данные, а другая роль предоставляет такое разрешение указанному пользователю или группе, то этому пользователю или группе будет разрешено выполнять упомянутые задачи или просматривать упомянутые данные.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [Предоставление доступа к объектам и операциям (службы Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Авторизацию доступа к объектам и операции &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
--   [Предоставление разрешений базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)  
+-   [Предоставление разрешений базы данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)  
   
--   [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+-   [Предоставьте куба или модели разрешения &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
--   [Предоставление разрешений на обработку (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+-   [Предоставление разрешений доступа &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
--   [Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+-   [Предоставление разрешений на чтение описания метаданным объекта &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
--   [Предоставление разрешений объекту источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+-   [Предоставление разрешений на объект источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
--   [Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
+-   [Предоставление разрешений на &#40; структур интеллектуального анализа данных и моделей Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
   
--   [Предоставление разрешений измерению (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)  
+-   [Предоставьте разрешения на измерение &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)  
   
--   [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)  
+-   [Предоставление настраиваемого доступа к измерению данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)  
   
--   [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+-   [Предоставление настраиваемого доступа к ячейке данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
-## <a name="see-also"></a>См. также:  
- [Создание ролей и управление ими (табличные службы SSAS)](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Создание и управление ролями &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
   
   

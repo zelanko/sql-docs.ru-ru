@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 78b908cfe8e5601ecd5d8fcea6c6816459d6e73a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Соединение семантической модели бизнес-аналитики Power Pivot (BISM-файлы)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Соединение семантической модели бизнес-Аналитики (bism-файл) — это переносимое соединение, который подключается Excel или отчетов Power View для базы данных табличной модели служб Analysis Services или экземпляр служб Analysis Services в многомерном режиме. Определение и использование BISM-файлов в определенной степени аналогично файлам подключения к данным Оffice (ODC).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Соединение семантической модели бизнес-аналитики (BISM-файл) — это переносимое соединение, связывающее отчеты Excel или Power View с базой данных табличной модели Analysis Services или экземпляром служб Analysis Services в многомерном режиме. Определение и использование BISM-файлов в определенной степени аналогично файлам подключения к данным Оffice (ODC).  
   
  Создание семантической модели бизнес-аналитики и доступ к ней через SharePoint. Создание соединения семантической модели бизнес-аналитики позволяет использовать команды быстрого запуска соединения семантической модели с библиотекой. Команды быстрого запуска открывают новую книгу Excel или параметры файла соединения. При установке служб Reporting Services также появится команда для создания отчета [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_prereq"></a> Поддерживаемые базы данных  
  Соединение семантической модели бизнес-аналитики указывает на данные табличной модели. Существует три источника этих данных.  
   
--   Табличный шаблон базы данных, запущенный на отдельном экземпляре служб Analysis Services в режиме табличного сервера. Развертывание отдельного экземпляра служб Analysis Services выполняется вне пределов фермы. Для доступа к источникам данных, находящимся за пределами фермы, требуются дополнительные разрешения, о которых можно прочитать в следующем разделе: [Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Табличный шаблон базы данных, запущенный на отдельном экземпляре служб Analysis Services в режиме табличного сервера. Развертывание отдельного экземпляра служб Analysis Services выполняется вне пределов фермы. Для доступа к источникам данных, находящимся за пределами фермы, требуются дополнительные разрешения, о которых можно прочитать в следующем разделе: [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , сохраненные в SharePoint. Базы данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , внедренные в книги Excel, эквивалентны табличным шаблонам баз данных, запущенным на отдельном сервере Analysis Services в табличном режиме. Если [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel и [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint уже используются, то можно определить соединение семантической модели бизнес-аналитики, указывающее на книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из библиотеки SharePoint, и создавать отчеты [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] с использованием существующих данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  Можно использовать книги, созданные в версиях SQL Server 2008 R2 или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel.  
   
@@ -79,11 +80,11 @@ ms.lasthandoff: 01/08/2018
   
  [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Создание подключения семантической модели бизнес-аналитики к табличному шаблону базы данных](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   

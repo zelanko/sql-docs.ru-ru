@@ -23,19 +23,20 @@ helpviewer_keywords:
 - restoring databases [Analysis Services]
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Создание и восстановление резервных копий баз данных служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включают резервного копирования и восстановления, можно восстановить базу данных и ее объектов на определенный момент времени. Резервное копирование и восстановление подходит для переноса баз данных на модернизированные серверы, между серверами или для развертывания базы данных на рабочем сервере. Если есть ценные данные, но пока нет плана резервного копирования, то необходимо как можно скорее разработать и реализовать такой план на случай последующего восстановления данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предусмотрено резервное копирование и восстановление базы данных и ее объектов на определенный момент времени. Резервное копирование и восстановление подходит для переноса баз данных на модернизированные серверы, между серверами или для развертывания базы данных на рабочем сервере. Если есть ценные данные, но пока нет плана резервного копирования, то необходимо как можно скорее разработать и реализовать такой план на случай последующего восстановления данных.  
   
  Команды резервного копирования и восстановления выполняются в развернутой базе данных служб Analysis Services. Для проектов и решений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]следует использовать систему управления версиями, позволяющую восстанавливать определенные версии исходных файлов, а затем создавать план восстановления данных для репозитория используемой системы управления версиями.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
  Администратор может создать резервную копию базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в одном файле резервной копии служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ABF) независимо от размера базы данных. Пошаговые инструкции см. в разделах [Резервное копирование базы данных служб Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) и [Автоматизация резервного копирования базы данных служб Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], используемый для загрузки и запросов к [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] моделей данных в среде SharePoint, загружает свои модели из баз данных содержимого SharePoint. Эти базы данных содержимого являются реляционными и работают на базе ядра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Стратегии резервного копирования и восстановления служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для моделей данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] как таковой не существует. Если для содержимого SharePoint есть план аварийного восстановления, то этот план охватывает модели данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , хранящиеся в базах данных содержимого.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], используемый для загрузки и запросов к моделям данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в среде SharePoint, загружает свои модели из баз данных содержимого SharePoint. Эти базы данных содержимого являются реляционными и работают на базе ядра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Стратегии резервного копирования и восстановления служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для моделей данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] как таковой не существует. Если для содержимого SharePoint есть план аварийного восстановления, то этот план охватывает модели данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , хранящиеся в базах данных содержимого.  
   
  **Удаленные секции**  
   
@@ -122,14 +123,14 @@ ms.lasthandoff: 01/08/2018
 -   Можно выбрать, чтобы команда восстановления изменяла папку восстановления для каждой восстанавливаемой секции. Локальные секции можно восстанавливать в любое местоположение папки, являющееся локальным для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , на который производится восстановление базы данных. Удаленные секции можно восстанавливать в любую папку на любом сервере, кроме локального; удаленные секции не могут становиться локальными.  
   
     > [!IMPORTANT]  
-    >  Пользователь, выполняющий команду восстановления, должен иметь разрешение на чтение из папки резервного копирования, указанной для каждого восстанавливаемого файла. Чтобы восстановить базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которая не установлена на сервере, пользователь также должен быть членом роли сервера для этого экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Чтобы перезаписать базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , пользователь должен быть членом одной из следующих ролей: роль сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или роль базы данных с разрешениями "Полный доступ (администратор)" в восстанавливаемой базе данных.  
+    >  Пользователь, выполняющий команду восстановления, должен иметь разрешение на чтение из папки резервного копирования, указанной для каждого восстанавливаемого файла. Чтобы восстановить базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которая не установлена на сервере, пользователь также должен быть членом роли сервера для этого экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Чтобы перезаписать базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , пользователь должен быть членом одной из следующих ролей: роль сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или роль базы данных с разрешениями "Полный доступ (Администратор)" в восстанавливаемой базе данных.  
   
     > [!NOTE]  
     >  После восстановления существующей базы данных пользователь, выполнявший восстановление, может утратить доступ к этой базе данных. Потеря доступа может произойти в случае, если на время создания резервной копии этот пользователь не был членом роли сервера и роли базы данных с разрешением «Полный доступ (Администратор)».  
   
  Дополнительные сведения о восстановлении базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Параметры восстановления](../../analysis-services/multidimensional-models/restore-options.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Резервное копирование, восстановление и синхронизация баз данных (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
 
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Создание надежного расположения для сайтов PowerPivot в центре администрирования
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Службы Excel позволяют указать, какие расположения являются допустимыми репозиториями для книг, открываемых на сервере SharePoint. Эти расположения называются надежными. Можно использовать разные параметры конфигурации для каждого создаваемого надежного расположения. При развертывании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint может понадобиться создание надежных расположений для сайтов, в которых содержатся книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , что позволит применить параметры, наиболее подходящие для доступа к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , во время сохранения параметров по умолчанию для всех остальных расположений фермы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Службы Excel позволяют указать, какие расположения являются допустимыми репозиториями для книг, открываемых на сервере SharePoint. Эти расположения называются надежными. Можно использовать разные параметры конфигурации для каждого создаваемого надежного расположения. При развертывании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint может понадобиться создание надежных расположений для сайтов, в которых содержатся книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , что позволит применить параметры, наиболее подходящие для доступа к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , во время сохранения параметров по умолчанию для всех остальных расположений фермы.  
   
   
 ## <a name="prerequisites"></a>предварительные требования  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
 11. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Коллекция PowerPivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
  [Создание и настройка коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [Использование коллекции PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  

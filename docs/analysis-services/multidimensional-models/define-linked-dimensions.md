@@ -15,19 +15,20 @@ helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2d9b665cc3aa5dd70ea481cd6b3328ffb6d7aa82
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-linked-dimensions"></a>Определите связанные измерения
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Связанное измерение основано на измерении создаются и хранятся в другой базе данных служб Analysis Services из той же версией и уровнем совместимости. С помощью связанного измерения можно создавать, хранить и поддерживать измерения в одной базе данных, при этом данное измерение будет доступно для пользователей нескольких баз данных. Для пользователей связанное измерение ничем не отличается от других измерений.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Связанное измерение основано на измерении, созданном и хранящемся в другой базе данных служб Analysis Services с той же версией и уровнем совместимости. С помощью связанного измерения можно создавать, хранить и поддерживать измерения в одной базе данных, при этом данное измерение будет доступно для пользователей нескольких баз данных. Для пользователей связанное измерение ничем не отличается от других измерений.  
   
  Связанные измерения доступны только для чтения. Если необходимо изменить измерение или создать новые связи, необходимо изменить исходное измерение, а затем удалить и повторно создать связанное измерение и его связи. Обновлять связанное измерение, чтобы получить изменения из исходного объекта, нельзя.  
   
@@ -78,12 +79,12 @@ ms.lasthandoff: 01/08/2018
   
 7.  На странице «Сведения об олицетворении» выберите **Использовать учетную запись службы**. Нажмите кнопку **Далее**и завершите работу мастера. Созданное соединение будет выбрано в мастере связанных объектов.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
  Структуру связанного измерения изменить нельзя, поэтому она не отображается на вкладке **Структура измерения** конструктора измерений. После обработки связанного измерения его можно просмотреть на вкладке **Браузер** . Также можно изменить его имя и создать перевод для имени.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровень совместимости многомерной базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Связанные группы мер](../../analysis-services/multidimensional-models/linked-measure-groups.md)   
- [Связи измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+ [Связей измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

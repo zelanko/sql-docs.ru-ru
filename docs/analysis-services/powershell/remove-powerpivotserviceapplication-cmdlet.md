@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7078a7733c7764b77667628071c66c8313aae85a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remove-powerpivotserviceapplication-cmdlet"></a>Командлет «Remove-PowerPivotServiceApplication»
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Удаляет [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] приложения службы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Удаляет приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBind>] [-DeleteAll <switch>] [-RemoveData <switch>] [-Confirm <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет Remove-PowerPivotServiceApplication удаляет из фермы приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Для одновременного удаления всех приложений службы используйте команду DeleteAll, для удаления одного экземпляра — параметр Identity. Чтобы получить сведения об экземпляре, выполните командлет Get-PowerPivotServiceApplication, чтобы получить все экземпляры в ферме.  
   
  Параметр RemoveData используется при необходимости удалить базы данных приложения службы и кэшированные файлы. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] при удалении приложения службы книги остаются в библиотеках содержимого, но не используются.  

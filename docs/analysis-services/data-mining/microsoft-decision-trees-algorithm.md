@@ -23,19 +23,20 @@ helpviewer_keywords:
 - continuous columns
 - regression algorithms [Analysis Services]
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 68821f25ad1a0defca193fa2c8023f64def0da1b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Алгоритм дерева принятия решений (Майкрософт)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм дерева принятия решений — это алгоритм классификации и регрессии, для использования в прогнозирующем моделировании дискретных и непрерывных атрибутов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм дерева принятия решений ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) представляет собой алгоритм регрессии и классификации для использования в прогнозном моделировании дискретных и непрерывных атрибутов.  
   
  Для дискретных атрибутов алгоритм осуществляет прогнозирования на основе связи между входными столбцами в наборе данных. Он использует значения этих столбцов (известные как состояния) для прогнозирования состояний столбца, который обозначается как прогнозируемый. Алгоритм идентифицирует входные столбцы, которые коррелированы с прогнозируемым столбцом. Например, в сценарии для прогнозирования того, какие заказчики, скорее всего, приобретут велосипед, если девять из десяти молодых заказчиков покупают велосипед, но только двое из более старших заказчиков делают это, то алгоритм заключает, что возраст является хорошим прогнозом приобретения велосипеда. Дерево решений осуществляет прогнозирование на основе этой тенденции в направлении конкретного результата.  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="viewing-a-decision-trees-model"></a>Просмотр модели дерева принятия решений  
  Чтобы исследовать модель, можно использовать **средство просмотра деревьев (Майкрософт)**. Если в модели формируется несколько деревьев, то можно выделить одно из них, и средство просмотра отобразит разбиение категоризации вариантов для каждого прогнозируемого атрибута. Также можно осуществить просмотр взаимодействия между деревьями с помощью средства просмотра сети зависимостей. Дополнительные сведения см. в разделе [Просмотр модели с помощью средства просмотра деревьев (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
   
- Если необходимо получить более подробные сведения о любой ветке или узле в дереве, то модель также можно просматривать с помощью [средства просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). В модели хранится следующее содержимое: распространения для всех значений в каждом узле, вероятности на каждом уровне дерева и формулы регрессии для непрерывных атрибутов. Дополнительные сведения см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Если необходимо получить более подробные сведения о любой ветке или узле в дереве, то модель также можно просматривать с помощью [средства просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). В модели хранится следующее содержимое: распространения для всех значений в каждом узле, вероятности на каждом уровне дерева и формулы регрессии для непрерывных атрибутов. Дополнительные сведения см. в разделе [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Создание прогнозов  
  После обработки модели результаты хранятся в виде набора закономерностей и статистики, которые можно использовать для исследования связей или для выполнения прогнозов.  
@@ -102,7 +103,7 @@ ms.lasthandoff: 01/08/2018
   
  Общие сведения о создании запросов к моделям интеллектуального анализа см. в разделе [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 -   Поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.  
   
@@ -110,10 +111,10 @@ ms.lasthandoff: 01/08/2018
   
 -   Поддерживается использование моделей интеллектуального анализа OLAP и создание измерений интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>См. также  
+ [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Технический справочник по алгоритму дерева принятия решений Майкрософт](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
  [Примеры запросов к модели дерева принятия решений](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для модели дерева принятия решений &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

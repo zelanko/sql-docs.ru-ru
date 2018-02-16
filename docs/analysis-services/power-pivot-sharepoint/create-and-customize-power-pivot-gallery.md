@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Коллекции — это специальный тип библиотеки документов SharePoint, которая предоставляет широкие возможности просмотра и управления документами для опубликованных книг Excel и отчетов служб Reporting Services, содержащих [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Коллекция — это специальный тип библиотеки документов SharePoint. Она предлагает широкие возможности для просмотра опубликованных книг Excel и отчетов служб Reporting Services, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , и управления ими.  
   
 ##  <a name="bkmk_top"></a> В этом разделе  
   
@@ -138,7 +139,7 @@ ms.lasthandoff: 01/08/2018
   
  В следующей таблице описываются различные макеты для представления эскизов миниатюр каждой просматриваемой страницы.  
   
-|Просмотр|Description|  
+|Просмотр|Описание|  
 |----------|-----------------|  
 |Режим галереи (по умолчанию)|Галерея является представлением по умолчанию для галереи [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Область просмотра отображается слева. Миниатюры меньшего размера всех листов последовательно отображаются рядом с областью просмотра слева направо.|  
 |Все документы|Это стандартный макет всех библиотек документов. Можно выбрать этот режим для управления отдельными документами или просмотра содержимого библиотеки в формате списка.<br /><br /> Это представление служит для изменения свойств, удаления или перемещения отдельных документов.<br /><br /> При включении управления версиями необходимо использовать это представление при добавлении и извлечении документов из библиотеки.|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  В области "Управление представлениями" текущего представления выберите желаемое представление в списке. В число стандартных представлений входят «Галерея», «Театр» и «Карусель». Либо можно выбрать параметр «Все документы», если нужно перемещать, удалять документы или управлять документами в библиотеке.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Устранение неполадок установки PowerPivot для SharePoint](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
  [Использование коллекции PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
  [Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   

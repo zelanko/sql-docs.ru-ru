@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Занятие 4-3 - автоматическое группирование элементов атрибута
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,10 +33,10 @@ ms.lasthandoff: 01/22/2018
 Свойство **DiscretizationMethod** определяет, создают ли службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группирования, а также определяет тип выполняемого группирования. По умолчанию в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группирование не выполняется. При включении автоматического группирования можно настроить параметры служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] таким образом, чтобы выполнялся автоматический выбор оптимального метода группирования, основанного на структуре данного атрибута, либо выбрать один из алгоритмов группирования в следующем списке:  
   
 **EqualAreas**  
-В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] диапазоны групп создаются таким образом, что элементы измерения распределяются по группам пропорционально.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] диапазоны групп создаются таким образом, что элементы измерения распределяются по группам пропорционально.  
   
 **Clusters**  
-В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группы создаются путем проведения одномерной кластеризации входных значений, используя метод кластеризации К-средних с нормальным распределением. Эта функция применима только в отношении числовых столбцов.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группы создаются путем проведения одномерной кластеризации входных значений с помощью метода кластеризации К-средних с нормальным распределением. Эта функция применима только в отношении числовых столбцов.  
   
 После выбора метода группирования необходимо указать количество групп, используя свойство **DiscretizationBucketCount** . Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   

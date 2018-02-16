@@ -25,19 +25,20 @@ helpviewer_keywords:
 - time hierarchies [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f2767b84432f137bd8f43c4352f99277abb845df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Определение вычислений логики операций со временем с использованием мастера бизнес-аналитики
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Логики операций со временем представляет собой расширение куба, которое добавляет вычисления времени (или представления времени) к выбранной иерархии. Данное расширение поддерживает следующие категории вычислений:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Расширение логики операций со временем представляет собой расширение куба, которое добавляет вычисления куба (или представления времени) к выбранной иерархии. Данное расширение поддерживает следующие категории вычислений:  
   
 -   Период к дате.  
   
@@ -72,13 +73,13 @@ ms.lasthandoff: 01/08/2018
 ## <a name="viewing-the-time-intelligence-enhancement"></a>Просмотр расширения логики операций со временем  
  На последней странице мастера бизнес-аналитики можно просмотреть изменения, которые будут внесены в базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Для расширения логики операций со временем мастер изменит выбранное измерение времени, связанное представление источника данных и связанный куб (см. описание в таблице ниже).  
   
-|Object|Изменить|  
+|Объект|Изменить|  
 |------------|------------|  
 |Измерение времени|Добавляет атрибут для каждого вычисления (или представления).|  
 |Представление источника данных|Добавляет вычисляемый столбец в таблице времени для каждого нового атрибута в измерении времени.|  
 |Cube|Добавляет вычисляемый элемент, который задает код многомерных выражений для выполнения вычисления.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание вычисляемых элементов](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   

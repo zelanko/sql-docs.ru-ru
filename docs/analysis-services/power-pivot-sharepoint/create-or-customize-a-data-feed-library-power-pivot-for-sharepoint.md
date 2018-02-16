@@ -15,19 +15,20 @@ helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9f536c0956cec0be863b099b2c0540ccf7ac3da2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Создание или настройка библиотеки веб-каналов данных (PowerPivot для SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Объект *библиотека потоков данных* — это библиотека SharePoint специального назначения, которая позволяет регистрировать и совместно использовать документы службы данных Atom (.atomsvc). Эти документы предоставляют потоки XML-данных для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или других клиентских приложений, поддерживающих формат веб-каналов данных Atom. Библиотека веб-каналов данных отличается от других библиотек SharePoint, поскольку она позволяет выполнять следующее:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+*Библиотека каналов данных* — это специализированная библиотека SharePoint, которая позволяет регистрировать сервисные документы данных Atom (ATOMSVC) и предоставлять к ним общий доступ. Эти документы предоставляют потоки XML-данных для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или других клиентских приложений, поддерживающих формат веб-каналов данных Atom. Библиотека веб-каналов данных отличается от других библиотек SharePoint, поскольку она позволяет выполнять следующее:  
   
 -   Создавать и изменять *сервисные документы данных*, используемые для указания HTTP-соединения с определенным каналом.  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  Щелкните стрелку вниз рядом с командой «Создать документ» и выберите пункт **Сервисный документ данных**. Откроется страница «Новый сервисный документ данных».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование веб-каналов данных (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
  [Удаление библиотеки каналов данных Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   

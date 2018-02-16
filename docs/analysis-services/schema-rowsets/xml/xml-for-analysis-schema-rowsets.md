@@ -11,34 +11,36 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - rowsets [Analysis Services], XML for Analysis
 - XML for Analysis, schema rowsets
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщик содержит наборы строк схемы, которые возвращают метаданные о состоянии сервера, действия и объекты. Получение метаданных необходимо, когда идет разработка клиентского приложения, подключающегося к модели служб Analysis Services, обладающей переменной структурой и характеристиками.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) содержит наборы строк схемы, которые возвращают метаданные о состоянии, активности и объектах сервера. Получение метаданных необходимо, когда идет разработка клиентского приложения, подключающегося к модели служб Analysis Services, обладающей переменной структурой и характеристиками.  
   
  Наборы строк схемы также дают представление о внутренних процессах и операциях, что помогает в наблюдении за сервером и устранении неполадок. Для поддержки нерегламентированных административных задач можно выполнить запрос динамического административного представления к большинству наборов строк схемы. Запросы динамического административного представления возвращают результаты в удобном для чтения табличном формате. Их можно просматривать в среде [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
  В следующей таблице перечислены все наборы строк схемы XMLA, даны их описания и указано, какие запросы возвращают сведения, относящиеся к табличным моделям данных.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
-|Набор строк<sup>1</sup>|Description|  
+|Rowset<sup>1</sup>|Описание|  
 |------------------------|-----------------|  
 |[Набор строк DISCOVER_CALC_DEPENDENCY](../../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|Возвращает сведения о зависимостях между таблицами, столбцами, мерами и формулами для вычисляемых столбцов.<br /><br /> Применяется к табличным моделям, развернутая на экземпляре служб Analysis Services и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] моделей в книгах Excel, которые выполняются в среде SharePoint.|  
 |[Набор строк DISCOVER_CONNECTIONS](../../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|Предоставляет сведения об использовании ресурсов и действиях, касающиеся соединений, открытых в настоящее время на сервере.|  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 |[Набор строк DISCOVER_MEMORYUSAGE](../../../analysis-services/schema-rowsets/xml/discover-memoryusage-rowset.md)|Возвращает статистику использования памяти для различных объектов, выделенных сервером.|  
 |[Набор строк DISCOVER_OBJECT_ACTIVITY](../../../analysis-services/schema-rowsets/xml/discover-object-activity-rowset.md)|Предоставляет сведения об использовании ресурсов каждым объектом с начала работы службы.|  
 |[Набор строк DISCOVER_OBJECT_MEMORY_USAGE](../../../analysis-services/schema-rowsets/xml/discover-object-memory-usage-rowset.md)|Предоставляет сведения об использовании ресурсов памяти объектами.|  
-|[Набор строк DISCOVER_PARTITION_DIMENSION_STAT](../../../analysis-services/schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|Возвращает статистику по измерению, связанному с секцией.|  
+|[Набор рядов Discover_partition_dimension_stat](../../../analysis-services/schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|Возвращает статистику по измерению, связанному с секцией.|  
 |[Набор строк DISCOVER_PARTITION_STAT](../../../analysis-services/schema-rowsets/xml/discover-partition-stat-rowset.md)|Возвращает статистику по агрегатам в заданной секции.|  
 |[Набор строк DISCOVER_PERFORMANCE_COUNTERS](../../../analysis-services/schema-rowsets/xml/discover-performance-counters-rowset.md)|Возвращает значение одного или нескольких указанных счетчиков производительности.|  
 |[Набор строк DISCOVER_PROPERTIES](../../../analysis-services/schema-rowsets/xml/discover-properties-rowset.md)|Возвращает список сведений и значений для стандартных свойств и свойств, зависящих от конкретного поставщика, поддерживаемых поставщиком XMLA для указанного источника данных.|  
@@ -76,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  <sup>1</sup> все наборы строк схемы, приведенные здесь поддерживаются поставщиком источника данных MSOLAP для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] поставщика XML для Аналитики.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка с использованием XML для Аналитики в службах Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [Используйте динамические административные представления &#40; динамических административных представлений &#41; для мониторинга служб Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [Получение метаданных из источника аналитических данных](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  

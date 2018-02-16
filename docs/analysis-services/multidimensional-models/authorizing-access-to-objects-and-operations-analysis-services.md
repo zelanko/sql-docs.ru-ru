@@ -21,19 +21,20 @@ helpviewer_keywords:
 - user access rights [Analysis Services]
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 956638a01fc1280d16bb6fd7a7ddade1978ceb2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Предоставление доступа к объектам и операциям (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Доступ неадминистративных пользователей к кубы, измерения и модели интеллектуального анализа данных в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных предоставляется посредством включения в одну или несколько ролей базы данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Администраторы создают указанные роли базы данных, предоставляют разрешения на чтение или чтение и запись объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а затем добавляют к каждой роли пользователей и группы Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Доступ неадминистративных пользователей к кубам, измерениям и моделям интеллектуального анализа данных внутри базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляется посредством включения пользователя в одну или несколько ролей базы данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Администраторы создают указанные роли базы данных, предоставляют разрешения на чтение или чтение и запись объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а затем добавляют к каждой роли пользователей и группы Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] определяют действительные разрешения для конкретного пользователя или группы Windows, объединяя разрешения, связанные с ролью базы данных, к которой пользователь или группа принадлежит. Как следствие, если одна роль базы данных не предоставляет пользователю или группе разрешения на просмотр измерения, меры или атрибута, но при этом другая роль базы данных предоставляет пользователю или группе такое разрешение, то у пользователя или группы будет разрешение на просмотр объекта.  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
  Использование подобного подхода снижает время обработки определений ролей и членства ролей в модели, а также предоставляет видимость назначений ролей, что упрощает реализацию и поддержание разрешений кубов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Роли и разрешения (службы Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Методики проверки подлинности, поддерживаемые службами Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  

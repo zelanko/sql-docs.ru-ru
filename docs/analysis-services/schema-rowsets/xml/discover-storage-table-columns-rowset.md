@@ -11,36 +11,38 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a0fec3423b126a425206441543fd50679712c2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>Набор строк DISCOVER_STORAGE_TABLE_COLUMNS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Предоставляет сведения на уровне столбцов о таблицах хранилища, используемых в базе данных служб Analysis Services в SharePoint или Табличный режим.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Содержит сведения на уровне столбцов о таблицах хранилища, используемых в базе данных служб Analysis Services в режиме SharePoint или табличном режиме.  
   
  **Применимо к:** табличные модели  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DISCOVER_STORAGE_TABLE_COLUMNS** набор строк содержит следующие столбцы.  
   
-|**Имя столбца**|**Индикатор типа**|**Ограничение**|**Описание**|  
+|**Имя столбца**|**Индикатор типа**|**Ограничение**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Да|Указывает имя базы данных, содержащей эти таблицы. Если отсутствует, используется текущая база данных.<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMNS** строк может быть ограничен с помощью этого столбца.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Да|Указывает имя базы данных, содержащей эти таблицы. Если отсутствует, используется текущая база данных.<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMNS** строк может быть ограничен с помощью этого столбца.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Да|Указывает куб или модель, содержащие эти таблицы.<br /><br /> С помощью этого столбца можно ограничить набор строк **DISCOVER_STORAGE_TABLES** .|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Да|Имя группы мер.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Имя измерения.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Имя атрибута.|  
 |**TABLE_ID**|**DBTYPE_WSTR**||Идентификатор таблицы.|  
-|**ИДЕНТИФИКАТОР COLUMN_ID**|**DBTYPE_ WSTR**||Идентификатор столбца. Идентификатор столбца является внутренним для подсистемы VertiPaq аналитики в памяти xVelocity и используется только в справочных целях.|  
+|**COLUMN_ID**|**DBTYPE_ WSTR**||Идентификатор столбца. Идентификатор столбца является внутренним для подсистемы VertiPaq аналитики в памяти xVelocity и используется только в справочных целях.|  
 |**COLUMN_TYPE**|**DBTYPE_WSTR**||Тип столбца. Тип столбца является внутренним для подсистемы VertiPaq аналитики в памяти xVelocity и используется только в справочных целях.<br /><br /> BASIC_DATA<br /><br /> HIERARCHY_DATAID_TO_POSITION<br /><br /> HIERARCHY_POSITION_TO_DATAID<br /><br /> RELATIONSHIP|  
 |**COLUMN_ENCODING**|**DBTYPE_UI8**||Целое число, представляющее тип кодировки, применяемой для столбца данных.<br /><br /> **0**вместе с **COLUMN_TYPE**: HIERARCHY_DATAID_TO_POSITION HIERARCHY_POSITION_TO_DATAID, СВЯЗИ<br /><br /> **1**вместе с **COLUMN_TYPE**: BASIC_DATA<br /><br /> **2**вместе с **COLUMN_TYPE**: BASIC_DATA|  
 |**ТИП ДАННЫХ**|**DBTYPE_WSTR**||Тип данных столбца. Имеет следующие возможные значения:<br /><br /> DBTYPE_BOOL<br /><br /> DBTYPE_CY<br /><br /> DBTYPE_DATE<br /><br /> DBTYPE_I4<br /><br /> DBTYPE_I8<br /><br /> DBTYPE_R8<br /><br /> DBTYPE_WSTR<br /><br /> Недоступно|  
@@ -69,7 +71,7 @@ ORDER BY TABLE_ID DESC
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы служб Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [Службы Analysis Services наборы строк схемы](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

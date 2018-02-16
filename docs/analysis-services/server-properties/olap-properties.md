@@ -97,19 +97,20 @@ helpviewer_keywords:
 - MemoryLimit property
 - AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cfeaedcf34ffdafdc54c0ce88ae80ecfc6190f6f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="olap-properties"></a>Свойства OLAP
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает свойства сервера OLAP, перечисленные в следующих таблицах. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают перечисленные в следующих таблицах свойства сервера OLAP. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Область применения:** только в многомерном режиме сервера  
   
@@ -136,7 +137,7 @@ ms.lasthandoff: 01/08/2018
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="lazyprocessing"></a>LazyProcessing  
- **Enabled**  
+ **Включено**  
  Логическое свойство, которое указывает, включена ли отложенная обработка агрегатов.  
   
  **SleepIntervalSecs**  
@@ -230,7 +231,7 @@ ms.lasthandoff: 01/08/2018
  **BufferRecordLimit**  
  32-разрядное целочисленное свойство со знаком, устанавливающее количество записей, которые можно поместить в буфер во время обработки.  
   
- Значение этого свойства по умолчанию — 1 048 576 (записей).  
+ Значение этого свойства по умолчанию — 1 048 576 (записей).  
   
  **CacheRecordLimit**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -320,7 +321,7 @@ ms.lasthandoff: 01/08/2018
  **DefaultDrillthroughMaxRows**  
  32-разрядное целочисленное свойство со знаком, которое указывает число строк, возвращаемых детализированным запросом.  
   
- Значение по умолчанию для этого свойства составляет 10 000 (строк).  
+ Значение по умолчанию для этого свойства составляет 10 000 (строк).  
   
  **DimensionPropertyCacheSize**  
  Подписанное 32-разрядное целочисленное свойство, указывающее объем памяти (в байтах), используемой для сохранения в кэше тех элементов измерения, которые применяются в запросе.  
@@ -437,8 +438,7 @@ ms.lasthandoff: 01/08/2018
  **DataCache\ MemoryModel\ Tax**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="jobs"></a>Задания
-  
+## <a name="jobs"></a>Задания  
  **ProcessAggregation\ MemoryModel\ Income**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -484,7 +484,7 @@ ms.lasthandoff: 01/08/2018
  **ProcessAggregation\ ProcessProperty\ Tax**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

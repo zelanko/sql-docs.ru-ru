@@ -21,19 +21,20 @@ helpviewer_keywords:
 - ServiceAccountIsServerAdmin property
 - RequireClientAuthentication property
 ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e99cf48fc3eb863b0a0d1e04fc19e83655ccc47f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="security-properties"></a>Свойства безопасности
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает свойства сервера безопасности, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера безопасности, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Область применения:** многомерный и табличный режим сервера  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 01/08/2018
  **DataProtection\ RequiredProtectionLevel**  
  Целочисленное 32-разрядное свойство со знаком, определяющее требуемый уровень защиты для всех запросов клиентов. Возможные значения этого свойства перечислены в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*0*|Нет, допускается открытый текст.|  
 |*1*|Значение по умолчанию. Открытый текст не регистрируется.|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
  **AdministrativeDataProtection\ RequiredProtectionLevel**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

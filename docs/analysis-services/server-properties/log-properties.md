@@ -55,21 +55,22 @@ helpviewer_keywords:
 - CreateAndSendCrashReports property
 - LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8add9f86817ba2a4a6ae32b0b3151b7f488966e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="log-properties"></a>Свойства журнала
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает свойства сервера журналов, перечисленные в следующих таблицах. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера журналов, список которых приведен в следующих таблицах. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
-## <a name="general"></a>Общие  
+## <a name="general"></a>Общие сведения  
  **Файл**  
  Строковое свойство, идентифицирующее имя файла журнала сервера. Данное свойство применяется только в том случае, когда для ведения журнала используется дисковый файл, а не таблица базы данных (настройка по умолчанию).  
   
@@ -237,7 +238,7 @@ ms.lasthandoff: 01/08/2018
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

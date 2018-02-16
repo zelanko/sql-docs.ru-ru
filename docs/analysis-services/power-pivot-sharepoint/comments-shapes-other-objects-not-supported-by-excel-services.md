@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e81433f28d9b3b3f20ceb99f2e6436a689ba4e86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="comments-shapes-other-objects-not-supported-by-excel-services"></a>Комментарии, фигуры, другие объекты, не поддерживается службами Excel
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Эта ошибка возникает, когда вы добавляете срезы в [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги из [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] списка полей.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Эта ошибка происходит, когда вы добавляете срезы в книгу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из списка полей [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ## <a name="details"></a>Сведения  
   

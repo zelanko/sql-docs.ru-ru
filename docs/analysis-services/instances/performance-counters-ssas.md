@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performance-counters-ssas"></a>Счетчики производительности [службы SSAS]
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]С помощью системного монитора, можно отслеживать производительность экземпляра Microsoft SQL Server Analysis Services (SSAS) с помощью счетчиков производительности.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+С помощью системного монитора можно контролировать производительность экземпляра служб Microsoft SQL Server Analysis Services (SSAS) посредством счетчиков производительности.  
   
  Системный монитор представляет собой [!INCLUDE[msCoName](../../includes/msconame-md.md)] оснастку консоли управления (MMC), отслеживающую использование ресурсов. Эту оснастку консоли управления (MMC) можно запустить, введя команду **PerfMon** в командную строку, а также из панели управления, щелкнув пункт **Администрирование**, а затем **Системный монитор**. Системный монитор позволяет отслеживать работу сервера и производительность процессов и действий, используя стандартные объекты и счетчики, а также осуществлять мониторинг событий, используя определяемые пользователем счетчики. Системный монитор собирает значения счетчиков вместо данных о событиях, например: использование памяти, количество активных транзакций или загрузка ЦП. Можно также установить пороговые значения для определенных счетчиков для формирования предупреждений, уведомляющих операторов.  
   

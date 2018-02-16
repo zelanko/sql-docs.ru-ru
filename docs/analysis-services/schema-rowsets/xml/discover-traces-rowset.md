@@ -11,30 +11,32 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertraces-rowset"></a>Набор строк DISCOVER_TRACES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Сведения о трассировках, которые в настоящее время активны на сервере.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Содержит сведения о трассировках, которые в настоящее время активны на сервере.  
   
  **Область применения:** табличные модели, многомерные модели  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DISCOVER_TRACES** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Description|  
+|Имя столбца|Индикатор типа|Описание|  
 |-----------------|--------------------|-----------------|  
-|**Числовое обозначение TraceID**|**DBTYPE_WSTR**|Идентификатор трассировки.|  
+|**TraceID**|**DBTYPE_WSTR**|Идентификатор трассировки.|  
 |**Имя трассировки**|**DBTYPE_WSTR**|Имя трассировки.|  
 |**LogFileName**|**DBTYPE_WSTR**|Имя файла журнала трассировки.|  
 |**LogFileSize**|**DBTYPE_I4**|Размер файла журнала трассировки.|  
@@ -51,8 +53,8 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**Числовое обозначение TraceId**|**DBTYPE_I4**|Необязательный параметр.|  
-|**Тип**|WSTR|Необязательный параметр.|  
+|**TraceId**|**DBTYPE_I4**|Необязательно.|  
+|**Тип**|WSTR|Необязательно.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>Использование ADOMD.NET для возврата набора строк  
  Если для получения метаданных используется ADOMD.NET и набор строк схемы, то для ссылки на объект набора строк схемы в методе GetSchemaDataSet вы можете использовать идентификатор GUID или строку. Дополнительные сведения см. в статье [Working with Schema Rowsets in ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md).  
@@ -62,9 +64,9 @@ ms.lasthandoff: 01/08/2018
 |Аргумент|Значение|  
 |--------------|-----------|  
 |GUID|a07ccd1a-8148-11d0-87bb-00c04fc33942|  
-|String|DISCOVER_TRACES|  
+|Строковые значения|DISCOVER_TRACES|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

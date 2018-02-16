@@ -11,31 +11,33 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="associationset-element-csdlbi"></a>Элемент AssociationSet (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**AssociationSet** элемент — сложный тип, который определяет взаимосвязь. В модели данных CSDLBI взаимосвязь представляет собой связь между таблицами.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Элемент **AssociationSet** — сложный тип, который определяет взаимосвязь. В модели данных CSDLBI взаимосвязь представляет собой связь между таблицами.  
   
  Элемент **AssociationSet** должен быть задан для каждой связи в модели. Элемент **AssociationSet** определяет конечные точки с помощью элемента **Association** . Элемент **AssociationSet** также определяет метаданные о связи и их использование в модели данных.  
   
 ## <a name="applicable-attributes"></a>Применимые атрибуты  
  В следующей таблице перечислены элементы и атрибуты, определяющие элемент **AssociationSet** .  
   
-|Имя|Обязателен|Description|  
+|Название|Обязателен|Описание|  
 |----------|-----------------|-----------------|  
 |Состояние|Да|Строка, которая указывает, активна ассоциация или нет. Значение определяется элементом State.|  
-|Скрытый|нет|Логическое значение, определяющее, является ли связь видимой. По умолчанию значение Hidden — **false**, т. е. все связи видимы в модели.|  
+|Скрыта|Нет|Логическое значение, определяющее, является ли связь видимой. По умолчанию значение Hidden — **false**, т. е. все связи видимы в модели.|  
   
 ## <a name="state-element"></a>Элемент State  
  Элемент **State** — простой тип, который описывает, активна ли связь, должен использоваться в вычислениях или оставаться неактивным, но ссылаться на него в вычислениях следует явно.  
@@ -44,13 +46,13 @@ ms.lasthandoff: 01/08/2018
   
  В следующей таблице перечислены значения элемента **State** .  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |Активен|Взаимосвязь активна.|  
 |Неактивный|Взаимосвязь активна.|  
   
 ## <a name="example"></a>Пример  
- **Табличный**  
+ **Табличные**  
   
  В следующем примере показана связь в табличной модели AdventureWorks для CSDLBI версии 1.1. Взаимосвязь помечена как неактивная, так как связь уже существует (между OrderKey и Date).  
   
@@ -66,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="example"></a>Пример  
- **Multidimensional**  
+ **Многомерные**  
   
  В следующем примере показана связь, определенная между таблицами Sales и Currency в кубе операций Contoso.  
   
@@ -81,6 +83,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Технический справочник по аннотациям бизнес-аналитики для языка CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Технический справочник по заметки бизнес-Аналитики для языка CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

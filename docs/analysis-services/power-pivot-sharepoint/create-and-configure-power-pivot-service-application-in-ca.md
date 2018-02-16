@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Создание и настройка приложения службы PowerPivot в ЦС
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Объект [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] приложения службы — это экземпляр общей службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] системной службы. Каждое приложение службы имеет свое удостоверение, параметры настройки, свойства и внутреннее хранилище данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — это общий экземпляр системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Каждое приложение службы имеет свое удостоверение, параметры настройки, свойства и внутреннее хранилище данных.  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -158,7 +159,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  На ленте нажмите **Свойства** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

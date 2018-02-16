@@ -11,30 +11,32 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 20d339e2-f47f-437f-94d5-5b00b400356a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 649475fa5fd1a4e0bb2a6c734f916270ac7f9a64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverpartitionstat-rowset"></a>Набор строк DISCOVER_PARTITION_STAT
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Возвращает статистику по агрегатам в заданной секции.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Возвращает статистику по агрегатам в заданной секции.  
   
  **Область применения:** табличные модели, многомерные модели  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DISCOVER_PARTITION_STAT** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Ограничение|Description|  
+|Имя столбца|Индикатор типа|Ограничение|Описание|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Обязательно|Имя базы данных, содержащей измерение.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Обязательно|Имя базы данных, содержащей измерение.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Обязательно|Имя куба или табличной модели, содержащей секцию.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Обязательно|Имя группы мер в измерении.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
 |**ИМЯ_РАЗДЕЛА**|**DBTYPE_WSTR**|Обязательно|Имя секции.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
@@ -53,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 |GUID|a07ccd8f-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionStat|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-a-standard-action"></a>Добавления стандартного действия
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Добавьте действие в базе данных, используя представление действий в конструкторе кубов. Доступ к этому представлению можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. После создания действия оно становится доступным пользователям после повторной обработки соответствующего куба. Дополнительные сведения см. в статье [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Действия добавляются в базу данных в представлении «Действия» конструктора кубов. Доступ к этому представлению можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. После создания действия оно становится доступным пользователям после повторной обработки соответствующего куба. Дополнительные сведения см. в статье [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 ### <a name="to-create-an-action"></a>Создание действия  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
         |Тип|Description|  
         |----------|-----------------|  
-        |Dataset|Извлекает набор данных.|  
+        |Набор данных|Извлекает набор данных.|  
         |Частный|Выполняет операцию с помощью интерфейса, отличного от перечисленных в этой таблице.|  
         |Набор строк|Извлекает набор строк.|  
         |.|Выполняет команду OLE DB.|  

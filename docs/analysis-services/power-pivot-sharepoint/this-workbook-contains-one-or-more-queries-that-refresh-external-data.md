@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 354c8c0baca1372c0bc6cb17e2acbfc74c45b9b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>Эта книга содержит один или несколько запросов на обновление внешних данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Для книг Excel, содержащих [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данных, службы Excel отображают это предупреждение при обнаружении сведений о соединении и предложит включить или отключить запросы для этой книги.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Для книг Excel, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , службы Excel Services отображают это предупреждение при обнаружении сведений о подключении и предлагают включить или отключить запросы для этой книги.  
   
 ## <a name="details"></a>Сведения  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/08/2018
 |Текст сообщения|Эта книга содержит один или несколько запросов на обновление внешних данных. Злоумышленник может создать запрос для доступа к конфиденциальным сведениям и распространения их среди других пользователей или для выполнения других вредоносных действий.<br /><br /> Если вы доверяете источнику этой книги, нажмите кнопку «Да», чтобы разрешить в этой книге запросы к внешним данным. Если вы не уверены, нажмите кнопку «Нет», чтобы изменения к рабочей книге не применялись.<br /><br /> Разрешить в этой книге запросы к внешним данным?|  
   
 ## <a name="explanation"></a>Объяснение  
- [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] содержат строки подключения к внедренным данным, используемые Excel для обмена данными с внешним сервером [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , который загружает и вычисляет данные. Если включены предупреждения об обновлении данных, службы Excel обнаруживают эту строку соединения и предупреждают пользователя.  
+ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] содержат строки подключения к внедренным данным, используемые Excel для обмена данными с внешним сервером [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)], который загружает и вычисляет данные. Если включены предупреждения об обновлении данных, службы Excel обнаруживают эту строку соединения и предупреждают пользователя.  
   
  Для фильтрации и создания срезов данных [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] в книге должны быть включены запросы. Убедитесь, что запросы включены только для доверенных книг [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
   

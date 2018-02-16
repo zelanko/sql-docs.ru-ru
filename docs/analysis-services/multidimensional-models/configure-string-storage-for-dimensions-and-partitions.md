@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Настройка хранилища строк для измерений и секций
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно перенастроить хранилище строк для хранения очень больших строк в атрибутах измерений или секциях, превышающих предельный размер файла 4 ГБ для хранилищ строк. Если измерения или секции содержат хранилища строк такого размера, можно обойти ограничение размера файла, изменив свойство **StringStoresCompatibilityLevel** на уровне измерения или секции для локальных, а также связанных объектов (локальных или удаленных).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Можно изменить конфигурацию хранилища строк, чтобы оно обеспечивало хранение очень больших строк в атрибутах измерений или секциях, превышающих предельный размер файла в 4 ГБ для хранилищ строк. Если измерения или секции содержат хранилища строк такого размера, можно обойти ограничение размера файла, изменив свойство **StringStoresCompatibilityLevel** на уровне измерения или секции для локальных, а также связанных объектов (локальных или удаленных).  
   
  Обратите внимание, что можно увеличить хранилище строк только на тех объектах, которые требуют дополнительной емкости. В большинстве многомерных моделях строковые данные связаны с измерениями. Однако разделы, содержащие меры числа различных объектов на основе строк, также могут выиграть от этого параметра. Поскольку этот параметр для строк, числовые данные не затрагиваются.  
   
  Ниже приведены допустимые значения для этого свойства.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1050**|Задает архитектуру хранилища строк по умолчанию, для которого действует ограничение максимального размера файла в 4 ГБ на одно хранилище.|  
 |**1100**|Задает хранилище строк большего размера, поддерживает до 4 млрд уникальных строк в одном хранилище.|  
@@ -92,9 +93,9 @@ ms.lasthandoff: 01/08/2018
   
  Следует использовать параметр «Обработка. Полная» для каждого объекта, который использует новую архитектуру хранилища строк. До обработки обязательно выполните анализ влияния для измерения, чтобы проверить необходимость повторной обработки зависимых объектов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Средства и способы обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Настройка параметров обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Параметры обработки и параметры &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Обработка и режимы хранения секции](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Хранение измерений](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

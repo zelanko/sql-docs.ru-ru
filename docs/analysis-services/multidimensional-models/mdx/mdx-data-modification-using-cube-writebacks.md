@@ -18,19 +18,20 @@ helpviewer_keywords:
 - UPDATE CUBE statement
 - cubes [Analysis Services], writeback
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f658740766736a83dd374cf647523ea9f8e2bfe4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>Изменение данных многомерных Выражений — обратная запись в куб
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]С помощью обновления куба [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) инструкции. Эта инструкция позволяет записать в кортеж указанное значение. Для эффективного использования инструкции UPDATE CUBE необходимо понимать ее синтаксис, ситуации, в которых может возникнуть ошибка, и влияние обновления на весь куб.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Для обновления куба используется инструкция [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) . Эта инструкция позволяет записать в кортеж указанное значение. Для эффективного использования инструкции UPDATE CUBE необходимо понимать ее синтаксис, ситуации, в которых может возникнуть ошибка, и влияние обновления на весь куб.  
   
 ## <a name="update-cube-statement-syntax"></a>Синтаксис инструкции UPDATE CUBE  
  Синтаксис инструкции UPDATE CUBE приведен далее.  
@@ -122,7 +123,7 @@ USE_EQUAL_ALLOCATION
   
 -   Изменение степени гранулярности измерения, которое содержится в обратной записи.  
   
-## <a name="see-also"></a>См. также:  
- [Изменение данных (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+## <a name="see-also"></a>См. также  
+ [Изменение данных &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

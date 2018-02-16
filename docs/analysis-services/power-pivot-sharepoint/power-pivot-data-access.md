@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7783dd3fabfe32359b8d2da35ad9eda25a91057f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-access"></a>Доступ к данным PowerPivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описываются способы извлечения данных из [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги, опубликованной в библиотеке SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описаны способы извлечения данных из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , опубликованной в библиотеке SharePoint.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] хранятся в книге Excel. Строка подключения — это URL-адрес книги на сайте SharePoint.  
   
@@ -45,8 +46,8 @@ ms.lasthandoff: 01/08/2018
   
  Не все данные в книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] обрабатываются [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Службы Excel обрабатывают данные таблиц и ячеек листа. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint обрабатывает только сводные таблицы, сводные диаграммы и срезы, которые расходятся с данными [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
- [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
+## <a name="see-also"></a>См. также  
+ [Подключитесь к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Доступ к данным табличной модели](../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   

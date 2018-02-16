@@ -1,7 +1,7 @@
 ---
 title: "Резервное копирование, восстановление и синхронизация баз данных (XMLA) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
 - backing up databases [XML for Analysis]
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a01f7dc9f661ffde071b54a4c738557c4f2c8dad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Резервное копирование, восстановление и синхронизация баз данных (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В XML для аналитики существует три команды для резервного копирования, восстановления и синхронизации баз данных.  
+  В XML для аналитики есть три команды для резервного копирования, восстановления и синхронизации баз данных.  
   
 -   [Резервного копирования](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) команда создает резервную копию [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ABF), как описано в разделе [резервное копирование баз данных](#backing_up_databases).  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Synchronize](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) синхронизирует одну [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных с данными и метаданными другой базы данных, как описано в разделе [синхронизация баз данных](#synchronizing_databases).  
   
-##  <a name="backing_up_databases"></a>Резервное копирование баз данных  
+##  <a name="backing_up_databases"></a> Резервное копирование баз данных  
  Как упоминалось ранее, **резервного копирования** команда создает резервную копию указанного [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных в файл резервной копии. **Резервного копирования** команда имеет различные свойства, позволяющие указывать базу данных для резервного копирования, файл резервной копии для использования, как создать резервную копию определения безопасности и удаленные секции для резервного копирования.  
   
 > [!IMPORTANT]  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  Значение **безопасности** свойство может принимать значение одной из строк, перечисленных в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*SkipMembership*|Включает определения безопасности, но исключает сведения о членстве из файла резервной копии.|  
 |*CopyAll*|Включает определения безопасности и сведения о членстве в файл резервной копии.|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  Для каждого удаленного источника данных для резервного копирования, можно задать соответствующий файл резервной копии, включая [расположение](../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) элемент в [расположения](../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md) свойство **резервного копирования** команда. **Расположение** элемента должно быть его **файл** , имеющим значение UNC-путь и имя удаленного файла резервной копии и его [DataSourceID](../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md) значение свойства с помощью идентификатора Удаленный источник данных в базе данных.  
   
-##  <a name="restoring_databases"></a>Восстановление баз данных  
+##  <a name="restoring_databases"></a> Восстановление баз данных  
  **Восстановить** команда восстанавливает указанную [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных из файла резервной копии. **Восстановить** команда имеет различные свойства, позволяющие указывать базу данных для восстановления файла резервной копии, восстановление определений безопасности, удаленные секции для хранения и перемещения реляционной OLAP (ROLAP) объекты.  
   
 > [!IMPORTANT]  
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*SkipMembership*|Включает определения безопасности, но исключает сведения о членстве из базы данных.|  
 |*CopyAll*|Включает определения безопасности и сведения о членстве в базу данных.|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
  Можно использовать **расположение** элемент в **восстановить** команду для перемещения объектов ROLAP. Для каждого **расположение** элемент, используемый для перемещения источника данных, **DataSourceType** свойства должны задаваться явным образом *локальной*. Также необходимо задать **ConnectionString** свойство **расположение** элемент к строке подключения новое расположение. Во время восстановления **восстановить** команда заменит строку подключения для источника данных, определенного **DataSourceID** свойство **расположение** элемент со значением **ConnectionString** свойство **расположение** элемента.  
   
-##  <a name="synchronizing_databases"></a>Синхронизация баз данных  
+##  <a name="synchronizing_databases"></a> Синхронизация баз данных  
  **Synchronize** команда синхронизирует данные и метаданные указанной [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных с другой базой данных. **Synchronize** команда имеет различные свойства, которые позволяют указать базы данных-источника, как синхронизировать определения безопасности, удаленные секции для синхронизации и синхронизацию объектов ROLAP.  
   
 > [!NOTE]  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/08/2018
   
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*SkipMembership*|Включает определения безопасности, но исключает сведения о членстве из целевой базы данных.|  
 |*CopyAll*|Включает определения безопасности и сведения о членстве в целевую базу данных.|  
@@ -150,12 +151,12 @@ ms.lasthandoff: 01/08/2018
 ### <a name="synchronizing-rolap-objects"></a>Синхронизация объектов ROLAP  
  **Synchronize** команды не удалось синхронизировать агрегаты или данные для объектов, использующих режим хранения ROLAP, поскольку такие сведения хранятся в таблицах в базовом реляционном источнике данных. Однако метаданные объектов ROLAP синхронизировать можно. Синхронизация метаданных, **Synchronize** команду повторно создает структуру таблицы в реляционном источнике данных.  
   
- Можно использовать **расположение** элемент в команде Synchronize для синхронизации объектов ROLAP. Для каждого **расположение** элемент, используемый для перемещения источника данных, **DataSourceType** свойства должны задаваться явным образом *локальной*. , и делает это по-другому. Также необходимо задать **ConnectionString** свойство **расположение** элемент к строке подключения новое расположение. Во время синхронизации **Synchronize** команда заменит строку подключения для источника данных, определенного **DataSourceID** свойство **расположение** элемент со значением **ConnectionString** свойство **расположение** элемента.  
+ Можно использовать **расположение** элемент в команде Synchronize для синхронизации объектов ROLAP. Для каждого **расположение** элемент, используемый для перемещения источника данных, **DataSourceType** свойства должны задаваться явным образом *локальной*. . Также необходимо задать **ConnectionString** свойство **расположение** элемент к строке подключения новое расположение. Во время синхронизации **Synchronize** команда заменит строку подключения для источника данных, определенного **DataSourceID** свойство **расположение** элемент со значением **ConnectionString** свойство **расположение** элемента.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Резервный элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [Восстановить элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Элемент Synchronize (XMLA)](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Синхронизировать элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

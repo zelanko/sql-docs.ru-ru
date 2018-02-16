@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Синхронизация баз данных служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включает функцию синхронизации баз данных, которая делает две [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] идентичными, копируя данные и метаданные из базы данных на исходном сервере в базу данных на целевом сервере баз данных. Используйте функцию синхронизации баз данных для выполнения следующих задач:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] имеют функцию синхронизации баз данных, которая делает две базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] идентичными, копируя данные и метаданные из базы данных на исходном сервере в базу данных на целевом сервере. Используйте функцию синхронизации баз данных для выполнения следующих задач:  
   
 -   Развертывание базы данных с промежуточного сервера на рабочий.  
   
@@ -189,12 +190,12 @@ ms.lasthandoff: 01/08/2018
   
 8.  Для выполнения синхронизации нажмите кнопку **Готово** . После проверки параметров на странице **Завершение работы мастера** нажмите кнопку **Готово** еще раз.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
  Если синхронизация членства и ролей не выполняется, то сейчас необходимо указать разрешения доступа пользователя в целевой базе данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Элемент Synchronize (XMLA)](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [Развертывание решений модели с помощью XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [Развертывание решений модели с использованием мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Развертывание решений модели с использованием XML для Аналитики](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
+ [Развертывание решений модели с помощью мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

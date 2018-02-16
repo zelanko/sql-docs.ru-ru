@@ -20,19 +20,20 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 98e15a75b97eae9c4b2fa4093f03f9c8ccf92000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-trace-events"></a>События трассировки служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно выполнить действия с экземпляром Microsoft SQL Server Analysis Services (SSAS), отслеживания и анализа событий трассировки, создаваемые экземпляром.  События трассировки сгруппированы для облегчения поиска связанных событий трассировки.  Каждое событие трассировки содержит набор данных, имеющих отношение к событию; не все фрагменты данных имеют отношение к событиям.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+За активностью экземпляра Microsoft SQL Server Analysis Services (SSAS) можно наблюдать путем отслеживания и анализа событий трассировки, создаваемых экземпляром.  События трассировки сгруппированы для облегчения поиска связанных событий трассировки.  Каждое событие трассировки содержит набор данных, имеющих отношение к событию; не все фрагменты данных имеют отношение к событиям.  
   
  События трассировки можно запускать и записывать с помощью **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**(см. раздел [Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)), а также запускать с помощью команды XMLA как **расширенные события SQL Server** и впоследствии анализировать (см. раздел [Мониторинг служб Analysis Services с помощью расширенных событий SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)).  
   
@@ -190,7 +191,7 @@ ms.lasthandoff: 01/08/2018
 |42|Существующий сеанс|Существующий сеанс.|  
 |43|Инициализация сеанса|Инициализация сеанса.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   

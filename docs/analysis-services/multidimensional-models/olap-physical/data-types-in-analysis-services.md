@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7fcf359a6f760ffffa4e1a0682e4c4b45f4fe272
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-types-in-analysis-services"></a>Типы данных в службах Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Для всех <xref:Microsoft.AnalysisServices.DataItem> объектов, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает следующее подмножество **System.Data.OleDb.OleDbType**. Чтобы задать или прочитать тип данных, используйте [DataItem, тип данных &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Для всех <xref:Microsoft.AnalysisServices.DataItem> объектов, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает следующее подмножество **System.Data.OleDb.OleDbType**. Чтобы задать или прочитать тип данных, используйте [DataItem, тип данных &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
   
 ## <a name="supported-data-types"></a>Поддерживаемые типы данных  
   
@@ -33,8 +35,8 @@ ms.lasthandoff: 01/08/2018
 |-|-|  
 |BigInt|64-разрядное целое число со знаком. *BigInt* тип значения представляет целые числа со значениями от отрицательного числа 9223372036854775808 до 9223372036854775807 положительным.|  
 |Двоичный|Поток двоичных данных **байтов** типа. **Байтов** является типом значения, представляющий целых чисел без знака со значениями в диапазоне от 0 до 255.|  
-|Логическое значение|Экземпляры этого типа имеют значения либо **true** или **false**.|  
-|CURRENCY|Объект *валюты* значение в диапазоне от -922,337,203,685,477.5808 до + 922,337,203,685,477.5807 с точностью до одной десятитысячной единицы валюты (четыре десятичных разряда).|  
+|Boolean|Экземпляры этого типа имеют значения либо **true** или **false**.|  
+|Измерение валют|Объект *валюты* значение в диапазоне от -922,337,203,685,477.5808 до + 922,337,203,685,477.5807 с точностью до одной десятитысячной единицы валюты (четыре десятичных разряда).|  
 |Дата|Данные даты и времени, хранящиеся в виде типа double. Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть представляет долю (время) дня.|  
 |Double|Число с плавающей запятой в диапазоне от -1,79769313486232E +308 до 1,79769313486232E +308. Значения типа Double хранят сведения о числах с точностью до 15 десятичных знаков после запятой.|  
 |Целочисленный|32-разрядное целое число со знаком в диапазоне от минус 2 147 483 648 до плюс 2 147 483 647.|  
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="amo-validations-on-data-types"></a>Проверки объектов AMO для типов данных  
  В следующей таблице перечислены дополнительные проверки, которые объекты AMO выполняют для определенных привязок.  
   
-|Object|Binding|Допустимые типы данных|  
+|Объект|Binding|Допустимые типы данных|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|Все, кроме Binary|  
 ||NameColumn|Только WChar|  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 ||CustomRollupColumn|Только WChar|  
 ||CustomRollupPropertiesColumn|Только WChar|  
 ||UnaryOperatorColumn|Только WChar|  
-||ValueColumn|All|  
+||ValueColumn|все|  
 |AttributeTranslation|CaptionColumn|Только WChar|  
 |ScalarMiningStructureColumn|KeyColumns|Все, кроме Binary|  
 ||NameColumn|Только WChar|  

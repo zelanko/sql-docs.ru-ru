@@ -12,20 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>Настройка правил определения работоспособности PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]для SharePoint включает правила определения работоспособности SharePoint, которые позволяют отслеживать и устранять проблемы доступности и конфигурации сервера. Правила определения работоспособности, которые применяются к [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint, отображаются на странице Review rule definitions (Просмотр определений правил).  
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint включает правила определения работоспособности SharePoint, позволяющие отслеживать и устранять проблемы доступности и конфигурации сервера. Правила определения работоспособности, которые применяются к [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint, отображаются на странице Review rule definitions (Просмотр определений правил).  
   
  Правила определения исправности позволяют заранее выявлять проблемы сервера, которые в итоге могут привести к нарушениям работы служб. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint предоставляет ряд правил, позволяющих выявлять и устранять проблемы, прежде чем они коснутся пользователей. Многие из этих правил можно настроить в соответствии с уникальными характеристиками конкретного развертывания. Например, если требуется больше времени на принятие мер в ответ на нехватку места на диске, можно увеличить пороговое значение доступного пространства с 5 до 10 %, чтобы предупреждение поступало раньше.  
   
@@ -134,7 +134,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      Этот параметр конфигурации соответствует следующему определению правила на странице **Обзор проблем и решений** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: данные об использовании не обновляются с ожидаемой частотой.**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка использования места на диске (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)   
  [Информационная панель управления PowerPivot и данные об использовании](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   

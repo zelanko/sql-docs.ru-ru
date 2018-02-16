@@ -27,19 +27,20 @@ helpviewer_keywords:
 - ROLAP
 - medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 42823cdd118d3fb52df6265671eaca0fd25be96c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Определение хранилища секции (Analysis Services — многомерные данные)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет несколько стандартных конфигураций хранилища для режимов хранения и параметров кэширования. Они предоставляют часто используемые конфигурации для уведомлений об обновлениях, задержки и перестроения данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет несколько стандартных конфигураций хранилища для режимов хранения и параметров кэширования. Они предоставляют часто используемые конфигурации для уведомлений об обновлениях, задержки и перестроения данных.  
   
  Хранилище секций можно указать на вкладке секций куба в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]или на странице свойств секции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 01/08/2018
   
  Если установить флажок **Применить настройки к измерениям** , заданные параметры хранения будут применены к измерениям, которые связаны с группой мер. Значения параметров измерения изначально совпадают со значениями параметров секций.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Секции в многомерных моделях](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   

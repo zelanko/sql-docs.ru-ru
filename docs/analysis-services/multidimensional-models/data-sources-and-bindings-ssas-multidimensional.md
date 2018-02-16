@@ -35,19 +35,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Источники данных и привязки (многомерные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Кубы, измерения и другие [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объекты могут быть привязаны к источнику данных. Источником данных может быть один из следующих объектов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Кубы, измерения и другие объекты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно привязать к источнику данных. Источником данных может быть один из следующих объектов.  
   
 -   Реляционный источник данных.  
   
@@ -62,11 +63,11 @@ ms.lasthandoff: 01/08/2018
 ## <a name="analysis-services-data-types"></a>Типы данных служб Analysis Services  
  Типы данных, используемые в привязках, должны соответствовать типам данных, которые поддерживаются службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]определены следующие типы данных:  
   
-|Тип данных служб Analysis Services|Description|  
+|Тип данных служб Analysis Services|Описание|  
 |---------------------------------|-----------------|  
 |BigInt|64-разрядное целое число со знаком. Этот тип данных соответствует типу данных Int64 в Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I8 в OLE DB.|  
 |Bool|Значение типа Boolean. Этот тип данных соответствует типу данных Boolean в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_BOOL в OLE DB.|  
-|CURRENCY|Значение валюты от -263 (или -922 337 203 685 477,5808) до 263-1 (или 922 337 203 685 477,5807) с точностью до одной тысячной единицы валюты. Этот тип данных соответствует типу данных Decimal в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_CY в OLE DB.|  
+|Измерение валют|Значение валюты от -263 (или -922 337 203 685 477,5808) до 263-1 (или 922 337 203 685 477,5807) с точностью до одной тысячной единицы валюты. Этот тип данных соответствует типу данных Decimal в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_CY в OLE DB.|  
 |Дата|Данные о дате, сохраненные в виде числа с плавающей запятой двойной точности. Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть равна части дня. Этот тип данных соответствует типу данных DateTime в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_DATE в OLE DB.|  
 |Double|Число с плавающей запятой двойной точности в диапазоне от -1,79E +308 до 1,79E +308. Этот тип данных соответствует типу данных Double в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_R8 в OLE DB.|  
 |Целочисленный|32-разрядное целое число со знаком. Этот тип данных соответствует типу данных Int32 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I4 в OLE DB.|  
@@ -174,9 +175,9 @@ ms.lasthandoff: 01/08/2018
   
  Внешние привязки указываются с помощью включения в команду обработки необязательного объекта коллекции **Bindings** . Необязательная коллекция **Bindings** содержит следующие элементы:  
   
-|Свойство|Количество элементов|Тип|Description|  
+|property|Количество элементов|Тип|Описание|  
 |--------------|-----------------|----------|-----------------|  
-|**Binding**|От 0 до n|**Binding**|Предоставляет коллекцию новых привязок.|  
+|**Привязки**|От 0 до n|**Binding**|Предоставляет коллекцию новых привязок.|  
 |**DataSource**|0–1|**DataSource**|Заменяет **DataSource** с сервера, который будет использоваться.|  
 |**DataSourceView**|0–1|**DataSourceView**|Заменяет **DataSourceView** с<br /><br /> сервера, который должен был бы использоваться.|  
   

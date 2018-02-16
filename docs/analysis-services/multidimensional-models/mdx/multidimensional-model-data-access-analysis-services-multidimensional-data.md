@@ -22,19 +22,20 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Используйте сведения в этом разделе, чтобы узнать, как получить доступ к [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] многомерных данных, с помощью программными методами, скриптов или клиентских приложений, включающих встроенную поддержку для подключения к [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в сети.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Сведения в этом разделе помогут ознакомиться со способами доступа к многомерным данным служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью программных методов доступа, скриптов или клиентских приложений, включающих встроенную поддержку соединения с сервером служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в сети.  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="performancepoint-dashboards"></a>Панели мониторинга PerformancePoint  
  Панели мониторинга PerformancePoint используются для создания в SharePoint оценочных листов, в которых показатели бизнеса сравниваются со стандартными величинами. PerformancePoint включает поддержку соединений с многими мерными данными служб Analysis Services. Дополнительные сведения см. в разделе [Создание подключений к данным служб Analysis Services (службы PerformancePoint)](http://go.microsoft.com/fwlink/?linkid=232471).  
   
-### <a name="sql-server-data-tools"></a>SQL Server Data Tools (SSDT)  
+### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
  Конструкторы моделей и отчетов используют средства SQL Server Data Tools для построения решений, которые включают многомерные модели. При развертывании решения в экземпляре служб Analysis Services создается база данных, к которой в дальнейшем производятся подключения из Excel, служб Reporting Services и других клиентских приложений бизнес-аналитики.  
   
  Средства SQL Server Data Tools основаны на оболочке Visual Studio, и для хранения и упорядочивания моделей в них используются проекты. Дополнительные сведения см. в разделе [Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
@@ -75,11 +76,11 @@ ms.lasthandoff: 01/08/2018
   
  [Запрос многомерных данных с помощью многомерных выражений](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Основные понятия о сценариях многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> Программные интерфейсы  
  При разработке пользовательского приложения, использующего многомерные данные, скорее всего, будет использоваться один из следующих способов доступа к данным.  
@@ -92,7 +93,7 @@ ms.lasthandoff: 01/08/2018
   
  В следующих таблицах содержатся дополнительные сведения и ссылки по клиентским библиотекам, используемым для соединения со службами Analysis Services из пользовательских приложений.  
   
-|Интерфейс|Description|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |Управляющие объекты служб Analysis Services (AMO)|Объекты AMO — это основная объектная модель для администрирования экземпляров служб Analysis Services и многомерных баз данных из кода. Например, среда SQL Server Management Studio использует объекты AMO для поддержки администрирования серверов и баз данных. Дополнительные сведения см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).|  
 |ADOMD.NET|ADOMD.NET служит основной объектной моделью для создания многомерных данных и доступа к ним в пользовательских приложениях. Для получения сведений служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью стандартных интерфейсов доступа к данным платформы Microsoft .NET в управляемом пользовательском приложении можно использовать ADOMD.NET. Дополнительные сведения см. в разделах [Разработка с использованием ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md) и [Программирование клиента ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md).|  
@@ -101,7 +102,7 @@ ms.lasthandoff: 01/08/2018
 |XML для аналитики|XML для аналитики — это API-интерфейс самого низкого уровня из доступных программисту служб Analysis Services; он является общим компонентом в основе всех методик доступа к данным в службах Analysis Services. XML для аналитики (XMLA) — это стандартный отраслевой XML-протокол, основанный на SOAP, поддерживающий универсальный доступ к данным в любом стандартном источнике многомерных данных через соединение по протоколу HTTP. В нем для формулирования запросов к многомерным данным и ответов на запросы используется SOAP. Если приложение будет работать не на платформе Windows, с помощью XML для аналитики можно осуществлять доступ к многомерной базе данных, выполняющейся на сервере Windows в сети. Дополнительные сведения см. в разделе [Разработка с использованием XMLA в службах Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).|  
 |Язык ASSL|ASSL — это описательный термин, который относится к расширениям протокола XML для аналитики в службах Analysis Services. В то время как методы Execute и Discover описываются протоколом XML для аналитики, ASSL добавляет следующие возможности:<br /><br /> — Скрипт XML для аналитики<br /><br /> — Определения объектов XML для аналитики<br /><br /> — Команды XML для аналитики<br /><br /> Расширения ASSL позволяют службам Analysis Services использовать XML для аналитики за пределами базовых задач протокола, в том числе для определения данных, изменения данных и поддержки управления данными. Дополнительные сведения см. в разделе [Разработка на языке ASSL (язык ASSL)](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подключение к службам Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [Разработка с использованием служб Analysis Services Scripting Language &#40; ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Разработка с использованием XML для Аналитики в службах Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   

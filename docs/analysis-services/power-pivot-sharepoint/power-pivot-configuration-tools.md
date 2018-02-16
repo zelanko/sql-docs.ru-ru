@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e2df021da6f2cf8c32e0b0581c5d5d61a422d5ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Настройка, восстановление или удаление [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] средства настройки.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] позволяют настраивать, восстанавливать или удалять [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]  
   
  Мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не устанавливает средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Средства настройки можно будет скачать, начиная со следующего выпуска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
  Средства можно использовать только с экземпляром [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] объекта [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Не следует использовать средства с установками [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
-|Имя|Поддерживаемая версия SharePoint|Подробные данные конфигурации|  
+|Название|Поддерживаемая версия SharePoint|Подробные данные конфигурации|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013|SharePoint 2013|[Настройка или восстановление Power Pivot для SharePoint 2013 (Средство настройки Power Pivot)](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Средство настройки|SharePoint 2010 с @@@SharePoint 2010@@@|[Настройка или восстановление PowerPivot для SharePoint 2010 (средство настройки PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)|  

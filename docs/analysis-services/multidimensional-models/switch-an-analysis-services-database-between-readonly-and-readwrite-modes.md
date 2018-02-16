@@ -16,19 +16,20 @@ helpviewer_keywords:
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c53754f5ba059cfd790a015b7a1c77bd4de81b73
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Переключение базы данных служб Analysis Services между режимами ReadOnly и ReadWrite
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] администраторы баз данных можно изменить режим чтения/записи базы данных табличный или многомерный в рамках более масштабных действий, которая распределяет рабочую нагрузку запросов между несколькими серверами только запросов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Администраторы баз данных могут изменить режим чтения и записи табличной или многомерной базы данных в рамках более масштабных действий по распределению рабочей нагрузки запросов между несколькими серверами, обрабатывающими только запросы.  
   
  Существует несколько способов изменения режима работы базы данных. В этом документе описаны следующие распространенные сценарии:  
   
@@ -135,7 +136,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
 9. Выполните команду XML для аналитики.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Высокий уровень доступности и масштабируемость в службах Analysis Services](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)   
  [Присоединение и отсоединение баз данных служб Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   

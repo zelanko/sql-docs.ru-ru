@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f55e2d47bcc8228111b35f86ec620a6623b68cad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Требования к обработке и связанные замечания (интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе рассматриваются некоторые технические вопросы, которые следует учитывать при обработке объектов интеллектуального анализа данных. Общее описание обработки и ее применения в интеллектуальном анализе данных см. в разделе [Обработка объектов интеллектуального анализа данных](../../analysis-services/data-mining/processing-data-mining-objects.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе рассматриваются некоторые технические вопросы, которые необходимо учитывать при обработке объектов интеллектуального анализа данных. Общее описание обработки и ее применения в интеллектуальном анализе данных см. в разделе [Обработка объектов интеллектуального анализа данных](../../analysis-services/data-mining/processing-data-mining-objects.md).  
   
  [Запросы к реляционному хранилищу](#bkmk_QueryReqs)  
   
@@ -92,9 +93,9 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения см. в разделе [Экспорт и импорт объектов интеллектуального анализа данных](../../analysis-services/data-mining/export-and-import-data-mining-objects.md).  
   
-## <a name="see-also"></a>См. также:  
- [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>См. также  
+ [Структуры интеллектуального анализа данных и &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Структуры интеллектуального анализа данных и &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

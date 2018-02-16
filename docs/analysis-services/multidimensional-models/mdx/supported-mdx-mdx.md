@@ -15,46 +15,47 @@ helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1c4f6573ce8f72c0fa907f58a1f4264709809f11
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="supported-mdx-mdx"></a>Поддержка многомерных выражений (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В сценариях многомерных выражений (MDX) поддерживаются следующие инструкции и функции:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В скриптах многомерных выражений поддерживаются следующие инструкции и функции:  
   
- [(Комментарий) (многомерные выражения)](../../../mdx/comment-mdx-double-slash.md)  
+ [&#40; Комментарий &#41; &#40; Многомерные Выражения &#41;](../../../mdx/comment-mdx-double-slash.md)  
   
- [-- (Комментарий) (MDX)](../../../mdx/comment-mdx-operator-reference.md)  
+ [--&#40; Комментарий &#41; &#40; Многомерные Выражения &#41;](../../../mdx/comment-mdx-operator-reference.md)  
   
- [Комментарий (MDX)](../../../mdx/comment-mdx.md)  
+ [Комментарий &#40; Многомерные Выражения &#41;](../../../mdx/comment-mdx.md)  
   
- [Инструкция ALTER CUBE (многомерные выражения)](../../../mdx/mdx-data-definition-alter-cube.md)  
+ [Инструкция ALTER CUBE &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-alter-cube.md)  
   
 > [!NOTE]  
 >  В сценариях многомерных выражений поддерживается только изменение элемента по умолчанию.  
   
- [Инструкция CALCULATE (многомерные выражения)](../../../mdx/mdx-scripting-calculate.md)  
+ [ВЫЧИСЛИТЬ оператор &#40; Многомерные Выражения &#41;](../../../mdx/mdx-scripting-calculate.md)  
   
- [Инструкция CASE (многомерные выражения)](../../../mdx/case-statement-mdx.md)  
+ [Инструкция CASE &#40; Многомерные Выражения &#41;](../../../mdx/case-statement-mdx.md)  
   
- [Инструкция CREATE CELL CALCULATION (многомерные выражения)](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [Создать инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
- [Инструкция CREATE MEMBER (многомерные выражения)](../../../mdx/mdx-data-definition-create-member.md)  
+ [CREATE MEMBER, инструкция #40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-member.md)  
   
- [Инструкция CREATE SET (многомерные выражения)](../../../mdx/mdx-data-definition-create-set.md)  
+ [СОЗДАТЬ инструкцию SET &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-set.md)  
   
- [Ключевое слово EXISTING (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
+ [Ключевое слово EXISTING &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
   
- [Инструкция FREEZE (многомерные выражения)](../../../mdx/mdx-scripting-freeze.md)  
+ [Инструкция FREEZE &#40; Многомерные Выражения &#41;](../../../mdx/mdx-scripting-freeze.md)  
   
- [Инструкция IF (многомерные выражения)](../../../mdx/mdx-scripting-if.md)  
+ [Если оператор &#40; Многомерные Выражения &#41;](../../../mdx/mdx-scripting-if.md)  
   
  [Это (многомерное выражение)](../../../mdx/this-mdx.md)  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
  [Инструкция SCOPE (многомерные выражения)](../../../mdx/mdx-scripting-scope.md)  
   
-## <a name="see-also"></a>См. также:  
- [Базовый скрипт многомерных выражений (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Базовый скрипт многомерных Выражений &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
   

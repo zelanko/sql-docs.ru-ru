@@ -20,19 +20,20 @@ helpviewer_keywords:
 - properties [Analysis Services], configuration
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 4db4d5d2e57f5f4a967a2099ef11efa0ca10ca21
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="server-properties-in-analysis-services"></a>Свойства сервера в службах Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Администратор может изменить свойства конфигурации сервера по умолчанию из [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра. У всех экземпляров имеются собственные свойства конфигурации, которые можно задать независимо от других экземпляров на том же сервере.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Администратор служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может изменить по умолчанию свойства конфигурации сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . У всех экземпляров имеются собственные свойства конфигурации, которые можно задать независимо от других экземпляров на том же сервере.  
   
  Для настройки сервера используйте среду SQL Server Management Studio или измените файл msmdsrv.ini соответствующего экземпляра.  
  
@@ -92,8 +93,8 @@ ms.lasthandoff: 01/08/2018
 |[Свойства безопасности](../../analysis-services/server-properties/security-properties.md)|Раздел безопасности содержит основные и расширенные свойства, определяющие разрешения доступа. К ним относятся параметры, управляющие действиями администраторов и пользователей.|  
 |[Свойства пула потоков](../../analysis-services/server-properties/thread-pool-properties.md)|Свойства пула потоков управляют количеством потоков, которые создает сервер. Они предназначены, главным образом, для расширенного использования.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление экземплярами служб Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Указание настроек конфигурации для развертывания решения](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [Задание параметров конфигурации для развертывания решения](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

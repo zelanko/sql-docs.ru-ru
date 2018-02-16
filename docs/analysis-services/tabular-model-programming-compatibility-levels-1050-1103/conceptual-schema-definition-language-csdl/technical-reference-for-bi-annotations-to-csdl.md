@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4d2f4c509035a2d806704757ddda6ed4610f048f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Технический справочник по аннотациям бизнес-аналитики для языка CSDL
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе перечислены элементов, атрибутов и свойств на языке CSDL, используемых для представления [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] табличных моделей. Некоторые элементы новые; другие помечены или расширены для поддержки построения моделей бизнес-аналитики.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе приведен список элементов, атрибутов и свойств, используемых в CSDL, которые представляют табличные модели [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Некоторые элементы новые; другие помечены или расширены для поддержки построения моделей бизнес-аналитики.  
   
  Обзор табличной модели и как сущности, связи и формулы представлены на языке CSDL см. в разделе [заметки языка CSDL для бизнес-аналитики &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
@@ -87,7 +89,7 @@ ms.lasthandoff: 01/08/2018
 |Стабильность|[Элемент Property &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/property-element-csdlbi.md)|  
 |SortDirection|[Элемент BaseProperty &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/baseproperty-element-csdlbi.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия CSDLBI](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md)  
   
   

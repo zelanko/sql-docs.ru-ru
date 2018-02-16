@@ -17,19 +17,20 @@ helpviewer_keywords:
 - MDX [Analysis Services], custom rollup formulas
 - custom member formulas [Analysis Services]
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a81bd6be288a17ca22d82a63f8a7e8952b506772
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---define-custom-member-formulas"></a>Атрибут свойства - Определение нестандартных формул элементов
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно определить выражение многомерных выражений (MDX), вызывается нестандартную формулу элемента, для предоставления значений для элементов указанного атрибута. Столбец таблицы из представления источников данных содержит выражение для каждого элемента атрибута, предоставляющее значение для этого элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Нестандартные формулы элемента — это многомерные выражения, предоставляющие значения для элементов указанного атрибута. Столбец таблицы из представления источников данных содержит выражение для каждого элемента атрибута, предоставляющее значение для этого элемента.  
   
  Нестандартные формулы элементов определяют значения ячеек, которые связаны с элементами, и заменяют агрегатные функции мер. Нестандартные формулы элементов записаны в многомерных выражениях. Каждая нестандартная формула элемента применяется к одному элементу. Нестандартные формулы элементов хранятся в таблице измерения или в другой таблице, имеющей связь по внешнему ключу с таблицей измерения.  
   
@@ -77,7 +78,7 @@ Time.[Quarter 3] * 1.5
   
  При одновременном использовании вычисляемых элементов и формул пользовательской свертки следует помнить о порядке вычислений. Вычисляемые элементы разрешаются до формул пользовательской свертки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Настройка нестандартных формул элементов для атрибутов в измерении](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 910a1fc1ddcd7eee478c5a16ed1243801e482203
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Средства и способы обработки (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Обработка — это операция, при которой службы Analysis Services запрашивают реляционный источник данных и заполняет этими данными объекты служб Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Обработка — это операция, при которой службы Analysis Services запрашивают реляционный источник данных и заполняют этими данными объекты служб Analysis Services.  
   
  Как администратор служб Analysis Services, вы можете выполнять и мониторить обработку объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с применением следующих подходов.  
   
@@ -162,7 +163,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Измените задачу, указав соединение с базой данных, объекты для обработки и параметр обработки. Дополнительные сведения о реализации этой задачи см. в разделе [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

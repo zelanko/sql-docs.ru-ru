@@ -20,19 +20,20 @@ helpviewer_keywords:
 - databases [Analysis Services], attach
 - databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4abef02a67a334486b123a2ed29b8119e7a29f8b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Подключение и отключение баз данных служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Часто возникают ситуации при [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] администратор базы данных (dba) требуется некоторое время перевести базу данных в автономный режим, а затем перевести ее обратно в оперативный режим, в том же экземпляре сервера, или на другом. Такие ситуации часто обусловлены потребностями предприятия, например необходимостью переместить базу данных на другой диск для повышения производительности, освободить место для увеличения размера базы данных или при обновлении какого-либо продукта. В этих и других случаях команды **Attach** и **Detach** позволяют администратору базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] переводить базу данных в режим "вне сети" и обратно в режим "в сети" с минимальными усилиями.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Часто администратору базы данных (dba) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо на некоторое время перевести базу данных в режим "вне сети", а затем перевести ее в режим "в сети" на том же или на другом экземпляре сервера. Такие ситуации часто обусловлены потребностями предприятия, например необходимостью переместить базу данных на другой диск для повышения производительности, освободить место для увеличения размера базы данных или при обновлении какого-либо продукта. В этих и других случаях команды **Attach** и **Detach** позволяют администратору базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] переводить базу данных в режим "вне сети" и обратно в режим "в сети" с минимальными усилиями.  
   
 ## <a name="attach-and-detach-commands"></a>Команды Attach и Detach  
  Команда **Attach** позволяет перевести базу данных из режима «вне сети» в режим «в сети». База данных может быть присоединена как к исходному, так и к любому другому экземпляру сервера. При присоединении базы данных пользователь может указать для нее значение свойства **ReadWriteMode** . Команда **Detach** позволяет перевести базу данных на сервере в режим «вне сети».  
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 > [!IMPORTANT]  
 >  Чтобы выполнить команду **Attach** , необходимы права администратора сервера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Перемещение базы данных служб Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
  [Режимы ReadWriteModes базы данных](../../analysis-services/multidimensional-models/database-readwritemodes.md)   

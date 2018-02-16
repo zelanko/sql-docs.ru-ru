@@ -17,19 +17,20 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Настройка учетных записей служб (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Подготовка учетных записей общесистемных документирован в [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), теме, которая предоставляет сведения об учетной записи обслуживания для всех [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служб, включая [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Обратитесь к ней для изучения допустимых типов учетных записей, привилегий Windows, назначенных при установке, разрешений файловой системы, разрешений регистра и другой информации.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Подготовка учетной записи для большого спектра продуктов описана в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), который содержит полные сведения об учетной записи службы для всех служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая службу [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Обратитесь к ней для изучения допустимых типов учетных записей, привилегий Windows, назначенных при установке, разрешений файловой системы, разрешений регистра и другой информации.  
   
  Данная тема предоставляет дополнительную информацию для службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], включая дополнительные разрешения, необходимые для табличной и кластерной установки. Она также охватывает разрешения, необходимые для поддержки операций сервера. Например, вы можете настроить выполнение операций и запросов обработки под учетной записью службы - в этом случае вам необходимо предоставить дополнительные разрешения , чтобы это заработало.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="logon-account-recommendations"></a>Рекомендации по учетной записи входа в систему  
  В отказоустойчивом кластере все экземпляры служб Analysis Services должны быть настроены для использования учетной записи пользователя домена Windows. Назначьте одну и ту же учетную запись для всех экземпляров. Подробные сведения см. в разделе [Кластеризация служб Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Изолированные экземпляры должны использовать виртуальную учетную запись по умолчанию, **NT Service\MSSQLServerOLAPService** для экземпляра по умолчанию или **NT Service\MSOLAP$***имя_экземпляра* для именованного экземпляра. Данная рекомендация применяется для экземпляров служб Analysis Services во всех режимах сервера, при условии, что в качестве операционной системы используется Windows Server 2008 R2 и более поздних версий, а для служб Analysis Services используется SQL Server 2012 и более поздних версий.  
+ Изолированные экземпляры должны использовать по умолчанию виртуальная учетная запись, **NT Service\MSSQLServerOLAPService** для экземпляра по умолчанию, или **NT Service\MSOLAP$ *** имя экземпляра* для именованного экземпляра. Данная рекомендация применяется для экземпляров служб Analysis Services во всех режимах сервера, при условии, что в качестве операционной системы используется Windows Server 2008 R2 и более поздних версий, а для служб Analysis Services используется SQL Server 2012 и более поздних версий.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Предоставление разрешений для служб Analysis Services  
  В этом разделе описаны разрешения, необходимые для локальных, внутренних операций служб Analysis Services, например запуск исполняемого файла, чтение файла конфигурации и загрузка баз данных из каталога данных. Если вместо этого вы ищете рекомендации по установке разрешений для доступа к внешним данным и взаимодействия с другими службами и приложениями, см. раздел [Предоставление дополнительных разрешений для определенных операций сервера](#bkmk_tasks) далее в этой статье.  
@@ -102,7 +103,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_FilePermissions"></a> Разрешения файловой системы, назначенные учетной записи служб Analysis Services  
   
 > [!NOTE]  
->  Список разрешений, связанных с каждой программной папкой, см. в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) .  
+>  Список разрешений, связанных с каждой программной папкой, см. в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
 >   
 >  Сведения о разрешениях, относящихся к конфигурации IIS и [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/08/2018
   
  Группа безопасности содержит только один элемент: идентификатор безопасности службы стартовой учетной записи экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Установка добавляет идентификатор безопасности по службе в локальную группу безопасности. Использование локальной группы безопасности с ее членством идентификатора безопасности службы немного, но заметно отличается от того, как Установка SQL Server обеспечивает службу Analysis Services, в сравнении с ядром СУБД.  
   
- Если вы думаете, что разрешения файла повреждены, следуйте данной инструкции для удостоверения, что служба все еще обеспечена надлежащим образом:   
+ Если вы думаете, что разрешения файла повреждены, следуйте данной инструкции для удостоверения, что служба все еще обеспечена надлежащим образом:  
   
 1.  Используйте средство командной строки Управления службой (sc.exe) для получения идентификатора безопасности службы экземпляра службы по умолчанию.  
   
@@ -154,10 +155,10 @@ ms.lasthandoff: 01/08/2018
 |Обратная запись|Добавьте учетную запись службы к ролям базы данных службы Analysis Services, определенных на удаленном сервере|Обратная запись — функция многомерных моделей, которая может быть включена в клиентских приложениях и которая позволяет создавать новые значения данных во время анализа. Если обратная запись разрешена во всех измерениях или кубах, то учетная запись служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна иметь разрешения на запись в таблицу обратной записи в исходной реляционной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если эта таблица еще не существует и ее необходимо создать, то учетная запись службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна обладать разрешениями для создания таблиц в указанной базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |Запись в таблицу журнала запросов в реляционной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Создайте имя для входа в базу данных для учетной записи службы и назначьте разрешения на чтение для таблицы журнала запросов.|Можно включить функцию ведения журнала запросов для сбора сведений об использовании запросов в таблицу базы данных для последующего возможного анализа. Учетная запись службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна иметь разрешения на запись в таблицу журнала запросов в указанной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если эта таблица еще не существует и ее необходимо создать, то учетная запись входа [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна обладать разрешениями для создания таблиц в указанной базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в блогах [Improve SQL Server Analysis Services Performance with the Usage Based Optimization Wizard](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) (Улучшение производительности служб SQL Server Analysis Services с помощью мастера оптимизации с учетом использования служб) и [Query Logging in Analysis Servicess](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)(Ведение журнала запросов в службах Analysis Services).|  
   
-## <a name="see-also"></a>См. также:  
- [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Учетная запись службы SQL Server и удостоверение безопасности службы (блог)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server использует идентификатор безопасности службы для обеспечения изоляции служб (статья базы Знаний)](http://support.microsoft.com/kb/2620201)   
+## <a name="see-also"></a>См. также  
+ [Настройка учетных записей служб Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [Учетная запись службы SQL Server и идентификатор безопасности службы (блог)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server идентификатор безопасности службы для обеспечения изоляции служб (статья базы знаний)](http://support.microsoft.com/kb/2620201)   
  [Маркер доступа (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
  [Идентификаторы безопасности (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
  [Маркер доступа (Википедия)](http://en.wikipedia.org/wiki/Access_token)   

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining model content, linear regression models
 - regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f44a257eb21427252cd611e4bd7cbb052f27df2a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описаны модели интеллектуального анализа данных, характерное для моделей, которые используют [!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм линейной регрессии. Общее описание содержимого модели интеллектуального анализа данных для всех типов моделей см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Общее описание содержимого модели интеллектуального анализа данных для всех типов моделей см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Основные сведения о структуре модели линейной регрессии  
  Модель линейной регрессии имеет чрезвычайно простую структуру. Каждая модель имеет единственный родительский узел, который представляет модель и ее метаданные, и узел дерева регрессии (NODE_TYPE = 25), который содержит формулу регрессии для каждого прогнозируемого атрибута.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/08/2018
  NODE_TYPE  
  Выходными данными модели линейной регрессии являются узлы следующих типов.  
   
-|Идентификатор типа узла|Тип|Description|  
+|Идентификатор типа узла|Тип|Описание|  
 |------------------|----------|-----------------|  
 |25|Корневой элемент дерева регрессии|Содержит формулу, описывающую связь между входной и выходной переменной.|  
   
@@ -180,7 +181,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="score-gain"></a>Рост оценки  
  Рост оценки (VALUETYPE = 8) для каждого регрессора представляет оценку интересности атрибута. Это значение можно использовать, чтобы оценить полезность нескольких регрессоров.  
   
-#### <a name="statistics"></a>Статистика  
+#### <a name="statistics"></a>Statistics  
  Статистика регрессора (VALUETYPE = 9) является средним значением атрибута среди вариантов, имеющих значение. Столбец ATTRIBUTE_VALUE содержит собственно среднее значение, а столбец VARIANCE содержит сумму отклонений от среднего значения.  
   
 #### <a name="intercept"></a>Intercept  
@@ -192,9 +193,9 @@ ms.lasthandoff: 01/08/2018
   
  Тогда, полагая средний возраст около 45, получим, что отсекаемый отрезок (VALUETYPE = 11) формулы регрессии показывает средний доход.  
   
-## <a name="see-also"></a>См. также:  
- [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Алгоритм линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
+## <a name="see-also"></a>См. также  
+ [Содержимое модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Алгоритм линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Технический справочник по алгоритму линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  
   

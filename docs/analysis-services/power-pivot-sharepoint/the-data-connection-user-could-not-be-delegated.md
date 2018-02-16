@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9f54b444beb513ec4cc81432d3a58c27b4f6fc43
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="the-data-connection-user-could-not-be-delegated"></a>Не удалось делегировать подключение пользователя данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Для книг Excel, содержащих [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данных, службы Excel Services возвращает эту ошибку, если она не может подключиться к [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] экземпляру сервера в SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Служба Excel Services возвращает эту ошибку для книг Excel, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , если она не может подключиться к экземпляру сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в SharePoint.  
   
 ## <a name="details"></a>Сведения  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
     2.  Запустите службу Claims to Windows Token Service, если она не работает.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка учетных записей служб Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

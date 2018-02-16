@@ -29,10 +29,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Роли служб Integration Services (службы SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предлагает ряд фиксированных ролей на уровне баз данных, обеспечивающих защищенный доступ к пакетам, хранимым в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Доступные роли зависят от того, где хранятся пакеты: в базе данных каталога служб SSIS (SSISDB) или в базе данных msdb.  

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d30e4644eed3d695db28a246aa9d05cba6e2cecc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>Настройка максимального размера передаваемого файла (Power Pivot для SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] часто содержат большие объемы данных, произошедшие в файлы, которые превышают максимальный допустимый размер файла для передачи в SharePoint. При попытке передать файл, размер которого больше предельно допустимого, на SharePoint возникнет следующая ошибка:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] часто содержат большие объемы данных, при этом размер файлов превышает максимально возможный для передачи в SharePoint. При попытке передать файл, размер которого больше предельно допустимого, на SharePoint возникнет следующая ошибка:  
   
 -   «Указанный файл больше максимально возможного размера файла».  
   

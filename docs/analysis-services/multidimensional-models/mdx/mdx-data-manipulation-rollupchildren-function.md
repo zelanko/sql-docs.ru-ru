@@ -17,19 +17,20 @@ helpviewer_keywords:
 - custom member properties [MDX]
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1fb9052d74a19941a41a915e12acec04bfc38f1c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>Управление данными MDX - функция RollupChildren
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Функцию многомерных выражений (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md) функция свертку потомков некоторого элемента, применяя к каждому потомку, другим унарным оператором и возвращает значение свертки в виде числа. Унарный оператор может браться из свойства, связанного с элементом-потомком, или же оператор может быть строковым выражением, непосредственно заданным для этой функции.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Функция [RollupChildren](../../../mdx/rollupchildren-mdx.md) многомерных выражений вычисляет свертку потомков некоторого элемента, применяя различные унарные операторы к каждому потомку, и возвращает результат этой свертки в виде числа. Унарный оператор может браться из свойства, связанного с элементом-потомком, или же оператор может быть строковым выражением, непосредственно заданным для этой функции.  
   
 ## <a name="rollupchildren-function-examples"></a>Примеры функции RollupChildren  
  Применение функции **RollupChildren** в инструкциях многомерных выражений объяснить просто, однако действие этой функции на запросы многомерных выражений может быть разнообразным.  
@@ -78,7 +79,7 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
   
  Инструкция многомерных выражений анализирует унарный оператор дочернего элемента. Если унарный оператор применяется для вычитания (как в случае элементов с внутренними и внешними возвратами), то функция **IIf** заменяет унарный оператор тильду (~). В противном случае функция **IIf** использует унарный оператор дочернего элемента. Наконец вычисленное значение суммы свертки умножается на коэффициент 1,1 для получения значения прогнозируемых валовых внутренних и внешних продаж.  
   
-## <a name="see-also"></a>См. также:  
- [Манипулирование данными (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Обработка данных &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

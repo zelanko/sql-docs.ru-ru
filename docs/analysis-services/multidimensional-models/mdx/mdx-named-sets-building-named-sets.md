@@ -19,19 +19,20 @@ helpviewer_keywords:
 - queries [MDX], named sets
 - set expressions [MDX]
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: aff5c819f15c6c1117ded70fe34169811d4f3bd1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-named-sets---building-named-sets"></a>Многомерные Выражения именованных наборов - построение именованных наборов
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Выражение набора может быть длинной и сложной декларацией и трудно проследить и понять. Или выражение набора может использоваться настолько часто, что его повторное определение может стать утомительным. Чтобы облегчить работу с длинными, сложными или часто используемыми выражениями, в многомерных выражениях можно определить такое выражение, как *именованный набор*.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Выражение набора может быть длинной и сложной декларацией, которую трудно проследить и понять. Или выражение набора может использоваться настолько часто, что его повторное определение может стать утомительным. Чтобы облегчить работу с длинными, сложными или часто используемыми выражениями, в многомерных выражениях можно определить такое выражение, как *именованный набор*.  
   
  В сущности, именованный набор представляет собой выражение набора, которому назначен псевдоним. В именованный набор могут входить любые элементы или функции, которые могут обычно включаться в набор. Псевдоним набора рассматривается в многомерных выражениях как выражение набора, поэтому этот псевдоним может использоваться везде, где допустимы выражения набора.  
   
@@ -46,8 +47,8 @@ ms.lasthandoff: 01/08/2018
      Дополнительные сведения об использовании инструкции CREATE SET для создания именованных наборов см. в разделе [Создание именованных наборов с областью действия сеанса (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Инструкция SELECT (многомерные выражения)](../../../mdx/mdx-data-manipulation-select.md)   
+ [Инструкция SELECT &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-manipulation-select.md)   
  [СОЗДАТЬ инструкцию SET &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-set.md)   
- [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

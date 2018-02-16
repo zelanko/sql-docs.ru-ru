@@ -22,19 +22,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Технический справочник по алгоритму дерева принятия решений (Майкрософт)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм дерева принятия решений — это гибридный алгоритм, объединяющий различные методы для создания дерева и поддерживающий несколько аналитических задач, в том числе регрессию, классификацию и взаимосвязи. Алгоритм дерева принятия решений (Майкрософт) поддерживает моделирование как дискретных, так и непрерывных атрибутов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой гибридный алгоритм, объединяющий различные методы для создания дерева и поддерживающий несколько аналитических задач, в том числе регрессию, классификацию и взаимосвязи. Алгоритм дерева принятия решений (Майкрософт) поддерживает моделирование как дискретных, так и непрерывных атрибутов.  
   
  В данном разделе описывается реализация алгоритма и настройка его поведения для различных задач. Приводятся также ссылки на дополнительную информацию о запросах к модели дерева принятия решений.  
   
@@ -155,7 +156,7 @@ ms.lasthandoff: 01/08/2018
  *SCORE_METHOD*  
  Определяет метод, используемый для вычисления коэффициента разбиения. Доступны следующие параметры:  
   
-|ID|Имя|  
+|ID|Название|  
 |--------|----------|  
 |1|Энтропия|  
 |3|Алгоритм Байеса с априорной оценкой K2|  
@@ -168,7 +169,7 @@ ms.lasthandoff: 01/08/2018
  *SPLIT_METHOD*  
  Определяет метод, используемый для разбиения узла. Доступны следующие параметры:  
   
-|ID|Имя|  
+|ID|Название|  
 |--------|----------|  
 |1|**Binary:** указывает, что независимо от реального числа значений атрибута дерево следует разбить на две ветви.|  
 |2|**Complete:** указывает, что в дереве можно создавать столько разбиений, сколько существует значений атрибута.|  
@@ -199,7 +200,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  Алгоритм дерева решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает определенные входные столбцы данных и прогнозируемые столбцы, которые перечислены ниже в таблице. Дополнительные сведения о значении типов содержимого в применении к модели интеллектуального анализа данных см. в разделе [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|столбцом|Типы содержимого|  
+|Столбец|Типы содержимого|  
 |------------|-------------------|  
 |Входной атрибут|Continuous, Cyclical, Discrete, Discretized, Key, Ordered, Table|  
 |Прогнозируемый атрибут|Continuous, Cyclical, Discrete, Discretized, Ordered, Table|  
@@ -207,9 +208,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Алгоритм дерева принятия решений (Майкрософт)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Примеры запросов к модели дерева принятия решений](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для модели дерева принятия решений &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

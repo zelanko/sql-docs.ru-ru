@@ -1,7 +1,7 @@
 ---
 title: "Программирование фундаментальных объектов AMO | Документы Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - server objects [AMO]
 - programming [AMO]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - database objects [AMO]
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9ab80bdbb2a2cc6e27ce76577bdf7739e1b9b8b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bcbf7e3c05fb0166324e1953b5656e8038ec682f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>Программирование фундаментальных объектов AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Основные объекты обычно являются простыми и понятными. Чаще всего пользователь создает эти объекты и их экземпляры, а затем, когда они больше не нужны, отключается от них. К фундаментальным классам относятся следующие объекты: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, и <xref:Microsoft.AnalysisServices.DataSourceView>. Единственным сложным объектом среди фундаментальных объектов AMO является <xref:Microsoft.AnalysisServices.DataSourceView>, которому необходимы подробные данные для построения абстрактной модели, которая является представлением источника данных.  
+  Фундаментальные объекты, как правило, являются простыми и понятными. Чаще всего пользователь создает эти объекты и их экземпляры, а затем, когда они больше не нужны, отключается от них. К фундаментальным классам относятся следующие объекты: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, и <xref:Microsoft.AnalysisServices.DataSourceView>. Единственным сложным объектом среди фундаментальных объектов AMO является <xref:Microsoft.AnalysisServices.DataSourceView>, которому необходимы подробные данные для построения абстрактной модели, которая является представлением источника данных.  
   
  Обычно объектам <xref:Microsoft.AnalysisServices.Server> и <xref:Microsoft.AnalysisServices.Database> требуются для использования вложенные объекты OLAP или объекты интеллектуального анализа данных.  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Объекты DataSourceView](#DSV)  
   
-##  <a name="ServerObjects"></a>Объекты сервера  
+##  <a name="ServerObjects"></a> Объекты сервера  
  Работа с объектом &lt;<xref:Microsoft.AnalysisServices.Server> включает следующие шаги: соединение с сервером, проверка соединения объекта <xref:Microsoft.AnalysisServices.Server> с сервером и (при наличии соединения) отсоединение <xref:Microsoft.AnalysisServices.Server> от сервера.  
   
 ### <a name="connecting-to-the-server-object"></a>Соединение с объектом Server  
@@ -109,7 +110,7 @@ if ( (svr != null) && ( svr.Connected))
 }  
 ```  
   
-###  <a name="AMO"></a>Объекты исключений AmoException  
+###  <a name="AMO"></a> Объекты исключений AmoException  
  При возникновении различных проблем объекты AMO формируют исключения. Подробное описание исключений см. в разделе [AMO другие классы и методы](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md). В следующем образце кода показан правильный способ захвата исключений в объектах AMO.  
   
 ```  
@@ -148,7 +149,7 @@ catch (  AMOException e)
 }  
 ```  
   
-##  <a name="DatabaseObjects"></a>Объекты базы данных  
+##  <a name="DatabaseObjects"></a> Объекты базы данных  
  Работать с объектом <xref:Microsoft.AnalysisServices.Database> очень просто. Возвращается существующая база данных из коллекции баз данных объекта <xref:Microsoft.AnalysisServices.Server>.  
   
 ### <a name="creating-dropping-and-finding-a-database"></a>Создание, удаление и поиск базы данных  
@@ -195,7 +196,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource"></a>Объекты источника данных  
+##  <a name="DataSource">Объекты источника данных</a>  
  Объект <xref:Microsoft.AnalysisServices.DataSource> связывает службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и базу данных, в которой находятся данные. Схема, которая представляет базовую модель для служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], определяется объектом <xref:Microsoft.AnalysisServices.DataSourceView>. Объект <xref:Microsoft.AnalysisServices.DataSource> можно рассматривать как строку соединения с базой данных, в которой расположены данные.  
   
  Следующий образец кода демонстрирует создание объекта <xref:Microsoft.AnalysisServices.DataSource>. Этот образец проверяет, что объект <xref:Microsoft.AnalysisServices.Server> имеет соединение, а сервер и база данных существуют. Если объект <xref:Microsoft.AnalysisServices.DataSource> существует, то он будет удален и создан повторно. Создается объект <xref:Microsoft.AnalysisServices.DataSource> с теми же именем и внутренним идентификатором. В этом образце проверка строки подключения не выполняется, что позволяет проверить это.  
@@ -218,7 +219,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 }  
 ```  
   
-##  <a name="DSV"></a>Объекты DataSourceView  
+##  <a name="DSV">Объекты DataSourceView</a>  
  Объект <xref:Microsoft.AnalysisServices.DataSourceView> отвечает за хранение модели схемы для служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Чтобы объект <xref:Microsoft.AnalysisServices.DataSourceView> мог хранить схему, сначала ее необходимо создать. Схемы создаются через объекты DataSet из пространства имен System.Data.  
   
  Следующий образец кода показывает создание части схемы, включенной в образец проекта служб Analysis Services на основе AdventureWorks. Образец создает определения схемы для таблиц, вычисляемых столбцов, простых и составных связей. Схемы являются материализованными наборами данных.  
@@ -558,7 +559,7 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Основные классы объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   

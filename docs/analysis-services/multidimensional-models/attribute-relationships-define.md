@@ -15,19 +15,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], relationships
 - relationships [Analysis Services], attributes
 ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0b52cde762c42ce62656c60f59681a678613ae01
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---define"></a>Связи - атрибутов определяют
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], атрибуты — это основной строительный блок измерений. Измерение содержит набор атрибутов, организованных на основе связей между ними.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]атрибуты играют роль строительных блоков, из которых создается измерение. Измерение содержит набор атрибутов, организованных на основе связей между ними.  
   
  Для каждой таблицы, содержащейся в измерении, существует связь атрибутов, задающая связь ключевого атрибута таблицы с другими атрибутами из той же таблицы. Эта связь устанавливается при создании измерения.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Если неправильно задать связь, запрос может дать неправильные результаты.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Связи атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

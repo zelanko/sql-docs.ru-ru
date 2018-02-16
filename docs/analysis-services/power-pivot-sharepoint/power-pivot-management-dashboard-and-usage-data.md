@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 17b70799d09fd1f9a62100c85fde71046250d12e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Информационная панель управления PowerPivot и данные об использовании
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Панели мониторинга — это набор стандартных отчетов и веб-частей в центре администрирования SharePoint, которые помогают администрировать сервер SQL [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для развертывания SharePoint. Панель мониторинга управления предоставляет сведения о работоспособности серверов, действиях с книгой и обновлении данных. Панель мониторинга управления использует данные, полученные в процессе сбора данных об использовании SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] — это набор стандартных отчетов и веб-частей в центре администрирования SharePoint, предназначенных для администрирования развертывания SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint. Панель мониторинга управления предоставляет сведения о работоспособности серверов, действиях с книгой и обновлении данных. Панель мониторинга управления использует данные, полученные в процессе сбора данных об использовании SharePoint.  
   
   
 ##  <a name="prereq"></a> Предварительные требования  
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="items"></a> Общие сведения о разделах панели мониторинга  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] содержит веб-части и встроенные отчеты, которые детализируют отдельные категории данных. В следующем списке приводится описание для каждой части панели мониторинга управления.  
   
-|Панель мониторинга|Description|  
+|Панель мониторинга|Описание|  
 |---------------|-----------------|  
 |Инфраструктура — исправность сервера|Показывает тенденцию использования ресурсов ЦП и потребления памяти, а также времени ответов на запросы с течением времени, что позволяет оценить интенсивность использования системных ресурсов.|  
 |Действия|Содержит ссылки на другие страницы центра администрирования, включая текущее приложение службы, список приложений служб и ведение журнала использования.|  
@@ -143,7 +144,7 @@ ms.lasthandoff: 01/08/2018
   
     9. Рядом с полем «Задать запрос многомерных выражений» нажмите кнопку **Конструктор** , чтобы открыть конструктор запросов многомерных выражений для сбора данных, с которыми вы будете работать, а затем создайте отчет в виде сводной таблицы или сводной диаграммы для просмотра данных в Excel.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление данных Power Pivot в SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   

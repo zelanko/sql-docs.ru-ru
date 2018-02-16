@@ -19,19 +19,20 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Атрибут свойства — Настройка типов атрибутов
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], типы атрибутов помогают классифицировать атрибут с точки зрения функциональности бизнеса. Существует много типов атрибутов, большинство из которых используется клиентскими приложениями для облегчения отображения или поддержки атрибута. Однако некоторые типы атрибутов также имеют конкретное значение для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Например, некоторые типы атрибутов идентифицируют атрибуты, представляющие периоды времени в различных календарях для измерений времени.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]типы атрибутов помогают классифицировать атрибут с точки зрения функциональности бизнеса. Существует много типов атрибутов, большинство из которых используется клиентскими приложениями для облегчения отображения или поддержки атрибута. Однако некоторые типы атрибутов также имеют конкретное значение для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Например, некоторые типы атрибутов идентифицируют атрибуты, представляющие периоды времени в различных календарях для измерений времени.  
   
 ##  <a name="setting_attibute_types"></a> Установка типов атрибутов  
  Значение свойства **Type** для атрибута определяет тип этого атрибута. Некоторые мастера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] устанавливают типы атрибутов при определении измерений или атрибутов. Эти мастера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также устанавливают типы атрибутов при добавлении дополнительной функциональности к измерениям. Например, мастер бизнес-аналитики применяет несколько типов атрибутов к атрибутам в измерении при добавлении логики операций со счетами для идентификации атрибутов, содержащих имена, коды, номера и структуру счетов в измерении. Мастер бизнес-аналитики также использует типы атрибутов, например для конвертации валют. Дополнительные сведения см. в разделе [Создание измерения типа Currency](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 ###  <a name="general_attribute_types"></a> General Attribute Types  
   
-|Значение типа атрибута|Description|  
+|Значение типа атрибута|Описание|  
 |--------------------------|-----------------|  
 |**Адрес**|Представляет адрес.|  
 |**AddressBuilding**|Представляет идентификатор здания для адреса.|  
@@ -160,7 +161,7 @@ ms.lasthandoff: 01/08/2018
   
 ###  <a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
-|Значение типа атрибута|Description|  
+|Значение типа атрибута|Описание|  
 |--------------------------|-----------------|  
 |**Учетная запись**|Представляет «родительский» атрибут счета. Этот тип атрибута обычно применяется к «родительскому» атрибуту измерения счетов.|  
 |**AccountName**|Представляет имя счета. Этот тип атрибута обычно применяется к ключевым атрибутам измерения счетов.|  
@@ -169,7 +170,7 @@ ms.lasthandoff: 01/08/2018
   
 ###  <a name="currency_dimension_attribute_types"></a> Типы атрибутов измерения валют  
   
-|Значение типа атрибута|Description|  
+|Значение типа атрибута|Описание|  
 |--------------------------|-----------------|  
 |**CurrencyDestination**|Представляет целевую валюту для конвертации валют. Этот тип атрибута обычно применяется к ключевому атрибуту отчетного измерения для использования при конвертации валют. Дополнительные сведения о конвертации валюты см. в разделе [Преобразования валюты (службы Analysis Services)](../../analysis-services/currency-conversions-analysis-services.md).|  
 |**CurrencyIsoCode**|Представляет код международной организации по стандартизации (ISO) для валюты. Дополнительные сведения о конвертации валюты см. в разделе [Преобразования валюты (службы Analysis Services)](../../analysis-services/currency-conversions-analysis-services.md).|  
@@ -178,7 +179,7 @@ ms.lasthandoff: 01/08/2018
   
 ###  <a name="slowly_changing_dimension_attribute_types"></a> Типы атрибутов медленно изменяющегося измерения  
   
-|Значение типа атрибута|Description|  
+|Значение типа атрибута|Описание|  
 |--------------------------|-----------------|  
 |**ScdEndDate**|Представляет эффективную дату окончания для элемента в медленно изменяющемся измерении.|  
 |**ScdOriginalID**|Представляет оригинальный идентификатор для элемента в медленно изменяющемся измерении.|  
@@ -187,7 +188,7 @@ ms.lasthandoff: 01/08/2018
   
 ###  <a name="time_dimension_attribute_types"></a> Типы атрибутов измерения времени  
   
-|Значение типа атрибута|Description|  
+|Значение типа атрибута|Описание|  
 |--------------------------|-----------------|  
 |**Дата**|Представляет дату. Этот тип атрибута обычно применяется к ключевому атрибуту измерения времени или серверного измерения времени.|  
 |**DayOfHalfYear**|Представляет порядковый номер дня в полугодии.|  
@@ -311,7 +312,7 @@ ms.lasthandoff: 01/08/2018
 |**WinterSummerSeason**|Указывает, является ли дата частью зимнего или летнего сезона.|  
 |**Years**|Представляет годы.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: b85aca1abd948d42710633d65e7b79ad30d0629a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="training-and-testing-data-sets"></a>Обучающие и проверочные наборы данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Разделение данных на обучающие и проверочные наборы является важной частью оценки моделей интеллектуального анализа данных. Обычно при разделении набора данных на обучающий и проверочный наборы большая часть данных используется для обучения, а меньшая — для проверки. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняют случайную выборку данных, чтобы убедиться в том, что проверочный и обучающий наборы похожи. Использование одинаковых данных для обучения и проверки позволяет свести к минимуму влияние несоответствия данных и лучше понять характеристики модели.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Разделение данных на обучающие и проверочные наборы является важной частью оценки моделей интеллектуального анализа данных. Обычно при разделении набора данных на обучающий и проверочный наборы большая часть данных используется для обучения, а меньшая — для проверки. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняют случайную выборку данных, чтобы убедиться в том, что проверочный и обучающий наборы похожи. Использование одинаковых данных для обучения и проверки позволяет свести к минимуму влияние несоответствия данных и лучше понять характеристики модели.  
   
  После обработки модели на основе обучающего набора производится ее проверка путем формирования прогнозов на основе проверочного набора. Поскольку данные в проверочном наборе уже содержат известные значения для прогнозируемого атрибута, очень просто определить, правильны ли полученные моделью выводы.  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Изменение свойств структуры для создания набора проверочных данных  
  Если после создания и обработки структуры интеллектуального анализа данных нужно отделить набор проверочных данных, то можно изменить свойства структуры интеллектуального анализа данных. Чтобы изменить способ секционирования данных, измените следующие свойства.  
   
-|Свойство|Description|  
+|property|Описание|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|Задает максимальное число вариантов, включаемых в проверочный набор.|  
 |**HoldoutMaxPercent**|Задает максимальное число вариантов, включаемых в проверочный набор в качестве процентной доли от полного набора данных. Чтобы набора данных не было, укажите значение 0.|  
@@ -108,15 +109,15 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Подраздел|Ссылки|  
 |------------|-----------|  
 |Описывает, каким образом фильтры модели взаимодействуют с обучающим и проверочным наборами данных.|[Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
-|Описывает, как использование обучающих и проверочных данных влияет на перекрестные проверки.|[Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Описывает, как использование обучающих и проверочных данных влияет на перекрестные проверки.|[Перекрестная проверка &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |Предоставляет сведения о программных интерфейсах для работы с обучающим и проверочным наборами данных в структуре интеллектуального анализа данных.|[Основные понятия и модель объектов AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Элемент MiningStructure (ASSL)](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Содержит синтаксис DMX для создания контрольных наборов.|[СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX)](../../dmx/create-mining-structure-dmx.md)|  
+|Содержит синтаксис DMX для создания контрольных наборов.|[СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../../dmx/create-mining-structure-dmx.md)|  
 |Получить данные о вариантах в обучающем и проверочном наборах.|[Наборы строк схемы интеллектуального анализа данных](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Наборы строк схемы интеллектуального анализа данных (службы SSAS)](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   
  [Основные понятия интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-concepts.md)   
  [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

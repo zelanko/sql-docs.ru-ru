@@ -17,19 +17,20 @@ helpviewer_keywords:
 - scoring [data mining]
 - accuracy testing [data mining]
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fad4277b58170a555597c9993ee9f681e99397f2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Перекрестной проверки* — стандартное средство в аналитике и является важной характеристикой для помощь в разработке и настройке моделей интеллектуального анализа данных. После создания структуры интеллектуального анализа данных и связанных моделей интеллектуального анализа данных можно использовать перекрестную проверку, чтобы оценить допустимость модели.  У перекрестной проверки есть следующие применения.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  *Перекрестная проверка* — стандартное средство в аналитике, она очень важна при разработке и настройке моделей интеллектуального анализа данных. После создания структуры интеллектуального анализа данных и связанных моделей интеллектуального анализа данных можно использовать перекрестную проверку, чтобы оценить допустимость модели.  У перекрестной проверки есть следующие применения.  
   
 -   Проверка надежности определенной модели интеллектуального анализа данных.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
  В этом разделе приводятся сведения, помогающие правильно настроить перекрестную проверку.  
   
 ### <a name="setting-the-number-of-partitions"></a>Установка числа секций  
- Число секций определяет, сколько будет создано временных моделей.  Для каждой секции разрез данных помечается для использования в качестве проверочного набора. Новая модель создается путем обучения на оставшихся данных, не вошедших в секцию. Этот процесс повторяется, пока службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не создадут и не проверят указанное число моделей. Данные, указанные как доступные для перекрестной проверки, распределяются равномерно между всеми секциями.  
+ Число секций определяет, сколько будет создано временных моделей. Для каждой секции разрез данных помечается для использования в качестве проверочного набора. Новая модель создается путем обучения на оставшихся данных, не вошедших в секцию. Этот процесс повторяется, пока службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не создадут и не проверят указанное число моделей. Данные, указанные как доступные для перекрестной проверки, распределяются равномерно между всеми секциями.  
   
  Пример на этой диаграмме показывает использование данных в том случае, если были заданы три свертки.  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
  Выбор целевого состояния влияет на возвращаемые меры. Если указать целевой атрибут — то есть имя столбца — и при этом не указать определенное значение, которое необходимо спрогнозировать, то оценка модели будет выполнена на основе прогноза наиболее вероятного состояния.  
   
- При использовании перекрестной проверки с моделями кластеризации прогнозируемые столбцы не указываются; вместо этого в списке **Целевой атрибут** нужно выбрать **#Кластер** . После выбора этого параметра другие параметры, не относящиеся к моделям кластеризации, например **Целевое состояние**, отключаются. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проверят все модели кластеризации, связанные со структурой интеллектуального анализа данных.  
+ При использовании перекрестной проверки с моделями кластеризации прогнозируемые столбцы не указываются; вместо этого в списке **Целевой атрибут** нужно выбрать **#Кластер** . После выбора этого параметра другие параметры, не относящиеся к моделям кластеризации, например **Целевое состояние**, отключаются. Затем службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проверят все модели кластеризации, связанные со структурой интеллектуального анализа данных.  
   
 ## <a name="tools-for-cross-validation"></a>Средства перекрестной проверки  
  Перекрестную проверку можно выполнить из конструктора интеллектуального анализа данных или путем запуска хранимых процедур.  
@@ -117,17 +118,17 @@ ms.lasthandoff: 01/08/2018
   
  На первом этапе следует вызвать системную хранимую процедуру, которая создает столько секций, сколько было указано в наборе данных, и возвращает результаты определения точности для каждой секции. Затем службы Analysis Services вычисляют среднее и стандартное отклонение секций для каждой метрики.  
   
--   [SystemGetCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetCrossValidationResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
+-   [Хранимая процедура SystemGetClusterCrossValidationResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
   
  **Сформировать показатели для всего набора данных**  
   
  На втором этапе следует вызвать другой набор хранимых процедур. Эти хранимые процедуры не выполняют секционирование набора данных, но формируют результаты определения точности для указанного набора данных в целом. Если структура интеллектуального анализа данных уже секционирована и обработана, второй набор хранимых процедур можно вызвать просто для получения результатов.  
   
--   [SystemGetAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetAccuracyResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterAccuracyResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
 #### <a name="defining-the-testing-data"></a>Определение проверочных данных  
  При запуске хранимых процедур перекрестной проверки, которые вычисляют точность (SystemGetAccuracyResults или SystemGetClusterAccuracyResults), можно указать источник данных, используемый для тестирования в ходе перекрестной проверки. Этот параметр недоступен в пользовательском интерфейсе.  
@@ -187,16 +188,16 @@ ms.lasthandoff: 01/08/2018
   
 |Разделы|Ссылки|  
 |------------|-----------|  
-|Описывает, как задать параметры перекрестной проверки в среде SQL Server Development Studio.|[Вкладка "Перекрестная проверка" (представление диаграммы точности интеллектуального анализа данных)](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)|  
+|Описывает, как задать параметры перекрестной проверки в среде SQL Server Development Studio.|[Вкладка «перекрестная проверка» &#40; Интеллектуальный анализ представление диаграммы точности &#41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)|  
 |Содержит описание метрик, предоставляемых при перекрестной проверке|[Формулы перекрестной проверки](../../analysis-services/data-mining/cross-validation-formulas.md)|  
 |Описывает формат отчета о перекрестной проверке и определяет статистические меры, предоставляемые для каждого типа модели.|[Меры в отчете перекрестной проверки](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)|  
-|Содержит список хранимых процедур для вычисления статистики перекрестной проверки.|[Хранимые процедуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
+|Содержит список хранимых процедур для вычисления статистики перекрестной проверки.|[Интеллектуальный анализ данных хранимой процедуры &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
 |||  
 |Описывает, как создать набор проверочных данных для структур интеллектуального анализа данных и связанных моделей.|[Обучающие и проверочные наборы данных](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|См. примеры других типов диаграмм точности.|[Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Диаграмма роста прибыли (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Описывает действия по созданию различных диаграмм точности.|[Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|См. примеры других типов диаграмм точности.|[Матрица классификации &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Диаграмма точности прогнозов &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Диаграмма роста прибыли &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Описывает действия по созданию различных диаграмм точности.|[Тестирование и проверка задачи и инструкции по &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>См. также:  
- [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - fact tables [Analysis Services]
 - partitions [Analysis Services], fact tables
 ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ded060a7f5451e7bf0907f40da78d9fb9e95b8dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>Смена источника секции на другую таблицу фактов
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании секции для куба можно использовать различные таблицы фактов. Таблицы могут принадлежать представлению отдельного источника данных, представлениям различных источников данных или различным источникам данных. Представление источника данных также может содержать различные таблицы из нескольких источников данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+При создании секции для куба можно использовать различные таблицы фактов. Таблицы могут принадлежать представлению отдельного источника данных, представлениям различных источников данных или различным источникам данных. Представление источника данных также может содержать различные таблицы из нескольких источников данных.  
   
  Все таблицы фактов и измерения для секций куба должны иметь такую же структуру, как таблица фактов и измерения куба. Например, различные таблицы фактов могут иметь одинаковую структуру, но содержать данные за разные годы или для разных линий продукции.  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
  Можно, но не рекомендуется, использовать различные таблицы фактов с дублирующимися данными. В этом случае необходимо использовать фильтры в секциях, чтобы гарантировать, что данные, используемые одной секцией, не используются другой. Дополнительные сведения см. в разделе [Create and Manage a Local Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md).  
   
-## <a name="see-also"></a>См. также:  
- [Создание локальной секции и управление ею (службы Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Создание и управление локальной секции &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Программирование объектов интеллектуального анализа данных объектов AMO | Документы Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,26 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 19f72f294bc06ecec0e38be763afb656f7ebcc67
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: be27072d93bb9cee3d787732e57fc591452c2191
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>Программирование объектов интеллектуального анализа данных AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Программирование объектов интеллектуального анализа данных с помощью объектов AMO является простым и понятным. Первый шаг заключается в создании модели структуры данных для поддержки проекта интеллектуального анализа. Затем создается модель интеллектуального анализа данных, поддерживающая алгоритм интеллектуального анализа, который будет использоваться для прогнозирования или поиска невидимых связей, лежащих в основе данных. Создав проект интеллектуального анализа данных (в том числе структуру и алгоритмы), можно приступить к обработке моделей интеллектуального анализа данных для получения обученных моделей, которые впоследствии будут использоваться при выполнении запросов и прогнозировании из клиентского приложения.  
+  Программирование объектов интеллектуального анализа данных при помощи объектов AMO осуществляется просто и понятно. Первый шаг заключается в создании модели структуры данных для поддержки проекта интеллектуального анализа. Затем создается модель интеллектуального анализа данных, поддерживающая алгоритм интеллектуального анализа, который будет использоваться для прогнозирования или поиска невидимых связей, лежащих в основе данных. Создав проект интеллектуального анализа данных (в том числе структуру и алгоритмы), можно приступить к обработке моделей интеллектуального анализа данных для получения обученных моделей, которые впоследствии будут использоваться при выполнении запросов и прогнозировании из клиентского приложения.  
   
  Следует, однако, помнить, что объекты AMO не предназначены для запросов; объекты AMO используются для управления и администрирования структур и моделей интеллектуального анализа данных. Чтобы запрашивать данные, используйте [разработка с использованием ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Объекты MiningModel](#MiningModel)  
   
-##  <a name="MiningStructure"></a>Объекты MiningStructure  
+##  <a name="MiningStructure">Объекты MiningStructure</a>  
  Структура интеллектуального анализа данных — это определение структуры данных, которое используется для создания всех моделей интеллектуального анализа данных. Структура интеллектуального анализа данных содержит привязку к представлению источника данных, определенному в базе данных, а также определения для всех столбцов, применяемых в моделях интеллектуального анализа данных. Структура может содержать несколько моделей интеллектуального анализа данных.  
   
  Для создания объекта <xref:Microsoft.AnalysisServices.MiningStructure> необходимо выполнить следующие действия.  
@@ -93,7 +94,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 }  
 ```  
   
-##  <a name="MiningModel"></a>Объекты MiningModel  
+##  <a name="MiningModel">Объекты MiningModel</a>  
  Модель интеллектуального анализа является репозиторием для всех столбцов и определений столбцов, которые будут использованы в алгоритме интеллектуального анализа.  
   
  Для создания объекта <xref:Microsoft.AnalysisServices.MiningModel> необходимо выполнить следующие действия.  
@@ -143,7 +144,7 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
  [Основные классы объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   

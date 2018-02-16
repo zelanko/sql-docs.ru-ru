@@ -1,7 +1,7 @@
 ---
 title: "Получение данных с помощью объекта AdomdDataReader | Документы Microsoft"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - retrieving data
 - AdomdDataReader object
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66058488afc823095c2868b45d4156d723fb6ae6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3e536803b34715bdfc4beb87de40cda0380a589e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Получение данных с помощью объекта AdomdDataReader
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При получении аналитических данных <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> object предоставляет хороший баланс между издержками и интерактивностью. Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> извлекает из источника аналитических данных поток данных, предназначенный только для чтения и последовательного доступа, преобразованный в плоский формат. Этот небуферизованный поток данных позволяет применять процедурные средства для последовательной обработки результатов, получаемых из источника аналитических данных, с высокой эффективностью. Поэтому объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> хорошо подходит для извлечения больших объемов данных в целях отображения, поскольку данные не кэшируются в памяти.  
+  Что касается извлечения аналитических данных, объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> обеспечивает достижение приемлемого равновесия между издержками и интерактивностью. Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> извлекает из источника аналитических данных поток данных, предназначенный только для чтения и последовательного доступа, преобразованный в плоский формат. Этот небуферизованный поток данных позволяет применять процедурные средства для последовательной обработки результатов, получаемых из источника аналитических данных, с высокой эффективностью. Поэтому объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> хорошо подходит для извлечения больших объемов данных в целях отображения, поскольку данные не кэшируются в памяти.  
   
  Применение объекта <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> способствует также повышению производительности приложения, поскольку обеспечивает извлечение данных по мере их поступления, не дожидаясь полного возврата результатов запроса. Кроме того, объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> сокращает системные издержки, поскольку по умолчанию этот модуль чтения сохраняет в памяти только одну строку одновременно.  
   
@@ -122,7 +123,7 @@ foreach (DataRow objRow in schemaTable.Rows)
 ## <a name="retrieving-multiple-result-sets"></a>Извлечение нескольких результирующих наборов  
  Интеллектуальный анализ данных поддерживает концепцию вложенных таблиц, к которым ADOMD.NET предоставляет доступ как к вложенным наборам строк. Чтобы извлечь вложенный набор строк, связанный с каждой строкой, вызывается метод <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDataReader%2A>.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Получение данных из источника аналитических данных](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [Получение данных с помощью набора ячеек](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
  [Получение данных с помощью объекта XmlReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  

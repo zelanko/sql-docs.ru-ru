@@ -15,19 +15,20 @@ helpviewer_keywords:
 - databases [Analysis Services], read/write
 - databases [Analysis Services], read-only
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ea794ce008d5e7acc6aa01a23b8ca7629546efc0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-readwritemodes"></a>Режимы ReadWriteModes базы данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Часто возникают ситуации при [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] хочет изменить чтения и записи базы данных в базу данных только для чтения, администратор базы данных (dba) или наоборот. Обычно это продиктовано производственной необходимостью, например, чтобы обеспечить общий доступ нескольким серверам к папке базы данных для масштабирования решения и повышения производительности. В такой ситуации свойство **ReadWriteMode** базы данных позволяет администратору базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] легко изменять режим работы базы данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Часто возникает ситуация, когда администратору базы данных (dba) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо переключить базу данных из режима для чтения и записи в режим только для чтения или наоборот. Обычно это продиктовано производственной необходимостью, например, чтобы обеспечить общий доступ нескольким серверам к папке базы данных для масштабирования решения и повышения производительности. В такой ситуации свойство **ReadWriteMode** базы данных позволяет администратору базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] легко изменять режим работы базы данных.  
   
 ## <a name="readwritemode-database-property"></a>Свойство ReadWriteMode базы данных  
  Свойство базы данных **ReadWriteMode** указывает, в каком режиме работает база данных — чтение и запись или только чтение. Эти значения являются единственными допустимыми для данного свойства. Пока база данных находится в режиме только для чтения, к ней не могут применяться операции изменения или обновления. В режиме для чтения и записи в базе данных выполняются операции изменения и обновления. Свойство **ReadWriteMode** базы данных определено как свойство только для чтения. Его можно задать только с помощью команды **Attach** .  
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Локальные кубы могут быть созданы только из базы данных, находящейся в режиме только для чтения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Присоединение и отсоединение баз данных служб Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Перемещение базы данных служб Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

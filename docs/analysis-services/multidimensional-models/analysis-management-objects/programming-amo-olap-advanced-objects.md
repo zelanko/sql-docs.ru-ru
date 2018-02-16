@@ -1,7 +1,7 @@
 ---
 title: "Программирование объектов AMO расширенных объектов OLAP | Документы Microsoft"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,30 +11,31 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09f1785d313f0598121ad06e42b26ca4f4367730
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Программирование расширенных объектов AMO OLAP
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе объясняется, объекты управления Analysis (AMO) о программировании объектов OLAP дополнительных объектов. Этот раздел состоит из следующих подразделов.  
+  В этом разделе рассказывается о программировании объектов AMO объектов OLAP с расширенными возможностями. Этот раздел состоит из следующих подразделов.  
   
 -   [Объекты Action](#Action)  
   
--   [Объекты KPI](#KPI)  
+-   [Kpi Objects](#KPI)  
   
 -   [Объекты перспективы](#Persp)  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Объекты Translation](#Transl)  
   
-##  <a name="Action"></a>Объекты Action  
+##  <a name="Action">Объекты Action</a>  
  Классы действий позволяют создавать активные ответные действия во время просмотра определенных областей куба. Объекты действий можно определять при помощи объектов AMO, но они используются из клиентского приложения, просматривающего данные. Действия могут быть разных типов, поэтому их создание должно осуществляться в соответствии с их типом. Действия могут представлять собой следующее.  
   
 -   Действия детализации, которые возвращают набор строк, представляющих основополагающие данные выделенных ячеек куба, в которых происходит действие.  
@@ -190,7 +191,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI"></a>Объекты KPI  
+##  <a name="KPI"></a> Объекты KPI  
  Ключевой показатель эффективности представляет собой коллекцию вычислений, связанных с группой мер куба и используемых для оценки успешности бизнеса. Объекты <xref:Microsoft.AnalysisServices.Kpi> можно определять при помощи объектов AMO, но для их использования служит клиентское приложение, предназначенное для просмотра данных.  
   
  Для создания объекта <xref:Microsoft.AnalysisServices.Kpi> необходимо выполнить следующие действия.  
@@ -349,7 +350,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp"></a>Объекты перспективы  
+##  <a name="Persp">Объекты перспективы</a>  
  Объекты <xref:Microsoft.AnalysisServices.Perspective> можно определять при помощи объектов AMO, но для их использования служит клиентское приложение, предназначенное для просмотра данных.  
   
  Для создания объекта <xref:Microsoft.AnalysisServices.Perspective> необходимо выполнить следующие действия.  
@@ -412,7 +413,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC"></a>Объекты ProactiveCaching  
+##  <a name="PC">Объекты ProactiveCaching</a>  
  Объекты <xref:Microsoft.AnalysisServices.ProactiveCaching> можно определять при помощи объектов AMO.  
   
  Для создания объекта <xref:Microsoft.AnalysisServices.ProactiveCaching> необходимо выполнить следующие действия.  
@@ -423,7 +424,7 @@ static public void CreatePerspectives(Cube cube)
   
 2.  Добавьте спецификации кэша.  
   
-|Спецификация|Description|  
+|Спецификация|Описание|  
 |-------------------|-----------------|  
 |AggregationStorage|Тип хранилища для агрегатов.<br /><br /> Относится только к секции. В измерении значение должно быть **Regular.**|  
 |SilenceInterval|Минимальное количество времени существования кэша до начала создания образа MOLAP.|  
@@ -469,7 +470,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl"></a>Объекты Translation  
+##  <a name="Transl">Объекты Translation</a>  
  Объекты переводов можно определять при помощи объектов AMO, но для их использования служит клиентское приложение, применяемое для просмотра данных. Объекты переводов просты в программировании. Переводы заголовков объектов обеспечиваются парами «Локаль языка» и «Переведенный заголовок». Для любого заголовка можно разрешить несколько переводов. Переводы можно предусмотреть для большинства объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], например измерений, атрибутов, иерархий, кубов, групп мер, мер и др.  
   
  Следующий образец кода обеспечивает перевод на испанский язык имени атрибута «Название продукта».  
@@ -488,7 +489,7 @@ static public void CreateTranslations(Database db)
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Классы OLAP объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   

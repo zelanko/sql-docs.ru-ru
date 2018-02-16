@@ -1,7 +1,7 @@
 ---
 title: "Программирование объектов безопасности AMO | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, security
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f77d58eeaef6b127492f9944e15f0b751f03d704
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ee56a1d89bdf9d5712dcdb70043be95b9195d0ba
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-security-objects"></a>Программирование объектов безопасности AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], программирования объектов безопасности или выполнения программ, в которых используются объекты безопасности AMO, необходимо быть членом группы администраторов сервера или администраторов базы данных. Администратор сервера или администратор базы данных — доступа предоставляемые уровни [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  В службах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]для программирования объектов безопасности или выполнения программ, в которых используются объекты безопасности AMO, необходимо быть членом группы администраторов сервера или администраторов базы данных. Администратор сервера или администратор базы данных — это уровни доступа, обеспечиваемые службами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  В службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] пользователь получает доступ к объекту через сочетание ролей и разрешений, назначенных этому объекту. Дополнительные сведения см. в разделе [классы безопасности AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md).  
   
@@ -145,7 +146,7 @@ static public void CreateRolesAndPermissions(Database db, Cube cube)
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Программирование объектов безопасности AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)   

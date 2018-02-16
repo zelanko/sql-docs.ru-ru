@@ -16,19 +16,20 @@ f1_keywords:
 - sql13.swb.connecttoas.connectionproperties.f1
 - sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 20302da167c1ba1d19fb1b65ab871d81f7170591
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Подключение из клиентских приложений (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если вы не знакомы со службами Analysis Services, используйте сведения в этом разделе для подключения к существующему экземпляру объекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью стандартных средств и приложений. В этом разделе также объясняется, как подключаться для тестирования под разными удостоверениями пользователей.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Начинающим пользователям служб Analysis Services следует использовать сведения в этом разделе для подключения к существующему экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью стандартных средств и приложений. В этом разделе также объясняется, как подключаться для тестирования под разными удостоверениями пользователей.  
   
 -   [Подключение с помощью среды SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
   
@@ -42,9 +43,9 @@ ms.lasthandoff: 01/08/2018
   
  Успешные подключения зависят от допустимой настройки портов и соответствующих разрешений пользователя. Для более подробного знакомства с каждым требованием воспользуйтесь следующими ссылками.  
   
--   [Настройка брандмауэра Windows для разрешения доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
+-   [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Предоставление доступа к объектам и операциям (службы Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Авторизацию доступа к объектам и операции &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Подключение с помощью среды SQL Server Management Studio (SSMS)  
  Подключение к службам Analysis Services в среде SSMS для управления экземплярами сервера и базами данных в интерактивном режиме. Можно также запустить запросы XMLA или многомерных выражений для выполнения задач администрирования или получения данных. В отличие от других средств и приложений, которые загружают базы данных, только если отправляется запрос, среда SSMS загружает все базы данных при соединении с сервером, предполагая, что разрешение на просмотр базы данных имеется. Это означает, что, если на сервере есть множество табличных баз данных, все они будут загружены в память системы при установке соединения с помощью среды SSMS.  
@@ -137,10 +138,10 @@ ms.lasthandoff: 01/08/2018
   
  [Устранение проблем с возможным подключением для подключений служб SQL Server 2005 Analysis Services](http://technet.microsoft.com/library/cc917670.aspx). Этот документ был опубликован несколько лет назад, но сведения и методологии по-прежнему актуальны.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Методики проверки подлинности, поддерживаемые службами Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Олицетворение &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [Создание источника данных (многомерные службы SSAS)](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Создать источник данных &#40; Многомерные службы SSAS &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

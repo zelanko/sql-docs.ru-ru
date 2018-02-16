@@ -1,7 +1,7 @@
 ---
 title: "Проектирование агрегатов (XMLA) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - statistical information [XML for Analysis]
 - batches [XML for Analysis]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fdc973309fe87792aa135813c23e4e68d7650043
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-xmla"></a>Создание агрегатов (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Статистические схемы связаны с конкретной группе мер, секции, использовать ту же структуру при хранении агрегатов секции. Используя ту же структуру хранилища для секций позволяет легко определить секции, которые могут быть объединены с помощью [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) команды. Дополнительные сведения о статистических схем см. в разделе [агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+  Статические схемы связываются с секциями определенных групп мер, чтобы эти секции при хранении агрегатов использовали одинаковую структуру. Используя ту же структуру хранилища для секций позволяет легко определить секции, которые могут быть объединены с помощью [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) команды. Дополнительные сведения о статистических схем см. в разделе [агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
  Чтобы определить агрегаты для статистической схемы, можно использовать [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) в XML для аналитики (XMLA) команду. **DesignAggregations** команда имеет свойства, которые определяют, какие статистической схемы для использования в качестве ссылки и для управления процессом проектирования по этой ссылке. С помощью **DesignAggregations** команда и его свойства, можно спроектировать агрегаты последовательно или в пакете и затем просмотреть итоговую статистику создания для оценки процесса проектирования.  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="specifying-queries"></a>Задание запросов  
  В команде DesignAggregations поддержка оптимизации с учетом использования, включив один или несколько **запроса** элементов в [запросы](../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) свойство. **Запросы** свойство может содержать один или несколько [запроса](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md) элементов. Если **запросы** не содержит свойство **запроса** , статистической схемы указываются в **объекта** элемент использует по умолчанию структура, содержащая общий набор агрегатов. Этот общий набор агрегатов разработан с учетом критериев, заданных в **оптимизации** и **хранения** свойства **DesignAggregations** команды.  
   
- Каждый элемент **Query** представляет собой целевой запрос, с помощью которого при проектировании можно определить агрегаты, охватывающие наиболее часто используемые запросы. Можно определить целевые запросы самостоятельно, или воспользуйтесь сведениями, хранящимися на экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в журнале запросов для получения сведений о наиболее часто используемые запросы. Мастер оптимизации с учетом использования извлекает целевые запросы на основе времени, использования или указанного пользователя при отправке с помощью журнала запросов **DesignAggregations** команды. Дополнительные сведения см. в разделе [на основе использования Справка F1 мастера оптимизации](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763).  
+ Каждый элемент **Query** представляет собой целевой запрос, с помощью которого при проектировании можно определить агрегаты, охватывающие наиболее часто используемые запросы. Можно определить целевые запросы самостоятельно, либо при помощи данных, сохраненных экземпляром служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в журнале запросов, получить сведения о наиболее часто используемых запросах. Мастер оптимизации с учетом использования извлекает целевые запросы на основе времени, использования или указанного пользователя при отправке с помощью журнала запросов **DesignAggregations** команды. Дополнительные сведения см. в разделе [на основе использования Справка F1 мастера оптимизации](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763).  
   
  При итеративном проектировании агрегатов, достаточно передачи целевых запросов в первом **DesignAggregations** команда, поскольку [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр сохраняет целевые запросы и использует их при выполнении последующих  **DesignAggregations** команд. После передачи целевых запросов в первой команде **DesignAggregations** многократной обработки, любые последующие команды **DesignAggregations** , в свойстве **Queries** которых содержатся поисковые запросы, приведут к формированию ошибки.  
   
@@ -108,18 +109,18 @@ ms.lasthandoff: 01/08/2018
 ## <a name="returning-design-statistics"></a>Возврат статистики проектирования  
  Когда **DesignAggregations** команда возвращает управления клиентскому приложению, команда возвращает набор строк, содержащий одну строку, которая представлена Статистика проектирования для команды. Набор строк содержит столбцы, перечисленные в следующей таблице.  
   
-|столбцом|Data type|Description|  
+|Столбец|Data type|Описание|  
 |------------|---------------|-----------------|  
 |Шаги|Целочисленный|Число шагов, выполняемых командой перед возвратом управления клиентскому приложению.|  
 |Time|Long integer|Время (в миллисекундах), прошедшее до того момента, когда команда вернула управление клиентскому приложению.|  
 |Optimization|Double|Примерный процент прироста производительности, достигнутый командой перед возвратом управления клиентскому приложению.|  
 |Память|Long integer|Примерный объем в байтах, занятый командой перед возвратом управления клиентскому приложению.|  
 |Aggregations|Long integer|Число статических схем, определенных командой перед возвратом управления клиентскому приложению.|  
-|LastStep|Логическое значение|Указывает, представляют ли данные в наборе строк последний шаг в процессе проектирования. Если **материализовать** команды было задано значение true, значение этого столбца установлено значение true.|  
+|LastStep|Boolean|Указывает, представляют ли данные в наборе строк последний шаг в процессе проектирования. Если **материализовать** команды было задано значение true, значение этого столбца установлено значение true.|  
   
  Можно использовать Статистика проектирования, которая содержится в наборе строк, возвращаемом после выполнения каждой **DesignAggregations** команды в обоих итеративный и при пакетном проектировании. При последовательном проектировании она может использоваться для определения и отображения хода выполнения. При проектировании агрегатов в пакетном режиме эту статистику можно использовать для определения количества агрегатов, созданных командой.  
   
-## <a name="see-also"></a>См. также:  
- [Разработка с использованием XMLA в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

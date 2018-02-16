@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 16d10e2d-d7e1-40f1-bc9d-a4e10c61af95
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 39d00b432101560c5cf5075a0e60e445e670a28d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-powerpivotserviceapplication-cmdlet"></a>Командлет «Set-PowerPivotServiceApplication»
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Задает свойства [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] приложения службы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Задает свойства приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind> [-AdministrationConnectionPoolSize <int>] [-AllowCustomWindowsCredentials] [-BusinessHoursEndTime <string>] [-BusinessHoursStartTime <string>] [-CachedDatabaseholdLimit <int>] [-Confirm <switch>] [-ConnectionPoolSize <int>] [-ConnectionPoolTimeout <int>] [-DataLoadTimeout <int>] [-DataRefreshFailureThreshold <int>] [-DataRefreshInactiveWorkbooksThreshold <int>] [-DataRefreshMaxHistory <int>] [-HealthBasedAllocation <switch>] [-LoadsToConnectionsRatioCollectionInterval <int>] [-LoadsToConnectionsRatioLimit <int>] [-MemoryDatabaseHoldLimit <int>] [-QueryReportingInterval <int>] [-RoundRobinAllocation <switch>] [-UnattendedAccount <string>] [-UsageDataRetentionPeriod <int>] [-UsageExpectedResponseUpperLimit <int>] [-UsageLongResponseUpperLimit <int>] [-UsageQuickResponseUpperLimit <int>] [-UsageTrivialResponseUpperLimit <int>] [-UsageUpdateDayLimit <int>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет Set-PowerPivotServiceApplication обновляет свойства приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. Параметр Identity является обязательным. Необходимо указать идентификатор GUID приложения службы, для которой выполняется обновление свойств.  
   
  Чтобы проверить внесенные изменения, запустите следующий командлет: Get-PowerPivotServiceApplication-Identity \<GUID > | format-list.  

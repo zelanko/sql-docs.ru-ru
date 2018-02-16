@@ -11,28 +11,30 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1d769567a033eedd98eff41aee9cde5306c9b7ea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverperformancecounters-rowset"></a>Набор строк DISCOVER_PERFORMANCE_COUNTERS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Возвращает значение одного или нескольких счетчиков производительности. Он не поддерживает счетчики, возвращающие сведения об использовании в динамике по времени (например, количество операций чтения с диска в секунду и процент загрузки ЦП).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Возвращает значение одного или нескольких счетчиков производительности. Он не поддерживает счетчики, возвращающие сведения об использовании в динамике по времени (например, количество операций чтения с диска в секунду и процент загрузки ЦП).  
   
  **Область применения:** табличные модели, многомерные модели  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DISCOVER_PERFORMANCE_COUNTERS** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Ограничение|Description|  
+|Имя столбца|Индикатор типа|Ограничение|Описание|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**PERF_COUNTER_NAME**|**DBTYPE_WSTR**|Обязательно|Имя счетчика производительности.|  
 |**PERF_COUNTER_VALUE**|**DBTYPE_DOUBLE**||Значение счетчика производительности.|  
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/08/2018
 |GUID|a07ccd2e-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PerformanceCounters|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

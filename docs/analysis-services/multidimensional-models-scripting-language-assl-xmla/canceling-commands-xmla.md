@@ -1,7 +1,7 @@
 ---
 title: "Отмена команд (XMLA) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [XML for Analysis]
 - associated connections [XML for Analysis]
@@ -25,19 +26,19 @@ helpviewer_keywords:
 - server process IDs [XML for Analysis]
 - sessions [XML for Analysis]
 ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d22ac809814cbcf6115d2ae8350967ab444a3ede
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0751c7216716f46e12e8b864386adc3e4806b0cb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="canceling-commands-xmla"></a>Отмена команд (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В зависимости от того, какие административные разрешения пользователя, выполняющего команду [отменить](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) команды в формате XML для аналитики (XMLA) может отменить команду на сеанс, сеанс, соединение, серверный процесс или связанного с ним сеанса или соединение.  
+  В зависимости от того, какие административные разрешения пользователя, выполняющего команду [отменить](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) команды в формате XML для аналитики (XMLA) может отменить команду на сеанс, сеанс, соединение, серверный процесс или связанного с ним сеанса или соединение.  
   
 ## <a name="canceling-commands"></a>Отмена команд  
  Пользователь может отменить команду, выполняемую в контексте текущего явного сеанса, отправив **отменить** команду без указания свойств.  
@@ -67,8 +68,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="canceling-associated-sessions-and-connections"></a>Отмена ассоциированных сеансов и соединений  
  Можно задать [CancelAssociated](../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md) значение true для отмены соединения, сеансы и команды, связанные с подключением, сеанса или идентификатором SPID, указанным в **отменить** команды.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обнаружение метод &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
- [Разработка с использованием XMLA в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 34ef680e855c0a6b29363923ba6984189a4e9119
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Вычисления многомерных Выражений ячейки - вычислений ячеек с областью действия запроса
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Вы используете **WITH** ключевого слова в многомерных выражениях (MDX) описывает вычисляемые ячейки в контексте запроса. Синтаксис ключевого слова **WITH** имеет следующий вид:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Ключевое слово **WITH** в многомерном выражении описывает вычисляемые ячейки в контексте запроса. Синтаксис ключевого слова **WITH** имеет следующий вид:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -59,7 +60,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  С другой стороны, многомерное выражение обрабатывает формулу вычисления всякий раз, когда в кубе выполняется запрос многомерных выражений, работающий с ячейками, входящими в определение вычисляемых ячеек. Такая обработка выполняется независимо от области при создании определения.  
   
-## <a name="see-also"></a>См. также:  
- [Инструкция CREATE CELL CALCULATION (многомерные выражения)](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+## <a name="see-also"></a>См. также  
+ [Создать инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

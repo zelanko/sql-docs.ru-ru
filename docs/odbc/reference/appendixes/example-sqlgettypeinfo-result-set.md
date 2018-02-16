@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0953a2a8de3dce18d404929ee23d054192a2e3e7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>Пример SQLGetTypeInfo результирующего набора
 Приложение вызывает **SQLGetTypeInfo** для определения, какие типы данных поддерживаются источником данных и характеристики этих типов данных. В следующих таблицах показаны образец результирующего набора, возвращаемого **SQLGetTypeInfo** для источника данных, который поддерживает SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR и SQL_INTERVAL_DAY_TO_SECOND.  

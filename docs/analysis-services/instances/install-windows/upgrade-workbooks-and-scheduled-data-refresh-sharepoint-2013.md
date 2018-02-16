@@ -19,13 +19,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Обновление книг и запланированное обновление данных (SharePoint 2013)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе описываются способы использования книг, созданных в предыдущих [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средами и обновление [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] книги, чтобы воспользоваться преимуществами новых возможностей, представленных в этом выпуске. Дополнительные сведения о новых возможностях см. в статье [Новые возможности PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описывается, как работать с книгами, созданными в предыдущих средах [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Также вы узнаете, как обновлять книги [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , чтобы использовать преимущества новых функций, представленных в этом выпуске. Дополнительные сведения о новых возможностях см. в статье [Новые возможности PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
 >  Невозможно выполнить откат обновления для книг, автоматически обновленных на сервере. После обновления книги она остается обновленной. Для использования предыдущей версии можно повторно опубликовать предыдущую книгу в SharePoint, восстановить предыдущую версию или повторно использовать книгу. Дополнительные сведения о восстановлении и повторном использовании документа в SharePoint см. в разделе [Планирование защиты содержимого с использованием корзин и управления версиями](http://go.microsoft.com/fwlink/?LinkId=238669).  

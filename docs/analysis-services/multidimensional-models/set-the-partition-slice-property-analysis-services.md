@@ -15,19 +15,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], data slices
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 92a61b6d5d860ae94fdc3d38212fed45ed2363bc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Определение свойства среза секции (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Срез данных является важной функцией оптимизации, помогает направить запросы к данным соответствующих секций. Прямое указание свойства Slice позволяет повысить производительность запросов, переписав стандартные срезы, сформированные для секций MOLAP и HOLAP. Также свойство Slice обеспечивает дополнительную проверку при обработке секции.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Срез данных является важной функцией оптимизации, которая помогает направить запросы к данным соответствующих секций. Прямое указание свойства Slice позволяет повысить производительность запросов, переписав стандартные срезы, сформированные для секций MOLAP и HOLAP. Также свойство Slice обеспечивает дополнительную проверку при обработке секции.  
   
  С помощью свойства Slice можно задать срез данных после создания секции, но до ее обработки. На вкладке "Секции" разверните группу мер, щелкните правой кнопкой мыши секцию и выберите **Свойства**.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 >   
 >  Если необходимо определить сложный срез, рекомендуется идентифицировать кортежи в срезе с помощью скрипта изменения XMLA. Затем вы можете использовать программу командной строки ascmd или элемент [Задача "Выполнение DDL службами Analysis Services"](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) в службах Integration Services для запуска скрипта и создания указанного набора элементов непосредственно перед секционированием.  
   
-## <a name="see-also"></a>См. также:  
- [Создание локальной секции и управление ею (службы Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Создание и управление локальной секции &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

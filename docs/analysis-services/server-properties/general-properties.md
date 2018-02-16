@@ -40,19 +40,20 @@ helpviewer_keywords:
 - StatisticsStoreSize property
 - RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 286999ab145671370f458f0ffb8f5f2db85d0461
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="general-properties"></a>Общие свойства
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает свойства сервера, перечисленные в следующих таблицах. В этом разделе описываются свойства сервера из файла msmdsrv.ini, которые не отнесены к тому или иному определенному разделу, например Security (безопасность), Network (сеть) или ThreadPool (пул потоков). Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера, перечисленные в следующих таблицах. В этом разделе описываются свойства сервера из файла msmdsrv.ini, которые не отнесены к тому или иному определенному разделу, например Security (безопасность), Network (сеть) или ThreadPool (пул потоков). Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Область применения:** многомерный или табличный режим сервера, если не указано иное.  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 01/08/2018
   
  Ниже приведены допустимые значения для этого свойства.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0|Это значение по умолчанию. Оно задает многомерный режим, используемый для обслуживания многомерных баз данных с хранилищем MOLAP, HOLAP и ROLAP, а также с моделями интеллектуального анализа данных.|  
 |1|Указывает экземпляры служб Analysis Services, установленные в составе развертывания [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Не следует изменять свойство режима развертывания экземпляра служб Analysis Services, который входит в состав установки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] больше не будут выполняться на сервере.|  
@@ -172,13 +173,13 @@ ms.lasthandoff: 01/08/2018
  Строковое свойство, задающее расположение для сохранения временных файлов во время обработки, восстановления и других действий. Значение этого свойства по умолчанию определяется настройкой. Если свойство не задано, то по умолчанию используется папка Data.  
   
 ## <a name="requestprioritization-category"></a>Категория RequestPrioritization  
- **Enabled**  
+ **Включено**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **StatisticsStoreSize**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

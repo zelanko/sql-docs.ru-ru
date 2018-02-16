@@ -17,19 +17,20 @@ helpviewer_keywords:
 - queries [MDX], DRILLTHROUGH statement
 - data retrieval [MDX]
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1749970e49904d8788c08f8be29cd20d189ebca3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>Управление данными MDX - получение источника данных с помощью функции DRILLTHROUGH
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Использует многомерных выражений (MDX) [ДЕТАЛИЗАЦИИ](../../../mdx/mdx-data-manipulation-drillthrough.md)инструкции для извлечения набора строк из источника данных для ячейки куба.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В языке многомерных выражений для извлечения набора строк из источника данных для ячейки куба используется инструкция [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md).  
   
  Чтобы в кубе можно было выполнять инструкцию **DRILLTHROUGH** , для него следует определить действие детализации. Чтобы определить действие детализации, в конструкторе кубов в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]на панели **Действия** выберите на панели инструментов пункт **Создать действие детализации**. Для действия детализации укажите имя, цель и условие действия, а также столбцы, возвращаемые инструкцией **DRILLTHROUGH** .  
   
@@ -61,7 +62,7 @@ From Stores
 RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Манипулирование данными (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+## <a name="see-also"></a>См. также  
+ [Обработка данных &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

@@ -12,23 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Использование веб-каналов данных (PowerPivot для SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Потоки данных — один или несколько потоков данных, формируемых из источника данных в сети и направляемых в целевой документ или приложение. При использовании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel веб-каналы данных позволяют получать существующие корпоративные данные или бизнес-данные из произвольных источников данных в окне [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги Excel 2010. После импорта веб-канала данных в книгу на него можно ссылаться в любых операциях обновления данных, планируемых на сервере SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Канал данных — это один или несколько потоков данных, формируемых из источника данных в сети и направляемых в целевой документ или приложение. При использовании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel веб-каналы данных позволяют получать существующие корпоративные данные или бизнес-данные из произвольных источников данных в окне [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги Excel 2010. После импорта веб-канала данных в книгу на него можно ссылаться в любых операциях обновления данных, планируемых на сервере SharePoint.  
   
  Использование веб-канала данных зависит от того, используются встроенные функции экспорта в приложениях, поддерживающих веб-каналы данных Atom, или настраиваемые службы данных. Приложения, которые могут публиковать и считывать XML-данные Atom, позволяют передавать данные таким образом, чтобы пользователю не нужно было работать с каналами данных и службами. С точки зрения пользователя данные просто перемещаются между приложениями.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Microsoft SharePoint 2010 предоставляют веб-каналы данных, которые могут быть использованы в книгах [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Сведения в данном разделе можно использовать для изучения доступа к веб-каналам данных из уже имеющихся отчетов и списков.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Microsoft SharePoint 2010 предоставляют каналы данных, которые могут использоваться в [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги. Сведения в данном разделе можно использовать для изучения доступа к веб-каналам данных из уже имеющихся отчетов и списков.  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  Введите в поле **Имя таблицы**по одной таблице на каждый канал. Это значение обязательно. Имя таблицы используется клиентским приложением, получающим веб-канал данных. В [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel имя таблицы используется для таблиц в окне [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которые будут содержать импортируемые данные.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Включение интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [Совместное использование веб-каналов данных PowerPivot с помощью библиотеки каналов данных (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   

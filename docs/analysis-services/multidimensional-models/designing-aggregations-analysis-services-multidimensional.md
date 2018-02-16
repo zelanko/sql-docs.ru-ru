@@ -15,19 +15,20 @@ helpviewer_keywords:
 - aggregations [Analysis Services], partitions
 - partitions [Analysis Services], aggregations
 ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 71e50fc874562cceddc91b454a246b29370cf7c7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>Проектирование агрегатов (службы Analysis Services — многомерные данные)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Агрегатами называются предварительно вычисленные сводки по данным куба, помогающие службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] чтобы ускорить выполнение запросов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Агрегатами называются предварительно вычисленные сводки по данным куба, помогающие службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ускорить выполнение запросов.  
   
  Для настройки параметров хранения и проектирования статистических схем для секции применяется мастер статистических схем. Мастер работает с одной секцией группы мер, поэтому каждую секцию можно настроить по-своему. Мастер руководит настройкой хранилища и проектированием статистических схем для секции. Для получения дополнительных сведений о настройке хранилища см.  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
  Последний шаг мастера позволяет продолжить или отложить обработку. В первом случае будут созданы спроектированные агрегаты, а во втором они будут сохранены для будущей обработки. В зависимости от размеров секции, обработка может занять значительное время. При необходимости можно прервать обработку секции.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

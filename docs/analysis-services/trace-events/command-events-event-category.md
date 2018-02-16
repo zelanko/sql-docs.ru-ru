@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Command Events event category
 - event classes [Analysis Services], command events
 ms.assetid: 23140c9f-3f5b-4755-920e-1246cbf0d1a3
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 71c30e6d930f6dbe7dfcc09d9c8647acff5eb7aa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="command-events-event-category"></a>категория событий «Командные события»
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Категория событий «Командные события» содержит классы событий, описанные в следующей таблице.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+К категории «Командные события» относятся следующие классы событий.  
   
 |Класс событий|Идентификатор события|Description|  
 |-----------------|--------------|-----------------|  
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения о столбцах, связанных с каждым классом событий «Командные события», см. в разделе [Command Events Data Columns](../../analysis-services/trace-events/command-events-data-columns.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

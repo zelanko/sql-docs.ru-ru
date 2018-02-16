@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Настройка HTTP-доступа к службам Analysis Services в службах IIS 8.0
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этой статье объясняется, как настроить конечную точку HTTP для доступа к экземпляру служб Analysis Services. Доступ по протоколу HTTP к службам Analysis Services можно включить путем настройки MSMDPUMP.dll — расширения ISAPI, которое работает на сервере IIS и переносит данные между клиентским приложением и сервером служб Analysis Services. Такой подход предоставляет альтернативные способы подключения к службам Analysis Services, если применяемое решение бизнес-аналитики требует получения следующих возможностей.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этой статье объясняется, как настроить конечную точку HTTP для доступа к экземпляру служб Analysis Services. Доступ по протоколу HTTP к службам Analysis Services можно включить путем настройки MSMDPUMP.dll — расширения ISAPI, которое работает на сервере IIS и переносит данные между клиентским приложением и сервером служб Analysis Services. Такой подход предоставляет альтернативные способы подключения к службам Analysis Services, если применяемое решение бизнес-аналитики требует получения следующих возможностей.  
   
 -   Доступ клиентов осуществляется по Интернету или экстрасети, с учетом ограничений на то, какие порты могут быть включены.  
   
@@ -128,11 +129,11 @@ ms.lasthandoff: 01/08/2018
   
 4.  Проверьте, чтобы в папке \inetpub\wwwroot\OLAP на веб-сервере содержалось следующее: файлы MSMDPUMP.DLL, MSMDPUMP.INI и папка Resources. Структура папки должна выглядеть следующим образом:  
   
-    -   \<диск >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<диск >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<диск >: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Шаг 2. Создание пула приложений и виртуального каталога на сервере IIS  
  Затем создайте пул приложений и конечную точку для средства переноса.  
@@ -315,7 +316,7 @@ ms.lasthandoff: 01/08/2018
   
  В качестве конечного шага следует обязательно провести более строгое тестирование с использованием клиентского компьютера, эксплуатируемого в сетевой среде, из которого исходят запросы на подключение.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сообщение на форуме (HTTP-доступ с использованием msmdpump и обычной проверки подлинности)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
  [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Предоставление доступа к объектам и операциям (службы Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   

@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], dimensional modeling
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Основные понятия многомерных выражений (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Перед использованием многомерных выражений (MDX) для запроса многомерных данных или создания Многомерных выражений в кубе, важно знать многомерные основными понятиями и терминами.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Прежде чем приступить к использованию многомерных выражений (MDX) для выполнения запросов к многомерным данным или для создания выражений MDX в кубе, следует понять соответствующие принципы действия и термины.  
   
  Рекомендуется начать с уже известного примера обобщения данных, а затем посмотреть связь с MDX. Здесь представлена сводная таблица, сформированная в Excel и заполненная данными из примера куба служб Analysis Services.  
   
@@ -141,24 +142,24 @@ ms.lasthandoff: 01/08/2018
   
  **Измерения базы данных и измерения куба**. В рамках модели можно определить отдельные измерения, которые затем включаются в любое количество кубов в этой модели. Измерение, добавленное к кубу, называется измерением куба. В рамках проекта измерение само по себе как отдельный элемент в обозревателе объектов называется измерением базы данных. Зачем проводить различие? Это связано с возможностью независимого задания свойств для каждого из типов измерений. В документации по продукту используются оба термина, поэтому важно понять их значения и отличия.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
  Получив представление о важных понятиях и терминологии, можно перейти к дополнительным разделам, содержащим дальнейшие сведения об основных принципах работы служб Analysis Services.  
   
--   [Базовый запрос многомерных выражений (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
+-   [Базовый запрос многомерных Выражений &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
   
--   [Базовый скрипт многомерных выражений (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+-   [Базовый скрипт многомерных Выражений &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
--   [Многомерное моделирование (учебник по Adventure Works)](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+-   [Многомерное моделирование &#40; Учебник по Adventure Works &#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
-## <a name="see-also"></a>См. также:  
- [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+## <a name="see-also"></a>См. также  
+ [Пространство куба](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Кортежи](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Автоматическая проверка существования](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [Работа с элементами, кортежами и наборами (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Работа с членами, кортежей и наборов &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Визуальные и невизуальные итоги](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
  [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Основные понятия о сценариях многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Справочник по языку многомерных выражений (многомерные выражения)](../../../mdx/mdx-language-reference-mdx.md)   
- [Справочник по многомерным выражениям (многомерные выражения)](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Справочник по языку многомерных Выражений &#40; Многомерные Выражения &#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Многомерные выражения &#40; Многомерные Выражения &#41; Ссылка](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

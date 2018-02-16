@@ -16,19 +16,20 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Секций, структуры интеллектуального анализа данных в указанное число разрезов, обучает модель для каждой секции, а затем возвращает метрики точности для каждой секции.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Выполняет секционирование структуры интеллектуального анализа данных на заданное количество перекрестных разделов, обучает модель по каждой секции, а затем возвращает метрики точности для каждой секции.  
   
 > [!NOTE]  
 >  Эту хранимую процедуру нельзя использовать для перекрестной проверки моделей кластеризации или моделей, созданных с помощью алгоритма временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] и алгоритма кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Для перекрестной проверки моделей кластеризации можно использовать отдельную хранимую процедуру [SystemGetClusterCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
@@ -118,7 +119,7 @@ SystemGetCrossValidationResults(
  По умолчанию **null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]не возникнет ошибка, если задать *порога состояния* 0,0, но никогда не следует использовать это значение. В действительность пороговое значение 0,0 означает, что прогноз с процентом вероятности, равным 0, считается правильным.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не вызовут ошибку, если присвоить *порогу состояния* значение 0,0, но его ни в коем случае нельзя использовать. В действительность пороговое значение 0,0 означает, что прогноз с процентом вероятности, равным 0, считается правильным.  
   
  (необязательно).  
   
@@ -134,7 +135,7 @@ SystemGetCrossValidationResults(
   
  В следующей таблице описываются столбцы этого набора строк.  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |ModelName|Имя протестированной модели.|  
 |AttributeName|Имя прогнозируемого столбца.|  
@@ -192,10 +193,10 @@ NULL
 ## <a name="requirements"></a>Требования  
  Перекрестная проверка доступна только в версиях [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] , начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [Хранимая процедура SystemGetClusterCrossValidationResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

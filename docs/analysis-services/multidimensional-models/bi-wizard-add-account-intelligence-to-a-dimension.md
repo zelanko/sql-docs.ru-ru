@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Мастер бизнес-Аналитики — Добавление операций со счетами к измерению
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Добавьте интеллектуальной обработки счетов к кубу или измерению, чтобы присвоить стандартные классификации счетов, например доходы или расходы, элементам атрибута счета. Это расширение также идентифицирует типы счетов (такие как «Актив» и «Долг») и назначает соответствующую статистическую обработку каждому типу счета. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может использовать классификации для выполнения статистического вычисления во времени.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Добавьте расширение интеллектуальной обработки счетов к кубу или измерению, чтобы присвоить стандартные классификации счетов, например «доходы» и «расходы», элементам атрибута «счет». Это расширение также идентифицирует типы счетов (такие как «Актив» и «Долг») и назначает соответствующую статистическую обработку каждому типу счета. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может использовать классификации для выполнения статистического вычисления во времени.  
   
 > [!NOTE]  
 >  Логика операций со счетами доступна только для измерений, основанных на существующих источниках данных. Для измерений, созданных без использования источника данных, необходимо запустить мастер формирования схем, чтобы создать представление источника данных перед тем, как добавить логику операций с учетными записями.  

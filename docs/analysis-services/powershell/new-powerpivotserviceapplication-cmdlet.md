@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>Командлет «New-PowerPivotServiceApplication»
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Создает новый [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] приложения службы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Создает новое приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseServerName] <string> [-DatabaseName] <string> [-AddToDefaultProxyGroup <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет New-PowerPivotServiceApplication создает новое приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. В ферме следует определить по крайней мере одно приложение службы PowerPivot, которое должно быть членом группы служб-посредников по умолчанию. При необходимости можно создавать дополнительные приложения службы, если требуется изменить свойства или параметры конфигурации. Дополнительные приложения службы должны быть членами пользовательских групп соединений со службами. В группе служб-посредников по умолчанию может быть только одно приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Приложение службы PowerPivot создается с использованием конфигурации по умолчанию. Чтобы настроить свойства конфигурации, используйте командлет Set-PowerPivotServiceApplication.  

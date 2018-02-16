@@ -19,19 +19,20 @@ helpviewer_keywords:
 - data source views [Analysis Services], diagrams
 - diagrams [Analysis Services]
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 96015431ceabb705a04ed7fc73a1879a7c496d8d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Диаграмма представления (DSV) источника данных — это визуальное представление объектов в представлении источника данных. С диаграммой можно работать интерактивно. Она позволяет добавить, скрыть, удалить или изменить определенные объекты. Можно также создать несколько диаграмм одного и того же представления DSV, чтобы сосредоточить внимание на подмножестве объектов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Диаграмма представления источников данных (DSV) — это визуальное представление объектов в виде DSV. С диаграммой можно работать интерактивно. Она позволяет добавить, скрыть, удалить или изменить определенные объекты. Можно также создать несколько диаграмм одного и того же представления DSV, чтобы сосредоточить внимание на подмножестве объектов.  
   
  Чтобы изменить зону диаграммы, которая появляется на панели диаграмм, нажмите четырехстороннюю стрелку в правом нижнем углу панели и перетащите поле выбора на эскиз диаграммы до тех пор, пока не будет выделена та область, которая должна появиться на панели диаграмм.  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
  Чтобы избежать этой проблемы, добавьте все таблицы, прежде чем задавать окончательные настройки. При этом объекты сохранят свое положение на диаграмме, когда она будет открыта в следующий раз.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Конструктор представлений источников данных &#40; Analysis Services — многомерные данные &#41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   

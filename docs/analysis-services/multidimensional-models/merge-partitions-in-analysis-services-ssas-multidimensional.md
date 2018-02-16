@@ -15,19 +15,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], merging
 - merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 519136d681c257d27f93894db6a7c2652d273f87
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Объединение секций в службах Analysis Services (SSAS — многомерные данные)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно объединить секции в существующей [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных для объединения фактических данных из нескольких секций одной группы мер.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Можно совмещать секции в существующей базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для объединения фактических данных из нескольких секций одной группы мер.  
   
  [Распространенные сценарии](#bkmk_Scenario)  
   
@@ -138,9 +139,9 @@ ms.lasthandoff: 01/08/2018
  В этом разделе сведения см. в разделе [Слияние секций (XML)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Обработка объектов служб Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [Секции (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Создание локальной секции и управление ею (службы Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [Обработка служб Analysis Services объектов](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
+ [Секций &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Создание и управление локальной секции &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
  [Создание и управление удаленной секцией &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Настройка обратной записи секции](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [Секции, доступные для записи](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   

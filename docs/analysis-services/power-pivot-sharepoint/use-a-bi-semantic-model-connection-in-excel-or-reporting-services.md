@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8fc3d2ae19c9b8237593d1b4e1b559f22c5da1ed
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описывается использование соединения семантической модели бизнес-Аналитики, созданных по указаниям из других разделов. Если семантическая модель бизнес-аналитики еще не создана, см. разделы [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) и [Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описывается использование соединений BISM, созданных по указаниям из других разделов. Если семантическая модель бизнес-аналитики еще не создана, см. разделы [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) и [Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Соединение из Excel  
  Можно указать соединение BISM в качестве источника данных в Excel или другом бизнес-приложении, использующем данные табличной модели служб Analysis Services. Этот раздел объясняет два типа подключения к данным BISM с помощью Excel.  

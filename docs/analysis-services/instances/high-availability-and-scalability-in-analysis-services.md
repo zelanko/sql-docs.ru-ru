@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Высокий уровень доступности и масштабируемость в службах Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этой статье описаны наиболее часто используемые методы для создания баз данных служб Analysis Services высокого уровня доступности и масштабируемости. Несмотря на то что к каждой цели можно обращаться отдельно, в реальности они часто идут рука об руку: от масштабируемого развертывания больших рабочих нагрузок по выполнению запросов или обработке данных обычно ожидается высокая доступность.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этой статье описаны наиболее часто используемые методы для создания высокодоступных масштабируемых баз данных для служб Analysis Services. Несмотря на то что к каждой цели можно обращаться отдельно, в реальности они часто идут рука об руку: от масштабируемого развертывания больших рабочих нагрузок по выполнению запросов или обработке данных обычно ожидается высокая доступность.  
   
  А вот обратное верно не всегда. Высокий уровень доступности без масштабирования может быть единственной целью при наличии строгих соглашений об уровне обслуживания для критически важных, но умеренных рабочих нагрузок по выполнению запросов.  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/08/2018
  
  Подробные инструкции и справочные сведения по развертыванию служб Analysis Services в отказоустойчивом кластере см. в следующем документе [Кластеризация служб SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Это руководство написано для SQL Server 2012, однако применяется и к более новым версиям служб Analysis Services.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Синхронизация баз данных служб Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
  [Принудительное установление связь NUMA для табличных баз данных служб Analysis Services](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
  [Analysis Services практический пример: Использование табличных моделей в крупномасштабных коммерческих решениях](https://msdn.microsoft.com/library/dn751533.aspx)  

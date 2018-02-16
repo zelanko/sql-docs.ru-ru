@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f0b002ac618a9e55da3a433c11817eca716345ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Уровень совместимости многомерной базы данных (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], свойство уровня совместимости базы данных определяет функциональный уровень базы данных. Уровень совместимости уникален для каждого типа модели. Например, для многомерной и табличной баз данных уровень совместимости **1100** имеет разное значение.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]свойство "уровень совместимости" базы данных определяет ее функциональный уровень. Уровень совместимости уникален для каждого типа модели. Например, для многомерной и табличной баз данных уровень совместимости **1100** имеет разное значение.  
   
  Этот раздел описывает уровень совместимости только для многомерных баз данных. Дополнительные сведения о табличных решениях см. в разделе [Уровень совместимости табличных моделей в службах Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
  Для многомерной базы данных допустимы следующие значения для свойства **CompatibilityLevel** :  
   
-|Настройка|Description|  
+|Настройка|Описание|  
 |-------------|-----------------|  
 |**1050**|Это значение недоступно в скриптах и инструментах, но соответствует базам данных, созданным в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Любая база данных, в которой значение **CompatibilityLevel** явным образом не задано, неявно работает на уровне **1050** .|  
 |**1100**|Это значение по умолчанию для новых баз данных, созданных в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. К тому же его можно задавать для баз данных, созданных в более ранних версиях служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы разрешить использование функций, которые поддерживаются только на этом уровне совместимости, а именно увеличенного хранилища строк для атрибутов измерений или мер числа различных объектов, содержащих строковые данные.<br /><br /> Базы данных, для которых **CompatibilityLevel** имеет значение **1100** , получают дополнительное свойство, **StringStoresCompatibilityLevel**. Оно позволяет выбрать другое хранилище строк для измерений и секций.|  
@@ -94,10 +95,10 @@ ms.lasthandoff: 01/08/2018
   
 3.  Синхронизация серверов поддерживается только для серверов с одинаковой версией и уровнем совместимости баз данных.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
  После повышения уровня совместимости базы данных можно задать свойство **StringStoresCompatibilityLevel** в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Это увеличит строковое хранилище для измерений и мер. Дополнительные сведения об этой функции см. в разделе [Настройка хранилища строк для измерений и секций](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Резервное копирование, восстановление и синхронизация баз данных (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

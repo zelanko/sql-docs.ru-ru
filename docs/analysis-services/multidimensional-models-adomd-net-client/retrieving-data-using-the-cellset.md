@@ -1,7 +1,7 @@
 ---
 title: "Получение данных с помощью набора ячеек | Документы Microsoft"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - CellSet object
 - retrieving data
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1552ce0646c48465aac824f40d9f42f8aa4215d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 20dea89569c845332def257d0ae72f9d470dee60
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Получение данных с помощью объекта CellSet
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При получении аналитических данных <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object предоставляет наиболее интерактивным и гибкость. Объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> является расположенным в памяти кэшем иерархических данных и метаданных, сохраняющим исходную размерность данных. Объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> можно также просматривать в состоянии с установленным или отключенным соединением. Благодаря возможности работать в состоянии с отключенным соединением, объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> можно использовать для просмотра данных и метаданных в любом порядке, кроме того, он предоставляет наиболее полную модель объектов для получения данных. Из-за возможности работать в состоянии с отключенным соединением использование объекта <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> ведет к наибольшим издержкам, поэтому он является наиболее медленной моделью объектов для получения данных в ADOMD.NET.  
+  Объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> является наиболее интерактивным и гибким, если требуется извлечение аналитических данных. Объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> является расположенным в памяти кэшем иерархических данных и метаданных, сохраняющим исходную размерность данных. Объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> можно также просматривать в состоянии с установленным или отключенным соединением. Благодаря возможности работать в состоянии с отключенным соединением, объект <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> можно использовать для просмотра данных и метаданных в любом порядке, кроме того, он предоставляет наиболее полную модель объектов для получения данных. Из-за возможности работать в состоянии с отключенным соединением использование объекта <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> ведет к наибольшим издержкам, поэтому он является наиболее медленной моделью объектов для получения данных в ADOMD.NET.  
   
 ## <a name="retrieving-data-in-a-connected-state"></a>Извлечение данных в состоянии с установленным соединением  
  Чтобы получить данные с помощью объекта <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, выполните следующие действия.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  [!code-cs[Adomd.NetClient#DemonstrateDisconnectedCellset](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/retrieving-data-using-th_0_2.cs)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Получение данных из источника аналитических данных](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [Получение данных с помощью объекта AdomdDataReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader.md)   
  [Получение данных с помощью объекта XmlReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  

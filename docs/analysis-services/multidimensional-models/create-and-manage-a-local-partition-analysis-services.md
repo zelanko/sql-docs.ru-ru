@@ -16,19 +16,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 94cf5d3bdf0feadadf2180c6eb03f9898a4b6966
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Создание локальной секции и управление ей (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно создать дополнительные секции для группы мер для улучшения производительности обработки. Несколько секций позволяют разделять фактические данные между соответствующим числом файлов физических данных на локальном и удаленных серверах. В службах Analysis Services секции могут обрабатываться параллельно, что дает больше контроля над процессом обработки рабочих нагрузок на сервере.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Для улучшения производительности обработки можно создать дополнительные секции для группы мер. Несколько секций позволяют разделять фактические данные между соответствующим числом файлов физических данных на локальном и удаленных серверах. В службах Analysis Services секции могут обрабатываться параллельно, что дает больше контроля над процессом обработки рабочих нагрузок на сервере.  
   
  Секции могут создаваться во время разработки модели в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или при развертывании решения с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или XMLA-скрипта. Рекомендуется выбрать и использовать только один подход. При использовании разных средств может возникнуть ситуация, когда изменения, внесенные в развернутую базу данных с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , будут перезаписаны последующим развертыванием решения из [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
@@ -127,9 +128,9 @@ ms.lasthandoff: 01/08/2018
   
  В качестве последнего действия обычно необходимо удалить секцию по умолчанию, которая была основана на самой таблице (если она еще есть), иначе секции, основанные на запросах, будут перекрываться с запросом, основанным на полной таблице.  
   
-## <a name="see-also"></a>См. также:  
- [Секции (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>См. также  
+ [Секций &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Удаленные секции](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Объединение секций в службах Analysis Services (службы SSAS — многомерные данные)](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Слияние секций в службы Analysis Services &#40; Службы SSAS — многомерные &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

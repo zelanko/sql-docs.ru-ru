@@ -30,19 +30,20 @@ helpviewer_keywords:
 - coding [Data Mining]
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Технический справочник по алгоритму нейронной сети (Майкрософт)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Нейронной сети использует *перцептронной* сеть, также называемая *сеть дельта-правила*, состоит из трех слоев нейронов, или  *перцептроны*. Такими слоями являются входной слой, необязательный скрытый слой и выходной слой.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм нейронной сети ([!INCLUDE[msCoName](../../includes/msconame-md.md)]) использует сеть в виде *многослойного перцептрона*, также известного под названием *сеть дельта-правила с обратным распространением*, в состав которой может входить до трех слоев нейронов, или *перцептронов*. Такими слоями являются входной слой, необязательный скрытый слой и выходной слой.  
   
  В задачи настоящей документации не входит подробное рассмотрение таких нейронных сетей, как многослойные перцептроны. В данном разделе содержится описание базовой реализации алгоритма, в том числе метода, используемого для нормализации входных и выходных значений. Приводится также описание методов выбора компонентов, которые применяются для снижения количества элементов атрибута. В данном разделе описываются параметры и другие настройки, с помощью которых можно управлять поведением алгоритма. Приводятся также ссылки на дополнительную информацию о запросах к модели.  
   
@@ -165,7 +166,7 @@ ms.lasthandoff: 01/08/2018
   
  Другими словами, если для параметра HOLDOUT_PERCENTAGE задано значение 30, то алгоритм будет использовать либо значение этого параметра, либо значение, равное 70 процентам от общего количества вариантов, в зависимости от того, какое из двух указанных значений меньше.  
   
- Значение по умолчанию — 10 000.  
+ Значение по умолчанию — 10 000.  
   
 ### <a name="modeling-flags"></a>Флаги моделирования  
  Далее перечислены флаги модели, которые поддерживает алгоритм нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ).  
@@ -198,7 +199,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  Алгоритм нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) поддерживает определенные входные столбцы данных и прогнозируемые столбцы, которые перечислены ниже в таблице.  
   
-|столбцом|Типы содержимого|  
+|Столбец|Типы содержимого|  
 |------------|-------------------|  
 |Входной атрибут|Continuous, Cyclical, Discrete, Discretized, Key, Table и Ordered|  
 |Прогнозируемый атрибут|Continuous, Cyclical, Discrete, Discretized и Ordered|  
@@ -206,8 +207,8 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
-## <a name="see-also"></a>См. также:  
- [Алгоритм нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+## <a name="see-also"></a>См. также  
+ [Алгоритм нейронной сети Майкрософт](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Содержимое модели интеллектуального анализа данных для модели нейронной сети &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов к модели нейронной сети](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   

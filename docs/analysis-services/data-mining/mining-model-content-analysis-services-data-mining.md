@@ -22,19 +22,20 @@ helpviewer_keywords:
 - support [data mining]
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После создания и обработки модели интеллектуального анализа данных с использованием данных из базовой структуры интеллектуального анализа данных, модели интеллектуального анализа данных считается завершенной и содержит *содержимое модели интеллектуального анализа данных*. На основе этого содержимого производится создание прогнозов и анализ данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+После создания и обработки модели интеллектуального анализа данных с использованием данных из базовой структуры интеллектуального анализа данных эта модель считается завершенной и содержит *содержимое модели интеллектуального анализа данных*. На основе этого содержимого производится создание прогнозов и анализ данных.  
   
  Модель интеллектуального анализа данных включает метаданные о модели, статистику по данным, а также закономерности, выявленные алгоритмом интеллектуального анализа данных. В зависимости от применяемого алгоритма содержимое модели может включать формулы регрессии, определения правил, наборы элементов, весовые коэффициенты и другие статистические данные.  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 |NODE_TYPE ID|Метка узла|Содержимое узла|  
 |-------------------|----------------|-------------------|  
 |1|Модель|Метаданные и корневой узел содержимого. Все типы моделей.|  
-|2|дереВО|Корневой узел дерева классификации. Модели дерева принятия решений.|  
+|2|Дерево|Корневой узел дерева классификации. Модели дерева принятия решений.|  
 |3|Interior|Внутренняя узловая точка дерева. Модели дерева принятия решений.|  
 |4|Distribution|Конечный узел дерева. Модели дерева принятия решений.|  
 |5|Кластер|Кластер, выявленный алгоритмом. Модели кластеризации и модели кластеризации последовательностей.|  
@@ -234,7 +235,7 @@ ms.lasthandoff: 01/08/2018
 |13|Autoregressive order|Указывает, что значение представляет число авторегрессивных рядов.<br /><br /> Применяется в моделях временных рядов, использующих алгоритм ARIMA.|  
 |14|Moving average order|Представляет значение, которое представляет число скользящих средних в одном ряду.<br /><br /> Применяется в моделях временных рядов, использующих алгоритм ARIMA.|  
 |15|Difference order|Указывает, что значение определяет, сколько раз был продифференцирован ряд.<br /><br /> Применяется в моделях временных рядов, использующих алгоритм ARIMA.|  
-|16|Логическое значение|Представляет логический тип данных.|  
+|16|Boolean|Представляет логический тип данных.|  
 |17|Другое|Представляет пользовательское значение, определяемое алгоритмом.|  
 |18|Prerendered string|Представляет пользовательское значение, которое алгоритм возвращает в виде строки. Никакое форматирование к ней объектной моделью не применяется.|  
   
@@ -278,15 +279,15 @@ ms.lasthandoff: 01/08/2018
   
 |Алгоритм или тип модели|содержимое модели|Запрос моделей интеллектуального анализа|  
 |-----------------------------|-------------------|----------------------------|  
-|Модели правил взаимосвязей|[Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Примеры запросов моделей взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)|  
-|Модели кластеризации|[Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
-|Модели дерева принятия решений|[Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Примеры запросов к модели дерева принятия решений](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
+|Модели правил взаимосвязей|[Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Примеры запросов к модели взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)|  
+|Модели кластеризации|[Содержимое модели интеллектуального анализа данных для модели дерева принятия решений &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
+|Модели дерева принятия решений|[Содержимое модели интеллектуального анализа данных для модели дерева принятия решений &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Примеры запросов к модели дерева принятия решений](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |Модели линейной регрессии|[Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |Модели логистической регрессии|[Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|Модели упрощенного алгоритма Байеса|[Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Примеры запросов к модели упрощенного алгоритма Байеса](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
+|Модели упрощенного алгоритма Байеса|[Содержимое модели интеллектуального анализа данных для моделей упрощенного алгоритма Байеса &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Примеры запросов к модели упрощенного алгоритма Байеса](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |Модели нейронных сетей|[Содержимое моделей интеллектуального анализа данных для моделей нейронных сетей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Примеры запросов к модели нейронной сети](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |Кластеризация последовательностей|[Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[Примеры запросов к модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|Модели временных рядов|[Содержимое моделей интеллектуального анализа данных для моделей временных рядов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Примеры запросов моделей временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|Модели временных рядов|[Содержимое модели интеллектуального анализа данных для модели временных рядов &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Примеры запросов для модели временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Средства просмотра содержимого модели интеллектуального анализа данных  
  При просмотре и исследовании модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]просмотр данных производится с помощью **средства просмотра деревьев содержимого общего вида (Майкрософт)**, включенного в состав сред [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -308,8 +309,8 @@ SELECT * FROM [<mining model name>].CONTENT
   
  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно получить доступ к информации в наборах строк схемы интеллектуального анализа данных. Для этого нужно установить соединение с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и создать запросы к системным таблицам. Дополнительные сведения см. в разделе [Наборы строк схемы интеллектуального анализа данных (службы SSAS)](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md).  
   
-## <a name="see-also"></a>См. также:  
- [Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Средство просмотра деревьев содержимого общего Microsoft &#40; интеллектуального анализа данных &#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
+ [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - whitespace [Analysis Services Scripting Language]
 - trailing whitespace
@@ -27,19 +28,20 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="assl-xml-conventions"></a>Обозначения в XML языка ASSL
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Язык сценариев служб Analysis Services (ASSL) представляет иерархию объектов, как набор типов элементов, каждый из которых определяет дочерние элементы, которые они могут содержать.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Язык ASSL представляет иерархию объектов в виде набора типов элементов, каждый из которых определяет дочерние элементы, которые они могут содержать.  
   
  Чтобы можно было представлять иерархию объектов в языке ASSL, используются следующие обозначения XML.  
   
@@ -158,7 +160,7 @@ ms.lasthandoff: 01/08/2018
 |**Логическое значение**|False|  
 |**String**|"" (пустая строка)|  
 |**Целое число со знаком** или **Long**|0 (ноль)|  
-|**Отметка времени**|12:00:00 AM, 1/1/0001 (в зависимости от платформы .NET **System.DateTime** с 0 тактов)|  
+|**Timestamp**|12:00:00 AM, 1/1/0001 (в зависимости от платформы .NET **System.DateTime** с 0 тактов)|  
   
  Элемент, который имеется в наличии, но является пустым, интерпретируется как имеющий значение пустой строки, а не значение по умолчанию.  
   

@@ -15,21 +15,22 @@ helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>Справочник по свойствам атрибута измерения
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], имеется много свойств, определяющих измерений и атрибутов функции. В следующей таблице представлены и описаны эти свойства атрибутов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]имеется много свойств, определяющих функции измерений и их атрибутов. В следующей таблице представлены и описаны эти свойства атрибутов.  
   
-|Свойство|Description|  
+|property|Описание|  
 |--------------|-----------------|  
 |**AttributeHierarchyDisplayFolder**|Определяет папку, в которой для пользователей отображается связанная иерархия атрибутов.|  
 |**AttributeHierarchyEnabled**|Определяет, формируется ли иерархия атрибутов службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для атрибута. Если иерархия атрибутов отключена, то атрибут нельзя использовать в пользовательской иерархии и нельзя ссылаться на иерархию в инструкциях многомерных выражений.|  
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
 |**CustomRollupColumn**|Указывает столбец, определяющий формулу пользовательской свертки|  
 |**CustomRollupPropertiesColumn**|Указывает столбец, содержащий свойства формулы пользовательской свертки|  
 |**DefaultMember**|Содержит многомерное выражение, определяющее меру для атрибута по умолчанию.|  
-|**Описание**|Содержит описание атрибута.|  
+|**Description**|Содержит описание атрибута.|  
 |**DiscretizationBucketCount**|Содержит количество сегментов дискретизации.|  
 |**DiscretizationMethod**|Определяет метод дискретизации.|  
 |**EstimatedCount**|Указывает предполагаемое количество элементов в атрибуте. До запуска мастера статистических схем значение по умолчанию равно 0. Количество записей может подсчитываться мастером или предполагаемое значение можно ввести вручную. Если число членов известно, введите его вручную, чтобы сократить время на запрос к базе данных. При работе с тестовым подмножеством рабочих данных подсчет рабочих данных можно использовать для оптимизации статистической схемы для рабочих, а не для тестовых данных.|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Элемент по умолчанию атрибута используется для оценки выражений, когда член иерархии явно не включен в запрос. Элемент по умолчанию для атрибута указывается свойством **DefaultMember** атрибута. Когда иерархия из измерения включается в запрос, все элементы по умолчанию из атрибутов, соответствующих уровням иерархии, пропускаются. Если в запрос не включена иерархия измерения, то элементы по умолчанию используются для всех атрибутов в измерении. Дополнительные сведения об элементах по умолчанию см. в разделе [Определение элемента по умолчанию](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

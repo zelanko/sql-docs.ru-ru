@@ -24,10 +24,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Записи реестра (драйвер ODBC для Visual FoxPro)
 При установке драйвера ODBC для Visual FoxPro, программа установки обновляет в системном реестре в разделе реестра HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, чтобы добавить новый ключ с именем драйвера Microsoft Visual FoxPro. В данном разделе добавляются со значениями, описанными в следующей таблице.  

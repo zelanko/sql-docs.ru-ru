@@ -22,19 +22,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], perspectives
 - deleting perspectives
 ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 94508cf2bb7347d3b8cef15ce5c743f33c04a018
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Перспективы в многомерных моделях
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Перспектива — это подмножество куба, созданное для отдельного приложения или группы пользователей. Перспективой по умолчанию является собственно куб. Перспектива открыта для клиента в виде куба. Когда пользователь просматривает перспективу, она отображается в виде другого куба. Изменения, выполненные с данными куба при обратной записи в перспективу, выполняются в исходном кубе. Дополнительные сведения о представлениях см. в разделах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и [Перспективы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Перспектива представляет собой подмножество куба, созданное для отдельного приложения или группы пользователей. Перспективой по умолчанию является собственно куб. Перспектива открыта для клиента в виде куба. Когда пользователь просматривает перспективу, она отображается в виде другого куба. Изменения, выполненные с данными куба при обратной записи в перспективу, выполняются в исходном кубе. Дополнительные сведения о представлениях см. в разделах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и [Перспективы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md).  
   
  Используйте вкладку **Перспективы** в конструкторе кубов для создания или измерения перспектив в кубе. Первый столбец на вкладке **Перспективы** — столбец **Объекты куба** , в котором перечислены объекты куба. Это соответствует перспективе куба по умолчанию, то есть собственно кубу.  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
  Чтобы просмотреть объект, разверните категорию (**Группы мер**, **Измерения**, **Ключевые показатели эффективности**, **Вычисления**или **Действия**) для любого типа объекта в узле **Объекты куба**. Чтобы просмотреть иерархии или атрибуты в измерении, сначала разверните измерение, а затем строку **Иерархии** или **Атрибуты** . Чтобы просмотреть меры в группе мер, разверните группу.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

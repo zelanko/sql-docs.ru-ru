@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 79e7bf085f6bd1faab6fe367a2c8319192c7f2f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-concepts"></a>Основные понятия CSDLBI
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Язык определения концептуальной схемы с заметками бизнес-Аналитики (CSDLBI) основан на данных Entity Framework, которая является абстракцией, представляющей данные способом, который позволяет разрозненные наборы данных программно обращаться, запрашивать или экспортировать. CSDLBI используется для представления моделей данных, созданных с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], поскольку поддерживает широкий выбор отчетов, управляемых данными, и приложений.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Язык определения концептуальной схемы с заметками бизнес-аналитики (CSDLBI) основан на среде Entity Data Framework, которая является абстракцией, представляющей данные способом, который позволяет программно оценивать, опрашивать или экспортировать разрозненные наборы данных. CSDLBI используется для представления моделей данных, созданных с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], поскольку поддерживает широкий выбор отчетов, управляемых данными, и приложений.  
   
  В этом разделе описывается процесс сопоставления представления CSDLBI с моделями данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (и табличными и многомерными) с примерами каждого вида модели.  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/08/2018
   
  **Ограничения:** безопасности ячеек не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
- [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+## <a name="see-also"></a>См. также  
+ [Заметки языка CSDL для бизнес-аналитики &#40; CSDLBI &#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

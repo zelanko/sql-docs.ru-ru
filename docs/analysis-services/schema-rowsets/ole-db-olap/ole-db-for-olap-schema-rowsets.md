@@ -11,33 +11,35 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [Analysis Services], OLE DB for OLAP
 - OLE DB for OLAP schema rowsets
 - schema rowsets [OLE DB for OLAP]
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 75bdb07bd24f44fd42cf257a1e365c101329060f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>Наборы строк схемы для OLAP (OLE DB)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщик поддерживает следующие OLE DB для OLAP наборы строк схемы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщик поддерживает следующие OLE DB для OLAP наборы строк схемы.  
   
 > [!NOTE]  
 >  Чтобы проверить, поддерживает ли конкретный поставщик источника данных набор строк, используйте **DISCOVER_ENUMERATIONS** набора строк с [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод.  
   
  Также можно найти подробные сведения об этих наборах строк путем поиска см. в разделе «Наборы строк схемы OLAP,» в библиотеке MSDN на [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkId=15426).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Набор строк схемы<sup>1</sup>|Description|  
 |-------------------------------|-----------------|  
@@ -51,17 +53,17 @@ ms.lasthandoff: 01/08/2018
 |[Набор строк MDSCHEMA_INPUT_DATASOURCES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)|Описывает источники данных, определенные в базе данных.|  
 |[Набор строк MDSCHEMA_KPIS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-kpis-rowset.md)|Описывает ключевые показатели эффективности в базе данных.|  
 |[Набор строк MDSCHEMA_LEVELS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-levels-rowset.md)|Описывает каждый уровень в конкретной иерархии.|  
-|[Набор строк MDSCHEMA_MEASUREGROUP_DIMENSIONS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|Перечисляет измерения группы мер.|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS, набор строк](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|Перечисляет измерения группы мер.|  
 |[Набор строк MDSCHEMA_MEASUREGROUPS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|Описывает группы мер в базе данных.|  
 |[Набор строк MDSCHEMA_MEASURES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|Описывает каждую меру в кубе.|  
 |[Набор строк MDSCHEMA_MEMBERS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|Описывает элементы в базе данных.|  
 |[Набор строк MDSCHEMA_PROPERTIES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Описывает свойства элементов в базе данных.|  
-|[Набор строк MDSCHEMA_SETS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Описывает любые наборы, определенные на текущий момент в базе данных, в том числе наборы с областью сеанса.|  
+|[MDSCHEMA_SETS, набор строк](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Описывает любые наборы, определенные на текущий момент в базе данных, в том числе наборы с областью сеанса.|  
   
  <sup>1</sup> все наборы строк схемы, приведенные здесь поддерживаются поставщиком источника данных MSOLAP для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] поставщика XML для Аналитики.  
   
 ## <a name="see-also"></a>См. также:  
  [Набор строк DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)   
- [Наборы строк схемы служб Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Службы Analysis Services наборы строк схемы](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

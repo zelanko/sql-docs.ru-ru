@@ -14,10 +14,10 @@ ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
 ms.openlocfilehash: d289af96467634c144c7d0bc5ee362968c646333
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Модули подключения для базы данных Microsoft SQL
 
@@ -57,7 +57,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Язык | Загрузка драйвера SQL |
 | :------- | :---------------------- |
 | C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core для Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core для MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core для Windows](https://www.microsoft.com/net/core) |
-| C++      | [13.1 ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
+| C++      | [ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Драйвер node.js, инструкции по установке](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
 | PHP      | *Операционная система:*<br /><br />[Драйвер PHP для Windows](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu или PHP, MacOS драйвер из Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |

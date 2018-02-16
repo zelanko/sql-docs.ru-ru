@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SystemGetClusterAccuracyResults
 - cross-validation [data mining]
 ms.assetid: e1701738-50d5-46b4-b406-f1e800545abb
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 47272107eea7905a1e0414f42ff450e7a1ebbdb9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>Метод SystemGetClusterAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Возвращает показатели точности перекрестной проверки для структуры интеллектуального анализа данных и связанных моделей кластеризации.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Возвращает показатели точности перекрестной проверки для структуры интеллектуального анализа и связанных с ней моделей кластеризации.  
   
  Эта хранимая процедура возвращает показатели для всего набора данных как единой секции. Чтобы выполнить секционирование набора данных на перекрестные разделы и вернуть метрики для каждой секции, используйте [SystemGetClusterCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
   
@@ -82,7 +83,7 @@ SystemGetClusterAccuracyResults(
   
  Следующая таблица содержит список столбцов, возвращаемых методом **SystemGetClusterAccuracyResults**. Дополнительные сведения об интерпретации сведений, возвращаемых этой хранимой процедурой, см. в разделе [Меры в отчете перекрестной проверки](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |ModelName|Имя протестированной модели. Значение**Все** указывает, что результат представляет собой статистическое выражение, полученное для всех моделей.|  
 |AttributeName|Неприменимо к моделям кластеризации.|  
@@ -96,7 +97,7 @@ SystemGetClusterAccuracyResults(
 ## <a name="remarks"></a>Remarks  
  В следующей таблице приводятся примеры значений, с помощью которых можно указать в структуре интеллектуального анализа данные, используемые для перекрестной проверки. Если для перекрестной проверки нужно использовать проверочные варианты, то структура интеллектуального анализа данных должна содержать набор проверочных данных. Сведения о том, как определить набор проверочных данных во время создания структуры интеллектуального анализа данных, см. в разделе [Обучающие и проверочные наборы данных](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
-|Целое значение|Description|  
+|Целое значение|Описание|  
 |-------------------|-----------------|  
 |1|Используются только обучающие варианты.|  
 |2|Используются только проверочные варианты.|  
@@ -129,7 +130,7 @@ CALL SystemGetClusterAccuracyResults (
 ## <a name="requirements"></a>Требования  
  Перекрестная проверка доступна только в версиях [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] , начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SystemGetCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [Хранимая процедура SystemGetClusterCrossValidationResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   

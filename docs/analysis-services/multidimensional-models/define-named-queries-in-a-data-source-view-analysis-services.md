@@ -16,19 +16,20 @@ helpviewer_keywords:
 - modifying named queries
 - data source views [Analysis Services], named queries
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e82aedbca1db294e94a803db8541c2ff88876211
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Определение именованных запросов в представлении источника данных (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Именованный запрос является выражением SQL, представленным в виде таблицы. В именованном запросе можно указать выражение SQL для выбора строк и столбцов, возвращаемых из одной или нескольких таблиц в одном или нескольких источниках данных. Именованный запрос подобен другим таблицам со строками и связями в представлении источника данных, за исключением того, что он основан на выражении.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Именованный запрос является выражением SQL, представленным в виде таблицы. В именованном запросе можно указать выражение SQL для выбора строк и столбцов, возвращаемых из одной или нескольких таблиц в одном или нескольких источниках данных. Именованный запрос подобен другим таблицам со строками и связями в представлении источника данных, за исключением того, что он основан на выражении.  
   
  Именованный запрос позволяет расширять реляционную схему таблиц, существующих в представлении источника данных, не изменяя базового источника данных. Например, ряд именованных запросов можно использовать для разбиения сложной таблицы измерения на меньшие, более простые таблицы измерений для использований в измерениях баз данных. Именованный запрос может быть использован для соединения нескольких таблиц баз данных из одного или более источников данных в одну таблицу представления источников данных.  
   
@@ -66,8 +67,8 @@ ms.lasthandoff: 01/08/2018
   
 5.  Нажмите кнопку **ОК**. В заголовке таблицы появится значок с двумя пересекающимися таблицами, указывающий на то, что таблица была заменена именованным запросом.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Определение именованных вычислений в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

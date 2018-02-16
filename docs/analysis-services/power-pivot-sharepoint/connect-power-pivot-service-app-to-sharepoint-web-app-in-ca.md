@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Подключение приложения службы Power Pivot для SharePoint веб-приложения в ЦС
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Объект [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] приложения службы может использоваться любым числом веб-приложений SharePoint в ферме. Чтобы приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] стало доступным, его необходимо добавить в список ассоциаций служб.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] может использовать неограниченное число веб-приложений SharePoint в ферме. Чтобы приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] стало доступным, его необходимо добавить в список ассоциаций служб.  
   
 > [!IMPORTANT]  
 >  Наличие приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в группе ассоциаций по умолчанию необходимо для правильной работы панели мониторинга [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Не добавляйте в группу по умолчанию более одного приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Добавление нескольких записей приложений службы одного типа не поддерживается, это может привести к возникновению ошибок. При создании дополнительных приложений службы добавляйте их в пользовательский список.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание и настройка приложения службы PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
  [Первоначальная настройка (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
   

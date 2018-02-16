@@ -20,19 +20,20 @@ helpviewer_keywords:
 - data sources [Analysis Services]
 - storage [Analysis Services], data sources
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 99bdc630a51bd2bb4f9cbfeb7860d2dffb9392a0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Источники данных в многомерных моделях
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Все данные, которые вы импортируете или загружаете в многомерную модель, происходят из внешнего источника данных. Обычно исходные данные поступают из хранилища данных, разработанного для составления отчетов, однако они могут поступать из любой реляционной базы данных, которая обращается прямо или косвенно через посредника, например пакет [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Все данные, которые вы импортируете или загружаете в многомерную модель, происходят из внешнего источника данных. Обычно исходные данные поступают из хранилища данных, разработанного для составления отчетов, однако они могут поступать из любой реляционной базы данных, которая обращается прямо или косвенно через посредника, например пакет [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Объект **источника данных** в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] задает прямое соединение с внешним источником данных. Помимо физического расположения, объект источника данных указывает строку соединения, поставщика данных, учетные данные и другие свойства, управляющие поведением соединения.  
   
@@ -58,17 +59,17 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="related-topics-and-tasks"></a>Связанные темы и задачи  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Поддерживаемые источники данных (службы SSAS — многомерные базы данных)](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)|Описание типов источников данных, которые можно использовать в многомерной модели.|  
-|[Создание источника данных (многомерные службы SSAS)](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|Описывает добавление объекта источника данных в многомерную модель.|  
-|[Удаление источника данных в обозревателе решений (многомерные службы SSAS)](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Эта процедура позволяет удалить объект источника данных из многомерной модели.|  
-|[Задание свойств источника данных (многомерные службы SSAS)](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|Описывает каждое свойство и объясняет, как его задать.|  
-|[Задание параметров олицетворения (службы SSAS — многомерные)](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|Объясняет настройку параметров в диалоговом окне «Сведения об олицетворении».|  
+|[Создать источник данных &#40; Многомерные службы SSAS &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|Описывает добавление объекта источника данных в многомерную модель.|  
+|[Удаление источника данных в обозревателе решений &#40; Многомерные службы SSAS &#41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Эта процедура позволяет удалить объект источника данных из многомерной модели.|  
+|[Задание свойств источника данных &#40; Многомерные службы SSAS &#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|Описывает каждое свойство и объясняет, как его задать.|  
+|[Задание параметров олицетворения &#40; Службы SSAS — многомерные &#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|Объясняет настройку параметров в диалоговом окне «Сведения об олицетворении».|  
   
-## <a name="see-also"></a>См. также:  
- [Объекты баз данных (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Логическая архитектура (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+## <a name="see-also"></a>См. также  
+ [Объекты базы данных &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Логическая архитектура &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Источники данных и привязки &#40; Многомерные службы SSAS &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: "Объекты AMO другие классы и методы | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restores [AMO]
 - AMO, backup and restore
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f4de10c612f0338cecbfbd2e106bee41c6115905
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5ae261375e96cf6bfa322262b0b13653b9534331
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>Другие классы и методы объектов AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Этот раздел содержит общие классы, которые не относятся к OLAP и интеллектуального анализа данных, и которые являются удобны для администрирования и управления объектами в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Эти классы охватывают работу с хранимыми процедурами, трассировкой, исключениями, а также резервированием и восстановлением.  
+  Этот раздел содержит общие классы, которые не относятся к OLAP и интеллектуального анализа данных, и которые являются удобны для администрирования и управления объектами в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Эти классы охватывают работу с хранимыми процедурами, трассировкой, исключениями, а также резервированием и восстановлением.  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Прочие классы AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-otherclasses.gif "прочие классы AMO")  
   
-##  <a name="Assembly"></a>Объекты Assembly  
+##  <a name="Assembly">Объекты Assembly</a>  
  Объект <xref:Microsoft.AnalysisServices.Assembly> создается путем добавления его в коллекцию сборок сервера и обновления объекта <xref:Microsoft.AnalysisServices.Assembly> на сервере при помощи метода Update.  
   
  Чтобы удалить объект <xref:Microsoft.AnalysisServices.Assembly>, к нему необходимо применить метод Drop объекта <xref:Microsoft.AnalysisServices.Assembly>. При удалении объекта <xref:Microsoft.AnalysisServices.Assembly> из коллекции сборок базы данных сама сборка не удаляется, она просто будет недоступна в приложении до следующего запуска.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 > [!IMPORTANT]  
 >  Использование сборок COM может представлять угрозу безопасности. По этой причине, а также по ряду других сборки COM в службах [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]являются устаревшими. Поддержка сборок COM в последующих версиях может быть прекращена.  
   
-##  <a name="Backup"></a>Методы BACKUP и Restore  
+##  <a name="Backup">Методы BACKUP и Restore</a>  
  Методы Backup и Restore предназначены для создания резервной копии базы данных и восстановления служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Метод Backup принадлежит к объекту <xref:Microsoft.AnalysisServices.Database>, а метод Restore — к объекту <xref:Microsoft.AnalysisServices.Server>.  
   
  Резервное копирование базы данных могут выполнять только администраторы сервера и базы данных. Восстановить базу данных на сервере, отличном от того, с которого была создана ее резервная копия, могут только администраторы сервера. Администратор баз данных может восстановить базу данных путем перезаписи существующей базы данных только в том случае, если он является ее владельцем. Администратор баз данных может потерять доступ к восстановленной базе данных после ее восстановления, если она восстановлена с первоначальными определениями безопасности.  
@@ -73,23 +74,23 @@ ms.lasthandoff: 01/08/2018
  Чтобы создать резервную копию базы данных, вызовите метод Backup объекта базы данных, передав ему в качестве параметра имя файла резервной копии.  
   
 ##### <a name="default-values"></a>Значения по умолчанию:  
- AllowOverwrite =**false**  
+ AllowOverwrite=**false**  
   
- BackupRemotePartitions =**false**  
+ BackupRemotePartitions=**false**  
   
- Безопасность =**CopyAll**  
+ Security=**CopyAll**  
   
- ApplyCompression =**true**  
+ ApplyCompression=**true**  
   
 ### <a name="restore-method"></a>Метод Restore  
  Чтобы восстановить базу данных на сервере, вызовите метод Restore сервера, передав ему в качестве параметра имя файла резервной копии.  
   
 ##### <a name="default-values"></a>Значения по умолчанию:  
- AllowOverwrite =**false**  
+ AllowOverwrite=**false**  
   
- DataSourceType =**удаленного**  
+ DataSourceType=**Remote**  
   
- Безопасность =**CopyAll**  
+ Security=**CopyAll**  
   
 ##### <a name="restrictions"></a>Ограничения  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **Пароль**, если непустое значение, указывающее, что сервер зашифрует файл резервной копии.  
   
-##  <a name="Traces"></a>Объекты трассировки  
+##  <a name="Traces">Объекты трассировки</a>  
  Трассировка — это платформа, предназначенная для наблюдения, воспроизведения и управления экземпляром служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Клиентское приложение, например [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], подписывается на трассировку, после чего сервер в соответствии с ее определением будет отправлять ему определения трассировки.  
   
  Каждое событие описывается классом событий. Класс событий описывает тип сформированного события. Внутри класса событий более глубокое разделение событий на категории обеспечивают подклассы. Каждое событие описывается несколькими столбцами. Столбцы, описывающие событие трассировки, согласованы для всех событий, которые соответствуют структуре трассировки SQL. Записываемые в каждый из столбцов сведения могут различаться в зависимости от класса события. Другими словами, стандартный набор столбцов определен для каждой трассировки, но их значения могут различаться в зависимости от классов событий. Например, столбец TextData используется для записи исходного языка ASSL для всех событий инструкций.  
@@ -154,19 +155,19 @@ ms.lasthandoff: 01/08/2018
   
 6.  Продолжите работу с приложением.  
   
-##  <a name="CaptureLog"></a>Класс CaptureLog и атрибут CaptureXML  
+##  <a name="CaptureLog">Класс CaptureLog и атрибут CaptureXML</a>  
  Все действия, которые должны выполняться объектами AMO, отправляются на сервер в виде сообщений XML для аналитики. Объекты AMO предоставляют средства захвата всех этих событий без заголовков SOAP. Дополнительные сведения см. в разделе [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md). CaptureLog — это реализованный в объектах AMO механизм для включения объектов и операций в сценарии. Объекты и операции будут включены в сценарии в XML для аналитики.  
   
  Чтобы начать захват XML, необходимо задать свойства объекта сервера CaptureXML **true**. После этого все действия, которые должны отправляться на сервер, будут захватываться классом CaptureLog. CaptureLog считается классом, поскольку у него есть метод Clear, предназначенный для очистки журнала захвата.  
   
  Чтобы прочитать журнал, необходимо получить коллекцию строк и выполнить ее перебор. Кроме того, можно объединить все журналы в строку при помощи метода ConcatenateCaptureLog объекта сервера. Метод ConcatenateCaptureLog принимает три параметра, два из которых являются обязательными. Требуются следующие параметры *транзакций*, логического типа, и *параллельных*, логический тип. Если *транзакций* равно **true**, это означает, что XML-файл пакета будет создана, поскольку в одной транзакции, а каждая команда будет рассматриваться как отдельная транзакция. Если *параллельных* равно **true**, это означает, что все команды в пакетном файле будут записаны для параллельного выполнения, а не последовательно, как они были записаны.  
   
-##  <a name="AMO"></a>Класс исключений AMOException  
+##  <a name="AMO">Класс исключений AMOException</a>  
  Класс исключения AMOException позволяет приложению легко перехватывать исключения, создаваемые объектами AMO.  
   
  При возникновении различных проблем объекты AMO формируют исключения. В следующей таблице приведены типы исключений, обрабатываемые объектами AMO. Исключения наследуются от класса <xref:Microsoft.AnalysisServices.AmoException>.  
   
-|Исключение|Место возникновения|Description|  
+|Исключение|Место возникновения|Описание|  
 |---------------|------------|-----------------|  
 |<xref:Microsoft.AnalysisServices.AmoException>|Базовый класс|Приложение принимает это исключение при отсутствии обязательного родительского объекта, либо когда требуемый элемент не удается найти в коллекции.|  
 |<xref:Microsoft.AnalysisServices.OutOfSyncException>|Наследует AMOException|Приложение принимает это исключение в том случае, когда объекты AMO не синхронизированы с подсистемой, а подсистема вернула ссылку на объект, о котором объектам AMO неизвестно.|  
@@ -174,7 +175,7 @@ ms.lasthandoff: 01/08/2018
 |<xref:Microsoft.AnalysisServices.ResponseFormatException>|Наследует AMOException|Это исключение возникает в том случае, когда подсистема вернула сообщение в формате, который непонятен объектам AMO.|  
 |<xref:Microsoft.AnalysisServices.ConnectionException>|Наследует AMOException|Это исключение возникает в том случае, когда невозможно установить соединение (методом Server.Connect), либо когда соединение потеряно при обмене данными между объектами AMO и подсистемой (например, во время операций Update, Process или Drop).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Логическая архитектура &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   

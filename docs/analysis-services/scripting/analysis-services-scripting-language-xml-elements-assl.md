@@ -12,25 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Services Scripting Language, elements
 - elements [Analysis Services Scripting Language]
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 87d59c2d4041cbb7267054d2a691e0e39745827a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Элементы XML языка сценариев служб Analysis Services (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Несмотря на то, что схема языка сценариев служб Analysis Services (ASSL) содержит только элементы XML, с точки зрения разработчика, эти элементы соответствуют следующие понятия:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Хотя в схеме языка ASSL содержатся только элементы XML, с точки зрения разработчика этим элементам соответствуют следующие понятия.  
   
 -   Объекты, такие как **базы данных**, **куба**, и **измерения** объектов в иерархии объектов, содержащихся в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -43,15 +45,15 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  В этом разделе не описываются элементы типов данных. Дополнительные сведения см. в разделе, [Analysis Services Scripting типы данных XML в &#40; ASSL &#41; ](../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Объекты &#40; ASSL &#41;](../../analysis-services/scripting/objects/objects-assl.md)|Содержит сведения о синтаксисе и об использовании каждого элемента, который выступает в качестве объекта в схеме ASSL.|  
 |[Коллекции &#40; ASSL &#41;](../../analysis-services/scripting/collections/collections-assl.md)|Содержит сведения о синтаксисе и об использовании каждого элемента, который выступает в качестве коллекции в схеме ASSL.|  
 |[Свойства &#40; ASSL &#41;](../../analysis-services/scripting/properties/properties-assl.md)|Содержит сведения о синтаксисе и об использовании каждого элемента, который выступает в качестве свойства объекта в схеме ASSL.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Службы Analysis Services Scripting иерархия элементов XML языка &#40; ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
  [Службы Analysis Services Scripting Language &#40; ASSL для XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   

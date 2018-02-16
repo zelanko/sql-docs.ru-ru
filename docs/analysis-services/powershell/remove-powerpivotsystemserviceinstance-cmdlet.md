@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: bc46094a-5584-47ba-8883-77dc79373a5d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bc93af457830a9efe0c57707a37ec946597887fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remove-powerpivotsystemserviceinstance-cmdlet"></a>Командлет «Remove-PowerPivotSystemServiceInstance»
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Удаляет [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] экземпляр системной службы из фермы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Удаляет экземпляр системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из фермы.  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 Remove-PowerPivotSystemServiceInstance [-Confirm <switch>] [-DeleteLocal <switch>] [-Identity <PowerPivotMidTierServiceInstancePipeBind>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет Remove-PowerPivotSystemServiceInstance удаляет сведения об экземпляре системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из фермы. Не удаляет программные файлы. Чтобы удалить программные файлы, нужно отменить их установку.  
   
  При удалении системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] не забудьте выполнить командлет Remove-PowerPivotEngineServiceInstance, чтобы удалить связанный экземпляр служб Analysis Services, а затем командлет Remove-PowerPivotServiceApplication, чтобы удалить все приложения службы PowerPivot. Приложения службы больше не будут работать после удаления служб.  

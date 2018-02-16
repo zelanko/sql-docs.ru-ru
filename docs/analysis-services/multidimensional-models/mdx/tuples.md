@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 00353a4a955b631fda3e0fb6521ecad764f1328c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tuples"></a>Кортежи
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Кортеж однозначно определяет срез данных из куба. Кортеж формируется сочетанием элементов измерения, если отсутствует несколько элементов, принадлежащих одной иерархии.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Кортеж однозначно определяет срез данных в кубе. Кортеж формируется сочетанием элементов измерения, если отсутствует несколько элементов, принадлежащих одной иерархии.  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>Неявные элементы атрибута или элементы атрибута по умолчанию в кортеже  
  При определении кортежа в запросе многомерных выражений или в многомерном выражении не обязательно явно включать элемент атрибута из каждой иерархии атрибута. Если элемент из иерархии атрибута не включен явно в запрос или выражение, в кортеж неявным образом включается элемент по умолчанию данной иерархии атрибута. Если в кубе явно не указано обратное, элементом по умолчанию любой иерархии атрибута считается элемент «(Все)», если он существует. Если такой элемент отсутствует в иерархии атрибута, элементом по умолчанию считается элемент верхнего уровня иерархии. Мерой по умолчанию является первая мера указанного куба, если только мера по умолчанию не определена явно. Дополнительные сведения см. в разделах [Определение элемента по умолчанию](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md) и [DefaultMember (многомерные выражения)](../../../mdx/defaultmember-mdx.md).  
@@ -72,8 +73,8 @@ FROM [Adventure Works]
 >  На элемент атрибута можно ссылаться по имени или ключу. В предыдущем примере ссылку [CY 2004] можно изменить на &[2004].  
   
 ## <a name="see-also"></a>См. также:  
- [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Пространство куба](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Автоматическая проверка существования](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [Работа с членами, кортежей и наборов &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   

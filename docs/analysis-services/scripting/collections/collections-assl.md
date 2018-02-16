@@ -11,25 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - collections [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, collections
 - ASSL, collections
 ms.assetid: 072b8c6b-1550-4cab-ae64-ba0e3e60b059
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7f121fbcd03bf3dace4c09c20925b7ce3d52baf5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="collections-assl"></a>Коллекции (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе справки содержатся сведения о синтаксисе и использовании для каждого элемента, который выступает в качестве коллекции в схеме языка сценариев служб Analysis Services (ASSL).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В данном разделе приводится синтаксис и сведения об использовании каждого элемента, выступающего в роли коллекции в схеме ASSL.  
   
  Хотя схема ASSL содержит только элементы XML, с точки зрения разработчика, элементы, описанные в этом разделе относятся к коллекции объектов, такие как **измерения** и **кубов** коллекции.  
   
@@ -39,10 +41,10 @@ ms.lasthandoff: 01/08/2018
   
  В других случаях коллекция содержит элементы, которые соответствуют свойствам объектов, а не объектам. Например **псевдонимы** коллекция содержит **псевдоним** свойства, каждый из которых является простым строковым значением.  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[Элемент Accounts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)|Содержит коллекцию типов учетных записей, которые определены в [базы данных](../../../analysis-services/scripting/objects/database-element-assl.md) элемента.|  
-|[Элемент Actions &#40; ASSL &#41;](../../../analysis-services/scripting/collections/actions-element-assl.md)|Содержит коллекцию действий для [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) или [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md) элемента.|  
+|[Элемент Actions &#40; ASSL &#41;](../../../analysis-services/scripting/collections/actions-element-assl.md)|Содержит коллекцию действий для элемента [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) или [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .|  
 |[Элемент AggregationDesigns &#40; ASSL &#41;](../../../analysis-services/scripting/collections/aggregationdesigns-element-assl.md)|Содержит коллекцию статистических схем, которые можно совместно использовать в разных секциях в базе данных.|  
 |[Элемент AggregationInstances &#40; ASSL &#41;](../../../analysis-services/scripting/collections/aggregationinstances-element-assl.md)|Содержит коллекцию экземпляров агрегатов, которые определены в [секции](../../../analysis-services/scripting/objects/partition-element-assl.md) элемента.|  
 |[Элемент aggregations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)|Содержит коллекцию агрегатов, определенных для [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) элемента.|  
@@ -75,13 +77,13 @@ ms.lasthandoff: 01/08/2018
 |[Элемент Files &#40; ASSL &#41;](../../../analysis-services/scripting/collections/files-element-assl.md)|Содержит коллекцию элементов [файл](../../../analysis-services/scripting/objects/file-element-assl.md) элементов, составляющих [ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) элемента.|  
 |[Элемент ForeignKeyColumns &#40; ASSL &#41;](../../../analysis-services/scripting/collections/foreignkeycolumns-element-assl.md)|Содержит коллекцию столбцов, которые определяют соединение с родительской таблицей для реляционного источника данных.|  
 |[Элемент Groups &#40; ASSL &#41;](../../../analysis-services/scripting/collections/groups-element-assl.md)|Содержит коллекцию групп элементов, привязанных к атрибуту.|  
-|[Элемент hierarchies &#40; ASSL &#41;](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|Содержит коллекцию элементов [иерархии](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) элементы, связанные с родительским элементом.|  
+|[Элемент hierarchies &#40; ASSL &#41;](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|Содержит коллекцию элементов [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) , связанных с родительским элементом.|  
 |[Элемент IncrementalProcessingNotifications &#40; ASSL &#41;](../../../analysis-services/scripting/collections/incrementalprocessingnotifications-element-assl.md)|Содержит коллекцию элементов [IncrementalProcessingNotification](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md) элементы, которые содержат сведения о [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) о запросах, необходимо выполнить, чтобы определить ход выполнения добавочной обработки.|  
 |[Элемент KeyColumns &#40; ASSL &#41;](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)|Содержит коллекцию элементов [KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md) определений элементов для родительского объекта.|  
 |[Элемент KPIs &#40; ASSL &#41;](../../../analysis-services/scripting/collections/kpis-element-assl.md)|Содержит коллекцию элементов [ключевого показателя эффективности](../../../analysis-services/scripting/objects/kpi-element-assl.md) элементы, связанные с родительским элементом.|  
 |[Levels, элемент &#40; ASSL &#41;](../../../analysis-services/scripting/collections/levels-element-assl.md)|Содержит коллекцию элементов [уровень](../../../analysis-services/scripting/objects/level-element-assl.md) элементов в [иерархии](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) элемента.|  
 |[MdxScript, элемент &#40; ASSL &#41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)|Содержит коллекцию элементов [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) элементы, связанные с [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) элемента.|  
-|[Элемент MeasureGroups &#40; ASSL &#41;](../../../analysis-services/scripting/collections/measuregroups-element-assl.md)|Содержит коллекцию элементов [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) элементы, связанные с родительским элементом.|  
+|[Элемент MeasureGroups &#40; ASSL &#41;](../../../analysis-services/scripting/collections/measuregroups-element-assl.md)|Содержит коллекцию элементов [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) , связанных с родительским элементом.|  
 |[Элемент Measures &#40; ASSL &#41;](../../../analysis-services/scripting/collections/measures-element-assl.md)|Содержит коллекцию элементов [мер](../../../analysis-services/scripting/objects/measure-element-assl.md) элементы, связанные с родительским элементом.|  
 |[Элемент Members &#40; ASSL &#41;](../../../analysis-services/scripting/collections/members-element-assl.md)|Содержит коллекцию элементов [Member](../../../analysis-services/scripting/objects/member-element-assl.md) для родительского элемента.|  
 |[Элемент MiningModelPermissions &#40; ASSL &#41;](../../../analysis-services/scripting/collections/miningmodelpermissions-element-assl.md)|Содержит коллекцию разрешений для [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) элемента.|  
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 |[Элемент MiningStructures &#40; ASSL &#41;](../../../analysis-services/scripting/collections/miningstructures-element-assl.md)|Содержит коллекцию элементов [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) элементов в [базы данных](../../../analysis-services/scripting/objects/database-element-assl.md) элемента.|  
 |[Элемент ModelingFlags &#40; ASSL &#41;](../../../analysis-services/scripting/collections/modelingflags-element-assl.md)|Содержит коллекцию элементов [ModelingFlag](../../../analysis-services/scripting/objects/modelingflag-element-assl.md) для столбца в [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) или [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md).|  
 |[Элемент NamingTemplateTranslations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/namingtemplatetranslations-element-assl.md)|Предоставляет коллекцию локализованных переводов для [NamingTemplate](../../../analysis-services/scripting/properties/namingtemplate-element-assl.md) родителя [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md).|  
-|[Элемент partitions &#40; ASSL &#41;](../../../analysis-services/scripting/collections/partitions-element-assl.md)|Содержит коллекцию элементов [секции](../../../analysis-services/scripting/objects/partition-element-assl.md) элементы, используемые методом [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) элемент или коллекцию привязок секций, которые составляют вне строки [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md)элемент.|  
+|[Элемент partitions &#40; ASSL &#41;](../../../analysis-services/scripting/collections/partitions-element-assl.md)|Содержит коллекцию элементов [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) , используемых элементом [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) , или коллекцию привязок секций, которые образуют внешний элемент [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md) .|  
 |[Элемент Perspectives &#40; ASSL &#41;](../../../analysis-services/scripting/collections/perspectives-element-assl.md)|Содержит коллекцию элементов [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md) элементы, связанные с [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) элемента.|  
 |[Элемент QueryNotifications &#40; ASSL &#41;](../../../analysis-services/scripting/collections/querynotifications-element-assl.md)|Содержит коллекцию элементов [QueryNotification](../../../analysis-services/scripting/objects/querynotification-element-assl.md) элементы, которые содержат сведения о [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) о запросах, необходимо выполнить, чтобы определить, был ли изменен источник данных.|  
 |[Элемент ReportFormatParameters &#40; ASSL &#41;](../../../analysis-services/scripting/collections/reportformatparameters-element-assl.md)|Содержит коллекцию элементов [ReportFormatParameter](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md) для элемента [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) .|  
@@ -99,10 +101,10 @@ ms.lasthandoff: 01/08/2018
 |[Элемент ServerProperties &#40; ASSL &#41;](../../../analysis-services/scripting/collections/serverproperties-element-assl.md)|Содержит коллекцию элементов [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md) элементы, связанные с [сервера](../../../analysis-services/scripting/objects/server-element-assl.md) элемента.|  
 |[Элемент TableNotifications &#40; ASSL &#41;](../../../analysis-services/scripting/collections/tablenotifications-element-assl.md)|Содержит коллекцию элементов [TableNotification](../../../analysis-services/scripting/objects/tablenotification-element-assl.md) элементы, которые предоставляют сведения для [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) о таблиц или представлений в источнике данных, которые были изменены.|  
 |[Элемент traces &#40; ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)|Содержит коллекцию элементов [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) , связанных с элементом [Server](../../../analysis-services/scripting/objects/server-element-assl.md) .|  
-|[Элемент Translations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/translations-element-assl.md)|Содержит коллекцию элементов [перевода](../../../analysis-services/scripting/objects/translation-element-assl.md) элементы, связанные с родительским элементом.|  
+|[Элемент Translations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/translations-element-assl.md)|Содержит коллекцию элементов [Translation](../../../analysis-services/scripting/objects/translation-element-assl.md) , связанных с родительским элементом.|  
 |[Элемент UnknownMemberTranslations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/unknownmembertranslations-element-assl.md)|Содержит коллекцию переводов для заголовка элемента [UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md) элемента измерения.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Службы Analysis Services Scripting иерархия элементов XML языка &#40; ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   

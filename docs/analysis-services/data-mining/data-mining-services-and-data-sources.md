@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 78e67d346c451c258e806e6f888aef096e7d4256
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-services-and-data-sources"></a>Службы интеллектуального анализа данных и источники данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Интеллектуальный анализ данных требуется соединение с экземпляром служб SQL Server Analysis Services. Данные из куба не требуются для интеллектуального анализа данных, и рекомендуется использовать реляционные источники данных. Однако интеллектуальный анализ данных использует компоненты, предоставляемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Для интеллектуального анализа данных требуется соединение с экземпляром служб SQL Server Analysis Services. Данные из куба не требуются для интеллектуального анализа данных, и рекомендуется использовать реляционные источники данных. Однако интеллектуальный анализ данных использует компоненты, предоставляемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  В этом разделе представлены необходимые сведения по соединению с экземпляром служб SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для создания, обработки и развертывания моделей интеллектуального анализа данных и выполнения запросов к ним.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="xmla-listener"></a>Прослушиватель XML для аналитики  
  Компонент прослушивателя XML для аналитики обрабатывает все XMLA-взаимодействия между службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и их клиентами. Параметр конфигурации [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Порт** , указанный в файле msmdsrv.ini, может использоваться для указания порта, на котором экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняет прослушивание. Значение 0 указывает на то, что [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] прослушивает порт по умолчанию. По умолчанию службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пользуются следующими TCP-портами:  
   
-|Порт|Description|  
+|Порт|Описание|  
 |----------|-----------------|  
 |2383|Экземпляр служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]по умолчанию.|  
 |2382|Перенаправитель для других экземпляров служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
@@ -128,9 +129,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Хранимые процедуры нельзя использовать для изменения безопасности в серверных объектах базы данных. При выполнении хранимой процедуры для определения доступа ко всем серверным объектам используется текущий контекст пользователя. Поэтому пользователи должны иметь соответствующие разрешения для всех объектов базы данных, к которым они получают доступ.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Физическая архитектура (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
- [Управление решениями и объектами интеллектуального анализа данных](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Физическая архитектура &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Управление решениями интеллектуального анализа данных и объектов](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

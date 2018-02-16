@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Microsoft.AnalysisServices.Deployment utility
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1e094ee032e236d39003fe6e2f572edfea6241a5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Развертывание решений моделей с использованием программы развертывания
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**Microsoft.AnalysisServices.Deployment** программа позволяет запустить [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] подсистема развертывания из командной строки. В качестве входных файлов программа использует выходные XML-файлы, сформированные при построении проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Входные файлы можно легко изменять для настройки развертывания проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Сформированный скрипт развертывания можно затем либо сразу запустить, либо сохранить и запустить позднее.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Программа **Microsoft.AnalysisServices.Deployment** позволяет запустить механизм развертывания служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из командной строки. В качестве входных файлов программа использует выходные XML-файлы, сформированные при построении проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Входные файлы можно легко изменять для настройки развертывания проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Сформированный скрипт развертывания можно затем либо сразу запустить, либо сохранить и запустить позднее.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -66,7 +67,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  Аргумент **/d** используется только в режиме вывода. Этот аргумент не будет учитываться, если указан режим ответов или режим без вывода сообщений. Дополнительные сведения о режимах см. в подразделе [Режимы](#Modes)далее в этом разделе.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Программа **Microsoft.AnalysisServices.Deployment** использует набор файлов, которые содержат определения объектов, адресаты развертывания, параметры развертывания и параметры настройки конфигурации, и пытается развернуть определения объекта на указанные адресаты развертывания с помощью указанных параметров развертывания и параметров настройки конфигурации. Эта программа может предоставить пользовательский интерфейс, если будет вызвана в режиме файлов ответов или в режиме вывода. Дополнительные сведения о том, как использовать пользовательский интерфейс, предоставляемый этой программой для создания файлов ответов, см. в разделе [Развертывание решений модели с использованием мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
  Эта программа находится в папке «\Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio».  
@@ -91,7 +92,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
   
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по программе командной строки (Database Engine)](../../tools/command-prompt-utility-reference-database-engine.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по программе командной строки ( компонент Database Engine)](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

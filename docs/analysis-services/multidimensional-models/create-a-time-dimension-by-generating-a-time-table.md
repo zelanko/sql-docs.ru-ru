@@ -20,19 +20,20 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 7c437b381faae56438376a93355adec76b28d7e9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Создание измерения времени посредством формирования таблицы времени
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], можно использовать мастер измерений [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для создания измерения времени, при отсутствии таблиц времени в исходной базе данных. С этой целью на странице **Выбор метода создания** выберите один из следующих параметров.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Чтобы создать измерение времени в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]при отсутствии таблиц времени в базе данных-источнике, можно использовать мастер измерений среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . С этой целью на странице **Выбор метода создания** выберите один из следующих параметров.  
   
 -   **Создать в источнике данных таблицу времени** .  Выберите этот параметр при наличии разрешения на создание объектов в базовом источнике данных. Мастер создаст таблицу времени и сохранит ее в источнике данных. Затем на основе этой таблицы времени мастер создает измерение времени.  
   
@@ -59,11 +60,11 @@ ms.lasthandoff: 01/08/2018
 ## <a name="completing-the-dimension-wizard"></a>Завершение работы мастера измерений  
  На странице **Завершение работы мастера** просмотрите атрибуты и иерархии, созданные мастером, и введите название измерения времени. Нажмите кнопку **Готово** , чтобы завершить работу мастера и создать измерение. После завершения создания измерения его можно изменить при помощи конструктора измерений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Создание измерения типа Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
  [Свойства измерений базы данных](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
- [Связи измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Создание измерения путем формирования в источнике данных таблицы, отличной от таблицы времени](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Связей измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [Создание измерения путем формирования в источнике данных таблицы не содержащую время](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

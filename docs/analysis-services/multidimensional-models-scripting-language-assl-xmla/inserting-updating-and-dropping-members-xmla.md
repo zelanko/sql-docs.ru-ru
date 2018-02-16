@@ -1,7 +1,7 @@
 ---
 title: "Вставка, обновление и удаление элементов (XMLA) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - inserting dimension members
 - XML for Analysis, members
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - deleting dimension members
 - dimensions [Analysis Services], XML for Analysis
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 17c8d0a3fddeb0cfd9d8a6ef69eac11bc9b2c34a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 55572d91ab28593f17cda8ce400fcf7301e52c17
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Вставка, обновление и удаление элементов (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно использовать [вставить](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [обновление](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), и [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) команды XML для аналитики (XMLA) чтобы соответственно вставлять, обновления или удаления элементов из измерения, доступные для записи. Дополнительные сведения о записи измерений см. в разделе [измерениях](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  Можно использовать [вставить](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [обновление](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), и [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) команды XML для аналитики (XMLA) чтобы соответственно вставлять, обновления или удаления элементов из измерения, доступные для записи. Дополнительные сведения о записи измерений см. в разделе [измерениях](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 ## <a name="inserting-new-members"></a>Вставка новых элементов  
  **Вставить** команда вставляет новые элементы в указанные атрибуты в измерении, доступном для записи.  
@@ -116,11 +117,11 @@ ms.lasthandoff: 01/08/2018
 > [!IMPORTANT]  
 >  Чтобы удалить и родительский элемент, и его потомков, пользователю необходимо иметь только разрешения на удаление родительского элемента. Разрешения на удаление потомков иметь не обязательно.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Удалить элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
  [Вставить элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Обновить элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
  [Определение и идентификация объектов &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md)   
- [Разработка с использованием XMLA в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

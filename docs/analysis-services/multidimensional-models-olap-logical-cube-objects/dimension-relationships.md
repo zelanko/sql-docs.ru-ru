@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - relationships [Analysis Services]
 - member groups [Analysis Services]
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - fact dimensions [Analysis Services]
 - relationships [Analysis Services], dimensions
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 0ba0ea6e2797d15134dc6bfbf9a595a1ef83c583
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-relationships"></a>Связи измерений
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Использование измерений определяет связи между измерением куба и группами мер в кубе. Измерение куба представляет собой экземпляр измерения базы данных, используемый в конкретном кубе. Куб может содержать (и часто содержит) измерения, которые не связаны непосредственно с группой мер, но которые могут быть косвенно связаны с ней через другое измерение или группу мер. При добавлении базы данных измерения или группы мер в кубе, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] попытаются определить использование измерения, анализируя связи между таблицами измерений и таблицами фактов в представлении источника данных куба, а также с помощью проверки связи между атрибутами в измерениях. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматически устанавливают параметры использования измерений для связей, которые они смогли обнаружить.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Использование измерений определяет связи между измерением куба и группами мер в нем. Измерение куба представляет собой экземпляр измерения базы данных, используемый в конкретном кубе. Куб может содержать (и часто содержит) измерения, которые не связаны непосредственно с группой мер, но которые могут быть косвенно связаны с ней через другое измерение или группу мер. При добавлении базы данных измерения или группы мер в кубе, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] попытаются определить использование измерения, анализируя связи между таблицами измерений и таблицами фактов в представлении источника данных куба, а также с помощью проверки связи между атрибутами в измерениях. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматически устанавливают параметры использования измерений для связей, которые они смогли обнаружить.  
   
  Связь между измерением и группой мер состоит из таблиц измерений и фактов, участвующих в связи, и атрибута гранулярности, указывающего детализацию измерения в конкретной группе мер.  
   
@@ -83,14 +85,14 @@ ms.lasthandoff: 01/08/2018
   
  ![Связь измерений логической схемы/многие ко многим](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-many-dimension1.gif "логической схемы/многие ко многим связь измерений")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] позволяет определить связь «многие ко многим» между измерением и таблицей фактов.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] позволяет определить связь «многие ко многим» между измерением и таблицей фактов.  
   
 > [!NOTE]  
 >  Для обеспечения поддержки связи измерений «многие ко многим» в представлении источника данных должна быть установлена связь по внешнему ключу между всеми участвующими таблицами, как показано на предыдущей диаграмме. В противном случае будет невозможно выбрать верную промежуточную группу мер при установке связи в **Использование измерений** конструктора измерений.  
   
  Дополнительные сведения о связях многие ко многим см. в разделе [определить многие ко многим отношение "и" многие ко многим свойств связи](../../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
-## <a name="see-also"></a>См. также:  
- [Измерения (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также  
+ [Измерения &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d1975eb94bc8ad2d69808279a5358b7a40180866
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Определение логических связей в представлении источника данных (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Мастер представлений источников данных и конструктор представлений источника данных автоматически определяют связи между таблицами, добавленными к представлению источника данных (DSV) на основе базовых связях базы данных или именем, соответствующим указанному критерию.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Мастер представлений источников данных и конструктор представлений источников данных автоматически определяют связи между таблицами, добавленными к представлению источника данных (DSV), основываясь на базовых связях базы данных или на указанном критерии совпадения имен.  
   
  При работе с данными из нескольких источников может потребоваться вручную определить логические связи в представлении источника данных (DSV) дополнительно к связям, определенным автоматически. Связи необходимы службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для идентификации таблиц фактов и измерений, для построения запросов на получение данных и метаданных из базовых источников данных и для использования преимуществ расширенных функций бизнес-аналитики.  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Для изменения связи щелкните ее правой кнопкой мыши и выберите пункт **Изменить связь**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

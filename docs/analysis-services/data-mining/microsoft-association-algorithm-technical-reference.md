@@ -22,19 +22,20 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Технический справочник по алгоритму взаимосвязей (Майкрософт)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм правил взаимосвязей имеет простую реализацию хорошо известного алгоритма Apriori.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой простую реализацию хорошо известного априорного алгоритма.  
   
  Оба алгоритма (алгоритм деревьев принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] и алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) можно использовать для анализа взаимосвязей, но правила, обнаруженные каждым из алгоритмов, могут отличаться. В модели дерева принятия решений разбиение на узлы, ведущие к определенным правилам, проводится в соответствии с полученной информацией. В модели взаимосвязей правила основаны на достоверности. Поэтому в модели взаимосвязей сильное правило, или правило с высокой достоверностью, не обязательно будет интересным, поскольку оно может не предоставлять никакой новой информации.  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
  *MAXIMUM_ITEMSET_SIZE*  
  Указывает максимальное количество элементов, допустимых в наборе элементов. Задание этого значения равным 0 указывает, что размер набора элементов не ограничен.  
   
- Значение по умолчанию — 3.  
+ Значение по умолчанию — 3.  
   
 > [!NOTE]  
 >  Снижение этого значения может привести к сокращению времени создания модели, поскольку обработка модели прекращается, когда достигнуто предельное значение.  
@@ -159,7 +160,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает определенные входные столбцы данных и прогнозируемые столбцы, которые перечислены ниже в таблице. Дополнительные сведения о значении типов содержимого в модели интеллектуального анализа данных см. в разделе [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|столбцом|Типы содержимого|  
+|Столбец|Типы содержимого|  
 |------------|-------------------|  
 |Входной атрибут|Cyclical, Discrete, Discretized, Key, Table и Ordered|  
 |Прогнозируемый атрибут|Cyclical, Discrete, Discretized, Table, Ordered|  
@@ -167,9 +168,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Алгоритм взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Примеры запросов к модели взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для моделей взаимосвязей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9506938e-7f9f-4595-ad6d-98c8b0ce8395
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a24a4b19f20e28346456e3c0c53f39eaeb200b9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="invoke-processdimension-cmdlet"></a>Командлет Invoke-ProcessDimension
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Обработка измерения с использованием переменной конкретного типа обработки.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Обрабатывает измерение с использованием переменной конкретного типа обработки.  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
  `Invoke-ProcessDimension –DatabaseDimension <Microsoft.AnalysisServices.Dimension> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет Invoke-ProcessDimension обрабатывает указанное измерение. Необходимо указать тип обработки. Дополнительные сведения об обработке типов для измерения см. в разделе [Настройка параметров обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
 ## <a name="parameters"></a>Параметры  
@@ -92,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |Входные данные|Microsoft.AnalysisSevices.Dimension|  
-|Выходные данные|None|  
+|Выходные данные|Нет|  
   
 ## <a name="example-1"></a>Пример 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Dimensions\Account> Get-Item .| Invoke-ProcessDimension –ProcessType:ProcessDefault`  

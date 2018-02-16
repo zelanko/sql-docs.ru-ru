@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ae5acd43bb7d4bd4956cc5dae36e7dc15787a83f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Приведенные в этом разделе помогут настроить соединение семантической модели бизнес-Аналитики, который перенаправляет запрос к базе данных табличной модели на экземпляре служб Analysis Services за пределами фермы SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Сведения, приведенные в этом разделе, помогут настроить соединение семантической модели бизнес-аналитики, которое перенаправляется на базу данных табличной модели, запущенную в экземпляре служб Analysis Services за пределами фермы SharePoint.  
   
  После создания соединения семантической модели бизнес-аналитики и настройки разрешений SharePoint и служб Analysis Services это соединение можно использовать в качестве источника данных для отчетов Excel или [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_next"></a> Следующие шаги  
  После создания и обеспечения безопасности соединения семантической модели бизнес-аналитики его можно указать в качестве источника данных. Дополнительные сведения см. в разделе [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Соединение семантической модели бизнес-аналитики PowerPivot (BISM-файлы)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [Создание подключения между семантической моделью бизнес-аналитики и книгой Power Pivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

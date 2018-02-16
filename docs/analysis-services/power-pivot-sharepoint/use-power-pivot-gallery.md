@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c6397bfd177a5d5901fdda29f4b34c9f6b7ffa7d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-power-pivot-gallery"></a>Использование коллекции PowerPivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Коллекция — это специальная библиотека документов SharePoint, которая предоставляет широкие возможности просмотра и управления документами для опубликованных книг Excel и отчетов служб Reporting Services, содержащих [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — это специальная библиотека документов SharePoint. Она предлагает широкие возможности просмотра документов и управления ими для опубликованных книг Excel и отчетов служб Reporting Services, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 > [!NOTE]  
 >  В зависимости от конфигурации сервера в области предварительного просмотра для некоторых документов могут появляться предупреждения или сообщения об ошибках. Сообщения могут появляться, если для книги Excel задано автоматическое обновление данных при открытии. Сообщения с предупреждениями об обновлении данных отображаются в изображении предварительного просмотра, если в службе Excel настроена выдача таких предупреждений. Администратор фермы или службы может изменить параметры конфигурации, включив показ фактических листов при предварительном просмотре. Дополнительные сведения см. в разделе [Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="icons"></a> Значки в коллекции PowerPivot  
  Значки являются визуальным индикатором наличия контекста и состояния.  
   
-|Значок|Description|  
+|Значок|Описание|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|Значок песочных часов появляется во время формирования эскиза каждой страницы документа. Обновите страницу, чтобы отобразить обновленное изображение.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|Значок страниц появляется в тот момент, когда количество страниц книги или отчета превышает максимальное количество страниц, которое может быть отображено в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Для просмотра всех страниц необходимо пользоваться клиентским приложением.|  
@@ -165,7 +166,7 @@ ms.lasthandoff: 01/08/2018
   
  Тип содержимого **Документ коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** не добавляется автоматически в библиотеки документов. Вы не столкнетесь с этой проблемой, если вручную не включите неподдерживаемый тип содержимого.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Удаление коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
  [Создание и настройка коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Не удалось обновить данные для подключения к данным в книге
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Для книг Excel, содержащих [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данных, службы Excel Services возвращает эту ошибку, если он отправляет запрос на соединение [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] сервера и запрос завершается ошибкой.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Применительно к книгам Excel, содержащим данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , службы Excel возвращают эту ошибку, если при передаче запроса на соединение серверу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] запрос завершается ошибкой.  
   
 ## <a name="details"></a>Сведения  
   

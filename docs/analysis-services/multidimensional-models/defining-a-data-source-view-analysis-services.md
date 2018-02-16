@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Data Source View Wizard
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a64d57676b6b9c0fb36772dfce08ed0a137df19a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Определение представления источников данных (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Представление источника данных содержится логическая модель схемы, используемой [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов многомерных баз данных, а именно: кубы, измерения и структуры интеллектуального анализа данных. Представление источника данных — это определение метаданных, хранящееся в формате XML, для элементов схемы, используемых в унифицированной многомерной модели (UDM) и структурах интеллектуального анализа данных. Представление источника данных:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В представлении источников данных содержится логическая модель схемы, используемой объектами многомерной базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а именно кубы, измерения и структуры интеллектуального анализа данных. Представление источника данных — это определение метаданных, хранящееся в формате XML, для элементов схемы, используемых в унифицированной многомерной модели (UDM) и структурах интеллектуального анализа данных. Представление источника данных:  
   
 -   Содержит метаданные, представляющие выбранные объекты из одного или нескольких базовых источников данных, или метаданные, которые будут использоваться для формирования базового реляционного хранилища данных, если при формировании схемы используется нисходящий подход.  
   
@@ -125,7 +126,7 @@ ms.lasthandoff: 01/08/2018
   
  Мастер представлений источника данных использует ответ пользователя, чтобы сопоставить имена столбцов и создать связи между различными таблицами в DSV. Можно задать любой критерий из перечисленных в следующей таблице.  
   
-|Критерий совпадения имен|Description|  
+|Критерий совпадения имен|Описание|  
 |----------------------------|-----------------|  
 |**То же имя, что и у первичного ключа**|Имя внешнего ключевого столбца в исходной таблице совпадает с именем первичного ключевого столбца в целевой таблице. Например, внешний ключевой столбец `Order.CustomerID` тот же, что и первичный ключевой столбец `Customer.CustomerID`.|  
 |**То же имя, что и у целевой таблицы**|Имя внешнего ключевого столбца в исходной таблице совпадает с именем целевой таблицы. Например, внешний ключевой столбец `Order.Customer` тот же, что и первичный ключевой столбец `Customer.CustomerID`.|  
@@ -136,7 +137,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  После завершения работы мастера представлений источников данных можно добавить или удалить связи на панели схем конструктора представлений источников данных. Дополнительные сведения см. в разделе [Определение логических связей в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление или удаление таблиц или представлений в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [Определение логических первичных ключей в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [Определение именованных вычислений в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 06427f8e-89bb-4710-a0c1-dc5e42b7e95e
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ad434202093984f6064fe4bf80ba79e1b57c3cf8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lock-events-category"></a>Категория событий Lock
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Категория событий «события блокировки» содержит классы событий, описанные в следующей таблице.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Категория событий «События блокировки» содержит классы событий, описанные в следующей таблице.  
   
 |Класс событий|Идентификатор события|Description|  
 |-----------------|--------------|-----------------|  
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения о столбцах, связанных с каждым из классов событий «Блокировка», см. в разделе [Lock Events Data Columns](../../analysis-services/trace-events/lock-events-data-columns.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Спецификации максимальной вместимости (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В следующих таблицах приведены максимальные размеры и количества различных объектов, определенных в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] компонентов в разных режимах развертывания сервера.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В следующих таблицах приведены максимальные размеры и количества для различных объектов, определяемых в компонентах служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в разных режимах развертывания сервера.  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -38,10 +40,10 @@ ms.lasthandoff: 01/08/2018
   
  [Табличный (DeploymentMode = 2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>Многомерный и интеллектуальный анализ данных (DeploymentMode = 0)  
+##  <a name="bkmk_OLAP">Многомерный и интеллектуальный анализ данных (DeploymentMode = 0)</a>  
  Режим хранилища MOLAP, в котором хранятся как данные, так и метаданные, устанавливает дополнительные физические ограничения на размеры файлов. Максимальный размер файла хранилища строк по умолчанию равен 4 ГБ. Если для хранения строк требуются файлы большего размера, то можно выбрать другую архитектуру хранения строк. Дополнительные сведения см. в разделе [Настройка хранилища строк для измерений и секций](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
-|Object|Максимальный размер или количество|  
+|Объект|Максимальный размер или количество|  
 |------------|----------------------------|  
 |Баз данных в экземпляре|2^31-1 = 2,147,483,647|  
 |Измерений в базе данных|2^31-1 = 2,147,483,647|  
@@ -68,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения об ограничениях источника данных для оперативной аналитической обработки (OLAP) и интеллектуального анализа данных см. в разделе [поддерживаемые источники данных &#40; Службы SSAS — многомерные &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [Поддерживаемые источники данных &#40; Службы SSAS — многомерные &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), и [объекты ASSL и характеристики объектов](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
+##  <a name="bkmk_sharepoint">SharePoint (DeploymentMode = 1)</a>  
   
-|Object|Максимальный размер или количество|  
+|Объект|Максимальный размер или количество|  
 |------------|----------------------------|  
 |Баз данных в экземпляре|2^31-1 = 2,147,483,647|  
 |Таблицы в базе данных|2^31-1 = 2,147,483,647|  
@@ -86,10 +88,10 @@ ms.lasthandoff: 01/08/2018
 |Размер записи в исходном запросе|64K|  
 |Длина имен объектов|100 символов|  
   
-##  <a name="bkmk_vertipaq"></a>Табличный (DeploymentMode = 2)  
+##  <a name="bkmk_vertipaq">Табличный (DeploymentMode = 2)</a>  
 Ниже приведены теоретического ограничения. Производительность снизится в более низкие показатели.   
 
-|Object|Максимальный размер или количество|  
+|Объект|Максимальный размер или количество|  
 |------------|----------------------------|  
 |Баз данных в экземпляре|16,000|  
 |Общее количество таблиц и столбцов в базе данных|16,000|  
@@ -103,7 +105,7 @@ ms.lasthandoff: 01/08/2018
 |Размер записи в исходном запросе|64K|  
 |Длина имен объектов|512 символов|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Определение режима работы сервера экземпляра служб Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Общие свойства](../../../analysis-services/server-properties/general-properties.md)  
   

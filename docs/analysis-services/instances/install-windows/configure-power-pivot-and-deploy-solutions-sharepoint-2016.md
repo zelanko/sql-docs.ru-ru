@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Настройка Power Pivot и развертывание решений (SharePoint 2016)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Этом разделе описаны развертывание и настройка расширений среднего уровня [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] функции в [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] включая [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] коллекции, расписания обновления данных, панель управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2016** , чтобы выполнить следующее.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] , в том числе коллекции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , расписания обновления данных, панели управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2016** , чтобы выполнить следующее.  
   
 -   Развертывание файлов решения SharePoint.  
   

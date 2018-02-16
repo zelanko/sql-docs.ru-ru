@@ -19,19 +19,20 @@ helpviewer_keywords:
 - staging area schema options [Analysis Services]
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-the-database-schemas"></a>Основные сведения о схемах баз данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Мастер формирования схем создает ненормализованную реляционную схему для базы данных предметной области, на основе измерений и групп мер в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Мастер создает реляционную таблицу для каждого измерения (таблица измерения), в которой хранятся данные измерений, которую называют таблицей измерения, и реляционную таблицу для каждой группы мер (таблица фактов), в которой хранятся данные фактов. При создании реляционных таблиц мастер игнорирует связанные измерения, связанные группы мер и серверные измерения времени.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Мастер формирования схем создает ненормализованную реляционную схему для предметной области базы данных на основе измерений и групп мер служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Мастер создает реляционную таблицу для каждого измерения (таблица измерения), в которой хранятся данные измерений, которую называют таблицей измерения, и реляционную таблицу для каждой группы мер (таблица фактов), в которой хранятся данные фактов. При создании реляционных таблиц мастер игнорирует связанные измерения, связанные группы мер и серверные измерения времени.  
   
 ## <a name="validation"></a>Проверка  
  Перед созданием базовой реляционной схемы мастер формирования схем проверяет кубы служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и измерения. При обнаружении ошибок выполнение мастера останавливается, и выводится отчет об ошибках в окне «Список задач» в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Примеры ошибок, приводящих к остановке формирования:  
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Если в измерении, на котором основана таблица измерения, имеется несколько ключевых атрибутов, то возникает ошибка.  
   
- Translations  
+ Переводы  
  Мастер формирует отдельную таблицу для переведенных значений любого атрибута, для которого требуется столбец перевода. Мастер также создает отдельный столбец для каждого из требуемых языков.  
   
 ## <a name="fact-tables"></a>Таблицы фактов  
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
  Если выбрано задание ссылочной целостности, то между таблицами измерений и таблицами фактов создаются ограничения ссылочной целостности.  
   
- Translations  
+ Переводы  
  Мастер формирует отдельную таблицу для переведенных значений любого свойства в группе мер, для которого требуется столбец перевода. Мастер также создает отдельный столбец для каждого из требуемых языков.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Конвертация типов данных и длины по умолчанию  
@@ -100,8 +101,8 @@ ms.lasthandoff: 01/08/2018
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения о добавочном создании](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Управление изменениями в источниках данных и представлениях источников данных](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Управление изменениями для представления источников данных и источники данных](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

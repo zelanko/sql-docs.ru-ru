@@ -16,19 +16,20 @@ helpviewer_keywords:
 - event classes [Analysis Services], security audit
 - security events [Analysis Services]
 ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d78568fe6eda8384494fb1e1e064eed707065b38
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="security-audit-event-category"></a>Категория событий «Аудит безопасности»
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Категория событий «Аудит безопасности» содержит классы событий, описанные в следующей таблице.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Категория событий «Аудит безопасности» содержит классы событий, описанные в следующей таблице:  
   
 |Класс событий|Идентификатор события|Description|  
 |-----------------|--------------|-----------------|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения о столбцах, связанных с каждым из классов событий «Аудит безопасности», см. в разделе [Security Audit Data Columns](../../analysis-services/trace-events/security-audit-data-columns.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

@@ -11,36 +11,38 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>Набор строк DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Предоставляет сведения на уровне столбцов и сегментов о таблицах хранилища, используемых в базе данных служб Analysis Services, работающей в табличном или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] режиме. Этот набор строк используется главным образом для анализа и устранения неполадок.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Предоставляет сведения на уровне столбцов и сегментов о таблицах хранилища, используемых в базе данных служб Analysis Services, работающей в табличном или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] режиме. Этот набор строк используется главным образом для анализа и устранения неполадок.  
   
  **Применимо к:** табличные модели  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** набор строк содержит следующие столбцы.  
   
-|**Имя столбца**|**Индикатор типа**|**Ограничение**|**Описание**|  
+|**Имя столбца**|**Индикатор типа**|**Ограничение**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Да|Указывает табличную базу данных.<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** строк может быть ограничен с помощью этого столбца. Если отсутствует, используется текущая база данных.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Да|Указывает табличную базу данных.<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** строк может быть ограничен с помощью этого столбца. Если отсутствует, используется текущая база данных.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Да|Имя модели.<br /><br /> С помощью этого столбца можно ограничить набор строк **DISCOVER_STORAGE_TABLES** .|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Да|Имя группы мер.|  
 |**ИМЯ_РАЗДЕЛА**|**DBTYPE_WSTR**|Да|Имя секции.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Имя измерения.|  
 |**TABLE_ID**|**DBTYPE_WSTR**||Внутренний идентификатор сегмента таблицы.|  
-|**ИДЕНТИФИКАТОР COLUMN_ID**|**DBTYPE_WSTR**||Внутренний идентификатор столбца.|  
+|**COLUMN_ID**|**DBTYPE_WSTR**||Внутренний идентификатор столбца.|  
 |**СЕГМЕНТ _ЧИСЛО**|**DBTYPE_I8**||Порядковый номер сегмента в таблице.|  
 |**TABLE_PARTTION_NUMBER**|**DBTYPE_I8**||Порядковый номер секции.|  
 |**RECORDS_COUNT**|**DBTYPE_I8**||Количество записей в секции.|  
@@ -72,7 +74,7 @@ ORDER BY TABLE_ID
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы служб Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [Службы Analysis Services наборы строк схемы](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

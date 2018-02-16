@@ -20,16 +20,17 @@ ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Установка служб Analysis Services в режиме Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе описываются процедуры установки одиночного сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] режиме для развертывания SharePoint. Эти шаги охватывают запуск мастера установки SQL Server, а также выполнение дополнительных задач по настройке с использованием центра администрирования SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В данном разделе описываются процедуры установки одного сервера служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для развертывания SharePoint. Эти шаги охватывают запуск мастера установки SQL Server, а также выполнение дополнительных задач по настройке с использованием центра администрирования SharePoint.  
   
 ##  <a name="bkmk_background"></a> Историческая справка  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint представляет собой набор служб среднего уровня и серверных служб, обеспечивающих доступ к данным [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме SharePoint 2016 или SharePoint 2013.  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint представляет собой набор служб среднего уровня и серверных служб, обеспечивающих доступ к данным [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме SharePoint 2016 или SharePoint 2013.  
   
 -   **Серверные службы** . Если для создания книг с аналитическими данными используется [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для Excel, то для доступа к этим данным в серверной среде потребуется [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint. Вы можете запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на компьютере, где установлен SharePoint Server или на другом компьютере, где нет ПО SharePoint. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] нисколько не зависят от SharePoint.  
   

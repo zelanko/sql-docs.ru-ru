@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Session Events event category
 - session events [Analysis Services]
 ms.assetid: 9d42e4e4-26ed-4719-9c80-8cf9189451d1
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f8fac25235fe11aca4e5e45cd908b0a5100e28c4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="session-events-event-category"></a>категория события «События сеанса»
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Категория событий «события сеанса» содержит классы событий, описанные в следующей таблице.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Категория событий «События сеанса» содержит классы событий, описанные в следующей таблице.  
   
 |Класс событий|Идентификатор события|Description|  
 |-----------------|--------------|-----------------|  
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения о столбцах, связанных с каждым из классов событий «События сеанса», см. в разделе [Session Events Data Columns](../../analysis-services/trace-events/session-events-data-columns.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

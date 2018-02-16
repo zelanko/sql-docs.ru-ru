@@ -16,19 +16,20 @@ helpviewer_keywords:
 - data source views [Analysis Services], named calculations
 - named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 62d9d96f3d0fc373ba83149789487706fe8354c7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Определение именованных вычислений в представлении источника данных (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Именованное вычисление является выражением SQL, представленным в виде вычисляемого столбца. Данное выражение выглядит и работает как столбец таблицы. Именованное вычисление позволяет расширить реляционную схему таблиц или представлений, существующих в представлении источника данных, не изменяя таблицы или представления в базовом источнике данных. Рассмотрим следующие примеры:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Именованное вычисление является выражением SQL, представленным в виде вычисляемого столбца. Данное выражение выглядит и работает как столбец таблицы. Именованное вычисление позволяет расширить реляционную схему таблиц или представлений, существующих в представлении источника данных, не изменяя таблицы или представления в базовом источнике данных. Рассмотрим следующие примеры:  
   
 -   Создайте одно именованное вычисление, получаемое из нескольких столбцов таблицы фактов (например, вычисление суммы налога путем умножения налоговой ставки на стоимость продажи).  
   
@@ -89,7 +90,7 @@ FROM
 ## <a name="delete-a-named-calculation"></a>Удаление именованного вычисления  
  При попытке удалить именованное вычисление приложение выдаст список объектов, определенных в проекте или базе данных, которые при удалении станут недействительными. Внимательно просмотрите список перед удалением вычисления.  
   
-## <a name="see-also"></a>См. также:  
- [Определение именованных запросов в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Определение именованных запросов в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

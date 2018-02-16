@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Настройка служб Analysis Services для ограниченного делегирования Kerberos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При настройке служб Analysis Services для проверки подлинности Kerberos, то скорее всего, потребуется добиться одного или обоих приведенных ниже результатов: служб Analysis Services олицетворять пользователя при запросе данных; или служб Analysis Services делегировать удостоверение пользователя к службе низкого уровня. У каждого сценария есть свои требования к конфигурации. Для обоих сценариев необходима проверка, чтобы убедиться в правильности настройки.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Во время настройки служб Analysis Services для проверки подлинности Kerberos, скорее всего, потребуется добиться одного или обоих приведенных ниже результатов: олицетворения пользовательского удостоверения с помощью служб Analysis Services для доступа к данным или делегирования пользовательского удостоверения с помощью служб Analysis Services в службу более низкого уровня. У каждого сценария есть свои требования к конфигурации. Для обоих сценариев необходима проверка, чтобы убедиться в правильности настройки.  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_impersonate"></a> Разрешение службам Analysis Services выполнять олицетворение пользовательского удостоверения  
  Чтобы разрешить службе более высокого уровня, например службам Reporting Services, IIS или SharePoint, выполнять олицетворение пользовательского удостоверения для работы со службами Analysis Services, следует настроить ограниченное делегирование Kerberos для таких служб. В этом случае службы Analysis Services олицетворяют текущего пользователя с использованием удостоверения, предоставленного делегирующей службой, и возвращают результаты на основе членства пользовательского удостоверения в роли.  
   
-|Задача|Description|  
+|Задача|Описание|  
 |----------|-----------------|  
 |Этап 1. Убедитесь, что учетные записи подходят для делегирования|Убедитесь, что учетные записи, используемые для запуска служб, имеют необходимые свойства в Active Directory. Учетные записи службы в Active Directory должны быть отмечены как критические учетные записи или исключены явным образом из сценариев делегирования. Дополнительные сведения см. в разделе [Основные сведения об учетных записях пользователей](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> Примечание. Как правило, все учетные записи и серверы должны принадлежать к одному домену Active Directory или доверенным доменам одного леса. Но поскольку Windows Server 2012 поддерживает делегирование через across границы домена, можно настроить ограниченное делегирование Kerberos через границы домена, если домен имеет функциональный уровень Windows Server 2012. Другой вариант — настроить службы Analysis Services для доступа по HTTP-протоколу и использовать методы проверки подлинности служб IIS через клиентское соединение. Дополнительные сведения см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).|  
 |Этап 2. Регистрация имени участника-службы|Прежде чем задать ограниченное делегирование, необходимо зарегистрировать имя участника-службы (SPN) для экземпляра служб Analysis Services. Имя участника-службы Analysis Services необходимо при настройке ограниченного делегирования Kerberos для служб среднего уровня. Инструкции см. в разделе [SPN registration for an Analysis Services instance](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md) .<br /><br /> Имя участника-службы задает уникальный идентификатор службы в домене, настроенном для проверки подлинности Kerberos. Клиентские соединения с использованием встроенной безопасности часто запрашивают имя участника-службы в составе проверки подлинности SSPI. Запрос перенаправляется к контроллеру домена (DC) Active Directory, а служба проверки подлинности Kerberos предоставляет билет, если имя участника-службы, указанное клиентом, имеет совпадающую регистрацию имени участника-службы в Active Directory.|  
@@ -117,11 +118,11 @@ ms.lasthandoff: 01/08/2018
   
  Кроме того, полное описание каждого параметра во вкладке "Делегирование" диалогового окна свойств объекта Active Directory см. в разделе [Самое запутанное диалоговое окно Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) . В этой статье также объясняется, как использовать LDP для тестирования и интерпретации результатов тестирования.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Проверка подлинности для бизнес-аналитики Майкрософт и делегирование удостоверений](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Взаимная проверка подлинности с помощью Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
+ [Подключитесь к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Регистрация имени участника-службы для экземпляра служб Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [Свойства строки подключения (службы Analysis Services)](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Свойства строки соединения &#40; Службы Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

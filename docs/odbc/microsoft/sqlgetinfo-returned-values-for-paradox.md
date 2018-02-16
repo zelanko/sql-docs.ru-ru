@@ -25,10 +25,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 12760717293ba8ea463ff53b78bfb49838a6eaa6
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>Значения, возвращаемые для Paradox SQLGetInfo
 В следующей таблице перечислены языка C# defines для *fInfoType* аргумент и соответствующие значения, возвращаемые методом **SQLGetInfo**. Эти сведения можно получить, передав перечисленных языка C# defines **SQLGetInfo** в *fInfoType* аргумент. Дополнительные сведения о значениях, возвращаемых **SQLGetInfo**, в разделе *справочнике программиста ODBC*.  

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - expressions [MDX], scripts
 - scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 22da0a7df618db320214f19a73e2047ea4b37922
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Базовый скрипт многомерных выражений (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Скрипт Многомерных выражений определяет процесс вычислений для куба в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Существует два типа скриптов многомерных выражений.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Скрипт многомерных выражений определяет процесс вычисления куба в службах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Существует два типа скриптов многомерных выражений.  
   
  **Скрипт многомерных выражений по умолчанию**  
  При создании куба службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] создают стандартный скрипт многомерных выражений для этого куба. В этом скрипте определяется этап вычисления для всего куба.  
@@ -58,18 +59,18 @@ ms.lasthandoff: 01/08/2018
  Все инструкции сценариев многомерных выражений  
  Инструкции скриптов многомерных выражений управляют контекстом и областью вычислений, а также поведением других инструкций в скрипте многомерных выражений. В эту категорию входят следующие инструкции:  
   
--   [CALCULATE](../../../mdx/mdx-scripting-calculate.md)  
+-   [ВЫЧИСЛЕНИЯ](../../../mdx/mdx-scripting-calculate.md)  
   
--   [FREEZE](../../../mdx/mdx-scripting-freeze.md)  
+-   [ЗАКРЕПИТЬ](../../../mdx/mdx-scripting-freeze.md)  
   
--   [SCOPE](../../../mdx/mdx-scripting-scope.md)  
+-   [ОБЛАСТЬ ДЕЙСТВИЯ](../../../mdx/mdx-scripting-scope.md)  
   
  Дополнительные сведения об инструкциях сценариев многомерных выражений см. в разделе [Инструкции сценариев многомерных выражений (многомерные выражения)](../../../mdx/mdx-scripting-statements-mdx.md).  
   
- [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md)  
+ [СОЗДАНИЕ ЧЛЕНА](../../../mdx/mdx-data-definition-create-member.md)  
  Инструкция CREATE MEMBER служит для создания вычисляемых элементов. Дополнительные сведения о создании вычисляемых элементов см. в разделе [Создание вычисляемых элементов в многомерных выражениях (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
- [CREATE SET](../../../mdx/mdx-data-definition-create-set.md)  
+ [СОЗДАТЬ НАБОР](../../../mdx/mdx-data-definition-create-set.md)  
  Инструкция CREATE SET служит для создания именованных наборов. Дополнительные сведения о создании именованных наборов см. в разделе [Построение именованных наборов в многомерных выражениях (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
  Условные инструкции  
@@ -95,8 +96,8 @@ ms.lasthandoff: 01/08/2018
 <Natural hierarchy member> ::= <Natural hierarchy>.<identifier>[.<identifier>...]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по языку многомерных выражений (многомерные выражения)](../../../mdx/mdx-language-reference-mdx.md)   
- [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по языку многомерных Выражений &#40; Многомерные Выражения &#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Основные понятия о сценариях многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

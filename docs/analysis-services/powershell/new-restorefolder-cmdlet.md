@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5938b3a9-6412-45fc-86f8-264651d01598
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 20e512bbc1ac3ba7c2a6b6604032c047f83d10cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorefolder-cmdlet"></a>Командлет New-RestoreFolder
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Восстанавливает исходную папку в новую папку.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Восстанавливает исходную папку в новую.  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
  Общие параметры, такие как –Verbose, -Debug, сообщения управления ошибками и предупреждениями, -Whatif и –Confir документированы в справке по Windows PowerShell. Дополнительные сведения см. в разделе [Об общих параметрах](http://technet.microsoft.com/library/dd315352.aspx).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет New-RestoreFolder используется для создания новой папки на основе имени исходной папки.  
   
 ## <a name="parameters"></a>Параметры  
@@ -106,5 +107,5 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |Входные данные||  
-|Выходные данные|None|  
+|Выходные данные|Нет|  
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Связанные проекты для решений интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Как минимум, необходимо для решения интеллектуального анализа данных является проекта интеллектуального анализа данных, который определяет источники данных, представления источников данных, структур интеллектуального анализа данных и моделей интеллектуального анализа данных. Однако, если модели интеллектуального анализа данных используются для каждодневного принятия решений, важно, чтобы интеллектуальный анализ данных интегрировался с другой частью решения для прогнозирующего анализа, включая следующие процессы и компоненты.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Для решения интеллектуального анализа данных требуется, как минимум, проект интеллектуального анализа данных, определяющий источники данных, представления источников данных, структуры и модели интеллектуального анализа данных. Однако, если модели интеллектуального анализа данных используются для каждодневного принятия решений, важно, чтобы интеллектуальный анализ данных интегрировался с другой частью решения для прогнозирующего анализа, включая следующие процессы и компоненты.  
   
 -   Подготовка и выбор данных и переменных Включает очистку данных, управление метаданными и интеграцию нескольких источников данных, а также преобразование, слияние данных и загрузку в хранилище данных.  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
  В этом разделе описаны другие функции [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которые часто являются частью решения прогнозирующего анализа для поддержки процессов подготовки данных и интеллектуального анализа данных или для предоставления пользователям необходимых инструментов для анализа и действий.  
   
- [Службы интеграции](#bkmk_SSIS)  
+ [Службы Integration Services](#bkmk_SSIS)  
   
  [Службы Reporting Services](#bkmk_SSRS)  
   
@@ -63,33 +64,33 @@ ms.lasthandoff: 01/08/2018
   
  **Компоненты потока управления**  
   
--   [Задача «Выполнение инструкции DDL служб Analysis Services»](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Службы Analysis Services задача выполнения DDL](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Задача «Обработка средствами Analysis Services»](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Службы Analysis Services обработки задачи](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
--   [Задача управления CDC](../../integration-services/control-flow/cdc-control-task.md)  
+-   [Задача «Управление CDC»](../../integration-services/control-flow/cdc-control-task.md)  
   
 -   [Очистка данных](../../data-quality-services/data-cleansing.md)  
   
 -   [Задача «Запрос интеллектуального анализа данных»](../../integration-services/control-flow/data-mining-query-task.md)  
   
--   [Задача «Профилирование данных»](../../integration-services/control-flow/data-profiling-task.md)  
+-   [Задача «профилирование данных»](../../integration-services/control-flow/data-profiling-task.md)  
   
  **Компоненты потока данных**  
   
 -   [Компоненты потока CDC](../../integration-services/data-flow/cdc-flow-components.md)  
   
--   [Преобразование «Условное разбиение»](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
+-   [Преобразование "Условное разбиение"](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
 -   [Преобразование «Конвертация данных»](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
 -   [Назначение «Обучение модели интеллектуального анализа данных»](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Преобразование «Запрос интеллектуального анализа данных»](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Преобразование «запрос интеллектуального анализа данных»](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
--   [Преобразование «Производный столбец»](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
+-   [Преобразование "Производный столбец"](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Преобразование «Процентная выборка»](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
+-   [Преобразование "Процентная выборка"](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
 -   [Преобразование «Извлечение терминов»](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
@@ -108,11 +109,11 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения об использовании служб Reporting Services с запросами DMX в качестве источника данных можно найти по следующим ссылкам:  
   
- [Получение данных из модели интеллектуального анализа данных (расширения интеллектуального анализа данных) (службы SSRS)](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Получить данные из модели интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; &#40; Службы SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ [Analysis Services DMX пользовательский интерфейс конструктора запросов](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных &#40; Службы SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Однако использовать DMX в качестве источника данных необязательно. Компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для интеллектуального анализа данных также позволяют сохранить прогнозирующий запрос в реляционной базе данных. Если существует рабочий поток для обновления моделей с помощью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], сохранение прогнозов и других результатов запросов интеллектуального анализа данных в SQL Server позволяет использовать для получения отчетов [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] , а также другие инструменты, не поддерживающие DMX.  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 01/08/2018
 -   Не все полнотекстовые языки поддерживают семантическое индексирование. Список поддерживаемых языков см. в разделе [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Решения многомерной модели (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Решения табличных моделей (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Решения многомерной модели &#40; Службы SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Решения табличных моделей &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - converting currency
 - currency dimensions [Analysis Services]
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2cb2fb0b8fc1785eb0e58a5ea0d609a6d3c1bd0c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---create-a-currency-type-dimension"></a>Измерения базы данных — Создание измерения типа Currency
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], измерение типа валюты является измерением, атрибуты которого представляют собой список валют для целей финансовой отчетности.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]измерение типа валюты является измерением, атрибуты которого представляют собой список валют для целей финансовой отчетности.  
   
  Измерение валюты позволяет добавлять возможности конвертации валюты в куб в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы добавить в куб конвертацию валюты, воспользуйтесь мастером бизнес-аналитики для определения команды скрипта многомерного выражения, которая конвертирует меры валюты в значения, соответствующие локали клиентского приложения. Для создания скрипта многомерных выражений мастеру бизнес-аналитики необходимы следующие данные:  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="defining-account-intelligence-with-the-business-intelligence-wizard"></a>Определение логики операций со счетами с помощью мастера бизнес-аналитики  
  После определения измерения счетов и его добавления в куб можно, воспользовавшись мастером бизнес-аналитики, добавить функционал логики операций со счетами, например идентифицирующие типы учетной записи и типы сопоставления, к измерению. Дополнительные сведения см. в разделе [Добавление логики операций со счетами к измерению](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Справка F1 мастера бизнес-аналитики](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [Типы измерений](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
