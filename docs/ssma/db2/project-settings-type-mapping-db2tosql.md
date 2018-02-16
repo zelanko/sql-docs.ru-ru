@@ -22,10 +22,10 @@ ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 6ab07bb5ad3932c45dacb7aa1b359083f05ec9bf
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Параметры (сопоставление типов) проекта (DB2ToSQL)
 На странице сопоставление типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/13/2018
 **Исходный тип**  
 Сопоставленный тип данных DB2.  
   
-**Тип целевого объекта**  
+Тип целевого объекта  
 Целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных для указанного типа данных DB2.  
   
 См. в следующем разделе для SSMA по умолчанию для сопоставления типа DB2 таблицы.  

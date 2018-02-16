@@ -19,10 +19,10 @@ ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
 ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Параметры (сопоставление типов) проекта (OracleToSQL)
 На странице сопоставление типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/13/2018
 **Исходный тип**  
 Сопоставленный тип данных Oracle.  
   
-**Тип целевого объекта**  
+Тип целевого объекта  
 Целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных для указанного типа данных Oracle.  
   
 См. в следующем разделе для SSMA по умолчанию для сопоставления типов Oracle в таблицах.  
