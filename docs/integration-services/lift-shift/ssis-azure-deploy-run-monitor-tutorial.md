@@ -1,6 +1,6 @@
 ---
 title: "Развертывание, запуск и отслеживание пакета служб SSIS в Azure | Документы Майкрософт"
-ms.date: 09/25/2017
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,21 +8,22 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bf9df198105549f481dda8472f7142533fa8f23
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Развертывание, запуск и отслеживание пакета служб SSIS в Azure
 Этот учебник рассказывает, как развернуть проект служб SQL Server Integration Services в базе данных каталога SSISDB, расположенной в базе данных SQL Azure, запустить пакет в среде Integration Runtime для Azure-SSIS и отслеживать его выполнение.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Прежде чем начать, убедитесь в наличии SQL Server Management Studio версии 17.2 или более поздней. Чтобы скачать последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -44,8 +45,8 @@ ms.lasthandoff: 12/01/2017
    | **Тип сервера** | Компонент Database Engine | Это значение обязательно. |
    | **Имя сервера** | Полное имя сервера | Имя должно быть в следующем формате: **mysqldbserver.database.windows.net**. Если вам нужно узнать имя сервера, см. раздел [Подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md). |
    | **Проверка подлинности** | Проверка подлинности SQL Server | В этом кратком руководстве используется проверка подлинности SQL. |
-   | **Имя входа** | Учетная запись администратора сервера | Это учетная запись, которая была указана при создании сервера. |
-   | **Пароль** | Пароль для учетной записи администратора сервера | Это пароль, который был указан при создании сервера. |
+   | **Имя входа** | Учетная запись администратора сервера | Учетная запись, которая была указана при создании сервера. |
+   | **Пароль** | Пароль для учетной записи администратора сервера | Пароль, который был указан при создании сервера. |
 
 3. **Подключитесь к базе данных SSISDB**. Чтобы развернуть диалоговое окно **Соединение с сервером**, выберите **Параметры**. В развернутом окне **Соединение с сервером** откройте вкладку **Свойства подключения**. В поле **Подключение к базе данных** выберите или введите `SSISDB`.
 
@@ -53,7 +54,7 @@ ms.lasthandoff: 12/01/2017
 
 5. В обозревателе объектов разверните узел **Каталоги служб Integration Services** и затем узел **SSISDB** для просмотра объектов в базе данных каталога служб SSIS.
 
-## <a name="deploy-a-project"></a>Развертывание проекта
+## <a name="deploy-a-project-with-the-deployment-wizard"></a>Развертывание проекта с помощью мастера развертываний
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>Запуск мастера развертывания Integration Services
 1. В обозревателе объектов SSMS разверните узлы **Каталоги служб Integration Services** и **SSISDB**, а затем папку проекта.
@@ -78,11 +79,75 @@ ms.lasthandoff: 12/01/2017
 4.  Просмотрите выбранные параметры на странице **Проверка**.
     -   Вы можете изменить выбранные параметры, нажав кнопку **Назад** или кнопку любого из шагов на левой панели.
     -   Щелкните **Развернуть**, чтобы начать развертывание.
-  
+
+    > ![ПРИМЕЧАНИЕ] Если появляется сообщение об ошибке **Нет активного агента рабочей роли (поставщик данных .Net SqlClient)**, убедитесь в том, что запущена среда выполнения интеграции Azure и служб SSIS. Эта ошибка возникает при попытке выполнить развертывание, когда среда выполнения интеграции Azure и служб SSIS остановлена.
+
 5.  После завершения развертывания появится страница **Результаты**. На ней отображается состояние выполнения каждого действия.
     -   Если действие не выполнено, нажмите кнопку **Ошибка** в столбце **Результат** для отображения описания ошибки.
     -   Чтобы сохранить результаты в XML-файл при необходимости, нажмите кнопку **Сохранить отчет...**.
     -   Нажмите кнопку **Закрыть**, чтобы выйти из мастера.
+
+## <a name="deploy-a-project-with-powershell"></a>Развертывание проекта с помощью PowerShell
+
+Чтобы развернуть проект с помощью PowerShell в базе данных SSISDB, размещенной в базе данных SQL Azure, приспособьте следующий скрипт под свои требования:
+
+```powershell
+# Variables
+$ProjectFilePath = "C:\<folder>"
+$SSISDBServerEndpoint = "<servername>.database.windows.net"
+$SSISDBServerAdminUserName = "<username>"
+$SSISDBServerAdminPassword = "<password>"
+
+# Load the IntegrationServices Assembly
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices") | Out-Null;
+
+# Store the IntegrationServices Assembly namespace to avoid typing it every time
+$ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"
+
+Write-Host "Connecting to server ..."
+
+# Create a connection to the server
+$sqlConnectionString = "Data Source=" + $SSISDBServerEndpoint + ";User ID="+ $SSISDBServerAdminUserName +";Password="+ $SSISDBServerAdminPassword + ";Initial Catalog=SSISDB"
+$sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString
+
+# Create the Integration Services object
+$integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection
+
+# Get the catalog
+$catalog = $integrationServices.Catalogs['SSISDB']
+
+write-host "Enumerating all folders..."
+
+$folders = ls -Path $ProjectFilePath -Directory
+
+if ($folders.Count -gt 0)
+{
+    foreach ($filefolder in $folders)
+    {
+        Write-Host "Creating Folder " $filefolder.Name " ..."
+
+        # Create a new folder
+        $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
+        $folder.Create()
+
+        $projects = ls -Path $filefolder.FullName -File -Filter *.ispac
+        if ($projects.Count -gt 0)
+        {
+            foreach($projectfile in $projects)
+            {
+                $projectfilename = $projectfile.Name.Replace(".ispac", "")
+                Write-Host "Deploying " $projectfilename " project ..."
+
+                # Read the project file, and deploy it to the folder
+                [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)
+                $folder.DeployProject($projectfilename, $projectFileContent)
+            }
+        }
+    }
+}
+
+Write-Host "All done." 
+```
 
 ## <a name="run-a-package"></a>Запуск пакета
 

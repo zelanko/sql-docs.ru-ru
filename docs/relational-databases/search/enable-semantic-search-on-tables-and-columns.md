@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: semantic search [SQL Server], enabling
+helpviewer_keywords:
+- semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2064da501f20a9e27f6d06d018f91a1eda4cb1b0
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 0de385730d9999a2943f9599202d717fa7049152
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Включение семантического поиска на таблицы и столбцы
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Описывается способ включения или отключения статистической семантической индексации в выбранных столбцах, содержащих документы или текст.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Описывает способ включения или отключения статистического семантического индексирования в выбранных столбцах, содержащих документы или текст.  
   
  При выполнении статистического семантического поиска используются индексы, полученные при полнотекстовом поиске, а также создаются дополнительные индексы. Из-за этой зависимости от полнотекстового поиска приходится создавать при определении нового или изменении существующего полнотекстового индекса новый семантический индекс. Вы можете создать новый семантический индекс с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или с помощью мастера полнотекстового индексирования и других диалоговых окон среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], как описано в данном разделе.  
   
@@ -162,7 +165,7 @@ GO
 Для удаления семантического индексирования при изменении существующего полнотекстового индекса используется инструкция **ALTER FULLTEXT INDEX** . Также можно удалить семантическое индексирование с помощью различных диалоговых окон в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Удалите семантический индекс с помощью Transact-SQL  
-Для удаления семантического индексирования только из столбца или столбцов вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** . С помощью одной инструкции **ALTER** можно удалить индексирование из нескольких столбцов.  
+Для удаления семантического индексирования только из столбца или столбцов вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***имя_столбца***DROP STATISTICAL_SEMANTICS**. С помощью одной инструкции **ALTER** можно удалить индексирование из нескольких столбцов.  
   
 ```sql  
 USE database_name  
@@ -174,7 +177,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-Для удаления семантического и полнотекстового индексирования из столбца вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***column_name***DROP** .  
+Для удаления семантического и полнотекстового индексирования из столбца вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***имя_столбца***DROP**.  
   
 ```sql  
 USE database_name  

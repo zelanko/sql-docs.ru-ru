@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dea4f2872a3d60bc49b9cd028a3c19b32f7e3ce7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f77e69ed4950e71302ef55d161fea96970789ea
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Этот раздел описывает, как задать или изменить учетную запись службы для службы SQL Full-text Filter Daemon Launcher (MSSQLFDLauncher) с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Учетной записью службы по умолчанию, используемой программой установки SQL Server, является `NT Service\MSSQLFDLauncher`.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Здесь объясняется, как задать или изменить учетную запись службы для службы запуска управляющей программы полнотекстовой фильтрации SQL Server (MSSQLFDLauncher) при использовании диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Учетной записью службы по умолчанию, используемой программой установки SQL Server, является `NT Service\MSSQLFDLauncher`.
   
   
 ## <a name="about-the-sql-full-text-filter-daemon-launcher-service"></a>Сведения о службе средства запуска управляющей программы для полнотекстовой фильтрации SQL
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  В меню **Пуск** наведите указатель мыши на пункт **Все программы**, разверните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], а затем щелкните **Диспетчер конфигурации SQL Server 2016**.  
   
-2.  В окне **Диспетчер конфигурации SQL Server**щелкните **Службы SQL Server**, щелкните правой кнопкой мыши элемент **Программа запуска управляющей программы полнотекстовой фильтрации (SQL) (***имя экземпляра***)**, а затем выберите пункт **Свойства**.  
+2.  В окне **Диспетчер конфигурации SQL Server** щелкните **Службы SQL Server**, щелкните правой кнопкой мыши элемент **Программа запуска управляющей программы полнотекстовой фильтрации (SQL) (***имя экземпляра***)**, а затем выберите пункт **Свойства**.  
   
 3.  Перейдите на вкладку **Вход** диалогового окна, а затем выберите или введите учетную запись для процессов, которые запускаются службой запуска управляющей программы полнотекстовой фильтрации SQL.  
   

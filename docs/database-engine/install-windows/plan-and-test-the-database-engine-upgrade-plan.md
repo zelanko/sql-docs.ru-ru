@@ -8,32 +8,36 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd45301f5ce4497a672ffd4a684f972b08ac8013
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a10e7d35aa5a72f9dcc7ba34b11b6486fb9ac1cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Составление и тестирование плана обновления ядра СУБД
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для выполнения успешного обновления [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], независимо от подхода, необходимо соответствующее планирование.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ Для выполнения успешного обновления [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , независимо от подхода, необходимо соответствующее планирование.  
   
 ## <a name="release-notes-and-known-upgrade-issues"></a>Заметки о выпуске и известные проблемы при обновлении  
  Прежде чем приступать к обновлению [!INCLUDE[ssDE](../../includes/ssde-md.md)], ознакомьтесь с разделами:
 
 - [Заметки о выпуске SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
 - [Заметки о выпуске SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
-- [Обратная совместимость ядра СУБД SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
+- Статья [Обратная совместимость ядра СУБД SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
 ## <a name="pre-upgrade-planning-checklist"></a>Контрольный список планирования обновления  
- Перед обновлением [!INCLUDE[ssDE](../../includes/ssde-md.md)]просмотрите следующий контрольный список, а также связанные разделы. Сведения в этих разделах применимы ко всем обновлениям независимо от метода обновления. Они помогут вам определить оптимальный метод обновления: последовательное обновление, обновление путем новой установки или обновление на месте. Например, вы не можете выполнить обновление на месте или последовательное обновление при обновлении операционной системы, SQL Server 2005 или 32-разрядной версии SQL Server. Дерево принятия решений см. в разделе [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+ Перед обновлением [!INCLUDE[ssDE](../../includes/ssde-md.md)]просмотрите приведенный ниже контрольный список, а также связанные статьи. Сведения в этих статьях применимы ко всем обновлениям независимо от метода обновления. Они помогут вам определить оптимальный метод обновления: последовательное обновление, обновление путем новой установки или обновление на месте. Например, вы не можете выполнить обновление на месте или последовательное обновление при обновлении операционной системы, SQL Server 2005 или 32-разрядной версии SQL Server. Дерево принятия решений см. в разделе [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
 -   **Требования к оборудованию и программному обеспечению** . Ознакомьтесь с требованиями к оборудованию и ПО для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти требования описываются в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). В ходе планирования обновления необходимо рассмотреть обновление оборудования (новое оборудование работает быстрее и может позволить сократить число лицензий, например благодаря меньшему количеству процессоров или консолидации баз данных и серверов) и обновление операционной системы. Такие изменения оборудования и программного обеспечения влияют на выбор метода обновления.  
   
@@ -52,7 +56,7 @@ ms.lasthandoff: 01/18/2018
    >[!NOTE]
    >Предыдущий список также применяется к [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)].
   
--   **Сторонние компоненты** . Проверьте совместимость сторонних компонентов, таких как интегрированное резервное копирование.  
+-   **Сторонние компоненты**. Проверьте совместимость сторонних компонентов, таких как интегрированное резервное копирование.  
   
 -   **Целевая среда** . Убедитесь, что целевая среда соответствует требованиям к оборудованию и программному обеспечению, а также может поддерживать требования исходной системы. Например, обновление может включать консолидацию нескольких экземпляров SQL Server в один новый экземпляр [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] или виртуализацию среды [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с преобразованием в частное или общедоступное облако.  
   
@@ -61,7 +65,7 @@ ms.lasthandoff: 01/18/2018
     > [!NOTE]  
     >  При обновлении [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] с предыдущей версии выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise выберите "Enterprise Edition: лицензирование по числу ядер" и "Enterprise Edition". Эти выпуски Enterprise отличаются только режимом лицензирования. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
--   **Обратная совместимость** . Ознакомьтесь с разделом, посвященным обратной совместимости ядра СУБД [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] , в котором описываются изменения в поведении между [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] и версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которую вы обновляете. См. раздел [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
+-   **Обратная совместимость**. Ознакомьтесь со статьей, посвященной обратной совместимости ядра СУБД [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)], в которой описываются изменения в поведении между [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] и версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которую вы обновляете. См. раздел [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
 -   **Помощник по обновлению**  . Запустите помощник по обновлению [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] . Он поможет выявить проблемы, которые могут блокировать процесс обновления или требовать изменения существующих сценариев или приложений из-за критических изменений. [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] содержит новую версию помощника по обновлению, дающего возможность пользователям подготовиться к обновлению существующей системы.  Кроме того, это средство включает функцию проверки существующих баз данных на предмет поддержки новых функций (таких как таблицы Stretch) после завершения обновления.   
     Помощник по обновлению [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]можно скачать  [здесь](https://www.microsoft.com/en-us/download/details.aspx?id=48119).  

@@ -8,7 +8,8 @@ ms.component: logs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - flushing pages
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3505f3976f56af67a939650d474b85b4adb63c20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b46508013b66ab14175b0edc2710c9c98ed901a9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-checkpoints-sql-server"></a>Контрольные точки базы данных (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] *Контрольная точка* создает известную надежную точку, с которой [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] может начать применение изменений, содержащихся в журнале, во время восстановления после непредвиденного отключения или аварийного завершения.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+*Контрольная точка* создает известную надежную точку, с которой [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] может начать применение изменений, содержащихся в журнале, во время восстановления после непредвиденного отключения или аварии.  
  
   
 ##  <a name="Overview"></a> Обзор   
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] поддерживает несколько типов контрольных точек: автоматические, косвенные, ручные и внутренние. Следующая таблица содержит сводку типов **контрольных точек**.
   
-|Название|[!INCLUDE[tsql](../../includes/tsql-md.md)] Интерфейс|Описание|  
+|Имя|[!INCLUDE[tsql](../../includes/tsql-md.md)] Интерфейс|Description|  
 |----------|----------------------------------|-----------------|  
 |Автоматически|EXEC sp_configure **'**recovery interval**','***seconds***'**|Выдаются автоматически в фоновом режиме для обеспечения соответствия верхнему пределу времени, предлагаемому параметром конфигурации сервера **recovery interval** . Автоматические контрольные точки выполняются до их завершения.  Автоматические контрольные точки регулируются в зависимости от числа необработанных операций записи и от того, обнаруживает ли [!INCLUDE[ssDE](../../includes/ssde-md.md)] увеличение задержки при записи более чем на 50 миллисекунд.<br /><br /> Дополнительные сведения см. в статье [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
 |Косвенные|ALTER DATABASE… SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Выдаются в фоновом режиме для обеспечения соответствия пользовательскому целевому времени восстановления для конкретной базы данных. Начиная с версии [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], значение по умолчанию равно 1 минуте. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра для интервала восстановления экземпляра сервера.<br /><br /> Дополнительные сведения см. в статье [Изменение целевого времени восстановления базы данных (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
@@ -146,7 +148,7 @@ ms.lasthandoff: 11/17/2017
 -   [CHECKPOINT (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  - [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md) 
  -   [Физическая архитектура журнала транзакций](http://technet.microsoft.com/library/ms179355.aspx) (из электронной документации [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ; по-прежнему действует)  
   

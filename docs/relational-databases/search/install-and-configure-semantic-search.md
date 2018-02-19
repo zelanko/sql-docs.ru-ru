@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43cacfe1341c5cb412408696ed4ed136b59f3e8a
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: c3e5be07b316f2975a56181e6e58805e88023939
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="install-and-configure-semantic-search"></a>Установка и настройка семантического поиска
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Описывает компоненты, необходимые для статистического семантического поиска, и способы их установки и проверки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Описывает компоненты, необходимые для статистического семантического поиска, и способы их установки и проверки.  
   
 ## <a name="install-semantic-search"></a>установить семантический поиск  
   
@@ -150,6 +152,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>Установка дополнительной поддержки для новых типов документов  
   
 ###  <a name="office"></a> Установка последних фильтров для Microsoft Office и других типов документов Майкрософт  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает самые последние средства разбиения по словам и парадигматические модули [!INCLUDE[msCoName](../../includes/msconame-md.md)] , но не устанавливает последние фильтры для документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других типов документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Эти фильтры необходимы для индексирования документов, созданных в последних версиях программ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других приложениях [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Чтобы загрузить последние фильтры, см. раздел [Пакеты фильтров Microsoft Office 2010](http://go.microsoft.com/fwlink/?LinkId=218293). (На данный момент не существует пакета фильтров для Office 2013 или Office 2016).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает самые последние средства разбиения по словам и парадигматические модули [!INCLUDE[msCoName](../../includes/msconame-md.md)], но не устанавливает последние фильтры для документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других типов документов [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Эти фильтры необходимы для индексирования документов, созданных в последних версиях программ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других приложениях [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Чтобы загрузить последние фильтры, см. раздел [Пакеты фильтров Microsoft Office 2010](http://go.microsoft.com/fwlink/?LinkId=218293). (На данный момент не существует пакета фильтров для Office 2013 или Office 2016).
   
   

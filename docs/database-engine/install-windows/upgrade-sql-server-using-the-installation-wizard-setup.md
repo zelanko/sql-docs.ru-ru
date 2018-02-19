@@ -8,25 +8,29 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07ad726c7ba7c4c51bc98881aafbb2dd15228f78
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Обновление SQL Server с помощью мастера установки (программа установки)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает обновление на месте всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до последней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью единого дерева компонентов.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает обновление на месте всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до последней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]с помощью единого дерева компонентов.  
   
 >[!WARNING]  
 >При обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущая версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет перезаписана и перестанет существовать на компьютере. 
@@ -109,7 +113,7 @@ ms.lasthandoff: 01/18/2018
   
      **Установленные экземпляры**  — в этой сетке перечислены все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленные на компьютере, на котором запущена программа установки. Поскольку экземпляр по умолчанию на компьютере уже имеется, необходимо установить именованный экземпляр [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
-13. Набор операций, оставшихся в этом разделе, зависит от того, какие компоненты были выбраны для установки. В зависимости от сделанного выбора могут отображаться не все страницы.  
+13. Набор операций, оставшихся в этой статье, зависит от того, какие компоненты были выбраны для установки. В зависимости от сделанного выбора могут отображаться не все страницы.  
   
 14. На странице «Конфигурация сервера: учетные записи служб» для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображаются учетные записи по умолчанию. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных для обновления.  
   
@@ -117,7 +121,7 @@ ms.lasthandoff: 01/18/2018
   
      Чтобы задать одну учетную запись входа для всех учетных записей служб этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], укажите учетные данные в полях, которые находятся в нижней части страницы.  
   
-     **Примечание по безопасности.** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Примечание по безопасности** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      После ввода данных входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нажмите кнопку **Далее**.  
   

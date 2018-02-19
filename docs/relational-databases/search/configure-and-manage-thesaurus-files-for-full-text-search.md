@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: "84"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 210fd9bd79fa84ac5a1a2fcaaca2144a393ab585
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 849c650522d90348fd7bec2d115dd3af04b1c18b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Настройка и управление файлами тезауруса для полнотекстового поиска
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстовые запросы могут выполнять поиск синонимов для заданных пользователем терминов с помощью *тезауруса* полнотекстового поиска. Каждый тезаурус определяет набор синонимов для указанного языка. Подготовив тезаурус, ориентированный на пользовательские полнотекстовые данные, можно эффективно расширить область полнотекстовых запросов к этим данным.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Полнотекстовые запросы могут выполнять поиск синонимов для заданных пользователем терминов с помощью *тезауруса* полнотекстового поиска. Каждый тезаурус определяет набор синонимов для указанного языка. Подготовив тезаурус, ориентированный на пользовательские полнотекстовые данные, можно эффективно расширить область полнотекстовых запросов к этим данным.
 
 Сопоставление с тезаурусом выполняется для всех запросов [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) и [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) и для любых запросов [CONTAINS](../../t-sql/queries/contains-transact-sql.md) и [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), которые указывают предложение `FORMSOF THESAURUS`.
   

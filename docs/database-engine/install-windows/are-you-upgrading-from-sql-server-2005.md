@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eae5931014a84ff1169412b830a20e217627918c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d582d7d9ca0bc90ca40ee34e946d49bf545024bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Вы выполняете обновление с версии SQL Server 2005?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Окончание расширенной поддержки для SQL Server 2005 — еще одна причина выполнить обновление до более новой версии SQL Server и базы данных SQL Azure. Обновление позволяет обеспечить безопасность и соответствие требованиям, достичь высокой производительности и оптимизировать инфраструктуру платформы данных.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+ Окончание расширенной поддержки для SQL Server 2005 — еще одна причина выполнить обновление до более новой версии SQL Server и базы данных SQL Azure. Обновление позволяет обеспечить безопасность и соответствие требованиям, достичь высокой производительности и оптимизировать инфраструктуру платформы данных.  
   
  Дополнительные сведения, руководство и средства для планирования и автоматизации обновления или миграции см. в разделе [Прекращение поддержки SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
   
@@ -64,10 +68,10 @@ ms.lasthandoff: 01/18/2018
   
 -   Ознакомьтесь со способами обновления.  
   
-    -   Просмотрите доступные методы обновления и узнайте о способах планирования и тестирования в разделе [Обновление [компонент ядра СУБД]](../../database-engine/install-windows/upgrade-database-engine.md).  
+    -   Просмотрите доступные методы обновления и узнайте о способах планирования и тестирования в статье [Обновление [компонент ядра СУБД]](../../database-engine/install-windows/upgrade-database-engine.md).  
   
         > [!IMPORTANT]  
-        >  Обновить экземпляр SQL Server 2005 до SQL Server 2017 на месте нельзя. Необходимо установить экземпляр SQL Server 2017, а затем перенести базы данных SQL Server 2005 в новую установку. Дополнительные сведения см. в подразделе "Обновление новой установки" раздела [Выбор метода обновления компонента Database Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+        >  Обновить экземпляр SQL Server 2005 до SQL Server 2017 на месте нельзя. Необходимо установить экземпляр SQL Server 2017, а затем перенести базы данных SQL Server 2005 в новую установку. Дополнительные сведения см. в разделе "Обновление новой установки" статьи [Выбор метода обновления компонента Database Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
    
   
 -   Дополнительные сведения, руководство и средства для планирования и автоматизации обновления или миграции см. в разделе [Прекращение поддержки SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  

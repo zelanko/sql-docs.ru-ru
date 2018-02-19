@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,18 +29,20 @@ helpviewer_keywords:
 - file system security [SQL Server]
 - installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: bbb5675b3429f73a83fa7cda214d90666a674541
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 65e1702f5886205858c5fc917d15837f6a3dfa8c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Вопросы безопасности при установке SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Безопасность является важной характеристикой для любого продукта и любого предприятия. Следуя простым рекомендациям, можно избежать многих уязвимостей в безопасности. В этой статье обсуждаются некоторые рекомендации по безопасности, которых следует придерживаться как до установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения по безопасности для конкретных компонентов приводятся в справочных разделах по этим компонентам.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ Безопасность является важной характеристикой для любого продукта и любого предприятия. Следуя простым рекомендациям, можно избежать многих уязвимостей в безопасности. В этой статье обсуждаются некоторые рекомендации по безопасности, которых следует придерживаться как до установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о безопасности для конкретных компонентов приводятся в справочных статьях по этим компонентам.  
   
 ## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  При настройке среды сервера выполняйте следующие рекомендации.  
@@ -85,7 +88,7 @@ ms.lasthandoff: 12/05/2017
 ###  <a name="isolated_services"></a> Isolate Services  
  Изолирование служб уменьшает риск того, что подвергнувшаяся опасности служба подвергнет опасности другие службы. Чтобы изолировать службы, следуйте приведенным ниже правилам.  
   
--   Запускайте разные службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под разными учетными записями Windows. Если возможно, пользуйтесь для каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отдельными учетными записями Windows или локальных пользователей, обладающих наименьшими правами. Дополнительные сведения см. в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Запускайте разные службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под разными учетными записями Windows. Если возможно, пользуйтесь для каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отдельными учетными записями Windows или локальных пользователей, обладающих наименьшими правами. Дополнительные сведения см. в статье [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  Правильный выбор файловой системы повышает уровень безопасности. Для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо выполнить следующие действия.  

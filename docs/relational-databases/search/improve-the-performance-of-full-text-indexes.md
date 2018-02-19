@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Улучшение производительности полнотекстовых индексов
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В этой статье описываются некоторые из основных причин снижения производительности полнотекстовых индексов и запросов. Кроме того, тут представлены несколько предложений по устранению этих проблем и повышению производительности.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+В этой статье описываются некоторые из основных причин снижения производительности полнотекстовых индексов и запросов. Кроме того, тут представлены несколько предложений по устранению этих проблем и повышению производительности.
   
 ##  <a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>Проблемы с ресурсами оборудования
@@ -183,7 +185,7 @@ GO
   
      В следующей таблице описаны типы значений ожидания, представляющие интерес.  
   
-    |Тип ожидания|Описание|Возможное решение|  
+    |Тип ожидания|Description|Возможное решение|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX или _UP)|Это может свидетельствовать о наличии узкого места в подсистеме ввода-вывода. В этом случае средняя длина очереди диска обычно велика.|Перемещение полнотекстового индекса в другую файловую группу на другом диске может помочь снизить влияние узкого места в операциях ввода-вывода.|  
     |PAGELATCH_EX (или _UP)|Это может свидетельствовать о высокой конкуренции между потоками, которые пытаются выполнить запись в один и тот же файл базы данных.|Уровень конкуренции можно снизить, добавив файлы в файловую группу, в которой расположен полнотекстовый индекс.|  

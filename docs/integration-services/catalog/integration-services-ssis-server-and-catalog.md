@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1ba94eb985130eb7e3f8ad020756c7387df297c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b6451f3d322ff92ee928e6a9ed98759df0bcc2e6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Сервер и каталог служб Integration Services (SSIS)
   После разработки и тестирования пакетов в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]вы можете выполнить развертывание проектов, содержащих пакеты, на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="high-availability"></a>Высокий уровень доступности  
  Как и другие пользовательские базы данных, база данных **SSISDB** поддерживает зеркальное отображение базы данных и репликацию. Дополнительные сведения о зеркальном отображении и репликации см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- Также вы можете обеспечить высокий уровень доступности SSISDB и содержимого с помощью служб SSIS и групп доступности AlwaysOn. Дополнительные сведения см. в записи блога Мэтта Мэссона (Matt Masson) [Службы SSIS с AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873) на сайте blogs.msdn.com.  
+ Также вы можете обеспечить высокий уровень доступности SSISDB и содержимого с помощью служб SSIS и групп доступности AlwaysOn. Дополнительные сведения см. в статье [Always On для каталога служб SSIS (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Также см. запись в блоге Мэтта Мэссона (Matt Masson) [Службы SSIS с AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873) на сайте blogs.msdn.com.  
   
 ##  <a name="ssms"></a> Сервер служб Integration Services в среде SQL Server Management Studio  
  При подключении к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , на котором размещена база данных **SSISDB** , в обозревателе объектов отображаются следующие объекты:  

@@ -20,16 +20,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Управление размером файла журнала транзакций
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этой статье рассказывается о мониторинге размера журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сжатии журнала транзакций, добавлении или увеличении файла журнала транзакций, оптимизации скорости роста журнала транзакций **tempdb**, а также об управлении размером файла журнала транзакций.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В этой статье рассказывается о мониторинге размера журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сжатии журнала транзакций, добавлении или увеличении файла журнала транзакций, оптимизации скорости роста журнала транзакций **tempdb**, а также об управлении размером файла журнала транзакций.  
 
 ##  <a name="MonitorSpaceUse"></a>Мониторинг используемого пространства журнала  
 Для мониторинга используемого пространства журнала используйте [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md). Это динамическое административное представление возвращает сведения об используемом сейчас журналом объеме пространства и сообщает, когда журнал транзакций требует усечения. 

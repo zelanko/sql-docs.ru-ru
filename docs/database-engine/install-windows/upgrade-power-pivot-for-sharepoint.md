@@ -12,25 +12,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bd176479745f786197782bc489b45ea2c1e74429
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: df0547a4e9665040cea0aff190586759d6a24cd4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Обновление Power Pivot для SharePoint
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описаны шаги, необходимые для обновления развертывания [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] до [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Конкретные действия зависят от версии SharePoint, в которой в настоящее время выполняется среда, и включают [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для надстройки SharePoint (**spPowerPivot.msi**).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  В этой статье описаны шаги, необходимые для обновления развертывания [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] до [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Конкретные действия зависят от версии SharePoint, в которой в настоящее время выполняется среда, и включают [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для надстройки SharePoint (**spPowerPivot.msi**).  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
  Сведения о выпуске см. в статье [SQL Server 2016 Release Notes](http://go.microsoft.com/fwlink/?LinkID=398124)(Заметки о выпуске SQL Server 2016).  
   
- **В этом разделе:**  
+ **В этой статье:**  
   
  [Предварительные требования](#bkmk_prereq)  
   
@@ -54,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
 -   При обновлении многосерверной фермы SharePoint 2010 с двумя или более экземпляров [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] необходимо полностью обновить каждый сервер, **прежде** чем переходить к следующему серверу. Полное обновление включает запуск программы установки SQL Server для обновления программных файлов [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , вслед за чем выполняются действия по обновлению SharePoint, которые состоят в настройке обновленных служб. Доступность сервера будет ограничена, пока не выполнены действия по обновлению в подходящем средстве настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или Windows PowerShell.  
   
--   Все экземпляры системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и служб Analysis Services в ферме SharePoint 2010 должны иметь одинаковые версии. Сведения о том, как проверить версию, см. в подразделе [Проверка версий компонентов и служб Power Pivot](#bkmk_verify_versions) далее в этом разделе.  
+-   Все экземпляры системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и служб Analysis Services в ферме SharePoint 2010 должны иметь одинаковые версии. Сведения о том, как проверить версию, см. в разделе [Проверка версий компонентов и служб Power Pivot](#bkmk_verify_versions) этой статьи.  
   
 -   Средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — это одни из общих компонентов SQL Server. Все общие компоненты обновляются одновременно. Если во время обновления будут выбраны другие экземпляры SQL Server или функции, для которых требуется обновление общих компонентов, то средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] также будет обновлено. Если средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] обновлено, а экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — нет, могут возникнуть проблемы. Дополнительные сведения об общих функциях SQL Server см. в разделе [Обновление до SQL Server 2016 с использованием мастера установки (Setup)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
@@ -139,7 +142,7 @@ ms.lasthandoff: 01/08/2018
   
     -   [Справочник по PowerShell для Power Pivot для SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
-5.  Убедитесь, что обновление выполнено успешно, выполнив рекомендуемые действия после обновления и проверив версию сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. Подробные сведения см. в разделе [Post-upgrade verification tasks](#verify) и следующем разделе.  
+5.  Убедитесь, что обновление выполнено успешно, выполнив рекомендуемые действия после обновления и проверив версию сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. Дополнительные сведения см. в разделе [Задачи проверки после обновления](#verify) и следующем разделе этой статьи.  
   
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> Обновление существующей фермы SharePoint 2010  
  Для обновления [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , развернутых в SharePoint 2010, выполните следующие действия.  
@@ -207,7 +210,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  **Повторите эту процедуру** для каждой службы SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) в ферме: 1) запустите настройку SQL Server 2) запустите средство конфигурации [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-9. Убедитесь, что обновление выполнено успешно, выполнив рекомендуемые действия после обновления и проверив версию сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. Подробные сведения см. в разделе [Post-upgrade verification tasks](#verify) и следующем разделе.  
+9. Убедитесь, что обновление выполнено успешно, выполнив рекомендуемые действия после обновления и проверив версию сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. Дополнительные сведения см. в разделе [Задачи проверки после обновления](#verify) и следующем разделе этой статьи.  
   
 10. **Устранение ошибок**  
   
@@ -319,7 +322,7 @@ Get-PowerPivotSystemService
   
  После обновления первого сервера дополнительные серверы, которые еще не обновлены, **станут недоступными**. Доступность восстанавливается после того, как все серверы начнут работать на одном и том же уровне.  
   
- Программа установки SQL Server обновляет файлы решения [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на месте на физическом компьютере, но для обновления решений, которые используются в ферме, необходимо воспользоваться средством настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , описанном в предыдущем подразделе.  
+ Программа установки SQL Server обновляет файлы решения [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на месте на физическом компьютере, но для обновления решений, которые используются в ферме, необходимо воспользоваться средством настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], описанном в предыдущем разделе этой статьи.  
   
 ##  <a name="qfe"></a> Применение QFE к экземпляру Power Pivot в ферме  
  При обновлении сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint существующие программные файлы будут обновлены до новых версий, включая исправления некоторых проблем. При применении QFE к многосерверной топологии отсутствует основной сервер, с которого нужно начинать. Поэтому обновление можно начать с любого сервера, при условии, что к остальным серверам [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме будет применяться тот же QFE.  

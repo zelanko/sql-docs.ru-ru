@@ -17,14 +17,17 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 1cb3ad0fe1c3678799c557cf9c3b66286505276c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Выбор метода обновления компонента Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Существует несколько подходов, которые следует учитывать при планировании обновления предыдущего выпуска SQL Server до версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы свести к минимуму время простоя и риски. Можно выполнить обновление на месте, миграцию в новую установку или последовательное обновление. Следующая схема поможет вам выбрать один из этих подходов. Каждый из подходов, указанных в схеме, кроме того, обсуждается ниже. Чтобы получить дополнительные сведения о точках принятия решений в этой схеме, ознакомьтесь с разделом [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Существует несколько подходов, которые следует учитывать при планировании обновления предыдущего выпуска SQL Server до версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы свести к минимуму время простоя и риски. Можно выполнить обновление на месте, миграцию в новую установку или последовательное обновление. Следующая схема поможет вам выбрать один из этих подходов. Каждый из подходов, указанных в схеме, кроме того, обсуждается ниже. Чтобы получить дополнительные сведения о точках принятия решений в этой схеме, ознакомьтесь с разделом [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Дерево выбора метода для обновления компонента Database Engine](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Дерево выбора метода для обновления компонента Database Engine")  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 01/29/2018
 -   Есть учетная запись Azure?  Перейдите **[сюда](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)**, чтобы запустить виртуальную машину с уже установленной версией [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
   
 > [!NOTE]  
->  При составлении плана обновления, кроме того, можно рассмотреть возможность обновления базы данных SQL Azure или виртуализации среды SQL Server. Эти темы выходят за рамки данного раздела. Дополнительные сведения см. по следующим ссылкам:
+>  При составлении плана обновления, кроме того, можно рассмотреть возможность обновления базы данных SQL Azure или виртуализации среды SQL Server. Эти статьи выходят за рамки данной статьи. Дополнительные сведения см. по следующим ссылкам:
 >   - [Обзор SQL Server в виртуальных машинах Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [База данных SQL Azure](https://azure.microsoft.com/en-us/services/sql-database/) 
 >   - [Выбор варианта SQL Server в Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
@@ -105,7 +108,7 @@ ms.lasthandoff: 01/29/2018
      ![Новый метод обновления установки путем отсоединения и прикрепления хранилища SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Новый метод обновления установки путем отсоединения и прикрепления хранилища SAN")  
   
 ##  <a name="RollingUpgrade"></a> Последовательное обновление  
- Последовательное обновление требуется в средах SQL Server с несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые должны быть обновлены в определенном порядке для сокращения времени простоя и рисков и сохранения функциональности среды. Последовательное обновление является, по существу, обновлением нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в определенном порядке путем обновления на месте каждого имеющегося экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или путем новой установки (что упрощает обновление оборудования и операционной системы в рамках проекта обновления среды). Существует ряд сценариев, в которых необходимо использовать метод последовательного обновления. Все они описаны в следующих разделах:  
+ Последовательное обновление требуется в средах SQL Server с несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые должны быть обновлены в определенном порядке для сокращения времени простоя и рисков и сохранения функциональности среды. Последовательное обновление является, по существу, обновлением нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в определенном порядке путем обновления на месте каждого имеющегося экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или путем новой установки (что упрощает обновление оборудования и операционной системы в рамках проекта обновления среды). Существует ряд сценариев, в которых необходимо использовать метод последовательного обновления. Все они описаны в следующих статьях:  
   
 -   Группы доступности AlwaysOn. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление экземпляров реплики группы доступности AlwaysOn](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
   

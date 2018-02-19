@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - tools [SQL Server], SQL Server Configuration Manager
 - configuration manager [SQL Server]
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
-caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2cfc445cf008f0eecb3d6ebf11a0e21f23ad1ad9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81c3fc1a8bc1b582fd4f8d696f1382e5a88bd706
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-configuration-manager"></a>Диспетчер конфигурации SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="available-network-protocols"></a>Доступные сетевые протоколы  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает протоколы общей памяти, TCP/IP и именованных каналов. Сведения о выборе сетевых протоколов см. в разделе [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не поддерживает сетевые протоколы VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk и NWLink IPX/SPX. Клиенты, подключенные ранее с помощью этих протоколов, для соединения с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]должны выбрать другой протокол. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] нельзя использовать для настройки прокси-сервера WinSock. Чтобы настроить прокси-сервер WinSock, см. документацию по ISA Server.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Инструкции по управлению службами (диспетчер конфигурации SQL Server)](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
  [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

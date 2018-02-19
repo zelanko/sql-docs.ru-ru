@@ -8,32 +8,36 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a23b32644a51bf4e46cab280c7d382d2cb1c786
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a453e4c8a5ec3bc3e93d5c7f7e6ce6f1e354d21c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Этот раздел содержит сведения о настройке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке Server Core.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Эта статья содержит сведения о настройке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке Server Core.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Настройка и управление Server Core в Windows Server  
-Раздел содержит ссылки на разделы, в которых приведены сведения о настройке установки Server Core и управлении ей.  
+Раздел содержит ссылки на статьи, в которых приведены сведения о настройке установки Server Core и управлении ею.  
   
 Не все компоненты [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] поддерживаются в режиме Server Core.  Некоторые из этих компонентов могут быть установлены на клиентском компьютере или другом сервере, на котором нет Server Core, и подключены к службам компонента ядра СУБД, установленным в Server Core.  
   
-Дополнительные сведения о дистанционной настройке и управлении установкой Server Core см. в следующих разделах:  
+Дополнительные сведения о дистанционной настройке установкой Server Core и управлении еюсм. в следующих статьях:  
   
 - [Установка Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
@@ -227,7 +231,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Использование средств устранения неполадок  
  Программа [SQLdiag](../../tools/sqldiag-utility.md) позволяет выполнять сбор журналов и файлов данных с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. SQLdiag предназначена для исследования и упрощения сбора диагностической информации для Microsoft Customer Support Services.  
   
- Служебную программу можно запустить в командной строке администратора в Server Core, используя синтаксис, описанный в статье [SQLdiag Utility](../../tools/sqldiag-utility.md).  
+ Служебную программу можно запустить в командной строке администратора в Server Core, используя синтаксис, описанный в статье [Служебная программа SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Установка SQL Server в Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

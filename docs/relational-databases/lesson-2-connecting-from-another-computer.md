@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9fcfd0dfb1171371a8b1ead7543ec14d67035d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Занятие 2. Соединение с другого компьютера
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В целях повышения безопасности к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition и Evaluation Edition нельзя получить доступ с другого компьютера при первоначальной установке. В этом занятии показано, как включить протоколы, настроить порты и брандмауэр Windows для соединения, используя другие компьютеры.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В целях повышения безопасности к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition и Evaluation Edition нельзя получить доступ с другого компьютера при первоначальной установке. В этом занятии показано, как включить протоколы, настроить порты и брандмауэр Windows для соединения, используя другие компьютеры.  
   
 Это занятие содержит следующие задачи.  
   
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/17/2017
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  В **диспетчер конфигурации SQL Server**разверните раздел **Сетевая конфигурация SQL Server**и щелкните элемент **Протоколы для** *<InstanceName>*.  
+2.  В **диспетчере конфигурации SQL Server**разверните раздел **Сетевая конфигурация SQL Server**и щелкните элемент **Протоколы для** *<InstanceName>*.  
   
     Экземпляр по умолчанию (неименованный экземпляр) указан в списке под именем **MSSQLSERVER**. Если был установлен именованный экземпляр, то в списке будет приведено заданное ему имя. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] устанавливается как **SQLEXPRESS**, если это имя не было изменено при установке.  
   
@@ -132,7 +135,7 @@ ms.lasthandoff: 11/17/2017
 3.  В поле **Имя сервера** введите **tcp:** , чтобы указать протокол, за которым должны следовать имя компьютера, запятая и номер порта. При подключении к экземпляру по умолчанию подразумевается номер порта 1433. Этот номер можно опустить, поэтому введите **tcp:***<имя_компьютера>*. В этом примере для именованного экземпляра введите **tcp:***<имя_компьютера>***,49172**.  
   
     > [!NOTE]  
-    > Если не указать **tcp:** в поле **Имя сервера**, то клиент попытается использовать все включенные протоколы в порядке, указанном в конфигурации клиента.  
+    > Если не указать **tcp:** в поле **Имя сервера** , то клиент попытается использовать все включенные протоколы в порядке, указанном в конфигурации клиента.  
   
 4.  В поле **Проверка подлинности** подтвердите значение **Проверка подлинности Window**, а затем нажмите **Подключиться**.  
   

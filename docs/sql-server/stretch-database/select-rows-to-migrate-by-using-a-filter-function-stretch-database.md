@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a898c757120d29a8c64de5623cec02c35c5b5ac1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: efb55816db5f692231b66ca53780ab26318da90c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Выбор строк для миграции с использованием функции фильтров (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Если холодные данные хранятся в отдельной таблице, можно настроить базу данных Stretch, чтобы перенести эту таблицу целиком. С другой стороны, если таблица содержит горячие и холодные данные, строки для миграции можно выбирать с помощью предиката фильтра. Этот предикат фильтра является встроенной функцией с табличным значением. В этом разделе описывается создание встроенной функции с табличным значением для выбора строк для миграции.  
+
+  Если холодные данные хранятся в отдельной таблице, можно настроить базу данных Stretch, чтобы перенести эту таблицу целиком. С другой стороны, если таблица содержит горячие и холодные данные, строки для миграции можно выбирать с помощью предиката фильтра. Этот предикат фильтра является встроенной функцией с табличным значением. В этой статье описывается создание встроенной функции с табличным значением для выбора строк для миграции.  
   
 > [!IMPORTANT]
 > Если указать плохо оптимизированную функцию фильтров, перенос данных будет выполняться медленно. База данных Stretch применяет функцию фильтров к таблице с помощью оператора CROSS APPLY.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Выполните инструкцию ALTER TABLE, чтобы указать функцию фильтров после выхода из мастера.  
   
- Далее в этом разделе описывается синтаксис инструкций ALTER TABLE для добавления функции.  
+ Далее в этой статье описывается синтаксис инструкций ALTER TABLE для добавления функции.  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>Основные требования для функции фильтров  
  Встроенная функция с табличным значением, необходимая для предиката фильтра базы данных Stretch, выглядит как показано в следующем примере.  
@@ -159,7 +161,7 @@ RETURN  SELECT 1 AS is_eligible
  Нельзя использовать вложенные запросы или недетерминированные функции, такие как RAND() или GETDATE().  
   
 ## <a name="add-a-filter-function-to-a-table"></a>Добавление функции фильтров в таблицу  
- Добавьте функцию фильтров в таблицу путем выполнения инструкции **ALTER TABLE** и указания существующей встроенной функции с табличным значением в качестве значения параметра **FILTER_PREDICATE** . Например:  
+ Добавьте функцию фильтров в таблицу путем выполнения инструкции **ALTER TABLE** и указания существующей встроенной функции с табличным значением в качестве значения параметра **FILTER_PREDICATE** . Пример:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -491,7 +493,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Как база данных Stretch применяет функцию фильтров  
- База данных Stretch применяет функцию фильтров к таблице и определяет подходящие строки при помощи оператора CROSS APPLY. Например:  
+ База данных Stretch применяет функцию фильтров к таблице и определяет подходящие строки при помощи оператора CROSS APPLY. Пример:  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -500,7 +502,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  Если функция возвращает для строки непустой результат, эта строка подходит для переноса.  
   
 ## <a name="replacePredicate"></a>Замена существующей функции фильтров  
- Можно заменить ранее заданную функцию фильтров, выполнив инструкцию **ALTER TABLE** снова и указав новое значение для параметра **FILTER_PREDICATE** . Например:  
+ Можно заменить ранее заданную функцию фильтров, выполнив инструкцию **ALTER TABLE** снова и указав новое значение для параметра **FILTER_PREDICATE** . Пример:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -595,7 +597,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>Удаление функции фильтров из таблицы  
- Чтобы выполнить миграцию всей таблицы вместо переноса выбранных строк, удалите существующую функцию, присвоив **FILTER_PREDICATE**  значение null. Например:  
+ Чтобы выполнить миграцию всей таблицы вместо переноса выбранных строк, удалите существующую функцию, присвоив **FILTER_PREDICATE**  значение null. Пример:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

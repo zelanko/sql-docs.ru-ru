@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -16,18 +17,20 @@ helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 937779613dbabd97aa456f7dbe4cda623ea8532b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ccbcbc7c58b940a5438cf5ff2c42d8da8da89ec5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server"></a>Установка SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
  > Материалы по предыдущим версиям SQL Server см. в статье [Установка SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx).
 
  Начиная с [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] доступен только в виде 64-разрядного приложения. Ниже приведены важные подробности о том, как получить и установить SQL Server.
@@ -53,17 +56,17 @@ ms.lasthandoff: 01/18/2018
  
 |Title|Description|  
 |-----------|-----------------|  
-|[ Установка [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] в Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|В этом разделе описана установка [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] на Windows Server Core.|  
+|[ Установка [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] в Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|В этой статье описана установка [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] в Windows Server Core.|  
 |[Параметры для средства проверки конфигурации системы](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|Содержит обсуждение функций средства проверки конфигурации (SCC).|  
-|[Установка [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Методический раздел, описывающий типичную установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи мастера установки.|  
-|[Установка [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|Методический раздел, в котором приведены образцы синтаксиса и параметров для запуска установки в автоматическом режиме.|  
-|[Установка [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|Методический раздел, в котором приведены образцы синтаксиса и параметров для запуска установки с помощью файла конфигурации.|  
+|[Установка [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Методическая статья с описанием типичной установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки.|  
+|[Установка [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|Методическая статья, в которой приведены образцы синтаксиса и параметров для запуска установки в автоматическом режиме.|  
+|[Установка [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|Методическая статья, в которой приведены образцы синтаксиса и параметров для запуска установки с помощью файла конфигурации.|  
 |[Установка [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью ](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|Методическая статья, в которой приведены примеры синтаксиса и параметров для запуска установки с помощью SysPrep.|  
-|[Добавление компонентов в экземпляр [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (программа установки)](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|Методический раздел, описывающий обновление компонентов существующего экземпляра [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
-|[Исправление неудавшейся установки [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Методический раздел, описывающий исправление поврежденной установки [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
-|[Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Методический раздел, описывающий обновление системных метаданных, хранящихся в таблице sys.servers.|  
+|[Добавление компонентов в экземпляр [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (программа установки)](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|Методическая статья с описанием обновления компонентов существующего экземпляра [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
+|[Исправление неудавшейся установки [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Методическая статья с описанием исправления поврежденной установки [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
+|[Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Методическая статья, в которой описывается обновление системных метаданных, хранящихся в таблице sys.servers.|  
 |[Установка обновлений для обслуживания [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-servicing-updates.md)|Методическая статья об установке обновлений для [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
-|[Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|Методический раздел, описывающий проверку ошибок в файлах журнала установки.|  
+|[Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|Методическая статья, в которой описывается проверка ошибок в файлах журнала установки.|  
 |[Проверка установки SQL Server](../../database-engine/install-windows/validate-a-sql-server-installation.md)|Описано использование отчета обнаружения SQL для проверки того, какая версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и какие компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлены на компьютере.|  
   
   
@@ -73,7 +76,7 @@ ms.lasthandoff: 01/18/2018
 |-----------|-----------------|  
 |[Установка ядра СУБД SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md)|Описывает установку и настройку компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Установка репликации SQL Server](../../database-engine/install-windows/install-sql-server-replication.md)|Описывает установку и настройку репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Установка распределенного воспроизведения — обзор](../../tools/distributed-replay/install-distributed-replay-overview.md)|Содержит список разделов, связанных с установкой компонента распределенного воспроизведения.|  
+|[Установка распределенного воспроизведения — обзор](../../tools/distributed-replay/install-distributed-replay-overview.md)|Содержит список статей, связанных с установкой компонента распределенного воспроизведения.|  
 |[Установка средств управления SQL Server со средой SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Описывает, как установить и настроить средства управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Установка компонентов SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|Описывает соображения относительно установки компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.|  
   
@@ -82,9 +85,9 @@ ms.lasthandoff: 01/18/2018
   
 |Раздел|Description|  
 |-----------|-----------------|  
-|[Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|В этом разделе приведены общие сведения о конфигурации брандмауэра и описан процесс настройки брандмауэра Windows.|  
-|[Настройка многосетевого компьютера для доступа к SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|В этом разделе описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.|  
-|[Настройка брандмауэра Windows для разрешения доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|Выполнив действия, описанные в этом разделе, можно настроить порт и брандмауэр, разрешив доступ к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.|  
+|[Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|В этой статье приведены общие сведения о конфигурации брандмауэра и описан процесс настройки брандмауэра Windows.|  
+|[Настройка многосетевого компьютера для доступа к SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|В этой статье описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.|  
+|[Настройка брандмауэра Windows для разрешения доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|Выполнив действия, описанные в этой статье, можно настроить порт и брандмауэр, чтобы разрешить доступ к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.|  
   
 ## <a name="related-sections"></a>См. также  
 [Возможности, поддерживаемые различными выпусками [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)  

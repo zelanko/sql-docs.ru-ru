@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81afdfbd75f9a6862851319e81929a2b5dbd6ef7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 879b9942203bdf6d889fa649c1888335335d2d64
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Руководство по проектированию индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +99,7 @@ ms.lasthandoff: 01/02/2018
   
 *   Устранение необходимости использования отдельного хранилища данных. В большинстве случаев в компаниях транзакции выполняются в таблице rowstore и данные загружаются в отдельное хранилище для выполнения анализа. Для многих рабочих нагрузок можно исключить процесс загрузки и устранить необходимость использования отдельного хранилища данных, создав некластеризованный индекс columnstore в транзакционных таблицах.
 
-  В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предусмотрено несколько стратегий выполнения этого сценария. Они очень просты, так как вы можете включить некластеризованный индекс columnstore, не изменяя приложение OLTP. 
+  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предлагает несколько стратегий выполнения этого сценария. Они очень просты, так как вы можете включить некластеризованный индекс columnstore, не изменяя приложение OLTP. 
 
 Чтобы добавить дополнительные вычислительные ресурсы, необходимо выполнить анализ на вторичной реплике для чтения, позволяющей отделить обработку транзакционной и аналитической рабочей нагрузки. 
 

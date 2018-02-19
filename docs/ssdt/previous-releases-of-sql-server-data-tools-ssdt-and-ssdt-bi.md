@@ -1,30 +1,32 @@
 ---
 title: "Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-BI) | Документация Майкрософт"
 ms.custom: 
-ms.date: 12/14/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssdt
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 72f038b58f16dfaebb7ca64569afe76757ff3540
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 08c7c2eddb0d5624058d301241406df54360fbdb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-BI)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Data Tools (SSDT) предоставляет шаблоны проектов и рабочих областей конструирования для создания различных типов содержимого SQL Server: реляционных баз данных, моделей Analysis Services, отчетов Reporting Services и пакетов Integration Services.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+SQL Server Data Tools (SSDT) предоставляет шаблоны проектов и рабочих областей конструирования для создания различных типов содержимого SQL Server: реляционных баз данных, моделей Analysis Services, отчетов Reporting Services и пакетов Integration Services.  
   
 Продукт основан на оболочке Visual Studio и выпускается совместно с SQL Server. Новые версии SSDT включают в себя новейшие функции SQL Server. В более поздние версии входят шаблоны и среда разработки, актуальные на момент выхода конкретного выпуска.  
   
@@ -37,13 +39,26 @@ SSDT обладает обратной совместимостью. Это оз
 
 Последние несколько скачиваний представлены на случай, если, что маловероятно, у вас возникнут какие-то проблемы с [последним выпуском](download-sql-server-data-tools-ssdt.md). 
 
-|Выпуск| Visual Studio 2015|Visual Studio 2013|
-|:---|:---|:---|
-|17.3|[SSDT для VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| \* Недоступно|
-|17.2|[SSDT для VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| \* Недоступно|
-|17.1|[SSDT для VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* Недоступно|
-|17.0|[SSDT для VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* Недоступно|
-|16.5|[SSDT для VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT для VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
+|Выпуск| Visual Studio 2017|
+|:---|:---|
+|15.5.1|[SSDT для VS2017 15.5.1](https://go.microsoft.com/fwlink/?LinkId=865748)|  
+<br>
+
+
+|Выпуск| Visual Studio 2015|
+|:---|:---|
+|17.3|[SSDT для VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| 
+|17.2|[SSDT для VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| 
+|17.1|[SSDT для VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)|
+|17.0|[SSDT для VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| 
+|16.5|[SSDT для VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
+<br>
+
+|Выпуск| Visual Studio 2013|
+|:---|:---|
+|16.5|[SSDT для VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
+<br>
+
 
 \* SSDT поддерживает две последние версии Visual Studio. После выхода Visual Studio 2017 решение SSDT для VS2013 больше не обновляется. Дополнительные сведения см. в разделе *Часто задаваемые вопросы* в [этой записи блога группы разработчиков SSDT](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 

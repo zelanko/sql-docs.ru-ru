@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73dc17666d055ffbd4646befb43ff2a40ab77053
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="system-data-collection-set-reports"></a>Отчеты наборов элементов сбора системных данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Сборщик данных предоставляет отчет с предысторией для каждого набора элементов сбора системных данных. Каждый из следующих отчетов использует данные, содержащиеся в хранилище данных управления.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Сборщик данных предоставляет отчет с предысторией для каждого набора элементов сбора системных данных. Каждый из следующих отчетов использует данные, содержащиеся в хранилище данных управления.  
   
 -   [Сводка по использованию дискового пространства.](#Disk)  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |--------------|----------------|  
 |Указатель|Место на диске, занятое для хранения страниц индекса.|  
 |Не выделено|Место на диске, доступное базе данных, но не выделенное ни одному из объектов.|  
-|Данные|Место на диске, занятое для страниц данных.|  
+|data|Место на диске, занятое для страниц данных.|  
 |Не используется|Место на диске, выделенное для одного или более объектов, но пока не занятое.|  
   
  Использование места на диске для файла журнала транзакций характеризуется следующими значениями: занято и свободно.  

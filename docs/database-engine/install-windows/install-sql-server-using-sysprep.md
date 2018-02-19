@@ -8,23 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87615ca4a3601ab92b37e97a8392b392accb1695
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e538fc7315661cf76dc807cb54cbd0d518cb8603
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>Установка SQL Server с помощью SysPrep
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- Действия, связанные с настройкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, доступны в центре установки. На странице **Дополнительно** **центра установки** имеется два параметра: **Подготовка образа изолированного экземпляра[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и **Завершение образа подготовленного изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. В разделах [Подготовка](#prepare) и [Завершение](#complete) подробно описывается процесс установки. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, доступны в центре установки. На странице **Дополнительно** **центра установки** имеется два параметра: **Подготовка образа изолированного экземпляра[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и **Завершение образа подготовленного изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. В разделах [Подготовка](#prepare) и [Завершение](#complete) подробно описывается процесс установки. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
 Можно также подготовить и завершить создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью командной строки или файла конфигурации. Дополнительные сведения см. в разделе:  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 01/18/2018
 - [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
 ## <a name="prerequisites"></a>предварительные требования  
-Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]изучите разделы в статье [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
+Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] изучите статьи, указанные в статье [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
   
 Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и требованиях к аппаратному и программному обеспечению см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
     
@@ -173,7 +176,7 @@ ms.lasthandoff: 01/18/2018
   
      **Установленные экземпляры** — в этой сетке перечислены все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленные на компьютере, на котором запущена программа установки. 
   
-10. Набор операций, оставшихся в этом разделе, зависит от того, какие компоненты были выбраны на шаге подготовки. В зависимости от выбора на экране могут отображаться не все страницы. 
+10. Набор операций, оставшихся в этой статье, зависит от того, какие компоненты были выбраны на этапе подготовки. В зависимости от выбора на экране могут отображаться не все страницы. 
   
 11. На странице **Конфигурация сервера: учетные записи служб** укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке. 
   
@@ -301,7 +304,7 @@ ms.lasthandoff: 01/18/2018
 10. Повторяйте шаги 1–9 до тех пор, пока не будут удалены все компоненты [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . 
   
 ##  <a name="bk_Modifying_Uninstalling"></a> Изменение и удаление завершенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
- Процесс добавления и удаления компонентов и удаления завершенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аналогичен процессу, выполняемому для установленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в следующих разделах:  
+ Процесс добавления и удаления компонентов и удаления завершенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аналогичен процессу, выполняемому для установленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в следующих статьях:  
   
 - [Добавление компонентов в экземпляр SQL Server &#40;программа установки&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   

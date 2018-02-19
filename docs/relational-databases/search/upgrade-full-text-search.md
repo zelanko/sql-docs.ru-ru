@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-caps.latest.revision: "106"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e544e5cefe8b935086b93ac7f30acd033a8462aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74e12e9e4b1d6379a0dc8954b2c99d77c99faa55
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="upgrade-full-text-search"></a>Обновление полнотекстового поиска
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Обновление полнотекстового поиска с переходом к версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выполняется во время установки, а также во время присоединения, восстановления или копирования файлов баз данных или полнотекстовых каталогов из более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера копирования баз данных.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Обновление полнотекстового поиска с переходом к версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выполняется во время установки, а также во время присоединения, восстановления или копирования файлов баз данных или полнотекстовых каталогов из более ранней версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера копирования баз данных.  
   
   
 ##  <a name="Upgrade_Server"></a> Обновление экземпляра сервера  
@@ -182,9 +184,9 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Дополнительные сведения о присоединении и отсоединении базы данных см. в разделах [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) и [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Приступая к работе с компонентом Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
+ [Настройка поисковых фильтров и управление ими](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

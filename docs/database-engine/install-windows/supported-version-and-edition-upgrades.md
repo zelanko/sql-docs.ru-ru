@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,22 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: "148"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef0e3215cccf5cbece0036c79f73a10c25119c4e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7af72417c49f799dcb1aa9c36fa3bed8516e25d1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Поддерживаемые обновления версий и выпусков
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Можно обновить версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. В этом разделе приведены поддерживаемые пути обновления данных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и поддерживаемые обновления выпусков [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Можно обновить версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. В этой статье приведены поддерживаемые пути обновления данных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и поддерживаемые обновления выпусков [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
 ## <a name="pre-upgrade-checklist"></a>Контрольный список действий перед обновлением  
   
@@ -76,36 +80,36 @@ SQL Server 2016 поддерживает обновление со следую�
 |Исходная версия|Поддерживаемые варианты обновления|  
 |------------------|----------------------------|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Enterprise с пакетом обновления 4 (SP4)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Developer с пакетом обновления 4 (SP4)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard с пакетом обновления 4 (SP4)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Small Business с пакетом обновления 4 (SP4)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Web с пакетом обновления 4 (SP4)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Workgroup с пакетом обновления 4 (SP4)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Express с пакетом обновления 4 (SP4) |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Datacenter с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Developer с пакетом обновления 4 (SP4)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Разработчик|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard с пакетом обновления 4 (SP4)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Small Business с пакетом обновления 4 (SP4)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Web с пакетом обновления 4 (SP4)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Workgroup с пакетом обновления 4 (SP4)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Express с пакетом обновления 4 (SP4) |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Datacenter с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Enterprise с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Developer с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Small Business с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Standard с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Web с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Workgroup с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Express с пакетом обновления 3 (SP3) |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Developer с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Разработчик|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Small Business|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Standard с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Web с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Workgroup с пакетом обновления 3 (SP3)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Express с пакетом обновления 3 (SP3) |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise с пакетом обновления 2 (SP2)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Developer с пакетом обновления 2 (SP2)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Standard с пакетом обновления 2 (SP2)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Web с пакетом обновления 1 (SP1)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express с пакетом обновления 2 (SP2) |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express <br/> <br/> |  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Developer с пакетом обновления 2 (SP2)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Разработчик <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Standard с пакетом обновления 2 (SP2)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Web с пакетом обновления 1 (SP1)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express с пакетом обновления 2 (SP2) |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express <br/> <br/> |  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Business Intelligence с пакетом обновления 2 (SP2)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Evaluation с пакетом обновления 2 (SP2)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Ознакомительная версия <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Evaluation с пакетом обновления 2 (SP2)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Ознакомительная версия <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Разработчик|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard Edition|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Разработчик|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web Edition|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Разработчик|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Ознакомительная версия|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Ознакомительная версия <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
-|[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] версия-кандидат * |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
-|[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Developer |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise | 
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Ознакомительная версия|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Ознакомительная версия <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Разработчик|  
+|[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] версия-кандидат * |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
+|[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Разработчик |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise | 
 
  \* Предоставляемая корпорацией Майкрософт поддержка обновления с версий-кандидатов предназначена для клиентов, участвовавших в программе адаптации технологий (TAP). 
 
@@ -150,23 +154,23 @@ SQL Server 2016 поддерживает обновление со следую�
   
 |Исходная версия|Обновленная версия|  
 |------------------|----------------|  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL и Core) **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation Enterprise **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> Обновление с переходом от Evaluation (бесплатного выпуска) на любой из платных выпусков поддерживается для изолированных, но не поддерживается для кластеризованных установок.|  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core)|  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition|  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition|  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express *|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL и Core) **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation Enterprise **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Разработчик <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition <br/> <br/> Обновление с переходом от Evaluation (бесплатного выпуска) на любой из платных выпусков поддерживается для изолированных, но не поддерживается для кластеризованных установок.|  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core)|  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express *|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL или Core) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Разработчик <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web Edition|  
   
  Кроме того, можно выполнить обновление выпуска между выпусками [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL) и [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Core).  
   
 |Обновление выпуска c|Обновление выпуска до|  
 |--------------------------|------------------------|  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL) **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Core)|  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL) **|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Core)|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Core)|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (лицензия Server+CAL)|  
   
  \* Также относится к [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] , экспресс-выпуск с инструментами и [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] , экспресс-выпуск с дополнительными службами.  
   
- ** При смене выпуска для отказоустойчивого кластера [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] действуют определенные ограничения. Следующие сценарии не поддерживаются для кластеров отработки отказа [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] .  
+ ** При смене выпуска для отказоустойчивого кластера [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] действуют определенные ограничения. Следующие сценарии не поддерживаются для кластеров отработки отказа [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise до [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer, Standard или Evaluation.  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9097c3213bf64185c24814156e38d10584a7c20c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 976561b457dc1eac740df5075bf0a02fd5a95a23
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Запуск мастера включения растяжения для базы данных
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
  Чтобы настроить в базе данных возможность растяжения, запустите мастер включения растяжения для базы данных.  Эта статья содержит сведения о параметрах, используемых в этом мастере.  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/05/2017
 2.  Щелкните правой кнопкой мыши и выберите **Задачи**, затем **Растяжение**и щелкните **Включить** для запуска мастера.  
   
 ##  <a name="Intro"></a> Введение  
- Ознакомьтесь с предназначением мастера и предварительными требованиями.  
+ Изучите информацию о назначении мастера и предварительные требования.  
  
  Важные предварительные требования перечислены ниже.
  -   Для внесения изменений в базу данных необходимо быть администратором.
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Страница выбора таблиц в мастере настройки базы данных Stretch](../../sql-server/stretch-database/media/stretch-wizard-2.png "Страница выбора таблиц в мастере настройки базы данных Stretch")  
   
-|Столбец|Описание|  
+|столбцом|Description|  
 |------------|-----------------|  
 |(нет имени)|Установите флажок в этом столбце, чтобы применить растяжение для выбранной таблицы.|  
 |**Название**|Указывает имя таблицы в базе данных.|  
@@ -184,7 +186,7 @@ ms.lasthandoff: 12/05/2017
   
 ##  <a name="KnownIssues"></a> Устранение неполадок в работе мастера  
  **Сбой в работе мастера подготовки базы данных Stretch.**  
- Если на сервере не активировано использование базы данных Stretch и для активации запущен мастер без разрешений системного администратора, мастер завершит работу с ошибкой. Попросите системного администратора активировать использование базы данных Stretch на экземпляре локального сервера, а затем повторно запустите мастер. Дополнительные сведения см. в разделе [Обязательное требование: разрешение на включение Stretch Database на сервере](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
+ Если на сервере не активировано использование базы данных Stretch и для активации запущен мастер без разрешений системного администратора, мастер завершит работу с ошибкой. Попросите системного администратора активировать использование базы данных Stretch на экземпляре локального сервера, а затем повторно запустите мастер. Дополнительные сведения см. в разделе [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Следующие шаги  
  Включение дополнительных таблиц для базы данных Stretch. Мониторинг миграции данных и управление базами данных и таблицами с поддержкой Stretch.  

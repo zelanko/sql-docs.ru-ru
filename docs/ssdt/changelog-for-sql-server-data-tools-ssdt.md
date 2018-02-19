@@ -1,32 +1,58 @@
 ---
 title: "Журнал изменений для SQL Server Data Tools (SSDT) | Документация Майкрософт"
 ms.custom: 
-ms.date: 12/22/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssdt
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e516b5d29e975236e9fa002a7d258caca706663d
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это журнал изменений для [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Это журнал изменений для [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Подробные сведения о новых и измененных возможностях см. в [блоге группы разработчиков SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT для Visual Studio 2017 (15.5.2)
+Номер сборки: 14.0.16156.0
+  
+### <a name="whats-new"></a>Новые возможности
+
+**Службы SSIS**
+1.  Устранена проблема, из-за которой при установке служб SQL Server Analysis Services и SQL Server Integration Services в одном экземпляре Visual Studio 2017 перенос проектов служб SQL Server Integration Services 2008 завершался сбоем.
+2.  Устранена проблема, из-за которой при установке конструктора отчетов Rdlc и служб SQL Server Integration Services в одном экземпляре Visual Studio 2017 не удавалось выполнить сборку проектов Rdlc.
+3.  Устранена проблема, из-за которой не удавалось изменить цвет заметок.
+4.  Устранена проблема, из-за которой некоторые строки в редакторе диспетчера подключений Hadoop усекались на других языках.
+5.  Устранена проблема, из-за которой некоторые строки усекались в редакторе диспетчера подключений OData.
+6.  Устранена проблема, из-за которой некоторые строки усекались в окне мастера импорта проектов Integration Services.
+7.  Устранена проблема с заголовком в информационном окне панели инструментов служб Integration Services.
+8.  Устранена проблема, из-за которой некоторые строки усекались в окне мастера развертывания служб Integration Services. 
+
+**Установщик**
+- Устранена проблема, из-за которой скачивание полезных данных иногда завершалось ошибкой "Система не может найти указанный файл (0x80070002)".  
+
+### <a name="known-issues"></a>Известные проблемы
+- Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
+
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT для Visual Studio 2017 (15.5.1)
 Номер сборки: 14.0.16148.0

@@ -8,26 +8,28 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 931c88853bc5f2b0ecca65aa40cf5d4b4f29bd48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ebf0e74709450f3f6bcee076c6ac4921996c54b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Чтобы настроить таблицу для Stretch Database, в SQL Server Management Studio выберите для нужной таблицы команду **Растяжение | Включить** , чтобы открыть мастер **Включение растяжения для таблицы** . Stretch Database для таблицы можно включить также с помощью Transact-SQL. Либо можно создать новую таблицу, уже настроенную для Stretch Database.  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Если таблица содержит как горячие, так и холодные данные, строки для переноса можно выбрать с помощью функции фильтров.    
  
- **Предварительные требования**. Если для таблицы выбрать команду **Растяжение | Включить** , предварительно не настроив Stretch Database для всей базы данных, мастер сначала настроит базу данных для Stretch Database. Следуйте указаниям в разделе [Запуск мастера включения растяжения для базы данных](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) вместо пошаговых инструкций в этом разделе.  
+ **Предварительные требования**. Если для таблицы выбрать команду **Растяжение | Включить** , предварительно не настроив Stretch Database для всей базы данных, мастер сначала настроит базу данных для Stretch Database. Следуйте указаниям в статье [Запуск мастера включения растяжения для базы данных](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) вместо пошаговых инструкций в этой статье.  
   
  **Разрешения**. Чтобы настроить Stretch Database для таблицы или базы данных, требуются разрешения db_owner. Чтобы включить Stretch Database в таблице, нужно обладать правами на изменение таблицы.  
 
@@ -59,9 +61,9 @@ ms.lasthandoff: 12/05/2017
   
 -   Закройте мастер и выполните инструкцию ALTER TABLE, чтобы включить растяжение для таблицы и указать функцию фильтров.  
   
--   Выполните инструкцию ALTER TABLE, чтобы указать функцию фильтров после выхода из мастера. Необходимые пошаговые инструкции см. в разделе [Добавление функции фильтров после запуска мастера](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).  
+-   Выполните инструкцию ALTER TABLE, чтобы указать функцию фильтров после выхода из мастера. Необходимые пошаговые инструкции см. в статье [Добавление функции фильтров после запуска мастера](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).  
   
- Синтаксис ALTER TABLE описан далее в этом разделе.  
+ Синтаксис ALTER TABLE описан далее в этой статье.  
   
  **Сводка**  
  Просмотрите введенные значения и выбранные в мастере параметры. Нажмите кнопку **Готово** , чтобы включить растягивание.  

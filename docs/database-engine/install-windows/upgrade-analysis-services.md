@@ -22,18 +22,21 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 4286f2266d115d39ad97ff3f6255187e7a01d968
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Чтобы воспользоваться функциями, появившимися в текущем выпуске, вы можете обновить экземпляры служб Analysis Services до версии SQL Server с аналогичным режимом сервера. Эта процедура описана в разделе [Новые возможности в службах Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Чтобы воспользоваться преимуществами функций, появившихся в текущем выпуске, вы можете перевести экземпляры служб Analysis Services на версию SQL Server с аналогичным режимом сервера. Эта процедура описана в разделе [Новые возможности в службах Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  Вы можете обновить каждый экземпляр на месте независимо от других экземпляров, выполняемых на том же оборудовании. Но большинство администраторов устанавливают экземпляр новой версии для тестирования приложений, прежде чем переносить рабочие нагрузки на новый сервер. Однако для серверов разработки или тестирования обновление на месте может быть более удобным.  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  В табличных и многомерных базах данных используются различные пути к версиям. То, что числа уровней совместимости для многомерных и табличных моделей похожи — случайность.  Если изменение функции влияет только на один режим, режимы будут изменяться с различной скоростью.  
   
- Для образовательных целей в следующей таблице перечислены уровни совместимости, но для понимания возможностей каждого уровня нужно изучить соответствующий раздел.  
+ Для образовательных целей в следующей таблице перечислены уровни совместимости, но для понимания возможностей каждого уровня нужно изучить соответствующую статью.  
   
 ||||  
 |-|-|-|  

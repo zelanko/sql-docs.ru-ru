@@ -1,29 +1,20 @@
 ---
 title: "Обновленные документы по SQL Server | Документация Майкрософт"
 description: "Отрывки из недавно обновленного содержимого в документации по SQL Server."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: BYHAM
-ms.service: 
-ms.component: sql-non-specified
-ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: sql-server
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
 ms.author: genemi
-ms.openlocfilehash: 77a97d94d005b43bf4c1a313a15a501cbe74a216
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: sql-server
+ms.date: 02/03/2018
+ms.openlocfilehash: d819ecfc22e3a8e27fdfe7263b1d545298ca5055
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Новые и недавно обновленные документы для SQL Server
 
@@ -37,7 +28,7 @@ ms.lasthandoff: 12/05/2017
 
 
 
-- *Диапазон дат обновлений:* &nbsp; **28.09.2017**&nbsp;–&nbsp;**02.12.2017**
+- *Диапазон дат обновлений:* &nbsp; **03.12.2017**&nbsp;–&nbsp;**03.02.2018**
 - *Предметная область:* &nbsp; **SQL Server**.
 
 
@@ -50,11 +41,7 @@ ms.lasthandoff: 12/05/2017
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Партнеры по разработке SQL Server](partner-dev-sql-server.md)
-2. [Партнеры в области высокой доступности и аварийного восстановления SQL Server](partner-hadr-sql-server.md)
-3. [Партнеры по управлению SQL Server](partner-management-sql-server.md)
-4. [Партнеры по мониторингу SQL Server](partner-monitor-sql-server.md)
-5. [Заметки о выпуске SQL Server 2012 с пакетом обновления 4 (SP4)](sql-server-2012-sp4-release-notes.md)
+1. [Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012](failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)
 
 
 
@@ -80,7 +67,7 @@ ms.lasthandoff: 12/05/2017
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
-1. [SQL Server 2017 Release Notes (Заметки о выпуске SQL Server 2017)](#TitleNum_1)
+1. [Автономная справка SQL Server и окно справки](#TitleNum_1)
 
 
 
@@ -91,44 +78,49 @@ ms.lasthandoff: 12/05/2017
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-sql-server-2017-release-notessql-server-2017-release-notesmd"></a>1. &nbsp; [Заметки о выпуске SQL Server 2017](sql-server-2017-release-notes.md)
+### <a name="1-nbsp-sql-server-offline-help-and-help-viewersql-server-help-installationmd"></a>1. &nbsp; [Автономная справка SQL Server и окно справки](sql-server-help-installation.md)
 
-*Обновлено: 20.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Обновлено: 19.12.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 37.  ms.author= "craigg".  -->
+<!-- Source markdown line 67.  ms.author= "craigg".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c9ac7e027e32b17bb9b54a4a878f70a70404f1cb 5b1aa8dc715fbb08d82b241f1e47f6e443b3e2fc  (PR=4032  ,  Filename=sql-server-2017-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
+<!-- git diff --ignore-all-space --unified=0 ea491fdc173a54fb4cdb3dfa2e26bd206d1cc45d 22444427a48064b76088d19d1ffae0a885bfe2a7  (PR=4338  ,  Filename=sql-server-help-installation.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=f2fde1c324466530f92006561a9a29decb711e1b) -->
 
 
 
-- **Решение.** Сначала перезагрузите компьютер и проверьте доступность сетевой папки FILESTREAM. Если она по-прежнему недоступна, выполните следующие действия.
+   В окне справки откроется вкладка "Управление содержимым".
 
-    1. В диспетчере конфигурации SQL Server щелкните экземпляр SQL Server правой кнопкой мыши и выберите пункт **Свойства**.
-    2. На вкладке **FILESTREAM** снимите флажок **Разрешить FILESTREAM при потоковом доступе файлового ввода-вывода**, а затем нажмите кнопку **Применить**.
-    3. Снова установите флажок **Разрешить FILESTREAM при потоковом доступе файлового ввода-вывода** для имени исходной общей папки и нажмите кнопку **Применить**.
+2. Чтобы установить последний пакет с содержимым справки, установите переключатель "Источник установки" в положение **Интернет**.
 
-**Службы Master Data Services (MDS)**
+   ![HelpViewer2_ManageContent_OnlineSource](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-onlinesource.png)
 
-- **Проблема и последствия для клиентов:** когда на странице разрешений пользователя предоставляется разрешение для корневого уровня в представлении сущностей в виде дерева, отображается следующая ошибка: `"The model permission cannot be saved. The object guid is not valid"`
+   >[!NOTE]
+   > Чтобы произвести установку с диска (справка SQL Server 2014), установите переключатель "Источник установки" в положение **Диск** и укажите расположение на диске.
 
-- **Решения.**
-  - Предоставьте разрешение для подузлов в представлении в виде дерева, а не для корневого уровня.
-  - либо
-  - Запустите скрипт, описанный в блоге команды разработчиков MDS, посвященном [ошибке при применении разрешения на уровне сущности](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx).
+   На вкладке "Управление содержимым" в поле "Путь к локальному хранилищу" отображается место установки содержимого на локальном компьютере. Чтобы изменить расположение, нажмите кнопку **Переместить**, в поле **Куда** введите путь к другой папке и нажмите кнопку **ОК**.
+   Если после изменения пути к локальному хранилищу установить справку не удается, закройте и повторно откройте окно справки, проверьте, отображается ли новое расположение в поле "Путь к локальному хранилищу", а затем повторите попытку установки.
 
-**службы Analysis Services**
+3. Щелкните ссылку **Добавить** рядом с каждым пакетом (книгой) содержимого, который нужно установить.
+   Чтобы установить все содержимое справки SQL Server, добавьте все 13 книг в разделе SQL Server.
 
-- **Проблема и последствия для клиентов.** Соединители данных для приведенных ниже источников еще недоступны для табличных моделей на уровне совместимости 1400.
-  - Amazon Redshift
-  - IBM Netezza
-  - Impala
-- **Решение.** Отсутствует.
+4. В правом нижнем углу нажмите кнопку **Обновить**.
+   Новые пакеты автоматически появятся в содержании справки слева.
 
-- **Проблема и последствия для клиентов:** в моделях прямых запросов на уровне совместимости 1400 с перспективами может возникнуть сбой при запросе или обнаружении метаданных.
-- **Решение.** Удалите перспективы и повторите развертывание.
+   ![HelpViewer2_ManageContent_AddContent](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-addcontent.png)
+
+> [!NOTE]
+> Не все заголовки верхнего уровня в содержании справки SQL Server в точности совпадают с названиями соответствующих скачиваемых пакетов справки. Заголовки в содержании сопоставляются с названиями пакетов следующим образом:
+
+| Область содержания | Пакет справки SQL Server |
+|-----|-----|
+|Справочник по языку служб Analysis Services | Справочник по языку служб Analysis Services (MDX)|
+|Справочник по выражениям анализа данных (DAX) | Справочник по выражениям анализа данных (DAX)|
+|Справочник по расширениям интеллектуального анализа данных | Справочник по расширениям интеллектуального анализа данных|
+|Руководства разработчиков по SQL Server | Справочник разработчика для SQL Server|
+|Скачивание SQL Server Management Studio | Среда SQL Server Management Studio|
 
 
 
@@ -136,45 +128,44 @@ ms.lasthandoff: 12/05/2017
 
 
 
-## <a name="similar-articles"></a>Похожие статьи
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Статьи, близкие к новым или измененным статьям
 
 Этот раздел содержит статьи, очень близкие к недавно измененным статьям из других предметных областей в общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новые + обновленные (3+14): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (1+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Новые + обновленные (87+0): **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Новые + обновленные (5+4): **Подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (0+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (2+2): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (10+9): **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (2+4): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (4+2): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Новые + обновленные (0+1): **примеры для SQL**](../sample/new-updated-sample.md)
-- [Новые + обновленные (21+0): **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Новые + обновленные(5+1): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+1): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (1+0): **Помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (0+2): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Предметные области, *содержащие* новые или недавно обновленные статьи
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
+
+- [Новые + обновленные (1+3):&nbsp; **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (0+1):&nbsp; **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Новые + обновленные (0+1):&nbsp; **Подключение к SQL**](../connect/new-updated-connect.md)
+- [Новые + обновленные (0+1):&nbsp; **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (12+1): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (6+2):&nbsp; **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (15+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
+- [Новые + обновленные (2+9):&nbsp; **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (1+0):&nbsp; **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (1+1):&nbsp; **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Новые + обновленные(1+1):&nbsp; **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+1):&nbsp; **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Новые + обновленные (1+2):&nbsp; **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (0+2):&nbsp; **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Предметные области, *не* содержащие новые или недавно обновленные статьи
+
 
 - [Новые + обновленные (0+0): **Data Migration Assistant (DMA) для SQL**](../dma/new-updated-dma.md)
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
+- [Новые + обновленные (0+0): документация **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
-- [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
+- [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
 

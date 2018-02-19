@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09801cfab4da23ee4c4b082d649d0ff40649b257
-ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
+ms.openlocfilehash: 57394ec4dcc62b6d7e8bdd490fb95bfdcfe30def
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>Занятие 4. Восстановление базы данных в виртуальной машине с URL-адреса
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На этом занятии вы восстановите базу данных AdventureWorks2014 в экземпляр SQL Server 2016 в виртуальной машине Azure.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+На этом занятии вы восстановите базу данных AdventureWorks2014 в экземпляр SQL Server 2016 в виртуальной машине Azure.
   
 > [!NOTE]  
 > В целях упрощения в этом учебнике для файлов данных и журналов применяется тот же контейнер, который использовался для резервной копии базы данных. В рабочей среде обычно используется несколько контейнеров, а также несколько файлов данных. В SQL Server 2016 можно также распределить резервную копию по нескольким BLOB-объектам, чтобы повысить производительность при резервном копировании большой базы данных.  
