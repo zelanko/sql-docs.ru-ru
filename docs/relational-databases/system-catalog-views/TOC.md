@@ -5,7 +5,7 @@
 # [Сообщения (для ошибок) — sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
 # [Расширенные свойства — sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
 
-# Отслеживание изменений
+# отслеживание изменений
 ## [sys.change_tracking_databases](change-tracking-catalog-views-sys-change-tracking-databases.md)  
 ## [sys.change_tracking_tables](change-tracking-catalog-views-sys-change-tracking-tables.md)  
 
@@ -36,9 +36,6 @@
 ## [sys.resource_stats](sys-resource-stats-azure-sql-database.md)  
 ## [sys.resource_usage](sys-resource-usage-azure-sql-database.md)  
 ## [dbo.server_quotas](dbo-server-quotas-azure-sql-database.md)  
-## [dbo.slo_assignment_history](dbo-slo-assignment-history-azure-sql-database.md)  
-## [dbo.slo_database_objectives](dbo-slo-database-objectives-azure-sql-database.md)  
-## [dbo.slo_service_objectives](dbo-slo-service-objectives-azure-sql-database.md)  
 
 # [Сборка CLR](clr-assembly-catalog-views-transact-sql.md)  
 ## [sys.assemblies](sys-assemblies-transact-sql.md)  
@@ -211,7 +208,7 @@
 ## [syspolicy_policy_category_subscriptions](syspolicy-policy-category-subscriptions-transact-sql.md)  
 ## [syspolicy_system_health_state](syspolicy-system-health-state-transact-sql.md)  
 
-# [регулятор ресурсов](resource-governor-catalog-views-transact-sql.md)  
+# [Регулятор ресурсов](resource-governor-catalog-views-transact-sql.md)  
 ## [sys.resource_governor_configuration](sys-resource-governor-configuration-transact-sql.md)  
 ## [sys.resource_governor_external_resource_pools](sys-resource-governor-external-resource-pools-transact-sql.md)  
 ## [sys.resource_governor_resource_pools](sys-resource-governor-resource-pools-transact-sql.md)  
@@ -234,7 +231,7 @@
 ## [sys.column_type_usages](sys-column-type-usages-transact-sql.md)  
 ## [sys.parameter_type_usages](sys-parameter-type-usages-transact-sql.md)  
 
-# [Безопасность](security-catalog-views-transact-sql.md)  
+# [безопасность](security-catalog-views-transact-sql.md)  
 ## [sys.asymmetric_keys](sys-asymmetric-keys-transact-sql.md)  
 ## [sys.certificates](sys-certificates-transact-sql.md)  
 ## [sys.column_encryption_keys ](sys-column-encryption-keys-transact-sql.md)  
