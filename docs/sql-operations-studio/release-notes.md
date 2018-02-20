@@ -2,7 +2,7 @@
 title: "Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия) | Документы Microsoft"
 description: "Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия)"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,15 +14,39 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eded99dffd8029431a127e6cbf4b125ab5e0ac97
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Заметки о выпуске Studio операций SQL (Предварительная версия)
 
-**[Загрузите января общедоступной предварительной версии](download.md)**
+**[Загрузите общедоступной предварительной версии февраля](download.md)**
+
+## <a name="february-2018-february-public-preview"></a>2018 февраля (февраль Предварительная версия)
+
+Дата выпуска: 15 февраля 2018  
+версия: 0.26.7
+
+*Общедоступной предварительной версии февраля* включает некоторые функции предложения и высоким приоритетом исправления ошибок. Этот выпуск включает следующие улучшения:
+
+- Знакомство с установки автоматического обновления, обеспечивает уведомление при новом выпуске доступен для загрузки 
+- Поле «Database» диалогового окна соединения теперь является динамически заполняемый раскрывающегося списка, который будет содержать список заполняется из указанного сервера баз данных.
+- Исправьте [выдачи 6](https://github.com/Microsoft/sqlopsstudio/issues/6): сохранить соединение и выбранной базы данных при открытии новой вкладки запроса.
+- Исправьте [выдачи 22](https://github.com/Microsoft/sqlopsstudio/issues/22): «Имя сервера» и «Имя базы данных -» могут их быть раскрывающиеся списки вместо текстовые поля?
+- Исправьте [выдачи 549](https://github.com/Microsoft/sqlopsstudio/issues/549): автоматические и очень автоматической установки приведет к приложения, открывающего после установки.
+- Исправьте [выполните 481](https://github.com/Microsoft/sqlopsstudio/issues/481): добавить параметр «Проверять наличие обновлений».
+- Выделение цветом редактор SQL и автоматического завершения исправления.
+   - Исправьте [выдачи 584](https://github.com/Microsoft/sqlopsstudio/issues/584): ключевое слово «ПОЛНАЯ» не выделяется технологией IntelliSense.
+   - Исправьте [выдачи 345](https://github.com/Microsoft/sqlopsstudio/issues/345): функции SQL выделения цветом в редакторе.
+   - Устранение [выдачи 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] последняя версия «]» будет отображаться зеленым цветом.
+   - Исправьте [выдачи 225](https://github.com/Microsoft/sqlopsstudio/issues/225): несоответствие цвета ключевое слово.
+   - Исправьте [выдачи 60](https://github.com/Microsoft/sqlopsstudio/issues/60): недопустимый sql цвет выделения синтаксиса при использовании временной таблицы в предложении from.
+- Вызвать API расширяемости соединения.
+- Интеграция VS 1.19 редактора кода.
+- Обновление компонента JustinPealing или html плана запроса для отправки несколько улучшений просмотра плана запроса.
+
 
 ## <a name="january-2018-january-public-preview"></a>2018 января (январь Предварительная версия)
 

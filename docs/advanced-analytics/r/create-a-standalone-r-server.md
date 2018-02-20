@@ -1,7 +1,7 @@
 ---
 title: "Установка изолированного сервера обучения компьютера или изолированный сервер R | Документы Microsoft"
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 02/14/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 275bda79d9c8cb74d871a4d13612847dc58592e8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2ecb60bd02b3fc1ee7ac7101749fa7affc2523bd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>Установите сервер обучения машины (изолированный) или R Server (изолированный)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/11/2018
 + [Обновление существующего экземпляра служб Microsoft R Server](#bkmk_upgrade)
 + [Решить, что следует установить](#bkmk_tips)
 
-##  <a name="bkmk_installMLServer"></a>Установка машинного обучения Server (изолированный)
+##  <a name="bkmk_installMLServer"></a> Установка машинного обучения Server (изолированный)
 
 Этот компонент требует наличия лицензии Enterprise или эквивалент для **2017 г. SQL Server**.
 
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/11/2018
     
 5.  На странице **Все готово для установки** проверьте выбранные параметры и нажмите кнопку **Установить**.
 
-## <a name="bkmk_upgrade"></a>Обновление существующего экземпляра сервера R
+## <a name="bkmk_upgrade"></a> Обновление существующего экземпляра сервера R
 
 Если вы установили более ранней версии Microsoft R Server (изолированный), можно обновить экземпляр для использования новых версий компонентов R. Обновление также изменяет политику поддержки для использования политики жизненного цикла поддержки современных программного обеспечения. Это позволяет более регулярно обновлять, по другому расписанию, чем выпуски SQL Server.
 
@@ -125,7 +125,7 @@ ms.lasthandoff: 02/11/2018
 
 2. Запустите программу установки и следуйте инструкциям. На странице, где выбрать компоненты для установки выберите каждый экземпляр сервера R, который нужно обновить.
 
-## <a name ="bkmk_tips"></a>Рекомендации по установке и дальнейшие действия
+## <a name ="bkmk_tips"></a> Рекомендации по установке и дальнейшие действия
 
 Этот раздел содержит дополнительные сведения, относящиеся к установке.
 
@@ -151,11 +151,12 @@ ms.lasthandoff: 02/11/2018
 |----|----|----|
 |R Server (Standalone) |Мастер установки SQL Server 2016|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R Server (Standalone) |Автономный установщик Windows|`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|Сервер машинного обучения (автономный) |  Мастер установки SQL Server 2017 г. |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Сервер машинного обучения (автономный) |  Мастер установки SQL Server 2017 г., с параметром языка R |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Сервер машинного обучения (автономный) |  Мастер установки SQL Server 2017 г., с параметром языка Python |`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Сервер машинного обучения (автономный) |  Автономный установщик Windows |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |Службы R (в базе данных) |Мастер установки SQL Server 2016|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Службы машинного обучения (в базе данных) |Мастер установки SQL Server 2017 г.|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`или`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
-
+|Службы машинного обучения (в базе данных) |Мастер установки SQL Server 2017 г., с параметром языка R|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  |
+|Службы машинного обучения (в базе данных) |Мастер установки SQL Server 2017 г., с параметром языка Python| `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 ### <a name="development-tools"></a>Средства разработки
 
 Разработки (IDE) не установлена как часть установки. Не требуются дополнительные средства, как все стандартные средства будут включены, будет предоставлено с распределением R или Python.
@@ -182,7 +183,7 @@ ms.lasthandoff: 02/11/2018
 
 Если вы столкнетесь с этой проблемой, можно применить исправление, описанные в [KB3164398](https://support.microsoft.com/kb/3164398) для добавления функции R в существующий экземпляр, в Windows Server Core.   Дополнительные сведения см. в разделе [Не удается установить изолированный сервер Microsoft R Server в операционной системе Windows Server Core](https://support.microsoft.com/kb/3168691).
 
-###  <a name="bkmk_Uninstall"></a>Обновление с более старой версии Microsoft R Server
+###  <a name="bkmk_Uninstall"></a> Обновление с более старой версии Microsoft R Server
 
 Если вы установили предварительную версию Microsoft R Server, ее необходимо удалить перед обновлением до более новой версии.
 

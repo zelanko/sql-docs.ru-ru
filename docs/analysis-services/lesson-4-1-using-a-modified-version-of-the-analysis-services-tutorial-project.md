@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Занятие 4-1-использование измененной версии проекта Tutorial служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,15 +34,15 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Загрузка и извлечение файла проекта  
   
-1.  [Щелкните здесь](http://go.microsoft.com/fwlink/?LinkID=221866) , чтобы перейти на страницу загрузки, где представлены образцы проектов, прилагаемых к этому учебнику. Образцы проектов включены в состав пакета для скачивания **Учебник по службам SQL Server 2012 Analysis Services** .  
+1.  [Щелкните здесь](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services), чтобы перейти на страницу загрузки, где представлены образцы проектов, прилагаемых к этому учебнику. Проекты учебника включены в **adventure-works — многомерный учебник projects.zip** загрузки.  
   
-2.  Щелкните **Учебник по службам SQL Server 2012 Analysis Services** , чтобы скачать пакет, содержащий проекты для этого учебника.  
+2.  Нажмите кнопку **adventure-works — многомерный учебник projects.zip** для загрузки пакета, содержащий проекты для этого учебника.  
   
     По умолчанию этот ZIP-файл сохраняется в папке «Загрузки». Этот ZIP-файл необходимо перенести в расположение с более коротким путем (например, создайте папку C:\Tutorials для хранения таких файлов).  После этого можно извлечь файлы из ZIP-файла. При попытке распаковать файлы из папки «Загрузки», путь к которой значительно больше, возникнет ошибка из занятия 1.  
   
 3.  Создайте папку на уровне корневого диска или с неглубоким вложением, например C:\Tutorial.  
   
-4.  Переместите файл **Analysis Services Tutorial SQL Server 2012.zip** во вложенную папку.  
+4.  Переместить **adventure-works — многомерный учебник projects.zip** во вложенную папку.  
   
 5.  Щелкните файл правой кнопкой мыши и выберите команду **Извлечь все**.  
   

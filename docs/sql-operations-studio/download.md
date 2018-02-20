@@ -2,7 +2,7 @@
 title: "Загрузите и установите Microsoft SQL Studio операций (Предварительная версия) | Документы Microsoft"
 description: "Загрузка и установка Microsoft SQL операций Studio (Предварительная версия) для Windows, macOS или Linux"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8828b5f94c5500aa7ef3bffd48556e599e41124
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: dda75f01b68816c971d31354f08686381597271f
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Загрузите и установите Studio операций SQL (Предварительная версия)
 
-[!INCLUDE[name-sos](../includes/name-sos.md)]выполняется на Windows, macOS и Linux.
+[!INCLUDE[name-sos](../includes/name-sos.md)] выполняется на Windows, macOS и Linux.
 
-Загрузить и установить последний выпуск *общедоступной предварительной версии января*:
+Загрузить и установить последний выпуск *общедоступной предварительной версии февраля*:
 
-|Платформа|Загрузить|Дата выпуска|
-|:---|:---|:---|
-|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|17 января 2018 |
-|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|17 января 2018 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=866483)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|17 января 2018|
+|Платформа|Загрузить|Дата выпуска| Версия |
+|:---|:---|:---|:---|
+|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=867998)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=867997)|15 февраля 2018 |0.26.7|
+|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=867999)|15 февраля 2018 |0.26.7|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=868002)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=868001)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=868000)|15 февраля 2018|0.26.7|
 
 Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](release-notes.md).
 
@@ -40,27 +40,27 @@ ms.lasthandoff: 01/19/2018
 
 **Установщик**
 
-1. Загрузите и запустите [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] установщик Windows](https://go.microsoft.com/fwlink/?linkid=866480).
+1. Загрузите и запустите [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] установщик Windows](https://go.microsoft.com/fwlink/?linkid=867998).
 1. Запуск [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] приложения.
 
 
 **ZIP-файл**
 
-1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip для Windows](https://go.microsoft.com/fwlink/?linkid=866479).
+1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip для Windows](https://go.microsoft.com/fwlink/?linkid=867997).
 2. Найдите загруженный файл и извлеките его.
 3. Выполнить `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>Получить для macOS Studio операций SQL (Предварительная версия)
 
-1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=866481).
+1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=867999).
 2. Чтобы развернуть содержимое ZIP-файл, дважды щелкните его.
 3. Чтобы сделать [!INCLUDE[name-sos](../includes/name-sos-short.md)] в *запуска*, перетащите *sqlops.app* для *приложений* папки.
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Получить Studio операций SQL (Предварительная версия) для Linux
 
-1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux](https://go.microsoft.com/fwlink/?linkid=866482).
+1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux](https://go.microsoft.com/fwlink/?linkid=868000).
 1. Чтобы извлечь файл и запустите [!INCLUDE[name-sos](../includes/name-sos-short.md)], откройте новое окно терминала и введите следующие команды:
 
    ```bash
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/19/2018
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]выполняется на Windows, Linux и macOS и поддерживается на следующих платформах:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] выполняется на Windows, Linux и macOS и поддерживается на следующих платформах:
 
 ### <a name="windows"></a>Windows
 - Windows 10 (64-разрядная)
