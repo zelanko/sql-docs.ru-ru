@@ -43,14 +43,19 @@
 # [Учебные материалы по SQL Server](tutorials-for-sql-server-2016.md)
 
 # Ресурсы
+
 ## Блоги
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [Ядро СУБД SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [Безопасность SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
 ### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 
+## Обучение
+### [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/sql-server#!lang=1033)
+### [SQL на Channel 9](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
+
 ## Справка и обратная связь
-### [Рекомендации по SQL Server](https://feedback.azure.com/forums/908035-sql-server)
+### [UserVoice — предложить улучшение SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 ### [Stack Exchange DBA](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ### [Форумы MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)

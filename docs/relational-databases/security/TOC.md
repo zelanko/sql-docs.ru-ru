@@ -12,6 +12,7 @@
 # [Настройка контактной зоны](surface-area-configuration.md)  
 # [Атака путем внедрения кода SQL](sql-injection.md)
 # [Оценка уязвимостей SQL](sql-vulnerability-assessment.md)  
+# [Обнаружение и классификация данных SQL](sql-data-discovery-and-classification.md)  
 # [Свойство базы данных TRUSTWORTHY](trustworthy-database-property.md)  
 # [Разрешения](permissions-database-engine.md)  
 # [Иерархия разрешений](permissions-hierarchy-database-engine.md)  

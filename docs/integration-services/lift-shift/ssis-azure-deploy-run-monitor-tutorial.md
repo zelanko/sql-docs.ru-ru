@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0bfa4f23ea87d7429075d1039df56286b7d4785e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Развертывание, запуск и отслеживание пакета служб SSIS в Azure
 Этот учебник рассказывает, как развернуть проект служб SQL Server Integration Services в базе данных каталога SSISDB, расположенной в базе данных SQL Azure, запустить пакет в среде Integration Runtime для Azure-SSIS и отслеживать его выполнение.
@@ -89,7 +89,9 @@ ms.lasthandoff: 02/09/2018
 
 ## <a name="deploy-a-project-with-powershell"></a>Развертывание проекта с помощью PowerShell
 
-Чтобы развернуть проект с помощью PowerShell в базе данных SSISDB, размещенной в базе данных SQL Azure, приспособьте следующий скрипт под свои требования:
+Чтобы развернуть проект с помощью PowerShell в базе данных SSISDB, размещенной в базе данных SQL Azure, приспособьте следующий скрипт под свои требования. Скрипт перечисляет дочерние папки в `$ProjectFilePath` и проекты в каждой дочерней папке, а затем создает те же папки в базе данных SSISDB и развертывает в них проекты.
+
+На компьютере, где будет выполняться этот скрипт, должны быть установлены SQL Server Data Tools 17.x или среда SQL Server Management Studio.
 
 ```powershell
 # Variables
