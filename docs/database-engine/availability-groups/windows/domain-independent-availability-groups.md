@@ -8,21 +8,23 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], domain independent
+helpviewer_keywords:
+- Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 950e7cb62718b2c1fedfc5415544f21f85205cf6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="domain-independent-availability-groups"></a>Группы доступности, независимые от домена
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,63 +87,81 @@ ms.lasthandoff: 01/18/2018
 1. [С помощью инструкций, указанных по этой ссылке](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), разверните кластер рабочей группы, состоящий из всех серверов, которые будут участвовать в группе доступности. Перед настройкой кластера рабочей группы убедитесь, что общий DNS-суффикс уже настроен.
 2. [Включите функцию "Группы доступности AlwaysOn"](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) на каждом экземпляре, который будет участвовать в группе доступности. Для этого каждый экземпляр SQL Server нужно будет перезапустить.
 3. Каждому экземпляру, где будет размещаться первичная реплика, требуется главный ключ базы данных. Если главный ключ еще не существует, выполните следующую команду:
-```
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   GO
+   ```
+
 4. На том экземпляре, где будет размещаться первичная реплика, создайте сертификат, который будет использоваться как для входящих подключений во вторичных репликах, так и для защиты конечной точки в первичной реплике.
-```
-CREATE CERTIFICATE InstanceA_Cert 
-WITH SUBJECT = 'InstanceA Certificate';
-GO
-``` 
+
+   ```sql
+   CREATE CERTIFICATE InstanceA_Cert 
+   WITH SUBJECT = 'InstanceA Certificate';
+   GO
+   ``` 
+
 5. Создайте резервную копию сертификата. При желании защиту можно укрепить с помощью закрытого ключа. В этом примере закрытый ключ не используется.
-```
-BACKUP CERTIFICATE InstanceA_Cert 
-TO FILE = 'Backup_path\InstanceA_Cert.cer';
-GO
-```
+
+   ```sql
+   BACKUP CERTIFICATE InstanceA_Cert 
+   TO FILE = 'Backup_path\InstanceA_Cert.cer';
+   GO
+   ```
+
 6. Повторите шаги 4 и 5, чтобы создать сертификаты и их резервные копии для каждой вторичной реплики, указав для сертификатов соответствующие имена, например InstanceB_Cert.
 7. В первичной реплике необходимо создать имя входа для каждой вторичной реплики группы доступности. Этому имени входа будут предоставлены разрешения для подключения к конечной точке, используемой группой доступности, независимой от домена. В этом примере для реплики с именем InstanceB:
-```
-CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 8. В каждой вторичной реплике создайте имя входа для первичной реплики. Этому имени входа будут предоставлены разрешения для подключения к конечной точке. В этом примере в реплике с именем InstanceB:
-```
-CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 9. На всех экземплярах создайте пользователя для каждого созданного имени входа. Он будет использоваться при восстановлении сертификатов. Например, чтобы создать пользователя для первичной реплики, выполните следующие действия:
-```
-CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
-GO
-```
+
+   ```sql
+   CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
+   GO
+   ```
+
 10. Для любой реплики, которая может быть основной, создайте имя входа и пользователя во всех соответствующих вторичных репликах.
 11. На каждом экземпляре восстановите сертификаты для других экземпляров, в которых вы создали имя входа и пользователя. В первичной реплике восстановите все сертификаты вторичных реплик. В каждой вторичной реплике восстановите сертификат первичной реплики, а также выполните это действие в любой другой реплике, которая может служить первичной. Пример:
-```
-CREATE CERTIFICATE [InstanceB_Cert]
-AUTHORIZATION InstanceB_User
-FROM FILE = 'Restore_path\InstanceB_Cert.cer'
-```
+
+   ```sql
+   CREATE CERTIFICATE [InstanceB_Cert]
+   AUTHORIZATION InstanceB_User
+   FROM FILE = 'Restore_path\InstanceB_Cert.cer'
+   ```
+
 12. Создайте конечную точку, которая будет использоваться группой доступности в каждом экземпляре, выступающем в качестве реплики. Для групп доступности конечная точка должна иметь тип DATABASE_MIRRORING. Конечная точка использует для проверки подлинности сертификат, созданный для этого экземпляра при выполнении шага 4. Ниже представлен синтаксис для создания конечной точки с применением сертификата. Выберите соответствующий метод шифрования и другие параметры, относящиеся к вашей среде. Дополнительные сведения о доступных параметрах см. в статье [СОЗДАНИЕ КОНЕЧНОЙ ТОЧКИ (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
-```
-CREATE ENDPOINT DIAG_EP
-STATE = STARTED
-AS TCP (
+
+   ```sql
+   CREATE ENDPOINT DIAG_EP
+   STATE = STARTED
+   AS TCP (   
     LISTENER_PORT = 5022,
     LISTENER_IP = ALL
-)
-FOR DATABASE_MIRRORING (
+         )
+   FOR DATABASE_MIRRORING (
     AUTHENTICATION = CERTIFICATE InstanceX_Cert,
     ROLE = ALL
-)
-```
+         )
+   ```
+
 13. Назначьте каждому пользователю, созданному в этом экземпляре при выполнении шага 9, права, необходимые для подключения к конечной точке. 
-```
-GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
-GO
-```
+
+   ```sql
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GO
+   ```
+
 14. После настройки базовых сертификатов и защиты конечной точки создайте группу доступности любым удобным способом. Рекомендуем создать резервную копию, скопировать ее и применить для инициализации вторичной реплики вручную либо воспользоваться [автоматическим заполнением](automatically-initialize-always-on-availability-group.md). Инициализация вторичных реплик с помощью мастера предполагает обращение к файлам SMB, что может не сработать при использовании кластера рабочей группы, не присоединенного к домену.
 15. При создании прослушивателя убедитесь, что его имя и IP-адрес зарегистрированы в DNS.
 

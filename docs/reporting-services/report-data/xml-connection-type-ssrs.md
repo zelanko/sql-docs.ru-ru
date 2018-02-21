@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b30e94db3ce6fcd84e39524f8a302c1749c42e3a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f91b4b356e97cbd70503394952d910d1fa66dff8
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="xml-connection-type-ssrs"></a>Тип соединения XML (службы SSRS)
   Чтобы включить данные из источника XML-данных в отчет, необходим набор данных, основанный на источнике данных отчета типа XML. Этот встроенный тип источника данных основан на модуле обработки данных XML. Используйте этот тип источника данных для подключения и получения данных из внедренных в запрос XML-документов, веб-служб и данных XML.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/09/2018
 |XML-документ|`http://localhost/XML/Customers.xml`|  
 |Внедренный XML-документ|*Пустой*|  
   
- Дополнительные примеры строк соединения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Дополнительные примеры строк соединения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Учетные данные  
  Учетные данные необходимы для запуска запросов, локального предварительного просмотра отчетов, а также для предварительного просмотра отчетов на сервере отчетов.  
