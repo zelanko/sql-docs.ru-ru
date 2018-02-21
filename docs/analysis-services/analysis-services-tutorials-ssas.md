@@ -1,6 +1,6 @@
 ---
-title: "Службы Analysis Services учебники (службы SSAS) | Документы Microsoft"
-ms.date: 03/17/2017
+title: "Учебники по службам аналитики | Документы Microsoft"
+ms.date: 02/20/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -19,33 +19,37 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 6a2578633c1ccce72d866c40882eaf4c95669d6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 78b46dfa832faf6496d0b986dce78390fb8af33a
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="analysis-services-tutorials-ssas"></a>Учебники по службам Analysis Services (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+# <a name="analysis-services-tutorials"></a>Руководства по службам Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-Этот раздел содержит учебники для служб SQL Server Analysis Services.  
+[Табличное моделирование (уровень совместимости 1400)](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
+Применяется к Azure Analysis Services и служб Analysis Services SQL Server 2017 г. и более поздних версий. Этот учебник содержит уроки по созданию табличной модели для служб Analysis Services для вымышленной компании Adventure Works с помощью SQL Server Data Tools (SSDT). 
+
+[Табличное моделирование (при уровне совместимости 1200)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
+Применяется к Azure Analysis Services и SQL Server 2016 Analysis Services и более поздних версий. Этот учебник содержит уроки по созданию табличной модели для служб Analysis Services для вымышленной компании Adventure Works с помощью SQL Server Data Tools (SSDT).  
   
-[Табличное моделирование (учебник по Adventure Works)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
-Этот учебник содержит уроки по созданию табличной модели для служб Analysis Services для вымышленной компании Adventure Works с помощью SQL Server Data Tools (SSDT).  
-  
-[Многомерное моделирование &#40; Учебник по Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-Этот учебник дает базовые навыки и концепции многомерного моделирования в SSDT. После завершения будет иметь базу данных куба на основе данных Adventure Works, к которой можно обращаться из Excel, службы Reporting Services или любого другого клиентского приложения, которое подключается к службам Analysis Services.  
+[Многомерное моделирование](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+Применяется к SQL Server 2012 Analysis Services и более поздней версии. Многомерные модели не поддерживаются в Azure Analysis Services. Этот учебник состоит из уроков для изучения базовые навыки и концепции многомерного моделирования в SSDT. После завершения будет иметь базу данных куба на основе данных Adventure Works, к которой можно обращаться из Excel, службы Reporting Services или любого другого клиентского приложения, которое подключается к службам Analysis Services.  
   
 [Интеллектуальный анализ данных](../analysis-services/data-mining-tutorials-analysis-services.md)  
-В этом наборе учебных руководств описывается создание решений для интеллектуального анализа данных с помощью мастеров и интегрированных средств визуализации.  
+Применяется к SQL Server 2012 Analysis Services и более поздней версии. Многомерные модели с помощью интеллектуального анализа данных не поддерживаются в Azure Analysis Services. В этом наборе учебных руководств описывается создание решений для интеллектуального анализа данных с помощью мастеров и интегрированных средств визуализации.  
   
   
-## <a name="additional-resources"></a>Дополнительные ресурсы  
-[Образцы баз данных AdventureWorks для Codeplex](http://go.microsoft.com/fwlink/?linkID=335807)  
-Эта ссылка ведет на страницу загрузки codeplex, который содержит базу данных AdventureWorks.  
-  
-[Образец кода объектов AMO для создания табличных моделей программным способом](http://go.microsoft.com/fwlink/?linkID=221036)  
-Эта ссылка ведет на страницу загрузки Codeplex, образец объектов AMO.  
+## <a name="samples"></a>Примеры 
+### <a name="project-and-completed-model-database-samples"></a>Проект и завершенную модель в образцы баз данных
+Образцы проектов моделирования данных и баз данных завершенной модели можно найти по адресу [Adventure Works для служб Analysis Services на сайте GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services).
+
+### <a name="code-samples"></a>Примеры кода
+Открыть примеры кода и проекты сообщества, доступные на [репозитория служб Analysis Services на сайте GitHub](https://github.com/Microsoft/Analysis-Services).
+
+### <a name="sql-server-database-and-sql-server-data-warehouse-samples"></a>Образцы базы данных SQL Server и хранилище данных SQL Server  
+Образцы баз данных Adventure Works и Wide World Importers доступны на [репозитория образца SQL Server на сайте GitHub](https://github.com/Microsoft/sql-server-samples).
   
   
   
