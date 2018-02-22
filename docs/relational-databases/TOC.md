@@ -12,7 +12,7 @@
 ## [Архитектура обработчика запросов](query-processing-architecture-guide.md)
 ## [Архитектура задач и потоков](thread-and-task-architecture-guide.md)
 ## [Архитектура и администрирование журнала транзакций](sql-server-transaction-log-architecture-and-management-guide.md)
-## Руководство по блокировке и управлению версиями строк транзакций
+## [Руководство по блокировке и управлению версиями строк транзакций](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [Архивация и восстановление](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Большие двоичные объекты](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -55,6 +55,7 @@
 ## [Управление жизненным циклом базы данных](database-lifecycle-management.md)  
 ## [Администрирование нескольких серверов с использованием центральных серверов управления](administer-multiple-servers-using-central-management-servers.md)  
 
+# [Joins](../relational-databases/performance/joins.md)
 # [Секции](../relational-databases/partitions/partitioned-tables-and-indexes.md)
 # [Производительность](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Управление на основе политик](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
@@ -63,7 +64,7 @@
 # [Регулятор ресурсов](../relational-databases/resource-governor/resource-governor.md)
 # [Создание скриптов](../relational-databases/scripting/database-engine-scripting.md)
 # [Поиск](../relational-databases/search/full-text-search.md)
-# [Безопасность](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
+# [безопасность](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Порядковые номера](../relational-databases/sequence-numbers/sequence-numbers.md)
 # [Компонент Service Broker](../relational-databases/service-broker/event-notifications.md)
 # [Операторы Showplan](showplan-logical-and-physical-operators-reference.md)  
@@ -71,6 +72,7 @@
 # [Трассировка SQL](../relational-databases/sql-trace/sql-trace.md)
 # [Статистика](../relational-databases/statistics/statistics.md)
 # [Хранимые процедуры](../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+# [Вложенные запросы](../relational-databases/performance/subqueries.md)
 # [Синонимы](../relational-databases/synonyms/synonyms-database-engine.md)
 # [Системные представления каталога](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 # [Представления совместимости системы](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)

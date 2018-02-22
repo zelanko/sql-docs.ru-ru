@@ -43,7 +43,7 @@
 ## [Настройка базы данных с помощью рабочей нагрузки из хранилища запросов](tuning-database-using-workload-from-query-store.md)  
 ## [Повышение производительности с помощью рекомендаций помощника по настройке ядра СУБД (DTA)](performance-improvements-using-dta-recommendations.md)  
 
-# [Структуры плана](plan-guides.md)  
+# [Руководства планов](plan-guides.md)  
 ## [Создание структуры плана](create-a-new-plan-guide.md)  
 ## [Создание структуры плана для параметризованных запросов](create-a-plan-guide-for-parameterized-queries.md)  
 ## [Указание механизма параметризации запросов с помощью структур плана](specify-query-parameterization-behavior-by-using-plan-guides.md)  
@@ -55,4 +55,8 @@
 ## [Удаление структуры плана](delete-a-plan-guide.md)  
 ## [Включение или отключение структуры плана](enable-or-disable-a-plan-guide.md)  
 
-#[Наблюдение за использованием ресурсов (системный монитор)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
+# [Наблюдение за использованием ресурсов (системный монитор)](../performance-monitor/monitor-resource-usage-system-monitor.md)    
+
+# [Joins](joins.md)   
+
+# [вложенные запросы](subqueries.md)    
