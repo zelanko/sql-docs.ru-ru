@@ -1,7 +1,7 @@
 ---
-title: "Удаление связей (табличные службы SSAS) | Документы Microsoft"
+title: "Удаление связей | Документы Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54f2d9205ec7e8815572e9107e6319262c343edd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 690224c1798494e75f6b26add07d51c3afa7134f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-relationships-ssas-tabular"></a>Удаление связей (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Существующие связи можно удалить с помощью конструктора моделей в представлении диаграммы или с помощью диалогового окна «Управление связями». Сведения об использовании связей в табличных моделях см. в разделе [Связи (табличные службы SSAS)](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
+# <a name="delete-relationships"></a>Удаление связей 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Удалять существующие связи можно с помощью конструктора моделей в представлении диаграмм или диалогового окна «Управление связями». Сведения об использовании связей в табличных моделях см. в разделе [связи](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
 ## <a name="considerations-for-deleting-relationships"></a>Замечания об удалении связей  
  Принимая решение об удалении связи, необходимо учитывать следующие моменты.  
@@ -57,8 +58,8 @@ ms.lasthandoff: 01/08/2018
   
 4.  В диалоговом окне **Управление связями** нажмите кнопку **Закрыть**.  
   
-## <a name="see-also"></a>См. также:  
- [Связи (табличные службы SSAS)](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   
- [Создание связи между двумя таблицами (табличные службы SSAS)](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Связи](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   
+ [Создание связи](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: "Совместимость формул в режиме DirectQuery (службы SSAS 2016) | Документы Microsoft"
+title: "Совместимость формул в режиме DirectQuery | Документы Microsoft"
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2ae2fc5e77d04d24bbe51a0fc06c9546ef739f07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 92c5801fe05dfa19e136e15f15227e50af64f769
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Совместимость формул в режиме DirectQuery 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Для табличных 1200 и выше моделей в режиме DirectQuery больше не применяются многие функциональные ограничения в более ранних версиях. В частности, для формул DAX:
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Для табличных 1200 и выше моделей в режиме DirectQuery больше не применяются многие функциональные ограничения в более ранних версиях. В частности, для формул DAX:
 
 - Теперь DirectQuery создает более простые запросы, обеспечивая более высокую производительность.
 - Безопасность на уровне строк (RLS) теперь поддерживается в режиме DirectQuery.
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="casts"></a>Приведения  
   
-В языке DAX нет функции приведения как таковой, однако в ходе многих операций сравнения и арифметических операций выполняются неявные приведения. Сравнение или арифметическая операция определяет тип данных для полученного результата. Например,  
+В языке DAX нет функции приведения как таковой, однако в ходе многих операций сравнения и арифметических операций выполняются неявные приведения. Сравнение или арифметическая операция определяет тип данных для полученного результата. Например:  
   
 -   Логические значения обрабатываются как численные в ходе арифметических операций, например в виде TRUE + 1 или с применением функции к столбцу логических значений. Операция НЕ также возвращает числовое значение.  
   
@@ -347,8 +348,8 @@ SQL Server обрабатывает значения NULL и пустые зна
 В модели в памяти результат завершается на последнем строковом символе без заполнения.  
 
 
-## <a name="see-also"></a>См. также раздел  
-[Режим DirectQuery (табличные службы SSAS)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+## <a name="see-also"></a>См. также:  
+[Режим DirectQuery](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

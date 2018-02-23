@@ -1,39 +1,41 @@
 ---
 title: "Драйвер Microsoft ODBC для SQL Server в Windows | Документы Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e32deba2343ac385175760685e50ab10a156017a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 990665bcb7091b61bc8579a1a33e30c3cc56874e
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Драйвер Microsoft ODBC для SQL Server в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Microsoft ODBC Driver 13.1, 13 и 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] — это изолированные драйверы ODBC, которые обеспечивают интерфейс программирования (API) реализация стандартные интерфейсы ODBC для Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Драйверы Microsoft ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] — это изолированные драйверы ODBC, которые обеспечивают интерфейс программирования (API) реализация стандартные интерфейсы ODBC для Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
 
-Драйвер Microsoft ODBC для SQL Server можно использовать для создания новых приложений. Можно также обновить имеющиеся приложения в настоящее время использующие старый драйвер ODBC. Драйвер ODBC для SQL Server поддерживает подключения к базе данных SQL Azure, хранилище данных SQL Azure, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 и SQL Server 2005.  
+Драйвер Microsoft ODBC для SQL Server можно использовать для создания новых приложений. Можно также обновить имеющиеся приложения в настоящее время использующие старый драйвер ODBC. Драйвер ODBC для SQL Server поддерживает подключения к базе данных SQL Azure, хранилище данных SQL Azure, 2017 г. SQL Server, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 и SQL Server 2005.  
 
 ## <a name="summary"></a>Сводка
 
-| Version       | Возможности, поддерживаемые      |
+| Версия       | Возможности, поддерживаемые      |
 | ------------- |---------------| 
+| 17 драйвера Microsoft ODBC для SQL Server | <ul><li>Всегда зашифровано поддержку BCP API</li><li>Новый атрибут строки подключения UseFMTONLY драйвер для использования устаревших метаданных в особых случаях, требующие временных таблиц</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Постоянное шифрование</li><li>Проверка подлинности Azure AD</li><li>Группы доступности AlwaysOn</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>Международное доменное имя (IDN)</li></ul> |
 | Драйвер Microsoft ODBC 11 для SQL Server | <ul><li>Организация пулов соединений с учетом драйвера</li><li>Устойчивость подключений</li><li>Асинхронное выполнение (метод опроса)</li></ul> |    
@@ -55,9 +57,9 @@ Microsoft ODBC Driver 13.1, 13 и 11 for [!INCLUDE[ssNoVersion](../../../include
 - [Блог команды разработчиков Microsoft ODBC Driver For SQL Server](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [Форум по доступу к данным SQL Server](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 - [Основные сведения об SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-- [Построение приложений с использованием SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
+- [Построение приложений с использованием собственного клиента SQL Server](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [SQL Server Native Client: вопросы и ответы](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [Справочник по программированию ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)   
 - [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  

@@ -4,7 +4,7 @@ description: "Этот учебник показывает, как для зап
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: b812c67d693d6cf9670160c6d0d795e22a9b202f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Создание и запуск задания агента SQL Server в Linux
 
@@ -47,23 +47,22 @@ ms.lasthandoff: 02/13/2018
 * Компьютер Windows с помощью SSMS:
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) для дополнительных шагов SSMS.
 
-## <a name="install-sql-server-agent"></a>Установка агента SQL Server
+## <a name="enable-sql-server-agent"></a>Включить агент SQL Server
 
-Чтобы использовать агент SQL Server в Linux, необходимо сначала установить **mssql-server-agent** пакета на компьютере, на котором уже установлен 2017 г. SQL Server.
+Для использования агента SQL Server в Linux, необходимо сначала включить агент SQL Server на компьютере, на котором уже установлен 2017 г. SQL Server.
 
-1. Установка **mssql-server-agent** с команду, соответствующую операционной системе Linux.
-
-   | Платформа | Выполнение команд установки |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+1. Чтобы включить агент SQL Server, выполните следующие шаги.
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+  ```
 
 1. Перезапустите SQL Server с помощью следующей команды:
+  ```bash
+  sudo systemctl restart mssql-server
+  ```
 
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
+> [!NOTE]
+> Начиная с SQL Server CU4 2017 г., агент SQL Server входит в состав **mssql server** пакета и отключена по умолчанию. Для настройки агента до посещения CU4 [установки агента SQL Server в Linux](sql-server-linux-setup-sql-agent.md).
 
 ## <a name="create-a-sample-database"></a>Создание образца базы данных
 

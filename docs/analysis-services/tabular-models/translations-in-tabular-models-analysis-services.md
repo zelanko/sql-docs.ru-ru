@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 054902c076be5af595e0b9add93d500263f2acc6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2b5e88e9a77c1d192709bde2fe6dcc9be3887aa3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Переводы в табличных моделях (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] добавляет поддержку строки перевода для табличных моделей. Одиночный объект в модели может иметь несколько переводов имени или описания, что позволяет поддерживать несколько языков в определении модели.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Добавляет поддержку строки перевода для табличных моделей. Одиночный объект в модели может иметь несколько переводов имени или описания, что позволяет поддерживать несколько языков в определении модели.  
   
  Переведенные строки имеются только для тех метаданных объектов (имен и описаний таблиц и столбцов), которые отображаются в клиентском средстве, например в сводной таблице Excel.  Чтобы использовать переведенные строки, клиентское соединение указывает язык и региональные параметры. В компоненте **Анализ в Excel** в раскрывающемся списке можно выбрать язык. Для других средств, возможно, потребуется указать язык и региональные параметры в строке подключения.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  Щелкните **Экспорт файла языка**.  Укажите имя файла и расположение.  
   
- ![SSAS табличных перевод экспорта](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas табличных перевод Экспорт")  
+ ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
   
 ## <a name="add-translations"></a>Добавление переводов  
  Пустой JSON-файл перевода содержит метаданные для переводов на конкретный язык. Применяемые при переводе заполнители для имен объектов и описаний указываются в разделе **Culture** в конце определения модели. Переводы можно добавлять для следующих элементов.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/08/2018
   
  В следующем примере показаны переведенные заголовки и описания для таблиц **DimProduct** и **DimCustomer** .  
   
- ![SSAS — табличные перевод json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas — табличные перевод json")  
+ ![ssas-tabular-translate-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-translate-json")  
   
 > [!TIP]  
 >  Для открытия файла можно использовать любой редактор JSON, но мы рекомендуем использовать редактор JSON в Visual Studio. В этом случае также можно будет использовать команду "Просмотреть код" в обозревателе решений для просмотра определения табличной модели в SSDT. Чтобы получить редактор JSON, требуется [полная установка версии Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx). Бесплатный выпуск Community Edition включает в себя редактор JSON.  
@@ -111,13 +112,13 @@ ms.lasthandoff: 01/08/2018
   
 2.  В диалоговом окне "Соединение с Excel" выберите язык и региональные параметры, для которых в модели существуют переводы строк. Excel обнаруживает языки и региональные параметры, определенные в модели, и соответствующим образом формирует раскрывающийся список.  
   
-     ![службы SSAS — табличные переводы excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas табличных переводы excel")  
+     ![ssas-tabular-translations-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-translations-excel")  
   
      При создании сводной таблицы появятся переведенные имена таблиц и столбцов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровень совместимости табличных моделей в службах Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Сценарии глобализации для служб Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Анализ в Excel (табличные службы SSAS)](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Анализ в Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

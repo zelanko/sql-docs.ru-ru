@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: ebaeba0db0daaf494533cafe03f89effff2fe792
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fe1c808d84bac0c14e1cf46c4613464e04bbea0c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Занятие 1. Создание нового проекта табличной модели
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -91,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
-Дополнительные сведения о различных типах проектов табличных моделей см. в разделе [Проекты табличной модели (табличные службы SSAS)](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Дополнительные сведения о среде создания табличных моделей см. в разделе [Конструктор табличных моделей (службы SSAS)](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+Дополнительные сведения о различных типах проектов табличных моделей см. в разделе [проектов табличной модели](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Дополнительные сведения о среде создания табличных моделей см. в разделе [конструктор табличных моделей ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## <a name="whats-next"></a>Дальнейшие действия

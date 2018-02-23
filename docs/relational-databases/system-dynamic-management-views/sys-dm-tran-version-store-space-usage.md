@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,30 +17,32 @@ f1_keywords:
 - sys.dm_tran_version_store_space_usage
 - dm_tran_version_store_space_usage
 - dm_tran_version_store_space_usage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_version_store_space_usage dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_version_store_space_usage dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: cfdd2caa03fdd12501580c2584d68f374ee54222
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 3108394b7848047bac97ece004bf9c168b0e045c
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Возвращает таблицу, отображающую общее пространство в базе данных tempdb, используемые записи хранилище версий для каждой базы данных. **sys.dm_tran_version_store_space_usage** эффективна, и записывает высокопроизводительных работать, как ее не пройти хранения отдельных версий, а затем возвращает статистические версиями место хранилища, используются в базе данных tempdb на базу данных.
+Возвращает таблицу, отображающую общее пространство в базе данных tempdb, используемые записи хранилище версий для каждой базы данных. **sys.dm_tran_version_store_space_usage** эффективна и не дорогих работать, как он не перемещения по записям хранилища отдельной версии, и возвращает сводную версиями место хранилища используются в базе данных tempdb на базу данных.
   
-Каждая запись версии хранится в виде двоичных данных вместе с некоторыми сведениями о состоянии и отслеживании. Как и в таблицах базы данных, записи в хранилище версий хранятся в страницах размером 8192 байта. Если размер записи превышает 8192 байта, она разбивается на две различные записи.  
+Каждая запись версии хранится в виде двоичных данных, а также некоторые сведения о состоянии и отслеживании. Как и в таблицах базы данных, записи в хранилище версий хранятся в страницах размером 8192 байта. Если размер записи превышает 8192 байта, она разбивается на две различные записи.  
   
 Так как запись версии хранится в двоичном виде, не возникает проблем с разными параметрами сортировки из разных баз данных. Используйте **sys.dm_tran_version_store_space_usage** отслеживание и планирование размера базы данных tempdb, в зависимости от использования пространства хранилища версии баз данных в экземпляре SQL Server.
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор базы данных из базы данных.|  
 |**reserved_page_count**|**bigint**|Общее количество страниц, зарезервированных в базе данных tempdb для версии хранения записей базы данных.|  
@@ -49,7 +52,7 @@ ms.lasthandoff: 01/02/2018
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 
 ## <a name="examples"></a>Примеры  
- Следующий запрос может использоваться для определения места в базе данных tempdb хранилище версий каждой базы данных в экземпляре SQL Server. 
+ Следующий запрос может использоваться для определения в базе данных tempdb, занимаемого пространства каждой базы данных в хранилище версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра. 
   
 ```sql  
 SELECT 
@@ -70,7 +73,7 @@ AdventureWorks2016DW      0                    0
 WideWorldImporters        20                   160             
 ```
  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

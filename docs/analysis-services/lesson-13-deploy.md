@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 213a5cb740899114c13d84305858a499759a8712
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 29a05dfbeea281b2468b95e69b458d4948f7f624
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-13-deploy"></a>Занятие 13. Развертывание
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -73,10 +74,10 @@ ms.lasthandoff: 01/08/2018
 ![как табличных lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
-## <a name="see-also"></a>См. также раздел  
-[Режим DirectQuery (табличные службы SSAS)](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
-[Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS)](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
-[Базы данных табличной модели (табличные службы SSAS)](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
+## <a name="see-also"></a>См. также:  
+[Режим DirectQuery](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
+[Настройка свойств моделирования и развертывания данных по умолчанию](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+[Табличный шаблон баз данных](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   
   ## <a name="whats-next"></a>Дальнейшие действия

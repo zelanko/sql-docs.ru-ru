@@ -1,5 +1,5 @@
 ---
-title: "Свойства (табличные службы SSAS) таблицы | Документы Microsoft"
+title: "Свойства таблицы | Документы Microsoft"
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
@@ -11,21 +11,23 @@ ms.custom:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tableprop.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tableprop.f1
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 864075fb43cd0912a581daa36d996b577c7beaae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 202902448a31fda27ab2c4d8c0bc894cc50da3db
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="table-properties-ssas-tabular"></a>Свойства таблицы (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе описаны свойства табличной модели. Описанные здесь свойства отличаются от свойств таблицы в диалоговом окне «Изменение свойств таблицы», которые определяют, какие столбцы из источника нужно импортировать.  
+# <a name="table-properties"></a>Table Properties 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+В этой статье описаны свойства табличной модели. Описанные здесь свойства отличаются от свойств таблицы в диалоговом окне «Изменение свойств таблицы», которые определяют, какие столбцы из источника нужно импортировать.  
   
  Разделы данной темы:  
   
@@ -47,9 +49,9 @@ ms.lasthandoff: 01/08/2018
   
  **Свойства отчетов**  
   
- Подробное описание и сведения о настройке свойств создания отчетов см. в разделе [Свойства отчетов Power View (табличные службы SSAS)](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
+ Подробное описание и сведения о конфигурации для свойств отчетов см. в разделе [свойства отчетов Power View](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
   
-|Свойство|Параметр по умолчанию|Description|  
+|property|Параметр по умолчанию|Description|  
 |--------------|---------------------|-----------------|  
 |**Набор полей по умолчанию**|||  
 |Поведение таблиц|||  

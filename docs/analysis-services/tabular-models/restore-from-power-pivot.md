@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql11.asvs.ssmsimbi.RestoreFromPP.f1
+f1_keywords:
+- sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7beb148b2090fcdcb7a150d3b5eb789beaf7bb08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ab75dfb620c3d0fc41799f2f59a88b6e741440ea
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="restore-from-power-pivot"></a>Восстановление из Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Можно использовать операцию восстановления из [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] компонентов в SQL Server Management Studio для создания новой базы данных табличной модели на экземпляре служб Analysis Services (работающем в табличном режиме) или восстановить имеющуюся базу данных из [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги (XLSX).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Можно использовать операцию восстановления из компонента [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] среды SQL Server Management Studio для создания новой базы данных табличной модели в экземпляре служб Analysis Services (работающем в табличном режиме) или восстановить имеющуюся базу данных из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (XLSX).  
   
 > [!NOTE]  
->  Команда импорта из шаблона проекта [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в среде SQL Server Data Tools обладает схожими функциями. Дополнительные сведения см. в разделе [Импорт из PowerPivot (табличные службы SSAS)](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  
+>  Команда импорта из шаблона проекта [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в среде SQL Server Data Tools обладает схожими функциями. Дополнительные сведения см. в разделе [Импорт из Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  
   
  При использовании команды восстановления из [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]учитывайте следующее:  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Учетная запись экземпляра служб Analysis Services должна иметь разрешения на чтение файла книги, из которой проводится восстановление.  
   
--   По умолчанию при восстановлении базы данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]для свойства табличного шаблона базы данных "Сведения об олицетворении источника данных" задано значение "По умолчанию", что означает применение учетной записи экземпляра служб Analysis Services. Рекомендуется изменить учетные данные олицетворения на учетную запись Windows в свойствах базы данных. Дополнительные сведения см. в разделе [Олицетворение (табличные службы SSAS)](../../analysis-services/tabular-models/impersonation-ssas-tabular.md).  
+-   По умолчанию при восстановлении базы данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]для свойства табличного шаблона базы данных "Сведения об олицетворении источника данных" задано значение "По умолчанию", что означает применение учетной записи экземпляра служб Analysis Services. Рекомендуется изменить учетные данные олицетворения на учетную запись Windows в свойствах базы данных. Дополнительные сведения см. в разделе [олицетворения](../../analysis-services/tabular-models/impersonation-ssas-tabular.md).  
   
 -   Информация из модели данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] будет скопирована в существующий или новый табличный шаблон базы данных экземпляра служб Analysis Services. Если книга [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] содержит связанные таблицы, они будут воссозданы как таблицы без источника данных аналогично тем, которые создаются командой "Вставить в новую таблицу".  
   
@@ -52,8 +54,8 @@ ms.lasthandoff: 01/08/2018
   
 5.  В области **Параметры**оставьте флажок **Включить сведения о безопасности** . При восстановлении из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] этот параметр не действует.  
   
-## <a name="see-also"></a>См. также:  
- [Базы данных табличной модели (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
- [Импорт из PowerPivot (табличные службы SSAS)](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Табличный шаблон баз данных](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
+ [Импорт из Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   
   

@@ -4,7 +4,7 @@ description: "Эта статья описывает, как SQL Server рабо
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: d0047c61b5b02ad392da9e4b88deedc2033d070a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 71efe59db9de4b60389f40ee6718627817ecee37
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server в Linux:
 
@@ -40,7 +40,7 @@ SQL Server 2017 теперь работает на платформе Linux. Э�
 > [!NOTE]
 > Docker сам по себе работает на разных платформах, что означает, что образ Docker можно запускать в Linux, Mac и Windows.
 
-## <a name="connect"></a>Подключить
+## <a name="connect"></a>Подключение
 
 После установки подключения к экземпляру SQL Server на компьютере Linux. Можно подключить локально или удаленно и с помощью различных средств и драйверов. Примеры использования демонстрируют использование [sqlcmd](sql-server-linux-setup-tools.md) средство командной строки. Ниже приведены другие средства:
 

@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77f18549714e52e2d5681084b0b2246c838b5467
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c54a97a7b84dcb4d9873ee2537e31714b6f62172
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/03/2018
  Столбцы в результирующем наборе разделяются на две группы: ресурсы и запросы. Группа ресурсов описывает ресурсы, на которые был выполнен запрос блокировки, а группа запросов описывает запрос блокировки.  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_tran_locks**.  
+> Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_tran_locks**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -70,8 +70,6 @@ ms.lasthandoff: 02/03/2018
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратор сервера** или **администратора Azure Active Directory** учетной записи.  
  
-
-  
 ## <a name="remarks"></a>Remarks  
  Состояние предоставленного запроса показывает, что блокировка ресурса была предоставлена запрашивающему объекту. Ожидающий запрос обозначает, что запрос еще не был предоставлен. Возвращаются следующие типы ожидающих запросов **request_status** столбца:  
   
@@ -295,7 +293,7 @@ ms.lasthandoff: 02/03/2018
 ### <a name="a-using-sysdmtranlocks-with-other-tools"></a>A. Использование sys.dm_tran_locks с другими средствами  
  В следующем примере выполняется работа со сценарием, в котором операция обновления блокируется другой транзакцией. С помощью **sys.dm_tran_locks** и других средств можно получить сведения об источниках блокировки.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
   
@@ -333,7 +331,7 @@ BEGIN TRAN
   
  Следующий запрос отображает сведения о блокировке. Значение для `<dbid>` необходимо заменить **database_id** из **sys.databases**.  
   
-```  
+```sql  
 SELECT resource_type, resource_associated_entity_id,  
     request_status, request_mode,request_session_id,  
     resource_description   
@@ -351,7 +349,7 @@ SELECT object_name(object_id), *
   
  Следующий запрос отображает сведения о блокировках.  
   
-```  
+```sql  
 SELECT   
         t1.resource_type,  
         t1.resource_database_id,  
@@ -366,7 +364,7 @@ SELECT
   
  Освобождение ресурсов с помощью отката транзакций.  
   
-```  
+```sql  
 -- Session 1  
 ROLLBACK;  
 GO  
@@ -379,7 +377,7 @@ GO
 ### <a name="b-linking-session-information-to-operating-system-threads"></a>Б. Связывание данных о сеансе с потоками операционной системы  
  Следующий пример возвращает информацию, связывающую идентификатор сеанса с идентификатором потока Windows. За производительностью потока можно наблюдать в системном мониторе Windows. Запрос не возвращает идентификаторы сеансов, которые в настоящий момент находятся в ждущем режиме.  
   
-```  
+```sql  
 SELECT STasks.session_id, SThreads.os_thread_id  
     FROM sys.dm_os_tasks AS STasks  
     INNER JOIN sys.dm_os_threads AS SThreads  
@@ -391,9 +389,6 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
- [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
-  
-
-

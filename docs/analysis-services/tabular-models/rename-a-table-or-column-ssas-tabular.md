@@ -1,5 +1,5 @@
 ---
-title: "Переименование таблицы или столбца (табличные службы SSAS) | Документы Microsoft"
+title: "Переименование таблицы или столбца | Документы Microsoft"
 ms.custom: 
 ms.date: 05/22/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.renametableorcolumn.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b22cc6d04ca3384accec6b1893a1fcd1297ca022
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bf8d925f0ffe72eab343ebf8af82030a21c0a9b0
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="rename-a-table-or-column-ssas-tabular"></a>Переименование таблицы или столбца (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Можно изменить имя таблицы во время импорта, введя **понятное имя** в **Выбор таблиц и представлений** страница **мастера импорта таблиц**. Имена таблицы и столбцов также можно изменить, если данные импортируются с помощью запроса на странице **Указание SQL-запроса** **мастера импорта таблиц**.  
+# <a name="rename-a-table-or-column"></a>Переименование таблицы или столбца 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Имя таблицы можно изменить во время импорта, указав **Понятное имя** на странице **Выбор таблиц и представлений** **мастера импорта таблиц**. Имена таблицы и столбцов также можно изменить, если данные импортируются с помощью запроса на странице **Указание SQL-запроса** **мастера импорта таблиц**.  
   
  После добавления данных в модель имя (или название) таблицы появляется на вкладке таблицы в нижней части конструктора моделей. Имя таблицы можно заменить более подходящим. После добавления данных в модель можно также переименовать столбец. Переименование столбца может оказаться полезным в том случае, если данные были импортированы из нескольких источников и необходимо сделать так, чтобы столбцы в разных таблицах имели легко различимые имена.  
   
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
  Вычисления, использующие переименованную таблицу или столбцы из переименованной таблицы, также должны быть обновлены, и данные, получаемые из этих вычислений необходимо обновление и повторное вычисление. В зависимости от числа таблиц и вычислений, которых коснулось это изменение, выполнение этой операции может занять определенное время. Поэтому лучше всего переименовывать таблицы во время операции импорта или до начала построения сложных связей или вычислений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы и столбцы](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [Импорт из Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
  [Импорт из служб Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  

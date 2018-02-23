@@ -1,7 +1,7 @@
 ---
-title: "Определение секций в моделях DirectQuery (табличные службы SSAS) | Документы Microsoft"
+title: "Определение секций в моделях DirectQuery | Документы Microsoft"
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88079b80a84e692ca07695f718c161f626093cec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 21e629bbac90f30562c6b8434e2a73a71fdea4ed
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="define-partitions-in-directquery-models"></a>Определение секций в моделях DirectQuery
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе объясняется использование секций в моделях DirectQuery. Дополнительные общие сведения о секциях в табличных моделях см. в разделе [Секции (табличные службы SSAS)](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+В этом разделе объясняется использование секций в моделях DirectQuery. Дополнительные общие сведения о секциях в табличных моделях см. в разделе [секций](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Хотя у таблицы может быть несколько секций, в режиме DirectQuery только одну из них можно назначить для выполнения запроса. Требование использовать одну секцию относится к моделям DirectQuery на всех уровнях совместимости.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
 |DataView=Sample<br /><br /> Применяется к табличным моделям, использующим представления образцов данных|Разрешить обработку секции|Если модель использует образец данных, вы можете обработать таблицу, чтобы вернуть отфильтрованный набор данных, который обеспечивает визуальные подсказки во время разработки модели.|  
 |DirectQueryUsage=InMemory With DirectQuery<br /><br /> Применяется к табличным моделям 1100 или 1103, использующим сочетание режима выполнения в памяти и режима DirectQuery.|Разрешить обработку секции|Если модель использует гибридный режим, то для запросов к источнику данных в памяти и источнику данных DirectQuery следует использовать одну и ту же секцию.|  
   
-## <a name="see-also"></a>См. также раздел  
- [Секции (табличные службы SSAS)](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
+## <a name="see-also"></a>См. также:  
+ [Секции](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

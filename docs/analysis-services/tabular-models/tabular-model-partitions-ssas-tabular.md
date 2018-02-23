@@ -1,5 +1,5 @@
 ---
-title: "Секции табличных моделей (табличные службы SSAS) | Документы Microsoft"
+title: "Секции табличных моделей | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: analysis-services
@@ -11,27 +11,29 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
+f1_keywords:
+- sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
 ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2ac102f21aeadab1d5ca7b916a2081405c654cd5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: daaca1355790577310419ad5a48395cd9cb8ff34
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="tabular-model-partitions-ssas-tabular"></a>Секции табличных моделей (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, определенные для модели во время разработки модели, дублируются в модели развертывания. После развертывания можно настроить управление секциями и создавать новые секции с помощью диалогового окна **Секции** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью скрипта. В этом разделе описываются секции в развернутой табличной модели базы данных. Дополнительные сведения о создании и управлении секциями во время разработки модели см. в разделе [Секции (табличные службы SSAS)](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+# <a name="tabular-model-partitions"></a>Секции табличных моделей 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, определенные для модели во время разработки модели, дублируются в модели развертывания. После развертывания можно настроить управление секциями и создавать новые секции с помощью диалогового окна **Секции** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью скрипта. В этом разделе описываются секции в развернутой табличной модели базы данных. Дополнительные сведения о создании и управлении секциями во время разработки модели см. в разделе [секций](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
  Разделы данной темы:  
   
 -   [Преимущества](#bkmk_benefits)  
   
--   [Разрешения](#bkmk_permissions)  
+-   [Permissions](#bkmk_permissions)  
   
 -   [Обработка секций](#bkmk_process_partitions)  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/08/2018
   
  Реализация стратегии обработки секций для табличных моделей организации во многом зависит от требований к обработке конкретной модели и доступных ресурсов.  
   
-##  <a name="bkmk_permissions"></a> разрешения  
+##  <a name="bkmk_permissions"></a> Permissions  
  Для создания, обработки и управления секциями в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]необходимы соответствующие разрешения служб Analysis Services, определенные в роли безопасности. Каждая роль безопасности имеет одно из следующих разрешений.  
   
 |Разрешение|Действия|  
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 |Процесс|Чтение, обработка|  
 |Только для чтения|Чтение|  
   
- Дополнительные сведения о создании ролей при создании моделей с помощью [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] см. в разделе [Роли (табличные службы SSAS)](../../analysis-services/tabular-models/roles-ssas-tabular.md). Дополнительные сведения об управлении членами ролей для развернутых табличных моделей с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] см. в разделе [Роли табличных моделей (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Дополнительные сведения о создании ролей во время создания модели с помощью [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], в разделе [ролей](../../analysis-services/tabular-models/roles-ssas-tabular.md). Дополнительные сведения об управлении членами ролей для развернутых табличных моделей с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], в разделе [табличной модели роли](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_parallelProc"></a> Параллельная обработка  
 Службы Analysis Services поддерживает параллельную обработку для таблиц с двумя или более секциями, повышающую производительность обработки. Параллельная обработка не имеет параметров конфигурации (см. примечания). Параллельная обработка происходит по умолчанию, когда вы запускаете обработку таблицы или выбираете несколько секций одной и той же таблицы и нажимаете "Обработка". Также вы можете обрабатывать секции таблицы независимо друг от друга.  
@@ -91,9 +93,9 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_related_tasks"></a> Связанные задачи  
   
-|Задача|Description|  
+|Задача|Описание|  
 |----------|-----------------|  
-|[Создание секций табличной модели и управление ими (табличные службы SSAS)](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Содержит описание обработки секций и управления ими в развернутых табличных моделях в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
-|[Обработка секций табличной модели (табличные службы SSAS)](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Содержит описание обработки секций в развернутых табличных моделях с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Создание секций табличной модели и управление ими](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Содержит описание обработки секций и управления ими в развернутых табличных моделях в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Обработка секций табличной модели](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Содержит описание обработки секций в развернутых табличных моделях с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
   

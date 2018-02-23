@@ -1,5 +1,5 @@
 ---
-title: "Управление ролями с помощью среды SSMS (табличные службы SSAS) | Документы Microsoft"
+title: "Управление ролями с помощью SSMS | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dc580d8e36284f9c2527257d2e87bd3d16ec603a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9472bef0e1971c3f8868902b5cd91189256e860d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Управление ролями с помощью среды SSMS (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Создание, изменение и управление ролями для развернутой табличной модели с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+# <a name="manage-roles-by-using-ssms"></a>Управление ролями с помощью среды SSMS 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+С помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]можно создавать, изменять роли развернутой табличной модели или управлять ими.  
   
  Задачи данной темы:  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 -   [Удаление роли](#bkmk_deletet_role)  
   
 > [!CAUTION]  
->  Повторное развертывание проекта табличной модели с ролями, определенными с помощью диспетчера ролей в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , приводит к перезаписи ролей, определенных в развернутой табличной модели.  
+>  Повторное развертывание проекта табличной модели с ролями, определенными с помощью диспетчера ролей в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], приводит к перезаписи ролей, определенных в развернутой табличной модели.  
   
 > [!CAUTION]  
 >  Использование среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для управления базой данных рабочей области табличной модели, когда проект открыт в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , может привести к повреждению файла Model.bim. При создании ролей и управлении ими в базе данных рабочей области табличной модели пользуйтесь диспетчером ролей среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -87,7 +88,7 @@ ms.lasthandoff: 01/08/2018
   
 -   В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]разверните шаблон базы данных, содержащий роль, которую нужно удалить, разверните **Роли**, щелкните правой кнопкой мыши роль и выберите команду **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
- [Роли (табличные службы SSAS)](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

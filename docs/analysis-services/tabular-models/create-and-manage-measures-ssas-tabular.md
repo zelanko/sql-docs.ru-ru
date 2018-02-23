@@ -1,7 +1,7 @@
 ---
-title: "Создание мер и управление ими (табличные службы SSAS) | Документы Microsoft"
+title: "Создание мер и управление ими | Документы Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,31 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 799ada43cebe2f6358c88c0b4aa8719186f67823
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e61c65d65723b1500140a2c2493a479b0e2a640
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-measures-ssas-tabular"></a>Создание мер и управление ими (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Мера — формула, которая создается специально для использования в отчете или сводной таблицы Excel (или сводной диаграммы). Меры могут быть основаны на стандартных агрегатных функциях, например COUNT или SUM, либо на пользовательских формулах на языке выражений анализа данных (DAX). Приведенные в этом разделе задачи описывают, каким образом производится создание мер и управление ими с помощью сетки мер таблицы.  
-  
- В этот раздел включены следующее задачи:  
-  
--   [Создание меры с помощью стандартной формулы агрегата](#bkmk_create_stand)  
-  
--   [Создание меры с помощью пользовательской формулы](#bkmk_create_custom)  
-  
--   [Изменение свойств меры](#bkmk_edit)  
-  
--   [Переименование меры](#bkmk_rename)  
-  
--   [Удаление меры](#bkmk_delete)  
+# <a name="create-and-manage-measures"></a>Создание мер и управление ими 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Мера — это формула, которая создается специально для использования в отчете или сводной таблице (или сводной диаграмме) Excel. Меры могут быть основаны на стандартных агрегатных функциях, например COUNT или SUM, либо на пользовательских формулах на языке выражений анализа данных (DAX). Приведенные в этом разделе задачи описывают, каким образом производится создание мер и управление ими с помощью сетки мер таблицы.  
   
 ## <a name="tasks"></a>Задания  
  Создание мер и управление ими производится в сетке мер таблицы. Просматривать сетку мер таблицы в конструкторе моделей можно только в представлении данных. В представлении диаграммы создавать меры или увидеть сетку мер нельзя. Однако в этом представлении отображаются существующие меры. Чтобы отобразить сетку мер таблицы, в меню **Таблица** выберите команду **Показать сетку мер**.  
@@ -65,9 +54,9 @@ ms.lasthandoff: 01/08/2018
   
 -   Щелкните меру правой кнопкой мыши в сетке мер и выберите команду **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
- [Меры (табличные службы SSAS)](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [Ключевые показатели эффективности (табличные службы SSAS)](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Вычисляемые столбцы (табличные службы SSAS)](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
+## <a name="see-also"></a>См. также  
+ [Меры](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Вычисляемые столбцы](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

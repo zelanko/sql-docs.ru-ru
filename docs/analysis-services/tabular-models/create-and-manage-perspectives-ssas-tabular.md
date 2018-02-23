@@ -1,7 +1,7 @@
 ---
-title: "Создание перспектив и управление ими (табличные службы SSAS) | Документы Microsoft"
+title: "Создание и управление перспективами | Документы Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,33 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.perspectivedb.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.perspectivedb.f1
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c414c0edae99923b8c8e3d370a1d998fe39ccef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5149052156082507c6c970512ab7db0194209ab5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-perspectives-ssas-tabular"></a>Создание перспектив и управление ими (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Перспективы определяют просматриваемые подмножества модели, реализующие фокус ввода, специфическую и приложении модели. Приведенные в этом разделе задачи описывают создание и управление перспективами с помощью диалогового окна **Перспективы** конструктора моделей.  
-  
- В этот раздел включены следующее задачи:  
-  
--   [Добавление перспективы](#bkmk_add)  
-  
--   [Изменение перспективы](#bkmk_edit)  
-  
--   [Переименование перспективы](#bkmk_rename)  
-  
--   [Удаление перспективы](#bkmk_delete)  
-  
--   [Копирование перспективы](#bkmk_copy)  
+# <a name="create-and-manage-perspectives"></a>Создание перспектив и управление ими 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Перспективы определяют просматриваемые подмножества модели, реализующие точки наблюдения модели, которые сосредоточены на определенном аспекте либо предназначены для конкретных деловых целей или использования в конкретном приложении. Приведенные в этом разделе задачи описывают создание и управление перспективами с помощью диалогового окна **Перспективы** конструктора моделей.  
   
 ## <a name="tasks"></a>Задания  
  Для создания перспектив используется диалоговое окно **Перспективы** , которое позволяет добавлять, изменять, удалять, копировать и просматривать перспективы. Чтобы открыть диалоговое окно **Перспективы** , в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]в меню **Модель** выберите пункт **Перспективы**.  
@@ -65,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 -   При наведении указателя мыши над заголовком столбца перспективы появляется кнопка **Копировать** . Для создания копии этой перспективы нажмите кнопку **Копировать** . Копия выбранной перспективы будет добавлена в качестве новой перспективы справа от существующих перспектив. Новая перспектива наследует имя скопированной перспективы, при этом к концу имени добавляется слово *копия* . Например, если создается копия перспективы *Sales* , то новая перспектива будет называться *Sales — копия*.  
   
 ## <a name="see-also"></a>См. также:  
- [Перспективы (табличные службы SSAS)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Иерархии (табличные службы SSAS)](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
+ [Перспективы](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Иерархии](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   

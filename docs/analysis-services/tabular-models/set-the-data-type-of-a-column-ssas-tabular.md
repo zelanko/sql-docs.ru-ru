@@ -1,5 +1,5 @@
 ---
-title: "Задайте тип данных столбца (табличные службы SSAS) | Документы Microsoft"
+title: "Задайте тип данных столбца | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 441bb1316c22d0a701ded998def0b1f94c84e4de
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Выбор типа данных столбца (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]При импорте данных или вставке данных в модель конструктор моделей автоматически определять и применяет типы данных. После добавления данных в модель можно вручную изменить тип данных столбца, чтобы изменить способ хранения данных. Если необходимо только изменить формат отображения данных, не изменяя способ их хранения, так и сделайте.  
+# <a name="set-the-data-type-of-a-column"></a>Выбор типа данных столбца 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+При импорте данных или вставке данных в модель конструктор модели автоматически обнаруживает и применяет типы данных. После добавления данных в модель можно вручную изменить тип данных столбца, чтобы изменить способ хранения данных. Если необходимо только изменить формат отображения данных, не изменяя способ их хранения, так и сделайте.  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>Изменение типа данных или формата отображения для столбца  
   
@@ -79,9 +80,9 @@ ms.lasthandoff: 01/08/2018
   
  Если тип данных поддерживается, но конструктор моделей обнаруживает значения, не поддерживаемые новым типом данных, то возникает другая ошибка и значения данных потребуется исправить перед продолжением операции.  
   
- Подробные сведения о типах данных, которые используются в семантических моделях бизнес-аналитики, о способах неявного преобразования и использовании разных типов данных в формулах см. в разделе [Поддерживаемые типы данных (табличные службы SSAS)](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ Подробные сведения о типах данных, используемых в семантических моделей бизнес-аналитики, как они могут неявно преобразованный и как разные типы данных используются в формулах см. в разделе [поддерживаемые типы данных](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
-## <a name="see-also"></a>См. также:  
- [Поддерживаемые типы данных (табличные службы SSAS)](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Поддерживаемые типы данных](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

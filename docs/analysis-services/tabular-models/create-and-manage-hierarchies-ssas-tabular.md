@@ -1,7 +1,7 @@
 ---
-title: "Создание иерархий и управление ими (табличные службы SSAS) | Документы Microsoft"
+title: "Создание иерархий и управление ими | Документы Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6a8646985a0d9eb8dbba35123c2c3b1d049e62a5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 96af188d39d583c53b2520d03f6fd0962092a90f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-hierarchies-ssas-tabular"></a>Создание иерархий и управление ими (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Иерархии могут создаваться и управляться в конструкторе моделей в представлении диаграммы. Чтобы просмотреть представление диаграммы в конструкторе моделей в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], укажите в меню **Модель** пункт **Представление модели**, а затем выберите пункт **Представление диаграммы**.  
+# <a name="create-and-manage-hierarchies"></a>Создание иерархий и управление ими 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Создавать иерархии и управлять ими можно в конструкторе моделей, в представлении диаграммы. Чтобы просмотреть представление диаграммы в конструкторе моделей в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], укажите в меню **Модель** пункт **Представление модели**, а затем выберите пункт **Представление диаграммы**.  
   
- В этот раздел включены следующее задачи:  
+ В этой статье рассматриваются следующие задачи:  
   
 -   [Создание иерархии](#bkmk_create)  
   
@@ -99,9 +100,9 @@ ms.lasthandoff: 01/08/2018
   
 -   Можно также щелкнуть родительский уровень иерархии и нажать клавишу «Delete». При этом также удаляются все дочерние уровни.  
   
-## <a name="see-also"></a>См. также:  
- [Конструктор табличных моделей (службы SSAS)](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [Иерархии &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
- [Меры (табличные службы SSAS)](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Конструктор табличных моделей ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Hierarchies](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [Меры](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

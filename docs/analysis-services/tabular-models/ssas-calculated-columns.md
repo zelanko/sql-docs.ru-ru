@@ -1,5 +1,5 @@
 ---
-title: "Вычисляемые столбцы (табличные службы SSAS) | Документы Microsoft"
+title: "Вычисляемые столбцы | Документы Microsoft"
 ms.custom: 
 ms.date: 10/03/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 92e082ac88881cb6eaa252975ea865013c753d95
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f749ff3dc18d381985a38ebf0f2867aa073d2fef
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="calculated-columns"></a>Вычисляемые столбцы
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Вычисляемые столбцы в табличной модели позволяют добавлять новые данные в модель. Вместо вставки или импорта значений в столбец создается формула DAX, которая определяет значения уровня строк для столбца. Вычисляемый столбец впоследствии может использоваться в отчете, сводной таблице или сводной диаграмме, как и любой другой столбец.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Вычисляемые столбцы в табличной модели позволяют добавлять новые данные в модель. Вместо вставки или импорта значений в столбец создается формула DAX, которая определяет значения уровня строк для столбца. Вычисляемый столбец впоследствии может использоваться в отчете, сводной таблице или сводной диаграмме, как и любой другой столбец.  
  
   
   
@@ -74,11 +75,11 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Создание вычисляемого столбца](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|Задачи в данном разделе описывают добавление нового вычисляемого столбца в таблицу.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Таблицы и столбцы](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [Меры](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Вычисления](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  

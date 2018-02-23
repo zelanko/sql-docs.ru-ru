@@ -1,5 +1,5 @@
 ---
-title: "Сортировка данных в таблице (табличные службы SSAS) | Документы Microsoft"
+title: "Сортировка данных в таблицу | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5fa6ad56-bf68-4aac-a226-52556173b7e2
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f4fff0e8e215cd9c5c656de99da221023c45c807
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 15fb7dedf1207965fe7bf24d76d12985d7d27945
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="sort-data-in-a-table-ssas-tabular"></a>Сортировка данных в таблице (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Можно сортировать данные в текст (от A до Z или от я до А) и числа (возрастанию или по убыванию) в один или несколько столбцов.  
+# <a name="sort-data-in-a-table"></a>Сортировка данных в таблице 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Данные могут быть отсортированы по алфавиту (в прямом или обратном порядке) и по значениям (по возрастанию или по убыванию) в одном или нескольких столбцах.  
   
 ### <a name="to-sort-the-data-in-a-table-based-on-a-text-column"></a>Сортировка данных в таблице по текстовому столбцу  
   
@@ -52,9 +53,9 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  Если результаты не соответствуют ожиданию, возможно, столбец содержит числа, сохраненные в формате текста. Например, отрицательные числа, импортированные из систем составления отчетности, или число, введенное с апострофом «’» в начале, сохраняются как текст.  
   
-## <a name="see-also"></a>См. также:  
- [Сортировка и фильтрация данных (табличные службы SSAS)](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
- [Перспективы (табличные службы SSAS)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Роли (табличные службы SSAS)](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
+## <a name="see-also"></a>См. также  
+ [Сортировка и фильтрация данных](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
+ [Перспективы](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

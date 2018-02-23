@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e7f03a55e7be9bba83458b04d11208ed1a65b524
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 883c016829dcf5ba9b7d48f0356a4a6141550e7d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Установка Microsoft ODBC Driver for SQL Server на Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,6 +32,8 @@ ms.lasthandoff: 02/11/2018
 В этом разделе описывается установка [!INCLUDE[msCoName](../../../includes/msconame_md.md)] драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Linux и macOS, а также дополнительные средства командной строки для SQL Server (`bcp` и `sqlcmd`) и разработки заголовков unixODBC.
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>17 драйвера Microsoft ODBC для SQL Server 
+
+**Важное замечание:** версия 17 пакеты драйверов ODBC для Linux и Mac в данное время недоступны из-за проблем при обновлении существующей установки. Мы работаем над предоставляя обновленные пакеты, как можно быстрее. Выполнение команды для установки версии 17 в настоящее время установит драйвер версии 13.1.
 
 ### <a name="debian-8-and-9"></a>Debian 8 и 9
 ```
@@ -364,8 +366,8 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ### <a name="offline-installation"></a>Автономная установка
 При необходимости или требуют [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 для установки на компьютере без подключения к Интернету, необходимо будет вручную разрешите зависимости пакета. [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 имеет следующие прямой зависимости:
 - Ubuntu: libc6 (> = 2.21), libstdc ++ 6 (> = 4.9), libkrb5-3, libcurl3, openssl, debconf (> = 0,5), unixodbc (> = 2.3.1-1)
-- Red Hat:```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
-- SuSE:```glibc, libuuid1, krb5, openssl, unixODBC```
+- Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
+- SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
 Каждый из этих пакетов в свою очередь имеет собственные зависимости, которые могут или не могут находиться в системе. Общее решение этой проблемы можно найти на распределение пакета диспетчера документации: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), и [SUSE](https://en.opensuse.org/Portal:Zypper)
 

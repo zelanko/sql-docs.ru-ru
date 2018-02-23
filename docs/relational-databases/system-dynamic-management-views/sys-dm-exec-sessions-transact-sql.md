@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Разрешения  
 Все могли увидеть свои собственные сведения о сеансе.  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Требует `VIEW SERVER STATE` разрешение на [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] для просмотра всех сеансов на сервере.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Требует `VIEW DATABASE STATE` для просмотра всех подключений к текущей базе данных. `VIEW DATABASE STATE`не может быть предоставлено в `master` базы данных. 
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Требует `VIEW DATABASE STATE` для просмотра всех подключений к текущей базе данных. `VIEW DATABASE STATE` не может быть предоставлено в `master` базы данных. 
   
   
 ## <a name="remarks"></a>Remarks  
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/03/2018
  Если этот параметр не включен, то данные столбцы будут возвращать значения NULL. Дополнительные сведения о настройке этого параметра конфигурации сервера см. в разделе [соответствие стандарту common criteria включенный параметр конфигурации сервера](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
  
  
- Соединения администратора в базе данных SQL Azure будет отображаться одну строку для авторизованного сеанса подключения без прав администратора будет видеть только сведения, относящиеся к их сеансов пользователей базы данных. 
+ Соединения администратора в базе данных SQL Azure будут видеть одну строку для авторизованного сеанса. «Sa» сеансы, которые отображаются в результирующем наборе, имеют негативного влияния на квоты на число пользователей для сеансов. Соединения без прав администратора будут видеть только сведения, относящиеся к их сеансов пользователей базы данных.
  
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
