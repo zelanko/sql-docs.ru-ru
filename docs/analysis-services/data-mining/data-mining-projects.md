@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-mining-projects"></a>Проекты интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -220,11 +220,11 @@ ms.lasthandoff: 02/15/2018
 |Ссылки на сведения о каждом средстве просмотра моделей интеллектуального анализа данных|[Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Сведения о создании диаграммы точности прогнозов, диаграммы роста прибыли или матрицы классификации и сведения о тестировании структуры интеллектуального анализа данных|[Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Сведения о параметрах обработки и разрешениях|[Обработка объектов интеллектуального анализа данных](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Дополнительные сведения о службах Analysis Services|[Многомерный шаблон баз данных &#40; Службы SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Дополнительные сведения о службах Analysis Services|[Многомерный шаблон баз данных ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Конструктор интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-designer.md)   
  [Создание многомерных моделей с помощью SQL Server Data Tools &#40; SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [База данных рабочей области &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [База данных рабочей области](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae5acd43bb7d4bd4956cc5dae36e7dc15787a83f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_BISM"></a> Предоставление разрешений на чтение табличного шаблона базы данных  
  Поскольку база данных запущена на сервере за пределами фермы, частью настройки соединения является предоставление административных и пользовательских разрешений для внутреннего сервера служб Analysis Services. Службы Analysis Services используют модель разрешений на основе ролей. Пользователи, подключающиеся к шаблонам базы данных, должны иметь разрешения «Чтение» или выше, которые они получили от роли, предоставляющей своим членам разрешения на чтение.  
   
- Роли, а иногда членство в ролях, определяются при создании модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Для создания ролей нельзя использовать среду SQL Server Management Studio, однако ее можно использовать для добавления членов в уже определенную роль. Дополнительные сведения о создании ролей см. в разделе [Создание ролей и управление ими (табличные службы SSAS)](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ Роли, а иногда членство в ролях, определяются при создании модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Для создания ролей нельзя использовать среду SQL Server Management Studio, однако ее можно использовать для добавления членов в уже определенную роль. Дополнительные сведения о создании ролей см. в разделе [Создание и управление ролями](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### <a name="assign-role-membership"></a>Назначение членства в ролях  
   

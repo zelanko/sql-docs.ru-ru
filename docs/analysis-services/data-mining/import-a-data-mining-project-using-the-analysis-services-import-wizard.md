@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f7a99df396ecef55f0ba6a4529416354cdccda1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9ac94cfcd17842f118ea6bda19af830d8d737b94
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,6 +66,6 @@ ms.lasthandoff: 02/15/2018
      Новый проект будет автоматически открыт в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Свойства проекта &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
+ [Свойства проекта](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

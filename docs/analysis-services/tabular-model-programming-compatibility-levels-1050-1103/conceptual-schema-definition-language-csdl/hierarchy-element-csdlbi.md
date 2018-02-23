@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21e11773cfe402d85d661c009bf1b6a2fef7235a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 230e5438e9494a873a0045eebb2870597834b5be
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Элемент Hierarchy (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/15/2018
 |Level|Да|Один или несколько элементов Level, определяющих столбцы, участвующие в иерархии.<br /><br /> См. раздел [Элемент Level (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md).|  
   
 ## <a name="remarks"></a>Замечания  
- В табличных моделях иерархии создаются за счет определения отношений «родитель-потомок» между столбцами одной таблицы. Дополнительные сведения см. в разделе [Иерархии (табличные службы SSAS)](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
+ В табличных моделях иерархии создаются за счет определения отношений «родитель-потомок» между столбцами одной таблицы. Дополнительные сведения см. в разделе [иерархий](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
 ## <a name="example"></a>Пример  
  **Табличные**  

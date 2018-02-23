@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Настройка служб Analysis Services для ограниченного делегирования Kerberos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_delegate"></a> Настройка служб Analysis Services для доверенного делегирования  
  Настройка служб Analysis Services для ограниченного делегирования Kerberos позволяет службе олицетворять клиентское удостоверение в службе более низкого уровня, например в реляционной базе данных, для передачи данных, как если бы клиент устанавливал соединение напрямую.  
   
- Сценарии делегирования для служб Analysis Services ограничены табличными моделями, настроенными для работы в режиме **DirectQuery** . Это единственный случай, когда службы Analysis Services могут передавать делегированные учетные данные в другую службу. Во всех остальных сценариях (например в сценариях SharePoint, упомянутых в предыдущем разделе), службы Analysis Services представляют принимающую сторону цепи делегирования. Дополнительные сведения о режиме DirectQuery см. в разделе [Режим DirectQuery (табличные службы SSAS)](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+ Сценарии делегирования для служб Analysis Services ограничены табличными моделями, настроенными для работы в режиме **DirectQuery** . Это единственный случай, когда службы Analysis Services могут передавать делегированные учетные данные в другую службу. Во всех остальных сценариях (например в сценариях SharePoint, упомянутых в предыдущем разделе), службы Analysis Services представляют принимающую сторону цепи делегирования. Дополнительные сведения о DirectQuery см. в разделе [режим DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Часто ошибочно считается, что хранилище ROLAP, операции обработки или доступ к удаленным разделам каким-либо образом предоставляет требования к ограниченному делегированию. Это не тот случай. Все данные операции выполняются непосредственно учетной записью службы (также известной как учетная запись обработки) от ее собственного имени. В Analysis Services делегирование для этих операций не требуется при условии, что разрешения для таких операций предоставляются непосредственно учетной записи службы (например, предоставление разрешений db_datareader в реляционной базе данных, чтобы служба могла обрабатывать данные). Дополнительные сведения об операциях и разрешениях сервером см. в статье [Настройка учетных записей службы (службы Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
