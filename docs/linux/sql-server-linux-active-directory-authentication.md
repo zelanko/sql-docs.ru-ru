@@ -9,18 +9,18 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Проверка подлинности Active Directory с SQL Server в Linux
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/01/2018
 Перед настройкой проверки подлинности AD, необходимо:
 
 * Настроить контроллер домена AD (Windows), в сети  
-* Установить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* Установка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -157,7 +157,7 @@ ms.lasthandoff: 02/01/2018
   
 5. Убедитесь, что теперь можно собрать сведения о пользователе из домена и что можно получить билет Kerberos, что и пользователь.
 
-   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+   В следующем примере используется **идентификатор**,  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, и  **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**  команд для этого.
 
    ```bash
    id user@contoso.com
@@ -182,7 +182,7 @@ ms.lasthandoff: 02/01/2018
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Создайте пользователя AD для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и задать имя участника-службы
 
   > [!NOTE]
-  > В следующих шагах мы будем использовать ваш [полного доменного имени](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы работаете с **Azure**, необходимо  **[создать](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  перед продолжением работы.
+  > Далее шаги использования вашей [полного доменного имени](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы работаете с **Azure**, необходимо  **[создать](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  перед продолжением работы.
 
 1. На контроллере домена запустите [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) команду PowerShell, чтобы создать нового пользователя AD с помощью пароля, срок действия не ограничен. В этом примере имена учетной записи «mssql», но имя учетной записи может быть любое. Вам будет предложено ввести новый пароль для учетной записи:
 
@@ -195,7 +195,7 @@ ms.lasthandoff: 02/01/2018
    > [!NOTE]
    > Это соображениям безопасности рекомендуется иметь выделенной учетной записи AD для SQL Server, чтобы учетные данные SQL Server не совместно с другими службами, используя ту же учетную запись. Тем не менее можно повторно использовать существующую учетную запись AD при желании, если вы знаете пароль (требуется для создания файла keytab на следующем шаге).
 
-2. Задать ServicePrincipalName (SPN) для этой учетной записи с помощью `setspn.exe` средства. Имя участника-службы должен быть отформатирован только как указано в следующем примере: полное доменное имя можно найти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хост-компьютера, запустив `hostname --all-fqdns` на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] узла и TCP-порт должен быть 1433, если не настроены [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использовать другой номер порта.
+2. Задать ServicePrincipalName (SPN) для этой учетной записи с помощью `setspn.exe` средства. Имя участника-службы должен быть отформатирован в точности совпадают с указанными в следующем примере. Полное доменное имя можно найти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хост-компьютера, запустив `hostname --all-fqdns` на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] узла и TCP-порт должен быть 1433, если не настроены [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использовать другой номер порта.
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -218,7 +218,7 @@ ms.lasthandoff: 02/01/2018
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Создание файла keytab для пользователя AD, созданный на предыдущем шаге. В этом случае мы будем использовать  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. При появлении запроса введите пароль для этой учетной записи AD.
+2. Создание файла keytab с  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**  для пользователя AD, созданный на предыдущем шаге. При появлении запроса введите пароль для этой учетной записи AD.
 
    ```bash
    sudo ktutil
@@ -267,9 +267,9 @@ ms.lasthandoff: 02/01/2018
 
 Войдите на клиентский компьютер, используя свои учетные данные домена. Теперь вы можете подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] избежать повторного ввода пароля, с помощью проверки подлинности AD. При создании имени входа для присоединения к группе AD, таким же образом можно подключиться любой пользователь AD, являющийся членом этой группы.
 
-Параметр строки подключения для клиентов на использование проверки подлинности AD, зависит от того, на драйвер, который вы используете. Ниже приведено несколько примеров.
+Параметр строки подключения для клиентов на использование проверки подлинности AD, зависит от того, на драйвер, который вы используете. Рассмотрим следующие примеры:
 
-* `sqlcmd`на клиентском компьютере Linux присоединенных к домену
+* `sqlcmd` на клиентском компьютере Linux присоединенных к домену
 
    Войдите на присоединенных к домену клиента Linux с помощью `ssh` и учетные данные домена:
 

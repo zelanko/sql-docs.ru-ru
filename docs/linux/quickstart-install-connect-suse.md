@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: a01e66bb8f7b223762c7f3aa4b22d9646e5f8304
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d2914737940999b438d99f382f1960a49a2000cd
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Установка SQL Server и создать базу данных на SUSE Linux Enterprise Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом кратком руководстве сначала установить 2017 г. SQL Server в SUSE Linux Enterprise Server (SLES) версии 12 SP2. Подключитесь с **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом кратком руководстве сначала установить 2017 г. SQL Server в SUSE Linux Enterprise Server (SLES) версии 12 SP2. Затем мы подключимся при помощи **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 > [!TIP]
 > Этот учебник требуется ввод данных пользователем и подключение к Интернету. Если вы заинтересованы в [автоматической](sql-server-linux-setup.md#unattended) или [автономного](sql-server-linux-setup.md#offline) процедуры установки. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
@@ -123,9 +123,9 @@ ms.lasthandoff: 02/11/2018
 > [!TIP]
 > **Sqlcmd** — лишь один инструмент для подключения к SQL Server для выполнения запросов и выполнять задачи управления и разработки. Ниже перечислены другие инструменты.
 >
-> * [SQL Server Operations Studio (Предварительная версия)](../sql-operations-studio/what-is.md)
+> * [SQL Server Operations Studio (предварительная версия)](../sql-operations-studio/what-is.md);
 > * [Среда SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
 > * [Код Visual Studio](sql-server-linux-develop-use-vscode.md).
-> * [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+> * [mssql-cli (предварительная версия)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/).
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

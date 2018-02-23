@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 48f1782ca1da3e730181402ed947453b6eeefc35
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: af88c21dc246238274ab66b47bb76302f0a86f06
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Начало работы с доставкой журналов в Linux
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/01/2018
   ![Доставки журналов](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-Как показано в приведенном выше рисунке, сеанса доставки журналов включает следующие шаги:
+Как описано в данном рисунке, сеанса доставки журналов включает следующие шаги:
 
 - Резервное копирование журнала транзакций на первичном экземпляре SQL Server
 - Скопировав файл резервной копии журнала транзакций по сети для дополнительных экземпляров SQL Server

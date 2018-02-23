@@ -1,6 +1,6 @@
 ---
 title: "Заметки о выпуске для 2017 г. SQL Server в Linux | Документы Microsoft"
-description: "В этом разделе содержатся заметки о выпуске и поддерживаемых функций для ОС Linux 2017 г. SQL Server. Заметки о выпуске включаются самым последним выпуском и несколько предыдущих выпусков."
+description: "В этой статье содержатся заметки о выпуске и поддерживаемых функций для ОС Linux 2017 г. SQL Server. Заметки о выпуске включаются самым последним выпуском и несколько предыдущих выпусков."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,21 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: e8160ec17a856a3c14d1177085c95c329e5d2b3b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 3d53adc21ff54f8fe6171f361fbfba3208a427d1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
 
-Следующие замечания к выпуску применяются для ОС Linux 2017 г. SQL Server. Ниже раздел разбит на разделы для каждого выпуска. Выпуск общедоступной версии имеет подробные поддержки и известные проблемы в списке. Каждый выпуск накопительное обновление (CU) имеет ссылку поддержки раздел, описывающий CU изменения, а также ссылки для загрузки пакета Linux.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Следующие замечания к выпуску применяются для ОС Linux 2017 г. SQL Server. В этой статье разбивается на разделы для каждого выпуска. Выпуск общедоступной версии имеет подробные поддержки и известные проблемы в списке. Каждого выпуска накопительного пакета обновления (CU) имеет ссылку на статью технической поддержки, описывающее CU изменения, а также ссылки на пакет загружает Linux.
 
 ## <a name="supported-platforms"></a>Поддерживаемые платформы
 
@@ -56,7 +58,7 @@ ms.lasthandoff: 02/09/2018
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <a id="cuinstall"></a>Как установить накопительные пакеты обновления
+## <a id="cuinstall"></a> Как установить накопительные пакеты обновления
 
 Если вы настроили репозиторий накопительный пакет обновления, то будут получены последнее накопительное обновление пакетов SQL Server при выполнении новых установок. Накопительный пакет обновления репозитория значение по умолчанию для всех статей пакет установки для SQL Server в Linux. Дополнительные сведения о настройке хранилища см. в разделе [настроить репозитории для SQL Server в Linux](sql-server-linux-change-repo.md).
 
@@ -67,7 +69,7 @@ ms.lasthandoff: 02/09/2018
 - [Установить пакет агента SQL Server](sql-server-linux-setup-sql-agent.md)
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
-## <A id="CU2"></a>Накопительный пакет обновления 3 (января 2018)
+## <A id="CU2"></a> Накопительный пакет обновления 3 (января 2018)
 
 Это накопительный пакет обновления 3 (CU3) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3015.40. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987).
 
@@ -81,7 +83,7 @@ ms.lasthandoff: 02/09/2018
 | Пакет SLES RPM | 14.0.3015.40-1 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
 | Пакет Debian Ubuntu 16.04 | 14.0.3015.40-1 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[Пакет Debian SQL Server, агент](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <A id="CU2"></a>Накопительный пакет обновления 2 (ноябрь 2017 г.)
+## <A id="CU2"></a> Накопительный пакет обновления 2 (ноябрь 2017 г.)
 
 Это накопительный пакет обновления 2 (CU2) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3008.27. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574).
 
@@ -95,7 +97,7 @@ ms.lasthandoff: 02/09/2018
 | Пакет SLES RPM | 14.0.3008.27-1 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
 | Пакет Debian Ubuntu 16.04 | 14.0.3008.27-1 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[Пакет Debian SQL Server, агент](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <A id="CU1"></a>Накопительный пакет обновления 1 (октябрь 2017 г.)
+## <A id="CU1"></a> Накопительный пакет обновления 1 (октябрь 2017 г.)
 
 Это накопительный пакет обновления 1 (CU1) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3006.16. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634).
 
@@ -109,7 +111,7 @@ ms.lasthandoff: 02/09/2018
 | Пакет SLES RPM | 14.0.3006.16-3 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
 | Пакет Debian Ubuntu 16.04 | 14.0.3006.16-3 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3006.16-3_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3006.16-3_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3006.16-3_amd64.deb)</br>[Пакет Debian SQL Server, агент](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3006.16-3_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GA"></a>Глобальный Администратор (октябрь 2017 г.)
+## <a id="GA"></a> Глобальный Администратор (октябрь 2017 г.)
 
 Это общая доступность (GA) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.1000.169.
 
@@ -128,13 +130,13 @@ ms.lasthandoff: 02/09/2018
 | Пакет SLES RPM | 14.0.1000.169-2 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Пакет Debian Ubuntu 16.04 | 14.0.1000.169-2 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Пакет Debian SQL Server, агент](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-### <a name="Unsupported"></a>Неподдерживаемые функции и службы
+### <a name="Unsupported"></a> Неподдерживаемые функции и службы
 
 Следующие функции и службы недоступны в Linux в настоящее время. Со временем будет более включена поддержка этих возможностей.
 
 | Область | Неподдерживаемые функции или службы |
 |-----|-----|
-| **Компонент Database engine** | Репликация транзакций |
+| Компонент Database engine | Репликация транзакций |
 | &nbsp; | Репликация слиянием |
 | &nbsp; | Растяжение базы данных |
 | &nbsp; | Polybase |
@@ -153,7 +155,7 @@ ms.lasthandoff: 02/09/2018
 | &nbsp; | Проверки подлинности AD для связанных серверов | 
 | &nbsp; | Проверки подлинности AD для групп доступности (и действий) | 
 | &nbsp; | инструменты сторонних AD (Centrify Vintela, Powerbroker) | 
-| **Службы** | Обозреватель SQL Server |
+| Службы | Обозреватель SQL Server |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Службы Analysis Services |
@@ -227,7 +229,7 @@ ms.lasthandoff: 02/09/2018
 
 1. Исходный экземпляр имеет протокол IPv6 отключен в ядре. Чтобы проверить, имеет ли ваша система ядра включен протокол IPv6, необходимо передать следующие тесты:
 
-   - `cat /proc/cmdline`напечатает cmdline загрузки текущего ядра. Выходные данные не должны содержать `ipv6.disable=1`.
+   - `cat /proc/cmdline` напечатает cmdline загрузки текущего ядра. Выходные данные не должны содержать `ipv6.disable=1`.
    - / Proc/sys/net/ipv6-каталог должен существовать.
    - Программе на языке C, который вызывает `socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)` должны выполняться успешно - syscall должен возвратить fd! = -1 и не завершаются EAFNOSUPPORT.
 

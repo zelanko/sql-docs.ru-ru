@@ -20,22 +20,23 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 528ccfba2c8060cc73edfbaff29b714b3bdb7e30
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fc308b9b961ab98c5c44e8f6708e40cb9cf61ef0
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>Данные большого двоичного объекта (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет решения для хранения файлов и документов в базе данных или на удаленных устройствах хранения.  
   
-##  <a name="section"></a> в этом разделе  
-### <a name="compare-options-for-storing-blobs-40sql-server41relational-databasesblobcompare-options-for-storing-blobs-sql-servermd"></a>[Сравнение параметров для хранения больших двоичных объектов (SQL Server)](../../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md)  
+## <a name="compare-options-for-storing-blobs-in-sql-server"></a>Сравнение вариантов хранения больших двоичных объектов в SQL Server
 
-Сравнение преимуществ FILESTREAM, таблиц FileTable и удаленного хранилища больших двоичных объектов.  
+Сравнение преимуществ FILESTREAM, таблиц FileTable и удаленного хранилища больших двоичных объектов. См статью [Сравнение вариантов хранения больших двоичных объектов &#40;SQL Server&#41;](../../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md).
   
-### <a name="filestream-40sql-server41relational-databasesblobfilestream-sql-servermd"></a>[FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
+##  <a name="options-for-storing-blobs"></a>Варианты хранения больших двоичных объектов  
+
+### <a name="filestream-40sql-server41relational-databasesblobfilestream-sql-servermd"></a>[FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
 
 FILESTREAM позволяет приложениям на основе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранить в файловой системе неструктурированные данные, например документы и изображения. Приложения могут одновременно использовать многопоточные API-интерфейсы и производительность файловой системы, тем самым обеспечивая транзакционную согласованность между неструктурированными и соответствующими им структурированными данными.  
   

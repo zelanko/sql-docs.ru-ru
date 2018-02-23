@@ -8,14 +8,15 @@ ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.component: sql-linux
+ms.component: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>Запустите 2017 г. SQL Server в облаке
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 02/01/2018
     * [SLES версии 12 с пакетом обновления 2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Подключиться к AMI с ssh
-1.  Выполните краткое руководство по distrbution Linux, которые вы выбрали. 
+1.  Выполните кратком руководстве для дистрибутив Linux, которые вы выбрали. 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/01/2018
 
     
 ## <a name="digital-ocean"></a>Цифровая подпись Аквамарин
-1. Имя входа для [панели управления](https://cloud.digitalocean.com/login) и нажмите кнопку Создание дроплета
+1. Войдите на [панели управления](https://cloud.digitalocean.com/login) и нажмите кнопку Создание дроплета
 1. Выберите по крайней мере 2 ГБ памяти Ubuntu 16.04 дроплета
 1. Соединиться с дроплет ssh
 1. Выполните [Ubuntu краткое руководство](quickstart-install-connect-ubuntu.md)
@@ -58,10 +59,10 @@ ms.lasthandoff: 02/01/2018
     * [SLES версии 12 с пакетом обновления 2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Подключитесь к образу с ssh
-1.  Выполните краткое руководство по distrbution Linux, которые вы выбрали. 
+1.  Выполните кратком руководстве для дистрибутив Linux, которые вы выбрали. 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  Настройка для удаленных соединений. 
     * Последовательно выберите пункты [правила брандмауэра](https://console.cloud.google.com/networking/firewalls)
-    * Добавьте правило входящего трафика, разрешающее трафик через порт, который SQL Server прослушивает (TCP по умолчанию: 1433)
+    * Добавьте правило входящего трафика, разрешающее трафик через порт, прослушиваемый SQL Server (по умолчанию tcp: 1433)
