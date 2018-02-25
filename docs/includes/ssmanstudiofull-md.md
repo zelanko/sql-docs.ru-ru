@@ -1,1 +1,1 @@
- SQL Server Management Studio 
+ Среда SQL Server Management Studio 
