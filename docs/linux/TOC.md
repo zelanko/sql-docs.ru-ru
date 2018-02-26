@@ -2,9 +2,10 @@
 
 # Обзор
 ## [Заметки о выпуске](sql-server-linux-release-notes.md)
-## [Новые возможности в этом выпуске](sql-server-linux-whats-new.md)
+## [Новые возможности](sql-server-linux-whats-new.md)
 ## [Новые и обновленные Статьи](new-updated-linux.md)
 ## [Выпуски и поддерживаемые функции](sql-server-linux-editions-and-components-2017.md)
+## [Вопросы и ответы](sql-server-linux-faq.md)
 
 # Краткие руководства
 ## [Установка и подключение — Red Hat](quickstart-install-connect-red-hat.md)
@@ -89,6 +90,7 @@
 
 ## [безопасность](sql-server-linux-security-overview.md)
 ### [Начало работы с функциями безопасности](sql-server-linux-security-get-started.md)
+### [Проверка подлинности Active Directory](sql-server-linux-active-directory-auth-overview.md)
 ### [Шифрование подключений](sql-server-linux-encrypted-connections.md)
 
 ## Производительность
@@ -102,7 +104,6 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Ресурсы
-## [Вопросы и ответы](sql-server-linux-faq.md)
 ## [Диагностика](sql-server-linux-troubleshooting-guide.md)
 ## [Документация по SQL Server](../sql-server/sql-server-technical-documentation.md)
 ## Участники
