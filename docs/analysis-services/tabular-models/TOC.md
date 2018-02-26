@@ -32,7 +32,7 @@
 ### [Добавление столбцов в таблицу](add-columns-to-a-table-ssas-tabular.md)  
 ### [Удаление столбца](delete-a-column-ssas-tabular.md)  
 ### [Изменение сопоставлений фильтров таблиц, столбцов и строк](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
-### [Указание таблицы дат для использования с логикой операций со временем (табличные службы SSAS)](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)  
+### [Указание таблицы дат для использования с логикой операций со временем](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)  
 ### [Добавление таблицы](add-a-table-ssas-tabular.md)  
 ### [Удаление таблицы](delete-a-table-ssas-tabular.md)  
 ### [Создание вычисляемой таблицы](create-a-calculated-table-ssas-tabular.md)  
