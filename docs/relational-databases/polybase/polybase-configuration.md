@@ -1,7 +1,7 @@
 ---
 title: "Настройка PolyBase | Документация Майкрософт"
 ms.custom: 
-ms.date: 09/13/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -12,17 +12,15 @@ ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 80ff73c1-2861-438b-a13f-309155f3d6e1
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f46ca117e763d5ec6d4bb76eb4beff6c3b15f358
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a202fe4cb2a6f6bd24ce6279259e6cbc46a622f6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="polybase-configuration"></a>Конфигурация PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,9 @@ ms.lasthandoff: 02/12/2018
  Обеспечьте подключение к внешнему источнику данных с помощью SQL Server. Тип подключения ощутимо влияет на производительность запросов. Например, в рамках 10-гигабитного соединения Ethernet ответ на запрос PolyBase приходит быстрее, чем в рамках 1-гигабитного соединения Ethernet.  
   
  Необходимо настроить SQL Server для подключения к вашей версии Hadoop или хранилищу BLOB-объектов Azure с помощью **sp_configure**. В PolyBase поддерживается два типа распределений: Hortonworks Data Platform (HDP) и Cloudera Distributed Hadoop (CDH).  Полный список поддерживаемых внешних источников данных см. в статье [Конфигурация PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-1. Обратите внимание: PolyBase не поддерживает шифрование зон Cloudera. 
+
+Обратите внимание на то, что PolyBase поддерживает зоны шифрования Hadoop начиная с SQL Server 2016 с пакетом обновления 1 (SP1) и накопительным пакетом обновления 7 и SQL Server 2017.
+
   
 ### <a name="run-spconfigure"></a>Выполнение процедуры sp_configure  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/12/2018
 4. Для всех версий CDH 5.X необходимо добавить параметры конфигурации **mapreduce.application.classpath** либо в конец **файла yarn.site.xml**, либо в **файл mapred-site.xml**. HortonWorks содержит эти настройки в конфигурациях **yarn.application.classpath**.
 
 ## <a name="connecting-to-hadoop-cluster-with-hadooprpcprotection-setting"></a>Подключение к кластеру Hadoop с параметром Hadoop.RPC.Protection
-Типичный способ защиты взаимодействия в кластере Hadoop — изменение конфигурации hadoop.rpc.protection на Privacy (Конфиденциальность) или Integrity (Целостность). По умолчанию PolyBase предполагает, что задана конфигурация Authenticate (Проверка подлинности). Чтобы переопределить эту настройку по умолчанию, необходимо добавить в файл core-site.xml следующее свойство. Смена конфигурации позволит осуществлять безопасную передачу данных между узлами Hadoop и использовать SSL-подключение к SQL Server.
+Типичный способ защиты взаимодействия в кластере Hadoop — изменение конфигурации hadoop.rpc.protection на Privacy (Конфиденциальность) или Integrity (Целостность). По умолчанию PolyBase предполагает, что задана конфигурация Authenticate (Проверка подлинности). Чтобы переопределить эту настройку по умолчанию, добавьте в файл core-site.xml указанное ниже свойство. Изменение конфигурации позволит осуществлять безопасную передачу данных между узлами Hadoop и использовать SSL-подключение к SQL Server.
 
 ```
 <!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
@@ -192,7 +192,7 @@ Yarn-site.xml yarn.application.classpath и mapreduce.application.classpath ко
 ```
   
 ## <a name="kerberos-configuration"></a>Конфигурация Kerberos  
-Когда PolyBase выполняет проверку подлинности для защищенного кластера Kerberos, необходимо задать для проверки подлинности параметр hadoop.rpc.protection. При этом обмен данными между узлами Hadoop останется в незашифрованном виде. 
+Когда PolyBase выполняет проверку подлинности в защищенном кластере Kerberos, параметр hadoop.rpc.protection должен по умолчанию иметь значение Authenticate. При этом обмен данными между узлами Hadoop остается в незашифрованном виде. Чтобы использовать значение Privacy или Integrity для параметра hadoop.rpc.protection, обновите файл core-site.xml на сервере PolyBase. Дополнительные сведения см. в предыдущем разделе [Подключение к кластеру Hadoop с параметром Hadoop.rpc.protection](#connecting-to-hadoop-cluster-with-hadooprpcprotection-setting).
 
  Чтобы подключиться к защищенному с помощью Kerberos кластеру Hadoop [с помощью MIT KDC], сделайте следующее.
    

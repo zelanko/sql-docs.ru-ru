@@ -1,5 +1,5 @@
 ---
-title: "THROW (Transact-SQL) | Документы Microsoft"
+title: "THROW (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - THROW_TSQL
 - THROW
-dev_langs: TSQL
-helpviewer_keywords: THROW statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 32527795209b49b2b698962c86aee61b2956dd18
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 04e09db13babdf05ba4cfa2f213f6d6e0d58c1a5
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,20 +49,20 @@ THROW [ { error_number | @local_variable },
   
 ## <a name="arguments"></a>Аргументы  
  *error_number*  
- Константа или переменная, представляющая исключение. *ERROR_NUMBER* — **int** и должно быть больше или равен 50 000 и меньше или равно 2147483647.  
+ Константа или переменная, представляющая исключение. Аргумент *error_number* имеет тип **int**, должен иметь значение не меньше 50 000 и не больше 2 147 483 647.  
   
  *message*  
- Строка или переменная, описывающая исключение. *сообщение* — **nvarchar(2048)**.  
+ Строка или переменная, описывающая исключение. Аргумент *message* имеет тип **nvarchar(2048)**.  
   
  *state*  
- Константа или переменная со значением в диапазоне от 0 до 255, указывающие состояние, которое должно быть связано с сообщением. *состояние* — **tinyint**.  
+ Константа или переменная со значением в диапазоне от 0 до 255, указывающие состояние, которое должно быть связано с сообщением. Аргумент *state* имеет тип **tinyint**.  
   
 ## <a name="remarks"></a>Remarks  
  В инструкции, выполняемой до инструкции THROW, должен использоваться признак конца инструкции — точка с запятой (;).  
   
- Если конструкция TRY…CATCH недоступна, то сеанс будет завершен. Задаются номер строки и процедура, где вызывается исключение. Серьезности задается значение 16.  
+ Если конструкция TRY…CATCH недоступна, то пакет инструкций завершается. Задаются номер строки и процедура, где вызывается исключение. Серьезности задается значение 16.  
   
- Если инструкция THROW указана без параметров, то она должна находиться внутри блока CATCH. Результатом этого будет вызов возникшего исключения. Любая ошибка, возникающая в инструкции THROW, приведет к завершению пакета инструкций.  
+ Если инструкция THROW указана без параметров, то она должна находиться внутри блока CATCH. Результатом этого будет вызов возникшего исключения. Любая ошибка, возникающая в инструкции THROW, приводит к завершению пакета инструкций.  
   
  % является зарезервированным символом в тексте сообщения инструкции THROW, и его необходимо экранировать. Дважды укажите знак %, чтобы получить % в тексте сообщения, например: "Увеличение превышает 15 %% исходного значения."  
   
@@ -68,9 +71,9 @@ THROW [ { error_number | @local_variable },
   
 |RAISERROR, инструкция|Инструкция THROW|  
 |-------------------------|---------------------|  
-|Если *msg_id* передается инструкции RAISERROR, идентификатор должен быть определен в представлении каталога sys.messages.|*Error_number* параметров не должны быть определены в представлении каталога sys.messages.|  
-|*Msg_str* параметр может содержать **printf** стили форматирования.|*Сообщение* параметр не может принимать **printf** стиль форматирования.|  
-|*Серьезность* указывает серьезность исключения.|Имеется не *серьезность* параметра. Серьезности исключения всегда задается значение 16.|  
+|Если инструкции RAISERROR передается параметр *msg_id*, то идентификатор должен быть задан в sys.messages.|Параметр *error_number* не требуется определять в sys.messages.|  
+|Параметр *msg_str* может содержать стили форматирования **printf**.|Параметр *message* не принимает форматирование стиля **printf**.|  
+|Параметр *severity* указывает серьезность исключения.|Параметр *severity* отсутствует. Серьезности исключения всегда задается значение 16.|  
   
 ## <a name="examples"></a>Примеры  
   
@@ -121,7 +124,7 @@ END CATCH;
  ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>В. Использование инструкции FORMATMESSAGE с ключевым словом THROW  
- В следующем примере показано использование функции `FORMATMESSAGE` с ключевым словом `THROW` для вызова настроенных сообщений об ошибке. В данном примере сначала создается определяемое пользователем сообщение об ошибке с помощью `sp_addmessage`. Поскольку инструкция THROW не позволяет задать параметры подстановки для *сообщение* параметр образом делает инструкция RAISERROR, функция FORMATMESSAGE используется для передачи трех значений параметров, ожидаемых по сообщению об ошибке 60000.  
+ В следующем примере показано использование функции `FORMATMESSAGE` с ключевым словом `THROW` для вызова настроенных сообщений об ошибке. В данном примере сначала создается определяемое пользователем сообщение об ошибке с помощью `sp_addmessage`. Так как инструкция THROW не позволяет задать параметры подстановки для параметра *message* так, как это делает инструкция RAISERROR, для передачи трех значений параметров, ожидаемых при сообщении об ошибке 60000, используется функция FORMATMESSAGE.  
   
 ```sql  
 EXEC sys.sp_addmessage  
@@ -144,21 +147,21 @@ THROW 60000, @msg, 1;
  This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
  ```  
   
-## <a name="see-also"></a>См. также  
- [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
- [Уровни серьезности ошибок ядра базы данных](../../relational-databases/errors-events/database-engine-error-severities.md)   
+## <a name="see-also"></a>См. также:  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
+ [Степени серьезности ошибок ядра СУБД](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [Функция ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
- [Перейти к &#40; Transact-SQL &#41;](../../t-sql/language-elements/goto-transact-sql.md)   
- [BEGIN... КОНЕЦ &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [Функция XACT_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)   
- [Инструкция SET XACT_ABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
 

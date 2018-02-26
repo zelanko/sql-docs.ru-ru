@@ -1,7 +1,7 @@
 ---
 title: "Загрузка SQL Server Management Studio (SSMS) | Документация Майкрософт"
 ms.custom: 
-ms.date: 12/14/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -31,14 +31,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0447d74f672398a5c9e242cc43c779e419526b99
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: fc8fe6a41661acd176c43cdf1de2a857846a7b83
+ms.sourcegitcommit: 03021482208259e6c67599b47df23fbbe8f3a393
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] SQL Server Management Studio (SSMS) — это интегрированная среда для управления любой инфраструктурой SQL: от SQL Server до базы данных SQL. SSMS предоставляет средства для настройки, наблюдения и администрирования экземпляров SQL. С помощью SSMS можно развертывать, отслеживать и обновлять компоненты уровня данных, используемые вашими приложениями, а также создавать запросы и скрипты.
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+SQL Server Management Studio (SSMS) — это интегрированная среда для управления любой инфраструктурой SQL: от SQL Server до Базы данных SQL. SSMS предоставляет средства для настройки, наблюдения и администрирования экземпляров SQL. С помощью SSMS можно развертывать, отслеживать и обновлять компоненты уровня данных, используемые вашими приложениями, а также создавать запросы и скрипты.
 
 Используйте SQL Server Management Studio (SSMS) для создания запросов к базам данных и хранилищам данных, их проектирования и управления ими, где бы они ни находились: на локальном компьютере или в облаке.
 
@@ -46,9 +47,9 @@ ms.lasthandoff: 01/18/2018
 
 SSMS 17.x — последняя версия *SQL Server Management Studio*, которая поддерживает SQL Server 2017.
 
-**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 17.4](https://go.microsoft.com/fwlink/?linkid=864329)**
+**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 17.5](https://go.microsoft.com/fwlink/?linkid=867670)**
 
-**[![скачать](../ssdt/media/download.png) Скачать пакет обновления SQL Server Management Studio 17.4 (обновление с версии 17.x до 17.4)](https://go.microsoft.com/fwlink/?linkid=864331)**
+**[![скачать](../ssdt/media/download.png) Скачать пакет обновления SQL Server Management Studio 17.5 (обновление с версии 17.x до 17.5)](https://go.microsoft.com/fwlink/?linkid=867672)**
 
 При установке SSMS 17.x не обновляются и не заменяются версии SSMS 16.x или более ранние. Среда SSMS 17.x устанавливается параллельно с предыдущими версиями, и обе версии остаются доступными для использования.
 Если на компьютере есть несколько параллельных установок SSMS, всегда проверяйте, правильную ли версию вы запускаете. Последняя версия называется *Microsoft SQL Server Management Studio 17* и имеет новый значок: 
@@ -64,11 +65,11 @@ SSMS 17.x — последняя версия *SQL Server Management Studio*, 
 
 Этот выпуск SSMS можно установить на следующих языках.
 
-SQL Server Management Studio 17.4:<br>
-[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+Среда SQL Server Management Studio 17.5:<br>
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
 
-Пакет обновления SQL Server Management Studio 17.4 (обновление с версии 17.x до 17.4):<br>
-[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40a)
+Пакет обновления SQL Server Management Studio 17.5 (обновление с версии 17.x до 17.5):<br>
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40a)
 
 > [!NOTE]
 > Модуль PowerShell для SQL Server теперь устанавливается отдельно, из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
@@ -76,64 +77,43 @@ SQL Server Management Studio 17.4:<br>
 
 **Сведения о версии**
 
-Номер выпуска: 17.4
+Номер выпуска: 17.5
 
-Номер сборки для этого выпуска: 14.0.17213.0
+Номер сборки для этого выпуска: 14.0.17224.0
 
-Дата выпуска: 7 декабря 2017 г.
+Дата выпуска: 15 февраля 2018 г.
 
 ## <a name="new-in-this-release"></a>Новое в данном выпуске
 
-SSMS 17.4 — это новейшая версия SQL Server Management Studio. Поколение 17.x среды SSMS поддерживает почти все функциональные возможности выпусков SQL Server 2008 — SQL Server 2017. Версия 17.x также поддерживает SQL Analysis Services в режиме PaaS.
+SSMS 17.5 — это новейшая версия SQL Server Management Studio. Поколение 17.x среды SSMS поддерживает почти все функциональные возможности выпусков SQL Server 2008 — SQL Server 2017. Версия 17.x также поддерживает SQL Analysis Services в режиме PaaS.
 
-Версия 17.4 включает следующее.
+Версия 17.5 включает следующее.
 
-Оценка уязвимостей:
-- Добавлена новая служба оценки уязвимости SQL, которая проверяет базы данных на наличие потенциальных уязвимостей и отклонений от рекомендаций, например неверных настроек, избыточных разрешений и незащищенных конфиденциальных данных. 
-- Результаты оценки включают в себя практические действия по устранению каждой проблемы, а также настроенные скрипты исправления, если это возможно. Отчет об оценке можно настроить для конкретной среды и конкретных требований. Дополнительные сведения об [оценке уязвимостей SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
+Обнаружение и классификация данных
 
-SMO:
-- Исправлена проблема, из-за которой свойство *HasMemoryOptimizedObjects* вызывало исключение в Azure.
-- Добавлена поддержка новой функции CATALOG_COLLATION.
+- Добавлена новая функция обнаружения и классификации данных SQL для обнаружения конфиденциальных данных в базах данных, их классификации, назначения им меток и создания отчетов. 
+- Автоматическое обнаружение и классификация наиболее важных данных (деловых, финансовых, персональных и т. д.) может играть ключевую роль в защите информации в вашей организации.
+- Дополнительные сведения об [обнаружении и классификации данных SQL](../relational-databases/security/sql-data-discovery-and-classification.md).
 
-Панель мониторинга AlwaysOn:
-- Усовершенствован анализ задержек в группах доступности.
-- Добавлены два новых отчета: *AlwaysOn\_Latency\_Primary* и *AlwaysOn\_Latency\_Secondary*.
+Редактор запросов:
+
+- Добавлена поддержка параметра SkipRows в формате внешних текстовых файлов с разделителями для хранилища данных SQL Azure. Он позволяет пользователям пропускать указанное число строк при загрузке текстовых файлов с разделителями в хранилище данных SQL. Кроме того, добавлена поддержка ключевого слова FIRST_ROW для IntelliSense и SMO. 
 
 Showplan
-- Обновленные ссылки указывают на правильную документацию.
-- Анализ отдельного плана выполняется непосредственно на основе фактического плана.
-- Создан новый набор значков.
-- Добавлена поддержка для распознания логических операторов применения, например GbApply, InnerApply.
-        
-XE Profiler:
-- Переименован в XEvent Profiler.
-- Теперь при помощи команд меню для остановки и запуска сеанс останавливается и запускается по умолчанию.
-- Включена поддержка сочетаний клавиш (например, CTRL+F для поиска).
-- Добавлены действия database\_name и client\_hostname для соответствующих событий в сеансах XEvent Profiler. Чтобы изменения вступили в силу, возможно, потребуется удалить существующие экземпляры сеансов QuickSessionStandard или QuickSessionTSQL на серверах. Дополнительные сведения см. на странице [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981).
 
-Командная строка:
-- Добавлен новый параметр командной строки (-G), с помощью которого SSMS может автоматически подключаться к серверу или базе данных с использованием аутентификации Active Directory (встроенная аутентификация или аутентификация с помощью пароля). Дополнительные сведения см. в статье [Программа SSMS](ssms-utility.md).
-
-Мастер импорта неструктурированных файлов:
-- Теперь при создании таблицы можно выбирать другое имя схемы, помимо стандартного (dbo).
-
-Хранилище запросов
-- Восстановлен отчет о регрессивных запросах, отображающийся при развертывании списка доступных отчетов хранилища запросов.
-
-**Integration Services (IS)**
-- Добавлена функция проверки пакета в мастере развертывания, которая помогает пользователям найти внутри пакетов SSIS компоненты, не поддерживающиеся в IR Azure SSIS.
+- Появилась кнопка предполагаемого плана для хранилища данных SQL
+- Добавлен новый атрибут showplan *EstimateRowsWithoutRowGoal*; в *QueryTimeStats* добавлены новые атрибуты showplan: *UdfCpuTime* и *UdfElapsedTime*. Дополнительные сведения см. в статье [Добавление сведений о цели строки оптимизатора в план выполнения запроса в SQL Server 2017 с накопительным пакетом обновления 3](http://support.microsoft.com/help/4051361).
 
 
-Полный список изменений см. в статье [Среда SQL Server Management Studio (SSMS) — журнал изменений](../ssms/sql-server-management-studio-changelog-ssms.md).
 
-Дополнительные сведения о сборе пользовательских данных см. в разделе [Заявление о конфиденциальности SQL Server](http://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).
+
 
 ## <a name="supported-sql-offerings"></a>Поддерживаемые предложения SQL
 
 * Эта версия SSMS работает со всеми [поддерживаемыми версиями SQL Server (SQL Server 2008 — SQL Server 2017)](https://support.microsoft.com/lifecycle?C2=1044) и предоставляет превосходную поддержку новейших облачных функций базы данных SQL Azure и хранилища данных SQL Azure.
 * SQL Server 2000 или SQL Server 2005 напрямую не блокируются, однако некоторые функции могут работать неправильно.
 * Кроме того, SSMS 17.X можно установить одновременно с SSMS 16.X или SQL Server 2014 SSMS и более ранними версиями.
+* Службы SQL Server Integration Services (SSIS) — среда SSMS версии 17.x не поддерживает подключение к устаревшим службам SQL Server Integration Services. Для подключения к более ранней версии служб Integration Services используйте соответствующую версию SSMS. Например, используйте SSMS 16.x для подключения к службам SQL Server 2016 Integration Services. Версии SSMS 17.x и SSMS 16.x можно установить параллельно на одном компьютере. Начиная с выпуска SQL Server 2012 база данных каталога SSIS (SSISDB) является рекомендуемым средством для хранения, выполнения и мониторинга пакетов служб Integration Services, а также управления ими.
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
   
@@ -160,14 +140,15 @@ XE Profiler:
   * Убедитесь, что на компьютере установлены все последние обновления операционной системы.
   * Указанные действия обычно требуется выполнить всего один раз. В некоторых ситуациях перезагрузка необходима для дополнительных обновлений до того же основного номера версии SSMS. Все необходимые компоненты SSMS для промежуточных обновлений уже будут установлены на компьютере.
 
-* Ознакомиться со списком известных проблем и способами их обхода можно в статье [Заметки о выпуске SQL Server Management Studio](../ssms/sql-server-management-studio-release-notes.md)
-
 
 ## <a name="release-notes"></a>Заметки о выпуске
 
-Ниже перечислены проблемы и ограничения в выпуске 17.4.
+Ниже перечислены проблемы и ограничения в выпуске 17.5.
 
-Сейчас известных проблем нет.
+Классификация данных
+- Удаление классификации и последующее добавление новой классификации для того же столбца вручную приводят к тому, что в главном представлении столбцу назначаются прежние тип сведений и метка конфиденциальности.<br>
+*Решение*. Назначьте новые тип сведений и метку конфиденциальности после добавления классификации в главном представлении и перед сохранением изменений.  
+
 
 ## <a name="previous-releases"></a>Предыдущие выпуски
 

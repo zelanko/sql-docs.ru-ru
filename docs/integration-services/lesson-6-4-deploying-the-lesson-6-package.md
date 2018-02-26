@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3a8947b1212aafe5fb3d233400900ab320a80f6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4fcb9a2ac92213a7e26a39012f8f113a858e7e9e
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Занятие 6–4. Развертывание пакета, созданного на занятии 6
 Развертывание пакета предполагает добавление пакета в каталоге SSISDB в службах Integration Services на экземпляре SQL Server. На этом занятии вы добавите пакет Lesson 6 в каталог SSISDB, зададите параметр и выполните пакет. На этом занятии будет использоваться SQL Server Management Studio для добавления пакета Lesson 6 в каталог SSISDB и развертывания пакета. После развертывания пакета будет изменен параметр для указания нового расположения, а затем выполнен пакет.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Выполнять пакет в среде SSMS.  
   
-### <a name="to-locate-or-add-the-the-ssisdb-catalog"></a>Поиск или добавление каталога SSISDB  
+### <a name="to-locate-or-add-the-ssisdb-catalog"></a>Поиск или добавление каталога SSISDB  
   
 1.  Нажмите кнопку Пуск, выберите Все программы, выберите Microsoft SQL Server 2012 и затем щелкните SQL Management Studio.  
   

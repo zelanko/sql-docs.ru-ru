@@ -1,7 +1,7 @@
 ---
 title: "Среда SQL Server Management Studio (SSMS) — журнал изменений | Документация Майкрософт"
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -18,19 +18,95 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 01d0f988103f39aa311b84a1bf9e03292e60f511
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f125db75de84856b8754a305a1c6ce8be9d29868
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 В этой статье приводятся подробные сведения об обновлениях, улучшениях и исправлениях ошибок в текущей и предыдущих версиях SQL Server Management Studio. Скачать [предыдущие версии SQL Server Management Studio можно ниже](#previous-ssms-releases).
 
 
-## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
+
+## <a name="ssms-175download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.5](download-sql-server-management-studio-ssms.md)
+
+Общедоступная версия | Номер сборки: 14.0.17224.0
+
+### <a name="whats-new"></a>новые возможности
+
+**Общие ошибки SSMS**
+
+Обнаружение и классификация данных
+
+- Добавлена новая функция обнаружения и классификации данных SQL для обнаружения конфиденциальных данных в базах данных, их классификации, назначения им меток и создания отчетов. 
+- Автоматическое обнаружение и классификация наиболее важных данных (деловых, финансовых, персональных и т. д.) может играть ключевую роль в защите информации в вашей организации.
+- Дополнительные сведения об [обнаружении и классификации данных SQL](../relational-databases/security/sql-data-discovery-and-classification.md).
+
+Редактор запросов:
+
+- Добавлена поддержка параметра SkipRows в формате внешних текстовых файлов с разделителями для хранилища данных SQL Azure. Он позволяет пользователям пропускать указанное число строк при загрузке текстовых файлов с разделителями в хранилище данных SQL. Кроме того, добавлена поддержка ключевого слова FIRST_ROW для IntelliSense и SMO. 
+
+Showplan
+
+- Появилась кнопка предполагаемого плана для хранилища данных SQL
+- Добавлен новый атрибут showplan *EstimateRowsWithoutRowGoal*; в *QueryTimeStats* добавлены новые атрибуты showplan: *UdfCpuTime* и *UdfElapsedTime*. Дополнительные сведения см. в статье [Добавление сведений о цели строки оптимизатора в план выполнения запроса в SQL Server 2017 с накопительным пакетом обновления 3](http://support.microsoft.com/help/4051361).
+
+
+
+### <a name="bug-fixes"></a>Исправления ошибок
+
+**Общие ошибки SSMS**
+
+Showplan
+
+- Исправлено значение затраченного времени в статистике активных запросов: вместо затраченного времени подключения к статистике активных запросов отображается время выполнения подсистемы.
+- Исправлена проблема, из-за которой отчету showplan не удавалось распознать логические операторы Apply, такие как GbApply и InnerApply.
+- Исправлена проблема, связанная с ExchangeSpill.
+
+Редактор запросов:
+
+- Исправлена проблема, связанная с кодами SPID, из-за которой в SSMS могла возникать ошибка типа "Входная строка имела неверный формат. (mscorlib)" при выполнении простого запроса с предшествующей инструкцией "SET SHOWPLAN_ALL ON". 
+
+
+SMO:
+
+- Исправлена проблема, из-за которой SMO не удавалось получить свойства AvailabilityReplica, если в параметрах сортировки сервера учитывался регистр символов. В результате в SSMS могло появляться сообщение об ошибке наподобие следующего: "Не удалось выполнить привязку составного идентификатора a.delimited".
+- Исправлена проблема в классе DatabaseScopedConfigurationCollection, из-за которой параметры сортировки обрабатывались неправильно. Из-за нее в SSMS на компьютере ma с турецким языковым стандартом могла возникать ошибка типа "Оценка унаследованной кратности не является допустимой конфигурацией области" при щелчке правой кнопкой мыши по базе данных, выполняющейся на сервере с параметрами сортировки с учетом регистра символов.
+- Исправлена проблема в классе JobServer, из-за которой SMO не удавалось получить свойства агента SQL на сервере SQL 2005. В результате в SSMS возникала ошибка типа "Невозможно присвоить значение по умолчанию локальной переменной. Должна быть объявлена скалярная переменная @ServiceStartMode", и в обозревателе объектов не отображался узел агента SQL.
+
+Шаблоны 
+
+- Компонент Database Mail: исправлено несколько опечаток [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).  
+
+Обозреватель объектов:
+- Исправлена проблема, из-за которой управляемое сжатие завершалось сбоем для индексов (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o).
+
+Аудит.
+- Исправлена проблема с функцией *Объединение файлов аудита*.
+<br>
+
+### <a name="known-issues"></a>Известные проблемы
+
+Классификация данных
+- Удаление классификации и последующее добавление новой классификации для того же столбца вручную приводят к тому, что в главном представлении столбцу назначаются прежние тип сведений и метка конфиденциальности.<br>
+*Решение*. Назначьте новые тип сведений и метку конфиденциальности после добавления классификации в главном представлении и перед сохранением изменений.
+
+
+
+## <a name="previous-ssms-releases"></a>Предыдущие выпуски SSMS
+
+Чтобы скачать предыдущие версии SSMS, щелкните заголовки со ссылками в приведенных ниже разделах.
+
+
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>![скачать](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
 Общедоступная версия | Номер сборки: 14.0.17213.0
+
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>новые возможности
 
@@ -121,9 +197,6 @@ XE Profiler:
 - Устранена проблема в SQL Profiler, из-за которой при выборе аутентификации Windows для автономной системы Azure все равно отображался запрос на вход.
 
 
-## <a name="previous-ssms-releases"></a>Предыдущие выпуски SSMS
-
-Чтобы скачать предыдущие версии SSMS, щелкните заголовки со ссылками в приведенных ниже разделах.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![скачать](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 Общедоступная версия | Номер сборки: 14.0.17199.0

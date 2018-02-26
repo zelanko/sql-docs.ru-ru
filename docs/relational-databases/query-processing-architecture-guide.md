@@ -1,7 +1,7 @@
 ---
 title: "Руководство по архитектуре обработки запросов | Документация Майкрософт"
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Руководство по архитектуре обработки запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,40 @@ ms.lasthandoff: 02/09/2018
 ## <a name="sql-statement-processing"></a>Обработка инструкций SQL
 
 Обработка одиночной инструкции SQL — наиболее распространенный способ, с помощью которого [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняет инструкции SQL. Шаги, используемые для обработки одиночной инструкции `SELECT` , которая обращается только к таблицам локальной базы (а не к представлениям и не к удаленным таблицам), иллюстрируют основной процесс.
+
+#### <a name="logical-operator-precedence"></a>Приоритет логических операторов
+
+При использовании в инструкции нескольких логических операторов первым вычисляется `NOT`, затем `AND` и, наконец, `OR`. Арифметические и побитовые операторы выполняются до логических. Дополнительные сведения см. в разделе [Приоритет операторов](../t-sql/language-elements/operator-precedence-transact-sql.md).
+
+В приведенном ниже примере условие цвета относится к модели продукта 21, но не к модели продукта 20, так как оператора `AND` имеет приоритет над оператором `OR`.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+Можно изменить смысл запроса, добавляя скобки, чтобы добиться вычисления `OR` сначала. В приведенном ниже запросе будут найдены модели 20 и 21 красного цвета.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+С помощью скобок, даже если они не требуются, можно улучшить читаемость запросов и уменьшить вероятность совершения незаметной ошибки из-за приоритета операторов. Использование скобок практически не влияет на производительность. Следующий пример более понятен, чем исходный, хотя синтаксически они равноправны.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### <a name="optimizing-select-statements"></a>Оптимизация инструкций SELECT
 
@@ -49,7 +83,6 @@ ms.lasthandoff: 02/09/2018
 * Таблицы, которые содержат исходные данные. Они указываются в предложении `FROM` .
 * Логическую связь между таблицами для инструкции `SELECT` . Это определяется в спецификациях соединения, которые могут появляться в предложении `WHERE` или в предложении `ON` , следующем за предложением `FROM`.
 * Условия, которым строки в исходных таблицах должны соответствовать для выбора их инструкцией `SELECT` . Они указываются в предложениях `WHERE` и `HAVING` .
-
 
 План выполнения запроса представляет собой определение следующего. 
 
@@ -1045,4 +1078,5 @@ GO
  [Расширенные события](../relational-databases/extended-events/extended-events.md)  
  [Рекомендации по хранилищу запросов](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Оценка количества элементов](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Адаптивная обработка запросов](../relational-databases/performance/adaptive-query-processing.md)
+ [Адаптивная обработка запросов](../relational-databases/performance/adaptive-query-processing.md)   
+ [Приоритет операторов](../t-sql/language-elements/operator-precedence-transact-sql.md)
