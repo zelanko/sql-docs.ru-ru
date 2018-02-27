@@ -1,7 +1,7 @@
 ---
-title: "Создать связь между двумя таблицами (табличные службы SSAS) | Документы Microsoft"
+title: "Создать связь | Документы Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -15,19 +15,20 @@ f1_keywords:
 - sql13.asvs.bidtoolset.createrelatdb.f1
 - sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4278d13d9bbff216a4b5480382de1c8a565278b0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3936d29e4d547db75e7a92020c82d8c5c5854503
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Создание связи между двумя таблицами (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Если таблицы в источнике данных не участвуют в связях или добавляются новые таблицы, можно использовать средства в конструкторе моделей для создания новых связей. Сведения об использовании связей в табличных моделях см. в разделе [Связи (табличные службы SSAS)](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
+# <a name="create-a-relationship"></a>Создание связи 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Если таблицы в источнике данных не участвуют в связях или добавляются новые таблицы, новые связи можно создать с помощью средств конструктора моделей. Сведения об использовании связей в табличных моделях см. в разделе [связи](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
 ## <a name="create-a-relationship-between-two-tables"></a>Создание связи между двумя таблицами  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
 6.  Нажмите кнопку **Создать**.  
   
 ## <a name="see-also"></a>См. также:  
- [Удаление связей (табличные службы SSAS)](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
- [Связи (табличные службы SSAS)](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
+ [Удаление связей](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
+ [Связи](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   
   

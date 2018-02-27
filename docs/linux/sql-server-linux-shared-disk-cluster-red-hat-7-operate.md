@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Работать кластеров общих дисков Red Hat Enterprise Linux для SQL Server
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
 
 ![Red Hat Enterprise Linux 7 общий диск кластера SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управления на сайте [RHEL справочной документации](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управление [RHEL справочной документации](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## <a name = "failManual"></a>Отказоустойчивый кластер вручную
 
@@ -73,7 +73,7 @@ sudo pcs status
 sudo crm_mon 
 ```
 
-Просмотр журналов агента ресурсов в`/var/log/cluster/corosync.log`
+Просмотр журналов агента ресурсов в `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>Добавление узла в кластер
 
@@ -105,7 +105,7 @@ sudo crm_mon
 
 1. Следуйте инструкциям для подключения к общей папке каталога файла базы данных.
 
-   От NFS-сервера Установка`nfs-utils`
+   От NFS-сервера Установка `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -224,7 +224,7 @@ PCSD должна быть запущена для использования `p
 
 ### <a name="current-cluster-status"></a>Текущее состояние кластера 
 
-`sudo pcs status`Возвращает основные сведения о состоянии для каждого узла кластера, кворума, узлов, ресурсы и управляющая программа. 
+`sudo pcs status` Возвращает основные сведения о состоянии для каждого узла кластера, кворума, узлов, ресурсы и управляющая программа. 
 
 Пример выходных данных кворума работоспособное pacemaker будет следующим:
 
@@ -253,9 +253,9 @@ pacemaker: active/enabled
 
 В примере `partition with quorum` означает, что кворума большинства узлов находится в оперативном режиме. Если потери кворума большинства узлов, `pcs status` вернет `partition WITHOUT quorum` и все ресурсы будут остановлены. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`Возвращает имя всех узлов, в настоящее время участвует в кластере. Если все узлы не участвуют, `pcs status` возвращает `OFFLINE: [<nodename>]`.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` Возвращает имя всех узлов, в настоящее время участвует в кластере. Если все узлы не участвуют, `pcs status` возвращает `OFFLINE: [<nodename>]`.
 
-`PCSD Status`Показывает состояние для каждого узла кластера.
+`PCSD Status` Показывает состояние для каждого узла кластера.
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>Причины, почему узел может быть отключен
 

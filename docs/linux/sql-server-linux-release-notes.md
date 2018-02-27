@@ -4,7 +4,7 @@ description: "В этой статье содержатся заметки о в
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 01/09/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 3d53adc21ff54f8fe6171f361fbfba3208a427d1
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a661da062d65ca699627bc2b5bf0683e5fe08806
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
 
@@ -32,8 +32,8 @@ ms.lasthandoff: 02/13/2018
 | Платформа | Файловая система | Руководство по установке |
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3 или 7.4 станции, серверов и настольных компьютеров | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-red-hat.md) | 
-| Сервер Linux версии 12 SUSE Enterprise с пакетом обновления 2 | EXT4 | [Руководство по установке](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04LTS | EXT4 | [Руководство по установке](quickstart-install-connect-ubuntu.md) | 
+| Сервер Linux версии 12 SUSE Enterprise с пакетом обновления 2 | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-suse.md) |
+| Ubuntu 16.04LTS | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-ubuntu.md) | 
 | Подсистема docker 1.8 + в Windows, Mac или Linux | Недоступно | [Руководство по установке](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
@@ -53,7 +53,8 @@ ms.lasthandoff: 02/13/2018
 
 | Выпуск | Версия | Дата выпуска |
 |-----|-----|-----|
-| [CU3](#CU3) | 14.0.3015.40| 1-2018 |
+| [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
+| [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
@@ -66,10 +67,27 @@ ms.lasthandoff: 02/13/2018
 
 - [Установить пакет SQL Server](sql-server-linux-setup.md#upgrade)
 - [Установить пакет Full-text Search](sql-server-linux-setup-full-text-search.md)
-- [Установить пакет агента SQL Server](sql-server-linux-setup-sql-agent.md)
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+- [Включить агент SQL Server](sql-server-linux-setup-sql-agent.md)
 
-## <A id="CU2"></a> Накопительный пакет обновления 3 (января 2018)
+## <a id="CU4"></a> CU4 (февраль 2018)
+
+Это накопительный пакет обновления 4 (CU4) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3022.28. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/en-us/help/4056498](https://support.microsoft.com/en-us/help/4056498).
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для установки пакетов вне сети или вручную можно загрузить пакеты RPM и Debian с информацией в таблице ниже:
+
+> [!NOTE]
+> Начиная с CU4 агент SQL Server больше не устанавливается как отдельный пакет. Он устанавливается вместе с пакет и должен быть включен для использования.
+
+| Пакет | версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 14.0.3022.28-2 | [Пакет RPM ядра](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm)</br>[Пакет служб SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Пакет SLES RPM | 14.0.3022.28-2 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
+| Пакет Debian Ubuntu 16.04 | 14.0.3022.28-2 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3022.28-2_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3022.28-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3022.28-2_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="CU3"></a> (Январь 2018) CU3
 
 Это накопительный пакет обновления 3 (CU3) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3015.40. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987).
 
@@ -83,7 +101,7 @@ ms.lasthandoff: 02/13/2018
 | Пакет SLES RPM | 14.0.3015.40-1 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
 | Пакет Debian Ubuntu 16.04 | 14.0.3015.40-1 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[Пакет Debian SQL Server, агент](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <A id="CU2"></a> Накопительный пакет обновления 2 (ноябрь 2017 г.)
+## <a id="CU2"></a> (Ноябрь 2017 г.) и накопительным обновлением 2
 
 Это накопительный пакет обновления 2 (CU2) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3008.27. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574).
 
@@ -97,9 +115,9 @@ ms.lasthandoff: 02/13/2018
 | Пакет SLES RPM | 14.0.3008.27-1 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
 | Пакет Debian Ubuntu 16.04 | 14.0.3008.27-1 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[Пакет Debian SQL Server, агент](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <A id="CU1"></a> Накопительный пакет обновления 1 (октябрь 2017 г.)
+## <a id="CU1"></a> CU1 (октябрь 2017 г.)
 
-Это накопительный пакет обновления 1 (CU1) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3006.16. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634).
+Это накопительный пакет обновления 1 (CU1) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3006.16. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -130,13 +148,13 @@ ms.lasthandoff: 02/13/2018
 | Пакет SLES RPM | 14.0.1000.169-2 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Пакет Debian Ubuntu 16.04 | 14.0.1000.169-2 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Пакет Debian SQL Server, агент](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-### <a name="Unsupported"></a> Неподдерживаемые функции и службы
+## <a name="Unsupported"></a> Неподдерживаемые функции и услуги
 
-Следующие функции и службы недоступны в Linux в настоящее время. Со временем будет более включена поддержка этих возможностей.
+Следующие функции и службы недоступны в Linux на момент выпуска общедоступной версии. Со временем будет более включена поддержка этих возможностей.
 
 | Область | Неподдерживаемые функции или службы |
 |-----|-----|
-| Компонент Database engine | Репликация транзакций |
+| **Компонент Database engine** | Репликация транзакций |
 | &nbsp; | Репликация слиянием |
 | &nbsp; | Растяжение базы данных |
 | &nbsp; | Polybase |
@@ -155,7 +173,7 @@ ms.lasthandoff: 02/13/2018
 | &nbsp; | Проверки подлинности AD для связанных серверов | 
 | &nbsp; | Проверки подлинности AD для групп доступности (и действий) | 
 | &nbsp; | инструменты сторонних AD (Centrify Vintela, Powerbroker) | 
-| Службы | Обозреватель SQL Server |
+| **Службы** | Обозреватель SQL Server |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Службы Analysis Services |
@@ -163,7 +181,7 @@ ms.lasthandoff: 02/13/2018
 | &nbsp; | Data Quality Services |
 | &nbsp; | Службы Master Data Services |
 
-### <a name="known-issues"></a>Известные проблемы
+## <a name="known-issues"></a>Известные проблемы
 
 В следующих разделах описаны известные проблемы с выпуском Общая доступность (GA) 2017 г. SQL Server в Linux.
 
@@ -304,7 +322,7 @@ ms.lasthandoff: 02/13/2018
 
 - Невозможно изменить количество файлов журнала для хранения.
 
-### <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Следующие шаги
 
 Чтобы приступить к работе, см. следующие примеры использования:
 
@@ -312,3 +330,5 @@ ms.lasthandoff: 02/13/2018
 - [Установите на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Установите на Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Запустите на Docker](quickstart-install-connect-ubuntu.md)
+- [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Запуск и подключение — облако](quickstart-install-connect-clouds.md)

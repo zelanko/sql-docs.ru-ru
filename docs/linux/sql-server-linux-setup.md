@@ -1,6 +1,6 @@
 ---
 title: "Установка SQL Server 2017 г. для Linux | Документы Microsoft"
-description: "Установка, обновление и удаление SQL Server в Linux. В этом разделе рассматриваются сценарии online, вне сети и автоматической установки."
+description: "Установка, обновление и удаление SQL Server в Linux. Online, вне сети и автоматической сценарии рассматриваются в данной статье."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,28 +9,28 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 924542a970ac63df74e7bb725b4f7a171f74e95a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке для SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом разделе объясняется, как для установки, обновления и удаления 2017 г. SQL Server в Linux. В Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) и Ubuntu поддерживается 2017 г. SQL Server. Она также доступна как образ Docker, который можно запустить на подсистема Docker в Linux или Docker для Windows или Mac.
+В этой статье описывается установка, обновление и удаление 2017 г. SQL Server в Linux. В Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) и Ubuntu поддерживается 2017 г. SQL Server. Она также доступна как образ Docker, который можно запустить на подсистема Docker в Linux или Docker для Windows или Mac.
 
 > [!TIP]
 > Чтобы быстро приступить к работе, перейти к одному из примеры использования для [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), или [Docker](quickstart-install-connect-docker.md).
 
-## <a id="supportedplatforms"></a>Поддерживаемые платформы
+## <a id="supportedplatforms"></a> Поддерживаемые платформы
 
 2017 г. SQL Server поддерживается на следующих платформах Linux:
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/09/2018
 
 Последние политика поддержки для SQL Server 2017 г. в разделе [политика технической поддержки для Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
-## <a id="system"></a>Требования к системе
+## <a id="system"></a> Требования к системе
 
 2017 г. SQL Server имеет следующие требования к системе для Linux:
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/09/2018
 - Найдите только **/var/opt/mssql** каталогов на подключения NFS. Другие файлы, такие как системные файлы SQL Server и не поддерживаются.
 - Убедитесь, что клиенты NFS использовать параметр «nolock» при подключении к удаленной общей папке.
 
-## <a id="platforms"></a>Установка SQL Server
+## <a id="platforms"></a> Установка SQL Server
 
 SQL Server в Linux можно установить из командной строки. Соответствующие инструкции см. следующие примеры использования:
 
@@ -74,14 +74,14 @@ SQL Server в Linux можно установить из командной ст
 - [Запустите на Docker](quickstart-install-connect-docker.md)
 - [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-## <a id="repositories"></a>Настройка исходных репозиториев
+## <a id="repositories"></a> Настройка исходных репозиториев
 
 При установке или обновлении SQL Server, можно получить последнюю версию 2017 г. SQL Server из репозитория настроенных Microsoft. Используйте примеры использования **накопительное обновление (CU)** репозитория. Но вместо этого можно настроить **GDR** репозитория. Дополнительные сведения о репозитории и их настройке см. в разделе [настроить репозитории для SQL Server в Linux](sql-server-linux-change-repo.md).
 
 > [!IMPORTANT]
 > Если ранее была установлена CTP-версии или версию-КАНДИДАТ 2017 г. SQL Server, необходимо удалить предварительный просмотр репозитория и зарегистрировать Общая доступность (GA) один. Дополнительные сведения см. в разделе [настроить репозитории для SQL Server в Linux](sql-server-linux-change-repo.md).
 
-## <a id="upgrade"></a>Обновление SQL Server
+## <a id="upgrade"></a> Обновление SQL Server
 
 Чтобы обновить **mssql server** пакета до последней версии, используйте один из приведенных ниже команд, в зависимости от используемой платформы:
 
@@ -93,7 +93,7 @@ SQL Server в Linux можно установить из командной ст
 
 Эти команды загрузить последние пакет и замените двоичные файлы, расположенные в группе `/opt/mssql/`. Созданное пользователем базы данных и системных баз данных не зависит от этой операции.
 
-## <a id="rollback"></a>Откат SQL Server
+## <a id="rollback"></a> Откат SQL Server
 
 Для отката или возврат к предыдущей версии SQL Server в предыдущем выпуске выполните следующие действия:
 
@@ -110,7 +110,7 @@ SQL Server в Linux можно установить из командной ст
 > [!NOTE]
 > Она поддерживается только может понижаться до выпуска в пределах той же основной версии, например 2017 г. SQL Server.
 
-## <a id="versioncheck"></a>Проверьте установленную версию SQL Server
+## <a id="versioncheck"></a> Проверьте установленную версию SQL Server
 
 Чтобы проверить текущую версию и выпуск SQL Server в Linux, используйте следующую процедуру:
 
@@ -122,7 +122,7 @@ SQL Server в Linux можно установить из командной ст
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
 
-## <a id="uninstall"></a>Удаление SQL Server
+## <a id="uninstall"></a> Удаление SQL Server
 
 Чтобы удалить **mssql server** пакета в Linux, используйте один из приведенных ниже команд, в зависимости от используемой платформы:
 
@@ -138,7 +138,7 @@ SQL Server в Linux можно установить из командной ст
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a>Автоматическая установка
+## <a id="unattended"></a> Автоматическая установка
 
 Можно выполнить автоматическую установку следующим образом:
 
@@ -159,12 +159,12 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [SUSE сценарий автоматической установки](sample-unattended-install-suse.md)
 - [Ubuntu сценарий автоматической установки](sample-unattended-install-ubuntu.md)
 
-## <a id="offline"></a>Автономную установку
+## <a id="offline"></a> Автономную установку
 
 Если компьютер Linux не имеет доступа к сети хранилища, используемых в [краткие](#platforms), можно непосредственно загрузить файлы пакета. Эти пакеты находятся в хранилище Майкрософт по адресу [https://packages.microsoft.com](https://packages.microsoft.com).
 
 > [!TIP]
-> После успешной установки шаги, указанные в краткие руководства необязательно для загрузки или вручную установить ниже пакетов. Этот раздел предназначен только для сценария автономной работы.
+> После успешной установки шаги, указанные в краткие руководства необязательно для загрузки или вручную установить пакеты SQL Server. Этот раздел предназначен только для сценария автономной работы.
 
 1. **Загрузите пакет ядра базы данных для вашей платформы**. Найти ссылки для загрузки пакета в разделе сведений пакета [заметки о выпуске](sql-server-linux-release-notes.md).
 

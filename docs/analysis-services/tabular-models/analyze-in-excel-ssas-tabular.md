@@ -1,7 +1,7 @@
 ---
-title: "Анализ в Excel (табличные службы SSAS) | Документы Microsoft"
+title: "Анализ в Excel | Документы Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 13d0f86ae2413e0d54af32a97fb74100284bacd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bd537debaa43c89c2d09295f12598a9bfe9927b3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analyze-in-excel"></a>Анализ в Excel
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Функция анализа в Excel, в SSDT, дает разработчику табличных моделей возможность быстро выполнить анализ проекта модели во время разработки. Функция «Анализ в Excel» открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области модели, и автоматически добавляет сводную таблицу на рабочий лист. Объекты базы данных рабочей области (таблицы, столбы и меры) включаются в качестве полей в список полей сводной таблицы. Затем объекты и данные можно просмотреть в контексте действующего пользователя или роли и перспективы.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Функция анализа в Excel, в SSDT, дает разработчику табличных моделей возможность быстро выполнить анализ проекта модели во время разработки. Функция «Анализ в Excel» открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области модели, и автоматически добавляет сводную таблицу на рабочий лист. Объекты базы данных рабочей области (таблицы, столбы и меры) включаются в качестве полей в список полей сводной таблицы. Затем объекты и данные можно просмотреть в контексте действующего пользователя или роли и перспективы.  
   
- Материал этого раздела предполагает, что читатель умеет работать с Microsoft Excel, сводными таблицами и диаграммами. Дополнительные сведения об использовании Excel см. в справке по Excel.  
+ В этой статье предполагается, что вы уже знакомы с Microsoft Excel, сводными таблицами и диаграммами. Дополнительные сведения об использовании Excel см. в справке по Excel.  
   
 ##  <a name="bkmk_benefits"></a> Преимущества  
  Функция «Анализ в Excel» дает разработчику модели возможность проверить производительность проекта модели с помощью такого приложения общего анализа данных, как Microsoft Excel. Для использования функции анализа в Excel, вы должны иметь Microsoft Office 2003 или более поздней версии на том же компьютере, что SSDT.  
@@ -48,9 +49,9 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
-|**Раздел**|**Описание**|  
+|**Раздел**|**Description**|  
 |---------------|---------------------|  
-|[Анализ табличной модели в Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|В этом разделе описан порядок использования функции «Анализ в Excel» в конструкторе моделей для открытия Excel, создания соединения с источником данных, которым выступает база данных рабочей области модели, и добавления сводной таблицы на рабочий лист.|  
+|[Анализ табличной модели в Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|В этой статье описывается использования функции анализа в Excel в конструкторе моделей откройте Excel и создайте соединение с источником данных для базы данных рабочей области модели добавить сводную таблицу на лист.|  
   
 ## <a name="see-also"></a>См. также:  
  [Анализ табличной модели в Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   

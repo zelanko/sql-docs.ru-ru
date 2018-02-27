@@ -4,41 +4,41 @@ description: "Возможность использования различны
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/15/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: 30ac0b58a439af47504c94669af581f5e81fd17c
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
-ms.translationtype: MT
+ms.openlocfilehash: 70ed897c26211945987b81c179f7310a1437b482
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Настройка образов контейнеров 2017 г. SQL Server на Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом разделе объясняется, как настроить и использовать [образ контейнера mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) с помощью Docker. Этот образ состоит из SQL Server на основании Ubuntu 16.04 Linux. Он может использоваться с подсистемой Dосker 1.8 + на Linux или Docker для Mac и Windows.
+В этой статье объясняется, как настроить и использовать [образ контейнера mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) с помощью Docker. Этот образ содержит SQL Server, работающий в системе Linux, основанной на Ubuntu 16.04. Он может использоваться с Dосker Engine 1.8+ на Linux или Docker для Mac или Windows.
 
 > [!NOTE]
-> В этом разделе особое внимание уделяется с помощью образа mssql-server-linux. Непокрытые образа Windows, но Дополнительные сведения о нем на [Docker Hub страница windows для сервера mssql](https://hub.docker.com/r/microsoft/mssql-server-windows/).
+> В этой статье особое внимание уделяется с помощью образа mssql-server-linux. Непокрытые образа Windows, но Дополнительные сведения о нем на [Docker Hub страница windows для сервера mssql](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
-## <a name="pull-and-run-the-container-image"></a>По запросу, а затем запускать образ контейнера
+## <a name="pull-and-run-the-container-image"></a>Извлечение и запуск образа контейнера
 
 Для извлечения и запустить образ контейнера Docker для 2017 г. SQL Server, выполните необходимые условия и действия, описанные в следующем кратком руководстве.
 
 - [Запускать образ контейнера 2017 г. SQL Server с помощью Docker](quickstart-install-connect-docker.md)
 
-Этот раздел конфигурации содержит сценарии использования дополнительных в следующих разделах.
+Конфигурации также приводятся сценарии использования дополнительных в следующих разделах.
 
-## <a id="production"></a>Запустите производственного образы контейнеров
+## <a id="production"></a> Запустите производственного образы контейнеров
 
 Краткое руководство, в предыдущем разделе выполняется бесплатный выпуск SQL Server Developer из Docker Hub. Большая часть информации по-прежнему применяется в том случае, если вы хотите запустить производства образы контейнеров, таких как выпуски Enterprise, Standard или Web. Однако существуют некоторые различия, которые здесь описаны.
 
@@ -87,8 +87,8 @@ ms.lasthandoff: 02/01/2018
 Можно соединиться с экземпляром SQL Server на компьютере Docker с помощью любого внешнего средства macOS, Windows или Linux, поддерживающее подключения SQL. Некоторые общие средства включают:
 
 - [sqlcmd](sql-server-linux-setup-tools.md)
-- [Код Visual Studio](sql-server-linux-develop-use-vscode.md)
-- [SQL Server Management Studio (SSMS) в Windows](sql-server-linux-develop-use-ssms.md)
+- [Visual Studio Code](sql-server-linux-develop-use-vscode.md);
+- [SQL Server Management Studio (SSMS) в Windows](sql-server-linux-develop-use-ssms.md);
 
 В следующем примере используется **sqlcmd** для подключения к SQL Server, запущенный в контейнер Docker. IP-адреса в строке подключения является IP-адрес компьютера, на котором выполняется контейнера.
 
@@ -114,7 +114,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 Начиная с SQL Server 2017 г CTP 2.0 [средства командной строки SQL Server](sql-server-linux-setup-tools.md) включаются в образе контейнера. При присоединении к образу с интерактивной командной строки средства можно выполнять локально.
 
-1. Используйте `docker exec -it` команду, чтобы запустить интерактивный bash оболочки внутри вашей запущенного контейнера. В следующем примере `e69e056c702d` — это идентификатор контейнера.
+1. Выполните команду `docker exec -it`, чтобы запустить интерактивную оболочку bash внутри запущенного контейнера. В следующем примере `e69e056c702d` — это идентификатор контейнера.
 
     ```bash
     docker exec -it e69e056c702d "bash"
@@ -123,7 +123,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
     > [!TIP]
     > Не всегда необходимо указывать идентификатор весь контейнер. Необходимо указать достаточно символов, для его однозначной идентификации. Поэтому в этом примере может быть достаточно, чтобы использовать `e6` или `e69` вместо полного идентификатора.
 
-2. Один раз внутри контейнера, подключите локально с помощью sqlcmd. Обратите внимание, что sqlcmd не в пути по умолчанию, поэтому необходимо указать полный путь.
+2. После входа в контейнер подключитесь локально с помощью sqlcmd. Обратите внимание, что sqlcmd не в пути по умолчанию, поэтому необходимо указать полный путь.
 
     ```bash
     /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourPassword>'
@@ -131,7 +131,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 3. После завершения работы с sqlcmd, введите `exit`.
 
-4. После завершения работы с интерактивной командной строки, введите `exit`. Контейнер продолжается после выхода из оболочки интерактивный bash.
+4. После завершения работы с интерактивной командной строки, введите `exit`. Контейнер продолжит работать после выхода из интерактивной оболочки bash.
 
 ## <a name="run-multiple-sql-server-containers"></a>Запустите несколько контейнеров SQL Server
 
@@ -161,7 +161,7 @@ sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
 
-## <a id="persist"></a>Сохранить данные
+## <a id="persist"></a> Сохранить данные
 
 Изменения конфигурации SQL Server и файлы базы данных сохраняются в контейнере даже при перезагрузке контейнер с `docker stop` и `docker start`. Однако если удалить контейнер с `docker rm`, все данные в контейнере удаляются, включая SQL Server и баз данных. Следующий раздел объясняет, как использовать **тома данных** для сохранения файла базы данных, даже если удалены связанные контейнеры.
 
@@ -301,7 +301,7 @@ docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 > [!IMPORTANT]
 > Обновление и переход к более раннему поддерживаются только между RC1 и RC2 в данный момент.
 
-## <a id="upgrade"></a>Обновление SQL Server в контейнерах
+## <a id="upgrade"></a> Обновление SQL Server в контейнерах
 
 Чтобы обновить образ контейнера с помощью Docker, сначала найдите тег для выпуска для обновления. Эта версия по запросу из реестра с `docker pull` команды:
 
@@ -324,7 +324,7 @@ docker pull microsoft/mssql-server-linux:<image_tag>
 
 1. При необходимости удалите старый контейнер с `docker rm`.
 
-## <a id="troubleshooting"></a>Устранение неполадок
+## <a id="troubleshooting"></a> Устранение неполадок
 
 В следующих разделах содержатся сведения об устранении неполадок для запуска SQL Server в контейнерах.
 
@@ -409,7 +409,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 - Явно задать имя узла контейнера с `-h YOURHOSTNAME` параметр `docker run` команды. Это имя узла используется при настройке группы доступности. Если не указать его с `-h`, по умолчанию используется идентификатор контейнера.
 
-### <a id="errorlogs"></a>SQL Server программа установки и журналы ошибок
+### <a id="errorlogs"></a> SQL Server программа установки и журналы ошибок
 
 Вы можете просмотреть программы установки SQL Server и журналы ошибок **/var/opt/mssql/log**. Если контейнер не запущена, сначала запустите контейнер. Затем используйте интерактивной командной строки, чтобы просмотреть журналы.
 

@@ -1,7 +1,7 @@
 ---
-title: "Создание и управление секциями в базе данных рабочей области (табличные службы SSAS) | Документы Microsoft"
+title: "Создание и управление секциями в базе данных рабочей области | Документы Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,31 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.partitionmgr.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 218d7b9e96810e2e1052c7f0fe004f9484346006
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bc056913fefe9b6847c0aad96957290a3e00d560
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Создание и управление секциями в базе данных рабочей области (табличные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Секции разделяют таблицу на логические части. Все секции можно обработать (обновить) независимо или параллельно с другими секциями. Использование секций позволяет улучшить масштабируемость и управление базами данных большого размера. По умолчанию все таблицы содержат одну секцию, включающую все столбцы. Задачи в этом разделе демонстрируют создание секций и управление ими в базе данных рабочей области модели с помощью диалогового окна **Диспетчер секций** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+# <a name="create-and-manage-partitions-in-the-workspace-database"></a>Создание и управление секциями в базе данных рабочей области 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Секции разделяют таблицу на логические части. Все секции можно обработать (обновить) независимо или параллельно с другими секциями. Использование секций позволяет улучшить масштабируемость и управление базами данных большого размера. По умолчанию все таблицы содержат одну секцию, включающую все столбцы. Задачи в этом разделе демонстрируют создание секций и управление ими в базе данных рабочей области модели с помощью диалогового окна **Диспетчер секций** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
- После завершения развертывания модели в другом экземпляре служб Analysis Services администраторы базы данных могут создавать секции и управлять ими в (развернутой) модели с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Создание секций табличной модели и управление ими (табличные службы SSAS)](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
-  
- В этот раздел включены следующее задачи:  
-  
--   [Создание новой секции](#bkmk_create_new)  
-  
--   [Копирование секции](#bkmk_copy)  
-  
--   [Удаление секции](#bkmk_delete)  
+ После завершения развертывания модели в другом экземпляре служб Analysis Services администраторы базы данных могут создавать секции и управлять ими в (развернутой) модели с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Создание и управление секций табличной модели](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 > [!NOTE]  
 >  В базе данных рабочей области модели нельзя выполнять слияние секций с помощью диалогового окна «Диспетчер секций». Слияние секций в развернутой модели можно выполнить только с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -74,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 2.  В списке **Секции** выберите секцию, которую необходимо удалить, и нажмите кнопку **Удалить**.  
   
 ## <a name="see-also"></a>См. также:  
- [Секции (табличные службы SSAS)](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
- [Обработка секций в базе данных рабочей области (табличные службы SSAS)](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [Секций](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
+ [Обработка секций в базе данных рабочей области](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
   
   

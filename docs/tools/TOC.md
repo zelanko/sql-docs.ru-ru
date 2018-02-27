@@ -8,7 +8,10 @@
 
 # [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
+# [mssql-cli (программа командной строки для запросов)](mssql-cli.md)
+
 # [Диспетчер конфигураций](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+# [mssql-conf (Linux)](../linux/sql-server-linux-configure-mssql-conf.md)
 # [Распределенное воспроизведение](../tools/distributed-replay/install-distributed-replay-overview.md)
 # [Помощник по настройке ядра СУБД (dta)](../tools/dta/dta-utility.md)
 # [Приложение SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)
@@ -20,7 +23,7 @@
 ## [Программа osql](osql-utility.md)  
 ## [Программа Utility](profiler-utility.md)  
 ## [Приложение sqlagent90](sqlagent90-application.md)  
-## [Программа sqlcmd](sqlcmd-utility.md)  
+## [Служебная программа sqlcmd](sqlcmd-utility.md)  
 ## [Программа SQLdiag](sqldiag-utility.md)  
 ## [Программа sqlmaint](sqlmaint-utility.md)  
 ## [Приложение sqllogship](sqllogship-application.md)  

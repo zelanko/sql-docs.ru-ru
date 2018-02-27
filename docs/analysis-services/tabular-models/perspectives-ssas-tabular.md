@@ -1,5 +1,5 @@
 ---
-title: "Перспективы (табличные службы SSAS) | Документы Microsoft"
+title: "Перспективы | Документы Microsoft"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a10f9bc23e8c08cb36dac71ad473a67008424e67
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e78bf1c9300fcd9a6c0d198d0239ecee12a5ea22
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="perspectives"></a>перспективами
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Перспективы, в табличных моделях определяют просматриваемые подмножества модели, реализующие фокус ввода, специфическую и приложении модели.  
+# <a name="perspectives"></a>Перспективы
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Перспективы в табличных моделях определяют просматриваемые подмножества модели, реализующие точки обзора для модели, которые сосредоточены на определенном аспекте либо предназначены для конкретных деловых целей или использования в конкретном приложении.  
   
 ##  <a name="bkmk_understanding"></a> Преимущества  
  Табличные модели могут быть очень сложными для изучения. Одна модель может представлять все содержимое целого хранилища данных с многими таблицами, мерами и измерениями. Подобная сложность может отпугнуть пользователей, которым для удовлетворения своих запросов в области бизнес-аналитики и отчетности часто необходимо взаимодействовать только с небольшой частью модели.  
@@ -40,11 +41,11 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Создание перспектив и управление ими](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)|Содержит описание порядка создания и управления перспективами с помощью диалогового окна «Перспективы» в конструкторе моделей.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Роли](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Иерархии](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
