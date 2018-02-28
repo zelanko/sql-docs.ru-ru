@@ -26,13 +26,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7ebdb4123e449cd024a6dd828364090890138f2c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>обновить базу данных при помощи отсоединения и присоединения (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается использование операций отсоединения и присоединения для обновления базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После присоединения к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]база данных сразу становится доступной, после чего автоматически обновляется.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В этой теме описывается использование операции отсоединения и присоединения для обновления базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После присоединения к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]база данных сразу становится доступной, после чего автоматически обновляется.  
   
  **В этом разделе**  
   

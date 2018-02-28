@@ -39,10 +39,10 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 4a11f27ebd08fc7d1e7377f7d84fb5e3f95f4e13
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-sql-server-objects"></a>Использование объектов SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ ms.lasthandoff: 01/18/2018
  Можно настроить системный монитор для отображения статистики любого счетчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Кроме того, можно задать пороговое значение для любого счетчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и затем формировать предупреждение о превышении порога. Дополнительные сведения о настройке предупреждения см. в разделе [Создание предупреждения для базы данных SQL Server](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md).  
   
 > [!TIP]  
->  Можно также вернуть значения счетчика производительности, отправив запрос динамическому представлению управления [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) .  
+>  Можно также вернуть значения счетчика производительности, отправив запрос динамическому представлению управления [sys.dm_os_performance_counters &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] статистика отображается, только если установлен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При остановке и повторном запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]отображение статистик прерывается и возобновляется автоматически. Также обратите внимание, что счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] видны в оснастке системного монитора, даже если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущен. На кластеризованном экземпляре счетчики производительности функционируют только на том узле, где выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] статистика отображается, только если установлен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При остановке и повторном запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]отображение статистик прерывается и возобновляется автоматически. Также обратите внимание, что счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] видны в оснастке системного монитора, даже если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущен. На кластеризованном экземпляре счетчики производительности функционируют только на том узле, где выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Этот раздел состоит из следующих подразделов.  
   

@@ -24,13 +24,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: cf23217acf677478ae0dc46b161f1731e4d88494
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-snapshot-agent"></a>Агент моментальных снимков репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Агент моментальных снимков репликации — это исполняемый файл, который подготавливает файлы моментальных снимков, содержащие схему, данные опубликованных таблиц и объекты базы данных, сохраняет их в папке моментальных снимков и регистрирует задания синхронизации в базе данных распространителя.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Агент моментальных снимков репликации — это исполняемый файл, который подготавливает файлы моментальных снимков, содержащие схему, данные опубликованных таблиц и объекты базы данных, сохраняет их в папке моментальных снимков и регистрирует задания синхронизации в базе данных распространителя.  
   
 > [!NOTE]  
 >  Параметры можно указывать в любом порядке.  

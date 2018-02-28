@@ -24,13 +24,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6ce0b2cc9add2bd3b7ee329c019a094998bc910f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-queue-reader-agent"></a>Агент чтения очереди репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Агент чтения очереди репликации — это исполняемый файл, который считывает сообщения, хранящиеся в очереди [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или очереди сообщений [!INCLUDE[msCoName](../../../includes/msconame-md.md)], а затем применяет их к издателю. Агент чтения очереди используется совместно с публикациями транзакций и публикациями моментальных снимков, которые допускают обновление посредством очередей.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Агент чтения очереди репликации — это исполняемый файл, который считывает сообщения, хранящиеся в очереди [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или очереди сообщений [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , а затем применяет их к издателю. Агент чтения очереди используется совместно с публикациями транзакций и публикациями моментальных снимков, которые допускают обновление посредством очередей.  
   
 > [!NOTE]  
 >  Параметры можно указывать в любом порядке. Если необязательные параметры не указаны, используются стандартные значения из профиля агента по умолчанию.  
