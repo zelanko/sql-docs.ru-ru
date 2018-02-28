@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
 - DATEPART
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - date and time [SQL Server], DATEPART
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
@@ -134,7 +136,7 @@ DATEPART ( datepart , date )
 |Первый день недели|Содержание первой недели года|Двойное присвоение недель|Применяется в:|  
 |---|---|---|---|
 |Воскресенье|1 января,<br /><br /> Первая суббота,<br /><br /> 1–7 дней года|Да|United States|  
-|Понедельник|1 января,<br /><br /> Первое воскресенье,<br /><br /> 1–7 дней года|Да|Большинство стран Европы, а также Великобритания|  
+|Понедельник|1 января,<br /><br /> Первое воскресенье,<br /><br /> 1–7 дней года|Да|Большинство стран Европы, а также Соединенное Королевство|  
 |Понедельник|4 января<br /><br /> Первый четверг<br /><br /> 4 — 7 дней года|Нет|ISO 8601, Норвегия и Швеция|  
 |Понедельник|7 января<br /><br /> Первый понедельник<br /><br /> 7 дней года|Нет||  
 |Среда|1 января,<br /><br /> Первый вторник,<br /><br /> 1–7 дней года|Да||  

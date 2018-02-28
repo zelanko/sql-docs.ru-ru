@@ -18,7 +18,7 @@
 ## [Настройка поисковых фильтров и управление ими](configure-and-manage-filters-for-search.md)  
 ## [Настройка средств разбиения текста на слова и парадигматических модулей и управление ими для поиска](configure-and-manage-word-breakers-and-stemmers-for-search.md)  
 ## [Просмотр или изменение зарегистрированных фильтров и средств разбиения текста на слова](view-or-change-registered-filters-and-word-breakers.md)  
-## [Изменение средства разбиения текста на слова, используемого для английского языка (США и Великобритания)](change-the-word-breaker-used-for-us-english-and-uk-english.md)  
+## [Изменение средства разбиения текста на слова, используемого для английского языка (США и Соединенное Королевство)](change-the-word-breaker-used-for-us-english-and-uk-english.md)  
 ## [Восстановление предыдущих версий средств разбиения текста на слова, используемых поиском](revert-the-word-breakers-used-by-search-to-the-previous-version.md)  
 ## [Настройка поведения средств разбиения текста на слова с помощью пользовательского словаря](customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md)  
 ## [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  

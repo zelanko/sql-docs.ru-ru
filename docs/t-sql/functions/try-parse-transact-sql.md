@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TRY_PARSE_TSQL
 - TRY_PARSE
-dev_langs: TSQL
-helpviewer_keywords: TRY_PARSE function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0b26f46431909dd4fbfaa820db8c3869333f555d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
@@ -122,7 +125,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |eesti|Эстонский|1061|Et-EE|  
 |latviešu|Латышский|1062|lv-LV|  
 |lietuvių|Литовский|1063|lt-LT|  
-|Português (Brasil)|Бразильский|1046|pt-BR|  
+|Português (Brasil)|Бразильский португальский|1046|pt-BR|  
 |繁體中文|Китайский (традиционный)|1028|zh-TW|  
 |한국어|Корейский|1042|Ko-KR|  
 |简体中文|Китайский (упрощенный)|2052|zh-CN|  
