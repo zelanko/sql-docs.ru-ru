@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="version---transact-sql-metadata-functions"></a>Версия - Transact SQL метаданных функции
+# <a name="version---transact-sql-metadata-functions"></a>Version - Transact SQL метаданных функции
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
  Возвращает версию [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] запущена на устройстве.  
