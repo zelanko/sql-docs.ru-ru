@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: "0"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 960803406d9dcf81e49b08ecf23c21fdb6e76645
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp3-release-notes"></a>Заметки о выпуске SQL Server 2012 с пакетом обновления 3 (SP3)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] В этих заметках о выпуске описываются вопросы, которые вам необходимо знать перед установкой пакета обновлений 3 SQL Server 2012 или устранением связанных с ним проблем. Заметки о выпуске доступны только в сети Интернет, а не на установочном носителе. Они периодически обновляются при добавлении новых вопросов. Список усовершенствований и исправлений и дополнительные сведения см. в статье [Замечания к выпуску SQL Server 2012 с пакетом обновления 3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+В этих заметках о выпуске описываются вопросы, которые вам необходимо знать перед установкой пакета обновлений 3 SQL Server 2012 или устранением связанных с ним проблем. Заметки о выпуске доступны только в сети Интернет, а не на установочном носителе. Они периодически обновляются при добавлении новых вопросов. Список усовершенствований и исправлений и дополнительные сведения см. в статье [Замечания к выпуску SQL Server 2012 с пакетом обновления 3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).  
   
 ## <a name="choose-the-correct-file-to-download-and-install"></a>Выберите правильный файл для загрузки и установите его  
 Используйте таблицу, приведенную ниже, для определения расположения и имени файла для загрузки, основанные на вашей текущей установленной версии. Страницы загрузки содержат требования к системе и основные инструкции по установке.  

@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cb5508fd58b6f5078d5c202e716109d58fbc8938
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4fba22c6d7a563f9645c1cf63f74b1becfc2869b
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="sql-server-guides"></a>Справочники по SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,6 +38,6 @@ ms.lasthandoff: 02/09/2018
 [Руководство по архитектуре страниц и экстентов](../relational-databases/pages-and-extents-architecture-guide.md)  
 [Руководство по оптимизации и проверке после миграции](../relational-databases/post-migration-validation-and-optimization-guide.md)  
 [Руководство по архитектуре обработки запросов](../relational-databases/query-processing-architecture-guide.md)  
-[Руководство по блокировке транзакций и управлению версиями строк SQL Server](https://msdn.microsoft.com/library/jj856598)  
+[Руководство по блокировке транзакций и управлению версиями строк SQL Server](../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md)  
 [Руководство по архитектуре журнала транзакций SQL Server и управлению им](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
 [Руководство по архитектуре потоков и задач](../relational-databases/thread-and-task-architecture-guide.md)
