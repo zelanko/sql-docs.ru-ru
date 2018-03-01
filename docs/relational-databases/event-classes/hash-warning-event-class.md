@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78d4b5e927ac53e0a76ef758f9acb0028fc818e7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7e3d82475509a6707001787ff1c08ab66636292c
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,6 +81,7 @@ ms.lasthandoff: 02/12/2018
 |XactSequence|**bigint**|Токен, который описывает текущую транзакцию.|50|Да|  
   
 ## <a name="see-also"></a>См. также:  
- [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+ [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)    
+ [Joins](../../relational-databases/performance/joins.md)    
   
   
