@@ -22,10 +22,7 @@
 ## [Заметки о SQL Server 2017](sql-server-2017-release-notes.md)
 ## [Заметки о SQL Server 2016](sql-server-2016-release-notes.md)
 ## [Заметки о SQL Server 2014](sql-server-2014-release-notes.md)
-## [Заметки о SQL Server 2012 с пакетом обновления 4 (SP4)](sql-server-2012-sp4-release-notes.md)
-## [Заметки о SQL Server 2012 с пакетом обновления 3 (SP3)](sql-server-2012-sp3-release-notes.md)
-## [Заметки о SQL Server 2012 с пакетом обновления 2 (SP2)](sql-server-2012-sp2-release-notes.md)
-## [Заметки о SQL Server 2012 с пакетом обновления 1 (SP1)](sql-server-2012-sp1-release-notes.md)
+## [Заметки о выпуске пакетов обновления к SQL Server 2012](sql-server-2012-sp4-release-notes.md)
 ## [Заметки о SQL Server 2012](sql-server-2012-release-notes.md)
 ## [Заметки о SQL Server 2008 R2 с пакетом обновления 2 (SP2)](sql-server-2008-r2-sp2-release-notes.md)
 
