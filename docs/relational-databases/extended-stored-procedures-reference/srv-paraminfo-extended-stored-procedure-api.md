@@ -97,7 +97,7 @@ pfNull
 ## <a name="remarks"></a>Remarks  
  **Примечание по безопасности.** Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные DLL-библиотеки перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по программированию расширенных хранимых процедур](../../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)  
   
   

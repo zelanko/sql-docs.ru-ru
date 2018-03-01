@@ -35,7 +35,7 @@ ms.lasthandoff: 02/09/2018
   
  Для использования типов данных API расширенных хранимых процедур необходимо включить в программу файл заголовка Srv.h.  
   
-|Тип данных|Тип данных SQL Server|Описание|  
+|Тип данных|Тип данных SQL Server|Description|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|**binary**|Данные типа **binary** с длиной от 0 до 8000 байт.|  
 |SRVBIGCHAR|**char**|Данные типа **character** с длиной от 0 до 8000 байт.|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 |SRVDECIMALN|**decimal null**|Данные типа **decimal**, значения NULL допускаются.|  
 |SRVFLT4|**real**|Тип данных **real** длиной 4 байта.|  
 |SRVFLT8|**float**|Тип данных **float** длиной 8 байт.|  
-|SRVFLTN|**real** &#124; **число с плавающей запятой значение null**|Данные типа **real** или **float**, значения NULL допускаются.|  
+|SRVFLTN|**real** &#124; **float null**|Данные типа **real** или **float**, значения NULL допускаются.|  
 |SRVIMAGE|**image**|Тип данных **image**.|  
 |SRVINT1|**tinyint**|Тип данных **tinyint** длиной 1 байт.|  
 |SRVINT2|**smallint**|Тип данных **smallint** длиной 2 байта.|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/09/2018
 |SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|Данные типа **tinyint**, **smallint** или **int**, значения NULL допускаются.|  
 |SRVMONEY4|**smallmoney**|Тип данных **smallmoney** длиной 4 байта.|  
 |SRVMONEY|**money**|Тип данных **money** длиной 8 байтов.|  
-|SRVMONEYN|**деньги** &#124; **smallmoney null**|Данные типа **smallmoney** или **money**, значения NULL допускаются.|  
+|SRVMONEYN|**money** &#124; **smallmoney null**|Данные типа **smallmoney** или **money**, значения NULL допускаются.|  
 |SRVNCHAR|**nchar**|Тип данных **character** (Юникод).|  
 |SRVNTEXT|**ntext**|Тип данных **text** (Юникод).|  
 |SRVNUMERIC|**numeric**|Тип данных **numeric**.|  
