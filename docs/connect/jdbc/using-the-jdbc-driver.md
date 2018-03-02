@@ -1,27 +1,28 @@
 ---
 title: "С помощью драйвера JDBC | Документы Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 018679acc5c3e0119755e5ab5e0378c6f3fec7f0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9118a82f333b14f9ba468c039255ff3e6a1280d7
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-the-jdbc-driver"></a>Использование драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,19 +30,38 @@ ms.lasthandoff: 11/18/2017
   В этом разделе приведены краткие указания по установлению простого соединения [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с помощью [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Перед подключением к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] необходимо сначала установить на локальном компьютере или на сервере, и на локальном компьютере нужно установить драйвер JDBC.  
   
 ## <a name="choosing-the-right-jar-file"></a>Выбор нужного JAR-файла  
+ 6.4 драйвера Microsoft JDBC для SQL Server предоставляет **mssql jdbc-6.4.0.jre7.jar**, **mssql jdbc-6.4.0.jre8.jar**, и **mssql jdbc-6.4.0.jre9.jar** библиотеки классов файлы, используемые в зависимости от выбранных параметров среды выполнения Java (JRE).  
+ 
  6.2 драйвер JDBC Microsoft SQL Server предоставляет **mssql jdbc-6.2.1.jre7.jar**, и **mssql jdbc-6.2.1.jre8.jar** использоваться в зависимости от вашей предпочтительная среда выполнения Java файлы библиотек классов Параметры среды (JRE).  
   
   Microsoft JDBC Driver 6.0 и 4.2 для SQL Server предоставляют **sqljdbc41.jar**, и **sqljdbc42.jar** использоваться в зависимости от выбранных параметров среды выполнения Java (JRE) файлы библиотек классов.  
   
  Microsoft JDBC Driver 4.1 для SQL Server предоставляет **sqljdbc41.jar** файла библиотеки классов для использования в зависимости от выбранных параметров среды выполнения Java (JRE).  
-  
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 обеспечивает **sqljdbc.jar** и **sqljdbc4.jar** использоваться в зависимости от выбранных параметров среды выполнения Java (JRE) файлы библиотек классов.  
-  
+    
  От выбора версии драйвера также зависит набор доступных функций. Дополнительные сведения о какие файлы JAR следует выбрать см. в разделе [требования к системе для драйвера JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="setting-the-classpath"></a>Задание пути к классу  
- Драйвер JDBC не входит в пакет Java SDK. Если вы хотите использовать его, необходимо задать в пути к классу **sqljdbc.jar** файла, **sqljdbc4.jar** файл **sqljdbc41.jar** файл, или  **sqljdbc42.JAR** файл. Если пути к классу указать с помощью 6.2 драйвера JDBC, **mssql jdbc-6.2.1.jre7.jar** или **mssql jdbc-6.2.1.jre8.jar**. Если запись для пути к классам отсутствует, приложение выдает общее исключение «Класс не найден».  
+ Драйвер JDBC не входит в пакет Java SDK. Если вы хотите использовать его, необходимо задать в пути к классу **sqljdbc.jar** файла, **sqljdbc4.jar** файл **sqljdbc41.jar** файл, или  **sqljdbc42.JAR** файл. Если пути к классу указать с помощью 6.2 драйвера JDBC, **mssql jdbc-6.2.1.jre7.jar** или **mssql jdbc-6.2.1.jre8.jar**. Если пути к классу указать с помощью 6.4 драйвера JDBC, **mssql jdbc-6.4.0.jre7.jar**, **mssql jdbc-6.4.0.jre8.jar** или **mssql jdbc-6.4.0.jre9.jar**. Если запись для пути к классам отсутствует, приложение выдает общее исключение «Класс не найден».  
   
+### <a name="for-microsoft-jdbc-driver-64"></a>Для драйвера Microsoft JDBC 6.4.
+ **Mssql jdbc-6.4.0.jre7.jar**, **mssql jdbc-6.4.0.jre8.jar** или **mssql jdbc-6.4.0.jre9.jar** файлы устанавливаются в следующий каталог:  
+  
+ \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \mssql-jdbc-6.4.0.jre7.jar 
+  
+ \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \mssql-jdbc-6.4.0.jre8.jar
+ 
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre9.jar
+  
+ Далее представлен пример инструкции CLASSPATH, используемой для приложения Windows.  
+  
+ `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_6.4\enu\mssql-jdbc-6.4.0.jre9.jar`  
+  
+ Далее представлен пример инструкции CLASSPATH, используемой для приложения Unix/Linux.  
+  
+ `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
+  
+ Убедитесь, что инструкция CLASSPATH содержит только одну [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], например mssql, jdbc, 6.4.0.jre7.jar, mssql jdbc-6.4.0.jre8.jar или mssql jdbc-6.4.0.jre9.jar.   
+
 ### <a name="for-microsoft-jdbc-driver-62"></a>Для драйвера Microsoft JDBC 6.2
  **Mssql jdbc-6.2.1.jre7.jar** или **mssql jdbc-6.2.1.jre8.jar** файлы устанавливаются в следующий каталог:  
   
@@ -59,7 +79,7 @@ ms.lasthandoff: 11/18/2017
   
  Убедитесь, что инструкция CLASSPATH содержит только одну [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], например, mssql jdbc-6.2.1.jre7.jar или mssql jdbc-6.2.1.jre8.jar.  
 
-### <a name="for-microsoft-jdbc-driver-40-41-42-and-60"></a>Для драйвера Microsoft JDBC 4.0, 4.2, 4.1 и 6.0
+### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Для драйвера Microsoft JDBC Driver 6.0, 4.1 и 4.2
  Файл sqljdbc.jar file, sqljdbc4.jar file, sqljdbc41.jar или sqljdbc42.jar устанавливается в следующее расположение:  
   
  \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \sqljdbc.jar  
@@ -117,7 +137,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
   
  Дополнительные сведения о соединении с источниками данных и указать URL-адрес подключения см. в разделе [построения URL-АДРЕСЕ соединения](../../connect/jdbc/building-the-connection-url.md) и [задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

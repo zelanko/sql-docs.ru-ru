@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e33a91587f393c6c510bdb16fe9c71dc2f422eac
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Начало работы с машинным обучением в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/11/2018
 
   Начиная с SQL Server 2017 г., теперь можно использовать код Python в SQL Server. В соответствии с более широкой поддержки для решения в нескольких языках (с Продолжение следует) и имя было изменено на [!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]. Теперь можно автоматизировать задач машинного обучения с помощью средств SQL для выполнения кода R или Python. Также можно использовать имя компьютера SQL Server как _контекста вычислений_ для заданий, запущенных из удаленной разработки среды.
 
-    + [Общие сведения об архитектуре для Python в SQL Server](/python/architecture-overview-sql-server-python.md)
+    + [Общие сведения об архитектуре для Python в SQL Server](../advanced-analytics/python/architecture-overview-sql-server-python.md)
     + [Настройка SQL Server R Services или службы обучения машины](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016

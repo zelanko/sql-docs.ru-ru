@@ -4,7 +4,7 @@ description: "Содержит советы по устранению непол
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 01/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,20 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: f56806313075865c53cbd3fc1f80c0d132804c04
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Устранение неполадок SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этом документе описывается устранение неполадок Microsoft SQL Server, работающим на платформе Linux или в контейнер Docker. При устранении неполадок SQL Server в Linux, не забудьте просмотреть поддерживаемые функции и известные ограничения в [SQL Server в заметках о выпуске Linux](sql-server-linux-release-notes.md).
+
+> [!TIP]
+> Ответы на часто задаваемые вопросы см. в разделе [SQL Server в Linux часто задаваемые вопросы о](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Устранение ошибок соединения
 Если возникли затруднения при подключении к экземпляру SQL Server в Linux, существует несколько необходимо проверить следующее. 
@@ -200,12 +203,4 @@ ms.lasthandoff: 02/13/2018
    Ресурсы: [специальные символы](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>Поддержка
-
-Поддержка доступна в сообществе и наблюдать инженеров. Дополнительную информацию используйте следующие ресурсы:
-
-- [Администратор базы данных Exchange стека](https://dba.stackexchange.com/questions/tagged/sql-server): задать вопросы администрирования базы данных
-- [Переполнение стека](http://stackoverflow.com/questions/tagged/sql-server): вопросы разработки
-- [Форумы MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): задавайте технические вопросы
-- [Отправить отзыв о](https://feedback.azure.com/forums/908035-sql-server): ошибки и запрос функции отчетов
-- [Reddit](https://www.reddit.com/r/SQLServer/): обсудить SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

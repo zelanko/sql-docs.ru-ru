@@ -13,11 +13,11 @@ ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: d289af96467634c144c7d0bc5ee362968c646333
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c85a5e40ca7d3b6e35cdb09fc4becbe5c9c65c3
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Модули подключения для базы данных Microsoft SQL
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/15/2018
 
 #### <a name="oop-to-relational-mismatch"></a>Объектно реляционные несоответствие
 
-*Реляционные*: клиентские программы, записанные в объектно ориентированный язык программирования (OOP) часто использовать драйверы SQL, которые возвращают запрашиваемые данные в формате, несколько реляционных, чем объектно-ориентированной. С помощью ADO.NET в C# является одним из примеров. Объектно реляционного несоответствие формата иногда делает труднее писать и понимать код объектно-ориентированное Программирование.
+*Реляционные*: клиентские программы, записанные в объектно ориентированный язык программирования (OOP) часто использовать драйверы SQL, возвращающие запрашиваемые данные в формате, который несколько реляционных, чем объектно-ориентированный. С помощью ADO.NET в C# является одним из примеров. Объектно реляционного несоответствие формата иногда делает труднее писать и понимать код объектно-ориентированное Программирование.
 
 *Объектно-реляционные Преобразователи*: других драйверов или платформы возврата запрошенных данных в формате объектно-ориентированное Программирование, как избежать несоответствия. Эти драйверы работать, ожидается, что классы были определены для сопоставления столбцов данных из отдельных таблиц SQL. Драйвер выполняет *объектно реляционное сопоставление* (ORM) для возврата результатов запроса в виде экземпляра класса. Корпорации Майкрософт Entity Framework (EF) для C# и режима гибернации для Java, приведены два примера.
 
@@ -57,11 +57,11 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Язык | Загрузка драйвера SQL |
 | :------- | :---------------------- |
 | C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core для Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core для MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core для Windows](https://www.microsoft.com/net/core) |
-| C++      | [ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
+| C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Драйвер node.js, инструкции по установке](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
 | PHP      | *Операционная система:*<br /><br />[Драйвер PHP для Windows](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu или PHP, MacOS драйвер из Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
-| Python   | [pyodbc инструкции по установке](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Загрузите 13.1 ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
+| Python   | [pyodbc инструкции по установке](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Загрузите ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Драйвер Ruby, инструкции по установке](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Страница загрузки Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
 
@@ -90,9 +90,9 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 ## <a name="build-an-app-webpages"></a>Сборки в приложение веб-страниц
 
 
-[http://AKA.MS/sqldev](http://aka.ms/sqldev) вы перейдете на набор нашей *сборки в приложении* веб-страниц. Веб-страниц содержат сведения о многочисленные сочетания программирования языка, операционной системы и драйвера подключения SQL. Помимо сведений, предоставляемых сборки в приложение веб-страниц являются следующие элементы:
+[http://AKA.MS/sqldev](http://aka.ms/sqldev) вы перейдете на набор *сборки в приложении* веб-страниц. Веб-страниц содержат сведения о многочисленные сочетания программирования языка, операционной системы и драйвера подключения SQL. Помимо сведений, предоставляемых сборки в приложение веб-страниц являются следующие элементы:
 
-- Сведения о том, как приступить к работе с самого начала, для каждого сочетания языка + номер операции sys драйвера.
+- Сведения о том, как приступить к работе с самого начала, для каждого сочетания языка + операционной системы и драйвера.
     - Инструкции по установке последние версии драйверов подключения SQL.
 - Примеры кода для каждого из следующих элементов:
     - Примеры объектно реляционного кода.

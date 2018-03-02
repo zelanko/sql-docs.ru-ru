@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 40699608d068895cdcee736c87aa4c2bd405b807
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 87c28ec845a59ea13acce0585bc9b249f100a4a5
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS
 
@@ -111,7 +111,13 @@ Microsoft SQL Server Integration Services (SSIS) — это платформа �
 
 Чтобы приступить к работе со службами SSIS, загрузите последнюю версию [SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md).
 
-## <a name="see-also"></a>См. также:
+Дополнительные сведения о служб SSIS см. в следующих статьях:
 - [Дополнительные сведения о SQL Server Integration Services](../integration-services/sql-server-integration-services.md)
 - [SQL Server Integration Services (SSIS) разработки и средства управления](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [SQL Server Integration Services, учебники](../integration-services/integration-services-tutorials.md)
+
+## <a name="related-content-about-ssis-on-linux"></a>См. также о служб SSIS в Linux
+-   [Установка SQL Server Integration Services (SSIS) для Linux](sql-server-linux-setup-ssis.md)
+-   [Настройка служб интеграции SQL Server в Linux с conf служб ssis](sql-server-linux-configure-ssis.md)
+-   [Ограничения и известные проблемы для служб SSIS в Linux](sql-server-linux-ssis-known-issues.md)
+-   [Выполнение в Linux с cron пакетов служб интеграции SQL Server расписание](sql-server-linux-schedule-ssis-packages.md)

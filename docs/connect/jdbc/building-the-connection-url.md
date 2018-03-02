@@ -8,20 +8,21 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 81176070a9363e54dc469dd050891335edcb92af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="building-the-connection-url"></a>Формирование URL-адреса соединения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -79,7 +80,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Именованные и множественные экземпляры SQL Server  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]обеспечивает возможность установки нескольких экземпляров на одном сервере. Все экземпляры идентифицируются с помощью специального имени. Для подключения к именованному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], либо можно указать номер порта именованного экземпляра (рекомендуется), или можно указать имя экземпляра в качестве свойства URL-адреса JDBC или **datasource** свойство. Если имя экземпляра или свойство номера порта не указано, создается соединение с экземпляром по умолчанию. См. следующие примеры.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обеспечивает возможность установки нескольких экземпляров на одном сервере. Все экземпляры идентифицируются с помощью специального имени. Для подключения к именованному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], либо можно указать номер порта именованного экземпляра (рекомендуется), или можно указать имя экземпляра в качестве свойства URL-адреса JDBC или **datasource** свойство. Если имя экземпляра или свойство номера порта не указано, создается соединение с экземпляром по умолчанию. См. следующие примеры.  
   
  Чтобы использовать номер порта, выполните следующие действия:  
   
@@ -97,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  Пустое пространство внутри скобок является литералом и не усекается.  
   
-##  <a name="Connectingintegrated"></a>Соединение с помощью встроенной проверки подлинности Windows  
+##  <a name="Connectingintegrated"></a> Соединение с помощью встроенной проверки подлинности Windows  
  Драйвер JDBC поддерживает использование встроенной проверки подлинности типа 2 в операционных системах Windows с использованием свойства строки соединения integratedSecurity. Чтобы использовать встроенную проверку подлинности, скопируйте файл sqljdbc_auth.dll в системный каталог Windows на компьютере, на котором установлен драйвер JDBC.  
   
  Файлы sqljdbc_auth.dll устанавливаются в следующем местоположении:  
@@ -111,7 +112,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  Или можно задать системное свойство java.libary.path для указания каталога, в котором содержится файл sqljdbc_auth.dll. Например, если драйвер JDBC установлен в каталоге по умолчанию, можно указать местоположение файла DLL, использовав следующий аргумент виртуальной машины (VM) при запуске приложения Java:  
   
- `-Djava.library.path=C:\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
+ `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
 ## <a name="connecting-with-ipv6-addresses"></a>Соединение с помощью IPv6-адресов  
  Драйвер JDBC поддерживает использование IPv6-адресов с коллекцией свойств соединения и свойством строки соединения serverName. Исходное значение serverName, такое как jdbc:*sqlserver*://*serverName*, не поддерживается для IPv6-адресов в строках соединения. С помощью имени для *serverName* вместо неизмененного IPv6-адреса будет достаточно для всех вариантов подключения. Следующие примеры можно использовать как дополнительные источники сведений.  
@@ -128,7 +129,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

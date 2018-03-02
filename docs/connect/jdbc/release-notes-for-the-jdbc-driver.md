@@ -1,35 +1,90 @@
 ---
 title: "Заметки о выпуске для драйвера JDBC | Документы Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: "206"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 827840a7aa7e221edaad60060fb51972460808ed
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 49710c98aad4af9373dd35ebf50960f32d999c10
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Заметки о выпуске для драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
+## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Обновления в драйвере Microsoft JDBC 6.4 для SQL Server
+6.4 драйвера Microsoft JDBC для SQL Server является полностью соответствует спецификации JDBC 4.1 и 4.2. Имена файлов, содержащихся в пакете 6,4 по совместимость версий Java. Например mssql jdbc-6.4.0.jre8.jar файл из пакета 6,4 рекомендуется для использования с Java 8. 
+
+**Поддержка JDK 9**  
+  
+Поддержка для Java Development Kit (JDK) версии 9.0 в дополнение к JDK 8.0 и 7.0.
+  
+**Соответствие JDBC 4.3**  
+  
+Поддержка спецификации 4.3 API подключения к базе данных Java, помимо 4.1 и 4.2. 4.3 API методов JDBC будут добавлены, но еще не реализован. Дополнительные сведения см. [соответствия JDBC 4.3 для драйвера JDBC](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+ 
+**Добавлено новое свойство соединения: sslProtocol**
+
+Добавлено новое свойство соединения, который позволяет пользователям указывать ключевое слово протокола TLS. Возможными значениями являются: «TLS», «TLSv1», «TLSv1.1», «TLSv1.2». В разделе [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol) подробные сведения.
+
+**Рекомендуется использовать свойство соединения: fipsProvider**
+
+Свойство соединения «fipsProvider» удаляется из списка свойств принятое подключение. В описании [здесь](https://github.com/Microsoft/mssql-jdbc/pull/460).
+
+**Добавленное подключение свойства для задания пользовательского TrustManager**
+
+Драйвер теперь поддерживает задание пользовательских TrustManager с добавлены «trustManagerClass» и «trustManagerConstructorArg» свойств соединения. Это обеспечивает динамическую спецификацию набор сертификатов, которые являются доверенными на уровне подключения без изменения глобальных параметров для среды виртуальной машины Java.
+
+**Добавлена поддержка datetime или smallDatetime в возвращающего табличное значение параметры (TVP)**
+
+Драйвер теперь поддерживает типы данных DATETIME и SMALLDATETIME, при использовании возвращающего табличное значение параметры (TVP).
+
+**Добавлена поддержка для типа данных sql_variant**
+
+Драйвер JDBC теперь поддерживает типы данных sql_variant для использования с SQL Server. Sql_variant также поддерживаются с компонентами, такими как возвращающего табличное значение параметры (TVP) и BulkCopy с ниже ограничения.
+
+1. Для значений даты: при использовании возвращающего табличное значение Параметра для заполнения таблицы, содержащий значения datetime или smalldatetime или даты, хранящиеся в столбце sql_variant, вызов методов getDateTime()/getSmallDateTime()/getDate() resultset не работает, а также вызывает следующее исключение:
+    ```
+    java.lang.String cannot be cast to java.sql.Timestamp
+    ```
+    Обходной путь: вместо этого используйте методы «getString()» или «getObject()».
+
+2. При использовании возвращающего табличное значение Параметра SQL Variant с значения null
+
+При использовании возвращающего табличное значение Параметра для заполнения таблицы и отправки значения NULL в столбец типа sql_variant, возникнет исключение, как вставка значения NULL со столбцом типа sql_variant в возвращающий табличное значение параметр в настоящее время не поддерживается.
+
+**Реализован подготовленной инструкции кэширование метаданных**
+
+Драйвер JDBC реализует подготовить инструкцию кэширование метаданных для улучшения производительности. Драйвер теперь поддерживает кэширование метаданных подготовить инструкцию в драйвере со свойствами подключения «disableStatementPooling» и «statementPoolingCacheSize». Эта функция по умолчанию отключена. Дополнительные сведения можно найти [здесь](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)
+
+**Добавлена поддержка для встроенной проверки подлинности AAD в Linux или Mac**
+
+Драйвер JDBC также поддерживает Azure встроенной проверки подлинности Active Directory на всех поддерживаемых операционных систем (Windows или Linux/Mac) с использованием Kerberos. Кроме того в операционных системах Windows пользователи могут проходить проверку подлинности с sqljdbc_auth.dll.
+
+**Обновленная версия ADAL4J для 1.4.0**
+
+Драйвер JDBC был обновлен его maven зависит от azure-activedirectory библиотека for-java (ADAL4J) до версии 1.4.0. Дополнительные сведения о зависимостях см. [здесь](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Обновления в драйвере Microsoft JDBC 6.2 для SQL Server
 6.2 драйвер JDBC Microsoft SQL Server — полностью соответствует спецификации JDBC 4.1 и 4.2. Имена файлов, содержащихся в пакете 6.0 по совместимость версий Java. Например mssql jdbc-6.2.1.jre8.jar файл из пакета 6.2 рекомендуется для использования с Java 8. 
 
-**Примечание:** проблемы с метаданными, кэширование улучшения был найден в RTW 6.2 JDBC, выпущенные на 29 июня 2017 г. Откат улучшения и новые JAR-файлов (версия 6.2.1) выпущенных 17 июля 2017 г. на [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), и [Maven центра](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Обновите проекты, чтобы использовать 6.2.1 выпуска JAR-файлов. Можно найти [заметки о выпуске](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) для получения дополнительных сведений.
+> [!NOTE]  
+>  Проблема с улучшения кэширования метаданных был найден в RTW 6.2 JDBC, выпущенные на 29 июня 2017 г. Откат улучшения и новые JAR-файлов (версия 6.2.1) выпущенных 17 июля 2017 г. на [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), и [Maven центра](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Обновите проекты, чтобы использовать 6.2.1 выпуска JAR-файлов. Можно найти [заметки о выпуске](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) для получения дополнительных сведений.
 
 **Azure Active Directory (AAD) Поддержка Linux**
 
@@ -122,36 +177,12 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Поддержка для пакета Java Development Kit (JDK) версии 7.0 в дополнение к JDK 6.0 и 5.0.  
   
-## <a name="updates-in-microsoft-jdbc-driver-40-for-sql-server-and-later"></a>Обновления в драйвере Microsoft JDBC 4.0 для SQL Server и более поздних версиях  
- **Сведения о подключении к базе данных Azure SQL**  
+## <a name="itanium-not-supported-for-jdbc-driver-64-60-42-and-41-applications"></a>Itanium не поддерживается в приложениях JDBC Driver 6.4, 6.0, 4.1 и 4.2  
   
- Теперь имеется статья с информацией о подключении к базе данных SQL Azure. В разделе [подключение к базе данных Azure SQL](../../connect/jdbc/connecting-to-an-azure-sql-database.md) для получения дополнительной информации.  
+ Драйверы Microsoft JDBC 6.4, 6.0, 4.2 и 4.1 для приложения SQL Server для запуска на компьютерах Itanium не поддерживаются.  
   
- **Поддержка высокого уровня доступности и аварийного восстановления**  
-  
- Поддержка высокого уровня доступности и аварийного восстановления для группы доступности AlwaysOn в [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. В разделе [драйвер JDBC поддерживает высокий уровень доступности и аварийного восстановления](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) для получения дополнительной информации.  
-  
- **Использование встроенной проверки подлинности Kerberos для соединения с SQL Server**  
-  
- Поддержка типа 4 встроенной проверки подлинности Kerberos для приложений для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных. Дополнительные сведения см. в разделе [с помощью встроенной проверки подлинности Kerberos для подключения к SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). (Kerberos типа 2 доступна встроенной проверки подлинности в [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] версии до 4.0.)  
-  
- **Доступ к диагностическим сведениям в журнале расширенных событий**  
-  
- Можно получить доступ к информации в журнале расширенных событий для выяснения причин ошибок соединения. Дополнительные сведения см. в разделе [доступ к диагностической информации в журнале расширенных событий](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
-  
- **Дополнительная поддержка разреженных столбцов**  
-  
- Если приложение уже обращается к данным в таблице, в которой используются разреженные столбцы, производительность должна повыситься. Можно получить сведения о столбцах (включая сведения о разреженных столбцах) с [getColumns метод &#40; SQLServerDatabaseMetaData &#41; ](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md). Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] разреженные столбцы. в разделе [Использование разреженных столбцов](http://go.microsoft.com/fwlink/?LinkId=224244).  
-  
- **Xid.getFormatId**  
-  
- Начиная с версии [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], драйвер JDBC будет передавать идентификатор формата от приложения к серверу базы данных. Чтобы это обновленное поведение работало, убедитесь, что файл sqljdbc_xa.dll на сервере обновлен. Дополнительные сведения о копировании обновленной версии sqljdbc_xa.dll на сервер см. в разделе [основные сведения о транзакциях XA](../../connect/jdbc/understanding-xa-transactions.md).  
-  
-## <a name="itanium-not-supported-for-jdbc-driver-60-42-41-and-40-applications"></a>Itanium не поддерживается в приложениях JDBC Driver 6.0, 4.2, 4.1 и 4.0  
-  
- Драйверы Microsoft JDBC Driver 6.0, 4.2, 4.1 и 4.0 для приложений SQL Server для запуска на компьютерах Itanium не поддерживаются.  
-  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

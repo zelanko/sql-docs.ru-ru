@@ -35,17 +35,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d394c689e4f4220781342dca687906d46a673c8e
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: 57dc975f2307a4f05afc3e71a8a9514d2aa84302
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="bcp-utility"></a>Программа bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Содержимое, связанное с предыдущих версий SQL Server, в разделе [программа bcp](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
 
+ > Последнюю версию программы bcp см. в разделе [14.0 служебные программы командной строки Microsoft для SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
+
+ > С помощью программы bcp в Linux, в разделе [установке sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
 
  > Подробные сведения об использовании bcp с хранилищем данных SQL Azure см. в разделе [загрузки данных с помощью программы bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
@@ -497,18 +500,18 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 ### <a name="example-test-conditions"></a>**Пример условий теста**
 В примерах ниже используется образец базы данных `WideWorldImporters` для SQL Server (начиная с 2016) и База данных SQL Azure.  `WideWorldImporters` можно скачать по адресу [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0).  Синтаксис для восстановления образца базы данных см. в разделе [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) .  Если не указано иное, в этом примере предполагается, что используется проверка подлинности Windows и существует доверительное подключение к экземпляру сервера, на котором запускается команда **bcp** .  Каталог с именем `D:\BCP` будет использоваться во многих примерах.
 
-Приведенный ниже скрипт создает пустую копию таблицы `WorlWideImporters.Warehouse.StockItemTransactions` , а затем добавляет ограничение первичного ключа.  Запустите следующий скрипт T-SQL в SQL Server Management Studio (SSMS):
+Приведенный ниже скрипт создает пустую копию таблицы `WideWorldImporters.Warehouse.StockItemTransactions`, а затем добавляет ограничение первичного ключа.  Запустите следующий скрипт T-SQL в SQL Server Management Studio (SSMS):
 
 ```tsql  
-USE WorlWideImporters;  
+USE WideWorldImporters;  
 GO  
 
 SET NOCOUNT ON;
 
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')     
 BEGIN
-    SELECT * INTO WorlWideImporters.Warehouse.StockItemTransactions_bcp
-    FROM WorlWideImporters.Warehouse.StockItemTransactions  
+    SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
+    FROM WideWorldImporters.Warehouse.StockItemTransactions  
     WHERE 1 = 2;  
 
     ALTER TABLE Warehouse.StockItemTransactions_bcp 
@@ -520,7 +523,7 @@ END
 > [!NOTE]
 > Усеките таблицу `StockItemTransactions_bcp` по мере необходимости.
 >
-> TRUNCATE TABLE WorlWideImporters.Warehouse.StockItemTransactions_bcp;
+> WideWorldImporters.Warehouse.StockItemTransactions_bcp после УСЕЧЕНИЯ таблицы;
 
 ### <a name="a--identify-bcp-utility-version"></a>A.  Определение версии служебной программы **bcp**
 В командной строке введите следующую команду:
@@ -529,14 +532,14 @@ bcp -v
 ```
   
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>Б. Копирование строк из таблицы в файл данных (с помощью доверительного соединения)  
-В следующих примерах показано применение параметра **out** к таблице `WorlWideImporters.Warehouse.StockItemTransactions` .
+В следующих примерах показано применение параметра **out** к таблице `WideWorldImporters.Warehouse.StockItemTransactions`.
 
 - **Basic**  
 В этом примере создается файл данных с именем `StockItemTransactions_character.bcp` , и в него копируются данные таблицы в **символьном** формате.
 
   В командной строке введите следующую команду:
   ```
-  bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
+  bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
  
  - **Расширенный**  
@@ -544,30 +547,30 @@ bcp -v
 
     В командной строке введите следующую команду:
     ```
-    bcp WorlWideImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
+    bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
     ``` 
  
 Просмотрите `Error_out.log` и `Output_out.log`.  `Error_out.log` должно быть пустым.  Сравните размеры файлов между `StockItemTransactions_character.bcp` и `StockItemTransactions_native.bcp`. 
    
 ### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>В. Копирование строк из таблицы в файл данных (в смешанном режиме проверки подлинности)  
-В следующем примере показано применение параметра **out** к таблице `WorlWideImporters.Warehouse.StockItemTransactions` .  В этом примере создается файл данных с именем `StockItemTransactions_character.bcp` , и в него копируются данные таблицы в **символьном** формате.  
+В следующем примере показано применение параметра **out** к таблице `WideWorldImporters.Warehouse.StockItemTransactions` .  В этом примере создается файл данных с именем `StockItemTransactions_character.bcp` , и в него копируются данные таблицы в **символьном** формате.  
   
  В этом примере предполагается, что применяется смешанный режим проверки подлинности. Для указания идентификатора входа необходимо использовать параметр **-U** . Кроме того, за исключением случаев, когда выполняется соединение с экземпляром, не являющимся экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на локальном компьютере, нужно использовать параметр **-S** , чтобы указать системное имя и (при необходимости) имя экземпляра.  
 
 В командной строке введите следующую команду: \(система попросит вас ввести пароль\)
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
+bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  
   
 ### <a name="d-copying-data-from-a-file-to-a-table"></a>Г. Копирование данных из файла в таблицу  
-В следующих примерах показано применение параметра **in** к таблице `WorlWideImporters.Warehouse.StockItemTransactions_bcp` с использованием созданных выше файлов.
+В следующих примерах показано применение параметра **in** к таблице `WideWorldImporters.Warehouse.StockItemTransactions_bcp` с использованием созданных выше файлов.
   
 - **Basic**  
 В этом примере используется ранее созданный файл данных `StockItemTransactions_character.bcp` .
 
   В командной строке введите следующую команду:
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
   ```  
 
 - **Расширенный**  
@@ -575,7 +578,7 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransa
   
   В командной строке введите следующую команду:
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
   ```    
   Просмотрите `Error_in.log` и `Output_in.log`.
    
@@ -585,39 +588,39 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransa
 В командной строке введите следующую команду:
   
 ```  
-bcp "SELECT StockItemTransactionID FROM WorlWideImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
+bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```  
   
 ### <a name="f-copying-a-specific-row-into-a-data-file"></a>Е. Копирование отдельной строки в файл данных  
-Чтобы выполнить копирование конкретной строки, можно использовать параметр **queryout** . Следующий пример копирует только строку человека с именем `Amy Trefl` из таблицы `WorlWideImporters.Application.People` в файл данных `Amy_Trefl_c.bcp`.  Примечание. Параметр **-d** используется для идентификации базы данных.
+Чтобы выполнить копирование конкретной строки, можно использовать параметр **queryout** . Следующий пример копирует только строку человека с именем `Amy Trefl` из таблицы `WideWorldImporters.Application.People` в файл данных `Amy_Trefl_c.bcp`.  Примечание. Параметр **-d** используется для идентификации базы данных.
   
 В командной строке введите следующую команду: 
 ```  
-bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WorlWideImporters -c -T
+bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```  
   
 ### <a name="g-copying-data-from-a-query-to-a-data-file"></a>Ж. Копирование данных из запроса в файл данных  
-Результирующий набор инструкции Transact-SQL копируется в файл данных с помощью параметра **queryout** .  Следующий пример копирует имена из таблицы `WorlWideImporters.Application.People` , упорядоченные по полному имени, в файл данных `People.txt` .  Примечание. Параметр **-t** используется для создания файла с разделителями-запятыми.
+Результирующий набор инструкции Transact-SQL копируется в файл данных с помощью параметра **queryout** .  Следующий пример копирует имена из таблицы `WideWorldImporters.Application.People` , упорядоченные по полному имени, в файл данных `People.txt`.  Примечание. Параметр **-t** используется для создания файла с разделителями-запятыми.
   
 В командной строке введите следующую команду:
 ```  
-bcp "SELECT FullName, PreferredName FROM WorlWideImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
+bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```  
   
 ### <a name="h-creating-format-files"></a>З. Создание файлов форматирования  
-Следующий пример создает три разных файла форматирования для таблицы `Warehouse.StockItemTransactions` в базе данных `WorlWideImporters` .  Просмотрите содержимое каждого из созданных файлов.
+Следующий пример создает три разных файла форматирования для таблицы `Warehouse.StockItemTransactions` в базе данных `WideWorldImporters`.  Просмотрите содержимое каждого из созданных файлов.
   
 В командной строке введите следующие команды:
   
 ```  
 REM non-XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
 REM non-XML native format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
 
 REM XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
  
 ```  
   
@@ -631,7 +634,7 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stock
   
 В командной строке введите следующую команду:
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
 ```  
   
 > [!NOTE]  

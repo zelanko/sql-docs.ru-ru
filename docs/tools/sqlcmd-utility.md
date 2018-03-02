@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlcmd
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,22 +29,23 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 78bad0a1dfd518bb29c8bbdc5f04d0c173756e9f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>Программа sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > SQL Server 2014 и ниже, в разделе [программы sqlcmd](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
 
+ > Использование программы sqlcmd в Linux, в разделе [установке sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
 
   **Sqlcmd** позволяет вводить инструкции Transact-SQL, системные процедуры и файлы скрипта в командной строке в **редактора запросов** в режиме SQLCMD, в файл скрипта Windows или шаг задания операционной системы (Cmd.exe) задания агента SQL Server. Эта программа использует ODBC для выполнения пакетов Transact-SQL. 
   
@@ -55,14 +57,14 @@ ms.lasthandoff: 01/17/2018
   Чтобы выполнить инструкции sqlcmd в SSMS, выберите "Режим SQLCMD" в раскрывающемся списке "Запрос" на верхней панели навигации.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) использует Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient для выполнения в обычном режиме и режиме SQLCMD в **редактора запросов**. При вызове программы **sqlcmd** из командной строки **sqlcmd** использует драйвер ODBC. Так как могут применяться разные параметры по умолчанию, выполнение одного и того же запроса в среде [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] в режиме SQLCMD и в программе **sqlcmd** может различаться.  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) использует Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient для выполнения в обычном режиме и режиме SQLCMD в **редактора запросов**. При вызове программы **sqlcmd** из командной строки **sqlcmd** использует драйвер ODBC. Так как могут применяться разные параметры по умолчанию, выполнение одного и того же запроса в среде [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] в режиме SQLCMD и в программе **sqlcmd** может различаться.  
 >   
   
  В настоящее время в программе **sqlcmd** не требуется указывать пробел между параметром командной строки и значением. Но в будущих выпусках пробел между параметром командной строки и значением может потребоваться.  
  
  Другие разделы:
 - [Запуск программы sqlcmd](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [Использование программы sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Использование программы sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -400,15 +402,15 @@ sqlcmd
  **-Y** *ширина_отображения_типа_фиксированной_длины*  
  Задает переменную скрипта **sqlcmd** `SQLCMDMAXFIXEDTYPEWIDTH`. Значение по умолчанию 0 (неограниченно). Ограничивает число символов, возвращаемых для следующих типов данных:  
   
--   **char(** *n* **)**, where 1<=n<=8000  
+-   **char (**  *n*  **)**, где 1 < = n < = 8000  
   
--   **nchar(n** *n* **)**, where 1<=n<=4000  
+-   **nchar (n**  *n*  **)**, где 1 < = n < = 4000  
   
--   **varchar(n** *n* **)**, where 1<=n<=8000  
+-   **varchar (n**  *n*  **)**, где 1 < = n < = 8000  
   
--   **nvarchar(n** *n* **)**, where 1<=n<=4000  
+-   **nvarchar (n**  *n*  **)**, где 1 < = n < = 4000  
   
--   **varbinary(n** *n* **)**, where 1<=n\<=4000  
+-   **varbinary (n**  *n*  **)**, где 1 < = n\<= 4000  
   
 -   **variant**  
   
@@ -452,7 +454,7 @@ sqlcmd
   
  Где:  
   
- `x`= Количество транзакций, которые обрабатываются в SQL Server.  
+ `x` = Количество транзакций, которые обрабатываются в SQL Server.  
   
  `t1` = Общее время обработки всех транзакций.  
   

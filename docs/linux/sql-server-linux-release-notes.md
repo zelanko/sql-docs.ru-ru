@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: a661da062d65ca699627bc2b5bf0683e5fe08806
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
-ms.translationtype: HT
+ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
 
@@ -39,13 +39,9 @@ ms.lasthandoff: 02/21/2018
 > [!TIP]
 > Дополнительные сведения см. в статье [требования к системе для](sql-server-linux-setup.md#system) для SQL Server в Linux. Последние политика поддержки для SQL Server 2017 г. в разделе [политика технической поддержки для Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
-## <a name="supported-client-tools"></a>Поддерживаемые клиентские средства
+## <a name="tools"></a>Средства
 
-| Инструмент | Минимальная версия |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) для Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [SQL Server Data Tools для Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Код Visual Studio](https://code.visualstudio.com) с [mssql расширения](https://aka.ms/mssql-marketplace) | последние |
+Большинство существующих клиентских средств, предназначенных для SQL Server можно легко выбрать целевую SQL Server на ОС Linux. Некоторые средства может назначить определенную версию для работы с Linux. Полный список средств SQL Server см. в разделе [средства и программы для SQL Server SQL](../tools/overview-sql-tools.md).
 
 ## <a name="release-history"></a>История выпусков
 
@@ -180,6 +176,7 @@ ms.lasthandoff: 02/21/2018
 | &nbsp; | Службы Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Службы Master Data Services |
+| &nbsp; | Координатор распределенных транзакций (DTC) |
 
 ## <a name="known-issues"></a>Известные проблемы
 
@@ -332,3 +329,5 @@ ms.lasthandoff: 02/21/2018
 - [Запустите на Docker](quickstart-install-connect-ubuntu.md)
 - [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [Запуск и подключение — облако](quickstart-install-connect-clouds.md)
+
+Ответы на часто задаваемые вопросы см. в разделе [SQL Server в Linux часто задаваемые вопросы о](sql-server-linux-faq.md).

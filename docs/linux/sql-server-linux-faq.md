@@ -4,7 +4,7 @@ description: "В этой статье содержатся ответы на ч
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: b5dd38c166f869cfff730d091cee091582507114
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3fad3fb2892e5a91e42eefb5f00932c39d00064f
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server в Linux, часто задаваемые вопросы (FAQ)
 
@@ -30,7 +30,11 @@ ms.lasthandoff: 02/13/2018
 
 1. **Какие платформы Linux поддерживаются?**
 
-   В настоящее время поддерживается SQL Server в Red Hat Enterprise Server, SUSE Linux Enterprise Server и Ubuntu. Последние сведения о поддерживаемых версиях см. в разделе [поддерживаемых платформ](sql-server-linux-setup.md#supportedplatforms).
+   В настоящее время поддерживается SQL Server в Red Hat Enterprise Server, SUSE Linux Enterprise Server и Ubuntu. Он также выполняется в контейнер с помощью Docker. Последние сведения о поддерживаемых версиях см. в разделе [поддерживаемых платформ](sql-server-linux-setup.md#supportedplatforms).
+
+1. **SQL Server в Linux будут работать на других платформах**?
+
+   Возможно, можно установить и запустить SQL Server на других дистрибутивов Linux. Например CentOS тесно связана с Red Hat Enterprise Server, поэтому возможно установить пакеты RPM SQL Server. Это может быть верно для других распределений тесно связанных между собой. Основная проблема заключается в тестировании и поддержки. SQL Server протестирован только и поддерживается только в Red Hat Enterprise Linux, SUSE Linux Enterprise Server и Ubuntu.
 
 1. **Поддерживаемых возможностях SQL Server в Linux?**
 
@@ -130,6 +134,4 @@ ms.lasthandoff: 02/13/2018
 
    Смена владельца каталога SQL Server и файлов из установки по умолчанию не поддерживают. Mssql учетной записи и группы используется специально для SQL Server и нет доступа на интерактивный вход в систему.
 
-## <a name="next-steps"></a>Следующие шаги
-
-Дополнительные сведения о запуске SQL Server в Linux см. в разделе [Обзор SQL Server в Linux](sql-server-linux-overview.md).
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке для SQL Server в Linux
 
@@ -29,6 +29,8 @@ ms.lasthandoff: 02/13/2018
 
 > [!TIP]
 > Чтобы быстро приступить к работе, перейти к одному из примеры использования для [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), или [Docker](quickstart-install-connect-docker.md).
+
+Ответы на часто задаваемые вопросы см. в разделе [SQL Server в Linux часто задаваемые вопросы о](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Поддерживаемые платформы
 
@@ -40,6 +42,9 @@ ms.lasthandoff: 02/13/2018
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Получить SP2 SLES версии 12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Получить Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Подсистема docker** | 1.8+ | [Получить Docker](http://www.docker.com/products/overview)
+
+> [!NOTE]
+> Иногда имеется возможность установить и запустить SQL Server на других платформах Linux тесно связаны, но SQL Server только протестированы и поддерживаются на платформах, перечисленные в предыдущей таблице.
 
 Корпорация Майкрософт поддерживает развертывание и Управление контейнерами SQL Server с помощью OpenShift и Kubernetes.
 

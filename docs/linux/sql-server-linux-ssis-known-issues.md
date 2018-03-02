@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Ограничения и известные проблемы для служб SSIS в Linux
 
@@ -132,3 +132,8 @@ ms.lasthandoff: 02/13/2018
 -   Если не указать путь, регистратор записывает текущий каталог узла. Если текущий пользователь не имеет разрешения на запись в каталоге текущего узла, регистратор приведет к ошибке.
 -   Нельзя использовать переменную среды в пути к файлу. Если указать переменную среды, литеральный текст, который указывается отображается в путь к файлу. Например, при указании `%TMP%/log.txt`, регистратор, который добавляет текст `/%TMP%/log.txt` в текущий каталог узла.
 
+## <a name="related-content-about-ssis-on-linux"></a>См. также о служб SSIS в Linux
+-   [Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
+-   [Установка SQL Server Integration Services (SSIS) для Linux](sql-server-linux-setup-ssis.md)
+-   [Настройка служб интеграции SQL Server в Linux с conf служб ssis](sql-server-linux-configure-ssis.md)
+-   [Выполнение в Linux с cron пакетов служб интеграции SQL Server расписание](sql-server-linux-schedule-ssis-packages.md)

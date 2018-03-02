@@ -4,7 +4,7 @@ description: "Эта статья описывает, как SQL Server рабо
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 71efe59db9de4b60389f40ee6718627817ecee37
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
-ms.translationtype: HT
+ms.openlocfilehash: faa2898017347f59d415f7f5bf5bd6795a3f9de6
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server в Linux:
 
@@ -54,12 +54,9 @@ SQL Server 2017 теперь работает на платформе Linux. Э�
 
 В SQL Server 2017 используется одно и то же ядро СУБД на всех поддерживаемых платформах, включая Linux. Поэтому многие существующие функции и возможности работают так же и в Linux.  В этой части документации предоставляет некоторые из этих функций с точки зрения Linux. Он также вызывает областей, которые обладают уникальными требованиями в Linux.
 
-Если вы уже знакомы с SQL Server, то можете просмотреть общие рекомендации и список известных проблем в [заметках о выпуске](sql-server-linux-release-notes.md) Кроме того, взгляните, [что нового в SQL Server на Linux](sql-server-linux-whats-new.md) и [что нового в SQL Server 2017 в общем](../sql-server/what-s-new-in-sql-server-2017.md). Ответы на часто задаваемые вопросы см. в разделе [SQL Server в Linux часто задаваемые вопросы о](sql-server-linux-faq.md).
+Если вы уже знакомы с SQL Server, то можете просмотреть общие рекомендации и список известных проблем в [заметках о выпуске](sql-server-linux-release-notes.md) Кроме того, взгляните, [что нового в SQL Server на Linux](sql-server-linux-whats-new.md) и [что нового в SQL Server 2017 в общем](../sql-server/what-s-new-in-sql-server-2017.md). 
 
-##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) Общение с командой разработчиков SQL Server
+> [!TIP]
+> Ответы на часто задаваемые вопросы см. в разделе [SQL Server в Linux часто задаваемые вопросы о](sql-server-linux-faq.md).
 
-- [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): задать вопросы по администрированию баз данных
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): вопросы разработки
-- [Форумы MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): задавайте технические вопросы
-- [Отправить отзыв о](https://feedback.azure.com/forums/908035-sql-server): ошибки и запрос функции отчетов
-- [Reddit](https://www.reddit.com/r/SQLServer/): обсудить SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
