@@ -1,8 +1,8 @@
 ---
-title: "Проверка подлинности Active Directory с SQL Server для Linux | Документы Microsoft"
+title: "Active учебника каталога проверки подлинности для SQL Server для Linux | Документы Microsoft"
 description: "Этот учебник шаги конфигурации используется для проверки подлинности AAD для SQL Server в Linux."
 author: meet-bhagdev
-ms.date: 01/30/2018
+ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
@@ -16,24 +16,17 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="active-directory-authentication-with-sql-server-on-linux"></a>Проверка подлинности Active Directory с SQL Server в Linux
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Учебник: Проверка подлинности Active Directory используйте с помощью SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Этот учебник описывается настройка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux для поддержки проверки подлинности Active Directory (AD), также известный как встроенную проверку подлинности. Проверка подлинности AD позволяет присоединенных к домену клиенты под управлением Windows или Linux, для проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью учетных данных домена, а протокол Kerberos.
-
-Проверки подлинности AD имеет следующие преимущества по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] проверки подлинности:
-
-* Пользователи проходят проверку подлинности через единый вход, не вводя пароль.   
-* Создание имен входа для групп AD, можно управлять доступа и разрешений в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью членства в группах AD.  
-* Каждый пользователь получает одно удостоверение во всей организации, поэтому не нужно для отслеживания которой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] круг пользователей, которым соответствуют имена входа.   
-* AD позволяет принудительно применять политику централизованного пароль во всей организации.   
+Этот учебник описывается настройка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux для поддержки проверки подлинности Active Directory (AD), также известный как встроенную проверку подлинности. Общие сведения см. в разделе [проверки подлинности Active Directory для SQL Server в Linux](sql-server-linux-active-directory-auth-overview.md).
 
 Этот учебник состоит из следующих задач:
 
@@ -54,12 +47,7 @@ ms.lasthandoff: 02/13/2018
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-> [!IMPORTANT]
-> Ограничения:
-> - В настоящее время единственного способа проверки подлинности поддерживается для конечной точки зеркального отображения базы данных является СЕРТИФИКАТ. Метод проверки подлинности WINDOWS будет включена в будущем выпуске.
-> - AD сторонние средства, такие как Centrify Powerbroker, и Vintela не поддерживаются. 
-
-## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Присоединение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] узла к домену AD
+## <a id="join"></a> Присоединение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] узла к домену AD
 
 Выполните следующие действия, чтобы присоединить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] узла к домену Active Directory:
 
@@ -179,7 +167,7 @@ ms.lasthandoff: 02/13/2018
 
 Дополнительные сведения см. в документации Red Hat для [Discovering и присоединение домены удостоверений](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
-## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Создайте пользователя AD для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и задать имя участника-службы
+## <a id="createuser"></a> Создайте пользователя AD для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и задать имя участника-службы
 
   > [!NOTE]
   > Далее шаги использования вашей [полного доменного имени](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы работаете с **Azure**, необходимо  **[создать](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  перед продолжением работы.
@@ -208,7 +196,7 @@ ms.lasthandoff: 02/13/2018
 
 3. Дополнительные сведения см. в разделе [Регистрация имени участника-службы для соединений Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
-## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>Настройка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab службы
+## <a id="configurekeytab"></a> Настройка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab службы
 
 1. Проверьте номер версии ключа (kvno) для учетной записи AD, созданной на предыдущем шаге. Обычно он равен 2, но это может быть другое целое число, при изменении пароля для учетной записи несколько раз. На [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хост-компьютера, выполните следующую команду:
 
@@ -249,7 +237,7 @@ ms.lasthandoff: 02/13/2018
    sudo systemctl restart mssql-server
    ```
 
-## <a name="create-ad-based-logins-in-transact-sql"></a>Создать имена входа на основе AD в Transact-SQL
+## <a id="createsqllogins"></a> Создать имена входа на основе AD в Transact-SQL
 
 1. Подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и создать новое, основанное на AD входа:
 
@@ -263,7 +251,7 @@ ms.lasthandoff: 02/13/2018
    SELECT name FROM sys.server_principals;
    ```
 
-## <a name="connect-to-includessnoversionincludesssnoversion-mdmd-using-ad-authentication"></a>Подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с использованием проверки подлинности AD
+## <a id="connect"></a> Подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с использованием проверки подлинности AD
 
 Войдите на клиентский компьютер, используя свои учетные данные домена. Теперь вы можете подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] избежать повторного ввода пароля, с помощью проверки подлинности AD. При создании имени входа для присоединения к группе AD, таким же образом можно подключиться любой пользователь AD, являющийся членом этой группы.
 
