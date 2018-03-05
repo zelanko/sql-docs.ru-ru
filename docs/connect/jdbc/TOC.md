@@ -19,6 +19,7 @@
 ## [Поиск дополнительных сведений о драйвере JDBC](finding-additional-jdbc-driver-information.md)
 ## [Матрица поддержки драйвера Microsoft JDBC для SQL Server](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
 ## [Вопросы и ответы по драйверу JDBC](frequently-asked-questions-faq-for-jdbc-driver.md)
+## [Зависимости компонентов Microsoft JDBC Driver для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 
 
 # [Защита приложений драйвера JDBC](securing-jdbc-driver-applications.md)
 ## [Обеспечение безопасности строк подключений](securing-connection-strings.md)
@@ -36,6 +37,7 @@
 ## [Работа с инструкциями и результирующими наборами](working-with-statements-and-result-sets.md)
 ## [Использование адаптивной буферизации](using-adaptive-buffering.md)
 ## [Разреженные столбцы](sparse-columns.md)
+## [Кэширование метаданных подготовленной инструкции для JDBC Driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 # [Диагностика проблем с драйвером JDBC](diagnosing-problems-with-the-jdbc-driver.md)
 ## [Обработка ошибок](handling-errors.md)
@@ -63,6 +65,7 @@
 # [Соответствие требованиям и юридические аспекты использования драйвера JDBC для SQL](compliance-and-legal-for-the-jdbc-sql-driver.md)
 ## [Соответствие требованиям JDBC 4.1 для драйвера JDBC](jdbc-4-1-compliance-for-the-jdbc-driver.md)
 ## [Соответствие требованиям JDBC 4.2 для драйвера JDBC](jdbc-4-2-compliance-for-the-jdbc-driver.md)
+## [Соответствие требованиям JDBC 4.3 для JDBC Driver](jdbc-4-3-compliance-for-the-jdbc-driver.md)
 
 # [Руководство по программированию для драйвера JDBC для SQL](programming-guide-for-jdbc-sql-driver.md)
 ## [Соединение с SQL Server с помощью драйвера JDBC](connecting-to-sql-server-with-the-jdbc-driver.md)
@@ -125,3 +128,5 @@
 ### [Настройка способа отправки значений java.sql.Time на сервер](configuring-how-java-sql-time-values-are-sent-to-the-server.md)
 ### [Использование escape-последовательностей SQL](using-sql-escape-sequences.md)
 ### [Использование инструкций с хранимыми процедурами](using-statements-with-stored-procedures.md)
+### [Пример Azure Key Vault версии 6.0.0](azure-key-vault-sample-version-6.0.0.md)
+### [Пример Azure Key Vault версии 6.2.2](azure-key-vault-sample-version-6.2.2.md)
