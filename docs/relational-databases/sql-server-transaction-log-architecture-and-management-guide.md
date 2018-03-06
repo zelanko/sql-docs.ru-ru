@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cd276306b5fd40dd41602a573a2eb152ef5a6dda
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c8d5917a0faed7d4861a03097a2072db3cfa0670
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Руководство по архитектуре журнала транзакций SQL Server и управлению им
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -253,7 +253,9 @@ ms.lasthandoff: 02/09/2018
 [Журнал транзакций (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md)    
 [Управление размером файла журнала транзакций](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
 [Резервные копии журналов транзакций (SQL Server)](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
-[sys.dm_db_log_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+[Контрольные точки базы данных (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md)   
+[Настройка интервала восстановления в конфигурации сервера](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[sys.dm_db_log_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [Основные сведения о ведении журнала и восстановлении из резервных копий в SQL Server. Автор: Пол Рендел (Paul Randal)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
 [Управление журналом транзакций SQL Server. Авторы: Тони Дэвис (Tony Davis) и Гейл Шоу (Gail Shaw)](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  

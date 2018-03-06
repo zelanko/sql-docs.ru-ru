@@ -24,13 +24,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d28310275dd8df9e8e0ee205322291098ea4a626
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Агент слияния репликации — это исполняемый файл программы, который применяет к подписчикам исходный моментальный снимок, находящийся в таблицах базы данных. Кроме того, он выполняет слияние добавочных изменений данных, которые произошли на издателе после создания исходного моментального снимка, а также улаживает конфликты либо в соответствии с правилами, заданными пользователем, либо с помощью созданного пользователем сопоставителя.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Агент слияния репликации — это исполняемый файл программы, который применяет к подписчикам исходный моментальный снимок, содержащийся в таблицах базы данных. Кроме того, он выполняет слияние добавочных изменений данных, которые произошли на издателе после создания исходного моментального снимка, а также улаживает конфликты либо в соответствии с правилами, заданными пользователем, либо с помощью созданного пользователем сопоставителя.  
   
 > [!NOTE]  
 >  Параметры можно указывать в любом порядке. Если необязательные параметры не указаны, используются стандартные значения из реестра локального компьютера.  
@@ -182,7 +183,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Для ограничения передачи используйте **@subscriber_upload_options** вместо **sp_addmergearticle** .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Для ограничения передачи используйте **@subscriber_upload_options** вместо **sp_addmergearticle**.  
   
  Указывает тип обмена данными во время синхронизации, который может быть одним из следующих значений.  
   
