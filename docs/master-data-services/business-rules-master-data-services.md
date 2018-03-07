@@ -8,23 +8,24 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-caps.latest.revision: "16"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8bd22c0084e7077169254b773431183b89885fcb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 485f2694fe54000fc5784fdee26012de217ffd39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="business-rules-master-data-services"></a>Бизнес-правила (службы Master Data Services)
   Бизнес-правило в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]— это правило, позволяющее обеспечить качество и точность основных данных. Бизнес-правило можно использовать для автоматического обновления данных, отправки электронной почты или запуска бизнес-процесса или рабочего процесса.  

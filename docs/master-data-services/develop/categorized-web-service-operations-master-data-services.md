@@ -11,18 +11,19 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c43a3121179b8317c94c81a3b9aaf623459ce01d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2ae71d17925d069a8bf7211b0692b6787467dbea
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Операции веб-службы по категориям (службы Master Data Services)
   Веб-служба [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] содержит полный набор операций, позволяющих писать код для управления всеми функциями веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] через его пользовательский интерфейс. Операции веб-службы определяются интерфейсом <xref:Microsoft.MasterDataServices.IService> и реализуются в виде методов класса <xref:Microsoft.MasterDataServices.ServiceClient>. В этом разделе операции веб-службы сгруппированы по основным категориям для того, чтобы было проще понять, как пользоваться API-интерфейсом веб-службы.  

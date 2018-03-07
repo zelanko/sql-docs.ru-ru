@@ -8,26 +8,27 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3257afe0feb8a6200dfcfbff47b636b49a420fd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bfafab8167aa88862eadbb1c4c308acf5e1a2b0e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Сохранение файла ярлыка запроса (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно сохранить файл ярлыка запроса, если требуется часто обращаться к одному и тому же набору данных.  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   Активный лист должен содержать данные, управляемые MDS, в необходимом формате. Например, столбцы должны быть подготовлены для просмотра в необходимом порядке, а также должны быть применены все необходимые фильтры. Дополнительные сведения см. в разделах [Фильтрация данных перед их экспортом (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md) и [Переупорядочение столбцов (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md).  
   
@@ -35,9 +36,9 @@ ms.lasthandoff: 11/20/2017
   
 1.  В группе **Сохранение и отправка** нажмите стрелку под кнопкой **Сохранить запрос** и выберите команду **Сохранить как запрос**.  
   
-2.  Необязательно. Чтобы переименовать запрос, щелкните стрелку под кнопкой **Сохранить запрос** и выберите команду **Управление запросами**. Выберите запрос и нажмите кнопку **Переименовать**.  
+2.  Необязательный параметр. Чтобы переименовать запрос, щелкните стрелку под кнопкой **Сохранить запрос** и выберите команду **Управление запросами**. Выберите запрос и нажмите кнопку **Переименовать**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   Нажмите стрелку под кнопкой **Сохранить запрос** , чтобы просмотреть ярлык запроса и открыть его.  
   

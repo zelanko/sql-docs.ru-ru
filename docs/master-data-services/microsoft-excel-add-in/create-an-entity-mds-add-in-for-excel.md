@@ -8,30 +8,31 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40d08328b24be3ae47da5170f82bc3a81a70d125
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a344f047e914a798ec34053100f474c7aabcde76
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Создание сущности (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут создавать новые сущности для хранения данных. При создании сущности необходимо загрузить по крайней мере небольшую выборку данных, которые нужно сохранить.  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональным областям **Администрирование системы** и **Обозреватель** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../../master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
   
 -   Должна существовать модель, в которой создается сущность. Дополнительные сведения см. в разделе [Создание модели (службы Master Data Services)](../../master-data-services/create-a-model-master-data-services.md).  
   
@@ -71,11 +72,11 @@ ms.lasthandoff: 11/20/2017
   
 10. В списке **Код** выберите столбец, который содержит уникальные идентификаторы, или задайте автоматическое создание кодов.  
   
-11. Необязательно. В списке **Имя** выберите столбец, который содержит имена для каждого элемента.  
+11. Необязательный параметр. В списке **Имя** выберите столбец, который содержит имена для каждого элемента.  
   
 12. Нажмите кнопку **ОК**. После успешного создания сущности отображается строка с новым заголовком, выделяются ячейки, а имя листа изменяется на имя сущности.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   Для просмотра возникших ошибок в группе **Публикация и проверка** нажмите кнопку **Показать состояние**. Отображаются столбцы ValidationStatus и InputStatus. Дополнительные сведения см. в разделе [Проверка данных (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   

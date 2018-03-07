@@ -8,28 +8,29 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf0cd9b82e15ca3b6c099d1caa81ef8ec3757f31
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 782958cb18c22f39968d33509d4a8366029898b1
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>Переупорядочение порядка столбцов (надстройка MDS для Excel)
   В службах [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно переупорядочить столбцы, отфильтровав список перед загрузкой.  
   
  При переупорядочивании атрибутов в диалоговом окне **Фильтр** данные загружаются в Excel в новом порядке. Однако при следующей фильтрации данных атрибутов будет использоваться порядок, заданный первоначально. Чтобы изменить порядок окончательно, администратор должен сделать это в области **Администрирование системы** диспетчера основных данных. Дополнительные сведения см. в статье [Change the Order of Attributes](../../master-data-services/change-the-order-of-attributes.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
   
