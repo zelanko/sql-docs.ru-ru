@@ -8,11 +8,12 @@ ms.service:
 ms.component: node-js
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/18/2017
 
 ![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки драйвер Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Модуль трудоемкой — реализация javascript протокола потока табличных данных, которую поддерживают все современные версии SQL Server. Драйвер не проекта с открытым кодом, на сайте Github.  
+Модуль Tedious — это javascript-реализация протокола потока табличных данных (TDS), которую поддерживают все современные версии SQL Server Драйвер не проекта с открытым кодом, на сайте Github.  
   
 Можно подключиться к базе данных SQL с помощью Node.js в Windows, Linux или Mac.  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="documentation"></a>Документация  
   
-[Модуль трудоемкой документации на Github](http://tediousjs.github.io/tedious/)  
+[Документация по модулю Tedious на Github](http://tediousjs.github.io/tedious/)  
   
 ## <a name="community"></a>Сообщество  
 * [Центр разработчиков Azure Node.js](https://azure.microsoft.com/develop/nodejs/)  
