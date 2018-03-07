@@ -1,6 +1,6 @@
 ---
 title: "Заметки о выпуске SQL Server 2016 | Документация Майкрософт"
-ms.date: 10/30/2017
+ms.date: 02/27/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -8,51 +8,42 @@ ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - build notes
 - release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-caps.latest.revision: "276"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3979b28e6b530ba08641731f811e259168975004
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6485ef83b940ab9d04b9406e461517d5254aec7f
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>Заметки о выпуске SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Эта статья описывает ограничения и проблемы, связанные с выпусками SQL Server 2016.    
-    
- **Попробуйте продукт:**    
-   
-[![Скачать на странице центра оценки](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Скачать SQL Server 2016 на странице **[центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
-    
-[Маленький значок виртуальной машины Azure![](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Есть ли учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , чтобы запустить виртуальную машину с уже установленным SQL Server 2016 с пакетом обновления 1 (SP1).
-    
-![Скачать SSMS](../includes/media/download2.png)**SSMS:** Чтобы получить последнюю версию среды SQL Server Management Studio, перейдите на страницу **[Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.   
-    
- Сведения о новых возможностях см. в разделе [Что нового в SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
-    
-##  <a name="bkmk_top"></a> Разделы статьи:    
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+В этой статье описываются ограничения и проблемы, связанные с выпусками SQL Server 2016. Сведения о новых возможностях см. в разделе [Что нового в SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
--   [SQL Server 2016 с пакетом обновления 1 (SP1)](#bkmk_2016sp1)    
--   [Общедоступная версия SQL Server 2016](#bkmk_2016_ga) 
--   [Версия-кандидат 3 (RC3) SQL Server 2016](#bkmk_2016_rc3)     
+> [![Скачать на странице центра оценки](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Скачать SQL Server 2016 на странице **[центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
+>
+> [Маленький значок виртуальной машины Azure![](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Есть ли учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , чтобы запустить виртуальную машину с уже установленным SQL Server 2016 с пакетом обновления 1 (SP1).
+>
+> [![Скачать SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Чтобы получить последнюю версию среды SQL Server Management Studio, перейдите на страницу **[Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 с пакетом обновления 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 с пакетом обновления 1 (SP1) обновляет все выпуски и уровни служб SQL Server 2016 до версии SQL Server 2016 с пакетом обновления 1 (SP1). Помимо исправлений, перечисленных в этой статье, SQL Server 2016 с пакетом обновления 1 (SP1) содержит исправления, включенные в SQL Server 2016 с накопительным пакетом обновления 1 (CU1), накопительным пакетом обновления 2 (CU2) и накопительным пакетом обновления 3 (CU3).
-    
+
 - [Страница скачивания SQL Server 2016 с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=54276)
 - [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545) (Сведения о выпуске SQL Server 2016 с пакетом обновления 1). В этой статье содержатся отдельные ошибки и проблемы, исправленные или устраненные в пакете обновления 1.
- - ![info_tip](../sql-server/media/info-tip.png) См. статью [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) (Центр обновления SQL Server), где приведены ссылки и сведения для всех поддерживаемых версий, включая пакеты обновления для [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]. 
-    
-    
+ - ![info_tip](../sql-server/media/info-tip.png) См. статью [Центр обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx), где приведены ссылки и сведения для всех поддерживаемых версий, включая пакеты обновления для [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Ядро СУБД (общедоступная версия)](#bkmk_ga_instalpatch) 
 -   [Stretch Database (общедоступная версия)](#bkmk_ga_stretch)

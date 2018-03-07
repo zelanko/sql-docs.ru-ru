@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Перенос рабочих нагрузок SQL Server Integration Services в облако
 Пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) теперь можно переносить в облако Azure.
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/05/2018
 > [!NOTE]
 > При развертывании пакетов в Azure мастер развертывания пакетов всегда обновляет их до новейшего формата.
 
-Дополнительные сведения о предварительных требованиях в Azure см. в статье [Развертывание пакетов служб интеграции SQL Server (SSIS) в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Дополнительные сведения о необходимых компонентах см. в разделе [Развертывание пакетов SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ## <a name="ssis-features-on-azure"></a>Компоненты служб SQL Server Integration Services в Azure
 
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/05/2018
 ## <a name="common-tasks"></a>Общие задачи
 
 ### <a name="provision"></a>Подготовка
-Перед тем как развертывать и выполнять пакеты SSIS в Azure, необходимо подготовить базу данных каталога SSISDB и среду Azure SSIS Integration Runtime. Выполните инструкции по подготовке в следующей статье: [Развертывание пакетов служб интеграции SQL Server (SSIS) в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Перед тем как развертывать и выполнять пакеты SSIS в Azure, необходимо подготовить базу данных каталога SSISDB и среду Azure SSIS Integration Runtime. Следуйте инструкциям по подготовке в этой статье: [Развертывание пакетов SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ### <a name="deploy-and-run-packages"></a>Развертывание и запуск пакетов
 Для развертывания проектов и запуска пакетов в базе данных SQL можно использовать одно из знакомых средств и скриптов:
@@ -105,5 +106,5 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="next-steps"></a>Следующие шаги
 Чтобы приступить к работе с рабочими нагрузками служб SSIS в Azure, ознакомьтесь со следующими статьями:
--   [Развертывание пакетов служб интеграции SQL Server (SSIS) в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [Развертывание пакетов SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
 -   [Развертывание, запуск и отслеживание пакета служб SSIS в Azure](ssis-azure-deploy-run-monitor-tutorial.md)
