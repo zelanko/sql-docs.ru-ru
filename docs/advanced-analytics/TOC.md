@@ -84,7 +84,10 @@
 ## [Учебники по Python](tutorials/sql-server-python-tutorials.md)
 
 ### [Python. Запуск Python с помощью T-SQL](tutorials/run-python-using-t-sql.md)
-### [Python. Создание модели с помощью revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+#### [Упаковка Python в хранимую процедуру](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [Обучение и оценка на основе модели Python в SQL Server](tutorials/train-score-using-python-in-tsql.md)
+#### [Создание модели с помощью revoscalepy в контексте вычислений SQL Server](tutorials/use-python-revoscalepy-to-create-model.md)
+
 ### [Python. Дополнительные аналитические функции в базе данных для разработчиков SQL](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 #### [Скачивание образца данных](tutorials/sqldev-py1-download-the-sample-data.md)
@@ -94,7 +97,7 @@
 #### [Обучение и сохранение модели](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Ввод модели в эксплуатацию](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python. Развертывание и использование моделей](../advanced-analytics/python/publish-consume-python-code.md)
+### [Python. Развертывание и использование моделей с помощью отдельного сервера](../advanced-analytics/python/publish-consume-python-code.md)
 
 # [Сервер машинного обучения (автономный)](r/r-server-standalone.md)
 ## [Приступая к работе](r/getting-started-with-microsoft-r-server-standalone.md)
@@ -163,7 +166,7 @@
 ### [Известные проблемы в службах машинного обучения](r/resource-governance-for-r-services.md)
 ### [Создание пула ресурсов для машинного обучения](r/how-to-create-a-resource-pool-for-r.md)
 ### [Расширенные события для служб машинного обучения](r/extended-events-for-sql-server-r-services.md)
-
+### [Расширенные события для наблюдения за инструкциями PREDICT](xe-event-predict-tsql.md)
 ### [Представления DMV для служб машинного обучения](r/dmvs-for-sql-server-r-services.md)
 ### [Использование функций профилирования кода R](r/using-r-code-profiling-functions.md)
 ### [Мониторинг служб машинного обучения с помощью настраиваемых отчетов в Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)
