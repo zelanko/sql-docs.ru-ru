@@ -1,6 +1,6 @@
 ---
 title: "Установка дополнительных пакетов R в SQL Server | Документы Microsoft"
-ms.date: 02/20/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a328b07027f61f50df7e3ca2b6ac12b92508688b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: acb1727c85cae1d8176703c93cc77c971980d394
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Установка дополнительных пакетов R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/28/2018
 
     Используйте обычные команды R для установки пакетов из Интернета. Это — самый простой метод, но требуется административный доступ.
 
-    **Применяется к:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)].     Также требуется для экземпляров [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] где пакета управления через DDL не включен.
+    **Применяется к:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]. Также требуется для экземпляров [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] где пакета управления через DDL не включен.
 
 + [Установить новые пакеты R на сервере с **не** доступ к Интернету](#bkmk_offlineInstall)
 
@@ -40,9 +40,9 @@ ms.lasthandoff: 02/28/2018
 
 + [Установить пакеты, используя инструкцию СОЗДАНИЯ ВНЕШНЕЙ БИБЛИОТЕКИ](#bkmk_createlibrary) 
 
-    Инструкции СОЗДАНИЯ ВНЕШНЕЙ БИБЛИОТЕКИ предоставляются в SQL Server 2017 г, чтобы сделать возможным для администратор базы данных создать библиотеку пакет без выполнения кода R или Python непосредственно. Однако этот метод требует заранее подготовить все необходимые пакеты.  
+    [Создать ВНЕШНЮЮ БИБЛИОТЕКУ](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) инструкции предоставляются в SQL Server 2017 г, чтобы сделать возможным создание библиотеки пакет без выполнения R или Python code напрямую. Однако этот метод требует заранее подготовить все необходимые пакеты и требуются дополнительные базы данных разрешения.
 
-    **Применяется к:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; других ограничений.  
+    **Применяется к:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; других ограничений.
 
 ## <a name="bkmk_rInstall"></a> Установка нового R-пакетов через Интернет
 
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="bkmk_createlibrary"></a> Установка пакета с помощью инструкции DDL 
 
-В SQL Server 2017 г, можно использовать [создать ВНЕШНЮЮ БИБЛИОТЕКУ](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) инструкцию, чтобы добавить пакет или набор пакетов для экземпляра или определенной базы данных. Эта инструкция DDL и вспомогательных ролей базы данных предназначены для упрощения установки и управления пакетов бизнес-Аналитики без использования средств R или Python.
+В SQL Server 2017 г, можно использовать [создать ВНЕШНЮЮ БИБЛИОТЕКУ](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) инструкцию, чтобы добавить пакет или набор пакетов для экземпляра или определенной базы данных. Эта инструкция DDL и вспомогательных ролей базы данных, предназначены для упрощения установки и управления пакетов владельца базы данных без использования средств R или Python.
 
 Этот процесс требуется некоторая подготовка, по сравнению с установкой пакетов с помощью стандартных методов R или Python.
 
@@ -140,6 +140,8 @@ ms.lasthandoff: 02/28/2018
     Если на сервере нет доступа к файловой системе, можно также передать полный пакет как переменную, с использованием двоичного формата. Дополнительные сведения см. в разделе [создать ВНЕШНЮЮ БИБЛИОТЕКУ](../../t-sql/statements/create-external-library-transact-sql.md).
 
 + Выполнение инструкции завершается неудачно, если требуемые пакеты недоступны. Необходимо проанализировать зависимости пакета, который вы хотите установить и убедитесь, что пакеты передаются серверу и базе данных. Мы рекомендуем использовать **miniCRAN** или **igraph** для анализа зависимостей пакетов.
+
++ Необходимо иметь соответствующие разрешения в базе данных. Дополнительные сведения см. в разделе [создать ВНЕШНЮЮ БИБЛИОТЕКУ](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
 ### <a name="prepare-the-packages-in-archive-format"></a>Подготовьте пакеты в формате архива
 

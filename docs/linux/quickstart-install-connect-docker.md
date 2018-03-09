@@ -4,7 +4,7 @@ description: "Это краткое руководство описывает, �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 971f6ed4b728f4be127bf9a23e8a7499ec308d90
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 8c3f8bc09ef8c3b6838912027024a3feb97cea5d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Краткое руководство: Запуск образа контейнера 2017 г. SQL Server с помощью Docker
 
@@ -52,6 +52,8 @@ ms.lasthandoff: 02/24/2018
    ```
 
    Предыдущая команда извлекает последнюю версию образа контейнера с SQL Server 2017. Если вы хотите извлечь конкретный образ, добавьте метку после двоеточия (например, `microsoft/mssql-server-linux:2017-GA`). Список всех доступных образов см. на странице [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/) центра Docker.
+   
+   Для команд bash в этой статье `sudo` используется. На MacOS `sudo` не является обязательным. В Linux, если вы не хотите использовать `sudo` для запуска Docker, можно настроить **docker** группы и добавление пользователей в эту группу. Дополнительные сведения см. в разделе [действия после установки для Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
 1. Чтобы запустить образ контейнера с помощью Docker, выполните следующую команду в оболочке bash (Linux или macOS) или в командной строке PowerShell с повышенными привилегиями.
 

@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="language-elements"></a>Элементы языка
 Элементы языка Transact-SQL (T-SQL) для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
@@ -33,12 +33,12 @@ ms.lasthandoff: 12/21/2017
 * [синтаксические обозначения](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [правила именования объектов](../relational-databases/databases/database-identifiers.md)
 * [зарезервированные ключевые слова](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [параметры сортировки](https://msdn.microsoft.com/library/ff848763.aspx)
-* [комментарии](../t-sql/language-elements/comment-transact-sql.md)
-* [константы](../t-sql/data-types/constants-transact-sql.md)
-* [типы данных](../t-sql/data-types/data-types-transact-sql.md)
+* [Параметры сортировки](https://msdn.microsoft.com/library/ff848763.aspx)
+* [Комментарии](../t-sql/language-elements/comment-transact-sql.md)
+* [Константы](../t-sql/data-types/constants-transact-sql.md)
+* [Типы данных](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [выражения](../t-sql/language-elements/expressions-transact-sql.md)
+* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Инструкции по решению свойство IDENTITY](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -76,10 +76,10 @@ ms.lasthandoff: 12/21/2017
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
-* [ЯВЛЯЕТСЯ [НЕ](../t-sql/queries/is-null-transact-sql.md)
+* [НЕТ](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [OR](../t-sql/language-elements/or-transact-sql.md)
+* [или](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Побитовые операторы
 * [& (побитовое И)](../t-sql/language-elements/bitwise-and-transact-sql.md)
@@ -103,7 +103,7 @@ ms.lasthandoff: 12/21/2017
 * [ASIN](../t-sql/functions/asin-transact-sql.md)
 * [ATAN](../t-sql/functions/atan-transact-sql.md)
 * [ATN2](../t-sql/functions/atn2-transact-sql.md)
-* [ФУНКЦИЯ BINARY_CHECKSUM](../t-sql/functions/binary-checksum-transact-sql.md)
+* [BINARY_CHECKSUM](../t-sql/functions/binary-checksum-transact-sql.md)
 * [CASE](../t-sql/language-elements/case-transact-sql.md)
 * [CAST и CONVERT](../t-sql/functions/cast-and-convert-transact-sql.md)
 * [CEILING](../t-sql/functions/ceiling-transact-sql.md)
@@ -219,7 +219,7 @@ ms.lasthandoff: 12/21/2017
 * [SYSTEM_USER](../t-sql/functions/system-user-transact-sql.md)
 * [SYSUTCDATETIME](../t-sql/functions/sysutcdatetime-transact-sql.md)
 * [TAN](../t-sql/functions/tan-transact-sql.md)
-* [ФУНКЦИЯ TERTIARY_WEIGHTS](../t-sql/functions/collation-functions-tertiary-weights-transact-sql.md)
+* [TERTIARY_WEIGHTS](../t-sql/functions/collation-functions-tertiary-weights-transact-sql.md)
 * [TIMEFROMPARTS](../t-sql/functions/timefromparts-transact-sql.md)
 * [TODATETIMEOFFSET](../t-sql/functions/todatetimeoffset-transact-sql.md)
 * [TYPE_ID](../t-sql/functions/type-id-transact-sql.md)
@@ -235,7 +235,7 @@ ms.lasthandoff: 12/21/2017
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>Transactions
-* [транзакции](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [Транзакции](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Диагностических сеансов
 * [Создание сеанса диагностики](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)

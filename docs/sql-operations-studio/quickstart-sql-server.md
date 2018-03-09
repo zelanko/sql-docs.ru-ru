@@ -2,7 +2,7 @@
 title: "Краткое руководство: Подключение и отправку запросов SQL Server с помощью операций SQL Studio (Предварительная версия) | Документы Microsoft"
 description: "Краткого руководства показано, как использовать Studio операций SQL (Предварительная версия) для подключения к SQL Server и выполнить запрос"
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,13 +14,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7588368dcd64316551a9eaa72aeb8ce1d2ea67a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство: Подключение и запрос с использованием SQL Server[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство: Подключение и запрос с использованием SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Краткого руководства показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к SQL Server и затем использовать инструкции Transact-SQL (T-SQL) для создания *TutorialDB* используется в [!INCLUDE[name-sos](../includes/name-sos-short.md)] учебники.
 
 ## <a name="prerequisites"></a>предварительные требования
@@ -92,7 +92,10 @@ ms.lasthandoff: 12/21/2017
 
 
 
-1. Вставьте следующий фрагмент кода в окне запроса:
+1. Вставьте следующий фрагмент кода в окно запроса и нажмите кнопку **запуска**:
+
+   > [!NOTE]
+   > Этот параметр, чтобы добавить или заменить предыдущий запрос в редакторе. Обратите внимание, что нажатие кнопки **запуска** выполняет запрос, который выбран. Если ничего не выделено, щелкнув **запуска** выполняет все запросы в редакторе.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +118,8 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="insert-rows"></a>Вставка строк
 
-1. Вставьте следующий фрагмент кода в окне запроса:
+- Вставьте следующий фрагмент кода в окно запроса и нажмите кнопку **запуска**:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -128,18 +132,17 @@ ms.lasthandoff: 12/21/2017
    GO
    ```
 
-1. Чтобы выполнить запрос, нажмите кнопку **запуска**.
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>Просмотр данных, возвращаемых запросом
-1. Вставьте следующий фрагмент кода в окне запроса:
+1. Вставьте следующий фрагмент кода в окно запроса и нажмите кнопку **запуска**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. Чтобы выполнить запрос, нажмите кнопку **запуска**.
+1. Отображаются результаты запроса:
 
    ![Выберите результаты](media/quickstart-sql-server/select-results.png)
 

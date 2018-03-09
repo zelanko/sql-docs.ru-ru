@@ -20,20 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 883c016829dcf5ba9b7d48f0356a4a6141550e7d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 2f8b7e34ae99042012b88f9d83c0ee3af0ad18be
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Установка Microsoft ODBC Driver for SQL Server на Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-В этом разделе описывается установка [!INCLUDE[msCoName](../../../includes/msconame_md.md)] драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Linux и macOS, а также дополнительные средства командной строки для SQL Server (`bcp` и `sqlcmd`) и разработки заголовков unixODBC.
+В этой статье описывается установка [!INCLUDE[msCoName](../../../includes/msconame_md.md)] драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Linux и macOS, а также дополнительные средства командной строки для SQL Server (`bcp` и `sqlcmd`) и разработки заголовков unixODBC.
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>17 драйвера Microsoft ODBC для SQL Server 
-
-**Важное замечание:** версия 17 пакеты драйверов ODBC для Linux и Mac в данное время недоступны из-за проблем при обновлении существующей установки. Мы работаем над предоставляя обновленные пакеты, как можно быстрее. Выполнение команды для установки версии 17 в настоящее время установит драйвер версии 13.1.
 
 ### <a name="debian-8-and-9"></a>Debian 8 и 9
 ```
@@ -51,7 +49,7 @@ curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql
+sudo ACCEPT_EULA=Y apt-get install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y apt-get install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -76,7 +74,7 @@ curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/m
 
 exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
-sudo ACCEPT_EULA=Y yum install msodbcsql
+sudo ACCEPT_EULA=Y yum install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y yum install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -101,7 +99,7 @@ zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 exit
-sudo ACCEPT_EULA=Y zypper install msodbcsql
+sudo ACCEPT_EULA=Y zypper install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y zypper install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -130,7 +128,7 @@ curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sou
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql
+sudo ACCEPT_EULA=Y apt-get install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y apt-get install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -146,7 +144,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql mssql-tools
+brew install --no-sandbox msodbcsql17 mssql-tools
 ```
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
@@ -374,7 +372,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 Также являются общими для вручную загрузить все зависимые пакеты и поместите их на компьютере, а затем вручную установить каждого пакета, в свою очередь, окончания работы [!INCLUDE[msCoName](../../../includes/msconame_md.md)] пакет драйвера ODBC 13.
 
 #### <a name="redhat-linux-enterprise-server-7"></a>RedHat Linux Enterprise Server 7
-  - Загрузите последнюю версию `msodbcsql` .rpm отсюда: http://packages.microsoft.com/rhel/7/prod/
+  - Загрузите последнюю версию `msodbcsql` `.rpm` отсюда: http://packages.microsoft.com/rhel/7/prod/
   - Установить зависимости, так и драйвер
   
 ```
@@ -392,7 +390,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- Загрузите последнюю версию `msodbcsql` .rpm отсюда: http://packages.microsoft.com/sles/12/prod/
+- Загрузите последнюю версию `msodbcsql` `.rpm` отсюда: http://packages.microsoft.com/sles/12/prod/
 - Установка зависимостей и драйвер
 
 ```
@@ -426,9 +424,9 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 5.  Создайте резервную копию **odbcinst.ini**. Установка драйвера обновляет **odbcinst.ini**. Файл odbcinst.ini содержит список драйверов, которые зарегистрированы с помощью диспетчера драйверов unixODBC. Чтобы найти расположение файла odbcinst.ini на компьютере, выполните следующую команду: ```odbc_config --odbcinstini```.  
   
-6.  Перед установкой драйвера выполните следующую команду: **./install.sh verify**. Выходные данные команды **./install.sh verify** показывают, установлено ли на компьютере необходимое программное обеспечение для поддержки драйвера ODBC в Linux.  
+6.  Перед установкой драйвера выполните следующую команду: `./install.sh verify`. Выходные данные `./install.sh verify` отчеты, если на компьютере установлено необходимое программное обеспечение для поддержки драйвера ODBC в Linux.  
   
-7.  Когда все готово к установке драйвера ODBC в Linux, выполните команду: **./install.sh install**. Если необходимо указать команду установки (`bin-dir` или `lib-dir`), укажите команду после **установить** параметр.  
+7.  Когда будете готовы к установке драйвера ODBC в Linux, выполните команду: `./install.sh install`. Если необходимо указать команду установки (`bin-dir` или `lib-dir`), укажите команду после **установить** параметр.  
   
 8.  После просмотра лицензионного соглашения введите **YES** для продолжения установки.  
   
