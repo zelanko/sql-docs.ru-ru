@@ -1,4 +1,4 @@
----
+﻿---
 title: "Драйвер node.js для SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 08/08/2017
@@ -26,7 +26,7 @@ ms.lasthandoff: 11/18/2017
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Драйвер node.js для SQL Server
 
-![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки драйвер Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Круг_со_стрелкой_загрузки](../../ssdt/media/download.png)[Скачать драйвер Node.js для SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access) 
 
 Модуль Tedious — это javascript-реализация протокола потока табличных данных (TDS), которую поддерживают все современные версии SQL Server Драйвер не проекта с открытым кодом, на сайте Github.  
   

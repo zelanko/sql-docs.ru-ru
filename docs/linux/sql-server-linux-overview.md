@@ -1,4 +1,4 @@
----
+﻿---
 title: "Общие сведения о SQL Server для Linux | Документы Microsoft"
 description: "Эта статья описывает, как SQL Server работает на ОС Linux и предоставляет сведения о том, как для получения дополнительных сведений."
 author: rothja
@@ -46,9 +46,9 @@ SQL Server 2017 теперь работает на платформе Linux. Э�
 
 | Инструмент | Учебник |
 |-----|-----|
-| Visual Studio (VS код) | [Использование кода VS с SQL Server в Linux](sql-server-linux-develop-use-vscode.md) |
+| Visual Studio (VS код) | [Использование кода VS с SQL Server на Linux](sql-server-linux-develop-use-vscode.md) |
 | SQL Server Management Studio (SSMS) | [Использование SSMS в Windows для подключения к SQL Server на Linux](sql-server-linux-develop-use-ssms.md) |
-| SQL Server Data Tools (SSDT) | [Использование средств SSDT с SQL Server в Linux](sql-server-linux-develop-use-ssdt.md) |
+| SQL Server Data Tools (SSDT) | [Использование средств SSDT с SQL Server на Linux](sql-server-linux-develop-use-ssdt.md) |
 
 ## <a name="explore"></a>Изучение
 
